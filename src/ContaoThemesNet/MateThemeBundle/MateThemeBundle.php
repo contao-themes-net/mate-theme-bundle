@@ -7,7 +7,7 @@
  *
  * @package    contao-themes-net/mate-theme-bundle
  * @link       https://github.com/contao-themes-net/mate-theme-bundle
- * @license    pdir / contao theme licence
+ * @license    pdir contao theme licence
  * @author     Mathias Arzberger <develop@pdir.de>
  *
  * For the full copyright and license information, please view the LICENSE

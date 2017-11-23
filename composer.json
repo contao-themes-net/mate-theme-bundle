@@ -4,7 +4,7 @@
   "description": "mate theme bundle for Contao 4",
   "keywords":["contao","theme","template"],
   "homepage": "https://contao-themes.net",
-  "license": "pdir / contao theme licence",
+  "license": "pdir contao theme licence",
   "authors": [
     {
       "name": "Webdesign für Dresden",
