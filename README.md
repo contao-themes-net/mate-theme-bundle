@@ -10,9 +10,9 @@ compatible with Contao 4.4.x
 
 ## structure
 
-./src/ContaoThemesNet/MateThemeBundle/Resources
-    config = symlink to web (Images, JS, CSS etc.)
-    public = Symfony config (services etc.)
-    views  = Templates for Twig
-    contao = contao stuff (config, dca etc.)
+    ./src/ContaoThemesNet/MateThemeBundle/Resources
+        config = symlink to web (Images, JS, CSS etc.)
+        public = Symfony config (services etc.)
+        views  = Templates for Twig
+        contao = contao stuff (config, dca etc.)
 
