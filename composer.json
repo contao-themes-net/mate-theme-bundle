@@ -11,6 +11,12 @@
       "homepage": "https://pdir.de",
       "email" : "develop@pdir.de",
       "role" : "Developer"
+    },
+    {
+      "name": "Kostenlose Contao Themes",
+      "homepage": "https://contao-themes.net",
+      "email" : "develop@pdir.de",
+      "role" : "Supplier"
     }
   ],
   "support" : {
