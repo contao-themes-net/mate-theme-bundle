@@ -1,0 +1,45 @@
+{
+  "name": "contao-themes-net/mate-theme-bundle",
+  "type":"contao-bundle",
+  "description": "mate theme bundle for Contao 4",
+  "keywords":["contao","theme","template"],
+  "homepage": "https://contao-themes.net",
+  "license": "pdir / contao theme licence",
+  "authors": [
+    {
+      "name": "Webdesign für Dresden",
+      "homepage": "https://pdir.de",
+      "email" : "develop@pdir.de",
+      "role" : "Developer"
+    }
+  ],
+  "support" : {
+    "email" : "develop@pdir.de",
+    "issues" : "https://github.com/contao-themes-net/mate-theme-bundle/issues",
+    "source" : "https://github.com/contao-themes-net/mate-theme-bundle"
+  },
+  "require": {
+    "php": ">=7.4.0",
+    "contao/core-bundle": "^4.4",
+    "pdir/contao-theme-helper-bundle": "^1.0"
+  },
+  "conflict": {
+    "contao/core": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ContaoThemesNet\\MateThemeBundle\\": "src/"
+    },
+    "classmap": [
+      "src/contaoThemesNet/MateThemeBundle/Resources/contao/"
+    ]
+  },
+  "extra": {
+    "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
+  },
+  "config": {
+    "files": "files"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
