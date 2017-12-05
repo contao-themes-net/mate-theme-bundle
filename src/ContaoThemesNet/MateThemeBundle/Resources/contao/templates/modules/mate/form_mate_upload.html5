@@ -1,0 +1,34 @@
+<?php $this->extend('form_row'); ?>
+
+<?php $this->block('label'); ?>
+  <?php if ($this->label): ?>
+    <label for="ctrl_<?= $this->id ?>"<?php if ($this->class): ?> class="<?= $this->class ?>"<?php endif; ?>>
+      <?php if ($this->mandatory): ?>
+        <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
+      <?php else: ?>
+        <?= $this->label ?>
+      <?php endif; ?>
+    </label>
+  <?php endif; ?>
+<?php $this->endblock(); ?>
+
+<?php $this->block('field'); ?>
+  <?php if ($this->hasErrors()): ?>
+    <p class="error"><?= $this->getErrorAsString() ?></p>
+  <?php endif; ?>
+
+  <div class="file-field input-field">
+	  <div class="btn">
+	    <span>Datei</span>
+	    <input type="file" name="<?= $this->name ?>" id="ctrl_<?= $this->id ?>" class="upload<?php if ($this->class) echo ' ' . $this->class; ?>"<?= $this->getAttributes() ?>>
+	  </div>
+	
+	  <div class="file-path-wrapper">
+		  <input class="file-path validate" type="text" placeholder="Laden Sie eine Datei hoch">
+	  </div>
+  </div>
+
+  <?php if ($this->addSubmit): ?>
+    <input type="submit" id="ctrl_<?= $this->id ?>_submit" class="submit" value="<?= $this->slabel ?>">
+  <?php endif; ?>
+<?php $this->endblock(); ?>

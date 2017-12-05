@@ -1,0 +1,28 @@
+<?php $this->extend('fe_page_mate'); ?>
+
+<?php $this->block('container'); ?>
+	<?php $this->parent(); ?>
+<?php $this->endblock(); ?>
+
+<?php $this->block('main'); ?>
+    <div class="col s12 l9">
+	    <div id="main">
+	      <div class="inside">
+	        <?= $this->main ?>
+	      </div>
+	      <?php $this->sections('main'); ?>
+	    </div>
+    </div>
+<?php $this->endblock(); ?>
+
+<?php $this->block('right'); ?>
+    <?php if ($this->right): ?>
+    <div class="col s12 l3">
+      <aside id="right">
+        <div class="inside">
+          <?= $this->right ?>
+        </div>
+      </aside>
+    </div>
+    <?php endif; ?>
+<?php $this->endblock(); ?>

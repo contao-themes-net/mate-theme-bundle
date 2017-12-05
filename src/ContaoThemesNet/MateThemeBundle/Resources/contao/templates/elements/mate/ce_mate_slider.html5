@@ -1,0 +1,29 @@
+<li class="sliderImage" >
+	<?php if ($this->href): ?><a href="<?= $this->href ?>"<?php if ($this->linkTitle): ?> title="<?= $this->linkTitle ?>"<?php endif; ?><?= $this->attributes ?>><?php endif; ?>
+	<div class="img" style="background-image:url('<?= $this->picture['img']['src'] ?>');">
+		
+	</div>
+	<?php if ($this->href): ?>
+      </a>
+    <?php endif; ?>
+	<div class="caption center-align">
+		  
+		  <?php if ($this->href): ?><a href="<?= $this->href ?>"<?php if ($this->linkTitle): ?> title="<?= $this->linkTitle ?>"<?php endif; ?><?= $this->attributes ?>><?php endif; ?>
+		  <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+		  <?php if ($this->href): ?>
+	      </a>
+	    <?php endif; ?>
+		  
+		  <?php if ($this->caption): ?>
+		  <h5 class="">
+		  	<?= $this->caption ?> 
+		  </h5>
+		  <?php endif; ?>
+		  
+		  <?php if ($this->text): ?>
+		  <h5 class="">
+		  	<?= $this->text ?> 
+		  </h5>
+		  <?php endif; ?>
+	</div>
+</li>

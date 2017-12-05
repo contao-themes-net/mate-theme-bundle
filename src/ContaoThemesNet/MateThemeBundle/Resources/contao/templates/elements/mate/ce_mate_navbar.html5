@@ -1,0 +1,18 @@
+
+<!-- indexer::stop -->
+<nav class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+  <div class="nav-wrapper row">
+
+    <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo">{{theme::content::MATE01/04}}</a>
+    <a href="#" data-activates="mobile-menu" class="button-collapse">
+        <i class="material-icons">menu</i>
+    </a>
+
+    <?= $this->rootNav ?>
+
+  </div>
+</nav>
+
+<!-- NavBar Dropdown Content -->
+<?= $this->dropdownNav ?>
+<!-- indexer::continue -->
