@@ -15,9 +15,10 @@
  */
 namespace ContaoThemesNet\MateThemeBundle\ContaoManager;
 
-use Contao\CoreBundle\ContaoCoreBundle;
-use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
+use ContaoThemesNet\MateThemeBundle\MateThemeBundle;
+use Pdir\ThemeHelperBundle\ThemeHelperBundle;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 
 /**
@@ -34,7 +35,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(MateThemeBundle::class)
-                ->setLoadAfter([MateThemeBundle::class])
+                ->setLoadAfter([ThemeHelperBundle::class])
         ];
     }
 }

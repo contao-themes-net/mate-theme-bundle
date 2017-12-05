@@ -37,19 +37,16 @@
       "ContaoThemesNet\\MateThemeBundle\\": "src/"
     },
     "classmap": [
-      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/"
+      "src/Resources/contao/"
     ],
     "exclude-from-classmap": [
-      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/config/",
-      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/dca/",
-      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/languages/",
-      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/templates/"
+      "src/Resources/contao/config/",
+      "src/Resources/contao/dca/",
+      "src/Resources/contao/languages/",
+      "src/Resources/contao/templates/"
     ]
   },
   "extra": {
     "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
-  },
-  "config": {
-    "files": "files"
   }
 }
