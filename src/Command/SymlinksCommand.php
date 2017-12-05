@@ -17,6 +17,7 @@
 namespace ContaoThemesNet\MateThemeBundle\Command;
 
 use Contao\CoreBundle\Util\SymlinkUtil;
+use Contao\CoreBundle\Command\AbstractLockedCommand;
 
 /**
  * Symlinks the public mate theme resources into the files directory
@@ -39,13 +40,13 @@ class SymlinksCommand extends AbstractLockedCommand
     {
         $this->rootDir = $this->getContainer()->getParameter('kernel.project_dir');
 
-        $this->symlinThemeResources();
+        $this->symlinkThemeResources();
     }
 
     /**
      * Symlinks the mate theme folder resources to files/mate.
      */
-    private function symlinThemeResources()
+    private function symlinkThemeResources()
     {
         SymlinkUtil::symlink(
             'vendor/contao-themes-net/mate-theme-bundle/src/Resources/public',
