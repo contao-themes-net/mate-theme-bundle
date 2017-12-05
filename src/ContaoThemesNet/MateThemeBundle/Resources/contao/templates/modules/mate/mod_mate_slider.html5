@@ -1,0 +1,5 @@
+<div class="slider <?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+  <ul class="slides">
+		<?= implode('', $this->articles) ?>
+  </ul>
+</div>

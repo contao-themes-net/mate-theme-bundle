@@ -1,0 +1,38 @@
+
+<ul id="desktop-menu" class="left hide-on-med-and-down <?= $this->level ?>">
+    <?php foreach ($this->items as $item): ?>
+    <li class="<?php if ($item['class']) echo $item['class']; ?> valign-wrapper">
+      <a class="<?php if (!empty($item['subitems'])): ?>dropdown-button<?php endif; ?>
+        <?php if($item['isActive']): ?> active <?php endif; ?><?php if ($item['class']) echo $item['class']; ?> valign"
+        <?php if (!empty($item['subitems'])): ?> data-activates="dropdown<?= $item['id'] ?>"<?php endif; ?>
+        href="<?= $item['href'] ?: './' ?>"
+        title="<?= $item['pageTitle'] ?: $item['title'] ?>"
+        <?php if ($item['accesskey']) echo ' accesskey="' . $item['accesskey'] . '"'; ?>
+        <?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?>
+        <?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?= $item['target'] ?>
+        <?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"' ; ?>>
+        <?= $item['link'] ?>
+      </a>
+    </li>
+    <?php endforeach; ?>
+</ul>
+
+<ul id="mobile-menu" class="side-nav <?= $this->level ?>">
+  <?php foreach ($this->items as $item): ?>
+    <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>>
+      <a href="<?= $item['href'] ?: './' ?>"
+        title="<?= $item['pageTitle'] ?: $item['title'] ?>"
+        <?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>
+        <?php if ($item['accesskey']) echo ' accesskey="' . $item['accesskey'] . '"'; ?>
+        <?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?>
+        <?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?= $item['target'] ?>
+        <?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?>>
+        <?= $item['link'] ?>
+
+      </a>
+
+    </li>
+  <?php endforeach; ?>
+</ul>
+
+{{theme::content::MATE01/05}}
