@@ -27,7 +27,7 @@
   "require": {
     "php": ">=7.0.0",
     "contao/core-bundle": "^4.4",
-    "pdir/contao-theme-helper-bundle": "^1.0"
+    "pdir/contao-theme-helper-bundle": "dev-master"
   },
   "conflict": {
     "contao/core": "*"
@@ -45,7 +45,5 @@
   },
   "config": {
     "files": "files"
-  },
-  "prefer-stable": true,
-  "minimum-stability": "dev"
+  }
 }
