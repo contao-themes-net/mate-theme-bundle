@@ -1,0 +1,3 @@
+services:
+    contao.command.symlinks:
+            class: ContaoThemesNet\MateThemeBundle\Command\SymlinksCommand
