@@ -46,6 +46,6 @@
   "config": {
     "files": "files"
   },
-  "prefer-stable": true,
+  "prefer-stable": false,
   "minimum-stability": "dev"
 }
