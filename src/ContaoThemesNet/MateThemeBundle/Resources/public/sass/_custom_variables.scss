@@ -1,0 +1,45 @@
+/****
+ **** mate theme files / custom_variables
+ **** overrides mate variables
+ ****
+ */
+
+/*
+ * You can set your own colors and variables here.
+ *
+ * Either pick a color-name or a variable from _color.scss, _variabless.scss, _mage_variables.scss or use your own color.
+ * Just toggle the comments accordingly
+ */
+
+// example
+// $mateColor2: #137abc;
+// $mateColor1: #0097d0;
+// $mateColor3: #1168a0;
+// $mateColor4: #262626;
+// $mateColor5: $mateColor2;
+// $mateColor6: $mateColor3;
+
+/*
+ * colors
+ */
+
+// $primary-color: $mateColor2;
+// $secondary-color: $mateColor3;
+// $primary-link-font-color: $mateColor2;
+// $primary-link-hover-font-color: #152e6d;
+
+// $button-flat-color: $mateColor2;
+// $button-floating-background: #f2f2f2;
+// $button-floating-background-hover: #e8e8e8;
+
+// $footer-bg-color: #244280;
+// $footer-text-color: #fff;
+// $footer-headline-border-color: $mateColor2;
+// $footer-secondary-bg-color: #152e6d;
+
+/*
+ * calculated colors
+ */
+
+// $primary-color-light: lighten($primary-color, 15%) !default;
+// $primary-color-dark: darken($primary-color, 15%) !default;

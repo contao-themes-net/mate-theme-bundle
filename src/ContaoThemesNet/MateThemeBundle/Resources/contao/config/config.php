@@ -19,6 +19,13 @@ $GLOBALS['TL_CTE']['mateTheme']['mateTeaserBox'] = 'ContaoThemesNet\\MateThemeBu
 $GLOBALS['TL_CTE']['mateTheme']['mateContentBox'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\elements\\mate\\ContentBox';
 
 /**
+ * Add CSS/JS
+ */
+$GLOBALS['TL_JAVASCRIPT'][''] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\public\\js\\bin\\materialize.min.js';
+$GLOBALS['TL_JAVASCRIPT'][''] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\public\\js\\mate\\mate-theme.js';
+$GLOBALS['TL_CSS'][''] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\public\\sass\\mate.scss';
+
+/**
  * Available tags for MATE theme
  */
 $GLOBALS['tl_config']['theme_tags'] = array(
