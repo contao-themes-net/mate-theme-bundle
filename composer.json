@@ -48,5 +48,17 @@
   },
   "extra": {
     "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('files/mate/_custom_variables.scss') || copy('src/Resources/public/sass/_csutom_variables.scss', 'files/mate/_custom_variables.scss');\"",
+      "php -r \"file_exists('files/mate/img/Screenshot.png') || copy('src/Resources/public/img/Screenshot.png', 'files/mate/img/Screenshot.png');\""
+    ],
+    "post-install-cmd": [
+      "Contao\\ManagerBundle\\Composer\\ScriptHandler::initializeApplication"
+    ],
+    "post-update-cmd": [
+      "Contao\\ManagerBundle\\Composer\\ScriptHandler::initializeApplication"
+    ]
   }
 }

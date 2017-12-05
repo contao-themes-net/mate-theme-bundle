@@ -11,10 +11,11 @@ compatible with Contao 4.4.x
 ## structure
 
     ./src/Resources
-        config = symlink to web (Images, JS, CSS etc.)
-        public = Symfony config (services etc.)
-        views  = Templates for Twig
+        config = Symfony config (services etc.)
         contao = contao stuff (config, dca etc.)
+        public = symlink to web (Images, JS, CSS etc.)
+        views  = Templates for Twig
+
 
 ## dependencies
 
