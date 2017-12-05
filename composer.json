@@ -27,7 +27,7 @@
   "require": {
     "php": ">=7.0.0",
     "contao/core-bundle": "^4.4",
-    "pdir/contao-theme-helper-bundle": "dev-master"
+    "pdir/contao-theme-helper-bundle": "^1.0"
   },
   "conflict": {
     "contao/core": "*"
@@ -37,7 +37,13 @@
       "ContaoThemesNet\\MateThemeBundle\\": "src/"
     },
     "classmap": [
-      "src/contaoThemesNet/MateThemeBundle/Resources/contao/"
+      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/"
+    ],
+    "exclude-from-classmap": [
+      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/config/",
+      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/dca/",
+      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/languages/",
+      "src/ContaoThemesNet/MateThemeBundle/Resources/contao/templates/"
     ]
   },
   "extra": {
