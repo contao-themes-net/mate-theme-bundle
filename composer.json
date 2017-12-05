@@ -34,7 +34,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ContaoThemesNet\\MateThemeBundle\\": "src/"
+      "ContaoThemesNet\\MateThemeBundle\\": "src"
     },
     "classmap": [
       "src/Resources/contao/"
