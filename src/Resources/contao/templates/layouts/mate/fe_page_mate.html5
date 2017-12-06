@@ -2,7 +2,7 @@
 <html lang="<?= $this->language ?>"<?php if ($this->isRTL): ?> dir="rtl"<?php endif; ?>>
 <head>
 	
-<?php $GLOBALS['TL_JAVASCRIPT'][] = 'files/mate/js/headroom.min.js'; ?>
+<?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/matetheme/js/headroom.min.js'; ?>
 
   <?php $this->block('head'); ?>
     <meta charset="<?= $this->charset ?>">
