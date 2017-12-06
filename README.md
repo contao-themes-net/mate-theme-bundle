@@ -5,6 +5,10 @@ license
 
 pdir contao theme licence -> see LICENSE file for more informations
 
+## demo
+
+for demo please visit https://mate.contao-themes.net/
+
 ## compatible
 compatible with Contao 4.4.x
 
