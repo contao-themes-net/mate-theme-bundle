@@ -57,7 +57,7 @@
   },
   "scripts": {
     "post-root-package-install": [
-      "php -r \"file_exists('files/mate/_custom_variables.scss') || copy('src/Resources/public/sass/_custom_variables.scss.example', 'files/mate/_custom_variables.scss');\"",
+      "php -r \"file_exists('files/mate/_custom_variables.scss') || copy('src/Resources/public/sass/_custom_variables.scss.example', 'files/mate/_custom_variables.scss');\""
     ],
     "post-install-cmd": [
       "Contao\\ManagerBundle\\Composer\\ScriptHandler::initializeApplication"
