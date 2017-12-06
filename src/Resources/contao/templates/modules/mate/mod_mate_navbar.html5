@@ -1,18 +1,34 @@
-
 <!-- indexer::stop -->
-<nav class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-  <div class="nav-wrapper row">
+<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+<nav id="mateNavbar<?= $this->id ?>" class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+    <div class="nav-wrapper" <?php if($this->showMobileMenu == 0): ?>style="display:block;"<?php endif; ?>>
 
-    <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo">{{theme::content::MATE01/04}}</a>
-    <a href="#" data-activates="mobile-menu" class="button-collapse">
-        <i class="material-icons">menu</i>
-    </a>
+        <?php if($this->showLogo == 1): ?>
+            <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo">{{theme::content::MATE01/04}}</a>
+        <?php endif; ?>
 
-    <?= $this->rootNav ?>
+        <?php if($this->showMobileMenu == 1): ?>
+            <a href="#" data-activates="mobile-menu<?= $this->id ?>" class="button-collapse"><i class="material-icons">menu</i></a>
+        <?php endif; ?>
 
-  </div>
+        <ul id="desktop-menu<?= $this->id ?>" class="desktop-menu right <?php if($this->showMobileMenu == 1): ?>hide-on-med-and-down <?php endif; ?><?= $this->level ?>">
+            <?= $this->rootNav ?>
+        </ul>
+
+        <?php if($this->showMobileMenu == 1): ?>
+            <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu side-nav <?= $this->level ?>">
+                <?= $this->mobileNav ?>
+            </ul>
+        <?php endif; ?>
+
+        <?php if($this->showSearch == 1): ?>
+            {{theme::content::MATE01/05}}
+        <?php endif; ?>
+
+        <?= $this->dropdownNav ?>
+
+    </div>
 </nav>
 
-<!-- NavBar Dropdown Content -->
-<?= $this->dropdownNav ?>
+
 <!-- indexer::continue -->

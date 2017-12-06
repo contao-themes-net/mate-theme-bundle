@@ -13,7 +13,6 @@
 
 // echo "<pre>"; print_r($GLOBALS['TL_DCA']['tl_content']['palettes']); echo "</pre>";
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['mateNavbar'] = '{type_legend},type,headline,mateNavbarType;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;mateTeaserBox_page,mateTeaserBox_pageText;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;mateContentBox_page,mateContentBox_pageText;{expert_legend:hide},cssID,space';
 
@@ -22,22 +21,6 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},
 /**
  * Add fields to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['fields']['mateNavbarType'] = array
-(
-    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateNavbarType'],
-    'exclude' => true,
-    'eval' => array(
-        'mandatory' => true,
-        'multiple' => false,
-        'maxlength' => 64,
-        'tl_class' => 'w50 wizard'
-    ),
-    'inputType' => 'select',
-    'options' => array('','type1','type2','type3','type4','type5','type6','type7'),
-    'reference' => &$GLOBALS['TL_LANG']['tl_content']['mate_navbar'],
-    'sql' => "varchar(64) NOT NULL default ''"
-);
-
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_page'] = array
 (
     'label' => & $GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_page'],
@@ -48,7 +31,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_page'] = array
         'tl_class'=>'w50'
     ),
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_page'],
-	'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "varchar(255) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_pageText'] = array

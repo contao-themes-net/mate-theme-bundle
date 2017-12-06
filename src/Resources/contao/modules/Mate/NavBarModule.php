@@ -46,9 +46,15 @@ class NavBarModule extends \Module
     {
         if ($this->mateNavbarType == 'type2') {
             $this->Template->setName('mod_mate_navbar_left');
+        } else {
+            $this->Template->setName('mod_mate_navbar');
         }
 
         $this->Template->navbarType = $this->mateNavbarType;
+        $this->Template->showLogo = $this->mateShowLogo;
+        $this->Template->showSearch = $this->mateShowSearch;
+        $this->Template->showMobileMenu = $this->mateShowMobileMenu;
+        $this->Template->headline = $this->headline;
 
         /** @var \PageModel $objPage */
         global $objPage;
@@ -90,12 +96,14 @@ class NavBarModule extends \Module
         if ($this->mateNavbarType == 'type2')
         {
             $this->mateRootTpl = 'nav_mate_left';
+            $this->mateMobileTpl = 'nav_mate_mobile';
             $this->mateDropdownTpl = '';
 
         }
         if ($this->mateNavbarType == 'type5')
         {
             $this->mateRootTpl = 'nav_mate_root';
+            $this->mateMobileTpl = 'nav_mate_mobile';
             $this->mateDropdownTpl = 'nav_mate_dropdown';
         }
 
@@ -103,19 +111,27 @@ class NavBarModule extends \Module
             /** @var \FrontendTemplate|object $objTemplate */
             $objTemplate = new \FrontendTemplate($this->mateRootTpl);
             $objTemplate->items = $arrItems;
+            $objTemplate->id = $this->id;
             $this->Template->rootNav = $objTemplate->parse();
 
+            $objTemplate = new \FrontendTemplate($this->mateMobileTpl);
+            $objTemplate->items = $arrItems;
+			$objTemplate->id = $this->id;
+            $this->Template->mobileNav = $objTemplate->parse();
+
             $strDropdownNav = '';
-            foreach ($arrItems as $item) {
-                if(count($item['subitems']) > 0) {
-                    /** @var \FrontendTemplate|object $objTemplate */
-                    $objTemplate = new \FrontendTemplate($this->mateDropdownTpl);
-                    $objTemplate->id = $item['id'];
-                    $objTemplate->items = $item['subitems'];
-                    $strDropdownNav .= $objTemplate->parse();
+            if(is_array($arrItems)) {
+                foreach ($arrItems as $item) {
+                    if(count($item['subitems']) > 0) {
+                        /** @var \FrontendTemplate|object $objTemplate */
+                        $objTemplate = new \FrontendTemplate($this->mateDropdownTpl);
+						// $objTemplate->id = $this->id;
+                        $objTemplate->itemId = $item['id'];
+                        $objTemplate->items = $item['subitems'];
+                        $strDropdownNav .= $objTemplate->parse();
+                    }
                 }
             }
-
             $this->Template->dropdownNav = $strDropdownNav;
         }
 

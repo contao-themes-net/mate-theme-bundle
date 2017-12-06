@@ -8,13 +8,10 @@ array_insert($GLOBALS['FE_MOD'], 1, array('mateTheme' => array()));
  * Add frontend element
  */
 $GLOBALS['FE_MOD']['mateTheme']['mateNavbar'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\modules\\mate\\NavBarModule';
-$GLOBALS['FE_MOD']['mateTheme']['mateTeaserBox'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\elements\\mate\\TeaserBox';
-$GLOBALS['FE_MOD']['mateTheme']['mateContentBox'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\elements\\mate\\ContentBox';
 
 /**
  * Add content element
  */
-$GLOBALS['TL_CTE']['mateTheme']['mateNavbar'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\elements\\mate\\NavBarElement';
 $GLOBALS['TL_CTE']['mateTheme']['mateTeaserBox'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\elements\\mate\\TeaserBox';
 $GLOBALS['TL_CTE']['mateTheme']['mateContentBox'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\elements\\mate\\ContentBox';
 
