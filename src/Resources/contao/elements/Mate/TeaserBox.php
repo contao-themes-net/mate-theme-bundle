@@ -8,7 +8,7 @@
  * @license LGPL-3.0+
  */
 
-namespace Pdir\Contao\Mate;
+namespace ContaoThemesNet\MateThemeBundle\Mate;
 
 /**
  * Class ContentProducts

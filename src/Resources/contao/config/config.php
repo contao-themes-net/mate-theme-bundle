@@ -7,19 +7,19 @@ array_insert($GLOBALS['FE_MOD'], 1, array('mateTheme' => array()));
 /**
  * Add frontend element
  */
-$GLOBALS['FE_MOD']['mateTheme']['mateNavbar'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\modules\\mate\\NavBarModule';
+$GLOBALS['FE_MOD']['mateTheme']['mateNavbar'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\NavBarModule';
 
 /**
  * Add content element
  */
-$GLOBALS['TL_CTE']['mateTheme']['mateTeaserBox'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\elements\\mate\\TeaserBox';
-$GLOBALS['TL_CTE']['mateTheme']['mateContentBox'] = 'ContaoThemesNet\\MateThemeBundle\\Resources\\contao\\elements\\mate\\ContentBox';
+$GLOBALS['TL_CTE']['mateTheme']['mateTeaserBox'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\TeaserBox';
+$GLOBALS['TL_CTE']['mateTheme']['mateContentBox'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\ContentBox';
 
 /**
  * Add CSS/JS
  */
-$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/matetheme/js/bin/materialize.min.js';
-$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/matetheme/js/mate/mate-theme.js';
+$GLOBALS['TL_BODY'][] = '<script src="bundles/matetheme/js/bin/materialize.min.js"></script>';
+$GLOBALS['TL_BODY'][] = '<script src="bundles/matetheme/js/mate/mate-theme.js"></script>';
 $GLOBALS['TL_CSS'][] = 'bundles/matetheme/sass/mate/mate.scss|static';
 
 /**
