@@ -1,5 +1,7 @@
 <!-- indexer::stop -->
-<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+<?php if($this->headline): ?>
+    <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+<?php endif; ?>
 <nav id="mateNavbar<?= $this->id ?>" class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
     <div class="nav-wrapper" <?php if($this->showMobileMenu == 0): ?>style="display:block;"<?php endif; ?>>
 
