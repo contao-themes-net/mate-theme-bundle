@@ -34,7 +34,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ContaoThemesNet\\MateThemeBundle\\": "src"
+      "ContaoThemesNet\\MateThemeBundle\\": "src/"
     },
     "classmap": [
       "src/Resources/contao/"
@@ -66,5 +66,8 @@
     "post-update-cmd": [
       "ContaoThemesNet\\MateThemeBundle\\Events\\Installer::initialize"
     ]
+  },
+  "config": {
+    "src/templates/mate": "templates/mate"
   }
 }

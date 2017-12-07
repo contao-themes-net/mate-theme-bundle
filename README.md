@@ -20,6 +20,18 @@ compatible with Contao 4.4.x
         public = symlink to web (Images, JS, CSS etc.)
         views  = Templates for Twig
 
+    # Weitere Beispiele für Verzeichnisse in ./src/
+    Typ     	                    Verzeichnis
+    Commands	                    Command/
+    Controllers	                    Controller/
+    Service Container Extensions	DependencyInjection/
+    Event Listeners	                EventListener/
+    Model Klassen	                Model/
+    Übersetzungen (Symfony)	        Resources/translations/
+    Übersetzungen (Contao)	        Resources/contao/languages/
+    Templates (.html5)              Resources/contao/templates/
+    Unit-Tests	                    Tests/
+
 
 ## dependencies
 
