@@ -33,10 +33,13 @@ class TeaserBox extends \ContentElement
         if (TL_MODE == 'BE')
         {
             /** @var \BackendTemplate|object $objTemplate */
-            $objTemplate = new \BackendTemplate('be_wildcard');
+            $objTemplate = new \BackendTemplate('be_wildcard_text');
+
             $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][0]) . ' ###';
             $objTemplate->title = $this->headline;
-			$objTemplate->text = $this->text;
+            $objTemplate->id = $this->id;
+            $objTemplate->link = $this->name;
+            $objTemplate->text = \StringUtil::toHtml5($this->text);
 
             return $objTemplate->parse();
         }

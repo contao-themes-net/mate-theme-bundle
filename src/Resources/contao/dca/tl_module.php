@@ -11,7 +11,7 @@
  * Add palette to tl_content
  */
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mateNavbar'] = '{title_legend},name,headline,type;{nav_legend},levelOffset,showLevel,hardLimit,showProtected,showHidden;{mateNavbarSettings},mateNavbarType,mateShowLogo,mateShowSearch,mateShowMobileMenu;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mateNavbar'] = '{title_legend},name,headline,type; ,levelOffset,showLevel,hardLimit,showProtected,showHidden;{mateNavbarSettings},mateNavbarType,mateShowLogo,mateShowSearch,mateShowMobileMenu;{expert_legend:hide},cssID,space';
 
 /**
  * Add fields to tl_content
