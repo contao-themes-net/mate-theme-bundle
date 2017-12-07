@@ -69,5 +69,7 @@
   },
   "config": {
     "src/templates/mate": "templates/mate"
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

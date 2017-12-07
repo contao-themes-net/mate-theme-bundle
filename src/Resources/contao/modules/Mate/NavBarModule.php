@@ -125,7 +125,7 @@ class NavBarModule extends \Module
                     if(count($item['subitems']) > 0) {
                         /** @var \FrontendTemplate|object $objTemplate */
                         $objTemplate = new \FrontendTemplate($this->mateDropdownTpl);
-						// $objTemplate->id = $this->id;
+						$objTemplate->id = $this->id;
                         $objTemplate->itemId = $item['id'];
                         $objTemplate->items = $item['subitems'];
                         $strDropdownNav .= $objTemplate->parse();
