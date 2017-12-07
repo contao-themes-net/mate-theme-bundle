@@ -33,9 +33,10 @@ compatible with Contao 4.4.x
     Unit-Tests	                    Tests/
 
 
-## dependencies
+## dependencies & licenses
 
-- [contao theme helper bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden")
+- [Materialize CSS Framework](http://materializecss.com/) | [Github](https://github.com/Dogfalo/materialize) | Code copyright 2017 Materialize. Code released under the MIT license.
+- [contao theme helper bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden") | Code copyright by pdir / digital agentur. Code released under LGPL v3.
 
 
 ## install
