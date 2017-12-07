@@ -13,8 +13,8 @@
 
 // echo "<pre>"; print_r($GLOBALS['TL_DCA']['tl_content']['palettes']); echo "</pre>";
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;mateTeaserBox_page,mateTeaserBox_pageText;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;mateContentBox_page,mateContentBox_pageText;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateTeaserBoxSettings},mateTeaserBox_page,mateTeaserBox_pageText;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateContentBoxSettings},mateContentBox_page,mateContentBox_pageText;{expert_legend:hide},cssID,space';
 
 //echo "<pre>"; print_r($GLOBALS['TL_DCA']['tl_content']['palettes']); echo "</pre>";
 
