@@ -10,3 +10,4 @@ $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type7'] = $GLOBALS['TL_LANG']['
 $GLOBALS['TL_LANG']['tl_module']['mateShowLogo'] = ['show logo','show logo in header'];
 $GLOBALS['TL_LANG']['tl_module']['mateShowSearch'] = ['show search icon','show search icon in header'];
 $GLOBALS['TL_LANG']['tl_module']['mateShowMobileMenu'] = ['show mobile menu','show mobile menu with a menu icon'];
+$GLOBALS['TL_LANG']['tl_module']['mateNavbarType'] = ['navbar settings'];

@@ -2,7 +2,7 @@
 <?php if($this->headline): ?>
     <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
 <?php endif; ?>
-<nav id="mateNavbar<?= $this->id ?>" class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<nav id="mateNavbar<?= $this->id ?>" class="navbar-left <?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
     <div class="nav-wrapper left-nav" <?php if($this->showMobileMenu == 0): ?>style="display:block;"<?php endif; ?>>
 
         <?php if($this->showLogo == 1): ?>
