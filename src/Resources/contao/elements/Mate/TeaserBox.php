@@ -34,9 +34,7 @@ class TeaserBox extends \ContentElement
         {
             /** @var \BackendTemplate|object $objTemplate */
             $objTemplate = new \BackendTemplate('be_wildcard');
-
-            $objTemplate->wildcard = '### MATE_TEASERBOX ###';
-            // $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['mateTheme']['teaserbox'][0]) . ' ###';
+            $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][0]) . ' ###';
             $objTemplate->title = $this->headline;
 			$objTemplate->text = $this->text;
 

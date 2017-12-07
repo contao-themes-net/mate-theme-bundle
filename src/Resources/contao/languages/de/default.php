@@ -4,8 +4,10 @@ $GLOBALS['TL_LANG']['CTE']['mateTheme'][0] = $GLOBALS['TL_LANG']['FMD']['mateThe
 $GLOBALS['TL_LANG']['CTE']['mateTheme'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme'][1] = 'Besondere Inhaltselemente des mate Themes';
 $GLOBALS['TL_LANG']['CTE']['mateNavbar'][0] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateNavbar'][0] = 'Navbar';
 $GLOBALS['TL_LANG']['CTE']['mateNavbar'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateNavbar'][1] = 'Inhaltselement Navbar';
-$GLOBALS['TL_LANG']['CTE']['teaserbox'][0] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['teaserbox'][0] = 'Teaserbox';
-$GLOBALS['TL_LANG']['CTE']['teaserbox'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['teaserbox'][1] = 'Inhaltselement Teaserbox';
+$GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][0] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateTeaserBox'][0] = 'Teaserbox';
+$GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateTeaserBox'][1] = 'Inhaltselement Teaserbox';
+$GLOBALS['TL_LANG']['CTE']['mateContentBox'][0] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateContentBox'][0] = 'Conentbox';
+$GLOBALS['TL_LANG']['CTE']['mateContentBox'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateContentBox'][1] = 'Inhaltselement Contentbox';
 
 // navbar
 $GLOBALS['TL_LANG']['tl_content']['mateNavbar'] = 'Navbar (mate)1';
