@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="<?= $this->language ?>"<?php if ($this->isRTL): ?> dir="rtl"<?php endif; ?>>
 <head>
-	
+
 <?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/matetheme/js/headroom.min.js'; ?>
 
   <?php $this->block('head'); ?>
@@ -17,8 +17,8 @@
     <?php $this->endblock(); ?>
 
     <?= $this->viewport ?>
-    
-    
+
+
     <?= $this->stylesheets ?>
     <?= $this->mooScripts ?>
     <?= $this->head ?>
@@ -101,6 +101,21 @@
   <?= $this->framework ?>
 
   <?= $this->mootools ?>
+
+  <link rel="stylesheet" type="text/css" media="all" href="<?php
+    // add stylesheets
+    $combiner = new Combiner();
+    $combiner->add('files/mate/sass/mate.scss');
+    echo $combiner->getCombinedFile();
+  ?>">
+
+  <script type="text/javascript" charset="utf-8" src="<?php
+    // add javascripts
+    $combiner = new Combiner();
+    $combiner->add('files/mate/js/bin/materialize.min.js');
+    $combiner->add('files/mate/js/mate/mate-theme.js');
+    echo $combiner->getCombinedFile();
+  ?>"></script>
 
 </body>
 </html>
