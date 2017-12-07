@@ -2,12 +2,12 @@
 
 @font-face { 
   font-family: "Lato Light";
-  src: url("/bundles/matetheme/fonts/Lato/Lato-Light.ttf");
+  src: url("/files/mate/fonts/Lato/Lato-Light.ttf");
 }
 
 @font-face { 
   font-family: "Old Standard";
-  src: url("/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.ttf");
+  src: url("/files/mate/fonts/Old_Standard_TT/OldStandard-Regular.ttf");
 }
 
 body {
@@ -401,6 +401,10 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
     margin-left: 0;
 }
 
+#left .inside > h2:first-child {
+    margin-top: 0;
+}
+
 /* ========================== *
  *    Header                  *
  * ========================== */
@@ -464,7 +468,7 @@ header {
 
 #header .search-box {
 	position: absolute;
-	top: 150px;
+	top: 151px;
 	left: 0;
 	width: 100%;
 	z-index: 13;
@@ -2073,118 +2077,6 @@ textarea {
 }
 
 /* ========================== *
- *    Maklermodul	          *
- * ========================== */
-#estate_filter_list {
-    button {
-	    background: #86AF49;
-	    
-	    &:hover {
-	    	background: #476A30;
-	    }
-    }
-    
-    .header {
-    	color: #476A30;
-    }
-}
-
-.btn.btn-reset-filter {
-    background: #86AF49;
-    color: #fff;
-    padding: 0 20px;
-    font-size: 14px;
-    
-    &:hover {
-    	background: #476A30;
-    }
-}
-
-@media (min-width: 992px) {
-	.mod_immoListView .estate {
-		width: 33.3%;
-	}
-}
-
-.mod_immoListView {
-	font-family: inherit;
-	
-	.estate {
-		h2 {
-			height: 110px;
-			color: inherit;
-			border-color: #86AF49;
-		}
-		
-		img {
-			max-width: initial;
-		}
-		
-		ul li {
-			.label, .value {
-				color: inherit;
-				font-size: inherit;
-			}
-		}
-	}
-	
-	.pagination {
-		ul li {
-			height: initial;
-			
-			a {
-			    padding: 5px 15px;
-			    background: #86AF49;
-			    color: #fff;
-			    border: none;
-			    
-			    &:hover {
-				    background: #476A30;
-				    color: #fff;
-				    border: none;
-				}
-			}
-			
-			&.active a {
-			    background: #476A30;
-			}
-		}
-		
-		
-	}
-}
-
-#wrapper .estate-detail {
-	color: inherit;
-	font-size: inherit;
-	font-family: inherit;
-	
-	h1 {
-		color: #476A30;
-		
-		&:after {
-			border-color: #476A30;
-		}
-	}
-	
-	h2, h3, h4 {
-		color: #476A30;
-		border-color: #476A30;
-	}
-	
-	div, .back a {
-		color: inherit;
-		font-size: inherit;
-	}
-}
-
-.estate-header-image {
-	h1, h2, h3, h4, h5, h6 {
-		color: #476A30;
-	}
-}
-
-/* ========================== *
  *    Mobile Anpassungen      *
  * ========================== */
 
@@ -2400,10 +2292,6 @@ textarea {
 		margin: 0;
 	}
 	
-	.mod_immoListView .estate h2 {
-		height: initial;
-	}
-	
 	/* Layouts */
 	.subnav li {
 		a, span {
@@ -2457,7 +2345,7 @@ textarea {
 	}
 	
 	#header .search-box {
-		top: 100px;
+		top: 101px;
 		
 		.formbody {
 		    padding: 15px;

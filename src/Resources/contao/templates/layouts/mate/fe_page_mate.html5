@@ -109,9 +109,9 @@
 <script type="text/javascript" charset="utf-8" src="<?php
 // add javascripts
 $combiner = new Combiner();
-$combiner->add('bundles/matetheme/js/bin/materialize.min.js');
-$combiner->add('bundles/matetheme/js/headroom.min.js');
-$combiner->add('files/mate/js/mate/mate-theme.js');
+$combiner->add('bundles/matetheme/js/materialize/materialize.min.js');
+$combiner->add('bundles/matetheme/js/headroom/headroom.min.js');
+$combiner->add('files/mate/js/theme.js');
 echo $combiner->getCombinedFile();
 ?>"></script>
 
