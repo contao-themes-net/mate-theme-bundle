@@ -18,6 +18,9 @@ namespace ContaoThemesNet\MateThemeBundle\Command;
 
 use Contao\CoreBundle\Command\AbstractLockedCommand;
 use Contao\CoreBundle\Util\SymlinkUtil;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Symlinks the public mate theme resources into the files directory
@@ -26,7 +29,7 @@ use Contao\CoreBundle\Util\SymlinkUtil;
  *
  */
 
-abstract class SymlinksCommand extends AbstractLockedCommand
+class SymlinksCommand extends AbstractLockedCommand
 {
     /**
      * @var string
@@ -36,23 +39,49 @@ abstract class SymlinksCommand extends AbstractLockedCommand
     /**
      * {@inheritdoc}
      */
-    public function __construct()
+    protected function configure()
     {
-        $this->rootDir = $this->getContainer()->getParameter('kernel.project_dir');
+        $this
+            ->setName('contao:install')
+            ->setDefinition([
+                new InputArgument('target', InputArgument::OPTIONAL, 'The target directory', 'files'),
+            ])
+            ->setDescription('Symlinks the required Mate Theme resources')
+        ;
+    }
 
-        $this->symlinThemeResources();
+    /**
+     * {@inheritdoc}
+     */
+    protected function executeLocked(InputInterface $input, OutputInterface $output)
+    {
+        $this->io->text("constructer for Symlinks\n");
 
-        parent::executeLocked();
+        try {
+
+
+            $this->rootDir = $this->getContainer()->getParameter('kernel.project_dir');
+            $this->io->text("Root DIR <comment>$this->rootDir</comment>.\n");
+
+            $this->symlinkThemeResources();
+
+        } catch (\InvalidArgumentException $e) {
+            $output->writeln(sprintf('%s (see help contao:install).', $e->getMessage()));
+            return 1;
+        }
+        return 0;
+
+
     }
 
     /**
      * Symlinks the mate theme folder resources to files/mate.
      */
-    private function symlinThemeResources()
+    private function symlinkThemeResources()
     {
         SymlinkUtil::symlink(
             'vendor/contao-themes-net/mate-theme-bundle/src/Resources/public',
-            'files/mate',
+            'files/mate11',
             $this->rootDir
         );
         $this->io->text("Symlinked the <comment>mate theme</comment> folder.\n");

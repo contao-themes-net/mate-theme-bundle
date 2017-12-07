@@ -50,15 +50,15 @@
     "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin",
     "contao": {
       "sources": {
-        "src/Resources/contao/public": "files/mate",
-        "src/templates/mate": "templates/mate"
+        "src/Resources/contao/public": "files/mate1",
+        "src/templates/mate": "templates/mate2"
       }
     }
   },
   "scripts": {
     "post-root-package-install": [
-      "php -r \"file_exists('files/mate/_custom_variables.scss') || copy('src/Resources/public/sass/_custom_variables.scss.example', 'files/mate/_custom_variables.scss');\"",
-      "php -r \"file_exists('files/mate/_custom_variables.scss') || copy('src/Resources/public/sass/_custom_variables.scss.example', 'files/mate/_custom_variables.scss');\""
+      "php -r \"file_exists('files/mate4/_custom_variables.scss') || copy('src/Resources/public/sass/_custom_variables.scss.example', 'files/mate4/_custom_variables.scss');\"",
+      "php -r \"file_exists('files/mate5/_custom_variables.scss') || copy('src/Resources/public/sass/_custom_variables.scss.example', 'files/mate5/_custom_variables.scss');\""
     ],
     "post-install-cmd": [
       "ContaoThemesNet\\MateThemeBundle\\Events\\Installer::initialize"
@@ -68,7 +68,7 @@
     ]
   },
   "config": {
-    "src/templates/mate": "templates/mate"
+    "src/templates/mate": "templates/mate6"
   },
   "minimum-stability": "dev",
   "prefer-stable": true

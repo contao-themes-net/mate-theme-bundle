@@ -3,7 +3,6 @@
 namespace ContaoThemesNet\MateThemeBundle\Events;
 
 use Composer\Script\Event;
-use Zend\ServiceManager\ServiceManager;
 use Contao\CoreBundle\Util\SymlinkUtil;
 
 class Installer
@@ -35,7 +34,7 @@ class Installer
     {
         SymlinkUtil::symlink(
             'vendor/contao-themes-net/mate-theme-bundle/src/template/mate',
-            'template/mate',
+            'template/mate9',
             $this->rootDir
         );
     }
@@ -47,7 +46,7 @@ class Installer
     {
         SymlinkUtil::symlink(
             'vendor/contao-themes-net/mate-theme-bundle/src/Resources/public',
-            'files/mate',
+            'files/mate10',
             $this->rootDir
         );
     }
