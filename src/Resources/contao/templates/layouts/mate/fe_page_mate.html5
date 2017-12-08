@@ -17,7 +17,7 @@
     $combiner = new Combiner();
     $combiner->add('files/mate/sass/mate.scss');
     echo $combiner->getCombinedFile(); ?>">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">;
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <?= $this->head ?>
 <?php $this->endblock(); ?>
 
