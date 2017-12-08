@@ -17,7 +17,7 @@
 
 <?php $this->block('left'); ?>
     <?php if ($this->left): ?>
-    <div class="col s12 l3 pull-l9">
+    <div class="col s12 l3 pull-l9 left-outer">
       <aside id="left">
         <div class="inside">
           <?= $this->left ?>

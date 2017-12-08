@@ -26,7 +26,7 @@ body {
 
 #main {
   margin: 30px 0 50px;
-  padding: 0 35px;
+  padding: 0;
 }
 
 #wrapper {
@@ -394,6 +394,22 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
 		    margin: 0;
 		}
 	}
+
+    #left {
+        padding: 35px 15px 0 0;
+    }
+
+    .left-outer.col {
+        padding-left: 0;
+    }
+
+    #right {
+        padding: 35px 0 0 15px;
+    }
+
+    .right-outer.col {
+        padding-right: 0;
+    }
 }
 
 .left-right-col .container .col:first-child {
@@ -458,7 +474,7 @@ header {
 	width: 20px;
 	position: absolute;
 	right: 0;
-	top: 22px;
+	top: 37px;
 	
 	a {
 		color: #86AF49;
@@ -487,12 +503,6 @@ header {
 		padding: 40px;
 	}
 	
-	input[type="search"] {
-	    width: 50%;
-	    display: inline-block;
-	    margin-right: 15px;
-	}
-	
 	.submit {
 		@extend .btn;
 		height: 40px;
@@ -504,6 +514,20 @@ header {
 	&.stuck {
 	    position: fixed;
 	    top: 80px;
+	}
+	
+	.widget-text {
+	    width: 50%;
+	    display: inline-block;
+	    float: none;
+	    vertical-align: top;
+        margin-right: 15px;
+	}
+	
+	.widget-submit {
+	    display: inline-block;
+	    width: auto;
+	    float: none;
 	}
 }
 
@@ -794,7 +818,7 @@ nav {
 	}
 	
 	.search {
-	    top: 5px;
+	    top: 18px;
 	    
 	    a {
 	    	color: #fff;
@@ -1601,15 +1625,15 @@ footer.page-footer {
 	    position: relative;
 	    padding-bottom: 20px;
         color: #fff;
-	}
-	
-	h5:after {
-	    position: absolute;
-	    content: "";
-	    border-bottom: 4px solid $footer-headline-border-color;
-	    bottom: 0;
-	    width: 150px;
-	    display: block;
+        
+        &:after {
+		    position: absolute;
+		    content: "";
+		    border-bottom: 4px solid $footer-headline-border-color;
+		    bottom: 0;
+		    width: 150px;
+		    display: block;
+		}
 	}
 	
 	p {
@@ -1625,13 +1649,17 @@ footer.page-footer {
 		    padding: 0 10px;
 		    position: relative;
 		    font-weight: 700;
-		}
-		
-		p:first-child:after {
-		    position: absolute;
-		    content: "|";
-		    font-weight: 700;
-		    right: -3px;
+		    
+		    &:after {
+			    position: absolute;
+			    content: "|";
+			    font-weight: 700;
+			    right: -3px;
+			}
+			
+			&:last-child:after {
+				display: none;
+			}
 		}
 		
 		a {
@@ -2352,14 +2380,19 @@ textarea {
 		    padding: 15px;
 		}
 		
-		input[type="search"] {
-		    width: 60%;
+		.widget-text {
+		    width: 70%;
 		    margin-right: 0;
 		    float: left;
 		}
 		
-		.submit {
-			width: 40%;
+		.widget-submit {
+		    width: 30%;
+		    
+		    .submit {
+		    	width: 100%;
+		    	padding: 0;
+		    }
 		}
 	}
 	
