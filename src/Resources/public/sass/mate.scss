@@ -186,7 +186,7 @@ code, pre {
         left: 0;
         top: -2px;
         content: "»";
-        color: #86AF49;
+        color: $mateColor2;
         font-weight: 700;
       }
     }
@@ -246,7 +246,7 @@ table {
   }
 
   th, tfoot td {
-    background: #86AF49;
+    background: $mateColor2;
     color: #fff;
   }
 
@@ -307,7 +307,7 @@ table {
 h1, h2, h3, h4, h5, h6 {
   position: relative;
   font-weight: 700;
-  color: #476A30;
+  color: $mateColor3;
 }
 
 h1 {
@@ -477,7 +477,7 @@ header {
 	top: 37px;
 	
 	a {
-		color: #86AF49;
+		color: $mateColor2;
 		cursor: pointer;
 	}
 }
@@ -759,14 +759,14 @@ nav {
 		display: block;
 		
 		a, span {
-		    background: #86AF49;
+		    background: $mateColor2;
 		    padding: 10px 15px;
 		    color: #fff;
 		    margin: 2px 0;
 	        display: block;
 		    
 		    &:hover, &.active {
-		    	background: #476A30;
+		    	background: $mateColor3;
 		    }
 		}
 	}
@@ -888,7 +888,7 @@ nav .brand-logo {
 		
 		.indicators .indicator-item {
 			&.active {
-				background: #86AF49;
+				background: $mateColor2;
 			}
 		}
 	}
@@ -935,8 +935,8 @@ nav .brand-logo {
 		    margin: 0;
 			
 			a {
-			    background: #B6CF92;
-			    color: #476A30;
+			    background: $mateColor1;
+			    color: $mateColor3;
 			    padding: 7px 15px;
 			    text-transform: uppercase;
 			    font-size: 11px;
@@ -945,7 +945,7 @@ nav .brand-logo {
 		        
 		        &:hover {
 					color: #fff;
-					background: #476A30;
+					background: $mateColor3;
 				}
 			}
 		}
@@ -978,11 +978,11 @@ nav .brand-logo {
 			left: inherit;
 			width: auto;
 			height: 100%;
-			background: #86AF49;
+			background: $mateColor2;
 		}
 		
 		.list-nav {
-		    background: #58774E;
+		    background: $mateColor4;
 		    position: absolute;
 		    bottom: 0;
 		    left: 0;
@@ -993,14 +993,14 @@ nav .brand-logo {
 			    display: inline-block;
 			    float: left;
 			    width: 100px;
-			    border-right: 1px solid #86AF49;
+			    border-right: 1px solid $mateColor2;
 			    height: 100%;
-				color: #B6CF92;
+				color: $mateColor1;
 				position: relative;
 				cursor: pointer;
 				
 				&:hover {
-					color: #86AF49;
+					color: $mateColor2;
 				}
 			    
 			    i {
@@ -1053,7 +1053,7 @@ nav .brand-logo {
 			    .subheadline {
 					display: block;
 					margin: 0;
-					color: #86AF49;
+					color: $mateColor2;
 					font-weight: 700;
 				    font-size: 10px;
 			    }
@@ -1065,7 +1065,7 @@ nav .brand-logo {
 			}
 			
 			.indicator-item.active {
-				background: #B6CF92;
+				background: $mateColor1;
 				overflow: visible;
 				
 				&:before {
@@ -1073,7 +1073,7 @@ nav .brand-logo {
 				    content: "";
 				    left: -1px;
 				    top: 0;
-				    border-left: 1px solid #B6CF92;
+				    border-left: 1px solid $mateColor1;
 				    height: 100%;
 				    display: block;
 				}
@@ -1083,7 +1083,7 @@ nav .brand-logo {
 				}
 				
 				.headline {
-					color: #476A30;
+					color: $mateColor3;
 				}
 			}
 			
@@ -1092,7 +1092,7 @@ nav .brand-logo {
 			    content: "";
 			    right: 0;
 			    top: 20px;
-			    border-right: 1px solid #B6CF92;
+			    border-right: 1px solid $mateColor1;
 			    height: 40px;
 			}
 			
@@ -1105,7 +1105,7 @@ nav .brand-logo {
 		    margin: 0 0 5px;
 		    text-align: left;
 		    font-size: 11px;
-		    color: #476A30;
+		    color: $mateColor3;
 		}
 	}
 	
@@ -1304,7 +1304,7 @@ nav .brand-logo {
 			padding: 15px 0;
 		    
 		    a {
-			    color: #86AF49;
+			    color: $mateColor2;
 			    
 			    &:hover {
 					color: $primary-link-hover-font-color;
@@ -1316,7 +1316,7 @@ nav .brand-logo {
 		    position: absolute;
 		    bottom: 0;
 		    left: 0;
-		    border-bottom: 3px solid #86AF49;
+		    border-bottom: 3px solid $mateColor2;
 		    width: 40px;
 		    content: "";
 		}
@@ -1331,7 +1331,7 @@ nav .brand-logo {
 		.info {
 		    margin: 0;
 		    font-size: 13px;
-		    color: #ABBDB1;
+		    color: $mateColor6;
 		}
 	}
 }
@@ -1354,7 +1354,7 @@ nav .brand-logo {
 		    right: 30px;
 			font-size: 27px;
 			line-height: 19px;
-		    background: #86AF49;
+		    background: $mateColor2;
 		    color: #fff;
 		    padding: 10px;
 		    border-radius: 100%;
@@ -1364,7 +1364,7 @@ nav .brand-logo {
 		    font-weight: 700;
 		    
     		&:hover {
-				background: #476A30;
+				background: $mateColor3;
 			}
 		}
 	}
@@ -1381,13 +1381,13 @@ nav .brand-logo {
 		}
 		
 		a.more {
-		    background: #86AF49;
+		    background: $mateColor2;
 		    color: #fff;
 		    display: inline-block;
 		    padding: 3px 10px;
 		    
 		    &:hover {
-		    	background: #476A30;
+		    	background: $mateColor3;
 		    }
 		}
 	}
@@ -1408,7 +1408,7 @@ nav .brand-logo {
 	.info {
 	    margin: 0;
 	    font-size: 13px;
-	    color: #ABBDB1;
+	    color: $mateColor6;
 	}
 	
 	h1 {
@@ -1417,11 +1417,11 @@ nav .brand-logo {
 	    text-transform: inherit;
 		margin: 0;
 		padding: 15px 0;
-		color: #86AF49;
+		color: $mateColor2;
 		position: relative;
 	    
 	    a {
-		    color: #86AF49;
+		    color: $mateColor2;
 		}
 	}
 	
@@ -1429,7 +1429,7 @@ nav .brand-logo {
 	    position: absolute;
 	    bottom: 0;
 	    left: 0;
-	    border-bottom: 3px solid #86AF49;
+	    border-bottom: 3px solid $mateColor2;
 	    width: 40px;
 	    content: "";
 	}
@@ -1449,7 +1449,7 @@ nav .brand-logo {
     li {
 	    a, span {
 		    display: block;
-		    border: 1px solid #86AF49;
+		    border: 1px solid $mateColor2;
 		    padding: 0 10px;
 		    font-size: 1rem;
 		    line-height: 30px;
@@ -1457,7 +1457,7 @@ nav .brand-logo {
 		}
 		
 		a {
-			background: #86AF49;
+			background: $mateColor2;
 			color: #fff;
 		}
 		
@@ -1466,8 +1466,8 @@ nav .brand-logo {
 		}
 		
 		a:hover {
-			background: #476A30;
-			border: 1px solid #476A30;
+			background: $mateColor3;
+			border: 1px solid $mateColor3;
 		}
     }
 }
@@ -1504,7 +1504,7 @@ nav .brand-logo {
 	
 	td, th {
 		text-align: center;
-		border: 1px solid #B6CF92;
+		border: 1px solid $mateColor1;
 	}
 	
 	.label, .days {
@@ -1514,20 +1514,20 @@ nav .brand-logo {
 	
 	.days {
 	    background: #fff;
-	    color: #86AF49;
+	    color: $mateColor2;
 		font-weight: 700;
 		font-size: 16px;
     	padding: 5px;
 	    
 	    a {
-		    color: #86AF49;
+		    color: $mateColor2;
 		    font-size: 12px;
 		    margin-top: 5px;
 		    display: block;
 		}
 		
 		&.active {
-		    background: #B6CF92;
+		    background: $mateColor1;
 		    color: #fff;
 		    
 		    a {
@@ -1537,22 +1537,22 @@ nav .brand-logo {
 	}
 	
 	.days.today {
-	    background: #476A30;
+	    background: $mateColor3;
 	    color: #fff;
 	}
 	
 	.label {
-		background: #86AF49;
+		background: $mateColor2;
 		color: #fff;
 	}
 	
 	th.head {
 	    background: #f5f5f5;
-	    color: #476A30;
+	    color: $mateColor3;
 	}
 	
 	.previous a, .next a {
-	    color: #86AF49;
+	    color: $mateColor2;
 	}
 }
 
@@ -1575,7 +1575,7 @@ nav .brand-logo {
 }
 
 .event time {
-    background: #86AF49;
+    background: $mateColor2;
     font-weight: 700;
     color: #fff;
     padding: 5px;
@@ -1606,7 +1606,7 @@ nav .brand-logo {
 
 	time {
 	    background: none;
-	    color: #86af49;
+	    color: $mateColor2;
 	    padding: 0;
 	}
 }
@@ -1666,7 +1666,7 @@ footer.page-footer {
 			color: $mateColorWhite;
 			
 			&:hover {
-				color: #86AF49;
+				color: $mateColor2;
 			}
 		}
 	}
@@ -1675,7 +1675,7 @@ footer.page-footer {
 	    position: fixed;
 	    right: 50px;
 	    bottom: 50px;
-	    background: #5F5C4D;
+	    background: $mateColor5;
 	    color: #fff;
 	    padding: 7px 10px;
 	    line-height: 1em;
@@ -1705,7 +1705,7 @@ footer.page-footer {
 		
 		time {
 			background: #fff;
-			color: #86AF49;
+			color: $mateColor2;
 			padding: 2px 5px;
 			display: inline-block;
 			font-size: 12px;
@@ -1857,7 +1857,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-	border: 1px solid #B6CF92;
+	border: 1px solid $mateColor1;
 	box-shadow: none;
 }
 
@@ -1881,7 +1881,7 @@ body .picker__frame {
     
     .picker__weekday {
 	    color: #fff;
-	    background: #86AF49;
+	    background: $mateColor2;
     }
     
     table th, table tfoot td {
@@ -1895,7 +1895,7 @@ body .picker__frame {
     
     .picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
 	    border-radius: 0;
-	    background: #86AF49;
+	    background: $mateColor2;
 	}
 
 	.picker__footer {
@@ -1903,11 +1903,11 @@ body .picker__frame {
 	}
 	
 	.clockpicker-canvas line {
-		stroke: #86AF49;
+		stroke: $mateColor2;
 	}
 	
 	.clockpicker-canvas-bg, .clockpicker-canvas-bearing {
-		fill: #86AF49;
+		fill: $mateColor2;
 	}
 }
 
@@ -1971,13 +1971,13 @@ textarea {
 }
 
 [type="checkbox"]:checked + label:before {
-	border-right: 2px solid #86AF49;
-	border-bottom: 2px solid #86AF49;
+	border-right: 2px solid $mateColor2;
+	border-bottom: 2px solid $mateColor2;
 }
 
 [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
-	background-color: #86AF49;
-	border: 2px solid #86AF49;
+	background-color: $mateColor2;
+	border: 2px solid $mateColor2;
 }
 
 /* ========================== *
@@ -2027,7 +2027,7 @@ textarea {
 
 .mod_faqpage {
   h3 {
-    background: #86AF49;
+    background: $mateColor2;
     color: #fff;
     padding: 7px 15px;
   }
@@ -2042,7 +2042,7 @@ textarea {
 
   .info {
     padding: 15px;
-    color: #86AF49;
+    color: $mateColor2;
     font-weight: 700;
     font-size: 14px;
     margin: 0;
@@ -2064,7 +2064,7 @@ textarea {
   }
 
   h3 {
-    background: #86AF49;
+    background: $mateColor2;
     color: #fff;
     padding: 5px 15px;
 
@@ -2096,7 +2096,7 @@ textarea {
   .url {
     margin: 0;
     padding-top: 0;
-    color: #86AF49;
+    color: $mateColor2;
     word-wrap: break-word;
   }
 
@@ -2203,7 +2203,7 @@ textarea {
 	
 	.side-nav {
 		width: 70%;
-		background: #86AF49;
+		background: $mateColor2;
 		padding: 30px 0;
 		
 		li > a {
@@ -2220,7 +2220,7 @@ textarea {
 			position: relative;
 			
 			ul {
-				background: #B6CF92;
+				background: $mateColor1;
 				
 				a {
 	    			width: 100%;
