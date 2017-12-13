@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Lato Light';
+  font-family: $font1;
   position: relative;
   
   &#top {
@@ -912,7 +912,7 @@ nav .brand-logo {
 		    font-size: 20px;
     		text-transform: initial;
     		padding: 0;
-    		font-family: "Old Standard";
+    		font-family: $font2;
 		    font-weight: 400;
     		
     		a {
@@ -1149,7 +1149,7 @@ nav .brand-logo {
 		padding: 12px 30px 5px;
 		margin: 0 auto;
 		max-width: 80%;
-		font-family: "Old Standard";
+		font-family: $font2;
 	}
 	
 	.description {
@@ -1297,7 +1297,7 @@ nav .brand-logo {
 		
 		h2 {
 		    font-size: 21px;
-		    font-family: "Old Standard";
+		    font-family: $font2;
 		    font-weight: 400;
 		    text-transform: inherit;
 			margin: 0;
@@ -1412,7 +1412,7 @@ nav .brand-logo {
 	}
 	
 	h1 {
-	    font-family: "Old Standard";
+	    font-family: $font2;
 	    font-weight: 400;
 	    text-transform: inherit;
 		margin: 0;

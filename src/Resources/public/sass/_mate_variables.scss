@@ -10,6 +10,9 @@
  * use _custom_variables.scss for update safe overwrites
  */
 
+$font1: 'Lato Light' !default;
+$font2: 'Old Standard' !default;
+
 $mateColor1: #b6cf92 !default;
 $mateColor2: #86af49 !default;
 $mateColor3: #476a30 !default;
@@ -38,8 +41,6 @@ $navbar-font-color: $secondary-color !default;
 // $success-color: #4CAF50;
 // $error-color: color("red", "base");
 // $error-color: #F44336;
-// $link-color: color("light-blue", "darken-1") !default;
-// $link-color: #039be5;
 
 /*
  * calculated colors
