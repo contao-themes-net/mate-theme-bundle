@@ -51,6 +51,5 @@
   "extra": {
     "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
   },
-  "minimum-stability": "beta",
-  "prefer-stable": true
+  "minimum-stability": "stable"
 }
