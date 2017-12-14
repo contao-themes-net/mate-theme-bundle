@@ -31,7 +31,7 @@
     "contao/core-bundle": "^4.4",
     "pdir/contao-theme-helper-bundle": "^1.0",
     "contao-dd/advanced-classes-bundle": "^0.5",
-    "contao-bootstrap/grid": "@beta"
+    "contao-bootstrap/grid": "2.0.0-beta3"
   },
   "conflict": {
     "contao/core": "*"
