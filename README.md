@@ -42,5 +42,5 @@ compatible with Contao 4.4.x
 
 ## install
 
-
+see https://docs.pdir.de
 
