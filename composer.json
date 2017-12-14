@@ -20,6 +20,8 @@
     }
   ],
   "support" : {
+    "docs": "https://docs.pdir.de",
+    "forum": "https://community.contao.org",
     "email" : "develop@pdir.de",
     "issues" : "https://github.com/contao-themes-net/mate-theme-bundle/issues",
     "source" : "https://github.com/contao-themes-net/mate-theme-bundle"
@@ -50,6 +52,5 @@
   },
   "extra": {
     "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
-  },
-  "minimum-stability": "stable"
+  }
 }
