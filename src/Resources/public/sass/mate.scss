@@ -2038,6 +2038,10 @@ textarea {
 	border: 2px solid $mateColor2;
 }
 
+.widget-upload label {
+  display: none;
+}
+
 /* ========================== *
  *    Module                  *
  * ========================== */
@@ -2161,6 +2165,22 @@ textarea {
   .highlight {
     font-weight: 700;
   }
+}
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%; /* Default for 1600x900 videos 16:9 ratio*/
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* ========================== *
@@ -2387,7 +2407,7 @@ textarea {
 
 	#main {
 		padding: 0;
-		margin: 0;
+		margin: 0 0 30px;
 	}
 
 	/* Layouts */
@@ -2582,6 +2602,7 @@ textarea {
 		.pageLink a {
 		    position: relative;
 		    margin: 0;
+            left: 10px;
 		}
 	}
 
