@@ -46,9 +46,9 @@ $(document).ready(function(){
 	 *   Mate Slider		 *
 	 * ===================== */
 	$(".slider:not(.smaller)").slider({
-		height: 400,
+		height: 460,
 	    indicators: true,
-	    interval: 12000,
+	    interval: 12000
 	}); 
 	
 	$(".slider.smaller").slider({

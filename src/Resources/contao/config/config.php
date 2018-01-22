@@ -33,8 +33,16 @@ $GLOBALS['tl_config']['theme_tags'] = array(
     'MATE05/05'
 );
 
-
-if (BE_USER_LOGGED_IN)
-{
-    // $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/theme_installer/assets/js/themeInspector.js';
-}
+/**
+ * Backend Modules
+ */
+array_insert($GLOBALS['BE_MOD']['mateTheme'], 1, array
+(
+    'mateThemeSetup' => array
+    (
+        'callback'          => 'ContaoThemesNet\\MateThemeBundle\\Mate\\MateThemeSetup',
+        //'icon'            => 'system/modules/makler_modul_mplus/assets/images/icon.png',
+        //'javascript'      => 'system/modules/isotope/assets/js/backend.min.js',
+        //'stylesheet'		=> 'system/modules/makler_modul_mplus/assets/css/backend.css'
+    ),
+));
