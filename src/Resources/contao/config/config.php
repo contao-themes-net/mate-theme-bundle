@@ -3,6 +3,7 @@
 // Insert the mate theme category
 array_insert($GLOBALS['TL_CTE'], 1, array('mateTheme' => array()));
 array_insert($GLOBALS['FE_MOD'], 1, array('mateTheme' => array()));
+array_insert($GLOBALS['BE_MOD'], 1, array('mateTheme' => array()));
 
 /**
  * Add frontend element
@@ -40,7 +41,8 @@ array_insert($GLOBALS['BE_MOD']['mateTheme'], 1, array
 (
     'mateThemeSetup' => array
     (
-        'callback'          => 'ContaoThemesNet\\MateThemeBundle\\Mate\\MateThemeSetup',
+        'callback'          => 'ContaoThemesNet\\MateThemeBundle\\Module\\MateThemeSetup',
+        'tables'            => array(),
         //'icon'            => 'system/modules/makler_modul_mplus/assets/images/icon.png',
         //'javascript'      => 'system/modules/isotope/assets/js/backend.min.js',
         //'stylesheet'		=> 'system/modules/makler_modul_mplus/assets/css/backend.css'
