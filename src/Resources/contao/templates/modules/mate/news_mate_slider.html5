@@ -1,4 +1,5 @@
 <li class="sliderImage <?= $this->alias ?>">
+
 	<div class="img" <?php if ($this->addImage): ?>style="background-image:url('<?= $this->picture['img']['src'] ?>');"<?php endif; ?>></div>
 	
 	<div class="caption center-align">
@@ -24,8 +25,8 @@
 		    	<a href="<?= $this->link ?>">Mehr dazu</a>
 		    </p>
 		  <?php endif; ?>
-		  
-		  <img style="display:none;"></img>
+
+		  <img src="#" style="display:none;" alt="invisible image tag">
 		
 		</div>
 		

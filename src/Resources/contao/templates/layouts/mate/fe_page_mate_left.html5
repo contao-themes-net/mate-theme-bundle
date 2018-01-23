@@ -1,7 +1,7 @@
 <?php $this->extend('fe_page_mate'); ?>
 
 <?php $this->block('container'); ?>
-	<?php $this->parent(); ?>
+    <?php $this->parent(); ?>
 <?php $this->endblock(); ?>
 
 <?php $this->block('main'); ?>

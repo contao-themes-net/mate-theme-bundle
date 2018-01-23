@@ -16,10 +16,7 @@
 
       </a>
       <?php if(!empty($item['subitems'])): ?>
-      <i class="material-icons right"
-         style="z-index: 999;position: relative;right: 5px;top: -55px;"
-         onclick="jQuery( this ).parent('li').next().toggle();return false;"
-         ontouchstart="jQuery( this ).parent('li').next().toggle();return false;">arrow_drop_down</i>
+          <i onclick="jQuery( this ).parent('li').next().toggle();return false;" ontouchstart="jQuery( this ).parent('li').next().toggle();return false;" class="material-icons right" style="z-index: 999;position: relative;right: 5px;top: -55px;">arrow_drop_down</i>
       <?php endif; ?>
     </li>
     <?php if (!empty($item['subitems'])): ?>
@@ -39,11 +36,7 @@
   <?php endforeach; ?>
 <?php endif; ?>
 
-
-<script>
-    jQuery('.mobile-menu i').bind('touchstart click', function() {
-      $(this).html() == "arrow_drop_down" ? $(this).html('arrow_drop_up') : $(this).html('arrow_drop_down');
-
-    	
-    });
-</script>
+<?php $GLOBALS['TL_BODY'][] = '<script>
+jQuery(".mobile-menu i").bind("touchstart click", function() {
+  $(this).html() == "arrow_drop_down" ? $(this).html("arrow_drop_up") : $(this).html("arrow_drop_down");
+}); </script>'; ?>

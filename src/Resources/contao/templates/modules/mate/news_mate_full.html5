@@ -1,3 +1,15 @@
+<?php
+if($this->width > $this->height) {
+    #Querformatbilder
+    $ogimage = $this->getImage($this->urlEncode($this->singleSRC), 1200, 630 , 'crop');
+}else{
+    #Hochformatbilder
+    $ogimage = $this->getImage($this->urlEncode($this->singleSRC), 630, 0 , 'proportional');
+}
+if($ogimage != "") {
+    $GLOBALS['og:image'] = $this->Environment->base . $ogimage;
+}
+?>
 
 <div class="layout_full block<?= $this->class ?>">
 
