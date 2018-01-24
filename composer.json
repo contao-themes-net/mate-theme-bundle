@@ -4,7 +4,6 @@
   "description": "mate theme bundle for Contao 4",
   "keywords":["contao","theme","template"],
   "homepage": "https://contao-themes.net",
-  "license": "pdir contao theme licence",
   "authors": [
     {
       "name": "Webdesign für Dresden",
@@ -32,7 +31,7 @@
     "pdir/contao-theme-helper-bundle": "^1.0",
     "contao-dd/advanced-classes-bundle": "^0.5",
     "contao-bootstrap/grid": "2.0.0-beta3",
-    "derhaeuptling/contao-seo-serp-preview" : "^3.0.2"
+    "derhaeuptling/contao-seo-serp-preview": "^3.0.2"
   },
   "conflict": {
     "contao/core": "*"
