@@ -26,11 +26,11 @@
     "source" : "https://github.com/contao-themes-net/mate-theme-bundle"
   },
   "require": {
-    "php": ">=7.0.0",
+    "php": ">=7.1",
     "contao/core-bundle": "^4.4",
     "pdir/contao-theme-helper-bundle": "^1.0",
     "contao-dd/advanced-classes-bundle": "^0.5",
-    "contao-bootstrap/grid": "2.0.0-beta3",
+    "contao-bootstrap/grid": "^2.0.0",
     "derhaeuptling/contao-seo-serp-preview": "^3.0.2"
   },
   "conflict": {
@@ -51,6 +51,14 @@
     ]
   },
   "extra": {
-    "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin",
+    "contao": {
+      "sources": {
+        "src/Resources/contao/public": "src/Resources/contao/public"
+      },
+      "userfiles": {
+        "files/mate": "files/mate"
+      }
+    }
   }
 }
