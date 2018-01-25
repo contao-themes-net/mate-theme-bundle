@@ -9,6 +9,9 @@ $GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][1] = $GLOBALS['TL_LANG']['FMD']['mat
 $GLOBALS['TL_LANG']['CTE']['mateContentBox'][0] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateContentBox'][0] = 'Content box';
 $GLOBALS['TL_LANG']['CTE']['mateContentBox'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateContentBox'][1] = 'content element content box';
 
+$GLOBALS['TL_LANG']['MOD']['mateTheme'][0] = "Mate Theme";
+$GLOBALS['TL_LANG']['MOD']['mateThemeSetup'][0] = "Mate Theme Setup";
+
 // navbar
 $GLOBALS['TL_LANG']['tl_content']['mateNavbar'] = 'Navbar (mate)1';
 #$GLOBALS['TL_LANG']['tl_module']['mateNavbar'][0] = 'Navbar (mate)1';

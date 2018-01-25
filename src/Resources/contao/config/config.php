@@ -43,8 +43,7 @@ array_insert($GLOBALS['BE_MOD']['mateTheme'], 1, array
     (
         'callback'          => 'ContaoThemesNet\\MateThemeBundle\\Module\\MateThemeSetup',
         'tables'            => array(),
-        //'icon'            => 'system/modules/makler_modul_mplus/assets/images/icon.png',
-        //'javascript'      => 'system/modules/isotope/assets/js/backend.min.js',
-        //'stylesheet'		=> 'system/modules/makler_modul_mplus/assets/css/backend.css'
+        'javascript'		=> 'bundles/matetheme/js/backend.js',
+        'stylesheet'		=> 'bundles/matetheme/sass/backend.css'
     ),
 ));

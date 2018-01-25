@@ -1,0 +1,45 @@
+<div class="tl_listing_container">
+    <div id="pdir" class="be_matetheme_setup clr">
+        <h1 id="tl_welcome">Mate Theme für Contao</h1>
+        <div class="intro">
+            <div class="right">
+                <div class="inner">
+                    <a href="#" target="_blank"><img
+                            src="bundles/matetheme/img/mate_logo.png"
+                            alt="Mate Theme für Contao" class="logo"></a>
+                    <p>Das Mate Theme für Contao ist ein Produkt der <a href="http://www.pdir.de/" target="_blank">pdir
+                            / digital agentur</a></p>
+                    <h2>Interessante Links</h2>
+                    <ul class="link-list">
+                        <li><a href="https://docs.contao-themes.net" target="_blank"
+                               style="text-decoration: underline;">Dokumentation</a> (In Vorbereitung)</li>
+                        <li><a href="https://mate.contao-themes.net/" target="_blank"
+                               style="text-decoration: underline;">Demo</a></li>
+                        <li><a href="https://github.com/contao-themes-net/mate-theme-bundle/issues" target="_blank"
+                               style="text-decoration: underline;">Probleme melden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left">
+                <div class="inner">
+                    <h2>Willkommen bei Mate Theme für Contao</h2>
+                    <p><b>pdir contao theme licence</b><br>Mit dieser <b>Lizenz</b> gekennzeichnete Themes dürfen sowohl privat als auch kommerziell eingesetzt werden. Der Copyright-Link bzw. die Copyright-Links "<i>powered by contao-themes.net</i>" dürfen nicht entfernt oder verändert werden. Das gilt auch wenn Sie das Theme nur als Basis für eine Website einsetzen und es verändern. Möchten Sie diesen Theme ohne Copyright-Link einsetzen, müssen Sie eine kostenpflichtige Lizenz erwerben.</p>
+                </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <hr>
+        <div class="tools">
+            <h2>Tools</h2>
+            <div class="left">
+                <div class="button sync-folder">
+                    <a href="/contao/main.php?do=mateThemeSetup&act=syncFolder">Theme-Dateien synchronisieren</a>
+                </div>
+            </div>
+            <div class="clr"></div>
+            <?php if($this->message == true): ?>
+                <p class="success">Alle Verzeichnisse und Dateien, die noch nicht existierten, wurden erfolgreich angelegt.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
