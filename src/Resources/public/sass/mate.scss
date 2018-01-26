@@ -5,6 +5,11 @@
   src: url("/files/mate/fonts/Lato/Lato-Light.ttf");
 }
 
+@font-face {
+  font-family: "Lato Regular";
+  src: url("/files/mate/fonts/Lato/Lato-Regular.ttf");
+}
+
 @font-face { 
   font-family: "Old Standard";
   src: url("/files/mate/fonts/Old_Standard_TT/OldStandard-Regular.ttf");
@@ -88,6 +93,12 @@ a {
     color: $primary-link-font-color;
     &:hover {
         color: $primary-link-hover-font-color;
+    }
+}
+
+.btn {
+    a {
+        color: #fff;
     }
 }
 
@@ -340,7 +351,6 @@ table {
 
 h1, h2, h3, h4, h5, h6 {
   position: relative;
-  font-weight: 700;
   color: $mateColor3;
 }
 
@@ -351,6 +361,10 @@ h1 {
   font-weight: 400;
   color: $mateColor2;
   padding: 10px 0;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: $font3;
 }
 
 h2 {
@@ -1558,6 +1572,11 @@ nav .brand-logo {
     margin-left: 0.75rem;
 }
 
+.recurring {
+  font-size: 14px;
+  color: #9c9c9c;
+}
+
 /* ========================== *
  *    Kalender und Events     *
  * ========================== */
@@ -1580,6 +1599,7 @@ nav .brand-logo {
 		font-weight: 400;
 		font-size: 16px;
     	padding: 5px;
+        border: 1px solid #fff;
 
 	    a {
 		    color: $mateColor2;
@@ -1678,6 +1698,16 @@ nav .brand-logo {
 	    color: $mateColor2;
 	    padding: 0;
 	}
+}
+
+.mod_calendar .event {
+    font-size: 12px;
+}
+
+.event, .mod_newsreader {
+    figure {
+        margin: 0;
+    }
 }
 
 /* ========================== *
