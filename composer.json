@@ -32,7 +32,7 @@
     "pdir/contao-theme-helper-bundle": "^1.0",
     "contao-dd/advanced-classes-bundle": "^0.5",
     "contao-bootstrap/grid": "^2.0.0",
-    "contao/newsletter-bundle": "~4.4.0",
+    "contao/newsletter-bundle": "4.4.0",
     "derhaeuptling/contao-seo-serp-preview": "^3.0.2"
   },
   "conflict": {

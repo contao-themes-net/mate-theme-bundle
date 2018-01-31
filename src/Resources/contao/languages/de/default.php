@@ -9,13 +9,11 @@ $GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][1] = $GLOBALS['TL_LANG']['FMD']['mat
 $GLOBALS['TL_LANG']['CTE']['mateContentBox'][0] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateContentBox'][0] = 'Contentbox';
 $GLOBALS['TL_LANG']['CTE']['mateContentBox'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateContentBox'][1] = 'Inhaltselement Contentbox';
 
-$GLOBALS['TL_LANG']['MOD']['mateTheme'][0] = "Mate Theme";
+$GLOBALS['TL_LANG']['MOD']['mateTheme'][0] = "contao-themes.net";
 $GLOBALS['TL_LANG']['MOD']['mateThemeSetup'][0] = "Mate Theme Setup";
 
 // navbar
 $GLOBALS['TL_LANG']['tl_content']['mateNavbar'] = 'Navbar (mate)1';
-#$GLOBALS['TL_LANG']['tl_module']['mateNavbar'][0] = 'Navbar (mate)1';
-#$GLOBALS['TL_LANG']['tl_module']['mateNavbar'][1] = 'Navbar (mate)2';
 $GLOBALS['TL_LANG']['tl_module']['mateTheme']['mateNavbar'][0] = 'Navbar (mate)3';
 $GLOBALS['TL_LANG']['tl_module']['mateTheme']['mateNavbar'][1] = 'Navbar (mate)4';
 
@@ -35,9 +33,30 @@ $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/02'] = 'Header / 02';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/03'] = 'Header / 03';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/04'] = 'Header / 04';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/05'] = 'Header / 05';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/06'] = 'Header / 06';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/07'] = 'Header / 07';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/08'] = 'Header / 08';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/09'] = 'Header / 09';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/10'] = 'Header / 10';
+
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/01'] = 'Module / 01';
-$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/01'] = 'Footer / Section 1';
-$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/02'] = 'Footer / Section 2';
-$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/03'] = 'Footer / Section 3';
-$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/04'] = 'Footer / Section 4';
-$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/05'] = 'Footer / Copyright';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/02'] = 'Module / 02';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/03'] = 'Module / 03';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/04'] = 'Module / 04';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/05'] = 'Module / 05';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/06'] = 'Module / 06';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/07'] = 'Module / 07';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/08'] = 'Module / 08';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/09'] = 'Module / 09';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE02/10'] = 'Module / 10';
+
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/01'] = 'Footer / 01';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/02'] = 'Footer / 02';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/03'] = 'Footer / 03';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/04'] = 'Footer / 04';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/05'] = 'Footer / 05';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/06'] = 'Footer / 06';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/07'] = 'Footer / 07';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/08'] = 'Footer / 08';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/09'] = 'Footer / 09';
+$GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/10'] = 'Footer / 10';

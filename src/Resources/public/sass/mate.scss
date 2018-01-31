@@ -345,6 +345,13 @@ table {
   margin: 0;
 }
 
+code {
+  background: #fff;
+  display: block;
+  padding: 15px;
+  font-size: 1rem;
+}
+
 /* ========================== *
  *    Überschriften           *
  * ========================== */
@@ -464,11 +471,11 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
 	}
 
     #left {
-        padding: 35px 15px 0 0;
+        padding: 30px 15px 0 0;
     }
 
     #right {
-        padding: 35px 0 0 15px;
+        padding: 30px 0 0 15px;
     }
 }
 
@@ -482,6 +489,10 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
 
 .container {
     padding: 0 15px;
+}
+
+#wrapper > .container {
+    padding-top: 30px;
 }
 
 /* ========================== *
@@ -995,6 +1006,7 @@ nav .brand-logo {
 		.layout_latest {
 		    padding: 60px 60px 0;
             overflow: visible;
+            width: 70%;
 		}
 
 		h2 {
@@ -1080,7 +1092,7 @@ nav .brand-logo {
 		    bottom: 0;
 		    left: 0;
 		    width: 100%;
-		    height: 90px;
+		    height: 80px;
 
 		    a {
 			    display: inline-block;
@@ -1290,6 +1302,27 @@ nav .brand-logo {
 }
 
 /* ========================== *
+ *    Mate Simple Box        *
+ * ========================== */
+#container .simplebox {
+    padding: 0;
+
+    .inside {
+        margin: 10px;
+        padding: 15px;
+        background: #fff;
+        min-height: 170px;
+    }
+
+    h2, h3, h4, h5, h6 {
+        margin-top: 0;
+    }
+}
+#container .row .col.simplebox {
+    padding: 0;
+}
+
+/* ========================== *
  *    Mate Content Box        *
  * ========================== */
 .ce_mateContentBox {
@@ -1297,6 +1330,10 @@ nav .brand-logo {
     height: 400px;
     display: table;
     border-top: 10px solid $primary-color;
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
 
 	.inside {
 	    display: table-cell;
@@ -1314,7 +1351,7 @@ nav .brand-logo {
 	    width: auto;
 	}
 
-	h4 {
+	h2, h3, h4, h5, h6 {
 	    margin: 0 0 40px;
         font-family: Old Standard;
 	}
@@ -1937,7 +1974,7 @@ footer .container {
 }
 
 #footer {
-    .newsletter {
+    #newsletter {
         background: #fff;
         text-align: center;
 
@@ -2108,6 +2145,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     display: block;
     border-radius: 0;
     box-shadow: none;
+    color: rgba(0, 0, 0, 0.87);
 }
 
 #wrapper {
@@ -2264,15 +2302,43 @@ textarea {
 .mod_login, .mod_lostPassword, .mod_registration, .mod_personalData, .mod_changePassword, .mod_subscribe, .mod_unsubscribe {
     background: #fff;
     margin: 0 0 30px;
-    padding: 0 15px 15px;
+    padding: 30px;
     border: 1px solid #e6e6e6;
+
+    fieldset {
+        padding-top: 0;
+    }
+
+    .widget-text {
+        margin: 15px 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 10px;
+    }
+
+    .widget-submit:not(.widget-checkbox):not(.widget-radio) {
+        margin-top: 0;
+    }
 }
 
 .mod_subscribe, .mod_unsubscribe {
-  .checkbox_container, .radio_container {
-    border: none;
-    padding: 15px 5px 0;
-  }
+    .checkbox_container, .radio_container {
+        border: none;
+        padding: 15px 5px 0;
+    }
+
+    .error, .confirm {
+        background: $mateColor2;
+        color: #fff;
+        padding: 10px 15px;
+        display: inline-block;
+        margin: 30px 0 0;
+    }
+
+    .widget-checkbox {
+        margin: 0;
+    }
 }
 
 .mod_faqlist {
@@ -2390,8 +2456,32 @@ textarea {
 }
 
 /* ========================== *
- *    Mobile Anpassungen      *
+ * Responsive Anpassungen     *
  * ========================== */
+@media (max-width:1700px) {
+    #wrapper .slider.mod_newslist .layout_latest {
+        width: 80%;
+    }
+}
+
+@media (max-width:1480px) {
+    #wrapper .slider.mod_newslist .layout_latest {
+        width: 90%;
+    }
+}
+
+@media (max-width:1350px) {
+    #wrapper .slider.mod_newslist .layout_latest {
+        width: 100%;
+    }
+}
+
+@media (max-width:1200px) {
+    #wrapper .slider.mod_newslist .layout_latest {
+        padding: 40px 40px 0;
+    }
+}
+
 @media (max-width:1080px) {
 	.search {
 	    padding: 0 30px;
@@ -2605,7 +2695,7 @@ textarea {
     }
 
     #footer {
-        .newsletter {
+        #newsletter {
             .mod_subscribe {
                 padding-left: 100px;
                 padding-right: 100px;
@@ -2650,7 +2740,7 @@ textarea {
     }
 
     #footer {
-        .newsletter {
+        #newsletter {
             .mod_subscribe {
                 padding-left: 0;
                 padding-right: 0;
@@ -3031,7 +3121,7 @@ textarea {
 
     /* Footer */
     #footer {
-        .newsletter {
+        #newsletter {
             .widget-text {
                 width: 100%;
             }
