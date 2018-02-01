@@ -293,18 +293,15 @@ table {
 }
 
 .ce_downloads li, .mod_faqlist li {
-  margin: 0;
+  margin: 5px;
   padding: 5px;
-  border-top: 1px solid #e6e6e6;
-  border-left: 1px solid #e6e6e6;
-  border-right: 1px solid #e6e6e6;
 
   &:nth-child(even) {
     background: #fff;
   }
 
   &:nth-child(odd) {
-    background: #f5f5f5;
+    background: rgba(134, 175, 73, 0.15);;
   }
 
   &:last-child {
@@ -350,6 +347,14 @@ code {
   display: block;
   padding: 15px;
   font-size: 1rem;
+}
+
+.material-icons {
+    color: $mateColor2;
+}
+
+figure {
+    margin: 0;
 }
 
 /* ========================== *
@@ -1940,6 +1945,10 @@ footer.page-footer {
 		&.active {
 			opacity: 1;
 		}
+
+        &:hover {
+            background: $button-floating-background-hover;
+        }
 	}
 
 	img {
@@ -1975,7 +1984,7 @@ footer .container {
 
 #footer {
     #newsletter {
-        background: #fff;
+        background: $mateColor1;
         text-align: center;
 
         h2, h3, h4, h5, h6 {
@@ -2004,6 +2013,14 @@ footer .container {
             padding: 0;
             height: 40px;
             box-shadow: none;
+        }
+
+        .text {
+            background: #f4f8f0;
+
+            &::placeholder {
+                color: rgba(0, 0, 0, 0.87);
+            }
         }
     }
 }
@@ -2117,16 +2134,19 @@ footer .container {
 
 .checkbox_container, .radio_container {
     margin: 0;
-    border: 1px solid #e6e6e6;
     padding: 0 15px 15px;
+    background: #fff;
+    border: 2px solid $mateColor1;
 
     legend {
 		margin-bottom: 10px;
+        color: $mateColor4;
 	}
 }
 
 .checkbox_container label {
     padding: 0 15px 0 25px;
+    color: $mateColor4;
 }
 
 .file-field .btn {
@@ -2136,7 +2156,7 @@ footer .container {
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea, textarea {
     background: #fff;
-    border: 1px solid #e6e6e6;
+    border: 2px solid $mateColor1;
     margin: 0;
     height: 40px;
     padding: 10px;
@@ -2151,14 +2171,22 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 #wrapper {
     input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
         border-bottom: none;
-        border: 1px solid $mateColor1;
+        border: 2px solid $mateColor2;
         box-shadow: none;
+    }
+
+    .widget-upload .file-field .btn {
+        line-height: 18px;
     }
 }
 
 .input-field label, .widget:not(.widget-checkbox):not(.widget-radio) label {
     padding: 0 10px;
     top: -3px;
+}
+
+.input-field label {
+    color: $mateColor4;
 }
 
 input[type="file"] {
@@ -2235,6 +2263,8 @@ body .picker__frame {
 	-o-user-select:none; // latest Opera versions support -webkit-
 	user-select:none;
 	line-height: inherit;
+    color: $mateColor4;
+    border: 2px solid $mateColor1;
 }
 
 .submit {
@@ -2259,10 +2289,16 @@ textarea {
 
 .radio_container label {
 	padding: 0 15px 0 15px;
+    color: $mateColor4;
 }
 
 [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
     padding-left: 30px;
+}
+
+[type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after,
+[type="radio"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:after {
+    border: 2px solid $mateColor1;
 }
 
 [type="checkbox"]:checked + label:before {
@@ -2276,7 +2312,11 @@ textarea {
 }
 
 .widget-upload label {
-  display: none;
+    display: none;
+}
+
+.file-path::placeholder {
+    color: $mateColor4;
 }
 
 /* ========================== *
@@ -2303,7 +2343,6 @@ textarea {
     background: #fff;
     margin: 0 0 30px;
     padding: 30px;
-    border: 1px solid #e6e6e6;
 
     fieldset {
         padding-top: 0;
@@ -2347,7 +2386,7 @@ textarea {
   }
 
   a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
   }
 }
@@ -2445,6 +2484,135 @@ textarea {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+/* ========================== *
+ *    Social Feed             *
+ * ========================== */
+.social-feed-container {
+  padding: 24px 0;
+}
+
+.social-feed-element {
+  position: relative;
+  margin: 40px 0;
+  overflow: visible;
+  box-shadow: none;
+  font-family: inherit;
+  color: inherit;
+
+  .content {
+    padding: 40px 15px 15px;
+  }
+
+  .author-img {
+    position: absolute;
+    top: -15px;
+    z-index: 2;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+    border-top: 5px solid $mateColor2;
+    z-index: 1;
+  }
+
+  p.social-feed-text {
+    padding: 15px 0;
+    white-space: pre-line;
+
+    a {
+      color: $primary-link-font-color;
+
+      &:hover {
+        color: $primary-link-hover-font-color;
+      }
+    }
+  }
+
+  .muted {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+  }
+
+  .author-title {
+    color: #86af49;
+    font-family: Lato Regular;
+    font-weight: 700;
+    background: #f2f2f2;
+    display: block;
+    padding: 2px 5px;
+  }
+
+  .fa {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $mateColor2;
+  }
+
+  img {
+    width: auto;
+  }
+}
+
+.col-2 .social-feed-element {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+.col-3 .social-feed-element {
+  -ms-flex: 0 0 33.33%;
+  flex: 0 0 33.33%;
+}
+
+.col-2, .col-3 {
+  .social-feed-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @extend .row;
+
+    .social-feed-element {
+      box-sizing: border-box;
+      margin: 0;
+      background: none;
+
+      &:before {
+        left: 0.75rem;
+        width: calc(100% - (0.75rem * 2));
+      }
+
+      .content {
+        background: #fff;
+        margin: 0 0.75rem 35px;
+        position: relative;
+      }
+    }
+  }
+}
+
+/* ========================== *
+ *    Kontakt                 *
+ * ========================== */
+#container .contact-box .inside {
+    margin-top: 0;
+}
+
+.contact {
+    .ce_form .widget:nth-of-type(1) {
+        margin-top: 0;
     }
 }
 
@@ -3026,6 +3194,10 @@ textarea {
 		    display: block;
 		}
 	}
+
+    .event.layout_list {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -3074,6 +3246,7 @@ textarea {
 	.event.layout_teaser, .layout_list.event {
 		.inner .text {
 			height: initial;
+            padding: 25px 15px 10px 15px;
 		}
 	}
 
@@ -3109,6 +3282,10 @@ textarea {
 	    width: 100%;
 	}
 
+    .mod_login, .mod_lostPassword, .mod_registration, .mod_personalData, .mod_changePassword, .mod_subscribe, .mod_unsubscribe {
+        padding: 15px;
+    }
+
 	/* Formulare */
 	.file-field {
 	    margin-top: 0;
@@ -3131,6 +3308,19 @@ textarea {
             }
         }
     }
+
+    /* Social Feed */
+  .col-2, .col-3 {
+    .social-feed-container {
+      display: block;
+      margin: 0;
+
+      .social-feed-element {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+      }
+    }
+  }
 }
 
 @import 'custom';
