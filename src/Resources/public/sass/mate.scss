@@ -1275,7 +1275,6 @@ nav .brand-logo {
 	h1, h2, h3, h4, h5, h6 {
 		background: rgba(134, 175, 73, 0.84);
 		text-transform: inherit;
-		font-size: 1.7em;
 		color: #fff;
 		display: inline-block;
 		width: auto;
@@ -1987,6 +1986,10 @@ footer .container {
         background: $mateColor1;
         text-align: center;
 
+        .mod_subscribe {
+            background: $mateColor1;
+        }
+
         h2, h3, h4, h5, h6 {
             margin: 0 0 30px;
         }
@@ -2017,6 +2020,7 @@ footer .container {
 
         .text {
             background: #f4f8f0;
+            border: 1px solid #f4f8f0;
 
             &::placeholder {
                 color: rgba(0, 0, 0, 0.87);
@@ -2496,11 +2500,12 @@ textarea {
 
 .social-feed-element {
   position: relative;
-  margin: 40px 0;
+  margin: 0 0 30px;
   overflow: visible;
   box-shadow: none;
   font-family: inherit;
   color: inherit;
+  float: left;
 
   .content {
     padding: 40px 15px 15px;
@@ -2510,6 +2515,10 @@ textarea {
     position: absolute;
     top: -15px;
     z-index: 2;
+
+    img {
+      width: 50px;
+    }
   }
 
   &:hover {
@@ -2567,21 +2576,15 @@ textarea {
 }
 
 .col-2 .social-feed-element {
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
+  width: calc(100% / 2);
 }
 
 .col-3 .social-feed-element {
-  -ms-flex: 0 0 33.33%;
-  flex: 0 0 33.33%;
+  width: calc(100% / 3);
 }
 
 .col-2, .col-3 {
   .social-feed-container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     @extend .row;
 
     .social-feed-element {
@@ -2611,9 +2614,76 @@ textarea {
 }
 
 .contact {
-    .ce_form .widget:nth-of-type(1) {
-        margin-top: 0;
+    .ce_form {
+        overflow: visible;
+
+        .widget:nth-of-type(1) {
+            margin-top: 0;
+        }
     }
+
+    .contact-info {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+
+        .ce_bs_gridStart {
+            margin: 0;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            left: 0.75rem;
+            bottom: 0;
+            border-bottom: 3px solid $mateColor2;
+            width: calc(100% - (0.75rem * 2));
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+}
+
+.address, .telephone, .email {
+    position: relative;
+    padding-left: 40px;
+
+    p {
+        margin: 0 0 10px;
+        font-size: 1.1rem;
+    }
+
+    &:before {
+        position: absolute;
+        font-family: 'Material Icons';
+        left: 0;
+        top: -5px;
+        font-size: 1.5rem;
+        color: $mateColor2;
+    }
+}
+
+.address:before {
+    content: "\e55f";
+}
+
+.telephone:before {
+    content: "\e551";
+}
+
+.email:before {
+    content: "\e0be";
+}
+
+.dlh_googlemap {
+    height: 400px;
+}
+
+.contact-frm {
+    padding-top: 10px;
 }
 
 /* ========================== *
@@ -3309,18 +3379,29 @@ textarea {
         }
     }
 
-    /* Social Feed */
-  .col-2, .col-3 {
-    .social-feed-container {
-      display: block;
-      margin: 0;
+    /* Kontakt */
+    .contact {
+        .ce_image {
+            margin-top: 10px;
+        }
 
-      .social-feed-element {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-      }
+        .submit {
+            margin: 0 0 30px;
+        }
     }
-  }
+
+    /* Social Feed */
+    .col-2, .col-3 {
+        .social-feed-container {
+            display: block;
+            margin: 0;
+
+            .social-feed-element {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+            }
+        }
+    }
 }
 
 @import 'custom';
