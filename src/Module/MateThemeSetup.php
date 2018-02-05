@@ -4,6 +4,8 @@ namespace ContaoThemesNet\MateThemeBundle\Module;
 
 class MateThemeSetup extends \BackendModule
 {
+    const VERSION = '1.0.21';
+
     protected $strTemplate = 'be_mateTheme_setup';
 
     /**
@@ -20,7 +22,7 @@ class MateThemeSetup extends \BackendModule
                 $this->getFiles($path);
                 $this->Template->message = true;
             default:
-                // do something here
+                $this->Template->version = MateThemeSetup::VERSION;
         }
     }
 
