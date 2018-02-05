@@ -330,14 +330,6 @@ table {
   color: $button-flat-color;
 }
 
-.grey.lighten-3 {
-  background-color: rgba(255,255,255,0.95) !important;
-}
-
-.grey.lighten-4 {
-  background-color: rgba(255,255,255,0.65) !important;
-}
-
 .container .row.no-margin {
   margin: 0;
 }
@@ -1334,6 +1326,7 @@ nav .brand-logo {
     height: 400px;
     display: table;
     border-top: 10px solid $primary-color;
+    background-color: rgba(255,255,255,0.95);
 
     &:last-child {
         margin-bottom: 20px;
@@ -1369,6 +1362,7 @@ nav .brand-logo {
 }
 .ce_mateContentBox:nth-child(2n) {
 	border-top: 10px solid $secondary-color;
+    background-color: rgba(255,255,255,0.65);
 }
 
 /* ========================== *
@@ -2556,11 +2550,10 @@ textarea {
 
   .author-title {
     color: #86af49;
-    font-family: Lato Regular;
-    font-weight: 700;
-    background: #f2f2f2;
+    font-family: Old Standard;
     display: block;
-    padding: 2px 5px;
+    padding: 2px 0;
+    font-size: 16px;
   }
 
   .fa {
