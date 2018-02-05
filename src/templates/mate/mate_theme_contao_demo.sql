@@ -1,11 +1,30 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.8.1
+-- http://www.phpmyadmin.net
+--
+-- Host: dd18822
+-- Erstellungszeit: 05. Feb 2018 um 18:05
+-- Server Version: 5.6.38-nmm1-log
+-- PHP-Version: 5.5.38-nmm2
+
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+--
+-- Datenbank: `d028be89`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_article`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_article` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -34,6 +53,10 @@ CREATE TABLE IF NOT EXISTS `tl_article` (
   KEY `alias` (`alias`),
   KEY `pid_start_stop_published_sorting` (`pid`,`start`,`stop`,`published`,`sorting`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=197 ;
+
+--
+-- Daten f√ºr Tabelle `tl_article`
+--
 
 INSERT INTO `tl_article` (`id`, `pid`, `sorting`, `tstamp`, `title`, `alias`, `author`, `inColumn`, `keywords`, `showTeaser`, `teaserCssID`, `teaser`, `printable`, `customTpl`, `protected`, `groups`, `guests`, `cssID`, `published`, `start`, `stop`, `pdir_th_tag`) VALUES
 (138, 107, 112, 1511436656, '05/03 footer section3', 'id-05-03-footer-section3', 1, 'main', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', NULL, '', '', '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '1', '', '', 'MATE05/03'),
@@ -93,6 +116,12 @@ INSERT INTO `tl_article` (`id`, `pid`, `sorting`, `tstamp`, `title`, `alias`, `a
 (194, 124, 64, 1517398222, 'Header', 'article-header-194', 4, 'header', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', NULL, '', '', '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '1', '', '', '-'),
 (195, 139, 64, 1517398497, 'Header', 'article-header-195', 4, 'header', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', NULL, '', '', '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '1', '', '', '-');
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_bs_grid`
+--
+
 CREATE TABLE IF NOT EXISTS `tl_bs_grid` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pid` int(10) unsigned NOT NULL DEFAULT '0',
@@ -112,8 +141,18 @@ CREATE TABLE IF NOT EXISTS `tl_bs_grid` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
+--
+-- Daten f√ºr Tabelle `tl_bs_grid`
+--
+
 INSERT INTO `tl_bs_grid` (`id`, `pid`, `tstamp`, `title`, `description`, `sizes`, `xsSize`, `smSize`, `mdSize`, `lgSize`, `xlSize`, `align`, `justify`, `rowClass`, `noGutters`) VALUES
 (1, 15, 1512652962, 'Umschlag mit Klasse row', '', NULL, 0x613a323a7b693a303b613a363a7b733a353a227769647468223b733a323a223132223b733a363a226f6666736574223b733a303a22223b733a353a226f72646572223b733a303a22223b733a353a22616c69676e223b733a303a22223b733a353a22636c617373223b733a303a22223b733a353a227265736574223b733a303a22223b7d693a313b613a363a7b733a353a227769647468223b733a323a223132223b733a363a226f6666736574223b733a303a22223b733a353a226f72646572223b733a303a22223b733a353a22616c69676e223b733a303a22223b733a353a22636c617373223b733a303a22223b733a353a227265736574223b733a303a22223b7d7d, NULL, 0x613a323a7b693a303b613a363a7b733a353a227769647468223b733a313a2236223b733a363a226f6666736574223b733a303a22223b733a353a226f72646572223b733a303a22223b733a353a22616c69676e223b733a303a22223b733a353a22636c617373223b733a303a22223b733a353a227265736574223b733a303a22223b7d693a313b613a363a7b733a353a227769647468223b733a313a2236223b733a363a226f6666736574223b733a303a22223b733a353a226f72646572223b733a303a22223b733a353a22616c69676e223b733a303a22223b733a353a22636c617373223b733a303a22223b733a353a227265736574223b733a303a22223b7d7d, NULL, NULL, '', '', '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_calendar`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_calendar` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -133,8 +172,18 @@ CREATE TABLE IF NOT EXISTS `tl_calendar` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
+--
+-- Daten f√ºr Tabelle `tl_calendar`
+--
+
 INSERT INTO `tl_calendar` (`id`, `tstamp`, `title`, `jumpTo`, `protected`, `groups`, `allowComments`, `notify`, `sortOrder`, `perPage`, `moderate`, `bbcode`, `requireLogin`, `disableCaptcha`) VALUES
 (4, 1511195934, 'Mate / Events', 110, '', NULL, '', 'notify_admin', 'ascending', 0, '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_calendar_events`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_calendar_events` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -182,13 +231,23 @@ CREATE TABLE IF NOT EXISTS `tl_calendar_events` (
   KEY `pid_start_stop_published` (`pid`,`start`,`stop`,`published`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
 
+--
+-- Daten f√ºr Tabelle `tl_calendar_events`
+--
+
 INSERT INTO `tl_calendar_events` (`id`, `pid`, `tstamp`, `title`, `alias`, `author`, `addTime`, `startTime`, `endTime`, `startDate`, `endDate`, `location`, `teaser`, `addImage`, `singleSRC`, `alt`, `size`, `imagemargin`, `imageUrl`, `fullsize`, `caption`, `floating`, `recurring`, `repeatEach`, `repeatEnd`, `recurrences`, `addEnclosure`, `enclosure`, `source`, `jumpTo`, `articleId`, `url`, `target`, `cssClass`, `noComments`, `published`, `start`, `stop`, `overwriteMeta`, `imageTitle`) VALUES
-(27, 4, 1516962298, 'Wintermarkt in Mei√üen', 'wintermarkt-in-meissen', 4, '', 1514156400, 1514847599, 1514156400, 1514761200, '', '<p>Nach Heilig Abend verwandelt sich der Mei√üner Weihnachtsmarkt wie jedes Jahr in den Wintermarkt. Vom 25. Dezember bis zum 1. Januar ist dieser ge√∂ffnet.</p>', '1', '–W(†ÇËá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'above', '1', 'a:2:{s:4:"unit";s:5:"years";s:5:"value";s:1:"1";}', 2145913200, 0, '', NULL, 'default', 0, 0, '', '', '', '', '1', '', '', '', ''),
+(27, 4, 1517850220, 'Wintermarkt in Mei√üen', 'wintermarkt-in-meissen', 4, '', 1514156400, 1514847599, 1514156400, 1514761200, '', '<p>Nach Heilig Abend verwandelt sich der Mei√üner Weihnachtsmarkt wie jedes Jahr in den Wintermarkt. Vom 25. Dezember bis zum 1. Januar ist dieser ge√∂ffnet.</p>', '1', 'Ç°eè\nñËá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'above', '1', 'a:2:{s:4:"unit";s:5:"years";s:5:"value";s:1:"1";}', 2145913200, 0, '', NULL, 'default', 0, 0, '', '', '', '', '1', '', '', '', ''),
 (28, 4, 1516963697, 'Stadtrundgang "Mei√üen - Die Wiege Sachsens"', 'stadtrundgang-mei√üen-die-wiege-sachsens', 4, '1', 1517659200, 1517659200, 1517612400, NULL, '', '<p>Von Februar bis M√§rz k√∂nnen Sie jeden Samstag ab 13 Uhr eine √∂ffentliche Stadtf√ºhrung durch die liebevoll restaurierte, historische Altstadt erleben. Ab April bis November finden die F√ºhrungen t√§glich statt.</p>', '1', 'Ï êÜˇ[Áá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'above', '1', 'a:2:{s:4:"unit";s:5:"weeks";s:5:"value";s:1:"1";}', 1522494000, 8, '', NULL, 'default', 0, 0, '', '', '', '', '1', '', '', '', ''),
 (24, 4, 1516962243, 'Tage des offenen Weingutes', 'tage-des-offenen-weingutes', 4, '', 1535148000, 1535320799, 1535148000, 1535234400, '', '<p>Bereits zum 19. Mal werden die beliebten ‚ÄûTage des offenen Weingutes‚Äú in Sachsen vom 25. ‚Äì 26. August 2018 begangen. Neben dem Wein selbst gibt es auch viele Informationen zur Arbeit im Weinberg und im Keller an diesem Wochenende.</p>', '1', 'æØg±ÇËá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', '', '1', 'a:2:{s:4:"unit";s:5:"years";s:5:"value";s:1:"1";}', 2145913200, 0, '', '', 'default', 0, 0, '', '', '', '', '1', '', '', '', ''),
 (22, 4, 1516962252, 'Gr√ºner Wochenmarkt', 'gr√ºner-wochenmarkt', 4, '1', 1520668800, 1520683200, 1520636400, NULL, '', '<p>Von M√§rz bis Oktober findet an jedem zweiten Samstag von 9.00 - 13.00 Uhr auf dem Kleinmarkt in der Mei√üner Altstadt ein Gr√ºner Wochenmarkt statt.</p>', '1', '—§z€ÇËá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', '', '1', 'a:2:{s:4:"unit";s:5:"weeks";s:5:"value";s:1:"2";}', 1540033200, 16, '', '', 'default', 0, 0, '', '', '', '', '1', '', '', '', ''),
 (23, 4, 1516962231, 'Mei√üner Weinfest', 'meissner-weinfest', 4, '', 1538085600, 1538344799, 1538085600, 1538258400, '', '<p>J√§hrlich am letzten Wochenende im September √∂ffnet das gr√∂√üte Weinfest in Sachsen f√ºr alle Besucher seine Pforten. Nat√ºrlich wird beim Weinfest in erster Linie dem begehrten edlen Tropfen gehuldigt!</p>', '1', '·"Ö*ÇËá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', '', '1', 'a:2:{s:4:"unit";s:5:"years";s:5:"value";s:1:"1";}', 2145913200, 0, '', '', 'default', 0, 0, '', '', '', '', '1', '', '', '', ''),
 (26, 4, 1516962218, 'Mei√üner Weihnachtsmarkt', 'meissner-weihnachtsmarkt', 4, '', 1543186800, 1545692399, 1543186800, 1545606000, '', '<p>Jedes Jahr findet ab Ende November einer der sch√∂nsten Weihnachtsm√§rkte Mitteldeutschlands in der historischen Altstadt von Mei√üen statt.</p>', '1', '’≤•ÉÇËá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', '', '1', 'a:2:{s:4:"unit";s:5:"years";s:5:"value";s:1:"1";}', 2145913200, 0, '', '', 'default', 0, 0, '', '', '', '', '1', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_content`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_content` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -285,6 +344,10 @@ CREATE TABLE IF NOT EXISTS `tl_content` (
   PRIMARY KEY (`id`),
   KEY `pid_ptable_invisible_sorting` (`pid`,`ptable`,`invisible`,`sorting`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=808 ;
+
+--
+-- Daten f√ºr Tabelle `tl_content`
+--
 
 INSERT INTO `tl_content` (`id`, `pid`, `ptable`, `sorting`, `tstamp`, `type`, `headline`, `text`, `addImage`, `singleSRC`, `alt`, `imageTitle`, `size`, `imagemargin`, `imageUrl`, `fullsize`, `caption`, `floating`, `html`, `listtype`, `listitems`, `tableitems`, `summary`, `thead`, `tfoot`, `tleft`, `sortable`, `sortIndex`, `sortOrder`, `mooHeadline`, `mooStyle`, `mooClasses`, `highlight`, `code`, `url`, `target`, `titleText`, `linkTitle`, `embed`, `rel`, `useImage`, `multiSRC`, `orderSRC`, `useHomeDir`, `perRow`, `perPage`, `numberOfItems`, `sortBy`, `metaIgnore`, `galleryTpl`, `customTpl`, `playerSRC`, `youtube`, `posterSRC`, `playerSize`, `autoplay`, `sliderDelay`, `sliderSpeed`, `sliderStartSlide`, `sliderContinuous`, `cteAlias`, `articleAlias`, `article`, `form`, `module`, `protected`, `groups`, `guests`, `cssID`, `invisible`, `start`, `stop`, `com_order`, `com_perPage`, `com_moderate`, `com_bbcode`, `com_disableCaptcha`, `com_requireLogin`, `com_template`, `advancedCss`, `mateTeaserBox_page`, `mateTeaserBox_pageText`, `mateContentBox_page`, `mateContentBox_pageText`, `overwriteMeta`, `vimeo`, `bs_image_sizes`, `bs_grid_parent`, `bs_grid_name`, `bs_grid`, `bootstrap_dataAttributes`) VALUES
 (650, 117, 'tl_article', 1824, 1517559453, 'bs_gridStop', '', NULL, '', NULL, '', '', '', '', '', '', '', '', NULL, '', NULL, NULL, '', '', '', '', '', 0, '', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 0, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 0, '', NULL, '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', NULL, 649, '', 0, NULL),
@@ -547,6 +610,12 @@ INSERT INTO `tl_content` (`id`, `pid`, `ptable`, `sorting`, `tstamp`, `type`, `h
 (806, 184, 'tl_article', 896, 1517571279, 'text', 'a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}', '<p>Mail: info@example.com</p>', '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 0, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:5:"email";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
 (807, 153, 'tl_article', 1280, 1517820154, 'hyperlink', 'a:2:{s:4:"unit";s:2:"h2";s:5:"value";s:0:"";}', NULL, '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '#', '', '', 'Button', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 0, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:3:"btn";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_faq`
+--
+
 CREATE TABLE IF NOT EXISTS `tl_faq` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pid` int(10) unsigned NOT NULL DEFAULT '0',
@@ -575,10 +644,20 @@ CREATE TABLE IF NOT EXISTS `tl_faq` (
   KEY `pid_published_sorting` (`pid`,`published`,`sorting`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
+--
+-- Daten f√ºr Tabelle `tl_faq`
+--
+
 INSERT INTO `tl_faq` (`id`, `pid`, `sorting`, `tstamp`, `question`, `alias`, `author`, `answer`, `addImage`, `singleSRC`, `alt`, `size`, `imagemargin`, `imageUrl`, `fullsize`, `caption`, `floating`, `addEnclosure`, `enclosure`, `noComments`, `published`, `overwriteMeta`, `imageTitle`) VALUES
 (9, 5, 64, 1511950487, 'You have to answer the same over and over?', '', 4, '<p>Every single question and answer allows you to display a title question and a text (of course). You can also add an image and/or an enclosure next to your FAQ item. The predefined fields allow you to set an author of the item and lets you choose if you want to publish the item right away or keep it unpublished for the time being.</p>', '', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', '', '', '', '', '', '', '', '', NULL, '', '1', '', ''),
 (10, 5, 256, 1511950488, 'You want to hear the opinions of the website members?', '', 4, '<p>The FAQ also enable you to manage comments. With the tick on the checkbox "Enable comments"in your FAQ category configuration you allow your visitors to leave comments on your FAQs. Different options are integrated to fit your needs regarding the workflow of submitted comments.</p>\n<ul>\n<li>Moderate comments</li>\n<li>Get notified when a comment is posted (you can notify the System administrator, the author of the FAQ or both)</li>\n<li>Set the ordering and the "Comments per page", which automatically creates a pagination</li>\n<li>Allow your visitors to use BBCode within the comment field</li>\n</ul>', '', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', '', '', '', '', '', '', '', '', NULL, '', '1', '', ''),
 (8, 5, 32, 1511950486, 'Do your users have any questions?', '', 4, '<p>To display the FAQ on your website you can choose from three modules in the Contao back-end. Those offer the possibility to configure the output of your frequently asked questions in various ways.</p>\n<ul>\n<li>FAQ - List</li>\n<li>FAQ - Reader</li>\n<li>FAQ - Page</li>\n</ul>\n<p>The FAQ - List is a frontend module that lets you[nbsp]list your questions and answers from chosen categories. Only the title question and a link to the FAQ - Reader (which needs to be placed on a secondary site) are[nbsp]displayed. It might be a good option to choose this ouput if you have a longer list of questions.</p>\n<p>Another way to display information to the visitors is the FAQ - Page module. This module lists all your questions and answers on one page. Linking to another site is not necessary and therefore it is recommanded if you want to show just a few questions and keep all the information on one site. With a little additional code in the mod_faqpage.html5 template you can easily integrate a[nbsp]javascript[nbsp]accordion which will improve the usability of your FAQ greatly for your visitors.</p>', '', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', '', '', '', '', '', '', '', '', NULL, '', '1', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_faq_category`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_faq_category` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -597,8 +676,18 @@ CREATE TABLE IF NOT EXISTS `tl_faq_category` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
+--
+-- Daten f√ºr Tabelle `tl_faq_category`
+--
+
 INSERT INTO `tl_faq_category` (`id`, `tstamp`, `title`, `headline`, `jumpTo`, `allowComments`, `notify`, `sortOrder`, `perPage`, `moderate`, `bbcode`, `requireLogin`, `disableCaptcha`) VALUES
 (5, 1511951592, 'Mate / FAQ', 'FAQ', 137, '1', 'notify_admin', 'ascending', 0, '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_files`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_files` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -621,19 +710,22 @@ CREATE TABLE IF NOT EXISTS `tl_files` (
   KEY `pid` (`pid`),
   KEY `path` (`path`(333)),
   KEY `extension` (`extension`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=681 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=718 ;
+
+--
+-- Daten f√ºr Tabelle `tl_files`
+--
 
 INSERT INTO `tl_files` (`id`, `pid`, `tstamp`, `uuid`, `type`, `path`, `extension`, `hash`, `found`, `name`, `importantPartX`, `importantPartY`, `importantPartWidth`, `importantPartHeight`, `meta`) VALUES
-(27, '¶–˝#Áá\0@ç\\"˙A', 1517838194, '¶–È˝#Áá\0@ç\\"˙A', 'file', 'files/mate/sass/mate1.scss', 'scss', 'bf2aa777953150eba7ac2db282ae4554', '1', 'mate1.scss', 0, 0, 0, 0, 0x613a313a7b733a323a226465223b613a343a7b733a353a227469746c65223b733a303a22223b733a333a22616c74223b733a303a22223b733a343a226c696e6b223b733a303a22223b733a373a2263617074696f6e223b733a303a22223b7d7d),
 (28, ' 4˝˝ Áá\0@ç\\"˙A', 1517219079, 'Ï êÜˇ[Áá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/frauenkirche-meissen.jpg', 'jpg', 'd4a41178074b36f30958dd67eec7e387', '1', 'frauenkirche-meissen.jpg', 112, 236, 1088, 950, 0x613a313a7b733a323a226465223b613a343a7b733a353a227469746c65223b733a303a22223b733a333a22616c74223b733a303a22223b733a343a226c696e6b223b733a303a22223b733a373a2263617074696f6e223b733a303a22223b7d7d),
-(26, ' 4˝˝ Áá\0@ç\\"˙A', 1516371285, '¶–˝#Áá\0@ç\\"˙A', 'folder', 'files/mate/sass', '', '4d275e7c290678c6a93682e01ac46098', '1', 'sass', 0, 0, 0, 0, NULL),
+(26, ' 4˝˝ Áá\0@ç\\"˙A', 1516371285, '¶–˝#Áá\0@ç\\"˙A', 'folder', 'files/mate/sass', '', 'e61d8bfcce6076128798be180e1ed03e', '1', 'sass', 0, 0, 0, 0, NULL),
 (25, ' 4˝˝ Áá\0@ç\\"˙A', 1516370378, '˝H''˝ Áá\0@ç\\"˙A', 'file', 'files/mate/img/mate_logo_white.png', 'png', '29177ab40bc4cd49cf8f4689808f95f8', '1', 'mate_logo_white.png', 0, 0, 0, 0, NULL),
 (24, ' 4˝˝ Áá\0@ç\\"˙A', 1516370371, '˘\Zù5˝ Áá\0@ç\\"˙A', 'file', 'files/mate/img/mate_logo.png', 'png', 'a6a43575c642c1cf0c17ed52723487b3', '1', 'mate_logo.png', 0, 0, 0, 0, NULL),
 (22, ' 4˝˝ Áá\0@ç\\"˙A', 1516640209, 'ﬁt\\˝ Áá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/trabant.jpg', 'jpg', '2e27e4880b0b11da093dd5382f7eaa69', '1', 'trabant.jpg', 484, 613, 1233, 393, 0x613a313a7b733a323a226465223b613a343a7b733a353a227469746c65223b733a303a22223b733a333a22616c74223b733a303a22223b733a343a226c696e6b223b733a303a22223b733a373a2263617074696f6e223b733a303a22223b7d7d),
 (21, ' 4˝˝ Áá\0@ç\\"˙A', 1516370318, 'ŸÄÂ˝ Áá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/schlossbruecke-meissen.jpg', 'jpg', '33f37152999ba5c252d7e04088b3b8ec', '1', 'schlossbruecke-meissen.jpg', 0, 0, 0, 0, NULL),
-(17, ' 4˝˝ Áá\0@ç\\"˙A', 1516370293, ' 4˝˝ Áá\0@ç\\"˙A', 'folder', 'files/mate/img/meissen', '', '58673bd5eab10952c4c97da5c3580e78', '1', 'meissen', 0, 0, 0, 0, NULL),
-(16, ' 4˝˝ Áá\0@ç\\"˙A', 1516370293, ' 4˝˝ Áá\0@ç\\"˙A', 'folder', 'files/mate/img', '', 'e78468c39dee249e88a91a75351e1959', '1', 'img', 0, 0, 0, 0, NULL),
-(15, NULL, 1516963634, ' 4˝˝ Áá\0@ç\\"˙A', 'folder', 'files/mate', '', 'b4cb06b0e5afdbe1cbff52afb0e5420c', '1', 'mate', 0, 0, 0, 0, 0x613a313a7b733a323a226465223b613a343a7b733a353a227469746c65223b733a303a22223b733a333a22616c74223b733a303a22223b733a343a226c696e6b223b733a303a22223b733a373a2263617074696f6e223b733a303a22223b7d7d),
+(17, ' 4˝˝ Áá\0@ç\\"˙A', 1516370293, ' 4˝˝ Áá\0@ç\\"˙A', 'folder', 'files/mate/img/meissen', '', '1b46556ed18f37af333a18b9e946eeb6', '1', 'meissen', 0, 0, 0, 0, NULL),
+(16, ' 4˝˝ Áá\0@ç\\"˙A', 1516370293, ' 4˝˝ Áá\0@ç\\"˙A', 'folder', 'files/mate/img', '', 'd690270559489904b2193d813d1f459d', '1', 'img', 0, 0, 0, 0, NULL),
+(15, NULL, 1517848388, ' 4˝˝ Áá\0@ç\\"˙A', 'folder', 'files/mate', '', 'b8dc4f7c1d865902b738487cd96f6aeb', '1', 'mate', 0, 0, 0, 0, 0x613a313a7b733a323a226465223b613a343a7b733a353a227469746c65223b733a303a22223b733a333a22616c74223b733a303a22223b733a343a226c696e6b223b733a303a22223b733a373a2263617074696f6e223b733a303a22223b7d7d),
 (29, ' 4˝˝ Áá\0@ç\\"˙A', 1516615602, 'ÚFëˇ[Áá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/elbstrasse.jpg', 'jpg', '0961e953108ca3da3c5ec9f7b5d369b3', '1', 'elbstrasse.jpg', 0, 0, 0, 0, NULL),
 (32, ' 4˝˝ Áá\0@ç\\"˙A', 1516627125, '∆{°∆ˇvÁá\0@ç\\"˙A', 'folder', 'files/mate/documents', '', '556652f5a1c5c3cf1757658b8962840b', '1', 'documents', 0, 0, 0, 0, NULL),
 (33, '∆{°∆ˇvÁá\0@ç\\"˙A', 1516627125, '∆{°¿ˇvÁá\0@ç\\"˙A', 'file', 'files/mate/documents/aexcel.xls', 'xls', '2bcb2e5bb4d0f01d713fc4b49a1dccac', '1', 'aexcel.xls', 0, 0, 0, 0, NULL),
@@ -652,138 +744,21 @@ INSERT INTO `tl_files` (`id`, `pid`, `tstamp`, `uuid`, `type`, `path`, `extensio
 (48, ' 4˝˝ Áá\0@ç\\"˙A', 1516720571, 'XoYk\0PËá\0@ç\\"˙A', 'file', 'files/mate/img/favicon.ico', 'ico', '75ab0f0a098e0a63c5a68c9cb577b9e1', '1', 'favicon.ico', 0, 0, 0, 0, NULL),
 (639, 'Wﬂ\0#Ëá\0@ç\\"˙A', 1517842797, '™(≈kóËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/slider/schlossbruecke_winter.jpg', 'jpg', '454d12b001e1da3465e605c779d87e46', '1', 'schlossbruecke_winter.jpg', 0, 0, 0, 0, NULL),
 (640, ' 4˝˝ Áá\0@ç\\"˙A', 1517573164, '.´JËá\0@ç\\"˙A', 'file', 'files/mate/img/street-map-2679271_1920.jpg', 'jpg', '91b12fc7ef94f6fd66f63131775efd64', '1', 'street-map-2679271_1920.jpg', 338, 0, 1036, 997, 0x613a313a7b733a323a226465223b613a343a7b733a353a227469746c65223b733a303a22223b733a333a22616c74223b733a303a22223b733a343a226c696e6b223b733a303a22223b733a373a2263617074696f6e223b733a303a22223b7d7d),
-(641, '¶–˝#Áá\0@ç\\"˙A', 1517837884, 'À\0oÍ\nyËá\0@ç\\"˙A', 'file', 'files/mate/sass/custom.scss', 'scss', 'd41d8cd98f00b204e9800998ecf8427e', '1', 'custom.scss', 0, 0, 0, 0, NULL),
+(641, '¶–˝#Áá\0@ç\\"˙A', 1517837884, 'À\0oÍ\nyËá\0@ç\\"˙A', 'file', 'files/mate/sass/custom.scss', 'scss', '96bda07dd161bdcd3f194abb05b18325', '1', 'custom.scss', 0, 0, 0, 0, NULL),
 (642, '¶–˝#Áá\0@ç\\"˙A', 1517838610, '{Ä∫\n{Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/_custom_variables.scss', 'scss', 'beb8c65fe914b63cd92ed86ce5bc261c', '1', '_custom_variables.scss', 0, 0, 0, 0, NULL),
-(644, ' 4˝˝ Áá\0@ç\\"˙A', 1517841652, 'ê¶O\nÇËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/mei#U00dfner-weihnachtsmarkt.jpg', 'jpg', '3a25f2aa56a0bde00b178f537f8ace6c', '1', 'mei#U00dfner-weihnachtsmarkt.jpg', 0, 0, 0, 0, NULL),
-(65, ' 4˝˝ Áá\0@ç\\"˙A', 1516879088, 'k∆√‹¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/fonts', '', '517a93e9827be89105d6804570d6d5e0', '1', 'fonts', 0, 0, 0, 0, NULL),
-(66, 'k∆√‹¡Ëá\0@ç\\"˙A', 1516879088, 'k∆√ÿ¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/fonts/Old_Standard_TT', '', '139ff575bac21ed8cbdf6c6f0dbec4ed', '1', 'Old_Standard_TT', 0, 0, 0, 0, NULL),
-(67, 'k∆√ÿ¡Ëá\0@ç\\"˙A', 1516879088, 'k∆√‘¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Old_Standard_TT/OldStandard-Bold.ttf', 'ttf', '62043bcac6936cc1659753eb7d08501e', '1', 'OldStandard-Bold.ttf', 0, 0, 0, 0, NULL),
-(68, 'k∆√ÿ¡Ëá\0@ç\\"˙A', 1516879088, 'k∆√œ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Old_Standard_TT/OldStandard-Regular.ttf', 'ttf', '5d36040c5873ad770308bc1c0b0c8d85', '1', 'OldStandard-Regular.ttf', 0, 0, 0, 0, NULL),
-(69, 'k∆√ÿ¡Ëá\0@ç\\"˙A', 1516879088, 'k∆√À¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Old_Standard_TT/OFL.txt', 'txt', '1ccc45756d54816aa6b3c98af93e5803', '1', 'OFL.txt', 0, 0, 0, 0, NULL),
-(70, 'k∆√ÿ¡Ëá\0@ç\\"˙A', 1516879088, 'k∆√ƒ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Old_Standard_TT/OldStandard-Italic.ttf', 'ttf', 'e15459ba33dae663a3a220adf498d364', '1', 'OldStandard-Italic.ttf', 0, 0, 0, 0, NULL),
-(71, 'k∆√‹¡Ëá\0@ç\\"˙A', 1516879088, 'k∆√ø¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/fonts/roboto', '', '62cecb73da0416506ab9d7c5c6c40e60', '1', 'roboto', 0, 0, 0, 0, NULL),
-(72, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'k∆√π¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Light.woff2', 'woff2', '3c37aa69cd77e6a53a067170fa8fe2e9', '1', 'Roboto-Light.woff2', 0, 0, 0, 0, NULL),
-(73, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'k∆√ß¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Regular.woff', 'woff', '3cf6adf61054c328b1b0ddcd8f9ce24d', '1', 'Roboto-Regular.woff', 0, 0, 0, 0, NULL),
-(74, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«˜¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Medium.woff', 'woff', 'cf4d60bc0b1d4b2314085919a00e1724', '1', 'Roboto-Medium.woff', 0, 0, 0, 0, NULL),
-(75, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«Ô¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Thin.woff2', 'woff2', '1f35e6a11d27d2e10d28946d42332dc5', '1', 'Roboto-Thin.woff2', 0, 0, 0, 0, NULL),
-(76, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«Î¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Bold.woff2', 'woff2', 'c0f1e4a4fdfb8048c72e86aadb2a247d', '1', 'Roboto-Bold.woff2', 0, 0, 0, 0, NULL),
-(77, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«Ê¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Regular.woff2', 'woff2', '5136cbe62a63604402f2fedb97f246f8', '1', 'Roboto-Regular.woff2', 0, 0, 0, 0, NULL),
-(78, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«·¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Light.woff', 'woff', 'ea36cd9a0e9eee97012a67b8a4570d7b', '1', 'Roboto-Light.woff', 0, 0, 0, 0, NULL),
-(79, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«‹¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Bold.woff', 'woff', 'eed9aab5449cc9c8430d7d258108f602', '1', 'Roboto-Bold.woff', 0, 0, 0, 0, NULL),
-(80, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«”¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Medium.woff2', 'woff2', '1561b424aaef2f704bbd89155b3ce514', '1', 'Roboto-Medium.woff2', 0, 0, 0, 0, NULL),
-(81, 'k∆√ø¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«Œ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/roboto/Roboto-Thin.woff', 'woff', '44b78f142603eb69f593ed4002ed7a4a', '1', 'Roboto-Thin.woff', 0, 0, 0, 0, NULL),
-(82, 'k∆√‹¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«≈¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/fonts/Lato', '', '768750f7df9edb66b4b3e2fcc811a013', '1', 'Lato', 0, 0, 0, 0, NULL),
-(83, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'kÕ«∞¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-HairlineItalic.ttf', 'ttf', 'a567f4a8e101cb600004e09526a1a170', '1', 'Lato-HairlineItalic.ttf', 0, 0, 0, 0, NULL),
-(84, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’óÛ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-Italic.ttf', 'ttf', '56c4cb26fd6a48b9c0ebcc07b376ee38', '1', 'Lato-Italic.ttf', 0, 0, 0, 0, NULL),
-(85, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’óÓ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/OFL.txt', 'txt', '4c869ebe248e6441e05878c683654ddc', '1', 'OFL.txt', 0, 0, 0, 0, NULL),
-(86, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’óÈ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-Black.ttf', 'ttf', '77d353744697c77955f9bacc7f3ed90a', '1', 'Lato-Black.ttf', 0, 0, 0, 0, NULL),
-(87, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’óÂ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-LightItalic.ttf', 'ttf', '3d747d8bf464744eecb91556d86de11b', '1', 'Lato-LightItalic.ttf', 0, 0, 0, 0, NULL),
-(88, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’ó·¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-BlackItalic.ttf', 'ttf', '6c522f09efc8b83271666585f9fc6bf0', '1', 'Lato-BlackItalic.ttf', 0, 0, 0, 0, NULL),
-(89, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’ó‹¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-Light.ttf', 'ttf', '5b761f2d1e4259ea6ac7ab3ebf7f3c49', '1', 'Lato-Light.ttf', 0, 0, 0, 0, NULL),
-(90, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’ó÷¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-Regular.ttf', 'ttf', '7f690e503a254e0b8349aec0177e07aa', '1', 'Lato-Regular.ttf', 0, 0, 0, 0, NULL),
-(91, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’ó—¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-Bold.ttf', 'ttf', '44dfe8cc676882243911a3197a50169e', '1', 'Lato-Bold.ttf', 0, 0, 0, 0, NULL),
-(92, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’óÀ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-BoldItalic.ttf', 'ttf', '1ba4767ee37aab7e8d34fc339c3538cc', '1', 'Lato-BoldItalic.ttf', 0, 0, 0, 0, NULL),
-(93, 'kÕ«≈¡Ëá\0@ç\\"˙A', 1516879088, 'k’ó∏¡Ëá\0@ç\\"˙A', 'file', 'files/mate/fonts/Lato/Lato-Hairline.ttf', 'ttf', 'db15ac7981b2d2897d1a3c22892b5a51', '1', 'Lato-Hairline.ttf', 0, 0, 0, 0, NULL),
-(94, ' 4˝˝ Áá\0@ç\\"˙A', 1516879088, 'k€3)¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/js', '', '51829ea16f283fc7b95a2276b44cf376', '1', 'js', 0, 0, 0, 0, NULL),
-(95, 'k€3)¡Ëá\0@ç\\"˙A', 1516879088, 'k€3#¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/theme.js', 'js', '1434e5eafe7deb108e40942f29618263', '1', 'theme.js', 0, 0, 0, 0, NULL),
-(96, 'k€3)¡Ëá\0@ç\\"˙A', 1516879088, 'k€3¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/js/materialize', '', 'a47a7ed382158103df7bf744e44f0cd1', '1', 'materialize', 0, 0, 0, 0, NULL),
-(97, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k€3¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/jquery.easing.1.4.js', 'js', '897fbda803de28370b8cc64b04735134', '1', 'jquery.easing.1.4.js', 0, 0, 0, 0, NULL),
-(98, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k€3¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/tabs.js', 'js', '780e770d4bb6618e5a1b120f16d43db4', '1', 'tabs.js', 0, 0, 0, 0, NULL),
-(99, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k€3¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/forms.js', 'js', 'b5e5f121b665af0e7a4b190a40b9d7f4', '1', 'forms.js', 0, 0, 0, 0, NULL),
-(100, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k€3¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/carousel.js', 'js', 'cef96594d556a3830cef8a55047866cc', '1', 'carousel.js', 0, 0, 0, 0, NULL),
-(101, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k€3¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/buttons.js', 'js', 'ccc56f343b10a8026cb085f49f0fa229', '1', 'buttons.js', 0, 0, 0, 0, NULL),
-(102, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k€3\0¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/parallax.js', 'js', '9c09262a3a3cd822e7ee566049007a5b', '1', 'parallax.js', 0, 0, 0, 0, NULL),
-(103, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k€2Ì¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/materialize.min.js', 'js', 'e98efeec88f756629f42e58b1e11acaa', '1', 'materialize.min.js', 0, 0, 0, 0, NULL),
-(104, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·Q¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/collapsible.js', 'js', '09648fc9e5aa68556f113af4faf7ca91', '1', 'collapsible.js', 0, 0, 0, 0, NULL),
-(105, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·P¸¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/cards.js', 'js', 'a18a3cebdac7111c99089785f68a32fb', '1', 'cards.js', 0, 0, 0, 0, NULL),
-(106, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·P¯¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/chips.js', 'js', 'c110ffa862cecfd5f6d636833813637c', '1', 'chips.js', 0, 0, 0, 0, NULL),
-(107, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·PÛ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/tapTarget.js', 'js', '1d50c806fe6222a6e1570e498530d008', '1', 'tapTarget.js', 0, 0, 0, 0, NULL),
-(108, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·PÔ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/global.js', 'js', '32413abde9f1e844481a74a50f7f080e', '1', 'global.js', 0, 0, 0, 0, NULL),
-(109, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·PÍ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/velocity.min.js', 'js', '7d46aa3e33d5aa043406e75c59f03b81', '1', 'velocity.min.js', 0, 0, 0, 0, NULL),
-(110, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·P‰¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/slider.js', 'js', '21f87f0a276fe7a033844fd1198b9e13', '1', 'slider.js', 0, 0, 0, 0, NULL),
-(111, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·Pﬁ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/dropdown.js', 'js', '2347a3fc57d422227661242577940e20', '1', 'dropdown.js', 0, 0, 0, 0, NULL),
-(112, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·Pÿ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/animation.js', 'js', '096b74604a575ffb4762ffa78d09ea80', '1', 'animation.js', 0, 0, 0, 0, NULL),
-(113, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k·P≈¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/scrollspy.js', 'js', 'd4ffae7a651b786d2bd70113735f069f', '1', 'scrollspy.js', 0, 0, 0, 0, NULL),
-(114, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+æ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/toasts.js', 'js', 'e151429e76e8db726757861e349ac1fd', '1', 'toasts.js', 0, 0, 0, 0, NULL),
-(115, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+∏¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/materialize.js', 'js', '6c0a2223a1daf8c2d3dc0079685d503f', '1', 'materialize.js', 0, 0, 0, 0, NULL),
-(116, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+¥¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/sideNav.js', 'js', '73c77d567bb6d2dceeadb36f7bb47a02', '1', 'sideNav.js', 0, 0, 0, 0, NULL),
-(117, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+∞¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/materialbox.js', 'js', '78626ecbb638b17dc09bb06a4b078486', '1', 'materialbox.js', 0, 0, 0, 0, NULL),
-(118, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+´¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/waves.js', 'js', '06d98772c59355fea6e425813a521552', '1', 'waves.js', 0, 0, 0, 0, NULL),
-(119, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+¶¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/tooltip.js', 'js', '8d2842a12240e63c00f57d597ca79ef6', '1', 'tooltip.js', 0, 0, 0, 0, NULL),
-(120, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+ü¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/hammer.min.js', 'js', 'afae4508749ffc4774aa88c7ba879ef4', '1', 'hammer.min.js', 0, 0, 0, 0, NULL),
-(121, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+ö¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/js/materialize/date_picker', '', '79cd7dadf0f8135879020d14640acacd', '1', 'date_picker', 0, 0, 0, 0, NULL),
-(122, 'k‚+ö¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+î¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/date_picker/picker.time.js', 'js', 'a9b96f88ec3fd8aaa6e5a60a343a792a', '1', 'picker.time.js', 0, 0, 0, 0, NULL),
-(123, 'k‚+ö¡Ëá\0@ç\\"˙A', 1516879088, 'k‚+Ç¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/date_picker/picker.date.js', 'js', '69e350cd4d2baeb405acb413a39fa724', '1', 'picker.date.js', 0, 0, 0, 0, NULL),
-(124, 'k‚+ö¡Ëá\0@ç\\"˙A', 1516879088, 'k‰ó¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/date_picker/picker.js', 'js', '7e973965053f6caad6e25bd8c77c42e8', '1', 'picker.js', 0, 0, 0, 0, NULL),
-(125, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‰ë¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/modal.js', 'js', '5803d8abcb936b76bdbf025bb5aa7db9', '1', 'modal.js', 0, 0, 0, 0, NULL),
-(126, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‰ç¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/scrollFire.js', 'js', '1caafa8cb1709fea358863a6a8bcf74c', '1', 'scrollFire.js', 0, 0, 0, 0, NULL),
-(127, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‰â¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/jquery.easing.1.3.js', 'js', 'fda90b1dc57361e85475db0285695ceb', '1', 'jquery.easing.1.3.js', 0, 0, 0, 0, NULL),
-(128, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‰Ö¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/transitions.js', 'js', '778f44efec9c7c55c1fbed352d3ebf37', '1', 'transitions.js', 0, 0, 0, 0, NULL),
-(129, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‰Ä¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/initial.js', 'js', '8ff74d49361905aed4f64ae267f298fb', '1', 'initial.js', 0, 0, 0, 0, NULL),
-(130, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‰z¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/character_counter.js', 'js', 'f7680640d6e8f6de4f2b0ff0fc06d4d9', '1', 'character_counter.js', 0, 0, 0, 0, NULL),
-(131, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‰u¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/pushpin.js', 'js', 'f66ed174f6fd653db4eeb9f6c28427fa', '1', 'pushpin.js', 0, 0, 0, 0, NULL),
-(132, 'k€3¡Ëá\0@ç\\"˙A', 1516879088, 'k‰o¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/materialize/jquery.hammer.js', 'js', 'baef8624eb9cbb825b095cb3524f604d', '1', 'jquery.hammer.js', 0, 0, 0, 0, NULL),
-(133, 'k€3)¡Ëá\0@ç\\"˙A', 1516879088, 'k‰]¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/js/headroom', '', '5c7701abbe81da9e1890c44a7af61614', '1', 'headroom', 0, 0, 0, 0, NULL),
-(134, 'k‰]¡Ëá\0@ç\\"˙A', 1516879088, 'k‰»”¡Ëá\0@ç\\"˙A', 'file', 'files/mate/js/headroom/headroom.min.js', 'js', 'd64d9a66f39f6755d93ac2c3710a2b96', '1', 'headroom.min.js', 0, 0, 0, 0, NULL),
-(135, '¶–˝#Áá\0@ç\\"˙A', 1516879088, 'k‰»Õ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/_mate_variables.scss', 'scss', 'b41e7b4a0f69d901497fd3f1cec993fd', '1', '_mate_variables.scss', 0, 0, 0, 0, NULL),
-(136, '¶–˝#Áá\0@ç\\"˙A', 1516879088, 'k‰»…¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/sass/components', '', '9842601019e24a2f0e3a0ed1dc6badaf', '1', 'components', 0, 0, 0, 0, NULL),
-(137, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'k‰»≈¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_icons-material-design.scss', 'scss', '618de8e5d19677f2b759d1aa804e13d0', '1', '_icons-material-design.scss', 0, 0, 0, 0, NULL),
-(138, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'k‰»¿¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_cards.scss', 'scss', '95faa20cadce419ff75ffc6f5d6cf17d', '1', '_cards.scss', 0, 0, 0, 0, NULL),
-(139, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'k‰»º¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_waves.scss', 'scss', '8b0f7307db1cdb9feca7f5587f23b176', '1', '_waves.scss', 0, 0, 0, 0, NULL),
-(140, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'k‰»¥¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_preloader.scss', 'scss', 'cf134b875147d06a428f50b3f2333457', '1', '_preloader.scss', 0, 0, 0, 0, NULL),
-(141, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'k‰»∞¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_tooltip.scss', 'scss', 'e0e914ea691f5293750b5f48d8ab6350', '1', '_tooltip.scss', 0, 0, 0, 0, NULL),
-(142, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'k‰»©¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_global.scss', 'scss', 'eb95e286eb9f2e1cf25f498f770c6cc9', '1', '_global.scss', 0, 0, 0, 0, NULL),
-(143, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'k‰»ó¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_sideNav.scss', 'scss', 'b76074609a77bc0727e2e33186b033c5', '1', '_sideNav.scss', 0, 0, 0, 0, NULL),
-(144, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂbd¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_color.scss', 'scss', 'cb35f7c9a2b43c3d51aa97345fbcf6d1', '1', '_color.scss', 0, 0, 0, 0, NULL),
-(145, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂb]¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_chips.scss', 'scss', '9a1e3f69e4b0202075d448b8eacfa00d', '1', '_chips.scss', 0, 0, 0, 0, NULL),
-(146, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂbY¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_normalize.scss', 'scss', '1e9c0f3b13da66012ea079bc1509fef2', '1', '_normalize.scss', 0, 0, 0, 0, NULL),
-(147, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂbU¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_transitions.scss', 'scss', '500499bebf5b8077982400dc6a056771', '1', '_transitions.scss', 0, 0, 0, 0, NULL),
-(148, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂbQ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_buttons.scss', 'scss', '54ccad28713ef327955fb3d8caf2b43f', '1', '_buttons.scss', 0, 0, 0, 0, NULL),
-(149, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂbL¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_variables.scss', 'scss', '81fea1503fc0ed445024b252f588b94a', '1', '_variables.scss', 0, 0, 0, 0, NULL),
-(150, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂbF¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_carousel.scss', 'scss', '08cdcb7420bd9b3f13901b2f63db104a', '1', '_carousel.scss', 0, 0, 0, 0, NULL),
-(151, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂbA¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_materialbox.scss', 'scss', '64e0a7308f3b41583f4ee2f95766c102', '1', '_materialbox.scss', 0, 0, 0, 0, NULL),
-(152, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂb;¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_badges.scss', 'scss', 'adf2508e44e842925b6de4525c0fbd78', '1', '_badges.scss', 0, 0, 0, 0, NULL),
-(153, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÂb*¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_pulse.scss', 'scss', '56b14f8a7c8fbe85c1a51be4ad16df76', '1', '_pulse.scss', 0, 0, 0, 0, NULL),
-(154, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\Ï¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_tapTarget.scss', 'scss', '7ac59cf232228443c3dd6c1df81d7941', '1', '_tapTarget.scss', 0, 0, 0, 0, NULL),
-(155, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\Ê¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_mixins.scss', 'scss', '101018aee0ae84a805d81f15d8ce8f09', '1', '_mixins.scss', 0, 0, 0, 0, NULL),
-(156, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\‚¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_navbar.scss', 'scss', '39a04b1869789d980aaae3a13629f16d', '1', '_navbar.scss', 0, 0, 0, 0, NULL),
-(157, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\›¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_collapsible.scss', 'scss', '636ae1447b2d0df6e7d7d87218c52713', '1', '_collapsible.scss', 0, 0, 0, 0, NULL),
-(158, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\Ÿ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_table_of_contents.scss', 'scss', '2ab5b3c43e32dafcd8c8c8d4578a3d63', '1', '_table_of_contents.scss', 0, 0, 0, 0, NULL),
-(159, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\’¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_roboto.scss', 'scss', '8ae898d30209f899bb9d22e5e1e4b03d', '1', '_roboto.scss', 0, 0, 0, 0, NULL),
-(160, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\Œ¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/sass/components/date_picker', '', '78dc33c888c5dbfffc403d36c7880aad', '1', 'date_picker', 0, 0, 0, 0, NULL),
-(161, 'kÊ\\Œ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\»¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/date_picker/_default.scss', 'scss', '1fbc8834cf79e523984b4d6356a6e333', '1', '_default.scss', 0, 0, 0, 0, NULL),
-(162, 'kÊ\\Œ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\√¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/date_picker/_default.date.scss', 'scss', '6fb656ae2bed24160124f5cc0f91f2fb', '1', '_default.date.scss', 0, 0, 0, 0, NULL),
-(163, 'kÊ\\Œ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊ\\≥¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/date_picker/_default.time.scss', 'scss', 'd86e140698fc2516b19b7c210b20835a', '1', '_default.time.scss', 0, 0, 0, 0, NULL),
-(164, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊº‘¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_dropdown.scss', 'scss', '36e40527f9c2f1efdb10dc3aa2a8f382', '1', '_dropdown.scss', 0, 0, 0, 0, NULL),
-(165, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊºŒ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_typography.scss', 'scss', '794f712148acbc80f1b196e25f7e942b', '1', '_typography.scss', 0, 0, 0, 0, NULL),
-(166, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÊº ¡Ëá\0@ç\\"˙A', 'folder', 'files/mate/sass/components/forms', '', '72f6d6fbdea5c0ebf890f114995929cd', '1', 'forms', 0, 0, 0, 0, NULL),
-(167, 'kÊº ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊº≈¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/forms/_switches.scss', 'scss', '0d05f84a3bfc50253d37ebca14e796a9', '1', '_switches.scss', 0, 0, 0, 0, NULL),
-(168, 'kÊº ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊº¡¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/forms/_forms.scss', 'scss', '4ef5e29769885eee44d7854c1c44fb0b', '1', '_forms.scss', 0, 0, 0, 0, NULL),
-(169, 'kÊº ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊºΩ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/forms/_checkboxes.scss', 'scss', '69c4bdfcd40e1d1d0e85ecbb4690bfd6', '1', '_checkboxes.scss', 0, 0, 0, 0, NULL),
-(170, 'kÊº ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊº∂¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/forms/_range.scss', 'scss', 'd418124ff7fb870149de43cddb41d632', '1', '_range.scss', 0, 0, 0, 0, NULL),
-(171, 'kÊº ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊº±¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/forms/_select.scss', 'scss', '776065064f0fdbba0726dbeb7d487674', '1', '_select.scss', 0, 0, 0, 0, NULL),
-(172, 'kÊº ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊº¨¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/forms/_file-input.scss', 'scss', '37ec64216116263ac4c2b4ef294f3fe2', '1', '_file-input.scss', 0, 0, 0, 0, NULL),
-(173, 'kÊº ¡Ëá\0@ç\\"˙A', 1516879088, 'kÊºõ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/forms/_radio-buttons.scss', 'scss', '7bc08573fb4e67a61e7d0049582524d1', '1', '_radio-buttons.scss', 0, 0, 0, 0, NULL),
-(174, 'kÊº ¡Ëá\0@ç\\"˙A', 1516879088, 'kÁ)¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/forms/_input-fields.scss', 'scss', '4a474e7ba2bcf77e987d31c7793b93ee', '1', '_input-fields.scss', 0, 0, 0, 0, NULL),
-(175, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÁ#¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_prefixer.scss', 'scss', '4ae472c5ca391e952f6142da4b4267f7', '1', '_prefixer.scss', 0, 0, 0, 0, NULL),
-(176, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÁ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_modal.scss', 'scss', '1793da25465d58719e37d2be20d0a366', '1', '_modal.scss', 0, 0, 0, 0, NULL),
-(177, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÁ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_grid.scss', 'scss', '8b895cc5cb616bc293af3c58dfc4accf', '1', '_grid.scss', 0, 0, 0, 0, NULL),
-(178, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÁ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_toast.scss', 'scss', '867dc9aef605fa4395aa0e9cc9205d98', '1', '_toast.scss', 0, 0, 0, 0, NULL),
-(179, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÁ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_slider.scss', 'scss', 'd38388329fe1641e7ba6047e38c92239', '1', '_slider.scss', 0, 0, 0, 0, NULL),
-(180, 'k‰»…¡Ëá\0@ç\\"˙A', 1516879088, 'kÁ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/components/_tabs.scss', 'scss', '2c424b48d57d2633acc96acd521b72b7', '1', '_tabs.scss', 0, 0, 0, 0, NULL),
-(181, '¶–˝#Áá\0@ç\\"˙A', 1516879088, 'kÁ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/materialize.scss', 'scss', 'd40c840a62f373191c9ce66e70ae4a3a', '1', 'materialize.scss', 0, 0, 0, 0, NULL),
 (182, ' 4˝˝ Áá\0@ç\\"˙A', 1516879088, 'kÁ¡Ëá\0@ç\\"˙A', 'file', 'files/mate/img/Screenshot.png', 'png', '02ee9b2a1386dd059a71cb9641ea8a90', '1', 'Screenshot.png', 0, 0, 0, 0, NULL),
-(351, '¶–˝#Áá\0@ç\\"˙A', 1516888266, ' e∫ ÷Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/custom.scss.example', 'example', '96bda07dd161bdcd3f194abb05b18325', '1', 'custom.scss.example', 0, 0, 0, 0, NULL),
-(347, '¶–˝#Áá\0@ç\\"˙A', 1516888266, ' e∫÷Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/backend.css', 'css', '2c6518d9f142f9c45b72168718024f5a', '1', 'backend.css', 0, 0, 0, 0, NULL),
-(346, '¶–˝#Áá\0@ç\\"˙A', 1516888266, ' e∫ı÷Ëá\0@ç\\"˙A', 'file', 'files/mate/sass/_custom_variables.scss.example', 'example', 'f77c64bb2cb8c3c70db716e2c888e3ec', '1', '_custom_variables.scss.example', 0, 0, 0, 0, NULL),
-(341, 'k€3)¡Ëá\0@ç\\"˙A', 1516888266, ' d?Î÷Ëá\0@ç\\"˙A', 'file', 'files/mate/js/backend.js', 'js', 'e82678a4baca3e9097b605b71416ab58', '1', 'backend.js', 0, 0, 0, 0, NULL),
-(333, ' 4˝˝ Áá\0@ç\\"˙A', 1516888266, ' d@?÷Ëá\0@ç\\"˙A', 'file', 'files/mate/.keep', 'keep', 'd41d8cd98f00b204e9800998ecf8427e', '1', '.keep', 0, 0, 0, 0, NULL),
+(717, ' 4˝˝ Áá\0@ç\\"˙A', 1517850218, 'Ç°eè\nñËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/meissner-weihnachtsmarkt.jpg', 'jpg', '3a25f2aa56a0bde00b178f537f8ace6c', '1', 'meissner-weihnachtsmarkt.jpg', 0, 0, 0, 0, NULL),
 (635, ' 4˝˝ Áá\0@ç\\"˙A', 1516964565, 'p	ƒàËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/goetterfelsen.jpg', 'jpg', '524e5922f047f39d2733b93cba6d3cb5', '1', 'goetterfelsen.jpg', 0, 0, 0, 0, NULL),
 (629, ' 4˝˝ Áá\0@ç\\"˙A', 1516963792, 'æØg±ÇËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/meissen-juchhoeh.jpg', 'jpg', 'ce8338c204ceb05ddf75f43af05b9cf7', '1', 'meissen-juchhoeh.jpg', 197, 114, 1655, 571, 0x613a313a7b733a323a226465223b613a343a7b733a353a227469746c65223b733a303a22223b733a333a22616c74223b733a303a22223b733a343a226c696e6b223b733a303a22223b733a373a2263617074696f6e223b733a303a22223b7d7d),
-(630, ' 4˝˝ Áá\0@ç\\"˙A', 1516962149, '–W(†ÇËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/mei√üner-weihnachtsmarkt.jpg', 'jpg', '3a25f2aa56a0bde00b178f537f8ace6c', '1', 'mei√üner-weihnachtsmarkt.jpg', 0, 0, 0, 0, NULL),
 (631, ' 4˝˝ Áá\0@ç\\"˙A', 1516962152, '—§z€ÇËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/kleinmarkt.jpg', 'jpg', 'e263872b34a3d52392e255394ab2c1fb', '1', 'kleinmarkt.jpg', 0, 0, 0, 0, NULL),
 (632, ' 4˝˝ Áá\0@ç\\"˙A', 1516962158, '’≤•ÉÇËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/weihnachtsmarkt-meissen.jpg', 'jpg', '73924550d56b048f276ecb162d0573d7', '1', 'weihnachtsmarkt-meissen.jpg', 0, 0, 0, 0, NULL),
 (633, ' 4˝˝ Áá\0@ç\\"˙A', 1516962178, '·"Ö*ÇËá\0@ç\\"˙A', 'file', 'files/mate/img/meissen/weinfest-meissen-umzug.jpg', 'jpg', 'a04ac3259bddb4b513ca5676802ad947', '1', 'weinfest-meissen-umzug.jpg', 0, 0, 0, 0, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_form`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_form` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -808,9 +783,19 @@ CREATE TABLE IF NOT EXISTS `tl_form` (
   KEY `alias` (`alias`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
+--
+-- Daten f√ºr Tabelle `tl_form`
+--
+
 INSERT INTO `tl_form` (`id`, `tstamp`, `title`, `alias`, `jumpTo`, `sendViaEmail`, `recipient`, `subject`, `format`, `skipEmpty`, `storeValues`, `targetTable`, `method`, `novalidate`, `attributes`, `formID`, `allowTags`, `customTpl`) VALUES
 (6, 1517843081, 'Mate / Beispielformular', 'mate-beispielformular', 135, '1', 'develop@pdir.de', 'Formular-Anfrage mate.contao-themes.net', 'raw', '', '', '', 'POST', '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '', '', 'form_wrapper'),
 (8, 1517843120, 'Mate / Kontaktformular', 'mate-kontaktformular', 135, '1', 'develop@pdir.de', 'Anfrage Kontaktformular bei Mate Theme', 'raw', '', '', '', 'POST', '', 'a:2:{i:0;s:0:"";i:1;s:4:"test";}', '', '', 'form_wrapper');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_form_field`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_form_field` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -854,6 +839,10 @@ CREATE TABLE IF NOT EXISTS `tl_form_field` (
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=55 ;
 
+--
+-- Daten f√ºr Tabelle `tl_form_field`
+--
+
 INSERT INTO `tl_form_field` (`id`, `pid`, `sorting`, `tstamp`, `invisible`, `type`, `name`, `label`, `text`, `html`, `options`, `mandatory`, `rgxp`, `placeholder`, `minlength`, `maxlength`, `size`, `multiple`, `mSize`, `extensions`, `storeFile`, `uploadFolder`, `useHomeDir`, `doNotOverwrite`, `fsType`, `class`, `value`, `accesskey`, `tabindex`, `fSize`, `customTpl`, `slabel`, `imageSubmit`, `singleSRC`, `bs_grid_parent`, `bs_grid_name`, `bs_grid`) VALUES
 (22, 6, 128, 1511533531, '', 'text', 'name', 'Name', NULL, NULL, NULL, '1', '', '', 0, 0, 'a:2:{i:0;i:4;i:1;i:40;}', '', 0, 'jpg,jpeg,gif,png,pdf,doc,xls,ppt', '', NULL, '', '', 'fsStart', '', '', '', 0, 0, '', '', '', NULL, 0, '', 0),
 (23, 6, 64, 1511535789, '', 'text', 'vorname', 'Vorname', NULL, NULL, NULL, '', '', '', 0, 0, 'a:2:{i:0;i:4;i:1;i:40;}', '', 0, 'jpg,jpeg,gif,png,pdf,doc,xls,ppt', '', NULL, '', '', 'fsStart', '', '', '', 0, 0, '', '', '', NULL, 0, '', 0),
@@ -874,6 +863,12 @@ INSERT INTO `tl_form_field` (`id`, `pid`, `sorting`, `tstamp`, `invisible`, `typ
 (47, 6, 816, 1511781024, '', 'text', 'datepicker', 'Datumsauswahl', NULL, NULL, NULL, '', '', '', 0, 0, 'a:2:{i:0;i:4;i:1;i:40;}', '', 0, 'jpg,jpeg,gif,png,pdf,doc,xls,ppt', '', NULL, '', '', 'fsStart', 'datepicker', '', '', 0, 0, '', '', '', NULL, 0, '', 0),
 (48, 6, 840, 1511781167, '', 'text', 'timepicker', 'Zeitauswahl', NULL, NULL, NULL, '', '', '', 0, 0, 'a:2:{i:0;i:4;i:1;i:40;}', '', 0, 'jpg,jpeg,gif,png,pdf,doc,xls,ppt', '', NULL, '', '', 'fsStart', 'timepicker', '', '', 0, 0, '', '', '', NULL, 0, '', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_image_size`
+--
+
 CREATE TABLE IF NOT EXISTS `tl_image_size` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pid` int(10) unsigned NOT NULL DEFAULT '0',
@@ -890,12 +885,22 @@ CREATE TABLE IF NOT EXISTS `tl_image_size` (
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
+--
+-- Daten f√ºr Tabelle `tl_image_size`
+--
+
 INSERT INTO `tl_image_size` (`id`, `pid`, `tstamp`, `name`, `sizes`, `densities`, `width`, `height`, `resizeMode`, `zoom`, `cssClass`) VALUES
 (10, 15, 1488460424, 'Teaser-Box', '', '', 450, 270, 'crop', 100, ''),
 (11, 15, 1510926191, 'News-Box', '', '', 520, 350, 'crop', 0, ''),
 (12, 15, 1512058997, 'Headerbild &#40;normal&#41;', '', '1x, 1.5x, 2x', 1920, 400, 'crop', 100, ''),
 (13, 15, 1511526880, 'Headerbild &#40;kleiner&#41;', '', '', 1920, 250, 'crop', 100, ''),
 (15, 15, 1512126545, 'makler modul / Listenansicht', '', '', 300, 200, 'crop', NULL, '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_image_size_item`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_image_size_item` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -914,10 +919,20 @@ CREATE TABLE IF NOT EXISTS `tl_image_size_item` (
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
+--
+-- Daten f√ºr Tabelle `tl_image_size_item`
+--
+
 INSERT INTO `tl_image_size_item` (`id`, `pid`, `sorting`, `tstamp`, `media`, `sizes`, `densities`, `width`, `height`, `resizeMode`, `zoom`, `invisible`) VALUES
 (3, 10, 128, 1488460673, '(max-width:600px)', '', '', 600, 300, 'crop', 100, ''),
 (4, 12, 128, 1512059401, '(max-width: 767px)', '', '1x, 1.5x, 2x', 767, 400, 'crop', NULL, ''),
 (5, 13, 128, 1512116707, '(max-width: 767px)', '', '', 767, 200, 'crop', NULL, '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_layout`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_layout` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -965,11 +980,21 @@ CREATE TABLE IF NOT EXISTS `tl_layout` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
 
+--
+-- Daten f√ºr Tabelle `tl_layout`
+--
+
 INSERT INTO `tl_layout` (`id`, `pid`, `tstamp`, `name`, `rows`, `headerHeight`, `footerHeight`, `cols`, `widthLeft`, `widthRight`, `sections`, `framework`, `stylesheet`, `external`, `orderExt`, `loadingOrder`, `newsfeeds`, `calendarfeeds`, `modules`, `template`, `doctype`, `webfonts`, `picturefill`, `viewport`, `titleTag`, `cssClass`, `onload`, `head`, `addJQuery`, `jSource`, `jquery`, `addMooTools`, `mooSource`, `mootools`, `analytics`, `script`, `static`, `width`, `align`, `scripts`, `combineScripts`, `layoutType`) VALUES
 (50, 15, 1517393579, 'default', '3rw', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', '1cl', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', '', 0x613a313a7b693a303b613a343a7b733a353a227469746c65223b733a303a22223b733a323a226964223b733a303a22223b733a383a2274656d706c617465223b733a31333a22626c6f636b5f73656374696f6e223b733a383a22706f736974696f6e223b733a363a226265666f7265223b7d7d, 'a:2:{i:0;s:10:"layout.css";i:1;s:14:"responsive.css";}', NULL, NULL, 0x613a303a7b7d, 'external_first', NULL, NULL, 0x613a373a7b693a303b613a333a7b733a333a226d6f64223b733a333a22323733223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a313b613a333a7b733a333a226d6f64223b733a333a22323736223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a323b613a333a7b733a333a226d6f64223b733a333a22333134223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a333b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a343b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a343a226d61696e223b733a363a22656e61626c65223b733a313a2231223b7d693a353b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a363a22666f6f746572223b733a363a22656e61626c65223b733a313a2231223b7d693a363b613a333a7b733a333a226d6f64223b733a333a22323731223b733a333a22636f6c223b733a363a22666f6f746572223b733a363a22656e61626c65223b733a313a2231223b7d7d, 'fe_page_mate', 'html5', '', '', 'width=device-width, initial-scale=1.0', '', 'default-col', '', NULL, '1', 'j_googleapis', NULL, '', 'moo_local', NULL, NULL, NULL, '', '', 'center', NULL, '1', 'default'),
 (51, 15, 1517845414, 'Layout mit linker Spalte', '3rw', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', '2cll', 'a:2:{s:4:"unit";s:2:"px";s:5:"value";s:0:"";}', '', 0x613a313a7b693a303b613a343a7b733a353a227469746c65223b733a303a22223b733a323a226964223b733a303a22223b733a383a2274656d706c617465223b733a31333a22626c6f636b5f73656374696f6e223b733a383a22706f736974696f6e223b733a363a226265666f7265223b7d7d, 'a:2:{i:0;s:10:"layout.css";i:1;s:14:"responsive.css";}', NULL, NULL, 0x613a303a7b7d, 'external_first', NULL, NULL, 0x613a393a7b693a303b613a333a7b733a333a226d6f64223b733a333a22323733223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a313b613a333a7b733a333a226d6f64223b733a333a22323736223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a323b613a333a7b733a333a226d6f64223b733a333a22333134223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a333b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a343b613a333a7b733a333a226d6f64223b733a333a22323937223b733a333a22636f6c223b733a343a226c656674223b733a363a22656e61626c65223b733a313a2231223b7d693a353b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a343a226c656674223b733a363a22656e61626c65223b733a313a2231223b7d693a363b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a343a226d61696e223b733a363a22656e61626c65223b733a313a2231223b7d693a373b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a363a22666f6f746572223b733a363a22656e61626c65223b733a313a2231223b7d693a383b613a333a7b733a333a226d6f64223b733a333a22323731223b733a333a22636f6c223b733a363a22666f6f746572223b733a363a22656e61626c65223b733a313a2231223b7d7d, 'fe_page_mate_left', 'html5', '', '', 'width=device-width, initial-scale=1.0', '', 'left-col', '', NULL, '1', 'j_googleapis', 'a:3:{i:0;s:11:"j_accordion";i:1;s:10:"j_colorbox";i:2;s:14:"j_mediaelement";}', '', 'moo_local', NULL, NULL, NULL, '', '', 'center', NULL, '1', 'default'),
 (52, 15, 1517845432, 'Layout mit rechter Spalte', '3rw', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', '2clr', 'a:2:{s:4:"unit";s:2:"px";s:5:"value";s:0:"";}', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', 0x613a313a7b693a303b613a343a7b733a353a227469746c65223b733a303a22223b733a323a226964223b733a303a22223b733a383a2274656d706c617465223b733a31333a22626c6f636b5f73656374696f6e223b733a383a22706f736974696f6e223b733a363a226265666f7265223b7d7d, 'a:2:{i:0;s:10:"layout.css";i:1;s:14:"responsive.css";}', NULL, NULL, 0x613a303a7b7d, 'external_first', NULL, NULL, 0x613a393a7b693a303b613a333a7b733a333a226d6f64223b733a333a22323733223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a313b613a333a7b733a333a226d6f64223b733a333a22323736223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a323b613a333a7b733a333a226d6f64223b733a333a22333134223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a333b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a343b613a333a7b733a333a226d6f64223b733a333a22323937223b733a333a22636f6c223b733a353a227269676874223b733a363a22656e61626c65223b733a313a2231223b7d693a353b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a353a227269676874223b733a363a22656e61626c65223b733a313a2231223b7d693a363b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a343a226d61696e223b733a363a22656e61626c65223b733a313a2231223b7d693a373b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a363a22666f6f746572223b733a363a22656e61626c65223b733a313a2231223b7d693a383b613a333a7b733a333a226d6f64223b733a333a22323731223b733a333a22636f6c223b733a363a22666f6f746572223b733a363a22656e61626c65223b733a313a2231223b7d7d, 'fe_page_mate_right', 'html5', '', '', 'width=device-width, initial-scale=1.0', '', 'right-col', '', NULL, '1', 'j_googleapis', 'a:2:{i:0;s:11:"j_accordion";i:1;s:10:"j_colorbox";}', '', 'moo_local', NULL, NULL, NULL, '', '', 'center', NULL, '1', 'default'),
 (53, 15, 1517845422, 'Layout mit linker und rechter Spalte', '3rw', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', '3cl', 'a:2:{s:4:"unit";s:2:"px";s:5:"value";s:0:"";}', 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}', 0x613a313a7b693a303b613a343a7b733a353a227469746c65223b733a303a22223b733a323a226964223b733a303a22223b733a383a2274656d706c617465223b733a31333a22626c6f636b5f73656374696f6e223b733a383a22706f736974696f6e223b733a363a226265666f7265223b7d7d, 'a:2:{i:0;s:10:"layout.css";i:1;s:14:"responsive.css";}', NULL, NULL, 0x613a303a7b7d, 'external_first', NULL, NULL, 0x613a31303a7b693a303b613a333a7b733a333a226d6f64223b733a333a22323733223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a313b613a333a7b733a333a226d6f64223b733a333a22323736223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a323b613a333a7b733a333a226d6f64223b733a333a22333134223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a333b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a363a22686561646572223b733a363a22656e61626c65223b733a313a2231223b7d693a343b613a333a7b733a333a226d6f64223b733a333a22323937223b733a333a22636f6c223b733a343a226c656674223b733a363a22656e61626c65223b733a313a2231223b7d693a353b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a343a226c656674223b733a363a22656e61626c65223b733a313a2231223b7d693a363b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a353a227269676874223b733a363a22656e61626c65223b733a313a2231223b7d693a373b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a343a226d61696e223b733a363a22656e61626c65223b733a313a2231223b7d693a383b613a333a7b733a333a226d6f64223b733a313a2230223b733a333a22636f6c223b733a363a22666f6f746572223b733a363a22656e61626c65223b733a313a2231223b7d693a393b613a333a7b733a333a226d6f64223b733a333a22323731223b733a333a22636f6c223b733a363a22666f6f746572223b733a363a22656e61626c65223b733a313a2231223b7d7d, 'fe_page_mate_leftright', 'html5', '', '', 'width=device-width, initial-scale=1.0', '', 'left-right-col', '', NULL, '1', 'j_googleapis', 'a:2:{i:0;s:11:"j_accordion";i:1;s:10:"j_colorbox";}', '', 'moo_local', NULL, NULL, NULL, '', '', 'center', NULL, '1', 'default');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_member`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_member` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1016,10 +1041,20 @@ CREATE TABLE IF NOT EXISTS `tl_member` (
   KEY `activation` (`activation`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
+--
+-- Daten f√ºr Tabelle `tl_member`
+--
+
 INSERT INTO `tl_member` (`id`, `tstamp`, `firstname`, `lastname`, `dateOfBirth`, `gender`, `company`, `street`, `postal`, `city`, `state`, `country`, `phone`, `mobile`, `fax`, `email`, `website`, `language`, `groups`, `login`, `username`, `password`, `assignDir`, `homeDir`, `disable`, `start`, `stop`, `dateAdded`, `lastLogin`, `currentLogin`, `loginCount`, `locked`, `session`, `autologin`, `createdOn`, `activation`, `newsletter`) VALUES
 (1, 1259754224, 'John', 'Smith', '238201200', 'male', '', '', '', '', '', '', '', '', '', 'j.smith@example.com', '', 'en', 0x613a313a7b693a303b733a313a2232223b7d, '1', 'j.smith', '$2y$10$r//Ke.SkjhB5W8PLFKMmweY5Bv2d4CbSm3f3sH8Q4UMp8QknQPe0y', '', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', '', '', '', 1259754224, 1511530379, 1516703760, 3, 0, 0x613a343a7b733a373a2272656665726572223b613a323a7b733a343a226c617374223b733a31373a226d656d626572732d617265612e68746d6c223b733a373a2263757272656e74223b733a393a22757365722e68746d6c223b7d733a31303a22636170746368615f3230223b613a333a7b733a333a2273756d223b693a383b733a333a226b6579223b733a33333a22636562373937343262653137306630303832363537373732373734376261306437223b733a343a2274696d65223b693a313439373134373934303b7d733a31353a22636170746368615f63617074636861223b613a333a7b733a333a2273756d223b693a31313b733a333a226b6579223b733a33333a22633431623637396665326338366161333063316130316230613034336234366237223b733a343a2274696d65223b693a313439373134373934303b7d733a32313a22636170746368615f6c6f73745f70617373776f7264223b613a333a7b733a333a2273756d223b693a363b733a333a226b6579223b733a33333a22636239353765633334376531353338336466313963636562623232346465386133223b733a343a2274696d65223b693a313531313533303338333b7d7d, 'fcf5fdf00e2159e0adf973f04bec7b22', 1359899426, '', ''),
 (2, 1259754224, 'Donna', 'Evans', '191635200', 'female', '', '', '', '', '', '', '', '', '', 'd.evans@example.com', '', 'en', 0x613a313a7b693a303b733a313a2231223b7d, '1', 'd.evans', '$2y$10$3.ghpkaeW/ATUeSrhA8sgedbs4AdboKczBPV7IqyweXS6eCQ749pS', '', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', '', '', '', 1259754224, 1505937270, 1516703824, 3, 0, 0x613a333a7b733a373a2272656665726572223b613a323a7b733a343a226c617374223b733a33343a226d792d6163636f756e742e68746d6c3f7468656d653d63746f2d626f6f7374726170223b733a373a2263757272656e74223b733a33303a226c6f676f75742e68746d6c3f7468656d653d63746f2d626f6f7374726170223b7d733a31303a22636170746368615f3230223b613a333a7b733a333a2273756d223b693a31313b733a333a226b6579223b733a33333a22633036623236313465326335613031643137636532333039656434383562336533223b733a343a2274696d65223b693a313339303134323031313b7d733a32313a22636170746368615f6c6f73745f70617373776f7264223b613a333a7b733a333a2273756d223b693a363b733a333a226b6579223b733a33333a22633634346635353637323565353066653262636138316537653035613731373139223b733a343a2274696d65223b693a313430313236303637373b7d7d, '7e9473ac8496b7318ae852df6693817b', 1473679758, '', ''),
 (3, 1259754224, 'John', 'Doe', '0', '', '', '', '', '', '', '', '', '', '', 'j.doe@example.com', '', 'en', 0x613a323a7b693a303b733a313a2232223b693a313b733a313a2231223b7d, '1', 'j.doe', '7a86a8cf9d7510cc4661b217133f2eed37981b75', '', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', '', '', '', 1259754224, 0, 0, 3, 0, 0x613a313a7b733a373a2272656665726572223b613a323a7b733a343a226c617374223b733a31353a222f686973746f72792d312e68746d6c223b733a373a2263757272656e74223b733a313a222f223b7d7d, NULL, 0, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_member_group`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_member_group` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1033,10 +1068,20 @@ CREATE TABLE IF NOT EXISTS `tl_member_group` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
+--
+-- Daten f√ºr Tabelle `tl_member_group`
+--
+
 INSERT INTO `tl_member_group` (`id`, `tstamp`, `name`, `redirect`, `jumpTo`, `disable`, `start`, `stop`) VALUES
 (1, 1172600419, 'Violin Students', '1', 6, '', '', ''),
 (2, 1172600394, 'Piano Students', '1', 7, '', '', ''),
 (3, 1367401146, 'general Members', '1', 67, '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_module`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_module` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1163,6 +1208,10 @@ CREATE TABLE IF NOT EXISTS `tl_module` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=373 ;
 
+--
+-- Daten f√ºr Tabelle `tl_module`
+--
+
 INSERT INTO `tl_module` (`id`, `pid`, `tstamp`, `name`, `headline`, `type`, `levelOffset`, `showLevel`, `hardLimit`, `showProtected`, `defineRoot`, `rootPage`, `navigationTpl`, `customTpl`, `pages`, `orderPages`, `showHidden`, `customLabel`, `autologin`, `jumpTo`, `redirectBack`, `cols`, `editable`, `memberTpl`, `form`, `queryType`, `fuzzy`, `contextLength`, `totalLength`, `perPage`, `searchType`, `searchTpl`, `inColumn`, `skipFirst`, `loadFirst`, `size`, `transparent`, `flashvars`, `altContent`, `source`, `singleSRC`, `url`, `interactive`, `flashID`, `flashJS`, `imgSize`, `useCaption`, `fullsize`, `multiSRC`, `orderSRC`, `html`, `rss_cache`, `rss_feed`, `rss_template`, `numberOfItems`, `disableCaptcha`, `reg_groups`, `reg_allowLogin`, `reg_skipName`, `reg_close`, `reg_assignDir`, `reg_homeDir`, `reg_activate`, `reg_jumpTo`, `reg_text`, `reg_password`, `protected`, `groups`, `guests`, `cssID`, `cal_calendar`, `cal_noSpan`, `cal_startDay`, `cal_format`, `cal_ignoreDynamic`, `cal_order`, `cal_readerModule`, `cal_limit`, `cal_template`, `cal_ctemplate`, `cal_showQuantity`, `com_order`, `com_moderate`, `com_bbcode`, `com_requireLogin`, `com_disableCaptcha`, `com_template`, `faq_categories`, `faq_readerModule`, `list_table`, `list_fields`, `list_where`, `list_search`, `list_sort`, `list_info`, `list_info_where`, `list_layout`, `list_info_layout`, `news_archives`, `news_featured`, `news_jumpToCurrent`, `news_readerModule`, `news_metaFields`, `news_template`, `news_format`, `news_startDay`, `news_order`, `news_showQuantity`, `newsletters`, `nl_channels`, `nl_hideChannels`, `nl_subscribe`, `nl_unsubscribe`, `nl_template`, `mateNavbarType`, `cal_hideRunning`, `mateShowMobileMenu`, `mateShowSearch`, `mateShowLogo`, `bs_gridModules`, `bs_grid`) VALUES
 (318, 15, 1517400069, 'Module / Navbar / Beispiel Linksb√ºndig', 'a:2:{s:4:"unit";s:2:"h3";s:5:"value";s:14:"nur Navigation";}', 'mateNavbar', 0, 0, '', '', '', 0, '', '', NULL, NULL, '', '', '', 0, '', '2cl', NULL, '', 0, 'and', '', 48, 1000, 0, 'simple', '', 'main', 0, '', '', '', '', NULL, 'internal', NULL, '', '', '', NULL, '', '', '', NULL, NULL, NULL, 3600, NULL, 'rss_default', 3, '', NULL, '', '', '', '', NULL, '', 0, NULL, NULL, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', NULL, '', 1, 'cal_month', '', 'ascending', 0, 0, 'event_full', 'cal_default', '', 'ascending', '', '', '', '', 'com_default', NULL, 0, '', '', '', '', '', '', '', 'list_default', 'info_default', NULL, 'all_items', '', 0, 'a:2:{i:0;s:4:"date";i:1;s:6:"author";}', 'news_latest', 'news_month', 0, 'descending', '', NULL, NULL, '', NULL, NULL, 'nl_simple', 'type2', '', 0, 0, 0, NULL, 0),
 (319, 15, 1517400069, 'Module / Navbar / Beispiel Linksb√ºndig mit Logo', 'a:2:{s:4:"unit";s:2:"h3";s:5:"value";s:19:"Navigation mit Logo";}', 'mateNavbar', 0, 0, '', '', '', 0, '', '', NULL, NULL, '', '', '', 0, '', '2cl', NULL, '', 0, 'and', '', 48, 1000, 0, 'simple', '', 'main', 0, '', '', '', '', NULL, 'internal', NULL, '', '', '', NULL, '', '', '', NULL, NULL, NULL, 3600, NULL, 'rss_default', 3, '', NULL, '', '', '', '', NULL, '', 0, NULL, NULL, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', NULL, '', 1, 'cal_month', '', 'ascending', 0, 0, 'event_full', 'cal_default', '', 'ascending', '', '', '', '', 'com_default', NULL, 0, '', '', '', '', '', '', '', 'list_default', 'info_default', NULL, 'all_items', '', 0, 'a:2:{i:0;s:4:"date";i:1;s:6:"author";}', 'news_latest', 'news_month', 0, 'descending', '', NULL, NULL, '', NULL, NULL, 'nl_simple', 'type2', '', 0, 0, 1, NULL, 0),
@@ -1207,6 +1256,12 @@ INSERT INTO `tl_module` (`id`, `pid`, `tstamp`, `name`, `headline`, `type`, `lev
 (321, 15, 1517400069, 'Module / Navbar / Beispiel Dropdown mit Logo', 'a:2:{s:4:"unit";s:2:"h3";s:5:"value";s:19:"Navigation mit Logo";}', 'mateNavbar', 0, 0, '', '', '', 0, '', '', NULL, NULL, '', '', '', 0, '', '2cl', NULL, '', 0, 'and', '', 48, 1000, 0, 'simple', '', 'main', 0, '', '', '', '', NULL, 'internal', NULL, '', '', '', NULL, '', '', '', NULL, NULL, NULL, 3600, NULL, 'rss_default', 3, '', NULL, '', '', '', '', NULL, '', 0, NULL, NULL, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', NULL, '', 1, 'cal_month', '', 'ascending', 0, 0, 'event_full', 'cal_default', '', 'ascending', '', '', '', '', 'com_default', NULL, 0, '', '', '', '', '', '', '', 'list_default', 'info_default', NULL, 'all_items', '', 0, 'a:2:{i:0;s:4:"date";i:1;s:6:"author";}', 'news_latest', 'news_month', 0, 'descending', '', NULL, NULL, '', NULL, NULL, 'nl_simple', 'type5', '', 0, 0, 1, NULL, 0),
 (369, 15, 1517400069, 'Newsletter / K√ºndigen', 'a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}', 'unsubscribe', 0, 0, '', '', '', 0, '', '', NULL, NULL, '', '', '', 146, '', '2cl', NULL, '', 0, 'and', '', 48, 1000, 0, 'simple', '', 'main', 0, '', '', '', '', NULL, 'internal', NULL, '', '', '', NULL, '', '', '', NULL, NULL, NULL, 3600, NULL, 'rss_default', 3, '1', NULL, '', '', '', '', NULL, '', 0, NULL, NULL, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', NULL, '', 1, 'cal_month', '', 'ascending', 0, 0, 'event_full', 'cal_default', '', 'ascending', '', '', '', '', 'com_default', NULL, 0, '', '', '', '', '', '', '', 'list_default', 'info_default', NULL, 'all_items', '', 0, 'a:2:{i:0;s:4:"date";i:1;s:6:"author";}', 'news_latest', 'news_month', 0, 'descending', '', NULL, 0x613a313a7b693a303b733a313a2234223b7d, '1', 'Sie haben folgende Verteiler auf ##domain## abonniert:\n\n##channels##\n\nBitte klicken Sie ##link## um Ihr Abonnement zu aktivieren. Falls Sie die Bestellung nicht selbst get√§tigt haben, bitte ignorieren Sie diese E-Mail.', 'Sie haben folgende Abonnements auf ##domain## gek√ºndigt:\n\n##channels##', 'nl_default', '', '', 0, 0, 0, NULL, 0);
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_news`
+--
+
 CREATE TABLE IF NOT EXISTS `tl_news` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pid` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1247,6 +1302,10 @@ CREATE TABLE IF NOT EXISTS `tl_news` (
   KEY `pid_start_stop_published` (`pid`,`start`,`stop`,`published`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
 
+--
+-- Daten f√ºr Tabelle `tl_news`
+--
+
 INSERT INTO `tl_news` (`id`, `pid`, `tstamp`, `headline`, `alias`, `author`, `date`, `time`, `subheadline`, `teaser`, `addImage`, `singleSRC`, `alt`, `size`, `imagemargin`, `imageUrl`, `fullsize`, `caption`, `floating`, `addEnclosure`, `enclosure`, `source`, `jumpTo`, `articleId`, `url`, `target`, `cssClass`, `noComments`, `featured`, `published`, `start`, `stop`, `overwriteMeta`, `imageTitle`) VALUES
 (10, 2, 1516966465, 'Ausfl√ºge ins Umland', 'ausfluege-ins-umland', 4, 1517047500, 1517047500, 'Tourismus', '<p>Besuchen Sie Moritzburg, Dresden oder die S√§chsische Schweiz. Es gibt in der Umgebung zahlreiche tolle Ausflugsziele.</p>', '1', 'ﬁt\\˝ Áá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'above', '', NULL, 'default', 0, 0, '', '', '', '', '', '1', '', '', '', ''),
 (11, 2, 1516966454, 'Mitten im Elbtal gelegen', 'mitten-im-elbtal-gelegen', 4, 1517058300, 1517058300, 'Klima', '<p>Das Mei√üner Elbtal l√§dt immer zu einem Spaziergang ein. Entlang dem Elberadweg steht auch einer Fahrradtour in die Umgebung nichts entgegen.</p>', '1', '˝Ù›hˇìÁá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'above', '', NULL, 'default', 0, 0, '', '', '', '', '', '1', '', '', '', ''),
@@ -1260,6 +1319,12 @@ INSERT INTO `tl_news` (`id`, `pid`, `tstamp`, `headline`, `alias`, `author`, `da
 (24, 2, 1516971374, 'Wanderung zum G√∂tterfelsen', 'wanderung-zum-g√∂tterfelsen-24', 4, 1516965840, 1516965840, 'Wissenswertes', '<p>Mei√üen hat nicht nur eine ansehnliche Altstadt zu bieten, sondern auch sch√∂ne Landschaften. Die Garsebacher Schweiz l√§dt zu einer Wanderung zum G√∂tterfelsen, den Pechsteinklippen und zur Hohen Eifer ein.</p>', '1', 'p	ƒàËá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'above', '', NULL, 'default', 0, 0, '', '', '', '', '', '1', '', '', '', ''),
 (25, 2, 1516966509, '850 Jahre Weinbau in Sachsen', '850-jahre-weinbau-in-sachsen-25', 4, 1516965840, 1516965840, 'Wissenswertes', '<p>Eine Urkunde aus dem Jahr 1161 berichtet, da√ü sich in Mei√üen am Osthang des Meisatales gegen√ºber der Burg, ein schon gut im Ertrag stehender Weinberg befunden hat.</p>', '1', 'æØg±ÇËá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'above', '', NULL, 'default', 0, 0, '', '', '', '', '', '1', '', '', '', ''),
 (26, 2, 1516966420, 'Albrechtsburg Mei√üen', 'albrechtsburg-mei√üen', 4, 1516965840, 1516965840, 'Wissenswertes', '<p>Die Albrechtsburg ist eines der bekanntesten Schl√∂sser in Deutschland und gilt als erster Schlossbau in Deutschland.</p>', '1', 'ŸÄÂ˝ Áá\0@ç\\"˙A', '', 'a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'above', '', NULL, 'default', 0, 0, '', '', '', '', '', '1', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_newsletter`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_newsletter` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1282,9 +1347,19 @@ CREATE TABLE IF NOT EXISTS `tl_newsletter` (
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
+--
+-- Daten f√ºr Tabelle `tl_newsletter`
+--
+
 INSERT INTO `tl_newsletter` (`id`, `pid`, `tstamp`, `subject`, `alias`, `content`, `text`, `addFile`, `files`, `template`, `sendText`, `externalImages`, `sender`, `senderName`, `sent`, `date`) VALUES
 (4, 4, 1511793022, 'Keeping everyone up to date', '', '<p><b>Keeping everyone up to date</b></p>\n<p>Contao has a built in Newsletter administration system. It offers some features to create newsletters on a regular basis. Your are able to set up an HTML template, create your newsletters just as plain text or use both functionalities. Even attachments or external images can optionally be integrated.<b><br><br></b>SATURDAY<br>December 24<sup>th</sup>, 2013<br>7:30 pm</p>\n<p>SUNDAY<br>December 26<sup>th</sup>, 2013<br>3:00 pm</p>\n<p><b>Tickets $20[nbsp]to[nbsp]$40</b></p>\n<p>Call (416) 872-4255</p>', '', '', 0x613a313a7b693a303b4e3b7d, 'mail_default', '', '', '', '', '1', '1511949450'),
 (5, 4, 1511948990, 'The right newsletter for everyone', 'the-right-newsletter-for-everyone', '<p><b>The right newsletter for everyone</b></p>\n<p>The newsletter functionalities of Contao allows you to create different "Channels". So it''s possible to adress visitors or regular users of your site with their specific interests. Before you send a newsletter to a list of subscribers you can make the use of the option to send a preview. Better check your newsletters on all mail clients. Some of you might know that a lot of mail servers just allow a certain amount of Emails sent within a time-amount: The "Mails per cycle" function will help here with larger lists.<b><br><br></b>SATURDAY<br>December 24<sup>th</sup>, 2013<br>7:30 pm</p>\n<p>SUNDAY<br>December 26<sup>th</sup>, 2013<br>3:00 pm</p>\n<p><b>Tickets $20[nbsp]to[nbsp]$40</b></p>\n<p>Call (416) 872-4255</p>', 'TEXT Content', '', 0x613a313a7b693a303b4e3b7d, 'mail_default', '', '', '', '', '', '1360273849');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_newsletter_channel`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_newsletter_channel` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1297,8 +1372,18 @@ CREATE TABLE IF NOT EXISTS `tl_newsletter_channel` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
+--
+-- Daten f√ºr Tabelle `tl_newsletter_channel`
+--
+
 INSERT INTO `tl_newsletter_channel` (`id`, `tstamp`, `title`, `jumpTo`, `sender`, `template`, `senderName`) VALUES
 (4, 1517394772, 'Mate / Newsletter', 136, 'develop@pdir.de', 'mail_default', 'Contao Themes');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_newsletter_recipients_backup`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_newsletter_recipients_backup` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1315,8 +1400,18 @@ CREATE TABLE IF NOT EXISTS `tl_newsletter_recipients_backup` (
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
+--
+-- Daten f√ºr Tabelle `tl_newsletter_recipients_backup`
+--
+
 INSERT INTO `tl_newsletter_recipients_backup` (`id`, `pid`, `tstamp`, `email`, `active`, `addedOn`, `confirmed`, `ip`, `token`) VALUES
 (25, 4, 1517394866, 'seibt@pdir.de', '', '1517394866', '', '93.218.144.0', 'f5c1eae56375366688ae54768234503a');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_news_archive`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_news_archive` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1336,9 +1431,19 @@ CREATE TABLE IF NOT EXISTS `tl_news_archive` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
+--
+-- Daten f√ºr Tabelle `tl_news_archive`
+--
+
 INSERT INTO `tl_news_archive` (`id`, `tstamp`, `title`, `jumpTo`, `protected`, `groups`, `allowComments`, `notify`, `sortOrder`, `perPage`, `moderate`, `bbcode`, `requireLogin`, `disableCaptcha`) VALUES
 (2, 1516698619, 'Mate / Blog', 108, '', NULL, '', 'notify_admin', 'ascending', 0, '', '', '', ''),
 (3, 1516698631, 'Mate / Slider', 108, '', NULL, '', 'notify_admin', 'ascending', 0, '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_news_feed`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_news_feed` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1355,6 +1460,12 @@ CREATE TABLE IF NOT EXISTS `tl_news_feed` (
   PRIMARY KEY (`id`),
   KEY `alias` (`alias`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_page`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_page` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1412,6 +1523,10 @@ CREATE TABLE IF NOT EXISTS `tl_page` (
   KEY `pid_type_start_stop_published` (`pid`,`type`,`start`,`stop`,`published`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=148 ;
 
+--
+-- Daten f√ºr Tabelle `tl_page`
+--
+
 INSERT INTO `tl_page` (`id`, `pid`, `sorting`, `tstamp`, `title`, `alias`, `type`, `pageTitle`, `language`, `robots`, `description`, `redirect`, `jumpTo`, `url`, `target`, `dns`, `staticFiles`, `staticPlugins`, `fallback`, `adminEmail`, `dateFormat`, `timeFormat`, `datimFormat`, `createSitemap`, `sitemapName`, `useSSL`, `autoforward`, `protected`, `groups`, `includeLayout`, `layout`, `mobileLayout`, `includeCache`, `cache`, `includeChmod`, `cuser`, `cgroup`, `chmod`, `noSearch`, `cssClass`, `sitemap`, `hide`, `guests`, `tabindex`, `accesskey`, `published`, `start`, `stop`, `clientCache`, `redirectBack`) VALUES
 (113, 101, 128, 1516709427, 'Textelemente', 'inhaltselemente/textelemente', 'regular', 'Textelemente - Mate Theme', '', 'index,follow', 'Auf dieser Demo-Seite des Mate Themes f√ºr das Content-Management-System Contao finden Sie verschiedene Beispiele wie Textelemente eingebunden werden k√∂nnen.', 'permanent', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '', 0, 0, '', 0, '', 0, 0, 'a:9:{i:0;s:2:"u1";i:1;s:2:"u2";i:2;s:2:"u3";i:3;s:2:"u4";i:4;s:2:"u5";i:5;s:2:"u6";i:6;s:2:"g4";i:7;s:2:"g5";i:8;s:2:"g6";}', '', '', 'map_default', '', '', 0, '', '1', '', '', 0, ''),
 (114, 101, 256, 1516709427, 'Akkordion', 'inhaltselemente/akkordion', 'regular', 'Akkordion - Mate Theme', '', 'index,follow', 'Auf dieser Demo-Seite des Mate Themes f√ºr das Content-Management-System Contao finden Sie ein Beispiel wie ein Akkordion-Element eingebunden werden kann.', 'permanent', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '', 0, 0, '', 0, '', 0, 0, 'a:9:{i:0;s:2:"u1";i:1;s:2:"u2";i:2;s:2:"u3";i:3;s:2:"u4";i:4;s:2:"u5";i:5;s:2:"u6";i:6;s:2:"g4";i:7;s:2:"g5";i:8;s:2:"g6";}', '', '', 'map_default', '', '', 0, '', '1', '', '', 0, ''),
@@ -1457,6 +1572,12 @@ INSERT INTO `tl_page` (`id`, `pid`, `sorting`, `tstamp`, `title`, `alias`, `type
 (146, 145, 128, 1517391234, 'Newsletter abbestellt', 'newsletter-abbestellen/newsletter-abbestellt', 'regular', 'Newsletter abbestellt', '', 'index,follow', NULL, 'permanent', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '', 0, 0, '', 0, '', 0, 0, 'a:9:{i:0;s:2:"u1";i:1;s:2:"u2";i:2;s:2:"u3";i:3;s:2:"u4";i:4;s:2:"u5";i:5;s:2:"u6";i:6;s:2:"g4";i:7;s:2:"g5";i:8;s:2:"g6";}', '1', '', 'map_default', '1', '', 0, '', '1', '', '', 0, ''),
 (147, 101, 896, 1517564568, 'Social Feed', 'elemente/social-feed', 'regular', 'Social Feed', '', 'index,follow', NULL, 'permanent', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '1', 50, 0, '', 0, '', 0, 0, 'a:9:{i:0;s:2:"u1";i:1;s:2:"u2";i:2;s:2:"u3";i:3;s:2:"u4";i:4;s:2:"u5";i:5;s:2:"u6";i:6;s:2:"g4";i:7;s:2:"g5";i:8;s:2:"g6";}', '', '', 'map_default', '', '', 0, '', '1', '', '', 0, '');
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_session`
+--
+
 CREATE TABLE IF NOT EXISTS `tl_session` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pid` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1469,10 +1590,20 @@ CREATE TABLE IF NOT EXISTS `tl_session` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `hash` (`hash`),
   KEY `pid` (`pid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=133 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=134 ;
+
+--
+-- Daten f√ºr Tabelle `tl_session`
+--
 
 INSERT INTO `tl_session` (`id`, `pid`, `tstamp`, `name`, `sessionID`, `hash`, `ip`, `su`) VALUES
-(132, 4, 1517845851, 'BE_USER_AUTH', '54cf40c1978a93d3f5f9bdb665006339', 'df616347c6583cbe04b886fb8ae05403a1a57087', '93.218.141.180', '');
+(133, 4, 1517850248, 'BE_USER_AUTH', '22107381631f5691e261642e3559440f', 'd3da0d2a7d1f13fb9ba9e43b575a7dc75b49de8b', '93.218.146.104', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_style`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_style` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1537,6 +1668,10 @@ CREATE TABLE IF NOT EXISTS `tl_style` (
   PRIMARY KEY (`id`),
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1485 ;
+
+--
+-- Daten f√ºr Tabelle `tl_style`
+--
 
 INSERT INTO `tl_style` (`id`, `pid`, `sorting`, `tstamp`, `selector`, `category`, `comment`, `size`, `width`, `height`, `minwidth`, `minheight`, `maxwidth`, `maxheight`, `positioning`, `trbl`, `position`, `floating`, `clear`, `overflow`, `display`, `alignment`, `margin`, `padding`, `align`, `verticalalign`, `textalign`, `whitespace`, `background`, `bgcolor`, `bgimage`, `bgposition`, `bgrepeat`, `shadowsize`, `shadowcolor`, `gradientAngle`, `gradientColors`, `border`, `borderwidth`, `borderstyle`, `bordercolor`, `borderradius`, `bordercollapse`, `borderspacing`, `font`, `fontfamily`, `fontsize`, `fontcolor`, `lineheight`, `fontstyle`, `texttransform`, `textindent`, `letterspacing`, `wordspacing`, `list`, `liststyletype`, `liststyleimage`, `own`, `invisible`) VALUES
 (1, 1, 64, 1277411997, 'html', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'overflow-y: scroll;\noverflow-x: auto;', ''),
@@ -3039,6 +3174,12 @@ INSERT INTO `tl_style` (`id`, `pid`, `sorting`, `tstamp`, `selector`, `category`
 (1483, 49, 17408, 1359308096, '.ce_gallery u', '', '', '', '', '', '', '', '', '', '1', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', '', '', 'hidden', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, ''),
 (1484, 49, 17536, 1359308115, '.ce_gallery li', '', '', '', '', '', '', '', '', '', '1', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', '', 'left', '', '', '', '1', 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:0:"";s:4:"unit";s:0:"";}', 'a:5:{s:6:"bottom";s:2:"12";s:4:"left";s:1:"3";s:5:"right";s:1:"3";s:3:"top";s:1:"0";s:4:"unit";s:2:"px";}', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '');
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_theme`
+--
+
 CREATE TABLE IF NOT EXISTS `tl_theme` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `tstamp` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3055,8 +3196,18 @@ CREATE TABLE IF NOT EXISTS `tl_theme` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
+--
+-- Daten f√ºr Tabelle `tl_theme`
+--
+
 INSERT INTO `tl_theme` (`id`, `tstamp`, `name`, `author`, `folders`, `screenshot`, `templates`, `vars`, `pdir_th_description`, `pdir_th_license_domain`, `defaultImageDensities`, `bs_grid_columns`) VALUES
 (15, 1512635021, 'mate', 'Philipp Seibt', NULL, 'ÂvÑ⁄cÁΩ<@ç\\"˙A', '', 'a:0:{}', '&lt;b&#62;pdir contao theme licence&lt;/b&#62;&lt;br&#62;\nMit dieser &lt;b&#62;Lizenz&lt;/b&#62; gekennzeichnete Themes d√ºrfen sowohl privat als auch kommerziell eingesetzt werden. Der Copyright-Link bzw. die Copyright-Links "&lt;i&#62;powered by contao-themes.net&lt;/i&#62;" d√ºrfen nicht entfernt oder ver√§ndert werden. Das gilt auch wenn Sie das Theme\nnur als Basis f√ºr eine Website einsetzen und es ver√§ndern.\nM√∂chten Sie diesen Theme ohne Copyright-Link einsetzen, m√ºssen Sie eine kostenpflichtige Lizenz erwerben.', '', '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur f√ºr Tabelle `tl_user_group`
+--
 
 CREATE TABLE IF NOT EXISTS `tl_user_group` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -3090,6 +3241,10 @@ CREATE TABLE IF NOT EXISTS `tl_user_group` (
   `amg` blob,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Daten f√ºr Tabelle `tl_user_group`
+--
 
 INSERT INTO `tl_user_group` (`id`, `tstamp`, `name`, `modules`, `themes`, `pagemounts`, `alpty`, `filemounts`, `fop`, `forms`, `formp`, `alexf`, `disable`, `start`, `stop`, `calendars`, `calendarp`, `calendarfeeds`, `calendarfeedp`, `faqs`, `faqp`, `news`, `newp`, `newsfeeds`, `newsfeedp`, `newsletters`, `newsletterp`, `imageSizes`, `amg`) VALUES
 (1, 1333985828, 'Editors', 0x613a353a7b693a303b733a373a2261727469636c65223b693a313b733a343a226e657773223b693a323b733a383a2263616c656e646172223b693a333b733a343a2270616765223b693a343b733a353a2266696c6573223b7d, NULL, 0x34, 0x613a333a7b693a303b733a373a22726567756c6172223b693a313b733a373a22666f7277617264223b693a323b733a383a227265646972656374223b7d, 0x613a313a7b693a303b4e3b7d, 0x613a333a7b693a303b733a323a226631223b693a313b733a323a226632223b693a323b733a323a226633223b7d, NULL, NULL, 0x613a3138393a7b693a303b733a31373a22746c5f61727469636c653a3a7469746c65223b693a313b733a31373a22746c5f61727469636c653a3a616c696173223b693a323b733a31383a22746c5f61727469636c653a3a617574686f72223b693a333b733a32303a22746c5f61727469636c653a3a696e436f6c756d6e223b693a343b733a32303a22746c5f61727469636c653a3a6b6579776f726473223b693a353b733a32323a22746c5f61727469636c653a3a73686f77546561736572223b693a363b733a32333a22746c5f61727469636c653a3a7465617365724373734944223b693a373b733a31383a22746c5f61727469636c653a3a746561736572223b693a383b733a32313a22746c5f61727469636c653a3a7072696e7461626c65223b693a393b733a31373a22746c5f61727469636c653a3a6373734944223b693a31303b733a31373a22746c5f61727469636c653a3a7370616365223b693a31313b733a31383a22746c5f63616c656e6461723a3a7469746c65223b693a31323b733a31393a22746c5f63616c656e6461723a3a6a756d70546f223b693a31333b733a32323a22746c5f63616c656e6461723a3a70726f746563746564223b693a31343b733a31393a22746c5f63616c656e6461723a3a67726f757073223b693a31353b733a32363a22746c5f63616c656e6461723a3a616c6c6f77436f6d6d656e7473223b693a31363b733a31393a22746c5f63616c656e6461723a3a6e6f74696679223b693a31373b733a32323a22746c5f63616c656e6461723a3a736f72744f72646572223b693a31383b733a32303a22746c5f63616c656e6461723a3a70657250616765223b693a31393b733a32313a22746c5f63616c656e6461723a3a6d6f646572617465223b693a32303b733a31393a22746c5f63616c656e6461723a3a6262636f6465223b693a32313b733a32353a22746c5f63616c656e6461723a3a726571756972654c6f67696e223b693a32323b733a32373a22746c5f63616c656e6461723a3a64697361626c6543617074636861223b693a32333b733a32353a22746c5f63616c656e6461725f6576656e74733a3a7469746c65223b693a32343b733a32353a22746c5f63616c656e6461725f6576656e74733a3a616c696173223b693a32353b733a32363a22746c5f63616c656e6461725f6576656e74733a3a617574686f72223b693a32363b733a32373a22746c5f63616c656e6461725f6576656e74733a3a61646454696d65223b693a32373b733a32393a22746c5f63616c656e6461725f6576656e74733a3a737461727454696d65223b693a32383b733a32373a22746c5f63616c656e6461725f6576656e74733a3a656e6454696d65223b693a32393b733a32393a22746c5f63616c656e6461725f6576656e74733a3a737461727444617465223b693a33303b733a32373a22746c5f63616c656e6461725f6576656e74733a3a656e6444617465223b693a33313b733a32363a22746c5f63616c656e6461725f6576656e74733a3a746561736572223b693a33323b733a32373a22746c5f63616c656e6461725f6576656e74733a3a64657461696c73223b693a33333b733a32383a22746c5f63616c656e6461725f6576656e74733a3a616464496d616765223b693a33343b733a32393a22746c5f63616c656e6461725f6576656e74733a3a73696e676c65535243223b693a33353b733a32333a22746c5f63616c656e6461725f6576656e74733a3a616c74223b693a33363b733a32343a22746c5f63616c656e6461725f6576656e74733a3a73697a65223b693a33373b733a33313a22746c5f63616c656e6461725f6576656e74733a3a696d6167656d617267696e223b693a33383b733a32383a22746c5f63616c656e6461725f6576656e74733a3a696d61676555726c223b693a33393b733a32383a22746c5f63616c656e6461725f6576656e74733a3a66756c6c73697a65223b693a34303b733a32373a22746c5f63616c656e6461725f6576656e74733a3a63617074696f6e223b693a34313b733a32383a22746c5f63616c656e6461725f6576656e74733a3a666c6f6174696e67223b693a34323b733a32393a22746c5f63616c656e6461725f6576656e74733a3a726563757272696e67223b693a34333b733a33303a22746c5f63616c656e6461725f6576656e74733a3a72657065617445616368223b693a34343b733a33313a22746c5f63616c656e6461725f6576656e74733a3a726563757272656e636573223b693a34353b733a33323a22746c5f63616c656e6461725f6576656e74733a3a616464456e636c6f73757265223b693a34363b733a32393a22746c5f63616c656e6461725f6576656e74733a3a656e636c6f73757265223b693a34373b733a32363a22746c5f63616c656e6461725f6576656e74733a3a736f75726365223b693a34383b733a32363a22746c5f63616c656e6461725f6576656e74733a3a6a756d70546f223b693a34393b733a32393a22746c5f63616c656e6461725f6576656e74733a3a61727469636c654964223b693a35303b733a32333a22746c5f63616c656e6461725f6576656e74733a3a75726c223b693a35313b733a32363a22746c5f63616c656e6461725f6576656e74733a3a746172676574223b693a35323b733a32383a22746c5f63616c656e6461725f6576656e74733a3a637373436c617373223b693a35333b733a33303a22746c5f63616c656e6461725f6576656e74733a3a6e6f436f6d6d656e7473223b693a35343b733a31363a22746c5f636f6e74656e743a3a74797065223b693a35353b733a32303a22746c5f636f6e74656e743a3a686561646c696e65223b693a35363b733a31363a22746c5f636f6e74656e743a3a74657874223b693a35373b733a32303a22746c5f636f6e74656e743a3a616464496d616765223b693a35383b733a32313a22746c5f636f6e74656e743a3a73696e676c65535243223b693a35393b733a31353a22746c5f636f6e74656e743a3a616c74223b693a36303b733a31373a22746c5f636f6e74656e743a3a7469746c65223b693a36313b733a31363a22746c5f636f6e74656e743a3a73697a65223b693a36323b733a32333a22746c5f636f6e74656e743a3a696d6167656d617267696e223b693a36333b733a32303a22746c5f636f6e74656e743a3a696d61676555726c223b693a36343b733a32303a22746c5f636f6e74656e743a3a66756c6c73697a65223b693a36353b733a31393a22746c5f636f6e74656e743a3a63617074696f6e223b693a36363b733a32303a22746c5f636f6e74656e743a3a666c6f6174696e67223b693a36373b733a31363a22746c5f636f6e74656e743a3a68746d6c223b693a36383b733a32303a22746c5f636f6e74656e743a3a6c69737474797065223b693a36393b733a32313a22746c5f636f6e74656e743a3a6c6973746974656d73223b693a37303b733a32323a22746c5f636f6e74656e743a3a7461626c656974656d73223b693a37313b733a31393a22746c5f636f6e74656e743a3a73756d6d617279223b693a37323b733a31373a22746c5f636f6e74656e743a3a7468656164223b693a37333b733a31373a22746c5f636f6e74656e743a3a74666f6f74223b693a37343b733a31373a22746c5f636f6e74656e743a3a746c656674223b693a37353b733a32303a22746c5f636f6e74656e743a3a736f727461626c65223b693a37363b733a32313a22746c5f636f6e74656e743a3a736f7274496e646578223b693a37373b733a32313a22746c5f636f6e74656e743a3a736f72744f72646572223b693a37383b733a31393a22746c5f636f6e74656e743a3a6d6f6f54797065223b693a37393b733a32333a22746c5f636f6e74656e743a3a6d6f6f486561646c696e65223b693a38303b733a32303a22746c5f636f6e74656e743a3a6d6f6f5374796c65223b693a38313b733a32323a22746c5f636f6e74656e743a3a6d6f6f436c6173736573223b693a38323b733a32313a22746c5f636f6e74656e743a3a686967686c69676874223b693a38333b733a31393a22746c5f636f6e74656e743a3a7368436c617373223b693a38343b733a31363a22746c5f636f6e74656e743a3a636f6465223b693a38353b733a31353a22746c5f636f6e74656e743a3a75726c223b693a38363b733a31383a22746c5f636f6e74656e743a3a746172676574223b693a38373b733a32313a22746c5f636f6e74656e743a3a6c696e6b5469746c65223b693a38383b733a31373a22746c5f636f6e74656e743a3a656d626564223b693a38393b733a31353a22746c5f636f6e74656e743a3a72656c223b693a39303b733a32303a22746c5f636f6e74656e743a3a757365496d616765223b693a39313b733a32303a22746c5f636f6e74656e743a3a6d756c7469535243223b693a39323b733a32323a22746c5f636f6e74656e743a3a757365486f6d65446972223b693a39333b733a31383a22746c5f636f6e74656e743a3a706572526f77223b693a39343b733a31393a22746c5f636f6e74656e743a3a70657250616765223b693a39353b733a32353a22746c5f636f6e74656e743a3a6e756d6265724f664974656d73223b693a39363b733a31383a22746c5f636f6e74656e743a3a736f72744279223b693a39373b733a32323a22746c5f636f6e74656e743a3a67616c6c65727954706c223b693a39383b733a32303a22746c5f636f6e74656e743a3a637465416c696173223b693a39393b733a32343a22746c5f636f6e74656e743a3a61727469636c65416c696173223b693a3130303b733a31393a22746c5f636f6e74656e743a3a61727469636c65223b693a3130313b733a31363a22746c5f636f6e74656e743a3a666f726d223b693a3130323b733a31383a22746c5f636f6e74656e743a3a6d6f64756c65223b693a3130333b733a32313a22746c5f636f6e74656e743a3a70726f746563746564223b693a3130343b733a31383a22746c5f636f6e74656e743a3a67726f757073223b693a3130353b733a31383a22746c5f636f6e74656e743a3a677565737473223b693a3130363b733a31373a22746c5f636f6e74656e743a3a6373734944223b693a3130373b733a31373a22746c5f636f6e74656e743a3a7370616365223b693a3130383b733a32313a22746c5f636f6e74656e743a3a636f6d5f6f72646572223b693a3130393b733a32333a22746c5f636f6e74656e743a3a636f6d5f70657250616765223b693a3131303b733a32343a22746c5f636f6e74656e743a3a636f6d5f6d6f646572617465223b693a3131313b733a32323a22746c5f636f6e74656e743a3a636f6d5f6262636f6465223b693a3131323b733a33303a22746c5f636f6e74656e743a3a636f6d5f64697361626c6543617074636861223b693a3131333b733a32383a22746c5f636f6e74656e743a3a636f6d5f726571756972654c6f67696e223b693a3131343b733a32343a22746c5f636f6e74656e743a3a636f6d5f74656d706c617465223b693a3131353b733a31373a22746c5f6e6577733a3a686561646c696e65223b693a3131363b733a31343a22746c5f6e6577733a3a616c696173223b693a3131373b733a31353a22746c5f6e6577733a3a617574686f72223b693a3131383b733a31333a22746c5f6e6577733a3a64617465223b693a3131393b733a31333a22746c5f6e6577733a3a74696d65223b693a3132303b733a32303a22746c5f6e6577733a3a737562686561646c696e65223b693a3132313b733a31353a22746c5f6e6577733a3a746561736572223b693a3132323b733a31333a22746c5f6e6577733a3a74657874223b693a3132333b733a31373a22746c5f6e6577733a3a616464496d616765223b693a3132343b733a31383a22746c5f6e6577733a3a73696e676c65535243223b693a3132353b733a31323a22746c5f6e6577733a3a616c74223b693a3132363b733a31333a22746c5f6e6577733a3a73697a65223b693a3132373b733a32303a22746c5f6e6577733a3a696d6167656d617267696e223b693a3132383b733a31373a22746c5f6e6577733a3a696d61676555726c223b693a3132393b733a31373a22746c5f6e6577733a3a66756c6c73697a65223b693a3133303b733a31363a22746c5f6e6577733a3a63617074696f6e223b693a3133313b733a31373a22746c5f6e6577733a3a666c6f6174696e67223b693a3133323b733a32313a22746c5f6e6577733a3a616464456e636c6f73757265223b693a3133333b733a31383a22746c5f6e6577733a3a656e636c6f73757265223b693a3133343b733a31353a22746c5f6e6577733a3a736f75726365223b693a3133353b733a31353a22746c5f6e6577733a3a6a756d70546f223b693a3133363b733a31383a22746c5f6e6577733a3a61727469636c654964223b693a3133373b733a31323a22746c5f6e6577733a3a75726c223b693a3133383b733a31353a22746c5f6e6577733a3a746172676574223b693a3133393b733a31373a22746c5f6e6577733a3a637373436c617373223b693a3134303b733a31393a22746c5f6e6577733a3a6e6f436f6d6d656e7473223b693a3134313b733a31373a22746c5f6e6577733a3a6665617475726564223b693a3134323b733a32323a22746c5f6e6577735f617263686976653a3a7469746c65223b693a3134333b733a32333a22746c5f6e6577735f617263686976653a3a6a756d70546f223b693a3134343b733a32363a22746c5f6e6577735f617263686976653a3a70726f746563746564223b693a3134353b733a32333a22746c5f6e6577735f617263686976653a3a67726f757073223b693a3134363b733a33303a22746c5f6e6577735f617263686976653a3a616c6c6f77436f6d6d656e7473223b693a3134373b733a32333a22746c5f6e6577735f617263686976653a3a6e6f74696679223b693a3134383b733a32363a22746c5f6e6577735f617263686976653a3a736f72744f72646572223b693a3134393b733a32343a22746c5f6e6577735f617263686976653a3a70657250616765223b693a3135303b733a32353a22746c5f6e6577735f617263686976653a3a6d6f646572617465223b693a3135313b733a32333a22746c5f6e6577735f617263686976653a3a6262636f6465223b693a3135323b733a32393a22746c5f6e6577735f617263686976653a3a726571756972654c6f67696e223b693a3135333b733a33313a22746c5f6e6577735f617263686976653a3a64697361626c6543617074636861223b693a3135343b733a31343a22746c5f706167653a3a7469746c65223b693a3135353b733a31343a22746c5f706167653a3a616c696173223b693a3135363b733a31333a22746c5f706167653a3a74797065223b693a3135373b733a31383a22746c5f706167653a3a706167655469746c65223b693a3135383b733a31373a22746c5f706167653a3a6c616e6775616765223b693a3135393b733a31353a22746c5f706167653a3a726f626f7473223b693a3136303b733a32303a22746c5f706167653a3a6465736372697074696f6e223b693a3136313b733a31373a22746c5f706167653a3a7265646972656374223b693a3136323b733a31353a22746c5f706167653a3a6a756d70546f223b693a3136333b733a31323a22746c5f706167653a3a75726c223b693a3136343b733a31353a22746c5f706167653a3a746172676574223b693a3136353b733a31323a22746c5f706167653a3a646e73223b693a3136363b733a31353a22746c5f706167653a3a6d6f62696c65223b693a3136373b733a31373a22746c5f706167653a3a66616c6c6261636b223b693a3136383b733a31393a22746c5f706167653a3a61646d696e456d61696c223b693a3136393b733a31393a22746c5f706167653a3a64617465466f726d6174223b693a3137303b733a31393a22746c5f706167653a3a74696d65466f726d6174223b693a3137313b733a32303a22746c5f706167653a3a646174696d466f726d6174223b693a3137323b733a32323a22746c5f706167653a3a637265617465536974656d6170223b693a3137333b733a32303a22746c5f706167653a3a736974656d61704e616d65223b693a3137343b733a31353a22746c5f706167653a3a75736553534c223b693a3137353b733a32303a22746c5f706167653a3a6175746f666f7277617264223b693a3137363b733a31383a22746c5f706167653a3a70726f746563746564223b693a3137373b733a31353a22746c5f706167653a3a67726f757073223b693a3137383b733a32323a22746c5f706167653a3a696e636c7564654c61796f7574223b693a3137393b733a31353a22746c5f706167653a3a6c61796f7574223b693a3138303b733a32313a22746c5f706167653a3a696e636c7564654361636865223b693a3138313b733a31343a22746c5f706167653a3a6361636865223b693a3138323b733a31373a22746c5f706167653a3a6e6f536561726368223b693a3138333b733a31373a22746c5f706167653a3a637373436c617373223b693a3138343b733a31363a22746c5f706167653a3a736974656d6170223b693a3138353b733a31333a22746c5f706167653a3a68696465223b693a3138363b733a31353a22746c5f706167653a3a677565737473223b693a3138373b733a31373a22746c5f706167653a3a746162696e646578223b693a3138383b733a31383a22746c5f706167653a3a6163636573736b6579223b7d, '', '', '', 0x613a313a7b693a303b733a313a2231223b7d, NULL, NULL, NULL, NULL, NULL, 0x613a313a7b693a303b733a313a2231223b7d, NULL, NULL, NULL, NULL, NULL, 0x613a32353a7b693a303b733a31323a2270726f706f7274696f6e616c223b693a313b733a333a22626f78223b693a323b733a343a2263726f70223b693a333b733a383a226c6566745f746f70223b693a343b733a31303a2263656e7465725f746f70223b693a353b733a393a2272696768745f746f70223b693a363b733a31313a226c6566745f63656e746572223b693a373b733a31333a2263656e7465725f63656e746572223b693a383b733a31323a2272696768745f63656e746572223b693a393b733a31313a226c6566745f626f74746f6d223b693a31303b733a31333a2263656e7465725f626f74746f6d223b693a31313b733a31323a2272696768745f626f74746f6d223b693a31323b733a313a2231223b693a31333b733a313a2232223b693a31343b733a313a2233223b693a31353b733a313a2234223b693a31363b733a313a2235223b693a31373b733a313a2236223b693a31383b733a313a2237223b693a31393b733a313a2238223b693a32303b733a323a223130223b693a32313b733a323a223131223b693a32323b733a323a223132223b693a32333b733a323a223133223b693a32343b733a323a223135223b7d, NULL);
