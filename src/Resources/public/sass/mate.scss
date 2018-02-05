@@ -2,17 +2,17 @@
 
 @font-face { 
   font-family: "Lato Light";
-  src: url("/files/mate/fonts/Lato/Lato-Light.ttf");
+  src: url("../fonts/Lato/Lato-Light.ttf");
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: url("/files/mate/fonts/Lato/Lato-Regular.ttf");
+  src: url("../fonts/Lato/Lato-Regular.ttf");
 }
 
 @font-face { 
   font-family: "Old Standard";
-  src: url("/files/mate/fonts/Old_Standard_TT/OldStandard-Regular.ttf");
+  src: url("../fonts/Old_Standard_TT/OldStandard-Regular.ttf");
 }
 
 ::-moz-selection { background: $mateColor2; color: #fff; }
@@ -3397,4 +3397,4 @@ textarea {
     }
 }
 
-@import 'custom';
+@import '../../../../../../../files/mate/sass/custom';
