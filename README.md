@@ -7,7 +7,7 @@ pdir contao theme licence -> see LICENSE file for more informations
 
 ## demo
 
-for demo please visit https://mate.contao-themes.net/
+for demo please visit https://mate.pdir.de
 
 ## compatible
 compatible with Contao 4.4.x
@@ -42,5 +42,5 @@ compatible with Contao 4.4.x
 
 ## install
 
-see https://docs.pdir.de
+see https://docs.contao-themes.net/
 
