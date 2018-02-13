@@ -9,6 +9,10 @@ pdir contao theme licence -> see LICENSE file for more informations
 
 for demo please visit https://mate.pdir.de
 
+## documentation
+
+for documentation please visit https://docs.contao-themes.net/
+
 ## compatible
 compatible with Contao 4.4.x
 
