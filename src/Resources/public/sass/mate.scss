@@ -2492,112 +2492,116 @@ textarea {
 /* ========================== *
  *    Social Feed             *
  * ========================== */
-.ce_socialfeed .social-feed-container {
-  padding: 24px 0;
-}
+.ce_socialfeed {
+  clear: left;
 
-.ce_socialfeed .social-feed-element {
-  position: relative;
-  margin: 0 0 30px;
-  overflow: visible;
-  box-shadow: none;
-  font-family: inherit;
-  color: inherit;
-  float: left;
-
-  .content {
-    padding: 40px 15px 15px;
+  .social-feed-container {
+    padding: 24px 0;
   }
 
-  .author-img {
-    position: absolute;
-    top: -15px;
-    z-index: 2;
+  .social-feed-element {
+    position: relative;
+    margin: 0 0 30px;
+    overflow: visible;
+    box-shadow: none;
+    font-family: inherit;
+    color: inherit;
+    float: left;
+
+    .content {
+      padding: 40px 15px 15px;
+    }
+
+    .author-img {
+      position: absolute;
+      top: -15px;
+      z-index: 2;
+
+      img {
+        width: 50px;
+      }
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      content: "";
+      border-top: 5px solid $mateColor2;
+      z-index: 1;
+    }
+
+    p.social-feed-text {
+      padding: 15px 0;
+      white-space: pre-line;
+
+      a {
+        color: $primary-link-font-color;
+
+        &:hover {
+          color: $primary-link-hover-font-color;
+        }
+      }
+    }
+
+    .muted {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+    }
+
+    .author-title {
+      color: #86af49;
+      font-family: Old Standard;
+      display: block;
+      padding: 2px 0;
+      font-size: 16px;
+    }
+
+    .fa {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: $mateColor2;
+    }
 
     img {
-      width: 50px;
+      width: auto;
     }
   }
 
-  &:hover {
-    box-shadow: none;
+  &.col-2 .social-feed-element {
+    width: calc(100% / 2);
   }
 
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    content: "";
-    border-top: 5px solid $mateColor2;
-    z-index: 1;
+  &.col-3 .social-feed-element {
+    width: calc(100% / 3);
   }
 
-  p.social-feed-text {
-    padding: 15px 0;
-    white-space: pre-line;
+  &.col-2, &.col-3 {
+    .social-feed-container {
+      @extend .row;
 
-    a {
-      color: $primary-link-font-color;
+      .social-feed-element {
+        box-sizing: border-box;
+        margin: 0;
+        background: none;
 
-      &:hover {
-        color: $primary-link-hover-font-color;
-      }
-    }
-  }
+        &:before {
+          left: 0.75rem;
+          width: calc(100% - (0.75rem * 2));
+        }
 
-  .muted {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-  }
-
-  .author-title {
-    color: #86af49;
-    font-family: Old Standard;
-    display: block;
-    padding: 2px 0;
-    font-size: 16px;
-  }
-
-  .fa {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: $mateColor2;
-  }
-
-  img {
-    width: auto;
-  }
-}
-
-.ce_socialfeed.col-2 .social-feed-element {
-  width: calc(100% / 2);
-}
-
-.ce_socialfeed.col-3 .social-feed-element {
-  width: calc(100% / 3);
-}
-
-.ce_socialfeed.col-2, .ce_socialfeed.col-3 {
-  .social-feed-container {
-    @extend .row;
-
-    .social-feed-element {
-      box-sizing: border-box;
-      margin: 0;
-      background: none;
-
-      &:before {
-        left: 0.75rem;
-        width: calc(100% - (0.75rem * 2));
-      }
-
-      .content {
-        background: #fff;
-        margin: 0 0.75rem 35px;
-        position: relative;
+        .content {
+          background: #fff;
+          margin: 0 0.75rem 35px;
+          position: relative;
+        }
       }
     }
   }
@@ -3388,17 +3392,20 @@ textarea {
     }
 
     /* Social Feed */
-  .ce_socialfeed.col-2, .ce_socialfeed.col-3 {
-        .social-feed-container {
-            display: block;
-            margin: 0;
+  .ce_socialfeed {
+    &.col-2, &.col-3 {
+      .social-feed-container {
+        display: block;
+        margin: 0;
 
-            .social-feed-element {
-                -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-            }
+        .social-feed-element {
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
         }
+      }
     }
+  }
+
 }
 
 @import '../../../../../../../files/mate/sass/custom';
