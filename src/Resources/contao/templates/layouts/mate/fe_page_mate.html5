@@ -12,12 +12,14 @@
 
     <?= $this->viewport ?>
 
-    <?= $this->stylesheets ?>
     <link rel="stylesheet" type="text/css" media="all" href="<?php
     // add stylesheets
     $combiner = new Combiner();
     $combiner->add('bundles/matetheme/sass/mate.scss');
     echo $combiner->getCombinedFile(); ?>">
+
+    <?= $this->stylesheets ?>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <?= $this->head ?>

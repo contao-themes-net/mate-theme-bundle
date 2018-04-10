@@ -2492,11 +2492,11 @@ textarea {
 /* ========================== *
  *    Social Feed             *
  * ========================== */
-.social-feed-container {
+.ce_socialfeed .social-feed-container {
   padding: 24px 0;
 }
 
-.social-feed-element {
+.ce_socialfeed .social-feed-element {
   position: relative;
   margin: 0 0 30px;
   overflow: visible;
@@ -2572,15 +2572,15 @@ textarea {
   }
 }
 
-.col-2 .social-feed-element {
+.ce_socialfeed.col-2 .social-feed-element {
   width: calc(100% / 2);
 }
 
-.col-3 .social-feed-element {
+.ce_socialfeed.col-3 .social-feed-element {
   width: calc(100% / 3);
 }
 
-.col-2, .col-3 {
+.ce_socialfeed.col-2, .ce_socialfeed.col-3 {
   .social-feed-container {
     @extend .row;
 
@@ -3388,7 +3388,7 @@ textarea {
     }
 
     /* Social Feed */
-    .col-2, .col-3 {
+  .ce_socialfeed.col-2, .ce_socialfeed.col-3 {
         .social-feed-container {
             display: block;
             margin: 0;
