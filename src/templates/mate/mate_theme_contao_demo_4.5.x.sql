@@ -515,7 +515,7 @@ INSERT INTO `tl_content` (`id`, `pid`, `ptable`, `sorting`, `tstamp`, `type`, `h
 (599, 173, 'tl_article', 192, 1516703706, 'text', 'a:2:{s:4:"unit";s:2:"h3";s:5:"value";s:17:"Test-Zugangsdaten";}', '<p><strong>Username:</strong> j.smith<br><strong>Password:</strong> johnsmith</p>\n<p><strong>Username:</strong> d.evans<br><strong>Password:</strong> donnaevans</p>', '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 0, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
 (663, 185, 'tl_article', 128, 1516628505, 'text', 'a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:26:"404 - Seite nicht gefunden";}', '<p>Die von Ihnen angeforderte Seite wurde leider nicht gefunden. Vielleicht haben Sie sich vertippt oder die Seite existiert nicht mehr.</p>\n<p>Sie könnten stattdessen zur <a href="{{link_url::90}}">Startseite</a> navigieren oder uns <a href="{{link_url::139}}">kontaktieren</a>.</p>', '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 0, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:13:"bordered-left";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
 (595, 173, 'tl_article', 304, 1516618168, 'module', '', NULL, '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 302, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
-(600, 177, 'tl_article', 128, 1516707757, 'text', 'a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:9:"Impressum";}', '<p>Verantwortlicher Diensteanbieter im Sinne von § 5 Telemediengesetz (TMG),</p>\n<p>Inhaber der Domain mate.contao-themes.net</p>\n<p><strong>pdir GmbH</strong><br>Questenberger Weg 38<br>01662 Meißen</p>\n<p>Telefon: +49 (0)3521 / 47 67 592<br>E-Mail: info@maklermodul.de</p>\n<p>Geschäftsführer: Mathias Arzberger<br>Amtsgericht Dresden, HRB 31411<br>Unternehmenssitz: Meißen</p>\n<p>USt-IdNr.: DE284334763</p>\n<p>Verantwortlicher für Ausdruck und Inhalt: Mathias Arzberger</p>\n<p>///////////////////////////////</p>\n<p>Wir bieten Ihnen eine qualitativ hochwertige Konzeption und Implementierung von internetbasierten Lösungen mit Open Source-Systemen wie TYPO3, Magento oder Contao. Für die Branchen Immobilien, Tourismus und Online-Handel haben wir spezielle webbasierte Software-Lösungen entwickelt.</p>', '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 0, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:13:"bordered-left";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
+(600, 177, 'tl_article', 128, 1516707757, 'text', 'a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:9:"Impressum";}', '<p>Verantwortlicher Diensteanbieter im Sinne von § 5 Telemediengesetz (TMG),</p>\n<p>Inhaber der Domain mate.contao-themes.net</p>\n<p><strong>Musterfirma GmbH</strong><br>Musterstraße 12<br>00000 Musterhausen</p>\n<p>Telefon: +49 (0) 1234 56789<br>E-Mail: info@example.com</p>\n<p>Geschäftsführer: Max Mustermann</p>\n<p>Verantwortlicher für Ausdruck und Inhalt: Max Mustermann</p>\n<p>///////////////////////////////</p>', '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 0, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:13:"bordered-left";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
 (592, 173, 'tl_article', 384, 1516618170, 'module', '', NULL, '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 301, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
 (610, 179, 'tl_article', 128, 1511949615, 'module', '', NULL, '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 307, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
 (611, 175, 'tl_article', 128, 1511950609, 'headline', 'a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:3:"FAQ";}', NULL, '', NULL, '', '', '', '', '', '', '', 'above', NULL, '', NULL, NULL, '', '', '', '', '', 0, 'ascending', '', '', '', '', NULL, '', '', '', '', '', '', '', NULL, NULL, '', 4, 0, 0, '', '', '', '', NULL, '', NULL, '', '', 0, 300, 0, '', 0, 0, 0, 0, 0, '', NULL, '', 'a:2:{i:0;s:0:"";i:1;s:13:"bordered-left";}', '', '', '', 'ascending', 0, '', '', '', '', 'com_default', '', '', '', '', '', '', '', NULL, 0, '', 0, NULL),
@@ -788,8 +788,8 @@ CREATE TABLE IF NOT EXISTS `tl_form` (
 --
 
 INSERT INTO `tl_form` (`id`, `tstamp`, `title`, `alias`, `jumpTo`, `sendViaEmail`, `recipient`, `subject`, `format`, `skipEmpty`, `storeValues`, `targetTable`, `method`, `novalidate`, `attributes`, `formID`, `allowTags`, `customTpl`) VALUES
-(6, 1517843081, 'Mate / Beispielformular', 'mate-beispielformular', 135, '1', 'develop@pdir.de', 'Formular-Anfrage mate.contao-themes.net', 'raw', '', '', '', 'POST', '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '', '', 'form_wrapper'),
-(8, 1517843120, 'Mate / Kontaktformular', 'mate-kontaktformular', 135, '1', 'develop@pdir.de', 'Anfrage Kontaktformular bei Mate Theme', 'raw', '', '', '', 'POST', '', 'a:2:{i:0;s:0:"";i:1;s:4:"test";}', '', '', 'form_wrapper');
+(6, 1517843081, 'Mate / Beispielformular', 'mate-beispielformular', 135, '1', 'info@example.de', 'Formular-Anfrage mate.contao-themes.net', 'raw', '', '', '', 'POST', '', 'a:2:{i:0;s:0:"";i:1;s:0:"";}', '', '', 'form_wrapper'),
+(8, 1517843120, 'Mate / Kontaktformular', 'mate-kontaktformular', 135, '1', 'info@example.de', 'Anfrage Kontaktformular bei Mate Theme', 'raw', '', '', '', 'POST', '', 'a:2:{i:0;s:0:"";i:1;s:4:"test";}', '', '', 'form_wrapper');
 
 -- --------------------------------------------------------
 
@@ -892,8 +892,7 @@ INSERT INTO `tl_image_size` (`id`, `pid`, `tstamp`, `name`, `sizes`, `densities`
 (10, 15, 1488460424, 'Teaser-Box', '', '', 450, 270, 'crop', 100, ''),
 (11, 15, 1510926191, 'News-Box', '', '', 520, 350, 'crop', 0, ''),
 (12, 15, 1512058997, 'Headerbild &#40;normal&#41;', '', '1x, 1.5x, 2x', 1920, 400, 'crop', 100, ''),
-(13, 15, 1511526880, 'Headerbild &#40;kleiner&#41;', '', '', 1920, 250, 'crop', 100, ''),
-(15, 15, 1512126545, 'makler modul / Listenansicht', '', '', 300, 200, 'crop', NULL, '');
+(13, 15, 1511526880, 'Headerbild &#40;kleiner&#41;', '', '', 1920, 250, 'crop', 100, '');
 
 -- --------------------------------------------------------
 
@@ -1374,7 +1373,7 @@ CREATE TABLE IF NOT EXISTS `tl_newsletter_channel` (
 --
 
 INSERT INTO `tl_newsletter_channel` (`id`, `tstamp`, `title`, `jumpTo`, `sender`, `template`, `senderName`) VALUES
-(4, 1517394772, 'Mate / Newsletter', 136, 'develop@pdir.de', 'mail_default', 'Contao Themes');
+(4, 1517394772, 'Mate / Newsletter', 136, 'info@example.de', 'mail_default', 'Contao Themes');
 
 -- --------------------------------------------------------
 
@@ -1402,7 +1401,7 @@ CREATE TABLE IF NOT EXISTS `tl_newsletter_recipients_backup` (
 --
 
 INSERT INTO `tl_newsletter_recipients_backup` (`id`, `pid`, `tstamp`, `email`, `active`, `addedOn`, `confirmed`, `ip`, `token`) VALUES
-(25, 4, 1517394866, 'seibt@pdir.de', '', '1517394866', '', '93.218.144.0', 'f5c1eae56375366688ae54768234503a');
+(25, 4, 1517394866, 'info@example.de', '', '1517394866', '', '93.218.144.0', 'f5c1eae56375366688ae54768234503a');
 
 -- --------------------------------------------------------
 
