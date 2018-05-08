@@ -54,8 +54,8 @@ class TeaserBox extends \ContentElement
     protected function compile()
     {
         $this->Template->page = $this->mateTeaserBox_page;
-        $this->Template->href = \FilesModel::findByUuid($this->singleSRC)->path;
-        $this->Template->picture = $this->singleSRC;
+        $this->Template->picture = \FilesModel::findByUuid($this->singleSRC)->path;
+        $this->Template->metaImg = unserialize(\FilesModel::findByUuid($this->singleSRC)->meta);
         $this->Template->pageText = $this->mateTeaserBox_pageText;
     }
 }
