@@ -20,8 +20,6 @@
 
     <?= $this->stylesheets ?>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <?= $this->head ?>
 
     <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
