@@ -989,8 +989,10 @@ nav .brand-logo {
     position: absolute;
 }
 
-#main nav.block {
-  overflow: hidden;
+#main, #left, #right {
+    nav.block {
+        overflow: hidden;
+    }
 }
 
 /* ========================== *
@@ -2556,119 +2558,25 @@ textarea {
 /* ========================== *
  *    Social Feed             *
  * ========================== */
-.ce_socialfeed {
-  clear: left;
+.mod_newslist .social_feed_container {
+    width: 100%;
+    margin-left: 0;
+    font-family: $font1;
 
-  .social-feed-container {
-    padding: 24px 0;
-  }
-
-  .social-feed-element {
-    position: relative;
-    margin: 0 0 30px;
-    overflow: visible;
-    box-shadow: none;
-    font-family: inherit;
-    color: inherit;
-    float: left;
-
-    .content {
-      padding: 40px 15px 15px;
+    .title {
+        font-family: $font2;
+        font-weight: 400;
+        color: $mateColor2;
     }
 
-    .author-img {
-      position: absolute;
-      top: -15px;
-      z-index: 2;
-
-      img {
-        width: 50px;
-      }
-    }
-
-    &:hover {
-      box-shadow: none;
-    }
-
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      content: "";
-      border-top: 5px solid $mateColor2;
-      z-index: 1;
-    }
-
-    p.social-feed-text {
-      padding: 15px 0;
-      white-space: pre-line;
-
-      a {
-        color: $primary-link-font-color;
-
-        &:hover {
-          color: $primary-link-hover-font-color;
-        }
-      }
-    }
-
-    .muted {
-      position: absolute;
-      top: 15px;
-      right: 30px;
-    }
-
-    .author-title {
-      color: #86af49;
-      font-family: Old Standard;
-      display: block;
-      padding: 2px 0;
-      font-size: 16px;
+    .inner {
+        background: #fff;
+        border-top: 5px solid $mateColor2;
     }
 
     .fa {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      color: $mateColor2;
+        color: $mateColor2;
     }
-
-    img {
-      width: auto;
-    }
-  }
-
-  &.col-2 .social-feed-element {
-    width: calc(100% / 2);
-  }
-
-  &.col-3 .social-feed-element {
-    width: calc(100% / 3);
-  }
-
-  &.col-2, &.col-3 {
-    .social-feed-container {
-      @extend .row;
-
-      .social-feed-element {
-        box-sizing: border-box;
-        margin: 0;
-        background: none;
-
-        &:before {
-          left: 0.75rem;
-          width: calc(100% - (0.75rem * 2));
-        }
-
-        .content {
-          background: #fff;
-          margin: 0 0.75rem 35px;
-          position: relative;
-        }
-      }
-    }
-  }
 }
 
 /* ========================== *
