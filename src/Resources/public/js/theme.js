@@ -109,21 +109,25 @@ $(document).ready(function(){
 	*   Navigation			 *
 	* ====================== */
 	var scrollTarget = $("#header .mod_mateNavbar").offset().top;
-	$(window).scroll(function () {
-		var scrollPos = $(window).scrollTop();
-		if(scrollPos > scrollTarget) {
-			$('#header .mod_mateNavbar, #header .search-box').addClass('stuck');
-		} else {
-			$('#header .mod_mateNavbar, #header .search-box').removeClass('stuck');
-		}
-	});
-	
-	var myElement = document.querySelector("#header .mod_mateNavbar");
-	var headroom  = new Headroom(myElement, {
-	  "offset": 600,
-	});
-	headroom.init(); 
-	
+    if($("#header .mod_mateNavbar").hasClass("stuckNavbar")) {
+        $(window).scroll(function () {
+            var scrollPos = $(window).scrollTop();
+            if(scrollPos > scrollTarget) {
+                $('#header .mod_mateNavbar, #header .search-box').addClass('stuck');
+            } else {
+                $('#header .mod_mateNavbar, #header .search-box').removeClass('stuck');
+            }
+        });
+    }
+
+    if($("#header .mod_mateNavbar").hasClass("includeHeadroom")) {
+        var myElement = document.querySelector("#header .mod_mateNavbar");
+        var headroom  = new Headroom(myElement, {
+            "offset": 600
+        });
+        headroom.init();
+    }
+
 	$(".button-collapse").sideNav({});
     
     $(".desktop-menu a.dropdown-button").dropdown({

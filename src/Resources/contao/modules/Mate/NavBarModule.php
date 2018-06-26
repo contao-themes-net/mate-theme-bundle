@@ -138,10 +138,20 @@ class NavBarModule extends \Module
             $this->Template->dropdownNav = $strDropdownNav;
         }
 
+        if($this->mateIncludeHeadroom == 1) {
+            $this->Template->includeHeadroom = " includeHeadroom";
+        } else {
+            $this->Template->includeHeadroom = "";
+        }
+        if($this->mateNavbarStuck == 1) {
+            $this->Template->stuckNavbar = " stuckNavbar";
+        } else {
+            $this->Template->stuckNavbar = "";
+        }
+
         $this->Template->pid = $trail[$level];
         $this->Template->type = get_class($this);
         $this->Template->cssID = $this->cssID;
-
     }
 
 
