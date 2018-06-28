@@ -164,4 +164,21 @@ $(document).ready(function(){
 	
 		$("html, body").animate({ scrollTop: 0 }, 1000);
 	});
+
+    /* =================== *
+     * Smooth Scroll	   *
+     * =================== */
+    $('a[href*=\\#]').on('click', function(event){
+        var href = $(this).attr('href');
+        href = href.substr(0,href.indexOf('#'));
+        href = href.replace('./','');
+
+        var path = window.location.pathname;
+        path = path.replace('/','');
+
+        if ( $(this).attr('target') != '_blank' && path == href) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top - 80}, 1500);
+        }
+    });
 });
