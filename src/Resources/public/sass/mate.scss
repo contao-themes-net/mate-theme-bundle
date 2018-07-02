@@ -2832,6 +2832,18 @@ textarea {
 	    			width: 100%;
 	    			padding: 0 20px;
 	    		}
+
+                ul {
+                    padding-left: 15px;
+
+                    a {
+                        height: 40px;
+                    }
+
+                    ul {
+                        padding-left: 30px;
+                    }
+                }
 			}
 		}
 	}
@@ -2897,6 +2909,10 @@ textarea {
 			i, [class^="mdi-"], [class*="mdi-"], i.material-icons {
 				font-size: 50px;
 			}
+
+            .subitems i.material-icons {
+                font-size: 40px;
+            }
 		}
 	}
 
