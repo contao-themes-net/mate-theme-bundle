@@ -11,7 +11,6 @@ if($this->sliderDelay == 0) {
 // Set Start Slide
 $sliderStartSlide = '';
 for($i = 0; $i < $this->sliderStartSlide; $i++) {
-    echo "test";
     $sliderStartSlide = $sliderStartSlide.'$("#contentSlider'.$this->id.'").slider("next");';
 }
 ?>
