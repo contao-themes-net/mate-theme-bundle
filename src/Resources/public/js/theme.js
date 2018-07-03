@@ -45,13 +45,13 @@ $(document).ready(function(){
 	/* ===================== *
 	 *   Mate Slider		 *
 	 * ===================== */
-	$(".slider:not(.smaller)").slider({
+	$(".slider.mod_newslist:not(.smaller)").slider({
 		height: 460,
 	    indicators: true,
 	    interval: 12000
 	}); 
 	
-	$(".slider.smaller").slider({
+	$(".slider.mod_newslist.smaller").slider({
 		height: 250,
 	    indicators: true,
 	    interval: 12000
