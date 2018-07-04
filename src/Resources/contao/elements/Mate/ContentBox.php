@@ -53,6 +53,10 @@ class ContentBox extends \ContentElement
      */
     protected function compile()
     {
+        if($this->mateContentBox_customTpl != "") {
+            $this->Template->setName($this->mateContentBox_customTpl);
+        }
+
         $this->Template->page = $this->mateContentBox_page;
         $this->Template->href = \FilesModel::findByUuid($this->singleSRC)->path;
         $this->Template->pageText = $this->mateContentBox_pageText;
