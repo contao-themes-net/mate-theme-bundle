@@ -19,7 +19,9 @@
 
 			</figure>
 	    <?php endif; ?>
-		
+
+        <?php if($this->subheadline): ?><div class="subheadline"><?= $this->subheadline ?></div><?php endif; ?>
+
 		<?php if ($this->headline): ?>
 		  <<?= $this->hl ?>>
             <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}"><?php endif; ?>

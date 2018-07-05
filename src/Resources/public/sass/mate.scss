@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.2rem;
   margin-top: 0;
-  font-family: Old Standard;
+  font-family: $font2;
   font-weight: 400;
   color: $mateColor2;
   padding: 10px 0;
@@ -1397,7 +1397,7 @@ nav .brand-logo {
 
 	h2, h3, h4, h5, h6 {
 	    margin: 0 0 40px;
-        font-family: Old Standard;
+        font-family: $font2;
 	}
 
 	.pageLink {
@@ -1474,6 +1474,14 @@ nav .brand-logo {
 	.image_container {
 	    margin: 0;
 	}
+
+    .subheadline {
+        color: $mateColor2;
+        margin: 10px 25px 0;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
 }
 
 @media (min-width:601px) and (max-width:1024px) {
@@ -1678,8 +1686,8 @@ nav .brand-logo {
 		}
 
 		a:hover {
-			background: #B6CF92;
-			border: 1px solid #B6CF92;
+			background: $mateColor1;
+			border: 1px solid $mateColor1;
 		}
     }
 
@@ -1749,7 +1757,7 @@ nav.pagination li {
         }
 
         time {
-            background: #86af49;
+            background: $mateColor2;
             color: #fff;
             padding: 5px 10px 3px;
             position: absolute;
@@ -2036,7 +2044,7 @@ footer.page-footer {
 			padding: 0;
 			display: inline-block;
 			font-size: 12px;
-            font-family: Old Standard;
+            font-family: $font2;
 		}
 	}
 }

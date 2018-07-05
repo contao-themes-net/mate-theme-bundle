@@ -61,5 +61,6 @@ class TeaserBox extends \ContentElement
         $this->Template->picture = \FilesModel::findByUuid($this->singleSRC)->path;
         $this->Template->metaImg = unserialize(\FilesModel::findByUuid($this->singleSRC)->meta);
         $this->Template->pageText = $this->mateTeaserBox_pageText;
+        $this->Template->subheadline = $this->mateTeaserbox_subHeadline;
     }
 }

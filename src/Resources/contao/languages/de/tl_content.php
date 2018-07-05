@@ -7,3 +7,4 @@ $GLOBALS['TL_LANG']['tl_content']['mateTeaserBoxSettings'] = 'Teaserbox-Einstell
 $GLOBALS['TL_LANG']['tl_content']['mateContentBoxSettings'] = 'Contentbox-Einstellungen';
 $GLOBALS['TL_LANG']['tl_content']['mateContentBox_customTpl'] = ['Individuelles Template','Hier können Sie ein individuelles Template auswählen.'];
 $GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_customTpl'] = ['Individuelles Template','Hier können Sie ein individuelles Template auswählen.'];
+$GLOBALS['TL_LANG']['tl_content']['mateTeaserbox_subHeadline'] = ['Unterüberschrift','Hier können Sie eine Unterüberschrift eingeben.'];
