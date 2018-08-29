@@ -20,7 +20,7 @@
     }
   ],
   "support" : {
-    "docs": "https://docs.pdir.de",
+    "docs": "https://docs.contao-themes.net/",
     "forum": "https://community.contao.org",
     "email" : "develop@pdir.de",
     "issues" : "https://github.com/contao-themes-net/mate-theme-bundle/issues",
@@ -31,9 +31,7 @@
     "contao/core-bundle": "^4.4",
     "pdir/contao-theme-helper-bundle": "^1.0",
     "contao-dd/advanced-classes-bundle": "^0.5",
-    "contao-bootstrap/grid": "^2.0.0",
-    "contao/newsletter-bundle": "4.4.0",
-    "derhaeuptling/contao-seo-serp-preview": "^3.0.2"
+    "contao-bootstrap/grid": "^2.0.0"
   },
   "conflict": {
     "contao/core": "*"

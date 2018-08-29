@@ -22,6 +22,7 @@ $mateColor5: #5f5c4d !default;
 $mateColor6: #abbdb1 !default;
 $mateColorWhite: #fff !default;
 $mateColorBlack: #000 !default;
+$pageBackground: #f4f8f0 !default;
 
 /*
  * colors
@@ -42,6 +43,12 @@ $primary-color-dark: darken($primary-color, 15%) !default;
 /*
  * mate theme specific variables
  */
+
+/*
+ * header image headline
+ */
+$headerHeadlineBackground: rgba(134, 175, 73, 0.84) !default;
+$headerHeadlineColor: #fff !default;
 
 /* Links */
 $primary-link-font-color: $mateColor2 !default;

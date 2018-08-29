@@ -2,17 +2,54 @@
 
 @font-face { 
   font-family: "Lato Light";
-  src: url("/files/mate/fonts/Lato/Lato-Light.ttf");
+  src: url("../fonts/Lato/Lato-Light.ttf");
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: url("/files/mate/fonts/Lato/Lato-Regular.ttf");
+  src: url("../fonts/Lato/Lato-Regular.ttf");
 }
 
 @font-face { 
   font-family: "Old Standard";
-  src: url("/files/mate/fonts/Old_Standard_TT/OldStandard-Regular.ttf");
+  src: url("../fonts/Old_Standard_TT/OldStandard-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Material_Icons/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(../fonts/Material_Icons/MaterialIcons-Regular.woff2) format('woff2'),
+    url(../fonts/Material_Icons/MaterialIcons-Regular.woff) format('woff'),
+    url(../fonts/Material_Icons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
 
 ::-moz-selection { background: $mateColor2; color: #fff; }
@@ -40,7 +77,7 @@ body {
 }
 
 #wrapper {
-  background: #f4f8f0;
+  background: $pageBackground;
   padding-top: 150px;
 }
 
@@ -361,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.2rem;
   margin-top: 0;
-  font-family: Old Standard;
+  font-family: $font2;
   font-weight: 400;
   color: $mateColor2;
   padding: 10px 0;
@@ -917,11 +954,15 @@ nav {
 	}
 
 	.search {
-	    top: 0;
+	    top: 3px;
 
 	    a {
 	    	color: #fff;
 	    }
+
+        em {
+            color: #fff;
+        }
 	}
 }
 
@@ -946,6 +987,12 @@ nav .brand-logo {
 
 #header nav .brand-logo {
     position: absolute;
+}
+
+#main, #left, #right {
+    nav.block {
+        overflow: hidden;
+    }
 }
 
 /* ========================== *
@@ -1265,9 +1312,9 @@ nav .brand-logo {
 	position: relative;
 
 	h1, h2, h3, h4, h5, h6 {
-		background: rgba(134, 175, 73, 0.84);
+		background: $headerHeadlineBackground;
 		text-transform: inherit;
-		color: #fff;
+		color: $headerHeadlineColor;
 		display: inline-block;
 		width: auto;
 		padding: 12px 30px 5px;
@@ -1295,6 +1342,10 @@ nav .brand-logo {
 	    display: flex;
 	    align-items: center;
 	}
+
+    img {
+        width: 100%;
+    }
 }
 
 /* ========================== *
@@ -1350,7 +1401,7 @@ nav .brand-logo {
 
 	h2, h3, h4, h5, h6 {
 	    margin: 0 0 40px;
-        font-family: Old Standard;
+        font-family: $font2;
 	}
 
 	.pageLink {
@@ -1381,10 +1432,19 @@ nav .brand-logo {
 	}
 }
 
+#container {
+  .ce_mateTeaserBox.col {
+    padding: 0 15px;
+  }
+}
+
 .ce_mateTeaserBox {
 	margin-bottom: 30px;
     margin-top: 30px;
-    overflow: visible;
+
+    &.block {
+      overflow: visible;
+    }
 
 	.pageLink {
 	    padding: 0 15px;
@@ -1418,6 +1478,14 @@ nav .brand-logo {
 	.image_container {
 	    margin: 0;
 	}
+
+    .subheadline {
+        color: $mateColor2;
+        margin: 10px 25px 0;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
 }
 
 @media (min-width:601px) and (max-width:1024px) {
@@ -1595,9 +1663,12 @@ nav .brand-logo {
 .pagination {
     clear: left;
     margin: 0;
+    background: none;
+    box-shadow: none;
+    width: inherit;
 
     li {
-	    a, span {
+	    a, span, strong {
 		    display: block;
 		    border: 1px solid $mateColor6;
 		    padding: 0 10px;
@@ -1613,14 +1684,14 @@ nav .brand-logo {
 			color: $mateColor4;
 		}
 
-		span {
+		span, strong {
 			background: $mateColor6;
             color: #fff;
 		}
 
 		a:hover {
-			background: #B6CF92;
-			border: 1px solid #B6CF92;
+			background: $mateColor1;
+			border: 1px solid $mateColor1;
 		}
     }
 
@@ -1630,6 +1701,13 @@ nav .brand-logo {
         color: $mateColor3;
         padding-top: 10px;
     }
+
+
+}
+
+// contao 4.5 fix
+nav.pagination li {
+  padding-right: 5px;
 }
 
 .mod_newslist, .mod_eventlist {
@@ -1683,7 +1761,7 @@ nav .brand-logo {
         }
 
         time {
-            background: #86af49;
+            background: $mateColor2;
             color: #fff;
             padding: 5px 10px 3px;
             position: absolute;
@@ -1935,6 +2013,10 @@ footer.page-footer {
         box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
         -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
+        i {
+            color: #fff;
+        }
+
 		&.active {
 			opacity: 1;
 		}
@@ -1966,7 +2048,7 @@ footer.page-footer {
 			padding: 0;
 			display: inline-block;
 			font-size: 12px;
-            font-family: Old Standard;
+            font-family: $font2;
 		}
 	}
 }
@@ -2488,115 +2570,25 @@ textarea {
 /* ========================== *
  *    Social Feed             *
  * ========================== */
-.social-feed-container {
-  padding: 24px 0;
-}
-
-.social-feed-element {
-  position: relative;
-  margin: 0 0 30px;
-  overflow: visible;
-  box-shadow: none;
-  font-family: inherit;
-  color: inherit;
-  float: left;
-
-  .content {
-    padding: 40px 15px 15px;
-  }
-
-  .author-img {
-    position: absolute;
-    top: -15px;
-    z-index: 2;
-
-    img {
-      width: 50px;
-    }
-  }
-
-  &:hover {
-    box-shadow: none;
-  }
-
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
+.mod_newslist .social_feed_container {
     width: 100%;
-    content: "";
-    border-top: 5px solid $mateColor2;
-    z-index: 1;
-  }
+    margin-left: 0;
+    font-family: $font1;
 
-  p.social-feed-text {
-    padding: 15px 0;
-    white-space: pre-line;
-
-    a {
-      color: $primary-link-font-color;
-
-      &:hover {
-        color: $primary-link-hover-font-color;
-      }
+    .title {
+        font-family: $font2;
+        font-weight: 400;
+        color: $mateColor2;
     }
-  }
 
-  .muted {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-  }
-
-  .author-title {
-    color: #86af49;
-    font-family: Old Standard;
-    display: block;
-    padding: 2px 0;
-    font-size: 16px;
-  }
-
-  .fa {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: $mateColor2;
-  }
-
-  img {
-    width: auto;
-  }
-}
-
-.col-2 .social-feed-element {
-  width: calc(100% / 2);
-}
-
-.col-3 .social-feed-element {
-  width: calc(100% / 3);
-}
-
-.col-2, .col-3 {
-  .social-feed-container {
-    @extend .row;
-
-    .social-feed-element {
-      box-sizing: border-box;
-      margin: 0;
-      background: none;
-
-      &:before {
-        left: 0.75rem;
-        width: calc(100% - (0.75rem * 2));
-      }
-
-      .content {
+    .inner {
         background: #fff;
-        margin: 0 0.75rem 35px;
-        position: relative;
-      }
+        border-top: 5px solid $mateColor2;
     }
-  }
+
+    .fa {
+        color: $mateColor2;
+    }
 }
 
 /* ========================== *
@@ -2852,6 +2844,18 @@ textarea {
 	    			width: 100%;
 	    			padding: 0 20px;
 	    		}
+
+                ul {
+                    padding-left: 15px;
+
+                    a {
+                        height: 40px;
+                    }
+
+                    ul {
+                        padding-left: 30px;
+                    }
+                }
 			}
 		}
 	}
@@ -2917,6 +2921,10 @@ textarea {
 			i, [class^="mdi-"], [class*="mdi-"], i.material-icons {
 				font-size: 50px;
 			}
+
+            .subitems i.material-icons {
+                font-size: 40px;
+            }
 		}
 	}
 
@@ -3384,17 +3392,20 @@ textarea {
     }
 
     /* Social Feed */
-    .col-2, .col-3 {
-        .social-feed-container {
-            display: block;
-            margin: 0;
+  .ce_socialfeed {
+    &.col-2, &.col-3 {
+      .social-feed-container {
+        display: block;
+        margin: 0;
 
-            .social-feed-element {
-                -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-            }
+        .social-feed-element {
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
         }
+      }
     }
+  }
+
 }
 
-@import 'custom';
+@import '../../../../../../../files/mate/sass/custom';

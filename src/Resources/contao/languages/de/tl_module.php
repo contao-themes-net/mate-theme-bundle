@@ -11,3 +11,5 @@ $GLOBALS['TL_LANG']['tl_module']['mateShowSearch'] = ['Suche anzeigen','Suchicon
 $GLOBALS['TL_LANG']['tl_module']['mateShowMobileMenu'] = ['Mobile Navigation anzeigen','Stelle mobile Navigation mit einem Menü-Icon dar'];
 $GLOBALS['TL_LANG']['tl_module']['mateNavbarType'] = ['Navbar-Typ'];
 $GLOBALS['TL_LANG']['tl_module']['mateNavbarSettings'] = 'Navbar-Einstellungen';
+$GLOBALS['TL_LANG']['tl_module']['mateIncludeHeadroom'] = ['Headroom.js aktivieren','Dynamisches Ausblenden der Navigation beim Hoch- und Herunterscrollen. Fixierte Navigation muss dafür aktiviert werden.'];
+$GLOBALS['TL_LANG']['tl_module']['mateNavbarStuck'] = ['Fixierte Navigation','Wenn aktiviert, bleibt die Navigationsleiste am oberen Fensterrand fixiert.'];

@@ -5,16 +5,13 @@
 		<?php if ($this->addImage): ?>
 			<figure class="image_container<?= $this->floatClass ?>"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
 
-			  <?php if ($this->href): ?>
-				<a href="<?= $this->href ?>"<?php if ($this->linkTitle): ?> title="<?= $this->linkTitle ?>"<?php endif; ?><?= $this->attributes ?>>
-			  <?php endif; ?>
+                <?php if ($this->page != ""): ?>
+                  <a href="{{link_url::<?= $this->page ?>}}" title="<?= $this->pageText ?>">
+                <?php endif; ?>
 
-                <?php $image = \Picture::create($this->href, 10)->getTemplateData();
-                echo $this->insert('picture_default', $image); ?>
+                {{picture::<?= $this->picture ?>?size=10&alt=<?= $this->metaImg[$GLOBALS['TL_LANGUAGE']]['alt'] ?>}}
 
-                    <?php if ($this->href): ?>
-				</a>
-			  <?php endif; ?>
+                <?php if ($this->page != ""): ?></a><?php endif; ?>
 
 			  <?php if ($this->caption): ?>
 				<figcaption class="caption"><?= $this->caption ?></figcaption>
@@ -22,7 +19,9 @@
 
 			</figure>
 	    <?php endif; ?>
-		
+
+        <?php if($this->subheadline): ?><div class="subheadline"><?= $this->subheadline ?></div><?php endif; ?>
+
 		<?php if ($this->headline): ?>
 		  <<?= $this->hl ?>>
             <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}"><?php endif; ?>

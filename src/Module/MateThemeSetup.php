@@ -4,6 +4,8 @@ namespace ContaoThemesNet\MateThemeBundle\Module;
 
 class MateThemeSetup extends \BackendModule
 {
+    const VERSION = '1.2.2';
+
     protected $strTemplate = 'be_mateTheme_setup';
 
     /**
@@ -20,7 +22,7 @@ class MateThemeSetup extends \BackendModule
                 $this->getFiles($path);
                 $this->Template->message = true;
             default:
-                // do something here
+                $this->Template->version = MateThemeSetup::VERSION;
         }
     }
 
@@ -29,18 +31,23 @@ class MateThemeSetup extends \BackendModule
             if(!is_dir($path."/".$dir)) {
                 $pos = strpos($path,"matetheme");
                 $filesFolder = "files/mate".str_replace("matetheme","",substr($path,$pos))."/".$dir;
-                if(!file_exists(TL_ROOT."/".$filesFolder)) {
-                    $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
-                    $objFile->copyTo($filesFolder);
+
+                if($dir != "_mate_variables.scss" && $dir != "backend.css" && $dir != "mate.scss" && $dir != "materialize.scss") {
+                    if(!file_exists(TL_ROOT."/".$filesFolder)) {
+                        $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
+                        $objFile->copyTo($filesFolder);
+                    }
                 }
             } else {
                 $folder = $path."/".$dir;
                 $pos = strpos($path,"matetheme");
                 $filesFolder = "files/mate".str_replace("matetheme","",substr($path,$pos))."/".$dir;
-                if(!file_exists($filesFolder)) {
-                    new \Folder($filesFolder);
+                if($dir != "fonts" && $dir != "js" && $dir != "components") {
+                    if(!file_exists($filesFolder)) {
+                        new \Folder($filesFolder);
+                    }
+                    $this->getFiles($folder);
                 }
-                $this->getFiles($folder);
             }
         }
     }

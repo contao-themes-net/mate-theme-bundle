@@ -45,13 +45,13 @@ $(document).ready(function(){
 	/* ===================== *
 	 *   Mate Slider		 *
 	 * ===================== */
-	$(".slider:not(.smaller)").slider({
+	$(".slider.mod_newslist:not(.smaller)").slider({
 		height: 460,
 	    indicators: true,
 	    interval: 12000
 	}); 
 	
-	$(".slider.smaller").slider({
+	$(".slider.mod_newslist.smaller").slider({
 		height: 250,
 	    indicators: true,
 	    interval: 12000
@@ -109,21 +109,25 @@ $(document).ready(function(){
 	*   Navigation			 *
 	* ====================== */
 	var scrollTarget = $("#header .mod_mateNavbar").offset().top;
-	$(window).scroll(function () {
-		var scrollPos = $(window).scrollTop();
-		if(scrollPos > scrollTarget) {
-			$('#header .mod_mateNavbar, #header .search-box').addClass('stuck');
-		} else {
-			$('#header .mod_mateNavbar, #header .search-box').removeClass('stuck');
-		}
-	});
-	
-	var myElement = document.querySelector("#header .mod_mateNavbar");
-	var headroom  = new Headroom(myElement, {
-	  "offset": 600,
-	});
-	headroom.init(); 
-	
+    if($("#header .mod_mateNavbar").hasClass("stuckNavbar")) {
+        $(window).scroll(function () {
+            var scrollPos = $(window).scrollTop();
+            if(scrollPos > scrollTarget) {
+                $('#header .mod_mateNavbar, #header .search-box').addClass('stuck');
+            } else {
+                $('#header .mod_mateNavbar, #header .search-box').removeClass('stuck');
+            }
+        });
+    }
+
+    if($("#header .mod_mateNavbar").hasClass("includeHeadroom")) {
+        var myElement = document.querySelector("#header .mod_mateNavbar");
+        var headroom  = new Headroom(myElement, {
+            "offset": 600
+        });
+        headroom.init();
+    }
+
 	$(".button-collapse").sideNav({});
     
     $(".desktop-menu a.dropdown-button").dropdown({
@@ -160,4 +164,21 @@ $(document).ready(function(){
 	
 		$("html, body").animate({ scrollTop: 0 }, 1000);
 	});
+
+    /* =================== *
+     * Smooth Scroll	   *
+     * =================== */
+    $('a[href*=\\#]').on('click', function(event){
+        var href = $(this).attr('href');
+        href = href.substr(0,href.indexOf('#'));
+        href = href.replace('./','');
+
+        var path = window.location.pathname;
+        path = path.replace('/','');
+
+        if ( $(this).attr('target') != '_blank' && path == href) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top - 80}, 1500);
+        }
+    });
 });

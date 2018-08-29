@@ -11,3 +11,5 @@ $GLOBALS['TL_LANG']['tl_module']['mateShowSearch'] = ['show search icon','show s
 $GLOBALS['TL_LANG']['tl_module']['mateShowMobileMenu'] = ['show mobile menu','show mobile menu with a menu icon'];
 $GLOBALS['TL_LANG']['tl_module']['mateNavbarType'] = ['navbar type'];
 $GLOBALS['TL_LANG']['tl_module']['mateNavbarSettings'] = 'navbar settings';
+$GLOBALS['TL_LANG']['tl_module']['mateIncludeHeadroom'] = ['include Headroom.js','Hide the navigation dynamically when scrolles up and down. Fixed navigation must be activated for this.'];
+$GLOBALS['TL_LANG']['tl_module']['mateNavbarStuck'] = ['fixed navigation','If activated, the navigation bar remains fixed at the top of the window.'];

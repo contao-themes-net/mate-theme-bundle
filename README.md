@@ -7,7 +7,11 @@ pdir contao theme licence -> see LICENSE file for more informations
 
 ## demo
 
-for demo please visit https://mate.contao-themes.net/
+for demo please visit https://mate.pdir.de
+
+## documentation
+
+for documentation please visit https://docs.contao-themes.net/
 
 ## compatible
 compatible with Contao >=4.4
@@ -51,4 +55,3 @@ Edit your app/config/parameters.yml file:
     parameters:
       mate_theme.assets.custom_scss: 'my/path/to/_custom.scss'
       mate_theme.assets.custom_variables : 'my/path/to/_custom_variables.scss'
-

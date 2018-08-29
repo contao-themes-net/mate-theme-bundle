@@ -1,6 +1,6 @@
 <div class="tl_listing_container">
     <div id="pdir" class="be_matetheme_setup clr">
-        <h1 id="tl_welcome">Mate Theme für Contao</h1>
+        <h1 id="tl_welcome">Mate Theme für Contao (Version <?= $this->version ?>)</h1>
         <div class="intro">
             <div class="right">
                 <div class="inner">
