@@ -10,7 +10,7 @@ pdir contao theme licence -> see LICENSE file for more informations
 for demo please visit https://mate.contao-themes.net/
 
 ## compatible
-compatible with Contao 4.4.x
+compatible with Contao >=4.4
 
 ## structure
 
