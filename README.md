@@ -40,7 +40,15 @@ compatible with Contao 4.4.x
 - [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [Github](https://github.com/WickyNilliams/headroom.js) | Code copyright 2013 by Nick Williams. Code released under the MIT license.
 
 
-## install
+## Install & Documentation
 
-see https://docs.pdir.de
+see https://docs.contao-themes.net/
+
+## Configuration
+
+Edit your app/config/parameters.yml file:
+
+    parameters:
+      mate_theme.assets.custom_scss: 'my/path/to/_custom.scss'
+      mate_theme.assets.custom_variables : 'my/path/to/_custom_variables.scss'
 
