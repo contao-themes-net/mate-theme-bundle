@@ -10,20 +10,27 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class MateThemeBundleExtension extends Extension
 {
-    public function load(array $configs, ContainerBuilder $container)
+    /**
+     * Usage in Controller
+     *
+     * $custom = $this->container->getParameter( 'mate_theme.assets.custom_scss' );
+     *
+     */
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function loadInternal(array $mergedConfig, ContainerBuilder $container)
     {
-        $configuration = new Configuration();
-        $processor = new Processor();
-        $config = $processor->processConfiguration($configuration, $configs);
-        foreach ($config as $key => $value) {
-            $container->setParameter('mate.'.$key, $value);
-        }
         $loader = new YamlFileLoader(
             $container,
             new FileLocator(__DIR__.'/../Resources/config')
         );
-        // $loader->load('listeners.yml');
-        // $loader->load('services.yml');
-        $loader->load('commands.yml');
+        foreach ($this->files as $file) {
+            $loader->load($file);
+        }
+
+        $container->setParameter( 'mate_theme.assets.custom_scss', $mergedConfig[ 'assets.custom_scss' ]);
+        $container->setParameter( 'mate_theme.assets.custom_variables_scss', $mergedConfig[ 'assets.custom_variables_scss' ]);
     }
 }
