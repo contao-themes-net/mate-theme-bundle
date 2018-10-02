@@ -4,7 +4,7 @@ namespace ContaoThemesNet\MateThemeBundle\Module;
 
 class MateThemeSetup extends \BackendModule
 {
-    const VERSION = '1.2.3';
+    const VERSION = '1.2.4';
 
     protected $strTemplate = 'be_mateTheme_setup';
 
@@ -21,6 +21,12 @@ class MateThemeSetup extends \BackendModule
                 }
                 $this->getFiles($path);
                 $this->Template->message = true;
+                break;
+            case 'truncateTlFiles':
+                $this->import('Database');
+                $this->Database->prepare("TRUNCATE tl_files")->execute();
+                $this->Template->messageTruncate = true;
+                break;
             default:
                 $this->Template->version = MateThemeSetup::VERSION;
         }
