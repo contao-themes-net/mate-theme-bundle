@@ -10,35 +10,35 @@
  * use _custom_variables.scss for update safe overwrites
  */
 
-$font1: 'Lato Light' !default;
-$font2: 'Old Standard' !default;
-$font3: 'Lato Regular' !default;
+$font1: 'Lato Light';
+$font2: 'Old Standard';
+$font3: 'Lato Regular';
 
-$mateColor1: #b6cf92 !default;
-$mateColor2: #86af49 !default;
-$mateColor3: #476a30 !default;
-$mateColor4: #58774e !default;
-$mateColor5: #5f5c4d !default;
-$mateColor6: #abbdb1 !default;
-$mateColorWhite: #fff !default;
-$mateColorBlack: #000 !default;
-$pageBackground: #f4f8f0 !default;
+$mateColor1: #b6cf92;
+$mateColor2: #86af49;
+$mateColor3: #476a30;
+$mateColor4: #58774e;
+$mateColor5: #5f5c4d;
+$mateColor6: #abbdb1;
+$mateColorWhite: #fff;
+$mateColorBlack: #000;
+$pageBackground: #f4f8f0;
 
 /*
  * colors
  */
 
-$primary-color: $mateColor2 !default;
-$primary-text-color: $mateColor4 !default;
-$secondary-color: $mateColor3 !default;
-$navbar-font-color: $secondary-color !default;
+$primary-color: $mateColor2;
+$primary-text-color: $mateColor4;
+$secondary-color: $mateColor3;
+$navbar-font-color: $secondary-color;
 
 /*
  * calculated colors
  */
 
-$primary-color-light: lighten($primary-color, 15%) !default;
-$primary-color-dark: darken($primary-color, 15%) !default;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
 
 /*
  * mate theme specific variables
@@ -47,35 +47,58 @@ $primary-color-dark: darken($primary-color, 15%) !default;
 /*
  * header image headline
  */
-$headerHeadlineBackground: rgba(134, 175, 73, 0.84) !default;
-$headerHeadlineColor: #fff !default;
+$headerHeadlineBackground: rgba(134, 175, 73, 0.84);
+$headerHeadlineColor: #fff;
 
 /* Links */
-$primary-link-font-color: $mateColor2 !default;
-$primary-link-hover-font-color: $mateColor3 !default;
+$primary-link-font-color: $mateColor2;
+$primary-link-hover-font-color: $mateColor3;
 
 /* Header Navigation */
-$navbar-bg-color: $mateColorWhite !default;
-$navbar-color: $mateColorBlack !default;
-$navbar-active-color: $mateColor2 !default;
-$navbar-dropdown-hover-bg-color: $mateColor1 !default;
-$navbar-dropdown-hover-color: $mateColorWhite !default;
-$navbar-dropdown-bg: $mateColorWhite !default;
-$navbar-dropdown-color: $mateColorBlack !default;
-$navbar-stuck-bg-color: rgba(134,175,73,0.9) !default;
-$navbar-stuck-color: $mateColorWhite !default;
-$navbar-stuck-active-color: $mateColor3 !default;
-$navbar-stuck-dropdown-hover-bg-color: rgba(255,255,255,0.5) !default;
-$navbar-stuck-dropdown-hover-color: $mateColorBlack !default;
-$navbar-stuck-dropdown-color: $mateColorWhite !default;
-$navbar-stuck-dropdown-bg: $navbar-stuck-bg-color !default;
+$navbar-bg-color: $mateColorWhite;
+$navbar-color: $mateColorBlack;
+$navbar-active-color: $mateColor2;
+$navbar-dropdown-hover-bg-color: $mateColor1;
+$navbar-dropdown-hover-color: $mateColorWhite;
+$navbar-dropdown-bg: $mateColorWhite;
+$navbar-dropdown-color: $mateColorBlack;
+$navbar-stuck-bg-color: rgba(134,175,73,0.9);
+$navbar-stuck-color: $mateColorWhite;
+$navbar-stuck-active-color: $mateColor3;
+$navbar-stuck-dropdown-hover-bg-color: rgba(255,255,255,0.5);
+$navbar-stuck-dropdown-hover-color: $mateColorBlack;
+$navbar-stuck-dropdown-color: $mateColorWhite;
+$navbar-stuck-dropdown-bg: $navbar-stuck-bg-color;
 
 /* Buttons */
-$button-flat-color: $mateColorWhite !default;
-$button-floating-background: $mateColor2 !default;
-$button-floating-background-hover: $mateColor3 !default;
+$button-flat-color: $mateColorWhite;
+$button-floating-background: $mateColor2;
+$button-floating-background-hover: $mateColor3;
 
 /* Footer */
-$footer-text-color: $mateColorWhite !default;
-$footer-headline-border-color: $footer-text-color !default;
-$footer-secondary-bg-color: $secondary-color !default;
+$footer-text-color: $mateColorWhite;
+$footer-headline-border-color: $footer-text-color;
+$footer-secondary-bg-color: $secondary-color;
+
+/* News Slider */
+$slider-background: $mateColor2;
+$slider-subheadline-color: #fff;
+$slider-headline-color: #fff;
+$slider-teaser-color: #fff;
+$slider-button-background: $mateColor1;
+$slider-button-color: $mateColor3;
+$slider-button-color-hover: #fff;
+$slider-button-background-hover: $mateColor3;
+$slider-arrows-background: $mateColor4;
+$slider-arrows-border-color: $mateColor2;
+$slider-arrows-color: $mateColor2;
+$slider-navigation-background: #fff;
+$slider-navigation-subheadline-color: $mateColor2;
+$slider-navigation-headline-color: $mateColorBlack;
+$slider-navigation-active-background: $mateColor1;
+$slider-navigation-active-subheadline-color: #fff;
+$slider-navigation-active-headline-color: $mateColor3;
+$slider-navigation-hover-background: $mateColor1;
+$slider-navigation-hover-subheadline-color: #fff;
+$slider-navigation-hover-headline-color: #fff;
+$slider-navigation-border-color: $mateColor1;

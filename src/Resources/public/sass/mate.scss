@@ -1,6 +1,6 @@
 @import 'materialize';
 
-@font-face { 
+@font-face {
   font-family: "Lato Light";
   src: url("../fonts/Lato/Lato-Light.ttf");
 }
@@ -10,7 +10,7 @@
   src: url("../fonts/Lato/Lato-Regular.ttf");
 }
 
-@font-face { 
+@font-face {
   font-family: "Old Standard";
   src: url("../fonts/Old_Standard_TT/OldStandard-Regular.ttf");
 }
@@ -60,7 +60,7 @@ html {font-size: 16px; }
 body {
   font-family: $font1;
   position: relative;
-  
+
   &#top {
   	padding-top: 0 !important;
   }
@@ -116,7 +116,7 @@ body {
     opacity: 0;
     transition: opacity .2s ease-in;
     background: #000;
-    
+
     &.active {
 	    opacity: .75;
 	    z-index: 10;
@@ -1063,11 +1063,11 @@ nav .brand-logo {
 		    font-weight: 400;
 
     		a {
-    			color: #fff;
+    			color: $slider-headline-color;
 
     			&:hover {
-					color: $primary-link-hover-font-color;
-				}
+            color: $primary-link-hover-font-color;
+          }
     		}
 		}
 
@@ -1078,29 +1078,29 @@ nav .brand-logo {
 
 		.more {
 			text-align: left;
-		    margin: 0;
+      margin: 0;
 
 			a {
-			    background: $mateColor1;
-			    color: $mateColor3;
-			    padding: 12px 20px;
-			    text-transform: uppercase;
-			    font-size: 12px;
-			    font-weight: 700;
-		        display: inline-block;
-                letter-spacing: 1px;
-                box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
-                -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+        background: $slider-button-background;
+        color: $slider-button-color;
+        padding: 12px 20px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-block;
+        letter-spacing: 1px;
+        box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+        -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
-		        &:hover {
-					color: #fff;
-					background: $mateColor3;
-				}
+        &:hover {
+          color: $slider-button-color-hover;
+          background: $slider-button-background-hover;
+        }
 			}
 		}
 
 		.slides li .caption p {
-			color: #fff;
+			color: $slider-teaser-color;
 		}
 
 		.slides li img {
@@ -1127,11 +1127,11 @@ nav .brand-logo {
 			left: inherit;
 			width: auto;
 			height: 100%;
-			background: $mateColor2;
+			background: $slider-background;
 		}
 
 		.list-nav {
-		    background: $mateColor4;
+		    background: $slider-arrows-background;
 		    position: absolute;
 		    bottom: 0;
 		    left: 0;
@@ -1142,11 +1142,11 @@ nav .brand-logo {
 			    display: inline-block;
 			    float: left;
 			    width: 100px;
-			    border-right: 1px solid $mateColor2;
+			    border-right: 1px solid $slider-arrows-border-color;
 			    height: 100%;
-				color: $mateColor1;
-				position: relative;
-				cursor: pointer;
+          color: $mateColor1;
+          position: relative;
+          cursor: pointer;
 
 				&:hover {
 					color: $mateColor2;
@@ -1160,19 +1160,21 @@ nav .brand-logo {
 				    left: 0;
 				    top: 50%;
 				    margin-top: -22.5px;
+            color: $slider-arrows-color;
 				}
 			}
 		}
 
 		.subheadline {
-		    text-align: left;
-		    font-size: 10px;
-		    text-transform: uppercase;
-		    margin-bottom: 10px;
-	        letter-spacing: 1px;
-            position: relative;
-            left: 0;
-            bottom: 0;
+      text-align: left;
+      font-size: 10px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      color: $slider-subheadline-color;
 		}
 
 		.indicators {
@@ -1189,81 +1191,90 @@ nav .brand-logo {
 			    height: 100%;
 			    font-size: 12px;
 			    padding: 30px 15px;
-			    background: #fff;
+			    background: $slider-navigation-background;
 
 			    &:hover {
-                    background: $mateColor2;
-                    color: #fff;
+            background: $slider-navigation-hover-background;
+            color: #fff;
 
-                    .subheadline {
-                        color: #fff;
-                    }
+            .subheadline {
+              color: $slider-navigation-hover-subheadline-color;
+            }
 
-                    &:before {
-                        position: absolute;
-                        content: "";
-                        left: -1px;
-                        top: 0;
-                        border-left: 1px solid $mateColor2;
-                        height: 100%;
-                        display: block;
-                    }
+            .headline {
+              color: $slider-navigation-hover-headline-color;
+            }
+
+            &:before {
+                position: absolute;
+                content: "";
+                left: -1px;
+                top: 0;
+                border-left: 1px solid $slider-navigation-hover-background;
+                height: 100%;
+                display: block;
+            }
 			    }
 
-                &.active {
-                    background: $mateColor1;
-                    overflow: visible;
+          &.active {
+              background: $slider-navigation-active-background;
+              overflow: visible;
 
-                    &:before {
-                        position: absolute;
-                        content: "";
-                        left: -1px;
-                        top: 0;
-                        border-left: 1px solid $mateColor1;
-                        height: 100%;
-                        display: block;
-                    }
+              &:before {
+                position: absolute;
+                content: "";
+                left: -1px;
+                top: 0;
+                border-left: 1px solid $slider-navigation-active-background;
+                height: 100%;
+                display: block;
+              }
 
-                    .subheadline {
-                        color: #fff;
-                    }
+              &:after {
+                display: none;
+              }
 
-                    .headline {
-                        color: $mateColor3;
-                    }
-                }
+              .subheadline {
+                  color: $slider-navigation-active-subheadline-color;
+              }
 
-                &:after {
-                    position: absolute;
-                    content: "";
-                    right: 0;
-                    top: 25px;
-                    border-right: 1px solid $mateColor1;
-                    height: 60px;
-                }
+              .headline {
+                  color: $slider-navigation-active-headline-color;
+              }
+          }
 
-                &:last-child:after {
-                    display: none;
-                }
+          &:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 25px;
+            border-right: 1px solid $slider-navigation-border-color;
+            height: 60px;
+          }
+
+          &:last-child:after {
+            display: none;
+          }
 
 			    .inner {
-		    	    display: block;
+            display: block;
 				    margin: 0;
 				    height: 100%;
 			    }
 
 			    .subheadline {
-					display: block;
-					margin: 0;
-					color: $mateColor2;
-					font-weight: 700;
-				    font-size: 12px;
+            display: block;
+            margin: 0;
+            color: $slider-navigation-subheadline-color;
+            font-weight: 700;
+            font-size: 12px;
 			    }
 
 			    .headline {
 			    	text-transform: uppercase;
 			    	font-size: 14px;
-                    letter-spacing: 1px;
+            letter-spacing: 1px;
+            color: $slider-navigation-headline-color;
 			    }
 			}
 		}
@@ -1325,27 +1336,44 @@ nav .brand-logo {
 
 	.description {
 		background: rgba( white, 0.84);
-	    color: $primary-text-color;
-	    font-size: 1.4em;
-	    clear: left;
-	    text-transform: initial;
+    color: $primary-text-color;
+    font-size: 1.4em;
+    clear: left;
+    text-transform: initial;
 	}
 
 	.caption {
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    z-index: 10;
-	    width: 100%;
-	    text-align: center;
-	    height: 100%;
-	    display: flex;
-	    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
 	}
 
-    img {
-        width: 100%;
+  img {
+    width: 100%;
+  }
+
+  &:not(.left):not(.right) .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &.left {
+    .caption {
+      text-align: left;
     }
+  }
+
+  &.right {
+    .caption {
+      text-align: right;
+    }
+  }
 }
 
 /* ========================== *

@@ -1,5 +1,5 @@
 <div class="headerImage <?= $this->class ?>" <?= $this->cssId ?>>
-	
+
 	<?php /* <img src="<?= $this->picture['img']['src'] ?>"> */ ?>
 
 	<?php if(strpos($this->class,"smaller") === false): ?>
@@ -7,8 +7,12 @@
 	<?php else: ?>
 		{{picture::<?= $this->picture['img']['src'] ?>?size=13&alt=<?= $this->picture['alt'] ?> }}
 	<?php endif; ?>
-	
-	<div class="caption">
-    	<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
-	</div>
+
+
+    <div class="caption">
+        <div class="container">
+            <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+        </div>
+    </div>
+
 </div>
