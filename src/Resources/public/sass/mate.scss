@@ -2661,34 +2661,38 @@ textarea {
 }
 
 .address, .telephone, .email {
+  &.ce_text {
     position: relative;
     padding-left: 40px;
 
     p {
-        margin: 0 0 10px;
-        font-size: 1.1rem;
+      margin: 0 0 10px;
+      font-size: 1.1rem;
     }
 
     &:before {
-        position: absolute;
-        font-family: 'Material Icons';
-        left: 0;
-        top: -5px;
-        font-size: 1.5rem;
-        color: $mateColor2;
+      position: absolute;
+      font-family: 'Material Icons';
+      left: 0;
+      top: -5px;
+      font-size: 1.5rem;
+      color: $mateColor2;
     }
+  }
 }
 
-.address:before {
+.ce_text {
+  &.address:before {
     content: "\e55f";
-}
+  }
 
-.telephone:before {
+  &.telephone:before {
     content: "\e551";
-}
+  }
 
-.email:before {
+  &.email:before {
     content: "\e0be";
+  }
 }
 
 .dlh_googlemap {
