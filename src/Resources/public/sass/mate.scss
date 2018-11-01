@@ -334,11 +334,27 @@ table {
   padding: 5px;
 
   &:nth-child(even) {
-    background: #fff;
+    background: $download-faqlist-background-even;
+
+    a {
+      color: $download-faqlist-color-even;
+
+      &:hover {
+        color: $download-faqlist-color-even-hover;
+      }
+    }
   }
 
   &:nth-child(odd) {
-    background: rgba(134, 175, 73, 0.15);;
+    background: $download-faqlist-background-odd;
+
+    a {
+      color: $download-faqlist-color-odd;
+
+      &:hover {
+        color: $download-faqlist-color-odd-hover;
+      }
+    }
   }
 
   &:last-child {
@@ -1009,13 +1025,13 @@ nav .brand-logo {
 	.slider:not(.mod_newslist) {
 		.slidebox1 {
 			.image_container {
-			    top: 0;
-			    right: 0;
-			    position: absolute;
+        top: 0;
+        right: 0;
+        position: absolute;
 				height: 100%;
 				width: 50%;
 				margin: 0;
-			    padding: 15px 15px 15px 0;
+        padding: 15px 15px 15px 0;
 			}
 
 			h1, h2, h3, h4, h5, h6, p {
@@ -1025,8 +1041,8 @@ nav .brand-logo {
 			}
 		}
 		.slides li.slidebox1 img {
-		    height: auto;
-		    max-height: 100%;
+      height: auto;
+      max-height: 100%;
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -1372,6 +1388,19 @@ nav .brand-logo {
   &.right {
     .caption {
       text-align: right;
+    }
+  }
+}
+
+.slider.ce_sliderStart .slides {
+  li.ce_image {
+    figure {
+      display: inline;
+    }
+
+    img {
+      background-size: auto 100%;
+      background-repeat: no-repeat;
     }
   }
 }

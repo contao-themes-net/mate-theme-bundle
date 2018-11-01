@@ -75,6 +75,15 @@ $button-flat-color: $mateColorWhite;
 $button-floating-background: $mateColor2;
 $button-floating-background-hover: $mateColor3;
 
+/* Download and FAQ Elements */
+$download-faqlist-background-odd: rgba(134, 175, 73, 0.15);
+$download-faqlist-color-odd: $mateColor2;
+$download-faqlist-color-odd-hover: $mateColor3;
+
+$download-faqlist-background-even: #fff;
+$download-faqlist-color-even: $mateColor2;
+$download-faqlist-color-even-hover: $mateColor3;
+
 /* Footer */
 $footer-text-color: $mateColorWhite;
 $footer-headline-border-color: $footer-text-color;
