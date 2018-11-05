@@ -168,7 +168,7 @@ $(document).ready(function(){
     /* =================== *
      * Smooth Scroll	   *
      * =================== */
-    $('a[href*=\\#]').on('click', function(event){
+    $('a[href*=\\#]:not(.modal-trigger)').on('click', function(event){
         var href = $(this).attr('href');
         href = href.substr(0,href.indexOf('#'));
         href = href.replace('./','');

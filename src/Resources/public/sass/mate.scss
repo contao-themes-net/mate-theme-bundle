@@ -55,7 +55,10 @@
 ::-moz-selection { background: $mateColor2; color: #fff; }
 ::selection { background: $mateColor2; color: #fff; }
 
-html {font-size: 16px; }
+html {
+  font-size: 16px;
+  color: $primary-text-color;
+}
 
 body {
   font-family: $font1;
@@ -135,7 +138,7 @@ a {
 
 .btn {
     a {
-        color: #fff;
+      color: $secondary-text-color;
     }
 }
 
@@ -272,14 +275,15 @@ code, pre {
   @extend .collapsible;
   margin: 0;
   box-shadow: none;
-  border-color: #fff;
+  border-color: $accordion-border-color;
 
   .ui-accordion-header {
     @extend .collapsible-header;
-    background: $mateColor2;
+    background: $accordion-headline-background;
     position: relative;
-    color: #fff;
+    color: $accordion-headline-color;
     overflow: hidden;
+    border-bottom: 0;
 
     i {
       margin-right: 0;
@@ -296,7 +300,8 @@ code, pre {
     @extend .collapsible-body;
     padding: 5px 1rem;
     border-bottom: 0;
-    background: #fff;
+    background: $accordion-content-background;
+    color: $accordion-content-color;
   }
 
   ul {
@@ -312,20 +317,20 @@ table {
   th, td {
     padding: 7px 15px;
     border-radius: 0;
-    border: 1px solid #e6e6e6;
+    border: 1px solid $table-border-color;
   }
 
   th, tfoot td {
     background: $mateColor2;
-    color: #fff;
+    color: $secondary-text-color;
   }
 
   tr.odd {
-    background: #fff;
+    background: $table-odd-background;
   }
 
   tr.even {
-    background: #f5f5f5;
+    background: $table-even-background;
   }
 }
 
@@ -357,10 +362,6 @@ table {
     }
   }
 
-  &:last-child {
-    border-bottom: 1px solid #e6e6e6;
-  }
-
   img {
     margin-right: 5px;
     vertical-align: middle;
@@ -369,8 +370,15 @@ table {
 
 .ce_download {
   padding: 5px;
-  border: 1px solid #e6e6e6;
-  background: #fff;
+  background: $download-faqlist-background-even;
+
+  a {
+    color: $download-faqlist-color-even;
+  }
+
+  p {
+    margin: 0;
+  }
 
   img {
     margin-right: 5px;
@@ -388,7 +396,8 @@ table {
 }
 
 code {
-  background: #fff;
+  background: $boxes-background;
+  color: $boxes-text-color;
   display: block;
   padding: 15px;
   font-size: 1rem;
@@ -556,32 +565,36 @@ header {
 }
 
 .sectionTop {
-    background: $primary-color;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    z-index: 11;
-    width: 100%;
+  background: $primary-color;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  width: 100%;
 
 	.inside {
 		height: 40px;
-        @extend .container;
+      @extend .container;
 
-        > div {
-            color: $mateColorWhite;
-            padding: 10px;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            float: right;
-        }
+      > div {
+        color: $header-top-color;
+        padding: 10px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        float: right;
+      }
+
+    a {
+      color: $header-top-color;
+    }
 	}
 
     i {
 	    width: 30px !important;
 	    direction: rtl;
-	    color: $mateColorWhite;
-        padding-right: 5px;
+	    color: $header-top-color;
+      padding-right: 5px;
 	}
 
 	.ce_text {
@@ -895,11 +908,11 @@ nav {
 }
 
 .subnav {
-    background: none;
-    box-shadow: none;
+  background: none;
+  box-shadow: none;
 
-    ul.desktop-menu {
-	    margin: 0;
+  ul.desktop-menu {
+    margin: 0;
 	}
 
 	li {
@@ -908,20 +921,20 @@ nav {
 		display: block;
 
 		a, span {
-		    background: $mateColor2;
-		    padding: 10px 15px;
-		    color: #fff;
-		    margin: 2px 0;
-	        display: block;
+      background: $mateColor2;
+      padding: 10px 15px;
+      color: $secondary-text-color;
+      margin: 2px 0;
+      display: block;
 
-		    &:hover, &.active {
-		    	background: $mateColor3;
-		    }
+      &:hover, &.active {
+        background: $mateColor3;
+      }
 		}
 
-        a.first {
-            margin-top: 0;
-        }
+    a.first {
+        margin-top: 0;
+    }
 	}
 }
 
@@ -977,7 +990,7 @@ nav {
 	    }
 
         em {
-            color: #fff;
+            color: $secondary-text-color;
         }
 	}
 }
@@ -1018,7 +1031,7 @@ nav .brand-logo {
 #wrapper {
 	.slider {
 		.slides {
-			background-color: #fff;
+			background-color: $boxes-background;
 		}
 	}
 
@@ -1065,8 +1078,8 @@ nav .brand-logo {
 
 		.layout_latest {
 		    padding: 60px 60px 0;
-            overflow: visible;
-            width: 70%;
+        overflow: visible;
+        width: 70%;
 		}
 
 		h2 {
@@ -1199,6 +1212,7 @@ nav .brand-logo {
 		    height: 115px;
 		    display: table;
 		    width: 100%;
+        table-layout: fixed;
 
 		    .indicator-item {
 			    border-radius: 0;
@@ -1352,7 +1366,7 @@ nav .brand-logo {
 
 	.description {
 		background: rgba( white, 0.84);
-    color: $primary-text-color;
+    color: $headerHeadlineColor;
     font-size: 1.4em;
     clear: left;
     text-transform: initial;
@@ -1409,21 +1423,22 @@ nav .brand-logo {
  *    Mate Simple Box        *
  * ========================== */
 #container .simplebox {
-    padding: 0;
+  padding: 0;
 
-    .inside {
-        margin: 10px;
-        padding: 15px;
-        background: #fff;
-        min-height: 170px;
-    }
+  .inside {
+    margin: 10px;
+    padding: 15px;
+    background: $boxes-background;
+    min-height: 170px;
+    color: $boxes-text-color;
+  }
 
-    h2, h3, h4, h5, h6 {
-        margin-top: 0;
-    }
+  h2, h3, h4, h5, h6 {
+      margin-top: 0;
+  }
 }
 #container .row .col.simplebox {
-    padding: 0;
+  padding: 0;
 }
 
 /* ========================== *
@@ -1434,7 +1449,8 @@ nav .brand-logo {
     height: 400px;
     display: table;
     border-top: 10px solid $primary-color;
-    background-color: rgba(255,255,255,0.95);
+    background-color: $contentbox-first-background;
+    color: $contentbox-first-color;
 
     &:last-child {
         margin-bottom: 20px;
@@ -1470,7 +1486,8 @@ nav .brand-logo {
 }
 .ce_mateContentBox:nth-child(2n) {
 	border-top: 10px solid $secondary-color;
-    background-color: rgba(255,255,255,0.65);
+  background-color: $contentbox-second-background;
+  color: $contentbox-second-color;
 }
 
 /* ========================== *
@@ -1516,11 +1533,12 @@ nav .brand-logo {
 	}
 
 	.inside {
-	    background-color: #fff;
-	    height: 480px;
-        border: none;
-        box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
-        -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+    background-color: $boxes-background;
+    height: 480px;
+    border: none;
+    box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+    -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+    color: $boxes-text-color;
 	}
 
 	h1, h2, h3, h4, h5, h6, p {
@@ -1566,7 +1584,7 @@ nav .brand-logo {
 .layout_latest, .layout_short,
 .layout_teaser, .layout_list {
 	.inner {
-	    background: #fff;
+	    background: $boxes-background;
         box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
         -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
@@ -1580,38 +1598,39 @@ nav .brand-logo {
 		    font-family: $font2;
 		    font-weight: 400;
 		    text-transform: inherit;
-			margin: 0;
-			padding: 15px 0;
+			  margin: 0;
+			  padding: 15px 0;
 
 		    a {
-			    color: $mateColor2;
+			    color: $primary-link-font-color;
 
 			    &:hover {
-					color: $primary-link-hover-font-color;
+					  color: $primary-link-hover-font-color;
 				}
 			}
 		}
 
 		h2:after {
-		    position: absolute;
-		    bottom: 0;
-		    left: 0;
-		    border-bottom: 3px solid $mateColor2;
-		    width: 40px;
-		    content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-bottom: 3px solid $mateColor2;
+      width: 40px;
+      content: "";
 		}
 
 		.text {
-		    overflow: visible;
-		    position: relative;
-		    padding: 20px 30px 20px 30px;
-	        height: 280px;
+      overflow: visible;
+      position: relative;
+      padding: 20px 30px 20px 30px;
+      height: 280px;
+      color: $boxes-text-color;
 		}
 
 		.info {
-		    margin: 0;
-		    font-size: 13px;
-		    color: $mateColor6;
+      margin: 0;
+      font-size: 13px;
+      color: $mateColor6;
 		}
 	}
 }
@@ -1623,7 +1642,7 @@ nav .brand-logo {
 	    font-size: 12px;
 	    position: absolute;
 	    bottom: 25px;
-	    color: #fff;
+	    color: $secondary-text-color;
 	    left: 30px;
         font-weight: 700;
 	}
@@ -1819,7 +1838,7 @@ nav.pagination li {
 
         time {
             background: $mateColor2;
-            color: #fff;
+            color: $secondary-text-color;
             padding: 5px 10px 3px;
             position: absolute;
             top: -20px;
@@ -1871,55 +1890,54 @@ nav.pagination li {
 	}
 
 	.label, .days {
-	    text-align: center;
-        width: calc(100% / 7);
+    text-align: center;
+    width: calc(100% / 7);
 	}
 
 	.days {
-	    background: #fff;
-	    color: $mateColor2;
+    background: $calendar-background;
+    color: $calendar-text-color;
 		font-weight: 400;
 		font-size: 16px;
-    	padding: 5px;
-        border: 1px solid #fff;
+    padding: 5px;
+    border: 1px solid $calendar-border-color;
 
-	    a {
-		    color: $mateColor2;
-		    margin-top: 5px;
-		    display: block;
+    a {
+      color: $mateColor2;
+      margin-top: 5px;
+      display: block;
 		}
 
 		&.active {
-		    background: $mateColor1;
-		    color: #fff;
+      background: $mateColor1;
+      color: $secondary-text-color;
 
-		    a {
-		    	color: #fff;
-		    }
+      a {
+        color: $secondary-text-color;
+      }
 
-            &:hover {
-              background: $mateColor2;
-            }
+      &:hover {
+        background: $mateColor2;
+      }
 		}
-
 	}
 
 	.days.today {
-	    color: $mateColor3;
+	    color: $calendar-text-color;
 	}
 
 	.label {
 		color: #cbcbcb;
-        background: #fff;
+    background: $calendar-background;
 	}
 
 	th.head {
 	    background: $mateColor2;
-	    color: #fff;
+	    color: $secondary-text-color;
 	}
 
 	.previous a, .next a {
-	    color: #fff;
+	    color: $secondary-text-color;
 	}
 
     thead {
@@ -2009,7 +2027,7 @@ footer.page-footer {
 	    margin-bottom: 30px;
 	    position: relative;
 	    padding-bottom: 20px;
-        color: #fff;
+      color: $footer-text-color;
 
         &:after {
 		    position: absolute;
@@ -2028,12 +2046,12 @@ footer.page-footer {
 	.footer-copyright {
 	    text-align: center;
 	    background: $footer-secondary-bg-color;
+      color: $footer-text-color;
 
 	    p {
 		    display: inline-block;
 		    padding: 0 10px;
 		    position: relative;
-		    font-weight: 700;
 
 		    &:after {
 			    position: absolute;
@@ -2048,10 +2066,10 @@ footer.page-footer {
 		}
 
 		a {
-			color: $mateColorWhite;
+			color: $footer-secondary-link-color;
 
 			&:hover {
-				color: $mateColor2;
+				color: $footer-secondary-link-color-hover;
 			}
 		}
 	}
@@ -2064,11 +2082,11 @@ footer.page-footer {
 	    color: #fff;
 	    padding: 9px 10px;
 	    line-height: 1em;
-		opacity: 0;
-		transition: opacity .25s ease-in-out;
-		z-index: 1000;
-        box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
-        -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+		  opacity: 0;
+		  transition: opacity .25s ease-in-out;
+		  z-index: 1000;
+      box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+      -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
         i {
             color: #fff;
@@ -2092,7 +2110,7 @@ footer.page-footer {
 			color: #fff;
 			display: block;
 			margin-bottom: 10px;
-            line-height: 1em;
+      line-height: 1em;
 
 			&:hover {
 				color: $primary-link-hover-font-color;
@@ -2101,13 +2119,21 @@ footer.page-footer {
 
 		time {
 			background: none;
-			color: $mateColor3;
+			color: $footer-news-events-time-color;
 			padding: 0;
 			display: inline-block;
 			font-size: 12px;
-            font-family: $font2;
+      font-family: $font2;
 		}
 	}
+
+  > .container a {
+    color: $footer-primary-link-color;
+
+    &:hover {
+      color: $footer-primary-link-color-hover;
+    }
+  }
 }
 
 footer .container {
@@ -2272,7 +2298,6 @@ footer .container {
 .checkbox_container, .radio_container {
     margin: 0;
     padding: 0 15px 15px;
-    background: #fff;
     border: 2px solid $mateColor1;
 
     legend {
@@ -2292,7 +2317,7 @@ footer .container {
 }
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea, textarea {
-    background: #fff;
+    background: $boxes-background;
     border: 2px solid $mateColor1;
     margin: 0;
     height: 40px;
@@ -2302,7 +2327,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     display: block;
     border-radius: 0;
     box-shadow: none;
-    color: rgba(0, 0, 0, 0.87);
+    color: $primary-text-color;
 }
 
 #wrapper {
@@ -2379,11 +2404,11 @@ body .picker__frame {
 
 .select-wrapper {
 	input.select-dropdown {
-	    background: #fff;
-	    border: 1px solid #e6e6e6;
-	    padding: 5px 15px;
-	    margin: 10px 0 0;
-	    height: 40px;
+    background: $boxes-background;
+    border: 1px solid #e6e6e6;
+    padding: 5px 15px;
+    margin: 10px 0 0;
+    height: 40px;
 	}
 
 	span.caret {
@@ -2477,7 +2502,7 @@ textarea {
 }
 
 .mod_login, .mod_lostPassword, .mod_registration, .mod_personalData, .mod_changePassword, .mod_subscribe, .mod_unsubscribe {
-    background: #fff;
+    background: $boxes-background;
     margin: 0 0 30px;
     padding: 30px;
 
@@ -2536,7 +2561,7 @@ textarea {
   }
 
   section {
-    background: #fff;
+    background: $boxes-background;
   }
 
   .ce_text {
@@ -2554,7 +2579,7 @@ textarea {
 
 .mod_search {
   .formbody {
-    background: #fff;
+    background: $boxes-background;
     margin: 0 0 30px;
     padding: 20px;
     border: 1px solid #e6e6e6;
@@ -2568,17 +2593,17 @@ textarea {
 
   h3 {
     background: $mateColor2;
-    color: #fff;
+    color: $secondary-text-color;
     padding: 5px 15px;
 
     a {
-      color: #fff;
+      color: $secondary-text-color;
       font-size: 16px;
       text-transform: uppercase;
       vertical-align: top;
 
       &:hover {
-        color: #000;
+        color: $primary-text-color;
       }
     }
 
@@ -2589,7 +2614,7 @@ textarea {
   }
 
   > div {
-    background: #fff;
+    background: $boxes-background;
   }
 
   .context, .url {
@@ -2602,10 +2627,11 @@ textarea {
     color: $mateColor2;
     word-wrap: break-word;
   }
+}
 
-  .highlight {
-    font-weight: 700;
-  }
+mark {
+  background: $mateColor2;
+  color: $secondary-text-color;
 }
 
 .responsive-video {
@@ -2628,24 +2654,33 @@ textarea {
  *    Social Feed             *
  * ========================== */
 .mod_newslist .social_feed_container {
-    width: 100%;
-    margin-left: 0;
-    font-family: $font1;
+  width: 100%;
+  margin-left: 0;
+  font-family: $font1;
+  color: $primary-text-color;
 
-    .title {
-        font-family: $font2;
-        font-weight: 400;
-        color: $mateColor2;
-    }
+  .title {
+    font-family: $font2;
+    font-weight: 400;
+    color: $mateColor2;
+  }
 
-    .inner {
-        background: #fff;
-        border-top: 5px solid $mateColor2;
-    }
+  .inner {
+    background: $boxes-background;
+    border-top: 5px solid $mateColor2;
+  }
 
-    .fa {
-        color: $mateColor2;
-    }
+  .fa {
+    color: $mateColor2;
+  }
+
+  .social_feed_element .ce_text {
+    color: $primary-text-color;
+  }
+
+  .social_feed_element .info {
+    color: $primary-text-color;
+  }
 }
 
 /* ========================== *
@@ -2886,7 +2921,7 @@ textarea {
 		padding: 30px 0;
 
 		li > a {
-			color: #fff;
+			color: $secondary-text-color;
 			font-weight: 700;
 			line-height: 18px;
 			display: flex;
@@ -2922,7 +2957,7 @@ textarea {
 	}
 
 	nav .side-nav i.material-icons {
-		color: #fff;
+		color: $secondary-text-color;
 		position: absolute !important;
 		right: 10px !important;
 		top: 0 !important;
