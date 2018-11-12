@@ -389,6 +389,10 @@ table {
 .btn, .btn-large {
   background-color: $button-floating-background;
   color: $button-flat-color;
+
+  a {
+    color: $button-flat-color;
+  }
 }
 
 .container .row.no-margin {
@@ -625,16 +629,16 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 13;
-    transition: height .2s;
-    height: 0;
+  transition: height .2s;
+  height: 0;
 
-    &.active {
-    	height: 130px;
-    }
+  &.active {
+    height: 130px;
+  }
 
 	.formbody {
 		margin: 0;
-		background: #fff;
+		background: $navbar-bg-color;
 		border: none;
 		text-align: center;
 		padding: 40px;
@@ -686,7 +690,7 @@ nav {
 }
 
 nav {
-    background-color: rgba($navbar-bg-color, 1);
+  background-color: rgba($navbar-bg-color, 1);
 
 	.nav-wrapper {
 		margin-bottom: 0;
@@ -803,7 +807,7 @@ nav {
 			margin: 0 auto;
 
 			.dropdown-content {
-			    display: none;
+        display: none;
 			}
 
 			ul {
@@ -817,24 +821,24 @@ nav {
 
 					    &, &.active {
 						    position: relative;
-					        height: inherit;
+                height: inherit;
 						    display: flex;
 						    align-items: center;
 						}
 
 						&.active {
-						    color: $navbar-active-color;
+              color: $navbar-active-color;
 						}
 					}
 
 					&:hover ul.dropdown-content {
-					    display: block;
+            display: block;
 					}
 
 					& a:hover, &.active {
 						background-color: transparent;
-		                color: $navbar-active-color;
-		                font-weight: normal;
+            color: $navbar-active-color;
+            font-weight: normal;
 					}
 				}
 
@@ -858,37 +862,41 @@ nav {
 				}
 
 				&.dropdown-content {
-				    background: $navbar-dropdown-bg;
-				    padding: 0;
-				    box-shadow: none;
+            background: $navbar-dropdown-bg;
+            padding: 0;
+            box-shadow: none;
 
-				    li {
-					    float: none;
-					    min-height: inherit;
-					    height: inherit;
-                        padding: 0 25px 0 15px;
+            li {
+              float: none;
+              min-height: inherit;
+              height: inherit;
+              padding: 0 25px 0 15px;
 
-                        &:hover, &.active, &.selected {
-                            background-color: $navbar-dropdown-hover-bg-color;
-                        }
+              &:hover, &.active, &.selected {
+                background-color: $navbar-dropdown-hover-bg-color;
 
-					    a {
-					    	padding: 10px 10px 10px 0;
-	                        color: $navbar-dropdown-color;
+                a {
+                  color: $navbar-dropdown-hover-color;
+                }
+              }
 
-	                        &:before {
-						    	display: none;
-						    }
+              a {
+                padding: 10px 10px 10px 0;
+                color: $navbar-dropdown-color;
 
-						    &:hover {
-			                    color: $navbar-dropdown-hover-color;
-						    }
+                &:before {
+                  display: none;
+                }
 
-						    &:hover:before {
-								display: none;
-							}
-					    }
-					}
+                &:hover {
+                  color: $navbar-dropdown-hover-color;
+                }
+
+                &:hover:before {
+                display: none;
+              }
+            }
+          }
 
 					> li {
 						text-transform: none;
@@ -968,6 +976,10 @@ nav {
 		&.dropdown-content {
 	    	background: $navbar-stuck-dropdown-bg;
 
+        li:hover {
+          background: $navbar-stuck-dropdown-hover-bg-color;
+        }
+
 	    	li a {
 	    		color: $navbar-stuck-dropdown-color;
 
@@ -993,6 +1005,10 @@ nav {
             color: $secondary-text-color;
         }
 	}
+
+  .material-icons {
+    color: $navbar-stuck-active-color;
+  }
 }
 
 .headroom--unpinned {
@@ -1019,9 +1035,9 @@ nav .brand-logo {
 }
 
 #main, #left, #right {
-    nav.block {
-        overflow: hidden;
-    }
+  nav.block {
+    display: table;
+  }
 }
 
 /* ========================== *
@@ -1630,40 +1646,40 @@ nav .brand-logo {
 		.info {
       margin: 0;
       font-size: 13px;
-      color: $mateColor6;
+      color: $news-date-color;
 		}
 	}
 }
 
 .layout_latest, .layout_teaser {
 	.subheadline {
-	    letter-spacing: 1px;
-	    text-transform: uppercase;
-	    font-size: 12px;
-	    position: absolute;
-	    bottom: 25px;
-	    color: $secondary-text-color;
-	    left: 30px;
-        font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: absolute;
+    bottom: 25px;
+    color: $news-category-color;
+    left: 30px;
+    font-weight: 700;
 	}
 
 	.inner {
 		.more {
-		    position: absolute;
-		    top: -32px;
-		    right: 30px;
-			font-size: 36px;
-			line-height: 36px;
-		    background: $mateColor2;
-		    color: #fff;
-		    padding: 11px 5px 10px 3px;
-		    border-radius: 100%;
-		    width: 60px;
-		    height: 60px;
-		    text-align: center;
-		    font-weight: 700;
-            box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
-            -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+      position: absolute;
+      top: -32px;
+      right: 30px;
+      font-size: 36px;
+      line-height: 36px;
+      background: $mateColor2;
+      color: #fff;
+      padding: 11px 5px 10px 3px;
+      border-radius: 100%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-weight: 700;
+      box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
+      -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
     		&:hover {
 				background: $mateColor3;
@@ -1683,13 +1699,13 @@ nav .brand-logo {
 		}
 
 		a.more {
-		    background: $mateColor2;
-		    color: #fff;
+		    background: $button-floating-background;
+		    color: $button-flat-color;
 		    display: inline-block;
 		    padding: 3px 10px;
 
 		    &:hover {
-		    	background: $mateColor3;
+		    	background: $button-floating-background-hover;
 		    }
 		}
 	}
@@ -1708,9 +1724,9 @@ nav .brand-logo {
 
 .layout_full {
 	.info {
-	    margin: 20px 0 0;
-	    font-size: 13px;
-	    color: $mateColor6;
+    margin: 20px 0 0;
+    font-size: 13px;
+    color: $news-date-color;
 	}
 
 	h1 {
@@ -1737,48 +1753,45 @@ nav .brand-logo {
 }
 
 .pagination {
-    clear: left;
-    margin: 0;
-    background: none;
-    box-shadow: none;
-    width: inherit;
+  clear: left;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  width: inherit;
 
-    li {
-	    a, span, strong {
-		    display: block;
-		    border: 1px solid $mateColor6;
-		    padding: 0 10px;
-		    font-size: 12px;
-		    line-height: 30px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-
-		}
-
-		a {
-			background: transparent;
-			color: $mateColor4;
-		}
-
-		span, strong {
-			background: $mateColor6;
-            color: #fff;
-		}
-
-		a:hover {
-			background: $mateColor1;
-			border: 1px solid $mateColor1;
-		}
+  li {
+    a, span, strong {
+      display: block;
+      border: 1px solid $mateColor6;
+      padding: 0 10px;
+      font-size: 12px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-    &.block p{
-        float: right;
-        font-size: 14px;
-        color: $mateColor3;
-        padding-top: 10px;
+    a {
+      background: transparent;
+      color: $pagination-color;
     }
 
+    span, strong {
+      background: $mateColor6;
+      color: #fff;
+    }
 
+    a:hover {
+      background: $mateColor1;
+      border: 1px solid $mateColor1;
+    }
+  }
+
+  &.block p {
+    float: right;
+    font-size: 14px;
+    color: $mateColor3;
+    padding-top: 10px;
+  }
 }
 
 // contao 4.5 fix
@@ -2137,55 +2150,63 @@ footer.page-footer {
 }
 
 footer .container {
-    padding: 0 0.75rem;
+  padding: 0 0.75rem;
 }
 
 #footer {
-    #newsletter {
-        background: $mateColor1;
-        text-align: center;
+  #newsletter {
+    background: $mateColor1;
+    text-align: center;
 
-        .mod_subscribe {
-            background: $mateColor1;
-        }
-
-        h2, h3, h4, h5, h6 {
-            margin: 0 0 30px;
-        }
-
-        .mod_subscribe {
-            margin: 0 auto;
-            border: none;
-            padding: 50px 250px;
-        }
-
-        .widget-text {
-            width: 75%;
-            margin: 0;
-        }
-
-        .widget-submit {
-            width: 25%;
-            margin: 0;
-        }
-
-        button {
-            margin: 0;
-            width: 100%;
-            padding: 0;
-            height: 40px;
-            box-shadow: none;
-        }
-
-        .text {
-            background: #f4f8f0;
-            border: 1px solid #f4f8f0;
-
-            &::placeholder {
-                color: rgba(0, 0, 0, 0.87);
-            }
-        }
+    .mod_subscribe {
+      background: $mateColor1;
     }
+
+    h2, h3, h4, h5, h6 {
+      margin: 0 0 30px;
+    }
+
+    .mod_subscribe {
+      margin: 0 auto;
+      border: none;
+      padding: 50px 250px;
+    }
+
+    .widget-text {
+      width: 75%;
+      margin: 0;
+    }
+
+    .widget-submit {
+      width: 25%;
+      margin: 0;
+    }
+
+    button {
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      height: 40px;
+      box-shadow: none;
+    }
+
+    .text {
+      background: #f4f8f0;
+      border: 1px solid #f4f8f0;
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }
+
+    .submit {
+      background: $footer-newsletter-button-background;
+
+      &:hover {
+        background: $button-floating-background-hover;
+      }
+    }
+  }
 }
 
 /* ========================== *
@@ -2302,7 +2323,7 @@ footer .container {
 
     legend {
 		margin-bottom: 10px;
-        color: $mateColor4;
+    color: $mateColor4;
 	}
 }
 

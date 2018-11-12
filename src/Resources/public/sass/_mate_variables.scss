@@ -1,5 +1,5 @@
 /****
- **** mate theme files / mate_variables
+ **** mate theme files / mate_specific_variables
  **** overrides materialize variables
  ****
  */
@@ -10,70 +10,40 @@
  * use _custom_variables.scss for update safe overwrites
  */
 
-$font1: 'Lato Light';
-$font2: 'Old Standard';
-$font3: 'Lato Regular';
-
-$mateColor1: #b6cf92;
-$mateColor2: #86af49;
-$mateColor3: #476a30;
-$mateColor4: #58774e;
-$mateColor6: #abbdb1;
-$mateColorWhite: #fff;
-$mateColorBlack: #000;
-$pageBackground: #f4f8f0;
-
-/*
- * colors
- */
+/* ============================= */
+/*     MATE Theme Variables      */
+/* ============================= */
 
 $primary-color: $mateColor2;
 $secondary-color: $mateColor3;
 
-$primary-text-color: $mateColorBlack;
-$secondary-text-color: $mateColorWhite;
-
-/*
- * mate theme specific variables
- */
-
-/* Boxen */
-$boxes-background: $mateColorWhite;
-$boxes-text-color: $primary-text-color;
-
-/* header image headline */
-$headerHeadlineBackground: rgba(134, 175, 73, 0.84);
-$headerHeadlineColor: $secondary-text-color;
+/* Fonts */
+$font1: 'Lato Light';
+$font2: 'Old Standard';
+$font3: 'Lato Regular';
 
 /* Links */
 $primary-link-font-color: $mateColor2;
 $primary-link-hover-font-color: $mateColor3;
 
-/* Header - Navigation */
-$header-top-color: $secondary-text-color;
-
-$navbar-bg-color: $mateColorWhite;
-$navbar-color: $primary-text-color;
-$navbar-active-color: $mateColor2;
-$navbar-dropdown-hover-bg-color: $mateColor1;
-$navbar-dropdown-hover-color: $secondary-text-color;
-$navbar-dropdown-bg: $mateColorWhite;
-$navbar-dropdown-color: $primary-text-color;
-$navbar-stuck-bg-color: rgba(134,175,73,0.9);
-$navbar-stuck-color: $secondary-text-color;
-$navbar-stuck-active-color: $mateColor3;
-$navbar-stuck-dropdown-hover-bg-color: rgba(255,255,255,0.5);
-$navbar-stuck-dropdown-hover-color: $primary-text-color;
-$navbar-stuck-dropdown-color: $secondary-text-color;
-$navbar-stuck-dropdown-bg: $navbar-stuck-bg-color;
+/* Accordion */
+$accordion-headline-background: $mateColor2;
+$accordion-headline-color: $secondary-text-color;
+$accordion-content-background: $mateColorWhite;
+$accordion-content-color: $primary-text-color;
+$accordion-border-color: $mateColorWhite;
 
 /* Buttons */
 $button-flat-color: $secondary-text-color;
 $button-floating-background: $mateColor2;
 $button-floating-background-hover: $mateColor3;
 
+/* Content Box */
+$contentbox-first-color: $boxes-text-color;
+$contentbox-second-color: $boxes-text-color;
+
 /* Download and FAQ Elements */
-$download-faqlist-background-odd: rgba(134, 175, 73, 0.15);
+$download-faqlist-background-odd: rgba($mateColor2, 0.15);
 $download-faqlist-color-odd: $mateColor2;
 $download-faqlist-color-odd-hover: $mateColor3;
 
@@ -81,21 +51,49 @@ $download-faqlist-background-even: $mateColorWhite;
 $download-faqlist-color-even: $mateColor2;
 $download-faqlist-color-even-hover: $mateColor3;
 
-/* Events */
+/* Events and News */
 $calendar-background: $mateColorWhite;
 $calendar-border-color: $mateColorWhite;
 $calendar-text-color: $mateColor2;
 
+$news-date-color: $mateColor6;
+$news-category-color: #fff;
+$pagination-color: $mateColor4;
+
 /* Footer */
 $footer-text-color: $secondary-text-color;
-$footer-headline-border-color: $footer-text-color;
-$footer-secondary-bg-color: $secondary-color;
+$footer-headline-border-color: $secondary-text-color;
+$footer-secondary-bg-color: $mateColor3;
 $footer-news-events-time-color: $mateColor3;
 
 $footer-primary-link-color: $secondary-text-color;
 $footer-primary-link-color-hover: $primary-link-hover-font-color;
 $footer-secondary-link-color: $secondary-text-color;
 $footer-secondary-link-color-hover: $secondary-text-color;
+
+$footer-newsletter-button-background: $mateColor2;
+
+/* Header Image */
+$headerHeadlineBackground: rgba($mateColor2, 0.9);
+$headerHeadlineColor: $secondary-text-color;
+
+/* Header and Navigation */
+$header-top-color: $secondary-text-color;
+
+$navbar-bg-color: $mateColorWhite;
+$navbar-color: $primary-text-color;
+$navbar-active-color: $primary-link-font-color;
+$navbar-dropdown-hover-bg-color: $mateColor1;
+$navbar-dropdown-hover-color: $secondary-text-color;
+$navbar-dropdown-bg: $mateColorWhite;
+$navbar-dropdown-color: $primary-text-color;
+$navbar-stuck-bg-color: rgba($mateColor2, 0.9);
+$navbar-stuck-color: $secondary-text-color;
+$navbar-stuck-active-color: $mateColor3;
+$navbar-stuck-dropdown-hover-bg-color: $mateColor1;
+$navbar-stuck-dropdown-hover-color: $primary-text-color;
+$navbar-stuck-dropdown-color: $secondary-text-color;
+$navbar-stuck-dropdown-bg: rgba($mateColor2, 0.9);
 
 /* News Slider */
 $slider-background: $mateColor2;
@@ -123,20 +121,7 @@ $slider-navigation-hover-subheadline-color: $secondary-text-color;
 $slider-navigation-hover-headline-color: $secondary-text-color;
 $slider-navigation-border-color: $mateColor1;
 
-/* Content Box */
-$contentbox-first-background: rgba(255,255,255,0.95);
-$contentbox-first-color: $boxes-text-color;
-$contentbox-second-background: rgba(255, 255, 255, 0.65);
-$contentbox-second-color: $boxes-text-color;
-
 /* Tables */
 $table-odd-background: $mateColorWhite;
-$table-even-background: #f5f5f5;
-$table-border-color: #e6e6e6;
-
-/* Accordion */
-$accordion-headline-background: $mateColor2;
-$accordion-headline-color: $secondary-text-color;
-$accordion-content-background: $mateColorWhite;
-$accordion-content-color: $primary-text-color;
-$accordion-border-color: $mateColorWhite;
+$table-even-background: $mateColorGreyLight;
+$table-border-color: $mateColorGreyDark;

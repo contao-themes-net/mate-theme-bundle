@@ -6,7 +6,9 @@
 @import "components/color";
 
 // Variables;
-@import "mate_variables";
+@import "_mate_colors";
+@import "../../../../../../../files/mate/sass/_custom_colors";
+@import "_mate_variables";
 @import "../../../../../../../files/mate/sass/_custom_variables";
 @import "components/variables";
 
