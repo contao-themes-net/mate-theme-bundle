@@ -17,11 +17,11 @@ $GLOBALS['TL_LANG']['tl_content']['mateNavbar'] = 'Navbar (mate)1';
 $GLOBALS['TL_LANG']['tl_module']['mateTheme']['mateNavbar'][0] = 'Navbar (mate)3';
 $GLOBALS['TL_LANG']['tl_module']['mateTheme']['mateNavbar'][1] = 'Navbar (mate)4';
 
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type1'] = 'Rechtsbündig';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type2'] = 'Linksbündig';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type1'] = 'Navigation ohne Dropdown, rechtsbündig';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type2'] = 'Navigation ohne Dropdown, linksbündig';
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type3'] = 'Logo zentriert';
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type4'] = 'NavBar mit Tabs';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type5'] = 'NavBar mit Dropdown';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type5'] = 'Navigation mit Dropdown, rechtsbündig';
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type6'] = 'NavBar mit Buttons';
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type7'] = 'Mobile NavBar';
 

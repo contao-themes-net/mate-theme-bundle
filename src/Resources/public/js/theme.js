@@ -130,7 +130,7 @@ $(document).ready(function(){
 
 	$(".button-collapse").sideNav({});
 
-    $(".desktop-menu a.dropdown-button").dropdown({
+    $("nav:not(.subnav) .desktop-menu a.dropdown-button").dropdown({
       inDuration: 300,
       outDuration: 225,
       hover: true,
@@ -139,7 +139,7 @@ $(document).ready(function(){
       constrainWidth: false
     });
 
-    $(".mobile-menu a.dropdown-button").dropdown({
+    $("nav:not(.subnav) .mobile-menu a.dropdown-button").dropdown({
       inDuration: 300,
       outDuration: 225,
       hover: false,

@@ -96,12 +96,17 @@ class NavBarModule extends \Module
         $arrItems = $this->getNavigationMenu($trail[$level], 1, $host, $lang);
 
         // root layout template fallback
+        if ($this->mateNavbarType == 'type1')
+        {
+            $this->mateRootTpl = 'nav_mate_left';
+            $this->mateMobileTpl = 'nav_mate_mobile';
+            $this->mateDropdownTpl = '';
+        }
         if ($this->mateNavbarType == 'type2')
         {
             $this->mateRootTpl = 'nav_mate_left';
             $this->mateMobileTpl = 'nav_mate_mobile';
             $this->mateDropdownTpl = '';
-
         }
         if ($this->mateNavbarType == 'type5')
         {

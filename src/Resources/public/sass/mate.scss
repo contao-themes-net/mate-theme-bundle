@@ -928,7 +928,7 @@ nav {
 		line-height: 1rem;
 		display: block;
 
-		a, span {
+		> a, > span {
       background: $mateColor2;
       padding: 10px 15px;
       color: $secondary-text-color;
@@ -944,6 +944,42 @@ nav {
         margin-top: 0;
     }
 	}
+
+  i.material-icons {
+    display: none;
+  }
+}
+
+.mod_navigation.subnav {
+  strong {
+    padding: 10px 15px;
+    color: #fff;
+    margin: 2px 0;
+    display: block;
+    background: $mateColor3;
+    font-weight: 400;
+  }
+
+  ul ul {
+    margin-left: 10px;
+
+    a {
+      background: $mateColor1;
+
+      &:hover {
+        background: $mateColor3;
+      }
+    }
+
+    strong {
+      background: $mateColor1;
+      color: $mateColor3;
+    }
+  }
+
+  li a.first {
+    margin-top: 2px;
+  }
 }
 
 #header .mod_mateNavbar.stuck {
