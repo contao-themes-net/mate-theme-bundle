@@ -146,7 +146,7 @@ a {
     .btn, .btn-large,
     .table-of-contents li a,
     #header .search-box .submit,
-    .ce_mateContentBox .pageLink a, .ce_mateTeaserBox .pageLink a,
+    .ce_mateContentBox .pageLink a, .ce_mateTeaserBox .pageLink a, .ce_ct_teaserBox .pageLink a,
     body .picker__frame .btn-flat, .submit,
     .slider.mod_newslist .more a,
     .layout_short .inner a.more, .layout_list .inner a.more {
@@ -1559,12 +1559,12 @@ nav .brand-logo {
 }
 
 #container {
-  .ce_mateTeaserBox.col {
+  .ce_mateTeaserBox.col, .ce_ct_teaserBox.col {
     padding: 0 15px;
   }
 }
 
-.ce_mateTeaserBox {
+.ce_mateTeaserBox, .ce_ct_teaserBox {
 	margin-bottom: 30px;
     margin-top: 30px;
 
@@ -1616,7 +1616,7 @@ nav .brand-logo {
 }
 
 @media (min-width:601px) and (max-width:1024px) {
-  .ce_mateTeaserBox p a {
+  .ce_mateTeaserBox p a, .ce_ct_teaserBox p a {
     width: 90%;
     line-height: 1.5em;
     padding: 5px;
@@ -3350,7 +3350,7 @@ mark {
 	}
 
 	/* Mate Elemente */
-	.ce_mateTeaserBox {
+	.ce_mateTeaserBox, .ce_ct_teaserBox {
 		margin-bottom: 15px;
 		margin-top: 0;
 
@@ -3366,7 +3366,7 @@ mark {
 		}
 	}
 
-	.ce_mateContentBox {
+	.ce_mateContentBox, .ce_ct_teaserBox {
 	    margin-bottom: 15px;
 
 	    .inside {

@@ -1,7 +1,7 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
 
 	/* ===================== *
-	 *   Formulare		 *
+	 *   Formulare		     *
 	 * ===================== */
 	$('select').material_select();
 
