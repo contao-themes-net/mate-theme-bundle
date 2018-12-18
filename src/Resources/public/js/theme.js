@@ -182,8 +182,9 @@ jQuery(document).ready(function($){
             }
         } else {
             setTimeout(function() {
+                var tabControlId = href.substr(href.indexOf('#'));
                 $('html,body').animate({
-                    scrollTop: $("#tabControl_bilder").offset().top - 150
+                    scrollTop: $(tabControlId).offset().top - 150
                 }, 1500);
             }, 200);
         }
