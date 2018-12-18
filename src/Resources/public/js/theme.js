@@ -170,15 +170,22 @@ jQuery(document).ready(function($){
      * =================== */
     $('a[href*=\\#]:not(.modal-trigger)').on('click', function(event){
         var href = $(this).attr('href');
-        href = href.substr(0,href.indexOf('#'));
-        href = href.replace('./','');
+        if(href.indexOf("tabControl_") < 0) {
+            href = href.substr(0,href.indexOf('#'));
+            href = href.replace('./','');
+            var path = window.location.pathname;
+            path = path.replace('/','');
 
-        var path = window.location.pathname;
-        path = path.replace('/','');
-
-        if ( $(this).attr('target') != '_blank' && path == href) {
-            event.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top - 80}, 1500);
+            if ( $(this).attr('target') != '_blank' && path == href) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top - 80}, 1500);
+            }
+        } else {
+            setTimeout(function() {
+                $('html,body').animate({
+                    scrollTop: $("#tabControl_bilder").offset().top - 150
+                }, 1500);
+            }, 200);
         }
     });
 });
