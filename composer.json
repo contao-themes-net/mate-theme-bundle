@@ -27,11 +27,11 @@
     "source" : "https://github.com/contao-themes-net/mate-theme-bundle"
   },
   "require": {
-    "php": "^5.6 || ^7.0",
+    "php": ">=7.1",
     "contao/core-bundle": "^4.4",
-    "contao-dd/advanced-classes-bundle": "^0.5",
-    "contao-themes-net/theme-components-bundle": "^0.1",
     "pdir/contao-theme-helper-bundle": "^1.0",
+    "contao-dd/advanced-classes-bundle": "^0.5",
+    "contao-bootstrap/grid": "^2.0",
     "terminal42/contao-folderpage": "^2.0.5"
   },
   "conflict": {
