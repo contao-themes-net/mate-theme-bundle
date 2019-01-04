@@ -3299,15 +3299,15 @@ mark {
 			overflow: visible;
 		}
 
-		.slider.mod_newslist, .mod_newslist .slides {
+		.slider.mod_newslist:not(.custom), .mod_newslist:not(.custom) .slides {
 			height: 550px !important;
 		}
 
-		.slider:not(.mod_newslist), .slider:not(.mod_newslist) .slides {
+		.slider:not(.mod_newslist):not(.custom), .slider:not(.mod_newslist):not(.custom) .slides {
 			height: 600px !important;
 		}
 
-		.slider.smaller:not(.mod_newslist), .smaller:not(.mod_newslist) .slides {
+		.slider.smaller:not(.mod_newslist):not(.custom), .smaller:not(.mod_newslist):not(.custom) .slides {
 			height: 400px !important;
 		}
 

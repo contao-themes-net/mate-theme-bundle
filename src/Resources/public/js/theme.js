@@ -8,12 +8,22 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	$inputDatepicker = $('.datepicker').pickadate({
 		selectMonths: true, // Creates a dropdown to control month
 		selectYears: 15, // Creates a dropdown of 15 years to control year,
-		today: 'Heute',
-		clear: 'Reset',
-		close: 'OK',
 		closeOnSelect: false, // Close upon selecting a date,
 		format: 'dd-mm-yyyy',
-		container: 'body'
+		container: '.widget.datepicker',
+        labelMonthNext: 'Nexter Monat',
+        labelMonthPrev: 'Vorheriger Monat',
+        labelMonthSelect: 'Monat wählen',
+        labelYearSelect: 'Jahr wählen',
+        monthsFull: [ 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember' ],
+        monthsShort: [ 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez' ],
+        weekdaysFull: [ 'Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag' ],
+        weekdaysShort: [ 'So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa' ],
+        weekdaysLetter: [ 'S', 'M', 'D', 'M', 'D', 'F', 'S' ],
+        today: 'Heute',
+        clear: 'Löschen',
+        close: 'OK',
+        firstDay: 1
 	});
 	$inputDatepicker.pickadate('picker');
 
@@ -27,7 +37,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	    autoclose: false, // automatic close timepicker
 	    ampmclickable: true, // make AM PM clickable
 	    aftershow: function(){}, //Function for after opening timepicker
-	    container: 'body'
+	    container: '.widget.timepicker'
 	});
 	$inputDatepicker.pickatime('picker');
 
@@ -45,13 +55,13 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	/* ===================== *
 	 *   Mate Slider		 *
 	 * ===================== */
-	$(".slider.mod_newslist:not(.smaller)").slider({
+	$(".slider.mod_newslist:not(.smaller):not(.custom)").slider({
 		height: 460,
 	    indicators: true,
 	    interval: 12000
 	});
 
-	$(".slider.mod_newslist.smaller").slider({
+	$(".slider.mod_newslist.smaller:not(.custom)").slider({
 		height: 250,
 	    indicators: true,
 	    interval: 12000
