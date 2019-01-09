@@ -4,7 +4,7 @@ namespace ContaoThemesNet\MateThemeBundle\Module;
 
 class MateThemeSetup extends \BackendModule
 {
-    const VERSION = '1.5.4';
+    const VERSION = '1.5.5';
 
     protected $strTemplate = 'be_mateTheme_setup';
 

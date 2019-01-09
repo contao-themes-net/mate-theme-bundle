@@ -7,8 +7,9 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 
 	$inputDatepicker = $('.datepicker').pickadate({
 		selectMonths: true, // Creates a dropdown to control month
-		selectYears: 15, // Creates a dropdown of 15 years to control year,
-		closeOnSelect: false, // Close upon selecting a date,
+		selectYears: '150', // Creates a dropdown of 15 years to control year,
+        max: new Date( new Date().getFullYear() + 30, new Date().getMonth(), new Date().getDate() ),
+		closeOnSelect: true, // Close upon selecting a date,
 		format: 'dd.mm.yyyy',
 		container: '.widget.datepicker',
         labelMonthNext: 'Nexter Monat',
