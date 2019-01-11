@@ -150,7 +150,7 @@ a {
     .btn, .btn-large,
     .table-of-contents li a,
     #header .search-box .submit,
-    .ce_mateContentBox .pageLink a, .ce_mateTeaserBox .pageLink a, .ce_ct_teaserBox .pageLink a,
+    .ce_mateContentBox .pageLink a, .ce_mateTeaserBox .pageLink a, .ce_ct_teaserBox .pageLink a, .ce_ct_contentBox .pageLink a,
     body .picker__frame .btn-flat, .submit,
     .slider.mod_newslist .more a,
     .layout_short .inner a.more, .layout_list .inner a.more {
@@ -1500,7 +1500,7 @@ nav .brand-logo {
 /* ========================== *
  *    Mate Content Box        *
  * ========================== */
-.ce_mateContentBox {
+.ce_mateContentBox, .ce_ct_contentBox {
     text-align: center;
     height: 400px;
     display: table;
@@ -1540,10 +1540,12 @@ nav .brand-logo {
 		}
 	}
 }
-.ce_mateContentBox:nth-child(2n) {
-	border-top: 10px solid $secondary-color;
-  background-color: $contentbox-second-background;
-  color: $contentbox-second-color;
+.ce_mateContentBox, .ce_ct_contentBox {
+  &:nth-child(2n) {
+    border-top: 10px solid $secondary-color;
+    background-color: $contentbox-second-background;
+    color: $contentbox-second-color;
+  }
 }
 
 /* ========================== *
@@ -3370,7 +3372,7 @@ mark {
 		}
 	}
 
-	.ce_mateContentBox, .ce_ct_teaserBox {
+	.ce_mateContentBox, .ce_ct_contentBox, .ce_ct_teaserBox {
 	    margin-bottom: 15px;
 
 	    .inside {
