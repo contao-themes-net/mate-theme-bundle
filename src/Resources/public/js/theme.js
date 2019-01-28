@@ -11,7 +11,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
         max: new Date( new Date().getFullYear() + 30, new Date().getMonth(), new Date().getDate() ),
 		closeOnSelect: true, // Close upon selecting a date,
 		format: 'dd.mm.yyyy',
-		container: '.widget.datepicker',
+		container: 'div.datepicker',
         labelMonthNext: 'Nexter Monat',
         labelMonthPrev: 'Vorheriger Monat',
         labelMonthSelect: 'Monat wählen',
@@ -38,7 +38,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	    autoclose: false, // automatic close timepicker
 	    ampmclickable: true, // make AM PM clickable
 	    aftershow: function(){}, //Function for after opening timepicker
-	    container: '.widget.timepicker'
+	    container: 'div.timepicker'
 	});
 	$inputDatepicker.pickatime('picker');
 
