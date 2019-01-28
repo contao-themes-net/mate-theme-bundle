@@ -200,4 +200,18 @@ jQuery.noConflict(); jQuery(document).ready(function($){
             }, 200);
         }
     });
+
+    // for HTML5 "required" attribute
+    $('select[required]').css({
+        display: 'inline',
+        position: 'absolute',
+        float: 'left',
+        padding: 0,
+        margin: 0,
+        border: '1px solid rgba(255,255,255,0)',
+        height: 0,
+        width: 0,
+        top: '40px',
+        left: '50%'
+    });
 });
