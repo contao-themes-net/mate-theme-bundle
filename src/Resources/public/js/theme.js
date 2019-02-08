@@ -170,7 +170,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
     	}
 	});
 
-	$(document).on('click', 'footer .toplink', function(event){
+	$(document).on('click', 'footer .toplink:not(.custom)', function(event){
 	    event.preventDefault();
 
 		$("html, body").animate({ scrollTop: 0 }, 1000);
@@ -179,7 +179,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
     /* =================== *
      * Smooth Scroll	   *
      * =================== */
-    $('a[href*=\\#]:not(.modal-trigger)').on('click', function(event){
+    $('a[href*=\\#]:not(.modal-trigger):not(.toplink)').on('click', function(event){
         var href = $(this).attr('href');
         if(href.indexOf("tabControl_") < 0) {
             href = href.substr(0,href.indexOf('#'));
