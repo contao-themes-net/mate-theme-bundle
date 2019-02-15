@@ -74,10 +74,12 @@
 <?php endif; ?>
 
 <?php $GLOBALS['TL_BODY'][] = '<script>
-jQuery(".mobile-menu i").bind("touchstart click", function() {
-  $(this).html() == "arrow_drop_down" ? $(this).html("arrow_drop_up") : $(this).html("arrow_drop_down");
-});
-jQuery(".mobile-menu i").bind("touchstart click", function() {
-  $(this).parent("li").next().toggle();return false;
+jQuery(document).ready( function($) {
+    jQuery(".mobile-menu i").bind("touchstart click", function() {
+      $(this).html() == "arrow_drop_down" ? $(this).html("arrow_drop_up") : $(this).html("arrow_drop_down");
+    });
+    jQuery(".mobile-menu i").bind("touchstart click", function() {
+      $(this).parent("li").next().toggle();return false;
+    });
 });
 </script>'; ?>
