@@ -1,4 +1,6 @@
-pdir contao theme licence
+pdir Contao Theme Licence
+
+## DE ##
 
 1. Nutzungsrecht
 Der Kauf eines Themes berechtigt Ihnen die Nutzung nur für eine Domain inklusive Subdomains, es sei denn, sie erwerben eine Lizenz für unlimitierte Domains. Sie dürfen das Theme sowohl für private als auch für kommerzielle Zwecke einsetzen.
@@ -17,3 +19,35 @@ Der Weiterverkauf des Themes oder einzelner Bestandteile, ob als einzelnes Produ
 
 6. Fremder Quellcode
 Das Theme kann teilweise fremden Quellcode enthalten, der eigenen Lizenzbedingungen unterliegt. Diese Copyright-Hinweise dürfen nicht aus dem Theme entfernt werden.
+
+Die Copyright-Hinweise finden Sie auf deren Webseiten oder hier:
+    [Headroom.js](https://github.com/contao-themes-net/mate-theme-bundle/blob/master/LICENSE-HEADROOM)
+    [Materialize](https://github.com/contao-themes-net/mate-theme-bundle/blob/master/LICENSE-MATERIALIZE)
+
+## EN ##
+
+Please read the license terms carefully. By purchasing and using the theme, you agree to the license terms.
+
+1. right of use
+The theme may be used for both private and commercial purposes.
+The purchase of the theme entitles you to use this theme on one domain including any number of subdomains. If you wish to use the theme on several domains, you must purchase several single licenses or a license for unlimited domains.
+
+2. copyright notices
+The copyright link "powered by contao-themes.net" may not be obscured, removed or changed. This also applies if the theme is only used as a basis for a website and is modified in any way. If you wish to use this theme without a copyright link, you must purchase a paid license.
+All contents (texts, images and other media) used in this theme for demonstration purposes are subject to their own license terms and may not be used without the express permission of the author.
+
+3. agencies & resellers
+You can transfer the right to use this theme to your customer by selling or passing it on, but in this case the agency loses the rights of use. The right of use as described in point 1 applies to the customer.
+You can only transfer the rights of use for the theme once. For each additional project in which the theme is to be used, a new license must be purchased (except for the Unlimited Domains license).
+
+4. modifications
+You may customize the theme according to your wishes and make any necessary changes to the theme. Please note the copyright notices.
+
+5. resale
+The resale of the theme or individual components, whether as a single product or as a package with further services and all kinds of commercial distribution or free distribution is not permitted.
+
+6. foreign source code
+The theme can partly contain foreign source code, which is subject to own license conditions. This copyright notice may not be removed from the theme.
+The copyright notices can be found on their websites or here:
+    [Headroom.js](https://github.com/contao-themes-net/mate-theme-bundle/blob/master/LICENSE-HEADROOM)
+    [Materialize](https://github.com/contao-themes-net/mate-theme-bundle/blob/master/LICENSE-MATERIALIZE)
