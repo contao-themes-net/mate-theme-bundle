@@ -4,7 +4,7 @@ namespace ContaoThemesNet\MateThemeBundle\Module;
 
 class MateThemeSetup extends \BackendModule
 {
-    const VERSION = '1.6.1';
+    const VERSION = '1.6.2';
 
     protected $strTemplate = 'be_mateTheme_setup';
 
@@ -20,6 +20,7 @@ class MateThemeSetup extends \BackendModule
                     new \Folder("files/mate");
                 }
                 $this->getFiles($path);
+                $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/mate-theme-bundle/src/templates/mate");
                 $this->Template->message = true;
                 break;
             case 'truncateTlFiles':
@@ -54,6 +55,17 @@ class MateThemeSetup extends \BackendModule
                     }
                     $this->getFiles($folder);
                 }
+            }
+        }
+    }
+
+    protected function getSqlFiles($path) {
+        foreach (scan($path) as $dir) {
+            if(!is_dir($path."/".$dir)) {
+                $pos = strpos($path,"/vendor");
+                $filesFolder = "templates/" . $dir;
+                $objFile = new \File(substr($path,$pos)."/".$dir, true);
+                $objFile->copyTo($filesFolder);
             }
         }
     }
