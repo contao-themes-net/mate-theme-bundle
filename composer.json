@@ -32,7 +32,8 @@
     "pdir/contao-theme-helper-bundle": "^1.0",
     "contao-dd/advanced-classes-bundle": "^0.5",
     "contao-bootstrap/grid": "^2.0",
-    "terminal42/contao-folderpage": "^2.0.5"
+    "terminal42/contao-folderpage": "^2.0.5",
+    "contao-themes-net/material-icons-inserttag": "^1.0"
   },
   "conflict": {
     "contao/core": "*"
