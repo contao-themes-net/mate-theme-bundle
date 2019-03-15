@@ -574,6 +574,14 @@ header {
   #container, .inside {
     position: static;
   }
+
+  .search em {
+    color: $navbar-search-color;
+  }
+
+  .button-collapse i {
+    color: $navbar-mobile-menu-icon-color;
+  }
 }
 
 .sectionTop {
@@ -1057,7 +1065,7 @@ nav {
     }
 
     em {
-      color: $secondary-text-color;
+      color: $navbar-stuck-search-color;
     }
   }
 
@@ -3058,7 +3066,7 @@ mark {
 
     .nav-wrapper {
       .button-collapse i {
-        color: #fff;
+        color: $navbar-stuck-mobile-menu-icon-color;
       }
 
       ul li a {

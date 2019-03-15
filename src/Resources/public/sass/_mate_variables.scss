@@ -87,6 +87,8 @@ $navbar-dropdown-hover-bg-color: $mateColor1;
 $navbar-dropdown-hover-color: $secondary-text-color;
 $navbar-dropdown-bg: $mateColorWhite;
 $navbar-dropdown-color: $primary-text-color;
+$navbar-search-color: $mateColor2;
+$navbar-mobile-menu-icon-color: $mateColor2;
 $navbar-stuck-bg-color: rgba($mateColor2, 0.9);
 $navbar-stuck-color: $secondary-text-color;
 $navbar-stuck-active-color: $mateColor3;
@@ -94,6 +96,8 @@ $navbar-stuck-dropdown-hover-bg-color: $mateColor1;
 $navbar-stuck-dropdown-hover-color: $primary-text-color;
 $navbar-stuck-dropdown-color: $secondary-text-color;
 $navbar-stuck-dropdown-bg: rgba($mateColor2, 0.9);
+$navbar-stuck-search-color: $secondary-text-color;
+$navbar-stuck-mobile-menu-icon-color: $secondary-text-color;
 
 /* News Slider */
 $slider-background: $mateColor2;
