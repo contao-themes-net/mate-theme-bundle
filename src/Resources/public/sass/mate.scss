@@ -1864,6 +1864,10 @@ nav.pagination li {
   padding-right: 5px;
 }
 
+#main nav.pagination {
+  display: block;
+}
+
 .mod_newslist, .mod_eventlist {
   .pagination {
     margin: 0 0.75rem;
