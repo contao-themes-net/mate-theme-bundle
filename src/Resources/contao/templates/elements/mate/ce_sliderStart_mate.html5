@@ -17,7 +17,7 @@ for($i = 0; $i < $this->sliderStartSlide; $i++) {
 
 <?php $GLOBALS['TL_BODY'][] = '
 <script>
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     $("#contentSlider'.$this->id.':not(.smaller)").slider({
         height: 460,
         indicators: true,
