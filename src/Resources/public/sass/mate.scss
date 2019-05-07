@@ -3007,11 +3007,11 @@ mark {
 
   .side-nav {
     width: 70%;
-    background: $mateColor2;
+    background: $navbar-mobile-background;
     padding: 30px 0;
 
     li > a {
-      color: $secondary-text-color;
+      color: $navbar-mobile-color;
       font-weight: 700;
       line-height: 18px;
       display: flex;
@@ -3024,11 +3024,12 @@ mark {
       position: relative;
 
       ul {
-        background: $mateColor1;
+        background: $navbar-mobile-dropdown-background;
 
         a {
           width: 100%;
           padding: 0 20px;
+          color: $navbar-mobile-dropdown-color;
         }
 
         ul {
@@ -3046,12 +3047,18 @@ mark {
     }
   }
 
-  nav .side-nav i.material-icons {
-    color: $secondary-text-color;
-    position: absolute !important;
-    right: 10px !important;
-    top: 0 !important;
-    line-height: 48px;
+  nav .side-nav {
+    i.material-icons {
+      color: $navbar-mobile-color;
+      position: absolute !important;
+      right: 10px !important;
+      top: 0 !important;
+      line-height: 48px;
+    }
+
+    ul i.material-icons {
+      color: $navbar-mobile-dropdown-color;
+    }
   }
 
   .drag-target {
