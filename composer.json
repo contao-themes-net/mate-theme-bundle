@@ -29,7 +29,7 @@
   "require": {
     "php": ">=7.1",
     "contao/core-bundle": "^4.4",
-    "pdir/contao-theme-helper-bundle": "^1.0",
+    "pdir/contao-theme-helper-bundle": "^1.2",
     "contao-dd/advanced-classes-bundle": "^1.0",
     "contao-bootstrap/grid": "^2.0",
     "terminal42/contao-folderpage": "^2.0.5",
