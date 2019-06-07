@@ -73,6 +73,15 @@ body {
   }
 }
 
+button, input, optgroup, select, textarea {
+  font-family: $font1;
+}
+
+.container .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
 .mod_article {
   margin-bottom: 0;
   width: 100%;
@@ -579,7 +588,7 @@ header {
     color: $navbar-search-color;
   }
 
-  .button-collapse i {
+  .sidenav-trigger i {
     color: $navbar-mobile-menu-icon-color;
   }
 }
@@ -703,6 +712,12 @@ header {
   border: 1px solid $mateColor2;
 }
 
+.sidenav-overlay {
+  width: 30%;
+  left: inherit;
+  right: 0;
+}
+
 /* ========================== *
  *    Navigation              *
  * ========================== */
@@ -750,7 +765,7 @@ nav {
     float: right;
   }
 
-  a.button-collapse {
+  a.sidenav-trigger {
     color: $primary-color;
   }
 
@@ -846,6 +861,10 @@ nav {
             color: $navbar-color;
             font-size: 16px;
 
+            &:focus {
+              outline: 0;
+            }
+
             &, &.active {
               position: relative;
               height: inherit;
@@ -896,7 +915,7 @@ nav {
           li {
             float: none;
             min-height: inherit;
-            height: inherit;
+            height: auto;
             padding: 0 25px 0 15px;
 
             &:hover, &.active, &.selected {
@@ -1369,6 +1388,7 @@ nav .brand-logo {
           display: block;
           margin: 0;
           height: 100%;
+          pointer-events: none;
         }
 
         .subheadline {
@@ -2445,7 +2465,7 @@ input[type="file"] {
   margin: 10px 0;
 }
 
-body .picker__frame {
+.datepicker-container {
   .picker__nav--prev {
     left: 0;
   }
@@ -2468,13 +2488,13 @@ body .picker__frame {
     margin: 0 5px;
   }
 
-  .picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  .is-selected {
     border-radius: 0;
     background: $mateColor2;
   }
 
-  .picker__footer {
-    padding: 15px 1rem;
+  .datepicker-footer {
+    padding: 15px 0;
   }
 
   .clockpicker-canvas line {
@@ -2483,6 +2503,20 @@ body .picker__frame {
 
   .clockpicker-canvas-bg, .clockpicker-canvas-bearing {
     fill: $mateColor2;
+  }
+
+  .select-wrapper input.select-dropdown {
+    width: 90px;
+    border: 1px solid #f2f2f2;
+    margin: 10px 5px;
+  }
+
+  thead {
+    background: $mateColor2;
+
+    abbr {
+      color: #fff;
+    }
   }
 }
 
@@ -2548,17 +2582,20 @@ textarea {
   padding-left: 30px;
 }
 
-[type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after,
-[type="radio"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:after {
+[type="checkbox"] + span:not(.lever):before, [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
   border: 2px solid $mateColor1;
 }
 
-[type="checkbox"]:checked + label:before {
+[type="checkbox"]:checked + span:not(.lever):before {
   border-right: 2px solid $mateColor2;
   border-bottom: 2px solid $mateColor2;
 }
 
-[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+[type="radio"]:not(:checked) + span:before, [type="radio"]:not(:checked) + span:after {
+  border: 2px solid $mateColor2;
+}
+
+[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
   background-color: $mateColor2;
   border: 2px solid $mateColor2;
 }
@@ -2966,7 +3003,7 @@ mark {
   }
 
   /* Header */
-  nav a.button-collapse {
+  nav a.sidenav-trigger {
     position: absolute;
     right: 70px;
     height: 100%;
@@ -2974,6 +3011,14 @@ mark {
     align-items: center;
     margin: 0;
     width: 55px;
+    left: inherit;
+    background: none;
+    box-shadow: none;
+    transform: none;
+
+    i.material-icons {
+      color: $navbar-mobile-menu-icon-color;
+    }
   }
 
   .search {
@@ -3005,7 +3050,7 @@ mark {
     transform: initial;
   }
 
-  .side-nav {
+  .sidenav {
     width: 70%;
     background: $navbar-mobile-background;
     padding: 30px 0;
@@ -3047,7 +3092,7 @@ mark {
     }
   }
 
-  nav .side-nav {
+  nav .sidenav {
     i.material-icons {
       color: $navbar-mobile-color;
       position: absolute !important;
@@ -3076,7 +3121,7 @@ mark {
     }
 
     .nav-wrapper {
-      .button-collapse i {
+      .sidenav i {
         color: $navbar-stuck-mobile-menu-icon-color;
       }
 
@@ -3088,7 +3133,7 @@ mark {
     }
   }
 
-  .side-nav li.active {
+  .sidenav li.active {
     background-color: inherit;
   }
 
@@ -3097,7 +3142,7 @@ mark {
       left: 50px;
     }
 
-    a.button-collapse {
+    a.sidenav {
       left: 0;
     }
   }
@@ -3219,7 +3264,7 @@ mark {
         }
       }
 
-      .button-collapse i {
+      .sidenav i {
         height: initial;
       }
     }

@@ -113,6 +113,7 @@ class NavBarModule extends \Module
             $this->mateRootTpl = 'nav_mate_root';
             $this->mateMobileTpl = 'nav_mate_mobile';
             $this->mateDropdownTpl = 'nav_mate_dropdown';
+            $this->mateDropdownTplLvl3 = 'nav_mate_dropdown_lvl3';
         }
 
         if(count($arrItems) > 0) {
@@ -128,6 +129,7 @@ class NavBarModule extends \Module
             $this->Template->mobileNav = $objTemplate->parse();
 
             $strDropdownNav = '';
+            $strDropdownNavLvl3 = '';
             if(is_array($arrItems)) {
                 foreach ($arrItems as $item) {
                     if(isset($item['subitems']) && is_array($item['subitems']) && count($item['subitems']) > 0) {
@@ -137,10 +139,22 @@ class NavBarModule extends \Module
                         $objTemplate->itemId = $item['id'];
                         $objTemplate->items = $item['subitems'];
                         $strDropdownNav .= $objTemplate->parse();
+
+                        foreach ($item['subitems'] as $subitem) {
+                            if(isset($subitem['subitems']) && is_array($subitem['subitems']) && count($subitem['subitems']) > 0) {
+                                /** @var \FrontendTemplate|object $objTemplate */
+                                $objTemplate = new \FrontendTemplate($this->mateDropdownTplLvl3);
+                                $objTemplate->id = $this->id;
+                                $objTemplate->itemId = $subitem['id'];
+                                $objTemplate->items = $subitem['subitems'];
+                                $strDropdownNavLvl3 .= $objTemplate->parse();
+                            }
+                        }
                     }
                 }
             }
             $this->Template->dropdownNav = $strDropdownNav;
+            $this->Template->dropdownNavLvl3 = $strDropdownNavLvl3;
         }
 
         if($this->mateIncludeHeadroom == 1) {
