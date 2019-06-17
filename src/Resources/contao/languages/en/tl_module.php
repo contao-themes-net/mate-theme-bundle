@@ -1,4 +1,8 @@
 <?php
+$GLOBALS['TL_LANG']['tl_module']['modal_link_legend'] = 'Link Settings';
+$GLOBALS['TL_LANG']['tl_module']['modal_headline_legend'] = 'Modal Headline';
+$GLOBALS['TL_LANG']['tl_module']['modal_text_legend'] = 'Modal Content';
+
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type1'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type1'];
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type2'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type2'];
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type3'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type3'];
