@@ -214,4 +214,13 @@ jQuery.noConflict(); jQuery(document).ready(function($){
         top: '40px',
         left: '50%'
     });
+
+	/* =================== *
+     * Modal         	   *
+     * =================== */
+	$('.modal').modal();
+
+	$('.close-modal i').click(function() {
+		$('.modal').modal("close");
+	});
 });

@@ -155,6 +155,10 @@ a {
   }
 }
 
+a.btn:hover {
+  color: $button-flat-color;
+}
+
 #wrapper {
   .btn, .btn-large,
   .table-of-contents li a,
@@ -2774,6 +2778,32 @@ mark {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+/* Modal */
+
+.mod_mateModal {
+  margin-bottom: 20px;
+
+  .modal {
+    .modal-content {
+      padding: 50px;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      z-index: 1;
+
+      i {
+        font-size: 30px;
+      }
+    }
   }
 }
 

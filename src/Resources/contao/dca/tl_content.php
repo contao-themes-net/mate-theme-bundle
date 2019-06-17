@@ -11,12 +11,9 @@
  * Add palette to tl_content
  */
 
-// echo "<pre>"; print_r($GLOBALS['TL_DCA']['tl_content']['palettes']); echo "</pre>";
-
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},type,headline;{text_legend},text,mateTeaserbox_subHeadline;{image_legend},addImage;{mateTeaserBoxSettings},mateTeaserBox_page,mateTeaserBox_pageText;{template_legend:hide},mateTeaserBox_customTpl;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateContentBoxSettings},mateContentBox_page,mateContentBox_pageText;{template_legend:hide},mateContentBox_customTpl;{expert_legend:hide},cssID,space';
 
-//echo "<pre>"; print_r($GLOBALS['TL_DCA']['tl_content']['palettes']); echo "</pre>";
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateContentBoxSettings},mateContentBox_page,mateContentBox_pageText;{template_legend:hide},mateContentBox_customTpl;{expert_legend:hide},cssID,space';
 
 /**
  * Add fields to tl_content
@@ -76,7 +73,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateContentBox_customTpl'] = array
     'eval' => array('includeBlankOption'=>true, 'chosen'=>true, 'tl_class'=>'w50'),
     'sql' => "varchar(64) NOT NULL default ''"
 );
-
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_customTpl'] = array
 (

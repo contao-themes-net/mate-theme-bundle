@@ -9,6 +9,7 @@ array_insert($GLOBALS['BE_MOD'], 1, array('mateTheme' => array()));
  * Add frontend element
  */
 $GLOBALS['FE_MOD']['mateTheme']['mateNavbar'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\NavBarModule';
+$GLOBALS['FE_MOD']['mateTheme']['mateModal'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\ModalModule';
 
 /**
  * Add content element
