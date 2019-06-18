@@ -3,7 +3,10 @@
   <file datatype="php" original="system/modules/comments/languages/en/tl_content.php" source-language="en">
     <body>
       <trans-unit id="FMD.mateNavbar.0">
-			  <source>Navbar</source>
+        <source>Navbar</source>
+      </trans-unit>
+      <trans-unit id="FMD.mateModal.0">
+        <source>Modal</source>
       </trans-unit>
     </body>
   </file>

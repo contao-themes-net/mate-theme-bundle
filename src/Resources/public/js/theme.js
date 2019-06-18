@@ -3,47 +3,45 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	/* ===================== *
 	 *   Formulare		     *
 	 * ===================== */
-	$('select').material_select();
+	$('select').formSelect();
 
-	$inputDatepicker = $('.datepicker').pickadate({
+	$('input.datepicker').datepicker({
 		selectMonths: true, // Creates a dropdown to control month
 		selectYears: '150', // Creates a dropdown of 15 years to control year,
-        max: new Date( new Date().getFullYear() + 30, new Date().getMonth(), new Date().getDate() ),
-		closeOnSelect: true, // Close upon selecting a date,
+		maxDate: new Date( new Date().getFullYear() + 30, new Date().getMonth(), new Date().getDate() ),
+		autoClose: true, // Close upon selecting a date,
 		format: 'dd.mm.yyyy',
 		container: 'div.datepicker',
-        labelMonthNext: 'Nexter Monat',
-        labelMonthPrev: 'Vorheriger Monat',
-        labelMonthSelect: 'Monat wählen',
-        labelYearSelect: 'Jahr wählen',
-        monthsFull: [ 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember' ],
-        monthsShort: [ 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez' ],
-        weekdaysFull: [ 'Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag' ],
-        weekdaysShort: [ 'So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa' ],
-        weekdaysLetter: [ 'S', 'M', 'D', 'M', 'D', 'F', 'S' ],
-        today: 'Heute',
-        clear: 'Löschen',
-        close: 'OK',
-        firstDay: 1
+		firstDay: 1,
+		i18n: {
+			nextMonth: 'Nexter Monat',
+			previousMonth: 'Vorheriger Monat',
+			labelMonthSelect: 'Monat wählen',
+			labelYearSelect: 'Jahr wählen',
+			months: [ 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember' ],
+			monthsShort: [ 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez' ],
+			weekdays: [ 'Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag' ],
+			weekdaysShort: [ 'So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa' ],
+			weekdaysAbbrev: ['S','M','D','M','D','F','S'],
+			today: 'Heute',
+			clear: 'Löschen',
+			done: 'OK',
+			cancel: 'Abbrechen'
+		}
 	});
-	$inputDatepicker.pickadate('picker');
 
-	$inputDatepicker = $('.timepicker').pickatime({
-	    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
-	    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
-	    twelvehour: false, // Use AM/PM or 24-hour format
-	    donetext: 'OK', // text for done-button
-	    cleartext: 'Reset', // text for clear-button
-	    canceltext: 'Abbrechen', // Text for cancel-button
-	    autoclose: false, // automatic close timepicker
-	    ampmclickable: true, // make AM PM clickable
-	    aftershow: function(){}, //Function for after opening timepicker
-	    container: 'div.timepicker'
+	$('input.timepicker').timepicker({
+		defaultTime: 'now', // Set default time: 'now', '1:30AM', '16:30'
+		fromNow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+		twelveHour: false, // Use AM/PM or 24-hour format
+		autoClose: false, // automatic close timepicker
+		container: 'div.timepicker',
+		i80n: {
+			done: 'OK', // text for done-button
+			clear: 'Löschen', // text for clear-button
+			cancel: 'Abbrechen', // Text for cancel-button
+		}
 	});
-	$inputDatepicker.pickatime('picker');
-
-	//$(".clockpicker").appendTo("body");
-	//$(".picker").appendTo("body");
 
 	/* ===================== *
 	 *   Content Slider		 *
@@ -59,13 +57,15 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	$(".slider.mod_newslist:not(.smaller):not(.custom)").slider({
 		height: 460,
 	    indicators: true,
-	    interval: 12000
+	    interval: 12000,
+		duration: 150
 	});
 
 	$(".slider.mod_newslist.smaller:not(.custom)").slider({
 		height: 250,
 	    indicators: true,
-	    interval: 12000
+	    interval: 12000,
+		duration: 150
 	});
 
 
@@ -83,9 +83,9 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	  var i = index;
 
 	  $( ".slider.mod_newslist .indicator-item" ).each(function( index ) {
-	  	if(i == index) {
-	  		$(this).append("<span class='inner'><span class='subheadline'>" + subheadline + "</span><span class='headline'>" + headline + "</span></span>");
-	  	}
+		if(i == index) {
+			$(this).append("<span class='inner'><span class='subheadline'>" + subheadline + "</span><span class='headline'>" + headline + "</span></span>");
+		}
 	  });
 	});
 
@@ -139,13 +139,13 @@ jQuery.noConflict(); jQuery(document).ready(function($){
         headroom.init();
     }
 
-	$(".button-collapse").sideNav({});
+	$(".sidenav").sidenav();
 
     $("nav:not(.subnav) .desktop-menu a.dropdown-button").dropdown({
       inDuration: 300,
       outDuration: 225,
       hover: true,
-      belowOrigin: true,
+	  coverTrigger: false,
       alignment: "left",
       constrainWidth: false
     });
@@ -154,7 +154,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
       inDuration: 300,
       outDuration: 225,
       hover: false,
-      belowOrigin: true,
+	  coverTrigger: false,
       alignment: "left"
     });
 
@@ -214,4 +214,13 @@ jQuery.noConflict(); jQuery(document).ready(function($){
         top: '40px',
         left: '50%'
     });
+
+	/* =================== *
+     * Modal         	   *
+     * =================== */
+	$('.modal').modal();
+
+	$('.close-modal i').click(function() {
+		$('.modal').modal("close");
+	});
 });

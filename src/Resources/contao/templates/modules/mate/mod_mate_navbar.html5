@@ -10,7 +10,7 @@
         <?php endif; ?>
 
         <?php if($this->showMobileMenu == 1): ?>
-            <a href="#" data-activates="mobile-menu<?= $this->id ?>" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="mobile-menu<?= $this->id ?>" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <?php endif; ?>
 
         <ul id="desktop-menu<?= $this->id ?>" class="desktop-menu right <?php if($this->showMobileMenu == 1): ?>hide-on-med-and-down <?php endif; ?><?= $this->level ?>">
@@ -18,7 +18,7 @@
         </ul>
 
         <?php if($this->showMobileMenu == 1): ?>
-            <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu side-nav <?= $this->level ?>">
+            <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu sidenav <?= $this->level ?>">
                 <?= $this->mobileNav ?>
             </ul>
         <?php endif; ?>
