@@ -57,7 +57,7 @@ $GLOBALS['tl_config']['theme_tags'] = array(
 /**
  * Backend Modules
  */
-array_insert($GLOBALS['BE_MOD']['mateTheme'], 1, array
+array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, array
 (
     'mateThemeSetup' => array
     (
