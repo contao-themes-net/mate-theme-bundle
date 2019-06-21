@@ -2925,6 +2925,46 @@ mark {
 }
 
 /* ========================== *
+ *    CountTo                 *
+ * ========================== */
+.count-to-container {
+  text-align: center;
+  padding: 20px 0;
+
+  p, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  h2, h3, h4, h5, h6 {
+    color: $mateColorBlack;
+    font-weight: 700;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
+
+  .countTo {
+    font-size: 34px;
+    font-weight: 700;
+    padding: 10px 0 0;
+    color: $mateColor2;
+    display: block;
+    line-height: 40px;
+    font-family: $font2;
+  }
+
+  p {
+    color: $mateColor2;
+  }
+
+  .material-icons {
+    font-size: 40px;
+    padding: 0 0 15px;
+  }
+}
+
+/* ========================== *
  *    IE Fixes                *
  * ========================== */
 .ie .subnav {

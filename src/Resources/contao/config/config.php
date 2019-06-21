@@ -67,3 +67,8 @@ array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, array
         'stylesheet'		=> 'bundles/matetheme/sass/backend.css'
     ),
 ));
+
+/**
+ * Add Hooks
+ */
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = ['ContaoThemesNet\MateThemeBundle\EventListener\HookListener', 'onReplaceInsertTags'];
