@@ -223,4 +223,9 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	$('.close-modal i').click(function() {
 		$('.modal').modal("close");
 	});
+
+	/* =================== *
+     * Parallax        	   *
+     * =================== */
+	$('.parallax').parallax();
 });

@@ -94,7 +94,7 @@ button, input, optgroup, select, textarea {
 
 #wrapper {
   background: $pageBackground;
-  padding-top: 150px;
+  padding-top: 165px;
 }
 
 @media only screen and (min-width: 601px) {
@@ -2979,6 +2979,89 @@ mark {
       margin-top: -57.5px;
     }
   }
+}
+
+/* ========================== *
+ *    Parallax                *
+ * ========================== */
+.ce_mateParallaxElement {
+  overflow: hidden;
+  height: inherit;
+  text-align: center;
+  margin: 20px 0;
+  display: table;
+  width: 100%;
+
+  .content {
+    width: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    background: rgba($mateColor2, .9);
+    text-transform: inherit;
+    color: $mateColorWhite;
+    display: inline-block;
+    width: auto;
+    padding: 12px 30px 5px;
+    margin: 0;
+    font-family: $font2;
+
+    a {
+      color: $mateColorWhite;
+    }
+  }
+
+  .inside {
+    background: none;
+    height: inherit;
+    box-shadow: none;
+    position: relative;
+    padding: 20px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .parallax {
+    z-index: 0;
+  }
+
+  .pageLink {
+    margin-top: 10px;
+
+    a {
+      position: relative;
+      margin: 0;
+      left: 0;
+      background: none;
+      height: inherit;
+      color: $mateColorWhite;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+  }
+
+  p {
+    color: $mateColorWhite;
+    margin: 10px 0 0;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &.parallax-container .parallax img {
+    max-width: none;
+  }
+}
+
+#header .ce_mateParallaxElement {
+  margin: 0;
+}
+
+#wrapper .ce_mateParallaxElement .pageLink a {
+  box-shadow: none;
+  padding: 0;
 }
 
 /* ========================== *

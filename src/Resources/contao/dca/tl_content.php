@@ -15,6 +15,8 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},t
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateContentBoxSettings},mateContentBox_page,mateContentBox_pageText;{template_legend:hide},mateContentBox_customTpl;{expert_legend:hide},cssID,space';
 
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mateParallaxElement'] = '{type_legend},type,headline;{mateParallaxElementSettings},mateParallaxElement_text,mateParallaxElement_height,mateTeaserBox_page,mateTeaserBox_pageText;{image_legend},addImage;{template_legend:hide},mateParallaxElement_customTpl;{expert_legend:hide},cssID,space';
+
 /**
  * Add fields to tl_content
  */
@@ -93,6 +95,35 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserbox_subHeadline'] = array
     'sql' => "varchar(255) NOT NULL default ''"
 );
 
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateParallaxElement_customTpl'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateParallaxElement_customTpl'],
+    'exclude' => true,
+    'inputType' => 'select',
+    'options_callback' => array('tl_content_mate', 'getParallaxElementTemplates'),
+    'eval' => array('includeBlankOption'=>true, 'chosen'=>true, 'tl_class'=>'w50'),
+    'sql' => "varchar(64) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateParallaxElement_text'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateParallaxElement_text'],
+    'exclude' => true,
+    'search' => true,
+    'inputType' => 'textarea',
+    'eval' => array('tl_class'=>'clr', 'rte'=>'tinyMCE'),
+    'sql' => "TEXT NULL"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateParallaxElement_height'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateParallaxElement_height'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => array('tl_class'=>'w50 clr'),
+    'sql' => "varchar(5) NOT NULL default ''"
+);
+
 class tl_content_mate extends Backend {
     /**
      * Return all content element templates as array
@@ -109,5 +140,10 @@ class tl_content_mate extends Backend {
     public function getTeaserBoxTemplates(DataContainer $dc)
     {
         return $this->getTemplateGroup('ce_mate_teaserbox');
+    }
+
+    public function getParallaxElementTemplates(DataContainer $dc)
+    {
+        return $this->getTemplateGroup('ce_mate_parallax');
     }
 }
