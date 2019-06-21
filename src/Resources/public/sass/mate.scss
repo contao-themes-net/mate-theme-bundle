@@ -881,7 +881,7 @@ nav {
             }
           }
 
-          &:hover ul.dropdown-content {
+          &:hover + ul.dropdown-content {
             display: block;
           }
 
@@ -915,6 +915,21 @@ nav {
           background: $navbar-dropdown-bg;
           padding: 0;
           box-shadow: none;
+          overflow: visible;
+
+          li.submenu:hover > .dropdown-content {
+            display: block;
+          }
+
+          .dropdown-content {
+            position: absolute;
+            display: none;
+            opacity: 1;
+            width: 100%;
+            top: inherit;
+            left: -100% ;
+            margin-top: -42px;
+          }
 
           li {
             float: none;
@@ -925,7 +940,7 @@ nav {
             &:hover, &.active, &.selected {
               background-color: $navbar-dropdown-hover-bg-color;
 
-              a {
+              > a {
                 color: $navbar-dropdown-hover-color;
               }
             }

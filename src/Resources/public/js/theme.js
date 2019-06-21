@@ -142,21 +142,37 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	$(".sidenav").sidenav();
 
     $("nav:not(.subnav) .desktop-menu a.dropdown-button").dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      hover: true,
-	  coverTrigger: false,
-      alignment: "left",
-      constrainWidth: false
+		inDuration: 300,
+		outDuration: 225,
+		hover: true,
+		coverTrigger: false,
+		alignment: "left",
+		constrainWidth: false,
+		closeOnClick: false
     });
 
     $("nav:not(.subnav) .mobile-menu a.dropdown-button").dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      hover: false,
-	  coverTrigger: false,
-      alignment: "left"
+		inDuration: 300,
+		outDuration: 225,
+		hover: false,
+		coverTrigger: false,
+		alignment: "left"
     });
+
+	$("nav:not(.subnav) .desktop-menu ul.dropdown-content a.dropdown-button").dropdown({
+		inDuration: 300,
+		outDuration: 225,
+		hover: false,
+		coverTrigger: false,
+		alignment: "left",
+		constrainWidth: false,
+		closeOnClick: false
+	});
+
+	$('.dropdown-button').click(function() {
+		$('.dropdown-content .dropdown-content').hide();
+		window.location.href = $(this).attr('href');
+	});
 
 	/* ===================== *
 	*   Toplink  			 *
