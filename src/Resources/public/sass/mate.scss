@@ -2930,14 +2930,17 @@ mark {
 .count-to-container {
   text-align: center;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
 
   p, h2, h3, h4, h5, h6 {
     margin: 0;
   }
 
   h2, h3, h4, h5, h6 {
-    color: $mateColorBlack;
+    color: $mateColor6;
     font-weight: 700;
+    word-break: break-word;
   }
 
   h6 {
@@ -2961,6 +2964,20 @@ mark {
   .material-icons {
     font-size: 40px;
     padding: 0 0 15px;
+  }
+
+  .ce_text {
+    position: relative;
+
+    &:not(:last-child):after {
+      border-right: 1px solid $mateColor6;
+      position: absolute;
+      right: 0;
+      height: 115px;
+      content: "";
+      top: 50%;
+      margin-top: -57.5px;
+    }
   }
 }
 
@@ -3711,6 +3728,14 @@ mark {
           flex: 0 0 100%;
         }
       }
+    }
+  }
+
+  /* CountTo */
+  .count-to-container {
+    .countTo {
+      font-size: 20px;
+      line-height: 26px;
     }
   }
 
