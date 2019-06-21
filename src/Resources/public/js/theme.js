@@ -46,7 +46,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	/* ===================== *
 	 *   Content Slider		 *
 	 * ===================== */
-	$( ".slides .ce_text, .slides .ce_image" ).each(function( index ) {
+	$( ".slides .ce_text, .slides .ce_image, .slides .ce_mateTextBackgroundElement" ).each(function( index ) {
 		var classList = $(this).attr('class');
 		$(this).replaceWith("<li class='" + classList + "'>" + $(this).html() + "</li>");
 	});

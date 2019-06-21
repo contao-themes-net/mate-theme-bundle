@@ -17,6 +17,8 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateParallaxElement'] = '{type_legend},type,headline;{mateParallaxElementSettings},mateParallaxElement_text,mateParallaxElement_height,mateTeaserBox_page,mateTeaserBox_pageText;{image_legend},addImage;{template_legend:hide},mateParallaxElement_customTpl;{expert_legend:hide},cssID,space';
 
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mateTextBackgroundElement'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateTextBackground_settings},mate_background_image;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
+
 /**
  * Add fields to tl_content
  */
@@ -124,6 +126,19 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateParallaxElement_height'] = array
     'sql' => "varchar(5) NOT NULL default ''"
 );
 
+$GLOBALS['TL_DCA']['tl_content']['fields']['mate_background_image'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mate_background_image'],
+    'exclude' => true,
+    'inputType' => 'fileTree',
+    'eval' => array( 'filesOnly'=>true, 'fieldType'=>'radio', 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50 autoheight' ),
+    'load_callback' => array
+    (
+        array('tl_content_mate', 'setSingleSrcFlags')
+    ),
+    'sql' => "binary(16) NULL"
+);
+
 class tl_content_mate extends Backend {
     /**
      * Return all content element templates as array
@@ -145,5 +160,33 @@ class tl_content_mate extends Backend {
     public function getParallaxElementTemplates(DataContainer $dc)
     {
         return $this->getTemplateGroup('ce_mate_parallax');
+    }
+
+    /**
+     * Dynamically add flags to the "singleSRC" field
+     *
+     * @param mixed         $varValue
+     * @param DataContainer $dc
+     *
+     * @return mixed
+     */
+    public function setSingleSrcFlags($varValue, DataContainer $dc)
+    {
+        if ($dc->activeRecord)
+        {
+            switch ($dc->activeRecord->type)
+            {
+                case 'text':
+                case 'hyperlink':
+                case 'image':
+                case 'accordionSingle':
+                    $GLOBALS['TL_DCA'][$dc->table]['fields'][$dc->field]['eval']['extensions'] = Config::get('validImageTypes');
+                    break;
+                case 'download':
+                    $GLOBALS['TL_DCA'][$dc->table]['fields'][$dc->field]['eval']['extensions'] = Config::get('allowedDownload');
+                    break;
+            }
+        }
+        return $varValue;
     }
 }

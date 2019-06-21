@@ -3053,7 +3053,7 @@ mark {
       left: 0;
       background: none;
       height: inherit;
-      color: $mateColorWhite;
+      color: #fff;
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: underline;
@@ -3062,7 +3062,7 @@ mark {
   }
 
   p {
-    color: $mateColorWhite;
+    color: #fff;
     margin: 10px 0 0;
     padding: 5px;
     font-size: 18px;
@@ -3081,6 +3081,58 @@ mark {
 #wrapper .ce_mateParallaxElement .pageLink a {
   box-shadow: none;
   padding: 0;
+}
+
+/* ========================== *
+ *   Text with Backgrounds    *
+ * ========================== */
+.ce_mateTextBackgroundElement {
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-position: center;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+
+  .inside {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    > div {
+      width: 100%;
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    margin: 10px 0;
+  }
+
+  .image_container {
+    float: none;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.slider .slides .ce_mateTextBackgroundElement .image_container img {
+  background-size: inherit;
+  width: inherit;
+  border-radius: 100%;
 }
 
 /* ========================== *
