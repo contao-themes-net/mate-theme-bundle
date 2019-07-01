@@ -80,6 +80,21 @@ button, input, optgroup, select, textarea {
 .container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  clear: left;
+
+  .col {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 .mod_article {
@@ -1551,8 +1566,8 @@ nav .brand-logo {
     margin: 10px;
     padding: 15px;
     background: $boxes-background;
-    min-height: 170px;
     color: $boxes-text-color;
+    height: 100%;
   }
 
   h2, h3, h4, h5, h6 {
@@ -1568,21 +1583,15 @@ nav .brand-logo {
  * ========================== */
 .ce_mateContentBox, .ce_ct_contentBox {
   text-align: center;
-  height: 400px;
-  display: table;
   border-top: 10px solid $primary-color;
   background-color: $contentbox-first-background;
   color: $contentbox-first-color;
 
-  &:last-child {
-    margin-bottom: 20px;
-  }
-
   .inside {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   .image_container {
@@ -1658,11 +1667,12 @@ nav .brand-logo {
 
   .inside {
     background-color: $boxes-background;
-    height: 480px;
+    height: 100%;
     border: none;
     box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     color: $boxes-text-color;
+    padding-bottom: 70px;
   }
 
   h1, h2, h3, h4, h5, h6, p {
