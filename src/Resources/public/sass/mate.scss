@@ -97,6 +97,10 @@ button, input, optgroup, select, textarea {
   }
 }
 
+#container {
+  display: block !important;
+}
+
 .mod_article {
   margin-bottom: 0;
   width: 100%;
@@ -1623,6 +1627,14 @@ nav .brand-logo {
   }
 }
 
+#main {
+  .ce_mateContentBox, .ce_ct_contentBox {
+    .inside {
+      min-height: 400px;
+    }
+  }
+}
+
 /* ========================== *
  *    Mate Teaser Box         *
  * ========================== */
@@ -1838,6 +1850,7 @@ nav .brand-logo {
 
 .layout_simple, .layout_upcoming {
   padding: 0 0.75rem;
+  width: 100%;
 }
 
 .layout_full {
@@ -1875,7 +1888,7 @@ nav .brand-logo {
   margin: 0;
   background: none;
   box-shadow: none;
-  width: inherit;
+  width: 100%;
 
   li {
     a, span, strong {
@@ -1909,6 +1922,7 @@ nav .brand-logo {
     font-size: 14px;
     color: $mateColor3;
     padding-top: 10px;
+    margin: 0;
   }
 }
 
@@ -1943,6 +1957,7 @@ nav.pagination li {
 
 .empty {
   margin-left: 0.75rem;
+  width: 100%;
 }
 
 .recurring {
@@ -3567,7 +3582,7 @@ mark {
 
   /* Navigation */
   #main, #left, #right {
-    nav:not(.subnav) {
+    nav:not(.subnav):not(.pagination) {
       ul {
         float: none !important;
         padding: 0;
