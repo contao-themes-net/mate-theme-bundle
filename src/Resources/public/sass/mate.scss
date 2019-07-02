@@ -451,6 +451,46 @@ figure {
   margin: 0;
 }
 
+.image_container {
+  &.float_left {
+    margin: 0 0 15px 0;
+
+    @media (min-width: 768px) {
+      margin: 20px 15px 0 0;
+    }
+  }
+
+  &.float_right {
+    margin: 0 0 15px 0;
+
+    @media (min-width: 768px) {
+      margin: 20px 0 0 15px;
+    }
+  }
+}
+
+.ce_text {
+  h1, h2, h3, h4, h5, h6 {
+    + .image_container {
+      &.float_left {
+        margin: 0 0 15px 0;
+
+        @media (min-width: 768px) {
+          margin: 10px 15px 0 0;
+        }
+      }
+
+      &.float_right {
+        margin: 0 0 15px 0;
+
+        @media (min-width: 768px) {
+          margin: 10px 0 0 15px;
+        }
+      }
+    }
+  }
+}
+
 /* ========================== *
  *    Überschriften           *
  * ========================== */
