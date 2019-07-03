@@ -20,6 +20,7 @@ use Pdir\ThemeHelperBundle\ThemeHelperBundle;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use ContaoBootstrap\Grid\ContaoBootstrapGridBundle;
 
 /**
  * Plugin for the Contao Manager.
@@ -35,7 +36,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(MateThemeBundle::class)
-                ->setLoadAfter([ThemeHelperBundle::class])
+                ->setLoadAfter([ThemeHelperBundle::class, ContaoBootstrapGridBundle::class])
         ];
     }
 }
