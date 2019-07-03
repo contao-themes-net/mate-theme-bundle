@@ -40,8 +40,9 @@ compatible with Contao >=4.4
 ## dependencies & licenses
 
 - [Materialize CSS Framework](http://materializecss.com/) | [Github](https://github.com/Dogfalo/materialize) | Code copyright 2017 Materialize. Code released under the MIT license.
-- [contao theme helper bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden") | Code copyright by pdir / digital agentur. Code released under LGPL v3.
+- [Contao Theme Helper Bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden") | Code copyright by pdir / digital agentur. Code released under LGPL v3.
 - [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [Github](https://github.com/WickyNilliams/headroom.js) | Code copyright 2013 by Nick Williams. Code released under the MIT license.
+- [Material Icons Inserttag](https://github.com/contao-themes-net/material-icons-inserttag) by [pdir](https://pdir.de/ "Webdesign für Dresden") | Code copyright by pdir / digital agentur. Code released under GNU Lesser General Public License v3.0.
 
 
 ## Install & Documentation
