@@ -89,6 +89,40 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	  });
 	});
 
+	/* Content Slider - text below image */
+
+	if( $(".slider-text-below-image li").length > 0 ) {
+		$(".slider-text-below-image li").each( function() {
+			var headline = $(this).find("> h2, > h3, > h4, > h5, > h6").text();
+			var index = $(this).index() + 1;
+			setTimeout(function(){
+				$(".slider-text-below-image .indicators li:nth-of-type(" + index + ")").text(headline);
+			},100);
+		});
+
+		setSliderHeight();
+
+		$(window).resize(function() {
+			setSliderHeight();
+		});
+	}
+
+	function setSliderHeight() {
+		var height = 0;
+		var imageHeight, textHeight, elemHeight;
+		$(".slider-text-below-image li").each( function() {
+			imageHeight = $(this).find("img").height();
+			textHeight = $(this).find("p").outerHeight();
+			elemHeight = imageHeight + textHeight;
+			if(elemHeight > height) {
+				height = elemHeight;
+			}
+		});
+		setTimeout(function(){
+			$(".slider-text-below-image, .slider-text-below-image .slides").css("min-height",height + "px");
+		},100);
+	}
+
 	/* ===================== *
 	*   Suche				 *
 	* ====================== */

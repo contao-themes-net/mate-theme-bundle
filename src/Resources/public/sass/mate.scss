@@ -1600,6 +1600,76 @@ nav .brand-logo {
   }
 }
 
+/* Content Slider - text below image */
+
+.slider-text-below-image {
+  margin-bottom: 50px;
+
+  h1, h2, h3, h4, h5, h6 {
+    display: none;
+  }
+
+  .slides li img {
+    height: 350px;
+    vertical-align: bottom;
+  }
+
+  p {
+    margin: 0;
+    padding-top: 50px;
+  }
+
+  .indicators {
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    top: 335px;
+    z-index: 100;
+
+    .indicator-item {
+      width: inherit;
+      border-radius: 0;
+      margin: 0 5px;
+      color: black;
+      opacity: 1;
+      height: 50px;
+      background-color: $mateColor1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      transition: none;
+
+      &:not(.active):hover {
+        background: $mateColor2;
+        color: #fff;
+      }
+
+      &.active {
+        color: #fff;
+
+        &:before {
+          display: block;
+          content: '';
+          top: -6px;
+          position: absolute;
+          background-color: $mateColor2;
+          width: 15px;
+          height: 15px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+#wrapper .slider.slider-text-below-image .slides {
+  background: none;
+}
+
 /* ========================== *
  *    Mate Simple Box        *
  * ========================== */
@@ -3428,7 +3498,11 @@ mark {
 
     .nav-wrapper {
       .sidenav i {
-        color: $navbar-stuck-mobile-menu-icon-color;
+        color: $navbar-mobile-color;
+      }
+
+      .sidenav ul i {
+        color: $navbar-mobile-dropdown-color;
       }
 
       ul li a {
@@ -3470,6 +3544,14 @@ mark {
         font-size: 40px;
       }
     }
+  }
+
+  #header .mod_mateNavbar.stuck .nav-wrapper ul.sidenav li a {
+    color: $navbar-mobile-color;
+  }
+
+  #header .mod_mateNavbar.stuck .nav-wrapper ul.sidenav ul li a {
+    color: $navbar-mobile-dropdown-color;
   }
 
   /* Footer */
@@ -3955,6 +4037,32 @@ mark {
     .countTo {
       font-size: 20px;
       line-height: 26px;
+    }
+  }
+
+  /* Slider mit Bild und Text darunter */
+  .slider-text-below-image {
+    &:before {
+      background-size: 115px;
+      width: 115px;
+    }
+
+    .indicators {
+      display: block;
+      top: 135px;
+
+      .indicator-item {
+        width: calc(100% - 10px);
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      padding-top: 200px;
+    }
+
+    .slides li img {
+      height: 150px;
     }
   }
 
