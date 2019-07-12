@@ -11,7 +11,7 @@
 namespace ContaoThemesNet\MateThemeBundle\Mate;
 
 /**
- * Class ContentProducts
+ * Class TeaserBox
  *
  * @author Mathias Arzberger <develop@pdir.de>
  */

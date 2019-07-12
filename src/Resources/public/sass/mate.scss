@@ -602,6 +602,10 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
 .left-col, .right-col, .left-right-col {
   #container {
     @extend .row;
+
+    .row .col {
+      margin-left: 0;
+    }
   }
 
   #left, #right {
@@ -1701,6 +1705,12 @@ nav .brand-logo {
   background-color: $contentbox-first-background;
   color: $contentbox-first-color;
 
+  &:nth-child(2n) {
+    border-top: 10px solid $secondary-color;
+    background-color: $contentbox-second-background;
+    color: $contentbox-second-color;
+  }
+
   .inside {
     padding: 30px 50px;
     display: flex;
@@ -1713,8 +1723,8 @@ nav .brand-logo {
   }
 
   img {
-    max-height: 80px;
     width: auto;
+    margin-bottom: 20px;
   }
 
   h2, h3, h4, h5, h6 {
@@ -1727,13 +1737,6 @@ nav .brand-logo {
       @extend .btn;
       margin-top: 20px;
     }
-  }
-}
-.ce_mateContentBox, .ce_ct_contentBox {
-  &:nth-child(2n) {
-    border-top: 10px solid $secondary-color;
-    background-color: $contentbox-second-background;
-    color: $contentbox-second-color;
   }
 }
 

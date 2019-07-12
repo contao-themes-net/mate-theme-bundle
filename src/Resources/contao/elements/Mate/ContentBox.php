@@ -11,7 +11,7 @@
 namespace ContaoThemesNet\MateThemeBundle\Mate;
 
 /**
- * Class ContentProducts
+ * Class ContentBox
  *
  * @author Mathias Arzberger <develop@pdir.de>
  */
@@ -60,5 +60,16 @@ class ContentBox extends \ContentElement
         $this->Template->page = $this->mateContentBox_page;
         $this->Template->href = \FilesModel::findByUuid($this->singleSRC)->path;
         $this->Template->pageText = $this->mateContentBox_pageText;
+
+        // add an image
+        if ($this->addImage && $this->singleSRC != '')
+        {
+            $objModel = \FilesModel::findByUuid($this->singleSRC);
+            if ($objModel !== null && is_file(\System::getContainer()->getParameter('kernel.project_dir') . '/' . $objModel->path))
+            {
+                $this->singleSRC = $objModel->path;
+                $this->addImageToTemplate($this->Template, $this->arrData, null, null, $objModel);
+            }
+        }
     }
 }

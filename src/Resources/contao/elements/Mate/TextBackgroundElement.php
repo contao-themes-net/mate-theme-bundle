@@ -11,7 +11,7 @@
 namespace ContaoThemesNet\MateThemeBundle\Mate;
 
 /**
- * Class ParallaxElement
+ * Class TextBackgroundElement
  *
  * @author Philipp Seibt <develop@pdir.de>
  */
