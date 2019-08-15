@@ -11,9 +11,11 @@
                             / digital agentur</a></p>
                     <h2>Interessante Links</h2>
                     <ul class="link-list">
-                        <li><a href="https://docs.contao-themes.net" target="_blank"
-                               style="text-decoration: underline;">Dokumentation</a> (In Vorbereitung)</li>
-                        <li><a href="https://mate.contao-themes.net/" target="_blank"
+                        <li><a href="https://docs.contao-themes.net/#/mate-lizenz" target="_blank"
+                               style="text-decoration: underline;">Dokumentation</a></li>
+                        <li><a href="https://contao-themes.net/theme-detail/mate.html" target="_blank"
+                               style="text-decoration: underline;">Lizenz erwerben</a></li>
+                        <li><a href="https://mate.pdir.de/" target="_blank"
                                style="text-decoration: underline;">Demo</a></li>
                         <li><a href="https://github.com/contao-themes-net/mate-theme-bundle/issues" target="_blank"
                                style="text-decoration: underline;">Probleme melden</a></li>

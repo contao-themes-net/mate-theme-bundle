@@ -636,6 +636,10 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
 
 .container {
   padding: 0 15px;
+
+  .row .col {
+    margin-left: 0;
+  }
 }
 
 #wrapper > .container {
