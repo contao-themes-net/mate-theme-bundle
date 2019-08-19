@@ -1841,6 +1841,7 @@ nav .brand-logo {
 .mod_newslist, .mod_eventlist {
   > h1, > h2, > h3, > h4, > h5, > h6 {
     padding: 0 0.75rem;
+    width: 100%;
   }
 }
 
@@ -2582,7 +2583,7 @@ footer .container {
 }
 
 .checkbox_container label {
-  padding: 0 15px 0 25px;
+  padding: 0;
   color: $mateColor4;
 }
 
@@ -2818,7 +2819,7 @@ textarea {
 .mod_subscribe, .mod_unsubscribe {
   .checkbox_container, .radio_container {
     border: none;
-    padding: 15px 5px 0;
+    padding: 15px 5px 0 0;
   }
 
   .error, .confirm {

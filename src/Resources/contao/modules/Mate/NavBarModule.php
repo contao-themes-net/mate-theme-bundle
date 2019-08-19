@@ -107,6 +107,7 @@ class NavBarModule extends \Module
             $this->mateRootTpl = 'nav_mate_left';
             $this->mateMobileTpl = 'nav_mate_mobile';
             $this->mateDropdownTpl = '';
+            $this->mateDropdownTplLvl3 = '';
         }
         if ($this->mateNavbarType == 'type5')
         {
