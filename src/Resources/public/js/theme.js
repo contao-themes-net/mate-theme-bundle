@@ -205,7 +205,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 
 	$('.dropdown-button').click(function() {
 		$('.dropdown-content .dropdown-content').hide();
-		window.location.href = $(this).attr('href');
+		if( !$(this).hasClass('stopPropagation') ) window.location.href = $(this).attr('href');
 	});
 
 	/* ===================== *
