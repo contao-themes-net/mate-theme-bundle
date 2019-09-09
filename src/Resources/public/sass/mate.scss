@@ -3186,6 +3186,13 @@ mark {
   align-items: center;
   justify-content: center;
 
+  &:after{
+    content:'';
+    min-height:inherit;
+    font-size:0;
+    display: block;
+  }
+
   .content {
     width: 100%;
   }
