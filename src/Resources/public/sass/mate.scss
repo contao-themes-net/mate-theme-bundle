@@ -3181,8 +3181,10 @@ mark {
   height: inherit;
   text-align: center;
   margin: 20px 0;
-  display: table;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .content {
     width: 100%;
