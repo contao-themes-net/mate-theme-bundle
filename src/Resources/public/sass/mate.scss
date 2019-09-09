@@ -2737,6 +2737,28 @@ textarea {
 
 .widget:not(.widget-checkbox):not(.widget-radio) {
   @extend .input-field;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.widget:not(.widget-checkbox):not(.widget-radio)>label {
+  color: $mateColor4;
+  position: absolute;
+  padding: 0 10px;
+  top: -3px;
+  left: 0;
+  font-size: 1rem;
+  cursor: text;
+  transition: transform 0.2s ease-out, color 0.2s ease-out;
+  transform-origin: 0% 100%;
+  text-align: initial;
+  transform: translateY(12px);
+
+  &:not(.label-icon).active {
+    transform: translateY(-14px) scale(0.8);
+    transform-origin: 0 0;
+  }
 }
 
 .radio_container label {
@@ -2746,6 +2768,10 @@ textarea {
 
 [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
   padding-left: 30px;
+}
+
+[type="checkbox"]+span:not(.lever) {
+  padding-right: 20px;
 }
 
 [type="checkbox"] + span:not(.lever):before, [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
@@ -2772,6 +2798,10 @@ textarea {
 
 .file-path::placeholder {
   color: $mateColor4;
+}
+
+.radio_container legend + label {
+  padding-left: 0;
 }
 
 /* ========================== *
@@ -3994,6 +4024,44 @@ mark {
   /* Formulare */
   .file-field {
     margin-top: 0;
+  }
+
+  .ce_form .datepicker td, .datepicker td {
+    display: table-cell;
+
+    &:first-child {
+      padding: 7px 0;
+    }
+  }
+
+  .ce_form .datepicker table th, .datepicker table th {
+    padding: 3px 0px;
+  }
+
+  .datepicker-modal {
+    max-height: calc(100vh - 20%);
+  }
+
+  .datepicker-date-display {
+    padding: 15px;
+
+    .date-text {
+      font-size: 1.8rem;
+      line-height: 35px;
+    }
+
+    .year-text {
+      font-size: 1.2rem;
+      line-height: 25px;
+    }
+  }
+
+  .datepicker-day-button {
+    line-height: 22px;
+  }
+
+  .datepicker-container .datepicker-footer {
+    padding-top: 5px;
   }
 
   /* Navigation */
