@@ -20,12 +20,14 @@ for($i = 0; $i < $this->sliderStartSlide; $i++) {
 jQuery(document).ready(function($) {
     $("#contentSlider'.$this->id.':not(.smaller)").slider({
         height: 460,
+        full_width: true,
         indicators: true,
         interval: '.$this->sliderDelay.',
         duration: '.$this->sliderSpeed.'
     });
     $("#contentSlider'.$this->id.'.smaller").slider({
         height: 250,
+        full_width: true,
         indicators: true,
         interval: '.$this->sliderDelay.',
         duration: '.$this->sliderSpeed.'

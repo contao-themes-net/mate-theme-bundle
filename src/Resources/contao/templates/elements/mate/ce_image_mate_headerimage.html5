@@ -11,7 +11,9 @@
 
     <div class="caption">
         <div class="container">
-            <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+            <?php if($this->headline): ?>
+				<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+			<?php endif; ?>
         </div>
     </div>
 

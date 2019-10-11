@@ -278,4 +278,9 @@ jQuery.noConflict(); jQuery(document).ready(function($){
      * Parallax        	   *
      * =================== */
 	$('.parallax').parallax();
+
+	/* =================== *
+     * Carousel        	   *
+     * =================== */
+	$('.carousel').carousel();
 });
