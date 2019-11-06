@@ -1,0 +1,368 @@
+<?php $GLOBALS['TL_CSS'][''] = 'bundles/matetheme/css/slick.css'; ?>
+<?php $GLOBALS['TL_JAVASCRIPT'][''] = 'bundles/matetheme/js/slick.min.js'; ?>
+
+<?php
+    if (!is_object($this->estate)) {
+echo "<h1>Makler Modul M+ - Detailansicht</h1>";
+return;
+}
+
+global $objPage;
+// Meta Angaben
+$objPage->title = $this->estate->renderer('freitexte.objekttitel')->asText()->value(true);
+$objPage->description = $this->estate->renderer('freitexte.objektbeschreibung')->asText()->crop(155)->value(true);
+$text = $objPage->title.' '.$objPage->description;
+preg_match_all("/[a-z0-9\-]{4,}/i", $text, $matches);
+$GLOBALS['TL_KEYWORDS']=join(',', $matches[0]);
+
+// DUMP LIST OF ALL AVAILABLE FIELDS
+if($this->debug)
+{
+echo "<pre>"; var_dump($this->estate); echo "</pre>";
+}
+
+if($this->estate->renderer('freitexte.objekttitel')->asText()->value(true) == ''):
+// no objects
+echo $GLOBALS['TL_LANG']['makler_modul_mplus']['field_keys']['noestate'];
+else:
+?>
+<div class="estate-detail extended">
+
+        <div class="top-obj-details">
+            <div class="container">
+                <div>
+                    <div class="preis">
+                        <?php if($this->estate->rawValue('preise.nettokaltmiete') != ""): ?>
+                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <?php $this->estate->renderer('preise.nettokaltmiete')->asNumber(2)->render(); ?>
+                        <?php elseif($this->estate->rawValue('preise.kaltmiete') != ""): ?>
+                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <?php $this->estate->renderer('preise.kaltmiete')->asNumber(2)->render(); ?>
+                        <?php elseif($this->estate->rawValue('preise.gesamtmietenetto') != ""): ?>
+                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <?php $this->estate->renderer('preise.gesamtmietenetto')->asNumber(2)->render(); ?>
+                        <?php elseif($this->estate->rawValue('preise.warmmiete') != ""): ?>
+                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <?php $this->estate->renderer('preise.warmmiete')->asNumber(2)->render(); ?>
+                        <?php elseif($this->estate->rawValue('preise.gesamtmiete') != ""): ?>
+                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <?php $this->estate->renderer('preise.gesamtmiete')->asNumber(2)->render(); ?>
+                        <?php elseif($this->estate->rawValue('preise.kaufpreis') != ""): ?>
+                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <?php $this->estate->renderer('preise.kaufpreis')->asNumber(2)->render(); ?>
+                        <?php endif; ?>
+                    </div>
+                    <?php if($this->estate->rawValue('flaechen.anzahl_zimmer') != ""): ?>
+                    <div class="zimmer">
+                        <div class="icon"><i class="material-icons">business</i></div>
+                        <?php $this->estate->renderer('flaechen.anzahl_zimmer')->asNumber(0)->render(); ?>
+                    </div>
+                    <?php endif; ?>
+                    <div class="flaechen">
+                        <?php if($this->estate->rawValue('flaechen.wohnflaeche') != ""): ?>
+                        <div class="icon"><i class="material-icons">home</i></div>
+                        <?php $this->estate->renderer('flaechen.wohnflaeche')->asNumber(2)->append(" m²")->render(); ?>
+                        <?php elseif($this->estate->rawValue('flaechen.bueroflaeche') != ""): ?>
+                        <div class="icon"><i class="material-icons">home</i></div>
+                        <?php $this->estate->renderer('flaechen.bueroflaeche')->asNumber(2)->append(" m²")->render(); ?>
+                        <?php elseif($this->estate->rawValue('flaechen.gesamtflaeche') != ""): ?>
+                        <div class="icon"><i class="material-icons">home</i></div>
+                        <?php $this->estate->renderer('flaechen.gesamtflaeche')->asNumber(2)->append(" m²")->render(); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="small-pics small-pics-slider row">
+            <?php foreach ($this->estate->attachments()->startAt(0) as $attachment) : ?>
+                <div><?php $attachment->group("BILD,GRUNDRISS")->size(612,350)->render() ?></div>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="obj-header">
+            <?php $this->estate->renderer('verwaltung_techn.objektnr_extern')->asText()->render(); ?>
+        </div>
+
+        <div class="right">
+            <div class="obj-details">
+
+                <div class="prices">
+                    <div class="inside">
+                        <h2>Preise</h2>
+                        <?php $this->estate->renderer('objektkategorie.objektart.wohnung.wohnungtyp')->asText()->render(); ?>
+                        <?php $this->estate->renderer('preise.kaufpreis')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.kaltmiete')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.nettokaltmiete')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.gesamtmietenetto')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.mietpreis_pro_qm')->asNumber(2)->append(' EUR pro m²')->render(); ?>
+                        <?php $this->estate->renderer('preise.nebenkosten')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.heizkosten')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.warmmiete')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.gesamtmiete')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.kaution')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.stp_garage.@stellplatzmiete')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.stp_tiefgarage.@stellplatzmiete')->asNumber(2)->append(' EUR')->render(); ?>
+                        <?php $this->estate->renderer('preise.aussen_courtage')->asText()->render(); ?>
+                        <?php $this->estate->renderer('preise.provisionspflichtig', true)->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('verwaltung_objekt.verfuegbar_ab')->asText()->render(); ?>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="inside">
+                        <h2>Flächen</h2>
+                        <?php $this->estate->renderer('geo.etage')->asNumber(0)->render(); ?>
+                        <?php $this->estate->renderer('flaechen.wohnflaeche')->asNumber(0)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.gesamtflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.nutzflaeche')->asNumber(0)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.verkaufsflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.ladenflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.lagerflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.freiflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.bueroflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.gastroflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.grundstuecksflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.sonstflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.balkon_terrasse_flaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.gartenflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('flaechen.kellerflaeche')->asNumber(2)->append(' m²')->render(); ?>
+                        <?php $this->estate->renderer('geo.anzahl_etagen')->asNumber()->render(); ?>
+                        <?php $this->estate->renderer('geo.etage')->asNumber()->render(); ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_zimmer')->asNumber(0)->render(); ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_schlafzimmer')->asNumber(0)->render(); ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_badezimmer')->asNumber(0)->render(); ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_balkon')->asNumber()->render() ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_terrassen')->asNumber()->render() ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_stellplaetze')->asNumber(0)->render(); ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_sep_wc')->asNumber()->render() ?>
+                        <?php $this->estate->renderer('flaechen.plaetze_gastraum')->asNumber()->render() ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_betten')->asNumber()->render() ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_tagungsraeume')->asNumber()->render() ?>
+                        <?php $this->estate->renderer('flaechen.anzahl_wohneinheiten')->asNumber()->render() ?>
+                    </div>
+                </div>
+                <div class="equipment">
+                    <div class="inside">
+                        <h2>Austattung</h2>
+                        <?php $this->estate->renderer('ausstattung.kueche.@EBK')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.bad.@WANNE')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.bad.@DUSCHE')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.unterkellert.@keller')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.fahrstuhl.@PERSONEN')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.ausstattung.kantine_cafeteria')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.ausstattung.klimatisiert')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.dv_verkabelung', true)->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.kabel_sat_tv')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.gaestewc', true)->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.gastterrasse')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.barrierefrei')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.rollstuhlgerecht')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.gartennutzung')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('verwaltung_objekt.haustiere')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.stellplatzart.@TIEFGARAGE')->asText()->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.stellplatzart.@GARAGE')->asText()->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.stellplatzart.@CARPORT')->asText()->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.stellplatzart.@FREIPLATZ')->asText()->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.stellplatzart.@PARKHAUS')->asText()->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.stellplatzart.@DUPLEX')->asText()->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@TERRAKOTTA')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@MARMOR')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@LINOLEUM')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@DOPPELBODEN')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@ESTRICH')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@KUNSTSTOFF')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@FERTIGPARKETT')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@PARKETT')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@TEPPICH')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@STEIN')->asFlag('Ja', 'Nein')->render(); ?>
+                        <?php $this->estate->renderer('ausstattung.boden.@FLIESEN')->asFlag('Ja', 'Nein')->render(); ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="description">
+
+            <?php if($this->estate->renderer('freitexte.objektbeschreibung')->asText()->value(true) != ""): ?>
+                <div class="inside">
+                    <div><h3>Objektbeschreibung</h3></div>
+                    <?php $this->estate->renderer('freitexte.objektbeschreibung')->asText()->value(); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if($this->estate->renderer('freitexte.ausstatt_beschr')->asText()->value(true) != ""): ?>
+                <div class="inside">
+                    <div><h3>Ausstattung</h3></div>
+                    <?php $this->estate->renderer('freitexte.ausstatt_beschr')->asText()->value(); ?>
+
+                </div>
+            <?php endif; ?>
+
+            <?php if($this->estate->renderer('freitexte.lage')->asText()->value(true) != ""): ?>
+                <div class="inside">
+                    <div><h3>Lage</h3></div>
+                    <?php $this->estate->renderer('freitexte.lage')->asText()->value(); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if($this->estate->renderer('fussweg_oeffentlverkehr')->asText()->value(true) != "" ||
+            $this->estate->renderer('fahrzeit_hauptbahnhof')->asText()->value(true) != "" ||
+            $this->estate->renderer('fahrzeit_bab')->asText()->value(true) != "" ||
+            $this->estate->renderer('fahrzeit_flughafen')->asText()->value(true) != ""): ?>
+                <div class="inside">
+                    <div class="distances">
+                        <div><h3>Entfernungen</h3></div>
+                        <?php $this->estate->renderer('fussweg_oeffentlverkehr')->asNumber(2)->append(' km')->render(); ?>
+                        <?php $this->estate->renderer('fahrzeit_hauptbahnhof')->asNumber(2)->append(' km')->render(); ?>
+                        <?php $this->estate->renderer('fahrzeit_bab')->asNumber(2)->append(' km')->render(); ?>
+                        <?php $this->estate->renderer('fahrzeit_flughafen')->asNumber(2)->append(' km')->render(); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+            <div class="inside">
+                <?php $this->estate->energyPass()->render() ?>
+            </div>
+
+            <div class="contact inside">
+                <div><h3>Ansprechpartner</h3></div>
+                <?php if($this->estate->renderer('kontaktperson.anrede')->asText()->withoutLabel()->value(true)): ?>
+                <?php $this->estate->renderer('kontaktperson.anrede')->asText()->value(); ?><br>
+                <?php endif; ?>
+
+                <?php if($this->estate->renderer('kontaktperson.vorname')->asText()->withoutLabel()->value(true)): ?>
+                <?php $this->estate->renderer('kontaktperson.vorname')->asText()->value(); ?>, <?php $this->estate->renderer('kontaktperson.name')->asText()->value(); ?><br/>
+                <?php endif; ?>
+
+                <?php if($this->estate->renderer('kontaktperson.tel_zentrale')->asText()->withoutLabel()->value(true)): ?>
+                Tel.: <?php $this->estate->renderer('kontaktperson.tel_zentrale')->asText()->value(); ?>
+                <?php endif; ?>
+
+                <?php if($this->estate->renderer('kontaktperson.email_zentrale')->asText()->withoutLabel()->value(true)): ?>
+                <br>{{email::<?php $this->estate->renderer('kontaktperson.email_zentrale')->asText()->value(); ?>}}
+                <?php endif; ?>
+            </div>
+
+            <?php if($this->estate->renderer('freitexte.sonstige_angaben')->asText()->value(true) != ""): ?>
+                <div class="inside">
+                    <div><h3>Sonstiges</h3></div>
+                    <?php $this->estate->renderer('freitexte.sonstige_angaben')->asText()->value(); ?>
+                </div>
+            <?php endif; ?>
+
+            <div class="documents inside">
+                <div><h3>Dokumente</h3></div>
+                <?php $i = 1; foreach ($this->estate->attachments()->startAt(0) as $attachment): ?>
+                <?php $attachment->group("DOKUMENTE,FILMLINK")->render() ?>
+                <?php $i++; endforeach; ?>
+            </div>
+
+            <?php if($this->estate->renderer('verwaltung_objekt.objektadresse_freigeben')->asText()->value(true) == true && $this->showMap == 1): ?>
+                <div class="inside">
+                    <div><h3>Adresse</h3></div>
+                    <div class="address">
+                        <h4>Objektanschrift</h4>
+                        <?php $this->estate->renderer('geo.strasse')->asText()->value() ?> <?php $this->estate->renderer('geo.hausnummer')->asText()->value() ?><br />
+                        <?php $this->estate->renderer('geo.plz')->asText()->value() ?> <?php $this->estate->renderer('geo.ort')->asText()->value() ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+
+        <?php if($this->estate->renderer('verwaltung_objekt.objektadresse_freigeben')->asText()->value(true) == true && $this->showMap == 1): ?>
+        <script>
+            $(document).ready( function() {
+
+                if(typeof google === 'undefined')
+                    return;
+
+                $("#confirm-googlemaps").click( function() {
+                    setMap();
+                });
+
+                $("#confirm-googlemaps .btn").click( function() {
+                    $("#confirm-googlemaps").trigger("click");
+                    return false;
+                });
+
+                var mapsCookie = "<?= \Input::cookie('dlh_googlemaps') ?>";
+                if(mapsCookie != "" || $(".dlh_googlemap > div").attr("id") != "confirm-googlemaps") {
+                    setMap();
+                }
+
+                function setMap() {
+                    setTimeout( function() {
+                        var geocoder = new google.maps.Geocoder();
+                        var lat; var lng;
+                        geocodeAddress(geocoder);
+                    },500);
+                }
+
+                function geocodeAddress(geocoder, resultsMap) {
+                    var address = "<?php $this->estate->renderer('geo.strasse')->asText()->value() ?>";
+                    address = address + " <?php $this->estate->renderer('geo.hausnummer')->asText()->value() ?>";
+                    address = address + ", <?php $this->estate->renderer('geo.ort')->asText()->value() ?>";
+                    geocoder.geocode({'address': address}, function(results, status) {
+                        if (status === google.maps.GeocoderStatus.OK) {
+                            lat = results[0].geometry.location.lat();
+                            lng = results[0].geometry.location.lng();
+                            setCenter(lat, lng);
+                            setMarker(lat, lng);
+                        }
+                    });
+                }
+
+                function setCenter(lat, lng) {
+                    gmap1.setCenter(new google.maps.LatLng(lat, lng));
+                }
+
+                function setMarker(lat, lng) {
+                    var gmap1_marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(lat, lng),
+                        map: gmap1,
+                        zIndex: 1
+                    });
+                }
+            });
+        </script>
+        <?php endif; ?>
+
+        <div class="back footer">
+            <?php $this->estate->backButton()->render() ?>
+        </div>
+</div>
+<?php endif; ?>
+
+<?php
+$GLOBALS['TL_BODY'][] = "
+<script>
+jQuery(document).ready( function($) {
+    $('.small-pics-slider').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 5,
+        prevArrow: '<button type=\"button\" class=\"slick-prev\"><i class=\"material-icons\">chevron_left</i></button>',
+        nextArrow: '<button type=\"button\" class=\"slick-next\"><i class=\"material-icons\">chevron_right</i></button>',
+        responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 1
+            }
+        }]
+    });
+});
+</script>
+";
+?>

@@ -114,6 +114,7 @@ button, input, optgroup, select, textarea {
 #wrapper {
   background: $pageBackground;
   padding-top: 165px;
+  overflow-y: hidden;
 }
 
 @media only screen and (min-width: 601px) {
@@ -138,7 +139,7 @@ button, input, optgroup, select, textarea {
   @extend .row;
 }
 
-.mod_article {
+.mod_article.block {
   overflow: visible;
 }
 
@@ -1540,6 +1541,7 @@ nav .brand-logo {
 
 .headerImage {
   position: relative;
+  pointer-events: none;
 
   h1, h2, h3, h4, h5, h6 {
     background: $headerHeadlineBackground;
@@ -1575,6 +1577,7 @@ nav .brand-logo {
 
   img {
     width: 100%;
+    vertical-align: bottom;
   }
 
   &:not(.left):not(.right) .container {
