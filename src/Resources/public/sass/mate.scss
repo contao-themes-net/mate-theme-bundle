@@ -1180,6 +1180,10 @@ nav {
   }
 }
 
+.dropdown-content li > a > i {
+  margin: 0;
+}
+
 .headroom--unpinned {
   transform: translateY(-100%);
 }

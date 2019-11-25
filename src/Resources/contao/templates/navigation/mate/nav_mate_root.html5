@@ -5,7 +5,7 @@
           <a class="<?php if (!empty($item['subitems'])): ?>dropdown-button<?php endif; ?>
             <?php if($item['isActive']): ?> active <?php endif; ?><?php if ($item['class']) echo $item['class']; ?> valign"
             <?php if (!empty($item['subitems'])): ?> data-target="nav<?= $this->id ?>dropdown<?= $item['id'] ?>"<?php endif; ?>
-            href="<?= $item['href'] ?: './' ?>"
+            href="/<?= $item['href'] ?: './' ?>"
             title="<?= $item['pageTitle'] ?: $item['title'] ?>"
             <?php if ($item['accesskey']) echo ' accesskey="' . $item['accesskey'] . '"'; ?>
             <?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?>
