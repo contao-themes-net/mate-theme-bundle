@@ -76,7 +76,7 @@ else:
 
         <div class="small-pics small-pics-slider row">
             <?php foreach ($this->estate->attachments()->startAt(0) as $attachment) : ?>
-                <div><?php $attachment->group("BILD,GRUNDRISS")->size(612,350)->render() ?></div>
+                <div><?php $attachment->group("BILD,GRUNDRISS,AUSSENANSICHTEN,INNENANSICHTEN,PANORAMA")->size(612,350)->render() ?></div>
             <?php endforeach; ?>
         </div>
 
