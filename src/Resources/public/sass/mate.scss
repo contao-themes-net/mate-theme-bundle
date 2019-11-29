@@ -2090,6 +2090,14 @@ nav.pagination li {
   color: #9c9c9c;
 }
 
+.event .recurring time {
+  background: none;
+  padding: 0;
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .layout_teaser, .layout_list.event {
   .inner {
     a.more {
@@ -3939,12 +3947,29 @@ mark {
   }
 
   .calendar {
-    thead tr:last-child, tbody {
+    thead tr:last-child {
       display: none;
     }
 
-    tr th {
+    tbody, tr, th, td {
       display: block;
+      width: 100%;
+    }
+
+    .days.active {
+      width: 100%;
+    }
+
+    .days.today {
+      color: $secondary-text-color;
+    }
+
+    td:not(.active) {
+      display: none;
+    }
+
+    .header {
+      font-weight: 700;
     }
   }
 
