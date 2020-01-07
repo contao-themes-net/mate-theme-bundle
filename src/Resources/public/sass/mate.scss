@@ -2861,6 +2861,11 @@ textarea {
   }
 }
 
+.checkbox_container label[for=autologin] {
+  padding-top: 15px;
+  display: block;
+}
+
 .mod_subscribe, .mod_unsubscribe {
   .checkbox_container, .radio_container {
     border: none;

@@ -26,7 +26,10 @@
             <?php if ($this->autologin): ?>
                 <div class="widget widget-checkbox">
                     <fieldset class="checkbox_container">
-                        <span><input type="checkbox" name="autologin" id="autologin" value="1" class="checkbox"> <label for="autologin"><?= $this->autoLabel ?></label></span>
+                        <label for="autologin">
+                            <input type="checkbox" name="autologin" id="autologin" value="1" class="checkbox">
+                            <span><?= $this->autoLabel ?></span>
+                        </label>
                     </fieldset>
                 </div>
             <?php endif; ?>
