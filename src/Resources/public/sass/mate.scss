@@ -1062,14 +1062,20 @@ nav {
     display: block;
 
     > a, > span {
-      background: $mateColor2;
+      background: $subnav-background;
       padding: 10px 15px;
-      color: $secondary-text-color;
+      color: $subnav-color;
       margin: 2px 0;
       display: block;
 
-      &:hover, &.active {
-        background: $mateColor3;
+      &:hover {
+        background: $subnav-hover-background;
+        color: $subnav-hover-color;
+      }
+
+      &.active {
+        background: $subnav-active-background;
+        color: $subnav-active-color;
       }
     }
 
