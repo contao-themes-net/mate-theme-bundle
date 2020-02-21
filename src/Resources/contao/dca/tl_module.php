@@ -82,7 +82,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['mateModal_linkText'] = array
     'exclude' => true,
     'inputType' => 'text',
     'eval' => array('tl_class'=>'w50'),
-    'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['mateModal_linkClass'] = array
@@ -91,7 +91,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['mateModal_linkClass'] = array
     'exclude' => true,
     'inputType' => 'text',
     'eval' => array('tl_class'=>'w50'),
-    'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['mateModal_text'] = array
@@ -120,7 +120,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['mateModal_class'] = array
     'exclude' => true,
     'inputType' => 'text',
     'eval' => array('tl_class'=>'w50'),
-    'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "text NULL"
 );
 
 class tl_module_mate extends Backend {

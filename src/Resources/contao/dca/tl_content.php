@@ -32,7 +32,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_page'] = array
         'tl_class'=>'w50 autoheight'
     ),
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_page'],
-    'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_pageText'] = array
@@ -42,7 +42,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_pageText'] = array
     'inputType' => 'text',
     'eval' => array('tl_class'=>'w50'),
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_pageText'],
-    'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateContentBox_page'] = array
@@ -55,7 +55,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateContentBox_page'] = array
         'tl_class'=>'w50'
     ),
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['mateContentBox_page'],
-    'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateContentBox_pageText'] = array
@@ -65,7 +65,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateContentBox_pageText'] = array
     'inputType' => 'text',
     'eval' => array('tl_class'=>'w50'),
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['mateContentBox_pageText'],
-    'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateContentBox_customTpl'] = array
@@ -94,7 +94,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserbox_subHeadline'] = array
     'exclude' => true,
     'inputType' => 'text',
     'eval' => array('tl_class'=>'w50 clr'),
-    'sql' => "varchar(255) NOT NULL default ''"
+    'sql' => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateParallaxElement_customTpl'] = array
