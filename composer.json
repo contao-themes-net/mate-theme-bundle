@@ -54,5 +54,19 @@
   },
   "extra": {
     "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
+  },
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/user?u=28241718"
+    },
+    {
+      "type": "corporate",
+      "url": "https://contao-themes.net/sponsoring.html"
+    }
+  ],
+  "suggest": {
+    "pdir/social-feed-bundle": "MATE Theme includes all styles for social feed bundle. / MATE Theme enthält Stylesheets für das Social Feed Bundle",
+    "pdir/animated-timeline-bundle": "Render content in a dynamic timeline. / Zeige Inhalte in einem dynamischen Zeitstrahl an."
   }
 }
