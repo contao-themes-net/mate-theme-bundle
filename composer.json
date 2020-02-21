@@ -24,7 +24,8 @@
     "forum": "https://community.contao.org",
     "email" : "develop@pdir.de",
     "issues" : "https://github.com/contao-themes-net/mate-theme-bundle/issues",
-    "source" : "https://github.com/contao-themes-net/mate-theme-bundle"
+    "source" : "https://github.com/contao-themes-net/mate-theme-bundle",
+    "donate": "https://contao-themes.net/sponsoring.html"
   },
   "require": {
     "php": ">=7.1",
