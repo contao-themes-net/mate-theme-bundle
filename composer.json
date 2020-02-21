@@ -66,6 +66,7 @@
     }
   ],
   "suggest": {
+    "pdir/maklermodul-bundle": "MATE Theme includes all styles for maklermodul bundle. / MATE Theme enthält Stylesheets für das Maklermodul Bundle.",
     "pdir/social-feed-bundle": "MATE Theme includes all styles for social feed bundle. / MATE Theme enthält Stylesheets für das Social Feed Bundle",
     "pdir/animated-timeline-bundle": "Render content in a dynamic timeline. / Zeige Inhalte in einem dynamischen Zeitstrahl an."
   }
