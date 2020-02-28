@@ -53,6 +53,10 @@ class NavBarModule extends \Module
             $this->Template->setName('mod_mate_navbar');
         }
 
+        if($this->mateNavbar_customTpl != "") {
+            $this->Template->setName($this->mateNavbar_customTpl);
+        }
+
         $this->Template->navbarType = $this->mateNavbarType;
         $this->Template->showLogo = $this->mateShowLogo;
         $this->Template->showSearch = $this->mateShowSearch;

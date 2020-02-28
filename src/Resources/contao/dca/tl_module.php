@@ -11,7 +11,7 @@
  * Add palette to tl_content
  */
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mateNavbar'] = '{title_legend},name,headline,type;levelOffset,showLevel,hardLimit,showProtected,showHidden;{mateNavbarSettings},mateNavbarType,mateShowLogo,mateShowSearch,mateShowMobileMenu,mateIncludeHeadroom,mateNavbarStuck;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mateNavbar'] = '{title_legend},name,headline,type;levelOffset,showLevel,hardLimit,showProtected,showHidden;{mateNavbarSettings},mateNavbar_customTpl,mateNavbarType,mateShowLogo,mateShowSearch,mateShowMobileMenu,mateIncludeHeadroom,mateNavbarStuck;{expert_legend:hide},cssID,space';
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['mateModal'] = '{title_legend},name,type;{modal_link_legend},mateModal_linkText,mateModal_linkClass;{modal_headline_legend},headline;{modal_text_legend},mateModal_text,mateModal_class;{template_legend:hide},mateModal_customTpl;{expert_legend:hide},cssID,space';
 
@@ -26,7 +26,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['mateNavbarType'] = array
         'mandatory' => true,
         'multiple' => false,
         'maxlength' => 64,
-        'tl_class' => 'wizard'
+        'tl_class' => 'wizard w50'
     ),
     'inputType' => 'select',
     'options' => array('type1','type2','type5'),
@@ -123,6 +123,15 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['mateModal_class'] = array
     'sql' => "text NULL"
 );
 
+$GLOBALS['TL_DCA']['tl_module']['fields']['mateNavbar_customTpl'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['mateNavbar_customTpl'],
+    'exclude' => true,
+    'inputType' => 'select',
+    'options_callback' => ['tl_module_mate', 'getNavbarTemplates'],
+    'eval' => ['includeBlankOption'=>true, 'chosen'=>true, 'tl_class'=>'w50'],
+    'sql' => "varchar(64) NOT NULL default ''"
+];
+
 class tl_module_mate extends Backend {
     /**
      * Return all content element templates as array
@@ -135,5 +144,10 @@ class tl_module_mate extends Backend {
     public function getModalTemplates(DataContainer $dc)
     {
         return $this->getTemplateGroup('mod_mate_modal');
+    }
+
+    public function getNavbarTemplates(DataContainer $dc)
+    {
+        return $this->getTemplateGroup('mod_mate_navbar');
     }
 }
