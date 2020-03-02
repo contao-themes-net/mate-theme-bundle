@@ -1,4 +1,4 @@
-<div class="ce_mateTextBackgroundElement block">
+<div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
     <div class="inside">
         <div>
             <?php if (!$this->addBefore): ?>

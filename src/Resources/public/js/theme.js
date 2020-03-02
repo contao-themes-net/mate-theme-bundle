@@ -48,7 +48,13 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 	 * ===================== */
 	$( ".slides .ce_text, .slides .ce_image, .slides .ce_mateTextBackgroundElement, .slides .ce_youtube, .slides .ce_player" ).each(function( index ) {
 		var classList = $(this).attr('class');
-		$(this).replaceWith("<li class='" + classList + "'>" + $(this).html() + "</li>");
+		var id = '';
+
+		if(typeof $(this).attr('id') !== 'undefined') {
+			var id = " id='" + $(this).attr('id') + "'";
+		}
+
+		$(this).replaceWith("<li class='" + classList + "'" + id + ">" + $(this).html() + "</li>");
 	});
 
 	/* ===================== *
@@ -202,6 +208,8 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 		constrainWidth: false,
 		closeOnClick: false
 	});
+
+	$("nav.subnav a.dropdown-button").dropdown();
 
 	$('.dropdown-button').click(function() {
 		$('.dropdown-content .dropdown-content').hide();

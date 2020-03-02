@@ -925,6 +925,10 @@ nav {
       }
 
       ul {
+        ul ul .material-icons {
+          display: none;
+        }
+
         li {
           height: 50px;
           text-transform: uppercase;
@@ -1051,6 +1055,31 @@ nav {
 .subnav {
   background: none;
   box-shadow: none;
+
+  .dropdown-content {
+    display: block;
+    opacity: 1;
+    position: relative;
+    background: none;
+    margin: 4px 0 0 15px;
+    box-shadow: none;
+    z-index: 1;
+
+    li {
+      min-height: 1px;
+
+      &:hover {
+        background: none;
+      }
+
+      > a, > span {
+        background: $subnav-dropdown-background;
+        color: $subnav-dropdown-color;
+        padding: 10px 15px;
+        line-height: 1;
+      }
+    }
+  }
 
   ul.desktop-menu {
     margin: 0;

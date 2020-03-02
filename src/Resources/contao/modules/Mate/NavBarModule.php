@@ -106,6 +106,7 @@ class NavBarModule extends \Module
             $this->mateMobileTpl = 'nav_mate_mobile';
             $this->mateDropdownTpl = '';
             $this->mateDropdownTplLvl3 = '';
+            $this->mateDropdownTplLvl4 = '';
         }
         if ($this->mateNavbarType == 'type2')
         {
@@ -113,6 +114,7 @@ class NavBarModule extends \Module
             $this->mateMobileTpl = 'nav_mate_mobile';
             $this->mateDropdownTpl = '';
             $this->mateDropdownTplLvl3 = '';
+            $this->mateDropdownTplLvl4 = '';
         }
         if ($this->mateNavbarType == 'type5')
         {
@@ -120,6 +122,7 @@ class NavBarModule extends \Module
             $this->mateMobileTpl = 'nav_mate_mobile';
             $this->mateDropdownTpl = 'nav_mate_dropdown';
             $this->mateDropdownTplLvl3 = 'nav_mate_dropdown_lvl3';
+            $this->mateDropdownTplLvl4 = 'nav_mate_dropdown_lvl4';
         }
 
         if(count($arrItems) > 0) {
@@ -136,6 +139,7 @@ class NavBarModule extends \Module
 
             $strDropdownNav = '';
             $strDropdownNavLvl3 = '';
+            $strDropdownNavLvl4 = '';
             if(is_array($arrItems)) {
                 foreach ($arrItems as $item) {
                     if(isset($item['subitems']) && is_array($item['subitems']) && count($item['subitems']) > 0) {
@@ -154,6 +158,17 @@ class NavBarModule extends \Module
                                 $objTemplate->itemId = $subitem['id'];
                                 $objTemplate->items = $subitem['subitems'];
                                 $strDropdownNavLvl3 .= $objTemplate->parse();
+
+                                foreach ($subitem['subitems'] as $subitemLvl4) {
+                                    if(isset($subitemLvl4['subitems']) && is_array($subitemLvl4['subitems']) && count($subitemLvl4['subitems']) > 0) {
+                                        /** @var \FrontendTemplate|object $objTemplate */
+                                        $objTemplate = new \FrontendTemplate($this->mateDropdownTplLvl4);
+                                        $objTemplate->id = $this->id;
+                                        $objTemplate->itemId = $subitemLvl4['id'];
+                                        $objTemplate->items = $subitemLvl4['subitems'];
+                                        $strDropdownNavLvl4 .= $objTemplate->parse();
+                                    }
+                                }
                             }
                         }
                     }
@@ -161,6 +176,7 @@ class NavBarModule extends \Module
             }
             $this->Template->dropdownNav = $strDropdownNav;
             $this->Template->dropdownNavLvl3 = $strDropdownNavLvl3;
+            $this->Template->dropdownNavLvl4 = $strDropdownNavLvl4;
         }
 
         if($this->mateIncludeHeadroom == 1) {
