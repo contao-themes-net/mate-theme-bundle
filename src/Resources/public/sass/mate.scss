@@ -790,9 +790,31 @@ header {
   right: 0;
 }
 
-/* ========================== *
- *    Navigation              *
- * ========================== */
+#header .mod_breadcrumb nav {
+  background: $breadcrumb-background;
+  height: inherit;
+  line-height: 1.2;
+  padding: 20px 0;
+  box-shadow: none;
+
+  a {
+    color: $breadcrumb-link;
+
+    &:hover {
+      color: $breadcrumb-link-hover;
+    }
+  }
+
+  .breadcrumb:before {
+    line-height: 1;
+    margin-top: -2px;
+    color: $breadcrumb-link;
+  }
+}
+
+  /* ========================== *
+   *    Navigation              *
+   * ========================== */
 nav {
   height: inherit;
   margin-bottom: 15px;

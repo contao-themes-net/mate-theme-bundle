@@ -38,6 +38,11 @@ $button-flat-color: $secondary-text-color;
 $button-floating-background: $mateColor2;
 $button-floating-background-hover: $mateColor3;
 
+/* Breadcrumb */
+$breadcrumb-background: rgba($mateColor2,.08);
+$breadcrumb-link: $primary-link-font-color;
+$breadcrumb-link-hover: $primary-link-hover-font-color;
+
 /* Content Box */
 $contentbox-first-color: $boxes-text-color;
 $contentbox-second-color: $boxes-text-color;
