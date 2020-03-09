@@ -15,7 +15,13 @@
     <link rel="stylesheet" type="text/css" media="all" href="<?php
     // add stylesheets
     $combiner = new Combiner();
-    $combiner->add('bundles/matetheme/sass/mate.scss');
+
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+        $combiner->add('bundles/matetheme/sass/mate_win.scss');
+    } else {
+        $combiner->add('bundles/matetheme/sass/mate.scss');
+    }
+
     echo $combiner->getCombinedFile(); ?>">
 
     <?= $this->stylesheets ?>

@@ -4,7 +4,7 @@ namespace ContaoThemesNet\MateThemeBundle\Module;
 
 class MateThemeSetup extends \BackendModule
 {
-    const VERSION = '2.7.0';
+    const VERSION = '2.7.1';
 
     protected $strTemplate = 'be_mateTheme_setup';
 
@@ -39,7 +39,7 @@ class MateThemeSetup extends \BackendModule
                 $pos = strpos($path,"matetheme");
                 $filesFolder = "files/mate".str_replace("matetheme","",substr($path,$pos))."/".$dir;
 
-                if($dir != "_mate_variables.scss" && $dir != "_mate_colors.scss" && $dir != "backend.css" && $dir != "mate.scss" && $dir != "materialize.scss" && $dir != "maklermodul.scss") {
+                if($dir != "_mate_variables.scss" && $dir != "_mate_colors.scss" && $dir != "backend.css" && $dir != "mate.scss" && $dir != "materialize.scss" && $dir != "maklermodul.scss" && $dir != "style.scss" && $dir != "mate_win.scss" && $dir != "materialize_win.scss") {
                     if(!file_exists(TL_ROOT."/".$filesFolder)) {
                         $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
