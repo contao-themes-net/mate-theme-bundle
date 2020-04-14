@@ -53,7 +53,7 @@ class HookListener
         if(strpos($class,"noscript") === false) {
             if($parts[2] != "") $class = ".".$parts[2];
             $class = str_replace("noscript","", $class);
-            $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/matetheme/js/jquery.countTo.js';
+            $GLOBALS['TL_BODY'][] = '<script src="bundles/matetheme/js/jquery.countTo.js"></script>';
             $GLOBALS['TL_BODY'][] = '<script>
             jQuery( document ).ready(function($) {
                 var countTo = 0;

@@ -2,6 +2,7 @@
 $GLOBALS['TL_LANG']['tl_module']['modal_link_legend'] = 'Link-Einstellungen';
 $GLOBALS['TL_LANG']['tl_module']['modal_headline_legend'] = 'Überschrift des Modalen Dialog';
 $GLOBALS['TL_LANG']['tl_module']['modal_text_legend'] = 'Inhalt des Modalen Dialog';
+$GLOBALS['TL_LANG']['tl_module']['mate_slider_legend'] = 'MATE Slider Einstellungen';
 
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type1'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type1'];
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type2'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type2'];
@@ -23,3 +24,8 @@ $GLOBALS['TL_LANG']['tl_module']['mateModal_linkClass'] = ['Link CSS-Klassen','H
 $GLOBALS['TL_LANG']['tl_module']['mateModal_text'] = ['Text','Dieser Text wird als Inhalt in dem modalen Dialog dargestellt.'];
 $GLOBALS['TL_LANG']['tl_module']['mateModal_customTpl'] = ['Individuelles Template','Hier können Sie ein individuelles Template auswählen.'];
 $GLOBALS['TL_LANG']['tl_module']['mateModal_class'] = ['CSS-Klassen für den Modalen Dialog','Hier können Sie dem modalen Dialog weitere Klassen zuweisen.'];
+
+$GLOBALS['TL_LANG']['tl_module']['mateSliderDuration'] = ['Übergangsgeschwindigkeit','Hier kann die Übergangsgeschwindigkeit definiert werden.'];
+$GLOBALS['TL_LANG']['tl_module']['mateSliderInterval'] = ['Intervall','Geben Sie hier die Anzahl der Millisekunden bis zum nächsten Wechsel an.'];
+$GLOBALS['TL_LANG']['tl_module']['mateSliderHeight'] = ['Höhe in Pixel','Geben Sie hier die Höhe des Sliders in Pixel an.'];
+$GLOBALS['TL_LANG']['tl_module']['mateSliderIndicators'] = ['Zeige Navigation an','Wenn diese Option aktiviert ist, wird unter dem aktuellen Element die Navigation mit allen anderen News-Elemente angezeigt.'];

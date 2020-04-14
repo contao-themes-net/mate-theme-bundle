@@ -57,44 +57,6 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 		$(this).replaceWith("<li class='" + classList + "'" + id + ">" + $(this).html() + "</li>");
 	});
 
-	/* ===================== *
-	 *   Mate Slider		 *
-	 * ===================== */
-	$(".slider.mod_newslist:not(.smaller):not(.custom)").slider({
-		height: 460,
-	    indicators: true,
-	    interval: 12000,
-		duration: 150
-	});
-
-	$(".slider.mod_newslist.smaller:not(.custom)").slider({
-		height: 250,
-	    indicators: true,
-	    interval: 12000,
-		duration: 150
-	});
-
-
-	$( ".slider.mod_newslist .next" ).click(function() {
-	  $(".slider").slider("next");
-	});
-
-	$( ".slider.mod_newslist .prev" ).click(function() {
-	  $(".slider").slider("prev");
-	});
-
-	$( ".slider.mod_newslist .sliderImage" ).each(function( index ) {
-	  var headline = $(this).find("h2").text();
-	  var subheadline = $(this).find(".subheadline").text();
-	  var i = index;
-
-	  $( ".slider.mod_newslist .indicator-item" ).each(function( index ) {
-		if(i == index) {
-			$(this).append("<span class='inner'><span class='subheadline'>" + subheadline + "</span><span class='headline'>" + headline + "</span></span>");
-		}
-	  });
-	});
-
 	/* Content Slider - text below image */
 
 	if( $(".slider-text-below-image li").length > 0 ) {

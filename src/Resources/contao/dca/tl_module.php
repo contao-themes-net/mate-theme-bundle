@@ -8,15 +8,21 @@
  */
 
 /**
- * Add palette to tl_content
+ * Add palette to tl_module
  */
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['mateNavbar'] = '{title_legend},name,headline,type;levelOffset,showLevel,hardLimit,showProtected,showHidden;{mateNavbarSettings},mateNavbar_customTpl,mateNavbarType,mateShowLogo,mateShowSearch,mateShowMobileMenu,mateIncludeHeadroom,mateNavbarStuck;{expert_legend:hide},cssID,space';
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['mateModal'] = '{title_legend},name,type;{modal_link_legend},mateModal_linkText,mateModal_linkClass;{modal_headline_legend},headline;{modal_text_legend},mateModal_text,mateModal_class;{template_legend:hide},mateModal_customTpl;{expert_legend:hide},cssID,space';
 
+$GLOBALS['TL_DCA']['tl_module']['palettes']['newslist'] = str_replace(
+    'imgSize;',
+    'imgSize;{mate_slider_legend},mateSliderHeight,mateSliderInterval,mateSliderDuration,mateSliderIndicators;',
+    $GLOBALS['TL_DCA']['tl_module']['palettes']['newslist']
+);
+
 /**
- * Add fields to tl_content
+ * Add fields to tl_module
  */
 $GLOBALS['TL_DCA']['tl_module']['fields']['mateNavbarType'] = array
 (
@@ -130,6 +136,38 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['mateNavbar_customTpl'] = [
     'options_callback' => ['tl_module_mate', 'getNavbarTemplates'],
     'eval' => ['includeBlankOption'=>true, 'chosen'=>true, 'tl_class'=>'w50'],
     'sql' => "varchar(64) NOT NULL default ''"
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['mateSliderHeight'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['mateSliderHeight'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['maxlength' => 5, 'tl_class'=>'w50'],
+    'sql' => "varchar(5) NOT NULL default ''"
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['mateSliderInterval'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['mateSliderInterval'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['maxlength' => 8, 'tl_class'=>'w50'],
+    'sql' => "varchar(8) NOT NULL default ''"
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['mateSliderDuration'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['mateSliderDuration'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['maxlength' => 8, 'tl_class'=>'w50'],
+    'sql' => "varchar(8) NOT NULL default ''"
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['mateSliderIndicators'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['mateSliderIndicators'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => ['tl_class'=>'w50 clr'],
+    'sql' => "char(1) NOT NULL default '1'"
 ];
 
 class tl_module_mate extends Backend {
