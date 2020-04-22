@@ -240,7 +240,7 @@ class NavBarModule extends \Module
                 $objSubpage->domain = $host;
             }
             // Do not show protected pages unless a back end or front end user is logged in
-            if (!$objSubpage->protected || BE_USER_LOGGED_IN || (is_array($_groups) && count(array_intersect($_groups, $groups))) || $this->showProtected || ($this instanceof \ModuleSitemap && $objSubpage->sitemap == 'map_always')) {
+            if (!$objSubpage->protected || BE_USER_LOGGED_IN || (is_array($_groups) && is_array($groups) && count(array_intersect($_groups, $groups))) || $this->showProtected || ($this instanceof \ModuleSitemap && $objSubpage->sitemap == 'map_always')) {
                 // Check whether there will be subpages
                 if ($objSubpage->subpages > 0 && (!$this->showLevel || $this->showLevel >= $level || (!$this->hardLimit && ($objPage->id == $objSubpage->id || in_array($objPage->id, $this->Database->getChildRecords($objSubpage->id, 'tl_page')))))) {
                     $subitems = $this->getNavigationMenu($objSubpage->id, $level, $host, $language);
