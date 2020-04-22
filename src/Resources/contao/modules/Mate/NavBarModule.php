@@ -125,7 +125,7 @@ class NavBarModule extends \Module
             $this->mateDropdownTplLvl4 = 'nav_mate_dropdown_lvl4';
         }
 
-        if(count($arrItems) > 0) {
+        if(is_array($arrItems) && count($arrItems) > 0) {
             /** @var \FrontendTemplate|object $objTemplate */
             $objTemplate = new \FrontendTemplate($this->mateRootTpl);
             $objTemplate->items = $arrItems;
