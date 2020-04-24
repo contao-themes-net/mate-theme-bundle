@@ -31,7 +31,9 @@ class ModuleNewsListMate extends \Contao\ModuleNewsList {
             
                   $( ".slider.mod_newslist .indicator-item" ).each(function( index ) {
                     if(i == index) {
-                        $(this).append("<span class=\'inner\'><span class=\'subheadline\'>" + subheadline + "</span><span class=\'headline\'>" + headline + "</span></span>");
+                        $(this).append("<span class=\'inner\'></span>");
+                        $(this).find(".inner").append("<span class=\'subheadline\'>" + subheadline + "</span>");
+                        $(this).find(".inner").append("<span class=\'headline\'>" + headline + "</span>");
                     }
                   });
                 });
