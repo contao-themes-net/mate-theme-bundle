@@ -56,3 +56,9 @@ Edit your app/config/parameters.yml file:
     parameters:
       mate_theme.assets.custom_scss: 'my/path/to/_custom.scss'
       mate_theme.assets.custom_variables : 'my/path/to/_custom_variables.scss'
+
+## Contao Themes
+
+| [![0.1 Theme](https://contao-themes.net/assets/images/3/0.1_Energy_saving_Contao_Theme_00-1e927a73.jpg)](https://contao-themes.net/theme-detail/zeroone.html) | [![ODD Theme](https://contao-themes.net/assets/images/c/ODD_Exploring_Contao_Theme_05-9e3a18d8.png)](https://contao-themes.net/theme-detail/odd.html) | [![NATURE Theme](https://contao-themes.net/assets/images/6/00_00_naturetheme-605a9391.jpg)](https://contao-themes.net/theme-detail/nature.html) |
+|:---:|:---:|:---:|
+| **0.1 Theme**  | **ODD Theme**  | **NATURE Theme**  |
