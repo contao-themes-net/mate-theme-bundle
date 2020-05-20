@@ -64,7 +64,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 			var headline = $(this).find("> h2, > h3, > h4, > h5, > h6").html();
 			var index = $(this).index() + 1;
 			setTimeout(function(){
-				$(".slider-text-below-image .indicators li:nth-of-type(" + index + ")").text(headline);
+				$(".slider-text-below-image .indicators li:nth-of-type(" + index + ")").html(headline);
 			},100);
 		});
 
@@ -171,7 +171,12 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 		closeOnClick: false
 	});
 
-	$("nav.subnav a.dropdown-button").dropdown();
+	$("nav.subnav a.dropdown-button").dropdown({
+		inDuration: 0,
+		outDuration: 0,
+		alignment: "right",
+		closeOnClick: false
+	});
 
 	$('.dropdown-button').click(function() {
 		$('.dropdown-content .dropdown-content').hide();
