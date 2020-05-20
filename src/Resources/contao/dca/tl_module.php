@@ -80,7 +80,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['mateNavbarStuck'] = array
     'sql'       =>  "int(1) NOT NULL default '1'"
 );
 
-/* Modal */
+/* ModalElement */
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['mateModal_linkText'] = array
 (

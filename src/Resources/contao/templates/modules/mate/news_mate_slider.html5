@@ -1,24 +1,24 @@
 <li class="sliderImage <?= $this->alias ?><?php if($this->cssClass): ?> <?= $this->cssClass ?><?php endif; ?>">
 	<div class="img" <?php if ($this->addImage): ?>style="background-image:url('<?= $this->picture['img']['src'] ?>');"<?php endif; ?>></div>
-	
+
 	<div class="caption center-align">
-		
+
 		<div class="layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>">
-			
+
 		  <?php if ($this->hasMetaFields): ?>
 		    <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
-		  <?php endif; ?>	
-			
+		  <?php endif; ?>
+
 		  <?php if($this->subheadline != ""): ?>
 		  	<div class="subheadline"><?= $this->subheadline ?></div>
 		  <?php endif; ?>
-		
+
 		  <h2><?= $this->linkHeadline ?></h2>
-		
+
 		  <div class="teaser">
 		    <?= $this->teaser ?>
 		  </div>
-		
+
 		  <?php if ($this->hasText || $this->hasTeaser): ?>
 		    <p class="more">
 		    	<a href="<?= $this->link ?>">Mehr dazu</a>
@@ -26,14 +26,16 @@
 		  <?php endif; ?>
 
 		  <img src="#" style="display:none;" alt="invisible image tag">
-		
+
 		</div>
-		
+
+		<!-- indexer::stop -->
 		<div class="list-nav">
 			<a class="prev"><i class="material-icons">keyboard_arrow_down
 </i></a>
 			<a class="next"><i class="material-icons">keyboard_arrow_up</i></a>
 		</div>
+		<!-- indexer::continue -->
 
 	</div>
 </li>

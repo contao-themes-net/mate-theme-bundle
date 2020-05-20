@@ -10,6 +10,7 @@ $GLOBALS['TL_LANG']['CTE']['mateContentBox'][0] = $GLOBALS['TL_LANG']['FMD']['ma
 $GLOBALS['TL_LANG']['CTE']['mateContentBox'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateContentBox'][1] = 'content element content box';
 $GLOBALS['TL_LANG']['CTE']['mateParallaxElement'][0] = 'Parallax element';
 $GLOBALS['TL_LANG']['CTE']['mateTextBackgroundElement'][0] = 'Text element with background image';
+$GLOBALS['TL_LANG']['CTE']['mateModal'][0] = 'Modal element';
 
 $GLOBALS['TL_LANG']['MOD']['mateTheme'][0] = "contao-themes.net";
 $GLOBALS['TL_LANG']['MOD']['mateThemeSetup'][0] = "Mate Theme Setup";

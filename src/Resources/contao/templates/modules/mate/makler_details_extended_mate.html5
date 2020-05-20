@@ -33,40 +33,40 @@ else:
                 <div>
                     <div class="preis">
                         <?php if($this->estate->rawValue('preise.nettokaltmiete') != ""): ?>
-                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">euro_symbol</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('preise.nettokaltmiete')->asNumber(2)->render(); ?>
                         <?php elseif($this->estate->rawValue('preise.kaltmiete') != ""): ?>
-                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">euro_symbol</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('preise.kaltmiete')->asNumber(2)->render(); ?>
                         <?php elseif($this->estate->rawValue('preise.gesamtmietenetto') != ""): ?>
-                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">euro_symbol</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('preise.gesamtmietenetto')->asNumber(2)->render(); ?>
                         <?php elseif($this->estate->rawValue('preise.warmmiete') != ""): ?>
-                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">euro_symbol</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('preise.warmmiete')->asNumber(2)->render(); ?>
                         <?php elseif($this->estate->rawValue('preise.gesamtmiete') != ""): ?>
-                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">euro_symbol</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('preise.gesamtmiete')->asNumber(2)->render(); ?>
                         <?php elseif($this->estate->rawValue('preise.kaufpreis') != ""): ?>
-                        <div class="icon"><i class="material-icons">euro_symbol</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">euro_symbol</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('preise.kaufpreis')->asNumber(2)->render(); ?>
                         <?php endif; ?>
                     </div>
                     <?php if($this->estate->rawValue('flaechen.anzahl_zimmer') != ""): ?>
                     <div class="zimmer">
-                        <div class="icon"><i class="material-icons">business</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">business</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('flaechen.anzahl_zimmer')->asNumber(0)->render(); ?>
                     </div>
                     <?php endif; ?>
                     <div class="flaechen">
                         <?php if($this->estate->rawValue('flaechen.wohnflaeche') != ""): ?>
-                        <div class="icon"><i class="material-icons">home</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">home</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('flaechen.wohnflaeche')->asNumber(2)->append(" m²")->render(); ?>
                         <?php elseif($this->estate->rawValue('flaechen.bueroflaeche') != ""): ?>
-                        <div class="icon"><i class="material-icons">home</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">home</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('flaechen.bueroflaeche')->asNumber(2)->append(" m²")->render(); ?>
                         <?php elseif($this->estate->rawValue('flaechen.gesamtflaeche') != ""): ?>
-                        <div class="icon"><i class="material-icons">home</i></div>
+                        <!-- indexer::stop --><div class="icon"><i class="material-icons">home</i></div><!-- indexer::continue -->
                         <?php $this->estate->renderer('flaechen.gesamtflaeche')->asNumber(2)->append(" m²")->render(); ?>
                         <?php endif; ?>
                     </div>

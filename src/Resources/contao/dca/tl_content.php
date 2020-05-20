@@ -19,6 +19,8 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['mateParallaxElement'] = '{type_leg
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateTextBackgroundElement'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateTextBackground_settings},mate_background_image;{template_legend:hide},mateTextBackgroundElement_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{advanced_classes_legend},advancedCss;{invisible_legend:hide},invisible,start,stop';
 
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mateModal'] = '{type_legend},type;{modal_link_legend},mateModal_linkText,mateModal_linkClass;{modal_headline_legend},headline;{modal_text_legend},mateModal_text,mateModal_class;{template_legend:hide},mateModal_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{advanced_classes_legend},advancedCss;{invisible_legend:hide},invisible,start,stop';
+
 /**
  * Add fields to tl_content
  */
@@ -149,6 +151,55 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTextBackgroundElement_customTpl'
     'sql' => "varchar(64) NOT NULL default ''"
 );
 
+/* ModalElement */
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateModal_linkText'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateModal_linkText'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => array('tl_class'=>'w50'),
+    'sql' => "text NULL"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateModal_linkClass'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateModal_linkClass'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => array('tl_class'=>'w50'),
+    'sql' => "text NULL"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateModal_text'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateModal_text'],
+    'exclude' => true,
+    'search' => true,
+    'inputType' => 'textarea',
+    'eval' => array('rte'=>'tinyMCE'),
+    'sql' => "TEXT NULL"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateModal_customTpl'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateModal_customTpl'],
+    'exclude' => true,
+    'inputType' => 'select',
+    'options_callback' => array('tl_content_mate', 'getModalTemplates'),
+    'eval' => array('includeBlankOption'=>true, 'chosen'=>true, 'tl_class'=>'w50'),
+    'sql' => "varchar(64) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateModal_class'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mateModal_class'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => array('tl_class'=>'w50'),
+    'sql' => "text NULL"
+);
+
 class tl_content_mate extends Backend {
     /**
      * Return all content element templates as array
@@ -175,6 +226,11 @@ class tl_content_mate extends Backend {
     public function getTextBackgroundElementTemplates(DataContainer $dc)
     {
         return $this->getTemplateGroup('ce_mate_text_with_background');
+    }
+
+    public function getModalTemplates(DataContainer $dc)
+    {
+        return $this->getTemplateGroup('ce_mate_modal');
     }
 
     /**

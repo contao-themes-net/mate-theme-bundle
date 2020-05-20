@@ -61,7 +61,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
 
 	if( $(".slider-text-below-image li").length > 0 ) {
 		$(".slider-text-below-image li").each( function() {
-			var headline = $(this).find("> h2, > h3, > h4, > h5, > h6").text();
+			var headline = $(this).find("> h2, > h3, > h4, > h5, > h6").html();
 			var index = $(this).index() + 1;
 			setTimeout(function(){
 				$(".slider-text-below-image .indicators li:nth-of-type(" + index + ")").text(headline);
@@ -236,7 +236,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
     });
 
 	/* =================== *
-     * Modal         	   *
+     * ModalElement         	   *
      * =================== */
 	$('.modal').modal();
 
