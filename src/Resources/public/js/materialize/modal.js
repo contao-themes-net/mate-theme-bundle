@@ -21,7 +21,7 @@
    */
   class Modal extends Component {
     /**
-     * Construct ModalElement instance and set up overlay
+     * Construct Modal instance and set up overlay
      * @constructor
      * @param {Element} el
      * @param {Object} options
@@ -141,7 +141,7 @@
     }
 
     /**
-     * Handle ModalElement Close Click
+     * Handle Modal Close Click
      * @param {Event} e
      */
     _handleModalCloseClick(e) {
@@ -278,7 +278,7 @@
     }
 
     /**
-     * Open ModalElement
+     * Open Modal
      * @param {cash} [$trigger]
      */
     open($trigger) {
@@ -327,7 +327,7 @@
     }
 
     /**
-     * Close ModalElement
+     * Close Modal
      */
     close() {
       if (!this.isOpen) {
@@ -364,13 +364,13 @@
 
   /**
    * @static
-   * @memberof ModalElement
+   * @memberof Modal
    */
   Modal._modalsOpen = 0;
 
   /**
    * @static
-   * @memberof ModalElement
+   * @memberof Modal
    */
   Modal._count = 0;
 

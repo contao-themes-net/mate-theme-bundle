@@ -2887,7 +2887,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     _inherits(Modal, _Component3);
 
     /**
-     * Construct ModalElement instance and set up overlay
+     * Construct Modal instance and set up overlay
      * @constructor
      * @param {Element} el
      * @param {Object} options
@@ -3010,7 +3010,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
 
       /**
-       * Handle ModalElement Close Click
+       * Handle Modal Close Click
        * @param {Event} e
        */
 
@@ -3166,7 +3166,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
 
       /**
-       * Open ModalElement
+       * Open Modal
        * @param {cash} [$trigger]
        */
 
@@ -3218,7 +3218,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
 
       /**
-       * Close ModalElement
+       * Close Modal
        */
 
     }, {
@@ -3282,7 +3282,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   /**
    * @static
-   * @memberof ModalElement
+   * @memberof Modal
    */
 
 
@@ -3290,7 +3290,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   /**
    * @static
-   * @memberof ModalElement
+   * @memberof Modal
    */
   Modal._count = 0;
 

@@ -236,7 +236,7 @@ jQuery.noConflict(); jQuery(document).ready(function($){
     });
 
 	/* =================== *
-     * ModalElement         	   *
+     * Modal         	   *
      * =================== */
 	$('.modal').modal();
 
