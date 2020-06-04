@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Lato Light";
-  src: url("../fonts/Lato/Lato-Light.ttf");
+  src: url("/bundles/matetheme/fonts/Lato/Lato-Light.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: url("../fonts/Lato/Lato-Regular.ttf");
+  src: url("/bundles/matetheme/fonts/Lato/Lato-Regular.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Old Standard";
-  src: url("../fonts/Old_Standard_TT/OldStandard-Regular.ttf");
+  src: url("/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.ttf");
   font-display: swap;
 }
 
@@ -20,12 +20,12 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/Material_Icons/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: url(/bundles/matetheme/fonts/Material_Icons/MaterialIcons-Regular.eot); /* For IE6-8 */
   src: local('Material Icons'),
   local('MaterialIcons-Regular'),
-  url(../fonts/Material_Icons/MaterialIcons-Regular.woff2) format('woff2'),
-  url(../fonts/Material_Icons/MaterialIcons-Regular.woff) format('woff'),
-  url(../fonts/Material_Icons/MaterialIcons-Regular.ttf) format('truetype');
+  url(/bundles/matetheme/fonts/Material_Icons/MaterialIcons-Regular.woff2) format('woff2'),
+  url(/bundles/matetheme/fonts/Material_Icons/MaterialIcons-Regular.woff) format('woff'),
+  url(/bundles/matetheme/fonts/Material_Icons/MaterialIcons-Regular.ttf) format('truetype');
   font-display: swap;
 }
 
