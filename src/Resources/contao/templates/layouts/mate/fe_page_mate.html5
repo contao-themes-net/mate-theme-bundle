@@ -48,7 +48,7 @@
     $combiner = new Combiner();
     $combiner->add('bundles/matetheme/js/materialize/materialize.min.js');
     $combiner->add('bundles/matetheme/js/headroom/headroom.min.js');
-    $combiner->add('bundles/matetheme/js/theme.js');
+    $combiner->add('bundles/matetheme/js/theme.min.js');
     echo $combiner->getCombinedFile();
     ?>"></script>
 <?php $this->endblock(); ?>
