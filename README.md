@@ -61,4 +61,8 @@ Edit your app/config/parameters.yml file:
 
 | [![0.1 Theme](https://contao-themes.net/assets/images/3/0.1_Energy_saving_Contao_Theme_00-1e927a73.jpg)](https://contao-themes.net/theme-detail/zeroone.html) | [![ODD Theme](https://contao-themes.net/assets/images/c/ODD_Exploring_Contao_Theme_05-9e3a18d8.png)](https://contao-themes.net/theme-detail/odd.html) | [![NATURE Theme](https://contao-themes.net/assets/images/6/00_00_naturetheme-605a9391.jpg)](https://contao-themes.net/theme-detail/nature.html) |
 |:---:|:---:|:---:|
-| **0.1 Theme**  | **ODD Theme**  | **NATURE Theme**  |
+| [**0.1 Theme**](https://contao-themes.net/theme-detail/zeroone.html)  | [**ODD Theme**](https://contao-themes.net/theme-detail/odd.html)  | [**NATURE Theme**](https://contao-themes.net/theme-detail/nature.html)  |
+
+| [![CONVERT Theme](https://contao-themes.net/assets/images/7/Convert_Selling_Contao_Theme_01-9c1306b6.png)](https://contao-themes.net/theme-detail/convert.html) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) |
+|:---:|:---:|:---:|
+| [**CONVERT Theme**](https://contao-themes.net/theme-detail/convert.html)  |  |  |
