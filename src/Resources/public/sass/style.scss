@@ -85,6 +85,7 @@ button, input, optgroup, select, textarea {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   clear: left;
+  overflow: hidden;
 
   .col {
     display: -webkit-flex;
@@ -1854,6 +1855,14 @@ nav .brand-logo {
 #container {
   .ce_mateTeaserBox.col, .ce_ct_teaserBox.col {
     padding: 0 15px;
+  }
+}
+
+.container .row .col.ce_mateTeaserBox {
+  flex-direction: inherit;
+
+  .inside {
+    height: unset;
   }
 }
 

@@ -2568,9 +2568,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "_makeDropdownFocusable",
       value: function _makeDropdownFocusable() {
         // Needed for arrow key navigation
-        if (null != this.dropdownEl.tabIndex) {
-          this.dropdownEl.tabIndex = 0;
-        }
+        this.dropdownEl.tabIndex = 0;
 
         // Only set tabindex if it hasn't been set by user
         $(this.dropdownEl).children().each(function (el) {
