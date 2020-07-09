@@ -112,7 +112,6 @@ button, input, optgroup, select, textarea {
 
 #wrapper {
   background: $pageBackground;
-  padding-top: 165px;
   overflow-y: hidden;
 }
 
@@ -666,9 +665,7 @@ header {
 
 .sectionTop {
   background: $primary-color;
-  height: 40px;
-  position: absolute;
-  top: 0;
+  height: inherit;
   z-index: 11;
   width: 100%;
 
@@ -722,7 +719,10 @@ header {
   width: 20px;
   position: absolute;
   right: 20px;
-  bottom: 5px;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
 
   a {
     color: $mateColor2;
@@ -732,7 +732,7 @@ header {
 
 #header .search-box {
   position: absolute;
-  top: 151px;
+  top: inherit;
   left: 0;
   width: 100%;
   z-index: 13;
@@ -820,10 +820,6 @@ nav {
   display: inline-block;
 }
 
-#header nav {
-  height: 125px;
-}
-
 nav {
   background-color: rgba($navbar-bg-color, 1);
 
@@ -871,12 +867,46 @@ nav {
   }
 }
 
+#header {
+  z-index: 100;
+  position: relative;
+
+  nav.type3 {
+    &.stuck .brand-logo {
+      display: none;
+    }
+
+    &:not(.stuck) .ce_text.search p {
+      margin: 0;
+    }
+
+    .brand-logo {
+      width: 100%;
+      position: relative;
+      text-align: center;
+    }
+
+    .desktop-menu {
+      margin: 0;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      padding: 0 0 20px;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
 #header .mod_mateNavbar {
-  position: absolute;
-  top: 40px;
   z-index: 14;
   box-shadow: none;
   -webkit-box-shadow: none;
+  margin: 0;
+  line-height: 1;
 }
 
 .mate_nav {
@@ -1261,10 +1291,6 @@ nav {
 nav .brand-logo {
   position: relative;
   line-height: 0;
-}
-
-#header nav .brand-logo {
-  position: absolute;
 }
 
 #main, #left, #right {
@@ -3702,6 +3728,16 @@ mark {
       .subitems i.material-icons {
         font-size: 40px;
       }
+
+      &.type3 {
+        &.stuck .brand-logo {
+          display: block;
+        }
+
+        .brand-logo {
+          text-align: left;
+        }
+      }
     }
   }
 
@@ -3734,8 +3770,6 @@ mark {
   }
 
   #wrapper {
-    padding-top: 100px;
-
     > .container {
       margin-top: 20px;
     }

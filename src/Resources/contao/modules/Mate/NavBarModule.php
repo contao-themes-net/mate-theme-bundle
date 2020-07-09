@@ -116,7 +116,7 @@ class NavBarModule extends \Module
             $this->mateDropdownTplLvl3 = '';
             $this->mateDropdownTplLvl4 = '';
         }
-        if ($this->mateNavbarType == 'type5')
+        if ($this->mateNavbarType == 'type5' || $this->mateNavbarType == 'type3')
         {
             $this->mateRootTpl = 'nav_mate_root';
             $this->mateMobileTpl = 'nav_mate_mobile';

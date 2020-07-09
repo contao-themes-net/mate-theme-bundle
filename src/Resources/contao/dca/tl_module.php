@@ -35,7 +35,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['mateNavbarType'] = array
         'tl_class' => 'wizard w50'
     ),
     'inputType' => 'select',
-    'options' => array('type1','type2','type5'),
+    'options' => array('type1','type2','type3','type5'),
     'reference' => &$GLOBALS['TL_LANG']['tl_module']['mate_navbar'],
     'sql' => "varchar(64) NOT NULL default ''"
 );

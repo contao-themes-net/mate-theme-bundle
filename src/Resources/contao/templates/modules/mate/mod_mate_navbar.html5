@@ -2,7 +2,7 @@
 <?php if($this->headline): ?>
     <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
 <?php endif; ?>
-<nav id="mateNavbar<?= $this->id ?>" class="navbar-dropdown <?= $this->class ?> block<?= $this->includeHeadroom ?><?= $this->stuckNavbar ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<nav id="mateNavbar<?= $this->id ?>" class="navbar-dropdown <?= $this->class ?> block<?= $this->includeHeadroom ?><?= $this->stuckNavbar ?> <?= $this->navbarType ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
     <div class="nav-wrapper" <?php if($this->showMobileMenu == 0): ?>style="display:block;"<?php endif; ?>>
 
         <?php if($this->showLogo == 1): ?>

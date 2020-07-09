@@ -22,7 +22,7 @@ $GLOBALS['TL_LANG']['tl_module']['mateTheme']['mateNavbar'][1] = 'Navbar (mate)4
 
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type1'] = 'Navigation without Dropdown, align right';
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type2'] = 'Navigation without Dropdown, align left';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type3'] = 'Logo zentriert';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type3'] = 'Logo and navigation among each other/centered';
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type4'] = 'NavBar mit Tabs';
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type5'] = 'Navigation with Dropdown';
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type6'] = 'NavBar mit Buttons';
