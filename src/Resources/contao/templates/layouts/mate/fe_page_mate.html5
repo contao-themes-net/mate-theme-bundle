@@ -61,8 +61,10 @@
 
 <?php $this->block('footer'); ?>
     <?php if ($this->footer): ?>
+        <!-- indexer::stop -->
         <footer id="footer" class="page-footer">
             <?= $this->footer ?>
         </footer>
+        <!-- indexer::continue -->
     <?php endif; ?>
 <?php $this->endblock(); ?>
