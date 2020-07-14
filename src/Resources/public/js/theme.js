@@ -6,41 +6,116 @@ jQuery(document).ready(function ($) {
      * ===================== */
     $('select').formSelect();
 
+    var lang = $("html").attr("lang");
+    var translations = {
+        nextMonth: 'Next month',
+        previousMonth: 'Previous month',
+        labelMonthSelect: 'Select a month',
+        labelYearSelect: 'Select a year',
+        months: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
+        monthsShort: [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+        weekdays: [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
+        weekdaysShort: [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+        weekdaysAbbrev: [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
+        today: 'Today',
+        clear: 'Clear',
+        done: 'OK',
+        cancel: 'Cancel',
+        format: 'yyyy-mm-dd'
+    };
+    switch (lang) {
+        case 'de':
+            var translations = {
+                nextMonth: 'Nächster Monat',
+                previousMonth: 'Vorheriger Monat',
+                labelMonthSelect: 'Monat wählen',
+                labelYearSelect: 'Jahr wählen',
+                months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+                monthsShort: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+                weekdays: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+                weekdaysShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
+                weekdaysAbbrev: ['S', 'M', 'D', 'M', 'D', 'F', 'S'],
+                today: 'Heute',
+                clear: 'Löschen',
+                done: 'OK',
+                cancel: 'Abbrechen',
+                format: 'dd.mm.yyyy'
+            };
+            break;
+        case 'fr':
+            var translations = {
+                nextMonth: 'Mois suivant',
+                previousMonth: 'Mois précédent',
+                labelMonthSelect: 'Sélectionnez un mois',
+                labelYearSelect: 'Sélectionnez une année',
+                months : [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre' ],
+                monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],
+                weekdays: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
+                weekdaysShort: [ 'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa' ],
+                weekdaysAbbrev: [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
+                today: "Aujourd'hui",
+                clear: 'Réinitialiser',
+                done: 'OK',
+                cancel: 'Annuler',
+                format: 'dd/mm/yyyy'
+            };
+            break;
+        case 'pl':
+            var translations = {
+                nextMonth: 'W przyszłym miesiącu',
+                previousMonth: 'Poprzedni miesiąc',
+                labelMonthSelect: 'Wybierz miesiąc',
+                labelYearSelect: 'Wybierz rok',
+                months: [ 'Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień' ],
+                monthsShort: [ 'Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paz', 'Lis', 'Gru' ],
+                weekdays: [ 'Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota' ],
+                weekdaysShort: [ 'Nie', 'Pon', 'Wto', 'Sro', 'Czw', 'Pia', 'Sob' ],
+                weekdaysAbbrev: [ 'N', 'P', 'W', 'S', 'C', 'P', 'S' ],
+                today: 'Dziś',
+                clear: 'Jasne',
+                done: 'OK',
+                cancel: 'Anuluj',
+                format: 'dd.mm.yyyy'
+            };
+            break;
+    };
+
     $('input.datepicker').datepicker({
         selectMonths: true, // Creates a dropdown to control month
         selectYears: '150', // Creates a dropdown of 15 years to control year,
         maxDate: new Date(new Date().getFullYear() + 30, new Date().getMonth(), new Date().getDate()),
         autoClose: true, // Close upon selecting a date,
-        format: 'dd.mm.yyyy',
+        format: translations.format,
         container: 'div.datepicker',
         firstDay: 1,
         i18n: {
-            nextMonth: 'Nexter Monat',
-            previousMonth: 'Vorheriger Monat',
-            labelMonthSelect: 'Monat wählen',
-            labelYearSelect: 'Jahr wählen',
-            months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
-            monthsShort: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
-            weekdays: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
-            weekdaysShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
-            weekdaysAbbrev: ['S', 'M', 'D', 'M', 'D', 'F', 'S'],
-            today: 'Heute',
-            clear: 'Löschen',
-            done: 'OK',
-            cancel: 'Abbrechen'
+            nextMonth: translations.nextMonth,
+            previousMonth: translations.previousMonth,
+            labelMonthSelect: translations.labelMonthSelect,
+            labelYearSelect: translations.labelYearSelect,
+            months: translations.months,
+            monthsShort: translations.monthsShort,
+            weekdays: translations.weekdays,
+            weekdaysShort: translations.weekdaysShort,
+            weekdaysAbbrev: translations.weekdaysAbbrev,
+            today: translations.today,
+            clear: translations.clear,
+            done: translations.done,
+            cancel: translations.cancel
         }
     });
 
     $('input.timepicker').timepicker({
-        defaultTime: 'now', // Set default time: 'now', '1:30AM', '16:30'
-        fromNow: 0,       // set default time to * milliseconds from now (using with default = 'now')
-        twelveHour: false, // Use AM/PM or 24-hour format
-        autoClose: false, // automatic close timepicker
+        defaultTime: 'now',
+        fromNow: 0,
+        twelveHour: false,
+        autoClose: false,
         container: 'div.timepicker',
-        i80n: {
-            done: 'OK', // text for done-button
-            clear: 'Löschen', // text for clear-button
-            cancel: 'Abbrechen', // Text for cancel-button
+        i18n: {
+            cancel: translations.cancel,
+            clear: translations.clear,
+            done: translations.done
+
         }
     });
 
