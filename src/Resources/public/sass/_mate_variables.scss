@@ -44,8 +44,10 @@ $breadcrumb-link: $primary-link-font-color;
 $breadcrumb-link-hover: $primary-link-hover-font-color;
 
 /* Content Box */
-$contentbox-first-color: $boxes-text-color;
-$contentbox-second-color: $boxes-text-color;
+$contentbox-first-color: $primary-text-color;
+$contentbox-second-color: $primary-text-color;
+$contentbox-first-background: rgba(255, 255, 255, 0.95);
+$contentbox-second-background: rgba(255, 255, 255, 0.65);
 
 /* Download and FAQ Elements */
 $download-faqlist-background-odd: rgba($mateColor2, 0.15);
