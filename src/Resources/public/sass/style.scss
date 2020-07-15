@@ -2409,9 +2409,10 @@ nav.pagination li {
  * ========================== */
 footer.page-footer {
   margin-top: 50px;
-  color: $footer-text-color;
+  color: $footer-primary-color;
   position: relative;
   padding: 0;
+  background: $footer-primary-bg-color;
 
   > .container {
     padding-top: 20px;
@@ -2421,7 +2422,7 @@ footer.page-footer {
     margin-bottom: 30px;
     position: relative;
     padding-bottom: 20px;
-    color: $footer-text-color;
+    color: $footer-primary-color;
 
     &:after {
       position: absolute;
@@ -2440,7 +2441,7 @@ footer.page-footer {
   .footer-copyright {
     text-align: center;
     background: $footer-secondary-bg-color;
-    color: $footer-text-color;
+    color: $footer-secondary-color;
 
     p {
       display: inline-block;
@@ -2536,15 +2537,17 @@ footer .container {
 
 #footer {
   #newsletter {
-    background: $mateColor1;
+    background: $footer-newsletter-bg-color;
+    color: $footer-newsletter-color;
     text-align: center;
 
     .mod_subscribe {
-      background: $mateColor1;
+      background: $footer-newsletter-bg-color;
     }
 
     h2, h3, h4, h5, h6 {
       margin: 0 0 30px;
+      color: $footer-newsletter-color;
     }
 
     .mod_subscribe {
@@ -2572,11 +2575,12 @@ footer .container {
     }
 
     .text {
-      background: #f4f8f0;
-      border: 1px solid #f4f8f0;
+      background: $footer-input-bg-color;
+      border: none;
+      color: $footer-input-color;
 
       &::placeholder {
-        color: rgba(0, 0, 0, 0.87);
+        color: rgba($footer-input-color, 0.87);
       }
     }
 
@@ -2584,7 +2588,7 @@ footer .container {
       background: $footer-newsletter-button-background;
 
       &:hover {
-        background: $button-floating-background-hover;
+        background: $footer-newsletter-button-background-hover;
       }
     }
   }
