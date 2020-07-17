@@ -866,8 +866,11 @@ nav {
   }
 }
 
+.overlay.active {
+  display: none;
+}
+
 #header {
-  z-index: 100;
   position: relative;
 
   nav.type3 {
