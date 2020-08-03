@@ -92,6 +92,10 @@ button, input, optgroup, select, textarea {
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
+
+    &:not([class*="offset"]) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -1875,14 +1879,6 @@ nav .brand-logo {
 #container {
   .ce_mateTeaserBox.col, .ce_ct_teaserBox.col {
     padding: 0 15px;
-  }
-}
-
-.container .row .col.ce_mateTeaserBox {
-  flex-direction: inherit;
-
-  .inside {
-    height: unset;
   }
 }
 
