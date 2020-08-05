@@ -2424,6 +2424,10 @@ footer.page-footer {
     }
   }
 
+  .material-icons {
+    color: $footer-primary-color;
+  }
+
   p {
     font-size: 0.9em;
   }
@@ -2432,6 +2436,10 @@ footer.page-footer {
     text-align: center;
     background: $footer-secondary-bg-color;
     color: $footer-secondary-color;
+
+    .material-icons {
+      color: $footer-secondary-color;
+    }
 
     p {
       display: inline-block;
