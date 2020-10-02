@@ -1047,8 +1047,8 @@ nav {
             display: none;
             opacity: 1;
             width: 100%;
-            top: inherit;
-            left: -100% ;
+            top: inherit !important;
+            left: -100% !important;
             margin-top: -42px;
           }
 

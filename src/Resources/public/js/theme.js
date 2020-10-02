@@ -219,15 +219,54 @@ jQuery(document).ready(function ($) {
 
     $(".sidenav").sidenav();
 
-    $("nav:not(.subnav) .desktop-menu a.dropdown-button").dropdown({
-        inDuration: 300,
-        outDuration: 225,
-        hover: true,
-        coverTrigger: false,
-        alignment: "left",
-        constrainWidth: false,
-        closeOnClick: false
-    });
+    var touch = matchMedia('(hover: none)').matches;
+
+    if(touch == false) {
+        $("nav:not(.subnav) .desktop-menu a.dropdown-button").dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            hover: true,
+            coverTrigger: false,
+            alignment: "left",
+            constrainWidth: false,
+            closeOnClick: false
+        });
+
+        $("nav:not(.subnav) .desktop-menu ul.dropdown-content a.dropdown-button").dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            hover: false,
+            coverTrigger: false,
+            alignment: "left",
+            constrainWidth: false,
+            closeOnClick: false
+        });
+
+        $('.dropdown-button').click(function () {
+            $('.dropdown-content .dropdown-content').hide();
+            if (!$(this).hasClass('stopPropagation')) window.location.href = $(this).attr('href');
+        });
+    } else {
+        $("nav:not(.subnav) .desktop-menu a.dropdown-button").dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            hover: false,
+            coverTrigger: false,
+            alignment: "left",
+            constrainWidth: false,
+            closeOnClick: false
+        });
+
+        $("nav:not(.subnav) .desktop-menu ul.dropdown-content a.dropdown-button").dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            hover: false,
+            coverTrigger: false,
+            alignment: "left",
+            constrainWidth: false,
+            closeOnClick: false
+        });
+    }
 
     $("nav:not(.subnav) .mobile-menu a.dropdown-button").dropdown({
         inDuration: 300,
@@ -237,26 +276,11 @@ jQuery(document).ready(function ($) {
         alignment: "left"
     });
 
-    $("nav:not(.subnav) .desktop-menu ul.dropdown-content a.dropdown-button").dropdown({
-        inDuration: 300,
-        outDuration: 225,
-        hover: false,
-        coverTrigger: false,
-        alignment: "left",
-        constrainWidth: false,
-        closeOnClick: false
-    });
-
     $("nav.subnav a.dropdown-button").dropdown({
         inDuration: 0,
         outDuration: 0,
         alignment: "right",
         closeOnClick: false
-    });
-
-    $('.dropdown-button').click(function () {
-        $('.dropdown-content .dropdown-content').hide();
-        if (!$(this).hasClass('stopPropagation')) window.location.href = $(this).attr('href');
     });
 
     /* ===================== *
