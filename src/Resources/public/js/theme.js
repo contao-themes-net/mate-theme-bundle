@@ -266,6 +266,18 @@ jQuery(document).ready(function ($) {
             constrainWidth: false,
             closeOnClick: false
         });
+
+        $("a.dropdown-button").click( function() {
+            if( $(this).hasClass("open") ) {
+                window.location.href = $(this).attr('href');
+            }
+
+            if( $(this).parents().parents().hasClass("desktop-menu") ) {
+                $("a.dropdown-button").removeClass("open");
+            }
+
+            $(this).toggleClass("open");
+        });
     }
 
     $("nav:not(.subnav) .mobile-menu a.dropdown-button").dropdown({
