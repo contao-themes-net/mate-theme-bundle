@@ -1,3 +1,8 @@
+function is_touch_device() {
+    return !!('ontouchstart' in window        // works on most browsers
+        || navigator.maxTouchPoints);       // works on IE10/11 and Surface
+};
+
 jQuery.noConflict();
 jQuery(document).ready(function ($) {
 
@@ -219,9 +224,7 @@ jQuery(document).ready(function ($) {
 
     $(".sidenav").sidenav();
 
-    var touch = matchMedia('(hover: none)').matches;
-
-    if(touch == false) {
+    if(is_touch_device() == false) {
         $("nav:not(.subnav) .desktop-menu a.dropdown-button").dropdown({
             inDuration: 300,
             outDuration: 225,
@@ -267,7 +270,7 @@ jQuery(document).ready(function ($) {
             closeOnClick: false
         });
 
-        $("a.dropdown-button").click( function() {
+        $("nav:not(.subnav)").on("touchstart","a.dropdown-button", function(e) {
             if( $(this).hasClass("open") ) {
                 window.location.href = $(this).attr('href');
             }
