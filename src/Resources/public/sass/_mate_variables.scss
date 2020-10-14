@@ -46,8 +46,8 @@ $breadcrumb-link-hover: $primary-link-hover-font-color;
 /* Content Box */
 $contentbox-first-color: $primary-text-color;
 $contentbox-second-color: $primary-text-color;
-$contentbox-first-background: rgba(255, 255, 255, 0.95);
-$contentbox-second-background: rgba(255, 255, 255, 0.65);
+$contentbox-first-background: rgba($boxes-background, 0.95);
+$contentbox-second-background: rgba($boxes-background, 0.65);
 
 /* Download and FAQ Elements */
 $download-faqlist-background-odd: rgba($mateColor2, 0.15);
@@ -75,7 +75,7 @@ $footer-newsletter-color: $mateColor3;
 $footer-newsletter-button-background: $mateColor2;
 $footer-newsletter-button-background-hover: $button-floating-background-hover;
 $footer-input-bg-color: #f4f8f0;
-$footer-input-color: $primary-text-color;
+$footer-input-color: $mateColorBlack;
 
 $footer-primary-bg-color: $mateColor2;
 $footer-primary-color: $footer-text-color;
