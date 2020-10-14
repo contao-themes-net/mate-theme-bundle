@@ -74,7 +74,6 @@ array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, array
     (
         'callback'          => 'ContaoThemesNet\\MateThemeBundle\\Module\\MateThemeSetup',
         'tables'            => array(),
-        'javascript'		=> 'bundles/matetheme/js/backend.js',
         'stylesheet'		=> 'bundles/matetheme/sass/backend.css'
     ),
 ));
