@@ -1,5 +1,5 @@
 
-<div class="carousel large with-indicators cols_<?= $this->perRow ?>" itemscope itemtype="http://schema.org/ImageGallery">
+<div class="carousel carousel<?= $this->id ?> large with-indicators cols_<?= $this->perRow ?>" itemscope itemtype="http://schema.org/ImageGallery">
     <?php foreach ($this->body as $class=>$row): ?>
         <?php $i = 0; foreach ($row as $col): ?>
             <?php if ($col->addImage): ?>
@@ -17,10 +17,10 @@
     <?php endforeach; ?>
 </div>
 
-<?php $GLOBALS["TL_BODY"]["mate_carousel"] = "
+<?php $GLOBALS["TL_BODY"][] = "
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
+    var elems = document.querySelectorAll('.carousel".$this->id."');
     var options = {
         duration: 200,
         dist: -100,
