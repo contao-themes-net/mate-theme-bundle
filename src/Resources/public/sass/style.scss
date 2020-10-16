@@ -160,6 +160,25 @@ button, input, optgroup, select, textarea {
   }
 }
 
+.carousel {
+  &.large {
+    height: 600px;
+
+    .carousel-item {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  .carousel-item {
+    cursor: pointer;
+  }
+
+  &.with-indicators {
+    margin-bottom: 50px;
+  }
+}
+
 /* ========================== *
  *    Textelemente            *
  * ========================== */
@@ -3511,6 +3530,17 @@ mark {
   footer.page-footer .toplink {
     bottom: 15px;
     right: 15px;
+  }
+
+  .carousel {
+    &.large {
+      height: 400px;
+
+      .carousel-item {
+        width: 200px;
+        height: 200px;
+      }
+    }
   }
 
   /* Layouts */

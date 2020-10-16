@@ -1,0 +1,35 @@
+
+<div class="carousel with-indicators cols_<?= $this->perRow ?>" itemscope itemtype="http://schema.org/ImageGallery">
+    <?php foreach ($this->body as $class=>$row): ?>
+        <?php $i = 0; foreach ($row as $col): ?>
+            <?php if ($col->addImage): ?>
+                <?php if ($col->href): ?>
+                    <a class="carousel-item" href="<?= $col->href ?>"<?= $col->attributes ?><?php if ($col->linkTitle) echo ' title="' . $col->linkTitle . '"'; ?>>
+                        <?php $this->insert('picture_default', $col->picture); ?>
+                    </a>
+                <?php else: ?>
+                    <div class="carousel-item">
+                        <?php $this->insert('picture_default', $col->picture); ?>
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?>
+        <?php $i++; endforeach; ?>
+    <?php endforeach; ?>
+</div>
+
+<?php $GLOBALS["TL_BODY"]["mate_carousel"] = "
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var options = {
+        duration: 200,
+        dist: -100,
+        shift: 0,
+        padding: 0,
+        numVisible: ".$this->perRow.",
+        indicators: true
+    };
+    var instances = M.Carousel.init(elems, options);
+});
+</script>
+"; ?>
