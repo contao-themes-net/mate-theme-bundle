@@ -29,7 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
         numVisible: ".$this->perRow.",
         indicators: true
     };
-    var instances = M.Carousel.init(elems, options);
+    setTimeout( function() {
+        var instances = M.Carousel.init(elems, options);
+    },500);
 });
 </script>
 "; ?>
