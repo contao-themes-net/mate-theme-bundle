@@ -3385,6 +3385,10 @@ mark {
     padding: 20px;
     display: table-cell;
     vertical-align: middle;
+
+    &.container {
+      padding: 20px 15px;
+    }
   }
 
   .parallax {
@@ -3411,7 +3415,7 @@ mark {
   p {
     color: #fff;
     margin: 10px 0 0;
-    padding: 5px;
+    padding: 0;
     font-size: 18px;
     font-weight: 700;
   }
