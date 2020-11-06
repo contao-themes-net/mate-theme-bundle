@@ -101,6 +101,7 @@ button, input, optgroup, select, textarea {
 
 #container {
   display: block !important;
+  width: 100%;
 }
 
 .mod_article {
@@ -316,18 +317,11 @@ code, pre {
   ul:not(.browser-default) {
     padding-left: 0;
 
-    li {
-      position: relative;
-      padding-left: 20px;
-
-      &:before {
-        position: absolute;
-        left: 0;
-        top: -2px;
-        content: "»";
-        color: $mateColor2;
-        font-weight: 700;
-      }
+    li:before {
+      content: "»";
+      color: $mateColor2;
+      font-weight: 700;
+      padding-right: 15px;
     }
   }
 }
