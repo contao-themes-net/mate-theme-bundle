@@ -66,3 +66,23 @@ Edit your app/config/parameters.yml file:
 | [![CONVERT Theme](https://contao-themes.net/assets/images/7/Convert_Selling_Contao_Theme_01-9c1306b6.png)](https://contao-themes.net/theme-detail/convert.html) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) |
 |:---:|:---:|:---:|
 | [**CONVERT Theme**](https://contao-themes.net/theme-detail/convert.html)  |  |  |
+
+## Bildnachweise
+
+* Elbstraße Meißen / elbstrasse.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Frauenkirche Meißen / frauenkirche-meissen.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Götterfelsen Meißen / goetterfelsen.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Kleinmarkt Meißen / kleinmarkt.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Albrechtsburg Meißen / meissen-albrechtsburg.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* An der Elbe bei Sonnenaufgang / meissen-elbe-sonnenaufgang.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Juchhöh-Aussicht Meißen / meissen-juchhoeh.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Meißner Weihnachtsmarkt / meissner-weihnachtsmarkt.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Sammelpostkarte zum Meißner Weinfest 2017 / sammelpostkarte-weinfest-meissen-2017.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Schloßbrücke Meißen / schlossbruecke-meissen.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Trabant auf Landstraße / trabant.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Meißner Weihnachtsmarkt / weihnachtsmarkt-meissen.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Weinfest-Umzug in Meißen / weinfest-meissen-umzug.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Schloßbrücke Meißen im Winter / schlossbruecke_winter.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* MATE Theme Logo / mate_logo.png: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* MATE Theme Logo in weiß / mate_logo_white.png: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Straßenkarte / street-map-2679271_1920.jpg: [pixel2013](https://pixabay.com/de/users/pixel2013-2364555/)@[Pixabay](https://pixabay.com/de/photos/stra%C3%9Fenkarte-map-suchen-finden-2679271/)
