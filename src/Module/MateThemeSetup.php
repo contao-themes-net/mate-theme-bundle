@@ -4,7 +4,7 @@ namespace ContaoThemesNet\MateThemeBundle\Module;
 
 class MateThemeSetup extends \BackendModule
 {
-    const VERSION = '2.12.4';
+    const VERSION = '2.12.5';
 
     protected $strTemplate = 'be_mateTheme_setup';
 
@@ -23,6 +23,8 @@ class MateThemeSetup extends \BackendModule
                 $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/mate-theme-bundle/src/templates/mate");
                 $this->Template->message = true;
                 $this->Template->version = MateThemeSetup::VERSION;
+                $this->import('Automator');
+                $this->Automator->generateInternalCache();
                 break;
             case 'truncateTlFiles':
                 $this->import('Database');
