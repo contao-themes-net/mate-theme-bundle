@@ -72,13 +72,17 @@ $counter = 1;
 
                 <?php // Ausgabe des Objektbildes ?>
                 <?php if(!isset($obj['anhaenge-anhang-#1-daten-pfad']) OR $obj['anhaenge-anhang-#1-daten-pfad'] == ''): ?>
-                <img src="/<?= $this->placeholderImg; ?>" alt="Platzhalter <?= $obj['freitexte-objekttitel'] ?>" width="300" height="200">
+                    <?php if(strpos($this->placeholderImg,'bundles/') !== false): ?>
+                        <img src="/<?= $this->placeholderImg; ?>" alt="Platzhalter <?= $obj['freitexte-objekttitel'] ?>" width="300" height="200">
+                    <?php else: ?>
+                        {{picture::/<?= $this->placeholderImg; ?>?size=<?= $this->listImageMode; ?>&alt=<?= $obj['freitexte-objekttitel'] ?>}}
+                    <?php endif; ?>
                 <?php else: ?>
-                <?php if( strpos($obj['anhaenge-anhang-#1-daten-pfad'],"http") !== false ): ?>
-                <img src="<?= $obj['anhaenge-anhang-#1-daten-pfad'] ?>" alt="<?= $obj['freitexte-objekttitel'] ?>">
-                <?php else: ?>
-                {{picture::files/maklermodul/data/<?= $obj['anhaenge-anhang-#1-daten-pfad'] ?>?size=<?= $this->listImageMode; ?>&alt=<?= $obj['freitexte-objekttitel'] ?>}}
-                <?php endif; ?>
+                    <?php if( strpos($obj['anhaenge-anhang-#1-daten-pfad'],"http") !== false ): ?>
+                        <img src="<?= $obj['anhaenge-anhang-#1-daten-pfad'] ?>" alt="<?= $obj['freitexte-objekttitel'] ?>">
+                    <?php else: ?>
+                        {{picture::files/maklermodul/data/<?= $obj['anhaenge-anhang-#1-daten-pfad'] ?>?size=<?= $this->listImageMode; ?>&alt=<?= $obj['freitexte-objekttitel'] ?>}}
+                    <?php endif; ?>
                 <?php endif; ?>
 
                 <?php if($obj['geo-ort']): ?><div class="location"><?= $obj['geo-plz'] ?> <?= $obj['geo-ort'] ?></div><?php endif; ?>
