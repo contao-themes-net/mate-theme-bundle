@@ -31,39 +31,37 @@ $GLOBALS['TL_CTE']['mateTheme']['mateModal'] = 'ContaoThemesNet\\MateThemeBundle
 /**
  * Available tags for MATE theme
  */
-$GLOBALS['tl_config']['theme_tags'] = array(
-	'-',
-    'MATE01/01',
-    'MATE01/02',
-    'MATE01/03',
-    'MATE01/04',
-    'MATE01/05',
-    'MATE01/06',
-    'MATE01/07',
-    'MATE01/08',
-    'MATE01/09',
-    'MATE01/10',
-    'MATE02/01',
-    'MATE02/02',
-    'MATE02/03',
-    'MATE02/04',
-    'MATE02/05',
-    'MATE02/06',
-    'MATE02/07',
-    'MATE02/08',
-    'MATE02/09',
-    'MATE02/10',
-    'MATE05/01',
-    'MATE05/02',
-    'MATE05/03',
-    'MATE05/04',
-    'MATE05/05',
-    'MATE05/06',
-    'MATE05/07',
-    'MATE05/08',
-    'MATE05/09',
-    'MATE05/10',
-);
+array_push($GLOBALS['tl_config']['theme_tags'], '-');
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/01';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/02';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/03';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/04';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/05';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/06';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/07';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/08';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/09';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE01/10';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/01';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/02';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/03';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/04';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/05';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/06';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/07';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/08';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/09';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE02/10';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/01';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/02';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/03';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/04';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/05';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/06';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/07';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/08';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/09';
+$GLOBALS['tl_config']['theme_tags'][] = 'MATE05/10';
 
 /**
  * Backend Modules
