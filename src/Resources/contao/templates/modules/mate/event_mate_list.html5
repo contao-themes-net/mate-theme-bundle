@@ -7,22 +7,22 @@
 
 <div class="event layout_list<?= $this->classUpcoming ?> col s12 m6">
 
-  <div class="inner">	
+  <div class="inner">
 	  <div class="text">
 		  <?php if ($this->hasDetails): ?>
 		    <h2><a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day) echo $this->day . ', '; ?><?= $this->date ?><?php if ($this->time) echo ', ' . $this->time; ?>)"<?= $this->target ?>><?= $this->link ?></a></h2>
 		  <?php else: ?>
 		    <h2><?= $this->title ?></h2>
 		  <?php endif; ?>
-		
+
 		  <p class="time"><time datetime="<?= $this->datetime ?>"><?= str_replace("–"," – ",$this->date) ?><?php if ($this->time): ?>, <?= $this->time ?><?php endif; ?></time></p>
-		
+
 		  <div class="teaser">
 		    <?= $this->teaser ?>
 		  </div>
-		
+
 		  <?php if ($this->hasDetails): ?>
-		  	<a class="more" href="<?= $this->href ?>">weiterlesen...</a>
+		  	<a class="more" href="<?= $this->href ?>"><?= $this->more ?></a>
 		  <?php endif; ?>
 	  </div>
   </div>
