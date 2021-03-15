@@ -3479,6 +3479,34 @@ mark {
 }
 
 /* ========================== *
+ *   Responsive Tables        *
+ * ========================== */
+
+@media (max-width: 600px) {
+  .resp-table {
+    &, td, tr, tbody {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    td:before {
+      content: attr(data-header-label);
+      display: block;
+      padding: 7px 0;
+      color: #a9a9a9;
+      font-size: 14px;
+    }
+
+    tr {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* ========================== *
  *    IE Fixes                *
  * ========================== */
 .ie .subnav {
