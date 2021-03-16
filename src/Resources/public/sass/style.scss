@@ -825,6 +825,11 @@ header {
     margin-top: -2px;
     color: $breadcrumb-link;
   }
+
+  .col {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 /* ========================== *
