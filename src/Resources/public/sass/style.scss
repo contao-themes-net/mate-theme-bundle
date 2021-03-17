@@ -137,7 +137,7 @@ button, input, optgroup, select, textarea {
   }
 }
 
-.mod_newslist, .mod_eventlist {
+.mod_newslist, .mod_eventlist, .mod_newsarchive {
   @extend .row;
 }
 
@@ -608,11 +608,11 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
   right: 0;
 }
 
-#main .inside > div.first {
-  h1.first, h2.first {
+#main .inside > div:first-child {
+  h1:first-child, h2:first-child {
     margin-top: 0;
   }
-  .ce_text.first {
+  .ce_text:first-child {
     h1, h2 {
       margin-top: 0;
     }
@@ -647,7 +647,7 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
 
 #left, #right {
   .inside {
-    > h2:first-child, .mod_article.first .ce_text.first h2, .mod_article.first .ce_headline h2 {
+    > h2:first-child, .mod_article:first-child .ce_text:first-child h2, .mod_article:first-child .ce_headline h2 {
       margin-top: 0;
     }
   }
@@ -1187,7 +1187,7 @@ nav {
       }
     }
 
-    a.first {
+    a:first-child {
       margin-top: 0;
     }
   }
@@ -1224,7 +1224,7 @@ nav {
     }
   }
 
-  li a.first {
+  li a:first-child {
     margin-top: 2px;
   }
 }
@@ -1972,7 +1972,7 @@ nav .brand-logo {
 /* ========================== *
  *    News und Events         *
  * ========================== */
-.mod_newslist, .mod_eventlist {
+.mod_newslist, .mod_eventlist, .mod_newsarchive {
   > h1, > h2, > h3, > h4, > h5, > h6 {
     padding: 0 0.75rem;
     width: 100%;
@@ -2183,7 +2183,7 @@ nav.pagination li {
   display: block;
 }
 
-.mod_newslist, .mod_eventlist {
+.mod_newslist, .mod_eventlist, .mod_newsarchive {
   .pagination {
     margin: 0 0.75rem;
   }
