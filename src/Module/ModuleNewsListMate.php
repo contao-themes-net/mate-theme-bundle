@@ -53,12 +53,10 @@ class ModuleNewsListMate extends \Contao\ModuleNewsList {
                 });
 
                 $( ".slider.mod_newslist .next" ).click(function() {
-                  //$(".slider").slider("next");
                   $(this).closest(".slider").slider("next");
                 });
 
                 $( ".slider.mod_newslist .prev" ).click(function() {
-                  //$(".slider").slider("prev");
                   $(this).closest(".slider").slider("prev");
                 });
 
