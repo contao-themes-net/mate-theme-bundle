@@ -608,12 +608,9 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
   right: 0;
 }
 
-#main .inside > div:first-child {
-  h1:first-child, h2:first-child {
-    margin-top: 0;
-  }
-  .ce_text:first-child {
-    h1, h2 {
+.mod_article > {
+  h2, h3, h4, h5, h6 {
+    &:first-child {
       margin-top: 0;
     }
   }
