@@ -1,34 +1,34 @@
 <!-- indexer::stop -->
 <?php if($this->headline): ?>
-    <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+  <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
 <?php endif; ?>
 <nav id="mateNavbar<?= $this->id ?>" class="navbar-left <?= $this->class ?> block<?= $this->includeHeadroom ?><?= $this->stuckNavbar ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-    <div class="nav-wrapper left-nav" <?php if($this->showMobileMenu == 0): ?>style="display:block;"<?php endif; ?>>
+  <div class="nav-wrapper left-nav" <?php if($this->showMobileMenu == 0): ?>style="display:block;"<?php endif; ?>>
 
-        <?php if($this->showLogo == 1): ?>
-            <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo right">{{theme::content::MATE01/04}}</a>
-        <?php endif; ?>
+    <?php if($this->showLogo == 1): ?>
+      <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo right">{{theme::content::MATE01/04}}</a>
+    <?php endif; ?>
 
-        <?php if($this->showMobileMenu == 1): ?>
-            <a href="#" data-target="mobile-menu<?= $this->id ?>" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <?php endif; ?>
+    <?php if($this->showMobileMenu == 1): ?>
+      <a href="#" data-target="mobile-menu<?= $this->id ?>" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <?php endif; ?>
 
-        <ul id="desktop-menu<?= $this->id ?>" class="desktop-menu left <?php if($this->showMobileMenu == 1): ?>hide-on-med-and-down <?php endif; ?><?= $this->level ?>">
-            <?= $this->rootNav ?>
-        </ul>
+    <ul id="desktop-menu<?= $this->id ?>" class="desktop-menu left <?php if($this->showMobileMenu == 1): ?>hide-on-med-and-down <?php endif; ?><?= $this->level ?>">
+      <?= $this->rootNav ?>
+    </ul>
 
-        <?php if($this->showMobileMenu == 1): ?>
-            <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu sidenav <?= $this->level ?>">
-                <?= $this->mobileNav ?>
-            </ul>
-        <?php endif; ?>
+    <?php if($this->showMobileMenu == 1): ?>
+      <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu sidenav <?= $this->level ?>">
+        <?= $this->mobileNav ?>
+      </ul>
+    <?php endif; ?>
 
-        <?php if($this->showSearch == 1): ?>
-            {{theme::content::MATE01/05}}
-        <?php endif; ?>
+    <?php if($this->showSearch == 1): ?>
+      {{theme::content::MATE01/05}}
+    <?php endif; ?>
 
-        <?= $this->dropdownNav ?>
-        <?= $this->dropdownNavLvl3 ?>
+    <?= $this->dropdownNav ?>
+    <?= $this->dropdownNavLvl3 ?>
 
   </div>
 </nav>

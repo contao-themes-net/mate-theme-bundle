@@ -1,21 +1,19 @@
 <div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-    <div class="inside">
-        <div>
-            <?php if (!$this->addBefore): ?>
-            <?= $this->text ?>
-            <?php endif; ?>
+  <div class="inside">
+    <div>
+      <?php if (!$this->addBefore): ?>
+        <?= $this->text ?>
+      <?php endif; ?>
 
-            <?php if ($this->addImage): ?>
-            <?php $this->insert('image', $this->arrData); ?>
-            <?php endif; ?>
+      <?php if ($this->addImage): ?>
+        <?php $this->insert('image', $this->arrData); ?>
+      <?php endif; ?>
 
-            <?php if ($this->addBefore): ?>
-            <?= $this->text ?>
-            <?php endif; ?>
-        </div>
-
+      <?php if ($this->addBefore): ?>
+        <?= $this->text ?>
+      <?php endif; ?>
     </div>
+  </div>
 
-    <?php if($this->backgroundImage): ?><div class="bg-image" style="background-image:url('<?= $this->backgroundImage ?>')"></div><?php endif; ?>
-
+  <?php if($this->backgroundImage): ?><div class="bg-image" style="background-image:url('<?= $this->backgroundImage ?>')"></div><?php endif; ?>
 </div>

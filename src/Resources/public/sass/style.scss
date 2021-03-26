@@ -4184,6 +4184,13 @@ mark {
   .event.layout_list {
     margin-top: 20px;
   }
+
+  /* Galerien */
+  @for $i from 3 through 12 {
+    .ce_gallery .cols_#{$i} > li {
+      width: 50%;
+    }
+  }
 }
 
 @media (max-width: 600px) {

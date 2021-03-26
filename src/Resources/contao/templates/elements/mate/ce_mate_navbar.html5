@@ -5,7 +5,7 @@
 
     <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo">{{theme::content::MATE01/04}}</a>
     <a href="#" data-activates="mobile-menu" class="button-collapse">
-        <i class="material-icons">menu</i>
+      <i class="material-icons">menu</i>
     </a>
 
     <?= $this->rootNav ?>

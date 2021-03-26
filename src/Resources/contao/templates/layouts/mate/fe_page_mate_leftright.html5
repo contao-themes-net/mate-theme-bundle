@@ -5,18 +5,18 @@
 <?php $this->endblock(); ?>
 
 <?php $this->block('main'); ?>
-    <div class="col s12 l6 push-l3">
-	    <div id="main">
-	      <div class="inside">
-	        <?= $this->main ?>
-	      </div>
-	      <?php $this->sections('main'); ?>
-	    </div>
+  <div class="col s12 l6 push-l3">
+    <div id="main">
+      <div class="inside">
+        <?= $this->main ?>
+      </div>
+      <?php $this->sections('main'); ?>
     </div>
+  </div>
 <?php $this->endblock(); ?>
 
 <?php $this->block('left'); ?>
-    <?php if ($this->left): ?>
+  <?php if ($this->left): ?>
     <div class="col s12 l3 pull-l6 left-outer">
       <aside id="left">
         <div class="inside">
@@ -24,11 +24,11 @@
         </div>
       </aside>
     </div>
-    <?php endif; ?>
+  <?php endif; ?>
 <?php $this->endblock(); ?>
 
 <?php $this->block('right'); ?>
-    <?php if ($this->right): ?>
+  <?php if ($this->right): ?>
     <div class="col s12 l3 right-outer">
       <aside id="right">
         <div class="inside">
@@ -36,5 +36,5 @@
         </div>
       </aside>
     </div>
-    <?php endif; ?>
+  <?php endif; ?>
 <?php $this->endblock(); ?>

@@ -1,20 +1,17 @@
 <div class="headerImage <?= $this->class ?>" <?= $this->cssId ?>>
 
-	<?php /* <img src="<?= $this->picture['img']['src'] ?>"> */ ?>
-
 	<?php if(strpos($this->class,"smaller") === false): ?>
 		{{picture::<?= $this->picture['img']['src'] ?>?size=12&alt=<?= $this->picture['alt'] ?> }}
 	<?php else: ?>
 		{{picture::<?= $this->picture['img']['src'] ?>?size=13&alt=<?= $this->picture['alt'] ?> }}
 	<?php endif; ?>
 
-
-    <div class="caption">
-        <div class="container">
-            <?php if($this->headline): ?>
-				<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
-			<?php endif; ?>
-        </div>
+  <div class="caption">
+    <div class="container">
+      <?php if($this->headline): ?>
+        <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+      <?php endif; ?>
     </div>
+  </div>
 
 </div>
