@@ -1,31 +1,31 @@
 <div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
 	<div class="inside">
-	<?php $this->block('content'); ?>
+    <?php $this->block('content'); ?>
 
-		<?php if ($this->addImage): ?>
-			<?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}" title="<?= $this->pageText ?>" <?= $this->target ?><?= $this->rel ?>><?php endif; ?>
-				<?php $this->insert('image', $this->arrData); ?>
-			<?php if($this->page != ""): ?></a><?php endif; ?>
-		<?php endif; ?>
+      <?php if ($this->addImage): ?>
+        <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}" title="<?= $this->pageText ?>" <?= $this->target ?><?= $this->rel ?>><?php endif; ?>
+          <?php $this->insert('image', $this->arrData); ?>
+        <?php if($this->page != ""): ?></a><?php endif; ?>
+      <?php endif; ?>
 
-        <?php if($this->subheadline): ?><div class="subheadline"><?= $this->subheadline ?></div><?php endif; ?>
+      <?php if($this->subheadline): ?><div class="subheadline"><?= $this->subheadline ?></div><?php endif; ?>
 
-		<?php if ($this->headline): ?>
-		  <<?= $this->hl ?>>
-            <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}"><?php endif; ?>
-                <?= $this->headline ?>
-            <?php if($this->page != ""): ?></a><?php endif; ?>
-          </<?= $this->hl ?>>
-		<?php endif; ?>
+      <?php if ($this->headline): ?>
+        <<?= $this->hl ?>>
+          <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}"><?php endif; ?>
+            <?= $this->headline ?>
+          <?php if($this->page != ""): ?></a><?php endif; ?>
+        </<?= $this->hl ?>>
+      <?php endif; ?>
 
-		<?= $this->text ?>
+      <?= $this->text ?>
 
-        <?php if($this->page != ""): ?>
-		<div class="pageLink">
-            <a href="{{link_url::<?= $this->page ?>}}"><?= $this->pageText ?></a>
+      <?php if($this->page != ""): ?>
+        <div class="pageLink">
+          <a href="{{link_url::<?= $this->page ?>}}"><?= $this->pageText ?></a>
         </div>
-        <?php endif; ?>
+      <?php endif; ?>
 
-	<?php $this->endblock(); ?>
+    <?php $this->endblock(); ?>
 	</div>
 </div>

@@ -28,7 +28,7 @@ class ModuleNewsListMate extends \Contao\ModuleNewsList {
                   var headline = $(this).find("h2").text();
                   var subheadline = $(this).find(".subheadline").text();
                   var i = index;
-            
+
                   $( ".slider.mod_newslist .indicator-item" ).each(function( index ) {
                     if(i == index) {
                         $(this).append("<span class=\'inner\'></span>");
@@ -51,15 +51,15 @@ class ModuleNewsListMate extends \Contao\ModuleNewsList {
                     interval: '.$mateSliderInterval.',
                     duration: '.$mateSliderDuration.'
                 });
-                
+
                 $( ".slider.mod_newslist .next" ).click(function() {
-                  $(".slider").slider("next");
+                  $(this).closest(".slider").slider("next");
                 });
-            
+
                 $( ".slider.mod_newslist .prev" ).click(function() {
-                  $(".slider").slider("prev");
+                  $(this).closest(".slider").slider("prev");
                 });
-            
+
                 '.$indicators.'
             });
             </script>

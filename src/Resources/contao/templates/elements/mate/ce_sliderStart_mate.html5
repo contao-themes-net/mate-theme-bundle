@@ -1,38 +1,38 @@
 <?php
 // Set Autplay or not
 if($this->sliderDelay == 0) {
-    $autoplay = '
+  $autoplay = '
+    $("#contentSlider'.$this->id.'").slider("pause");
+    $("#contentSlider'.$this->id.' .indicator-item").on("click",function(){
         $("#contentSlider'.$this->id.'").slider("pause");
-        $("#contentSlider'.$this->id.' .indicator-item").on("click",function(){
-            $("#contentSlider'.$this->id.'").slider("pause");
-        }); ';
+    }); ';
 } else { $autoplay = ''; }
 
 // Set Start Slide
 $sliderStartSlide = '';
 for($i = 0; $i < $this->sliderStartSlide; $i++) {
-    $sliderStartSlide = $sliderStartSlide.'$("#contentSlider'.$this->id.'").slider("next");';
+  $sliderStartSlide = $sliderStartSlide.'$("#contentSlider'.$this->id.'").slider("next");';
 }
 ?>
 
 <?php $GLOBALS['TL_BODY'][] = '
 <script>
 jQuery(document).ready(function($) {
-    $("#contentSlider'.$this->id.':not(.smaller)").slider({
-        height: 460,
-        full_width: true,
-        indicators: true,
-        interval: '.$this->sliderDelay.',
-        duration: '.$this->sliderSpeed.'
-    });
-    $("#contentSlider'.$this->id.'.smaller").slider({
-        height: 250,
-        full_width: true,
-        indicators: true,
-        interval: '.$this->sliderDelay.',
-        duration: '.$this->sliderSpeed.'
-    });
-    '.$autoplay.$sliderStartSlide.'
+  $("#contentSlider'.$this->id.':not(.smaller)").slider({
+    height: 460,
+    full_width: true,
+    indicators: true,
+    interval: '.$this->sliderDelay.',
+    duration: '.$this->sliderSpeed.'
+  });
+  $("#contentSlider'.$this->id.'.smaller").slider({
+    height: 250,
+    full_width: true,
+    indicators: true,
+    interval: '.$this->sliderDelay.',
+    duration: '.$this->sliderSpeed.'
+  });
+  '.$autoplay.$sliderStartSlide.'
 });
 </script>
 ';?>

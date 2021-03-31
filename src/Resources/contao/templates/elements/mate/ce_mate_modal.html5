@@ -1,17 +1,17 @@
 <div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
 
-    <a class="modal-trigger<?= $this->linkClass ?>" href="#mateModal<?= $this->id ?>"><?= $this->linkText ?></a>
+  <a class="modal-trigger<?= $this->linkClass ?>" href="#mateModal<?= $this->id ?>"><?= $this->linkText ?></a>
 
-    <div id="mateModal<?= $this->id ?>" class="modal<?= $this->modalClass ?>">
-        <div class="modal-content">
-            <!-- indexer::stop -->
-            <div class="close-modal"><i class="material-icons">clear</i></div>
-            <!-- indexer::continue -->
-            <?php if ($this->headline): ?>
-                <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
-            <?php endif; ?>
-            <?= $this->text ?>
-        </div>
+  <div id="mateModal<?= $this->id ?>" class="modal<?= $this->modalClass ?>">
+    <div class="modal-content">
+      <!-- indexer::stop -->
+      <div class="close-modal"><i class="material-icons">clear</i></div>
+      <!-- indexer::continue -->
+      <?php if ($this->headline): ?>
+        <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+      <?php endif; ?>
+      <?= $this->text ?>
     </div>
+  </div>
 
 </div>

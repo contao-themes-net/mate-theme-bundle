@@ -3,7 +3,6 @@ function is_touch_device() {
         || navigator.maxTouchPoints);       // works on IE10/11 and Surface
 };
 
-jQuery.noConflict();
 jQuery(document).ready(function ($) {
 
     /* ===================== *
