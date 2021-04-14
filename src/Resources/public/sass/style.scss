@@ -85,7 +85,7 @@ button, input, optgroup, select, textarea {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   clear: left;
-  overflow: hidden;
+  //overflow: hidden;
 
   .col {
     display: -webkit-flex;
@@ -97,6 +97,14 @@ button, input, optgroup, select, textarea {
       margin-left: 0;
     }
   }
+}
+
+.col {
+  margin-bottom: 1.5rem;
+}
+
+img {
+  vertical-align: bottom;
 }
 
 #container {
@@ -607,7 +615,7 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
   right: 0;
 }
 
-.mod_article > {
+.mod_article:first-child > {
   h2, h3, h4, h5, h6 {
     &:first-child {
       margin-top: 0;
@@ -1815,7 +1823,7 @@ nav .brand-logo {
   padding: 0;
 
   .inside {
-    margin: 10px;
+    margin: 0 10px;
     padding: 15px;
     background: $boxes-background;
     color: $boxes-text-color;
@@ -1982,9 +1990,9 @@ nav .brand-logo {
     box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     height: 100%;
+    margin-bottom: 3px;
 
     .image_container {
-      margin: 0 0 -5px 0;
       position: relative;
     }
 
@@ -2173,6 +2181,7 @@ nav .brand-logo {
 // contao 4.5 fix
 nav.pagination li {
   padding-right: 5px;
+  margin-bottom: 5px;
 }
 
 #main nav.pagination {
@@ -2182,20 +2191,6 @@ nav.pagination li {
 .mod_newslist, .mod_eventlist, .mod_newsarchive {
   .pagination {
     margin: 0 0.75rem;
-  }
-}
-
-.layout_latest.even, .layout_short.even,
-.layout_teaser.even, .layout_list.even {
-  .inner {
-    margin: 0 10px 40px 2px;
-  }
-}
-
-.layout_latest.odd, .layout_short.odd,
-.layout_teaser.odd, .layout_list.odd {
-  .inner {
-    margin: 0 0 40px 12px;
   }
 }
 
@@ -2416,7 +2411,6 @@ nav.pagination li {
  *    Footer                  *
  * ========================== */
 footer.page-footer {
-  margin-top: 50px;
   color: $footer-primary-color;
   position: relative;
   padding: 0;
@@ -2764,11 +2758,6 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
   }
 }
 
-.input-field label, .widget:not(.widget-checkbox):not(.widget-radio) label {
-  padding: 0 10px;
-  top: -3px;
-}
-
 .input-field label {
   color: $mateColor4;
 }
@@ -2843,14 +2832,13 @@ input[type="file"] {
     background: $boxes-background;
     border: 1px solid #e6e6e6;
     padding: 5px 15px;
-    margin: 10px 0 0;
+    margin: 0;
     height: 40px;
   }
 
-  span.caret {
+  .caret {
     z-index: 1;
-    right: 15px;
-    color: inherit;
+    fill: $mateColor2;
   }
 }
 
@@ -2881,29 +2869,40 @@ textarea {
   float: left;
 }
 
-.widget:not(.widget-checkbox):not(.widget-radio) {
-  @extend .input-field;
+.widget {
   position: relative;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+
+  &.widget-text, &.widget-textarea, &.widget-password {
+    @extend .input-field;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &.select {
+    margin-top: 0;
+  }
 }
 
-.widget:not(.widget-checkbox):not(.widget-radio)>label {
-  color: $mateColor4;
-  position: absolute;
-  padding: 0 10px;
-  top: -3px;
-  left: 0;
-  font-size: 1rem;
-  cursor: text;
-  transition: transform 0.2s ease-out, color 0.2s ease-out;
-  transform-origin: 0% 100%;
-  text-align: initial;
-  transform: translateY(12px);
+.widget {
+  &.widget-text, &.widget-textarea, &.widget-password {
+    > label {
+      color: $mateColor4;
+      position: absolute;
+      padding: 0 10px;
+      top: -3px;
+      left: 0;
+      font-size: 1rem;
+      cursor: text;
+      transition: transform 0.2s ease-out, color 0.2s ease-out;
+      transform-origin: 0% 100%;
+      text-align: initial;
+      transform: translateY(12px);
 
-  &:not(.label-icon).active {
-    transform: translateY(-14px) scale(0.8);
-    transform-origin: 0 0;
+      &:not(.label-icon).active {
+        transform: translateY(-14px) scale(0.8);
+        transform-origin: 0 0;
+      }
+    }
   }
 }
 

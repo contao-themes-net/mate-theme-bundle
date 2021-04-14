@@ -17,7 +17,7 @@
 
         <?= $this->text ?>
 
-        <?php if($this->page != ""): ?>
+        <?php if($this->pageText != ""): ?>
           <div class="pageLink">
             <a href="{{link_url::<?= $this->page ?>}}"><?= $this->pageText ?></a>
           </div>
