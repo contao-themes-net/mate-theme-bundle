@@ -290,6 +290,13 @@ jQuery(document).ready(function ($) {
         alignment: "left"
     });
 
+    $("nav.subnav a.dropdown-button").dropdown({
+        inDuration: 0,
+        outDuration: 0,
+        alignment: "right",
+        closeOnClick: false
+    });
+
     /* ===================== *
     *   Toplink  			 *
     * ====================== */
