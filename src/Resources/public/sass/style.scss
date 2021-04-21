@@ -350,8 +350,10 @@ code, pre {
   }
 }
 
-.ce_list ol {
-  padding-left: 15px;
+.ce_list, .ce_text {
+  ol {
+    padding-left: 15px;
+  }
 }
 
 .ce_accordion {
