@@ -1,0 +1,181 @@
+#hofff-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 100000;
+  max-height: 100%;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px #000000;
+  padding: 10px 0;
+
+  .card {
+    background: $boxes-background;
+    box-shadow: none;
+    margin: 30px 0 0;
+    border-radius: 0;
+  }
+
+  .card-header {
+    overflow: hidden;
+    background: #e0e0e0;
+    padding: 30px;
+  }
+
+  .checkbox_container {
+    padding: 0;
+    background: none;
+
+    &:nth-of-type(1) {
+      padding-top: 0;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .col {
+    display: block;
+  }
+
+  .formbody {
+    flex-wrap: wrap;
+  }
+
+  .h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .hofff-consent-privacy-settings-toggle {
+    @extend .btn;
+    background: #f2f2f2;
+    color: #000;
+
+    &:hover, &:focus {
+      color: #fff;
+    }
+  }
+
+  .hofff-consent-buttons {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .hofff-consent-button-accept {
+    margin-right: 5px;
+    background: $mateColor2;
+  }
+
+  .hofff-consent-button-revoke {
+    background: #b50000;
+  }
+
+  .hofff-consent-privacy-settings-button {
+    float: right;
+  }
+
+  .hofff-consent-privacy-settings {
+    clear: both;
+
+    .hofff-consent-buttons {
+      width: 100%;
+    }
+
+    .hofff-consent-button-close {
+      float: right;
+
+      &:hover, &:focus {
+        color: #fff;
+      }
+    }
+  }
+
+  .hofff-consent-feedback {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  .hofff-consent-button-close {
+    background: #f2f2f2;
+    color: #000;
+  }
+
+  .hofff-consent-banner-additional-content {
+    clear: both;
+    padding-top: 15px;
+
+    nav ul a {
+      color: #000;
+      padding: 0;
+      margin-right: 15px;
+      font-size: 14px;
+      line-height: 1.2;
+
+      &:hover {
+        background: none;
+        color: $mateColor2;
+      }
+    }
+  }
+
+  .list-group-item {
+    padding: 30px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #hofff-consent-banner {
+    .btn, .hofff-consent-privacy-settings-toggle {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #hofff-consent-banner {
+    .card-header, .list-group-item {
+      padding: 20px;
+    }
+
+    .hofff-consent-buttons {
+      margin-bottom: 0;
+
+      button {
+        margin-bottom: 10px;
+      }
+    }
+
+    .hofff-consent-privacy-settings-button {
+      float: none;
+    }
+
+    .hofff-consent-privacy-settings {
+      .hofff-consent-button-close {
+        float: none;
+      }
+
+      .hofff-consent-buttons button {
+        margin-bottom: 10px;
+        margin-right: 5px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
