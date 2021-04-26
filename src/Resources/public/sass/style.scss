@@ -793,9 +793,9 @@ header {
   .submit {
     @extend .btn;
     height: 40px;
-    margin: 0;
     display: inline-block;
     vertical-align: top;
+    margin: 0;
   }
 
   &.stuck {
@@ -815,6 +815,7 @@ header {
     display: inline-block;
     width: auto;
     float: none;
+    margin: 1rem 0;
   }
 }
 
@@ -3985,12 +3986,6 @@ mark {
     font-size: 16px;
   }
 
-  #wrapper {
-    > .container {
-      margin-top: 20px;
-    }
-  }
-
   footer .container {
     padding: 0;
   }
@@ -4078,7 +4073,7 @@ mark {
     top: 101px;
 
     .formbody {
-      padding: 15px;
+      padding: 15px calc(5% / 2);
     }
 
     .widget-text {
@@ -4428,6 +4423,10 @@ mark {
 
   .mod_login, .mod_lostPassword, .mod_registration, .mod_personalData, .mod_changePassword, .mod_subscribe, .mod_unsubscribe {
     padding: 15px;
+  }
+
+  #header .search-box .formbody {
+    padding: 15px calc(10% / 2);
   }
 
   /* Formulare */
