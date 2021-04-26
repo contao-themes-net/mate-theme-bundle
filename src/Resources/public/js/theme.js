@@ -294,7 +294,12 @@ jQuery(document).ready(function ($) {
         inDuration: 0,
         outDuration: 0,
         alignment: "right",
-        closeOnClick: false
+        closeOnClick: false,
+        hover: false
+    });
+
+    $("nav.subnav a.dropdown-button").click(function() {
+        window.location.href = $(this).attr('href');
     });
 
     /* ===================== *
