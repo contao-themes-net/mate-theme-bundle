@@ -63,9 +63,9 @@ Edit your app/config/parameters.yml file:
 |:---:|:---:|:---:|
 | [**0.1 Theme**](https://contao-themes.net/theme-detail/zeroone.html)  | [**ODD Theme**](https://contao-themes.net/theme-detail/odd.html)  | [**NATURE Theme**](https://contao-themes.net/theme-detail/nature.html)  |
 
-| [![CONVERT Theme](https://contao-themes.net/assets/images/7/Convert_Selling_Contao_Theme_01-9c1306b6.png)](https://contao-themes.net/theme-detail/convert.html) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) |
+| [![CONVERT Theme](https://contao-themes.net/assets/images/7/Convert_Selling_Contao_Theme_01-9c1306b6.png)](https://contao-themes.net/theme-detail/convert.html) | [![MATE Isotope](https://contao-themes.net/assets/images/a/01_mate-isotope-shop-theme_quadrat-afa8f36f.jpg)](https://contao-themes.net/theme-detail/mate-isotope.html) | [![0.1 Isotope](https://contao-themes.net/assets/images/f/0.1_Isotope_00-964697c5.png)](https://contao-themes.net/theme-detail/zeroone-isotope.html) |
 |:---:|:---:|:---:|
-| [**CONVERT Theme**](https://contao-themes.net/theme-detail/convert.html)  |  |  |
+| [**CONVERT Theme**](https://contao-themes.net/theme-detail/convert.html)  | [**MATE Isotope**](https://contao-themes.net/theme-detail/mate-isotope.html) | [**0.1 Isotope**](https://contao-themes.net/theme-detail/zeroone-isotope.html) |
 
 ## Bildnachweise
 
