@@ -25,7 +25,7 @@ class Configuration implements ConfigurationInterface
                             ->info('Load custom scss from given location')
                             ->defaultValue('files/mate/_custom.scss')
                             ->end()
-                        ->scalarNode('custom_varibales_scss')
+                        ->scalarNode('custom_variables_scss')
                             ->info('Load custom variables from given location')
                             ->defaultValue('files/mate/_custom_variables.scss')
                             ->end()
