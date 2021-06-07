@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.15.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.15.2) – 2021-06-07
+
+- [fix] fixed navbar layout bug if logo is not visible
+
 ## [2.15.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.15.1) – 2021-05-17
 
 - [fix] add missing fields in login template
