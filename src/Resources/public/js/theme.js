@@ -203,11 +203,16 @@ jQuery(document).ready(function ($) {
     * ====================== */
     var scrollTarget = $("#header .mod_mateNavbar").offset().top;
     if ($("#header .mod_mateNavbar").hasClass("stuckNavbar")) {
+        var navbarHeight = $('#header .mod_mateNavbar').height();
         $(window).scroll(function () {
             var scrollPos = $(window).scrollTop();
             if (scrollPos > scrollTarget) {
+                $('#header').css('padding-top', navbarHeight + 'px');
+                $('.sectionTop').css('visibility','hidden');
                 $('#header .mod_mateNavbar, #header .search-box').addClass('stuck');
             } else {
+                $('#header').css('padding-top', '0');
+                $('.sectionTop').css('visibility','visible');
                 $('#header .mod_mateNavbar, #header .search-box').removeClass('stuck');
             }
         });
