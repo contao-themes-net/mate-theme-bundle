@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.15.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.15.3) – 2021-06-08
+
+- [fix] fixed layout bug while scrolling down if content is not height enough
+
 ## [2.15.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.15.2) – 2021-06-07
 
 - [fix] navbar layout bug if logo is not visible
