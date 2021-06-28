@@ -92,6 +92,7 @@ jQuery(document).ready(function ($) {
         format: translations.format,
         container: 'div.datepicker',
         firstDay: 1,
+        yearRange: [1900, new Date().getFullYear() + 30],
         i18n: {
             nextMonth: translations.nextMonth,
             previousMonth: translations.previousMonth,
