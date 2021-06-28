@@ -369,11 +369,27 @@ code, pre {
     color: $accordion-headline-color;
     overflow: hidden;
     border-bottom: 0;
+    transition: all .3s;
+    padding-right: 50px;
 
-    i {
-      margin-right: 0;
-      padding: 0;
-      width: 50px;
+    &:hover {
+      background: darken($accordion-headline-background, 5%);
+    }
+
+    &:after {
+      content: "\e5cf";
+      font-family: "Material Icons";
+      position: absolute;
+      right: 1rem;
+      font-size: 1.5rem;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &.active:after {
+      content: "\e5ce";
     }
   }
 
