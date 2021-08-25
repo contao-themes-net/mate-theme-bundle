@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.16.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.16.0) – 2021-08-25
+
+- [feature] add sql files for contao 4.12
+
 ## [2.15.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.15.3) – 2021-06-08
 
 - [fix] fixed layout bug while scrolling down if content is not height enough
