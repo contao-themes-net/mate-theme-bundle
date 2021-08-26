@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.17.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.16.1) – 2021-08-26
+
+- [feature] add styles and templates for vehicle manager
+- [fix] css fix for accordion, select field
+
+## [2.16.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.16.1) – 2021-08-26
+
+- [fix] css fix for subnav
+
+## [2.16.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.16.0) – 2021-08-25
+
+- [feature] add sql files for contao 4.12
+
 ## [2.15.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.15.3) – 2021-06-08
 
 - [fix] fixed layout bug while scrolling down if content is not height enough
