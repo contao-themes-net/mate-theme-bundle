@@ -31,8 +31,31 @@
     background: none;
     padding: 0;
 
+    .checkbox-group {
+      overflow: hidden;
+    }
+
+    .md-filters-body {
+      border: none;
+      background: $boxes-background;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
     .md-filters-header .md-filter-sort {
       display: flex;
+    }
+
+    .ui-widget-content {
+      background: $mateColorGreyLight;
+    }
+
+    .ui-slider-handle:nth-of-type(1):after, .ui-slider-handle:nth-of-type(2):after {
+      background: $mateColorGreyLight;
+    }
+
+    .range-slider .ui-widget-header {
+      background: $mateColor1;
     }
   }
 

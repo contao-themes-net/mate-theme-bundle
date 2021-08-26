@@ -369,27 +369,11 @@ code, pre {
     color: $accordion-headline-color;
     overflow: hidden;
     border-bottom: 0;
-    transition: all .3s;
-    padding-right: 50px;
 
-    &:hover {
-      background: darken($accordion-headline-background, 5%);
-    }
-
-    &:after {
-      content: "\e5cf";
-      font-family: "Material Icons";
-      position: absolute;
-      right: 1rem;
-      font-size: 1.5rem;
-      top: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
-
-    &.active:after {
-      content: "\e5ce";
+    i {
+      margin-right: 0;
+      padding: 0;
+      width: 50px;
     }
   }
 
@@ -1181,18 +1165,22 @@ nav {
   background: none;
   box-shadow: none;
 
-  li.active .dropdown-content {
-    display: block;
+  li.active, li.trail {
+    .dropdown-content {
+      display: block !important;
+      position: relative;
+      opacity: 1;
+    }
   }
 
   .dropdown-content {
-    display: none;
-    opacity: 1;
-    position: relative;
     background: none;
-    margin: 4px 0 0 15px;
+    margin: 0 0 0 15px;
     box-shadow: none;
     z-index: 1;
+    position: relative;
+    transition: all .5s;
+    top: 0 !important;
 
     li {
       min-height: 1px;
@@ -1248,19 +1236,6 @@ nav {
 
   i.material-icons {
     display: none;
-  }
-
-  .dropdown-content {
-    visibility: hidden;
-    height: 0;
-    position: absolute;
-  }
-
-  .trail .dropdown-content {
-    visibility: visible;
-    height: inherit;
-    position: relative;
-    display: block;
   }
 }
 
@@ -2933,7 +2908,6 @@ input[type="file"] {
   .caret {
     z-index: 1;
     fill: $mateColor2;
-    pointer-events: none;
   }
 
   select {
