@@ -2930,6 +2930,7 @@ input[type="file"] {
   .caret {
     z-index: 1;
     fill: $mateColor2;
+    pointer-events: none;
   }
 
   select {
