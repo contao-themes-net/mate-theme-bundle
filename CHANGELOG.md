@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.16.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.16.1) – 2021-08-26
+
+- [fix] css fix for subnav
+
 ## [2.16.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.16.0) – 2021-08-25
 
 - [feature] add sql files for contao 4.12
