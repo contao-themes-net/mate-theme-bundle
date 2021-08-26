@@ -369,11 +369,33 @@ code, pre {
     color: $accordion-headline-color;
     overflow: hidden;
     border-bottom: 0;
+    transition: all .3s;
+    padding: 1rem 2.5rem 1rem 1rem;
+
+    &:hover {
+      background: lighten($accordion-headline-background, 10%);
+    }
 
     i {
       margin-right: 0;
       padding: 0;
       width: 50px;
+    }
+
+    .ui-accordion-header-icon {
+      position: absolute;
+      right: 15px;
+
+      &:after {
+        content: "\e5cf";
+        font-family: "Material Icons";
+        font-size: 1.5em;
+        line-height: 1;
+      }
+    }
+
+    &.active .ui-accordion-header-icon:after {
+      content: "\e5ce";
     }
   }
 
