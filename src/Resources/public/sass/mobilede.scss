@@ -1,0 +1,243 @@
+.ce_mobileDeList {
+  .md-ad-box {
+    .detail header {
+      .custom-list li {
+        font-size: 12px;
+      }
+
+      h5 {
+        color: $mateColor2;
+      }
+    }
+
+    .detail .features-list li {
+      font-size: 14px;
+    }
+
+    .detail {
+      color: $primary-text-color;
+    }
+
+    .price {
+      background: $mateColor1;
+      font-family: $font3;
+      color: $mateColorBlack;
+      font-weight: 700;
+      font-style: normal;
+    }
+  }
+
+  .md-filters {
+    background: none;
+    padding: 0;
+
+    .checkbox-group {
+      overflow: hidden;
+    }
+
+    .md-filters-body {
+      border: none;
+      background: $boxes-background;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .md-filters-header .md-filter-sort {
+      display: flex;
+    }
+
+    .ui-widget-content {
+      background: $mateColorGreyLight;
+    }
+
+    .ui-slider-handle:nth-of-type(1):after, .ui-slider-handle:nth-of-type(2):after {
+      background: $mateColorGreyLight;
+    }
+
+    .range-slider .ui-widget-header {
+      background: $mateColor1;
+    }
+  }
+
+  .md-ad-box:hover {
+    box-shadow: none;
+
+    .detail header h5 {
+      color: $mateColor3;
+    }
+
+    .md-ad-box-overlap-wrapper {
+      display: none;
+    }
+  }
+
+  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    margin-right: 5px;
+  }
+
+  .md-filters .checkbox-group {
+    li label {
+      font-size: 16px;
+    }
+
+    ul {
+      padding: 0;
+    }
+  }
+}
+
+.ce_mobileDeReader {
+  [class^="icon-"]:before {
+    color: $mateColor2;
+  }
+
+  .ce_form .widget:nth-of-type(1) {
+    margin-top: 0;
+  }
+
+  .md-detail {
+    color: $primary-text-color;
+
+    .content-slider img {
+      margin: 0;
+    }
+
+    .detail-list li {
+      border: none;
+      padding: 10px;
+
+      &:nth-child(odd) {
+        background: $mateColorWhite;
+      }
+
+      &:nth-child(even) {
+        background: $mateColorGreyLight;
+      }
+
+      .label {
+        font-weight: 700;
+      }
+    }
+
+    .md-detail-box {
+      background: none;
+      padding: 0;
+    }
+
+    .md-detail-header {
+      background: none;
+      padding: 0;
+      margin: 20px 0 40px;
+
+      h1 {
+        font-family: $font3;
+      }
+
+      .price {
+        color: $mateColorBlack;
+        background: $mateColor1;
+        font-size: 1.2em;
+        padding: 5px 10px;
+      }
+    }
+
+    .md-detail-right {
+      h2 {
+        color: $mateColorBlack;
+        font-size: 1.2em;
+        margin: 0 0 20px;
+      }
+
+      [class^="icon-"]:before {
+        color: $mateColorBlack;
+      }
+    }
+
+    .md-detail-left {
+      padding-right: 30px;
+
+      h2 {
+        background: none;
+        color: $mateColorBlack;
+        font-size: 1.2em;
+        margin: 0 0 20px;
+        padding: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .slider-control {
+    background: none;
+    box-shadow: none;
+  }
+
+  .slider-control a, .slider-control .slider-menu {
+    top: 0;
+  }
+}
+
+#wrapper #showFilters {
+  @extend .btn;
+  line-height: 1;
+  height: 40px;
+  position: relative;
+  padding-left: 40px;
+  font-size: 12px;
+
+  i {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+  }
+}
+
+@media (min-width: 980px) {
+  .ce_mobileDeList {
+    .md-ads {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    .md-ad-box {
+      width: calc(100% / 3);
+      margin: 0;
+      padding: 10px;
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 979px) {
+  .ce_mobileDeReader .md-detail {
+    .md-detail-header {
+      margin-bottom: 70px;
+
+      .price {
+        border: none;
+        left: 0;
+        margin: 0;
+        bottom: -50px;
+      }
+    }
+
+    .md-detail-left {
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ce_mobileDeReader .md-detail .content-slider img {
+    max-height: inherit;
+  }
+
+  .ce_mobileDeList .md-ad-box .detail {
+    padding-bottom: 40px;
+  }
+}

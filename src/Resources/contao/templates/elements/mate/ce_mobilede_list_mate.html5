@@ -1,0 +1,177 @@
+<!-- indexer::stop -->
+<?php $GLOBALS['TL_BODY'][] = '<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>'; ?>
+<?php $GLOBALS['TL_BODY'][] = '<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>'; ?>
+<?php $GLOBALS['TL_BODY'][] = '<link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">'; ?>
+
+<div
+  class="<?php echo $this->class; ?> block<?php if($this->onlyFilter == 1): ?> only-filter<?php endif; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+
+<?php if ($this->headline): ?>
+<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+<?php endif; ?>
+
+<?php if(!$this->hideFilters): ?>
+<div class="md-filters">
+  <?php if($this->onlyFilter == 0): ?>
+  <div class="md-filters-header">
+    <button id="showFilters"><i class="demo-icon icon-filter"></i> Erweiterte Suche</button>
+    <div class="md-filter-sort button-group">
+      <i class="icon-sort"></i>
+      <select class="md-select sorting">
+        <option value="original-order" data-filter="original-order" data-filter-type="sort" title="Keine Sortierung"
+                selected>Sortierung
+        </option>
+        <option value="price" data-filter="price" data-filter-type="sort" title="nach Preis sortieren">Preis</option>
+        <option value="title" data-filter="title" data-filter-type="sort" title="nach Name sortieren">Name</option>
+        <option value="power" data-filter="power" data-filter-type="sort" title="nach Leistung sortieren">Leistung
+        </option>
+        <option value="mileage" data-filter="mileage" data-filter-type="sort" title="nach Kilometerstand sortieren">
+          Kilometerstand
+        </option>
+      </select>
+    </div>
+  </div>
+  <?php endif; ?>
+  <div class="md-filters-body"<?php if($this->onlyFilter == 1): ?> style='display:block;'<?php endif; ?>>
+  <div class="md-filter-select select-group">
+    <?php if($this->filters['make']): ?>
+    <div class="brands select-container">
+      <label>Marke</label>
+      <select class="md-select">
+        <option value="*">Alle anzeigen</option>
+        <?php foreach($this->filters['make'] as $key=>$brand): ?>
+        <option value=".<?= $brand['key'] ?>"><?= $brand['label'] ?> <?php /*(<?= $brand['count'] ?>)*/ ?></option>
+        <?php endforeach; ?>
+      </select>
+    </div>
+    <?php endif; ?>
+    <?php if($this->filters['categories']): ?>
+    <div class="categories select-container">
+      <label>Fahrzeugtyp</label>
+      <select class="md-select">
+        <option value="*">Alle anzeigen</option>
+        <?php foreach($this->filters['categories'] as $key=>$cat): ?>
+        <option value=".<?= $key ?>"><?= $cat['label'] ?> <?php /*(<?= $cat['count'] ?>)*/ ?></option>
+        <?php endforeach; ?>
+      </select>
+    </div>
+    <?php endif; ?>
+  </div>
+  <?php if($this->filters['fuelType']): ?>
+  <div class="fuel select-container">
+    <label>Kraftstoffart</label>
+    <select class="md-select">
+      <option value="*">Alle anzeigen</option>
+      <?php foreach($this->filters['fuelType'] as $key=>$type): ?>
+      <option value=".<?= $key ?>"><?= $type['label'] ?> <?php /*(<?= $type['count'] ?>)*/ ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+  <?php endif; ?>
+  <?php if($this->filters['gearbox']): ?>
+  <div class="gearbox select-container">
+    <label>Getriebe</label>
+    <select class="md-select">
+      <option value="*">Alle anzeigen</option>
+      <?php foreach($this->filters['gearbox'] as $key=>$type): ?>
+      <option value=".<?= $key ?>"><?= $type['label'] ?> <?php /*(<?= $type['count'] ?>)*/ ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+  <?php endif; ?>
+  <?php if(isset($this->filters['usageType'])): ?>
+  <div class="type select-container">
+    <label>Fahrzeugart</label>
+    <select class="md-select">
+      <option value="*">Alle anzeigen</option>
+      <?php foreach($this->filters['usageType'] as $key=>$type): ?>
+      <option value=".<?= $key ?>"><?= $type['label'] ?> <?php /*(<?= $type['count'] ?>)*/ ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+  <?php endif; ?>
+  <?php if($this->filters['colors']): ?>
+  <div class="md-filter-attr checkbox-group">
+    <label>Farbe</label>
+    <ul>
+      <?php foreach($this->filters['colors'] as $key=>$col): ?>
+      <li><input type="checkbox" name="<?= $key ?>" data-filter=".<?= $key ?>" value=".<?= $key ?>"
+                 id="<?= $key ?>"><label for="<?= $key ?>"><?= $col['label'] ?> <?php /*(<?= $col['count'] ?>)*/ ?></label></li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
+  <?php endif; ?>
+  <div class="range-slider"<?php if(!$this->priceSlider): ?> style="display:none;"<?php endif; ?>>
+  <p>
+    <label for="price">Preis</label>
+    <input type="text" id="price" readonly>
+  </p>
+  <div id="priceSlider" data-filter-group="price"></div>
+</div>
+
+<div class="range-slider"<?php if(!$this->powerSlider): ?> style="display:none;"<?php endif; ?>>
+<p>
+  <label for="power">Leistung</label>
+  <input type="text" id="power" readonly>
+</p>
+<div id="powerSlider" data-filter-group="power"></div>
+</div>
+<div class="range-slider"<?php if(!$this->mileageSlider): ?> style="display:none;"<?php endif; ?>>
+<p>
+  <label for="mileage">Kilometerstand</label>
+  <input type="text" id="mileage" readonly>
+</p>
+<div id="mileageSlider" data-filter-group="mileage"></div>
+</div>
+
+<span><a href="#" class="filter-reset" id="filterReset">Filter zurücksetzen</a></span>
+
+<?php if($this->onlyFilter == 1): ?>
+<span><a href="{{link_url::<?= $this->listingPage ?>}}" class="submit">Absenden</a></span>
+<?php endif; ?>
+<!-- <span><button class="btn-shuffle" id="shuffle">Mischen</button></span> -->
+</div>
+</div> <!-- end md-filter -->
+<?php endif; ?>
+
+<?php if($this->promotion): ?>
+<div class="md-promotion-box list">
+  <?= $this->promotion ?>
+</div>
+<?php endif; ?>
+
+<?php //if($this->onlyFilter == 0): ?>
+<div class="md-ads">
+  <?php foreach($this->ads as $ad): ?>
+  <?= $ad; ?>
+  <?php endforeach; ?>
+  <div class="md-no-result"><?= $this->noResultMessage ?></div>
+</div> <!-- MobileDe list end -->
+<?php //endif; ?>
+
+<?php echo $this->pagination; ?>
+</div>
+
+<?php if($this->debug): ?>
+<div>
+  <h2>DEBUG:</h2>
+  Modulversion: <?= $this->version ?><br>
+  HändlerID: <?= $this->customer ?><br>
+  Anzahl Fahrzeuge: <?= count($this->ads); ?><br><br>
+  Filters<br>
+  <pre><?php print_r($this->filters);  ?></pre>
+  RawData<br>
+  <pre> <?php print_r($this->rawData); ?></pre>
+  AutoItems<br>
+  <pre> <?php print_r($GLOBALS['TL_AUTO_ITEM']); ?></pre>
+</div>
+<?php endif; ?>
+
+<script>
+  <?php if($this->listShuffle): ?>
+  var mdListShuffle = <?= $this->listShuffle ?>;
+  <?php endif; ?>
+</script>
+
+<!--[if IE 7]><link rel="stylesheet" href="/bundles/pdirmobilede/vendor/fontello/css/fontello-ie7.css"><![endif]-->
+<!-- indexer::continue -->
