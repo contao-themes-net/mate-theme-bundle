@@ -1,6 +1,10 @@
 # Changelog
 
-## [2.17.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.16.1) – 2021-08-26
+## [2.17.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.1) – 2021-09-01
+
+- [fix] update styles for vehicle manager
+
+## [2.17.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.0) – 2021-08-27
 
 - [feature] add styles and templates for vehicle manager
 - [fix] css fix for accordion, select field

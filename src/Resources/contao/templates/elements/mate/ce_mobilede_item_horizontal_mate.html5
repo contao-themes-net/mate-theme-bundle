@@ -1,0 +1,70 @@
+<?php if($this->desc == ''): return ''; endif; ?>
+<a href="<?= $this->link ?>" class="item md-ad-box horizontal <?= $this->filterClasses ?><?php if($this->onlyFilter == 1): ?> hidden<?php endif; ?>" data-price="<?= $this->plainPrice ?>" data-power="<?= $this->plainPower ?>" data-mileage="<?= str_replace(",","",$this->mileage) ?>" data-acc="<?= $this->account ?>">
+  <?php if($this->onlyFilter == 0): ?>
+  <div class="image">
+    <picture>
+        <img src="<?= $this->imageSrc_M ?>" srcset="<?= $this->imageSrc_M ?> 1x, <?= $this->imageSrc_L ?> 1.5x, <?= $this->imageSrc_XL ?> 2x"  alt="<?= $this->desc ?>">
+    </picture>
+  </div>
+  <div class="detail">
+    <!-- Header -->
+    <header class="clearfix">
+
+      <h5 class="title">
+        <?= $this->desc ?>
+      </h5>
+      <ul class="custom-list">
+        <?php if($this->power): ?>
+        <li>
+          <i class="icon-gauge"></i><?= $this->power ?>
+        </li>
+        <?php endif; ?>
+        <?php if($this->fuelType): ?>
+        <li>
+          <?= $this->fuelType ?>
+        </li>
+        <?php endif; ?>
+        <?php if($this->transmission): ?>
+        <li class="last">
+          <?= $this->transmission ?>
+        </li>
+        <?php endif; ?>
+      </ul>
+    </header>
+    <!-- Fuel and type -->
+    <p>
+      <?php if(is_array($this->fuelConsumption) && count($this->fuelConsumption) > 0): ?>
+        <?php foreach($this->fuelConsumption as $fuelItem): ?>
+        <?= $fuelItem['label'] ?>: <?= $fuelItem['value'] ?><br>
+        <?php endforeach; ?>
+      <?php endif; ?>
+      <?php if($this->usageType): ?><?= $this->bodyType ?>, <?= $this->usageType ?><?php endif; ?>
+    </p>
+    <!-- Features List -->
+    <div class="features-area">
+      <ul class="features-list clearfix">
+        <li>
+          <i class="icon-calendar-times-o"></i>
+          <span><?= $this->firstRegistration ?></span>
+        </li>
+        <li>
+          <i class="icon-road"></i>
+          <span><?= $this->mileage ?><?php #= number_format($this->mileage, 2, "," ,".") ?> km</span>
+        </li>
+      </ul>
+      <div class="price">
+        <span>
+          <?= $this->price ?>
+          <?php if($this->pseudoPrice): ?><span class="pseudo-price"><?= $this->pseudoPrice ?></span><?php endif; ?>
+        </span>
+      </div>
+    </div>
+
+  </div>
+<?php /* if($this->featured): ?>
+  <div class="corner-ribbon <?= $this->featureCss ?>"><?php if($this->promotion): ?>Empfehlung<?php else: ?>Neu<?php endif ?></div>
+<?php endif; */ ?>
+
+  <?php endif; ?>
+</a>
+<!-- mobilede ad box end-->
