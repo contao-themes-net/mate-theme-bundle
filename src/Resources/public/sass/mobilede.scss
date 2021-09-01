@@ -73,6 +73,7 @@
         padding: 0;
         width: 30%;
         text-align: right;
+        color: $boxes-text-color;
 
         @media (max-width: 767px) {
           width: 100%;
@@ -102,7 +103,8 @@
     }
 
     .detail {
-      color: $primary-text-color;
+      color: $boxes-text-color;
+      background: $boxes-background;
 
       @media (max-width: 767px) {
           padding-bottom: 40px;
@@ -246,16 +248,21 @@
       padding: 10px;
 
       &:nth-child(odd) {
-        background: $mateColorWhite;
+        background: $boxes-background;
       }
 
       &:nth-child(even) {
-        background: $mateColorGreyLight;
+        background: darken($mateColorWhite, 5%);
       }
 
       .label {
         font-weight: 700;
       }
+    }
+
+    input.text, form textarea {
+      background: $boxes-background;
+      color: $boxes-text-color;
     }
 
     .md-detail-box {
