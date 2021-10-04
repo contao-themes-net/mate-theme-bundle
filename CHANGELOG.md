@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.17.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.2) – 2021-10-04
+
+- [fix] css fix for vehicle manager
+
 ## [2.17.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.1) – 2021-09-01
 
 - [fix] update styles for vehicle manager
