@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.17.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.3) – 2021-10-12
+
+- [fix] show level 4 dropdown navigation
+
 ## [2.17.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.2) – 2021-10-04
 
 - [fix] css fix for vehicle manager

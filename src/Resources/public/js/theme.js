@@ -250,6 +250,16 @@ jQuery(document).ready(function ($) {
             closeOnClick: false
         });
 
+        $("nav:not(.subnav) .desktop-menu ul.dropdown-content ul.dropdown-content a.dropdown-button").dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            hover: false,
+            coverTrigger: false,
+            alignment: "left",
+            constrainWidth: false,
+            closeOnClick: false
+        });
+
         $('.dropdown-button').click(function () {
             $('.dropdown-content .dropdown-content').hide();
             if (!$(this).hasClass('stopPropagation')) window.location.href = $(this).attr('href');
@@ -266,6 +276,16 @@ jQuery(document).ready(function ($) {
         });
 
         $("nav:not(.subnav) .desktop-menu ul.dropdown-content a.dropdown-button").dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            hover: false,
+            coverTrigger: false,
+            alignment: "left",
+            constrainWidth: false,
+            closeOnClick: false
+        });
+
+        $("nav:not(.subnav) .desktop-menu ul.dropdown-content ul.dropdown-content a.dropdown-button").dropdown({
             inDuration: 300,
             outDuration: 225,
             hover: false,
