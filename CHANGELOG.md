@@ -2,7 +2,7 @@
 
 ## [2.17.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.4) – 2021-11-10
 
-- [fix] remove php warning in php8
+- [fix] remove php warning
 
 ## [2.17.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.3) – 2021-10-12
 
