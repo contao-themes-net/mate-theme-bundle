@@ -12,7 +12,7 @@ $GLOBALS['FE_MOD']['mateTheme']['mateNavbar'] = 'ContaoThemesNet\\MateThemeBundl
 $GLOBALS['FE_MOD']['mateTheme']['mateModal'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\ModalModule';
 
 if($GLOBALS['FE_MOD']['news']['newslist']) {
-    if ( $GLOBALS['BE_MOD']['pdir']['socialFeed'] ) {
+    if ( !empty($GLOBALS['BE_MOD']['pdir']['socialFeed']) ) {
         $GLOBALS['FE_MOD']['news']['newslist'] = 'ContaoThemesNet\\MateThemeBundle\\Module\\ModuleNewsListMateSocialFeed';
     } else {
         $GLOBALS['FE_MOD']['news']['newslist'] = 'ContaoThemesNet\\MateThemeBundle\\Module\\ModuleNewsListMate';
