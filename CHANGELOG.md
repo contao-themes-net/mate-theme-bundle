@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.17.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.4) – 2021-11-10
+## [2.17.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.4) – 2021-11-19
 
 - [fix] remove php warning
 
