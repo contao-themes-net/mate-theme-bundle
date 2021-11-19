@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.17.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.4) – 2021-11-19
+
+- [fix] remove php warning
+
 ## [2.17.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.3) – 2021-10-12
 
 - [fix] show level 4 dropdown navigation
