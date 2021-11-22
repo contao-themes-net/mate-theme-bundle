@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.17.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.5) – 2021-11-22
+
+- [fix] replace template `form_mate_upload` with `form_upload_mate` in sql templates
+
 ## [2.17.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.4) – 2021-11-19
 
 - [fix] remove php warning
