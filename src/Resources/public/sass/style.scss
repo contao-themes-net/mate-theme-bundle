@@ -2610,6 +2610,12 @@ footer.page-footer {
       }
     }
   }
+
+  .ce_text, .ce_list {
+    ul:not(.browser-default) li:before {
+      color: $footer-primary-color;
+    }
+  }
 }
 
 footer .container {
