@@ -63,14 +63,20 @@ class HookListener
                     var bottom_of_element = countToElem.offset().top + countToElem.outerHeight();
                     var bottom_of_screen = $(window).scrollTop() + $(window).height();
                     var top_of_screen = $(window).scrollTop();
-                    var countToText = countToElem.text();
+                    var countToText = countToElem.text().replace(".","").replace(",","");
                     if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
                         if (countTo == 0) {
                             countToElem.countTo({
                                 from: 0,
-                                to: countToText,
+                                to: parseInt(countToText),
                                 speed: 1000,
-                                refreshInterval: 50
+                                refreshInterval: 50,
+                                decimals: 0,
+                                formatter: function (value, options) {
+                                  value = value.toFixed(options.decimals);
+                                  value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                                  return value;
+                                },
                             });
                         }
                         countTo = 1;

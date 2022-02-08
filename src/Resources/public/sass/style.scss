@@ -250,6 +250,21 @@ a.btn:hover {
   }
 }
 
+a {
+  transition: all .3s;
+}
+
+#wrapper .ce_hyperlink {
+  &.btn, &.btn-large {
+    padding: 0;
+
+    a {
+      padding: 12px 20px;
+      display: block;
+    }
+  }
+}
+
 .sectionTop, footer {
   a {
     color: #fff;
@@ -499,6 +514,10 @@ table {
 
   a {
     color: $button-flat-color;
+  }
+
+  &:hover {
+    background: $button-floating-background-hover;
   }
 }
 

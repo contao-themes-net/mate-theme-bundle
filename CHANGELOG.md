@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.17.7](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.7) – 2022-01-13
+
+- [fix] fix button styles
+- [fix] add thousands separator to countTo element
+- [fix] add protected legend in dca
+
 ## [2.17.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.6) – 2021-12-22
 
 - [fix] add styling for lists in footer
