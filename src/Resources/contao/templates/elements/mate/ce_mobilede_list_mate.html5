@@ -12,7 +12,7 @@
 
 <?php if(!$this->hideFilters): ?>
 <div class="md-filters">
-  <?php if($this->onlyFilter !== 1): ?>
+  <?php if($this->onlyFilter == 0): ?>
   <div class="md-filters-header">
     <button id="showFilters"><i class="demo-icon icon-filter"></i> Erweiterte Suche</button>
     <div class="md-filter-sort button-group">
