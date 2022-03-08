@@ -1,4 +1,7 @@
 services:
+  _defaults:
+    autoconfigure: true
+
   ContaoThemesNet\MateThemeBundle\Migration\Version300Update:
     tags:
       - { name: contao.migration, priority: 0 }
