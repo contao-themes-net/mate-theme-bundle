@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.0.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.3) – 2021-03-09
+
+- [feature] add support for PHP 8
+- [feature] remove bootstrap/grid and use migrations to be compatible with the new version (see https://pdir.de/docs/de/contao/themes/mate/update/)
+
 ## [2.17.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.6) – 2021-12-22
 
 - [fix] add styling for lists in footer
