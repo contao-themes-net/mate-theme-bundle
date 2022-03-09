@@ -80,3 +80,8 @@ see https://docs.contao-themes.net/
 * Straßenkarte / street-map-2679271_1920.jpg: [pixel2013](https://pixabay.com/de/users/pixel2013-2364555/)@[Pixabay](https://pixabay.com/de/photos/stra%C3%9Fenkarte-map-suchen-finden-2679271/)
 
 Alle Demo-Inhalte dieses Themes, insbesondere Texte, Fotografien und Grafiken, sind urheberrechtlich geschützt. Das Urheberrecht liegt bei der pdir Gmbh bzw. den jeweiligen Urhebern der Werke. Bitte fragen Sie uns, falls Sie die Demo-Inhalte dieses Themes verwenden möchten. Ohne schriftliche Genehmigung seitens der Urheber dürfen diese in keiner Form verwendet, vervielfältigt oder verbreitet werden.
+
+# DEV
+# run before commit
+
+    vendor/bin/ecs check src tests
