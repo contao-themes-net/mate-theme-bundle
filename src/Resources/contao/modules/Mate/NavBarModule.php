@@ -300,7 +300,7 @@ class NavBarModule extends \Module
                 $row['pageTitle'] = specialchars($objSubpage->pageTitle, true);
                 $row['link'] = $objSubpage->title;
                 $row['href'] = $href;
-                $row['nofollow'] = (0 === strncmp($objSubpage->robots, 'noindex,nofollow', 16));
+                $row['nofollow'] = 0 === strncmp($objSubpage->robots, 'noindex,nofollow', 16);
                 $row['target'] = '';
                 $row['description'] = str_replace(["\n", "\r"], [' ', ''], $objSubpage->description);
                 // Override the link target
