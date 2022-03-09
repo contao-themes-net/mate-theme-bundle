@@ -20,7 +20,7 @@ class Version300Update extends AbstractMigration
         $this->connection = $connection;
     }
 
-    public function shouldRun(): bool
+    public function shouldRun()
     {
         $schemaManager = $this->connection->getSchemaManager();
 
@@ -34,7 +34,7 @@ class Version300Update extends AbstractMigration
         return $oldGrids->rowCount() > 0;
     }
 
-    public function run(): MigrationResult
+    public function run()
     {
         // update start element
         $this->connection->executeQuery("
