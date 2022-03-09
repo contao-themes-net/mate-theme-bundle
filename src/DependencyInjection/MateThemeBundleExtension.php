@@ -26,9 +26,8 @@ class MateThemeBundleExtension extends Extension
             $container,
             new FileLocator(__DIR__.'/../Resources/config')
         );
-        foreach ($this->files as $file) {
-            $loader->load($file);
-        }
+
+        $loader->load('services.yaml');
 
         $container->setParameter( 'mate_theme.assets.custom_scss', $mergedConfig[ 'assets.custom_scss' ]);
         $container->setParameter( 'mate_theme.assets.custom_variables_scss', $mergedConfig[ 'assets.custom_variables_scss' ]);
