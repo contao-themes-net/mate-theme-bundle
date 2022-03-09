@@ -1,26 +1,55 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * mate theme for Contao Open Source CMS
+ *
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ *
+ * @package    contao-themes-net/mate-theme-bundle
+ * @link       https://github.com/contao-themes-net/mate-theme-bundle
+ * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
+ * @author     Philipp Seibt <develop@pdir.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace ContaoThemesNet\MateThemeBundle\Module;
 
-class ModuleNewsListMate extends \Contao\ModuleNewsList {
+use Contao\ModuleNewsList;
 
+class ModuleNewsListMate extends ModuleNewsList
+{
     /**
-     * Generate the module
+     * Generate the module.
      */
     protected function compile()
     {
-        if( strpos($this->customTpl,"mod_newslist_mate_slider") !== false ) {
-            if($this->mateSliderHeight == "") $mateSliderHeight = "460";
-            else $mateSliderHeight = $this->mateSliderHeight;
+        if (false !== strpos($this->customTpl, 'mod_newslist_mate_slider')) {
+            if ('' === $this->mateSliderHeight) {
+                $mateSliderHeight = '460';
+            } else {
+                $mateSliderHeight = $this->mateSliderHeight;
+            }
 
-            if($this->mateSliderInterval == "") $mateSliderInterval = "12000";
-            else $mateSliderInterval = $this->mateSliderInterval;
+            if ('' === $this->mateSliderInterval) {
+                $mateSliderInterval = '12000';
+            } else {
+                $mateSliderInterval = $this->mateSliderInterval;
+            }
 
-            if($this->mateSliderDuration == "") $mateSliderDuration = "150";
-            else $mateSliderDuration = $this->mateSliderDuration;
+            if ('' === $this->mateSliderDuration) {
+                $mateSliderDuration = '150';
+            } else {
+                $mateSliderDuration = $this->mateSliderDuration;
+            }
 
-            $indicators = "";
-            if($this->mateSliderIndicators == 1) {
+            $indicators = '';
+
+            if (1 === $this->mateSliderIndicators) {
                 $mateSliderIndicators = 'true';
 
                 $indicators = '
@@ -68,5 +97,4 @@ class ModuleNewsListMate extends \Contao\ModuleNewsList {
 
         return parent::compile();
     }
-
 }

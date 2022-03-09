@@ -1,13 +1,16 @@
 <?php
 
-/**
+declare(strict_types=1);
+
+/*
  * mate theme for Contao Open Source CMS
  *
- * Copyright (C) 2017 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
  *
  * @package    contao-themes-net/mate-theme-bundle
  * @link       https://github.com/contao-themes-net/mate-theme-bundle
  * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
  * @author     Philipp Seibt <develop@pdir.de>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -45,14 +48,20 @@ class HookListener
     {
         $parts = explode('::', $tag);
 
-        $class = ""; $spanClass = "";
-        if($parts[2] != "") $spanClass = " ".$parts[2];
+        $class = '';
+        $spanClass = '';
+
+        if ('' !== $parts[2]) {
+            $spanClass = ' '.$parts[2];
+        }
 
         $tag = '<span class="countTo'.$spanClass.'">'.$parts[1].'</span>';
 
-        if(strpos($class,"noscript") === false) {
-            if($parts[2] != "") $class = ".".$parts[2];
-            $class = str_replace("noscript","", $class);
+        if (false === strpos($class, 'noscript')) {
+            if ('' !== $parts[2]) {
+                $class = '.'.$parts[2];
+            }
+            $class = str_replace('noscript', '', $class);
             $GLOBALS['TL_BODY'][] = '<script src="bundles/matetheme/js/jquery.countTo.js"></script>';
             $GLOBALS['TL_BODY'][] = '<script>
             jQuery( document ).ready(function($) {

@@ -1,5 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * mate theme for Contao Open Source CMS
+ *
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ *
+ * @package    contao-themes-net/mate-theme-bundle
+ * @link       https://github.com/contao-themes-net/mate-theme-bundle
+ * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
+ * @author     Philipp Seibt <develop@pdir.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 $GLOBALS['TL_LANG']['CTE']['mateTheme'][0] = $GLOBALS['TL_LANG']['FMD']['mateTheme'][0] = 'mate-Elemente (Theme)';
 $GLOBALS['TL_LANG']['CTE']['mateTheme'][1] = $GLOBALS['TL_LANG']['FMD']['mateTheme'][1] = 'Besondere Inhaltselemente des mate Themes';
 $GLOBALS['TL_LANG']['CTE']['mateNavbar'][0] = $GLOBALS['TL_LANG']['FMD']['mateTheme']['mateNavbar'][0] = $GLOBALS['TL_LANG']['CTE']['mateTheme']['navbar'][0] = 'Navbar';
@@ -12,8 +29,8 @@ $GLOBALS['TL_LANG']['CTE']['mateParallaxElement'][0] = 'Parallax element';
 $GLOBALS['TL_LANG']['CTE']['mateTextBackgroundElement'][0] = 'Text element with background image';
 $GLOBALS['TL_LANG']['CTE']['mateModal'][0] = 'Modal element';
 
-$GLOBALS['TL_LANG']['MOD']['mateTheme'][0] = "contao-themes.net";
-$GLOBALS['TL_LANG']['MOD']['mateThemeSetup'][0] = "Mate Theme Setup";
+$GLOBALS['TL_LANG']['MOD']['mateTheme'][0] = 'contao-themes.net';
+$GLOBALS['TL_LANG']['MOD']['mateThemeSetup'][0] = 'Mate Theme Setup';
 
 // navbar
 $GLOBALS['TL_LANG']['tl_content']['mateNavbar'] = 'Navbar (mate)1';
@@ -29,7 +46,7 @@ $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type6'] = 'NavBar mit Buttons'
 $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type7'] = 'Mobile NavBar';
 
 // theme helper tags
-$GLOBALS['TL_LANG']['tl_article']['pdir_th_tag'] = array('Theme Helper Tag', 'Please select a theme helper tag to use content of this article as insert tag.');
+$GLOBALS['TL_LANG']['tl_article']['pdir_th_tag'] = ['Theme Helper Tag', 'Please select a theme helper tag to use content of this article as insert tag.'];
 
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['empty'] = '-';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE01/01'] = 'Header / 01';

@@ -1,10 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * mate theme for Contao Open Source CMS
+ *
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ *
+ * @package    contao-themes-net/mate-theme-bundle
+ * @link       https://github.com/contao-themes-net/mate-theme-bundle
+ * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
+ * @author     Philipp Seibt <develop@pdir.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace ContaoThemesNet\MateThemeBundle\Migration;
 
 use Contao\ContentModel;
 use Contao\CoreBundle\Migration\AbstractMigration;
-use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\StringUtil;
 use Doctrine\DBAL\Connection;
 
@@ -60,8 +76,9 @@ class Version300Update extends AbstractMigration
         $contentModel = ContentModel::findBy('bs_grid', 1);
 
         $rowCount = 0;
+
         if ($contentModel) {
-            foreach( $contentModel as $content) {
+            foreach ($contentModel as $content) {
                 $cssID = StringUtil::deserialize($content->cssID, true);
                 // check for existing classes
                 if ('' === $cssID[1]) {
@@ -73,7 +90,7 @@ class Version300Update extends AbstractMigration
                 $content->cssID = serialize($cssID);
                 $content->save();
 
-                $rowCount++;
+                ++$rowCount;
             }
         }
 

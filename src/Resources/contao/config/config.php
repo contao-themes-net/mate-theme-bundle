@@ -1,25 +1,41 @@
 <?php
 
-// Insert the mate theme category
-array_insert($GLOBALS['TL_CTE'], 1, array('mateTheme' => array()));
-array_insert($GLOBALS['FE_MOD'], 1, array('mateTheme' => array()));
-array_insert($GLOBALS['BE_MOD'], 1, array('mateTheme' => array()));
+declare(strict_types=1);
 
-/**
+/*
+ * mate theme for Contao Open Source CMS
+ *
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ *
+ * @package    contao-themes-net/mate-theme-bundle
+ * @link       https://github.com/contao-themes-net/mate-theme-bundle
+ * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
+ * @author     Philipp Seibt <develop@pdir.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+array_insert($GLOBALS['TL_CTE'], 1, ['mateTheme' => []]);
+array_insert($GLOBALS['FE_MOD'], 1, ['mateTheme' => []]);
+array_insert($GLOBALS['BE_MOD'], 1, ['mateTheme' => []]);
+
+/*
  * Add frontend element
  */
 $GLOBALS['FE_MOD']['mateTheme']['mateNavbar'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\NavBarModule';
 $GLOBALS['FE_MOD']['mateTheme']['mateModal'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\ModalModule';
 
-if($GLOBALS['FE_MOD']['news']['newslist']) {
-    if ( !empty($GLOBALS['BE_MOD']['pdir']['socialFeed']) ) {
+if ($GLOBALS['FE_MOD']['news']['newslist']) {
+    if (!empty($GLOBALS['BE_MOD']['pdir']['socialFeed'])) {
         $GLOBALS['FE_MOD']['news']['newslist'] = 'ContaoThemesNet\\MateThemeBundle\\Module\\ModuleNewsListMateSocialFeed';
     } else {
         $GLOBALS['FE_MOD']['news']['newslist'] = 'ContaoThemesNet\\MateThemeBundle\\Module\\ModuleNewsListMate';
     }
 }
 
-/**
+/*
  * Add content element
  */
 $GLOBALS['TL_CTE']['mateTheme']['mateTeaserBox'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\TeaserBox';
@@ -28,7 +44,7 @@ $GLOBALS['TL_CTE']['mateTheme']['mateParallaxElement'] = 'ContaoThemesNet\\MateT
 $GLOBALS['TL_CTE']['mateTheme']['mateTextBackgroundElement'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\TextBackgroundElement';
 $GLOBALS['TL_CTE']['mateTheme']['mateModal'] = 'ContaoThemesNet\\MateThemeBundle\\Element\\ModalElement';
 
-/**
+/*
  * Available tags for MATE theme
  */
 if (empty($GLOBALS['tl_config']['theme_tags'])) {
@@ -36,7 +52,7 @@ if (empty($GLOBALS['tl_config']['theme_tags'])) {
     $GLOBALS['tl_config']['theme_tags'][] = '-';
 }
 
-if (!empty($GLOBALS['tl_config']['theme_tags']) && \is_array($GLOBALS['tl_config']['theme_tags'])) {
+if (!empty($GLOBALS['tl_config']['theme_tags']) && is_array($GLOBALS['tl_config']['theme_tags'])) {
     $GLOBALS['tl_config']['theme_tags'] = array_merge($GLOBALS['tl_config']['theme_tags'], [
         'MATE01/01',
         'MATE01/02',
@@ -71,20 +87,18 @@ if (!empty($GLOBALS['tl_config']['theme_tags']) && \is_array($GLOBALS['tl_config
     ]);
 }
 
-/**
+/*
  * Backend Modules
  */
-array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, array
-(
-    'mateThemeSetup' => array
-    (
-        'callback'          => 'ContaoThemesNet\\MateThemeBundle\\Module\\MateThemeSetup',
-        'tables'            => array(),
-        'stylesheet'		=> 'bundles/matetheme/sass/backend.css'
-    ),
-));
+array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, [
+    'mateThemeSetup' => [
+        'callback' => 'ContaoThemesNet\\MateThemeBundle\\Module\\MateThemeSetup',
+        'tables' => [],
+        'stylesheet' => 'bundles/matetheme/sass/backend.css',
+    ],
+]);
 
-/**
+/*
  * Add Hooks
  */
 $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = ['ContaoThemesNet\MateThemeBundle\EventListener\HookListener', 'onReplaceInsertTags'];
