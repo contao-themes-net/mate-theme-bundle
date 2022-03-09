@@ -1,4 +1,4 @@
 mate_theme:
-  assets:
-    custom_scss: 'files/mate/_custom.scss'
-    custom_variables : 'files/mate/_custom_variables.scss'
+    assets:
+        custom_scss: 'files/mate/_custom.scss'
+        custom_variables : 'files/mate/_custom_variables.scss'

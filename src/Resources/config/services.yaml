@@ -1,9 +1,9 @@
 services:
-  _defaults:
-    autoconfigure: true
+    _defaults:
+        autoconfigure: true
 
-  ContaoThemesNet\MateThemeBundle\Migration\Version300Update:
-    arguments:
-      - '@database_connection'
-    tags:
-      - { name: contao.migration, priority: 0 }
+    ContaoThemesNet\MateThemeBundle\Migration\Version300Update:
+        arguments:
+            - '@database_connection'
+        tags:
+            - { name: contao.migration, priority: 0 }
