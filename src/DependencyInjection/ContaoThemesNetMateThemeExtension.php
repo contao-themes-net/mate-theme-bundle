@@ -19,6 +19,6 @@ class ContaoThemesNetMateThemeExtension extends Extension
             new FileLocator(__DIR__ . '/../Resources/config')
         );
 
-        $loader->load('services.yml');
+        $loader->load('services.yaml');
     }
 }
