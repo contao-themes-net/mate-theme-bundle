@@ -3,5 +3,7 @@ services:
     autoconfigure: true
 
   ContaoThemesNet\MateThemeBundle\Migration\Version300Update:
+    arguments:
+      - '@database_connection'
     tags:
       - { name: contao.migration, priority: 0 }
