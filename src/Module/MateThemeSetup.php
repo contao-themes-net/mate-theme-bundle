@@ -35,7 +35,7 @@ class MateThemeSetup extends \BackendModule
         switch (\Input::get('act')) {
             case 'syncFolder':
                 $path = sprintf(
-                    '%s/%s/bundles/matetheme',
+                    '%s/%s/bundles/contaothemesnetmatetheme',
                     ThemeUtils::getRootDir(),
                     ThemeUtils::getWebDir()
                 );
@@ -69,7 +69,7 @@ class MateThemeSetup extends \BackendModule
         foreach (scan($path) as $dir) {
             if (!is_dir($path.'/'.$dir)) {
                 $pos = strpos($path, 'matetheme');
-                $filesFolder = 'files/mate'.str_replace('matetheme', '', substr($path, $pos)).'/'.$dir;
+                $filesFolder = 'files/mate'.str_replace('contaothemesnetmatetheme', '', substr($path, $pos)).'/'.$dir;
 
                 if ('_mate_variables.scss' !== $dir && '_mate_colors.scss' !== $dir && 'backend.css' !== $dir && 'mate.scss' !== $dir && 'materialize.scss' !== $dir && 'maklermodul.scss' !== $dir && 'style.scss' !== $dir && 'mate_win.scss' !== $dir && 'materialize_win.scss' !== $dir) {
                     if (!file_exists(ThemeUtils::getRootDir().'/'.$filesFolder)) {
@@ -79,8 +79,8 @@ class MateThemeSetup extends \BackendModule
                 }
             } else {
                 $folder = $path.'/'.$dir;
-                $pos = strpos($path, 'matetheme');
-                $filesFolder = 'files/mate'.str_replace('matetheme', '', substr($path, $pos)).'/'.$dir;
+                $pos = strpos($path, 'contaothemesnetmatetheme');
+                $filesFolder = 'files/mate'.str_replace('contaothemesnetmatetheme', '', substr($path, $pos)).'/'.$dir;
 
                 if ('fonts' !== $dir && 'js' !== $dir && 'components' !== $dir && 'mate_color_schemes' !== $dir && 'css' !== $dir) {
                     if (!file_exists($filesFolder)) {

@@ -1,5 +1,5 @@
-<?php $GLOBALS['TL_CSS'][''] = 'bundles/matetheme/css/slick.css'; ?>
-<?php $GLOBALS['TL_JAVASCRIPT'][''] = 'bundles/matetheme/js/slick.min.js'; ?>
+<?php $GLOBALS['TL_CSS'][''] = 'bundles/contaothemesnetmatetheme/css/slick.css'; ?>
+<?php $GLOBALS['TL_JAVASCRIPT'][''] = 'bundles/contaothemesnetmatetheme/js/slick.min.js'; ?>
 
 <?php
 if (!is_object($this->estate)) {

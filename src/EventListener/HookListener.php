@@ -62,7 +62,7 @@ class HookListener
                 $class = '.'.$parts[2];
             }
             $class = str_replace('noscript', '', $class);
-            $GLOBALS['TL_BODY'][] = '<script src="bundles/matetheme/js/jquery.countTo.js"></script>';
+            $GLOBALS['TL_BODY'][] = '<script src="bundles/contaothemesnetmatetheme/js/jquery.countTo.js"></script>';
             $GLOBALS['TL_BODY'][] = '<script>
             jQuery( document ).ready(function($) {
                 var countTo = 0;

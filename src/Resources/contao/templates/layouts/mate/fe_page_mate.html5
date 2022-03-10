@@ -32,14 +32,7 @@
   <?= $this->mooScripts ?>
   <?= $this->framework ?>
 
-  <script charset="utf-8" src="<?php
-  // add javascripts
-  $combiner = new Combiner();
-  $combiner->add('bundles/matetheme/js/materialize/materialize.min.js');
-  $combiner->add('bundles/matetheme/js/headroom/headroom.min.js');
-  $combiner->add('bundles/matetheme/js/theme.min.js');
-  echo $combiner->getCombinedFile();
-  ?>"></script>
+  <script charset="utf-8" src="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedJavascrript(); // mate theme js optimization?>"></script>
 <?php $this->endblock(); ?>
 
 <?php $this->block('container'); ?>
