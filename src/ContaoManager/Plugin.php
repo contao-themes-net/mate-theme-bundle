@@ -23,7 +23,7 @@ use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use ContaoBootstrap\Grid\ContaoBootstrapGridBundle;
-use ContaoThemesNet\MateThemeBundle\MateThemeBundle;
+use ContaoThemesNet\MateThemeBundle\ContaoThemesNetMateThemeBundle;
 use Pdir\ThemeHelperBundle\ThemeHelperBundle;
 
 /**
@@ -39,7 +39,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create(MateThemeBundle::class)
+            BundleConfig::create(ContaoThemesNetMateThemeBundle::class)
                 ->setLoadAfter([ThemeHelperBundle::class, ContaoBootstrapGridBundle::class]),
         ];
     }
