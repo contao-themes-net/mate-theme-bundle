@@ -26,6 +26,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author Mathias Arzberger <develop@pdir.de>
  */
-class MateThemeBundle extends Bundle
+class ContaoThemesNetMateThemeBundle extends Bundle
 {
 }
