@@ -19,6 +19,15 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\MateThemeBundle\Mate;
 
+use Contao\BackendTemplate;
+use Contao\Config;
+use Contao\Environment;
+use Contao\FrontendTemplate;
+use Contao\ModuleSitemap;
+use Contao\PageModel;
+use Contao\StringUtil;
+use Contao\System;
+
 /**
  * Class NavbarModule.
  *
@@ -28,14 +37,12 @@ class NavBarModule extends \Module
 {
     /**
      * Display a wildcard in the back end.
-     *
-     * @return string
      */
-    public function generate()
+    public function generate(): string
     {
         if (TL_MODE === 'BE') {
-            /** @var \BackendTemplate|object $objTemplate */
-            $objTemplate = new \BackendTemplate('be_wildcard');
+            /** @var BackendTemplate|object $objTemplate */
+            $objTemplate = new BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['mateTheme']['navbar'][0]).' ###';
             $objTemplate->title = $this->headline;
@@ -70,7 +77,7 @@ class NavBarModule extends \Module
         $this->Template->showMobileMenu = $this->mateShowMobileMenu;
         $this->Template->headline = $this->headline;
 
-        /** @var \PageModel $objPage */
+        /** @var PageModel $objPage */
         global $objPage;
         // Set the trail and level
         if ($this->defineRoot && $this->rootPage > 0) {
@@ -85,9 +92,9 @@ class NavBarModule extends \Module
 
         // Overwrite the domain and language if the reference page belongs to a differnt root page (see #3765)
         if ($this->defineRoot && $this->rootPage > 0) {
-            $objRootPage = \PageModel::findWithDetails($this->rootPage);
+            $objRootPage = PageModel::findWithDetails($this->rootPage);
             // Set the language
-            if (\Config::get('addLanguageToUrl') && $objRootPage->rootLanguage !== $objPage->rootLanguage) {
+            if (Config::get('addLanguageToUrl') && $objRootPage->rootLanguage !== $objPage->rootLanguage) {
                 $lang = $objRootPage->rootLanguage;
             }
             // Set the domain
@@ -95,7 +102,7 @@ class NavBarModule extends \Module
                 $host = $objRootPage->domain;
             }
         }
-        $this->Template->request = ampersand(\Environment::get('indexFreeRequest'));
+        $this->Template->request = ampersand(Environment::get('indexFreeRequest'));
         $this->Template->skipId = 'skipNavigation'.$this->id;
         $this->Template->skipNavigation = specialchars($GLOBALS['TL_LANG']['MSC']['skipNavigation']);
         $arrItems = $this->getNavigationMenu($trail[$level], 1, $host, $lang);
@@ -126,13 +133,13 @@ class NavBarModule extends \Module
         }
 
         if (\is_array($arrItems) && \count($arrItems) > 0) {
-            /** @var \FrontendTemplate|object $objTemplate */
-            $objTemplate = new \FrontendTemplate($this->mateRootTpl);
+            /** @var FrontendTemplate|object $objTemplate */
+            $objTemplate = new FrontendTemplate($this->mateRootTpl);
             $objTemplate->items = $arrItems;
             $objTemplate->id = $this->id;
             $this->Template->rootNav = $objTemplate->parse();
 
-            $objTemplate = new \FrontendTemplate($this->mateMobileTpl);
+            $objTemplate = new FrontendTemplate($this->mateMobileTpl);
             $objTemplate->items = $arrItems;
             $objTemplate->id = $this->id;
             $this->Template->mobileNav = $objTemplate->parse();
@@ -144,8 +151,8 @@ class NavBarModule extends \Module
             if (\is_array($arrItems)) {
                 foreach ($arrItems as $item) {
                     if (isset($item['subitems']) && \is_array($item['subitems']) && \count($item['subitems']) > 0) {
-                        /** @var \FrontendTemplate|object $objTemplate */
-                        $objTemplate = new \FrontendTemplate($this->mateDropdownTpl);
+                        /** @var FrontendTemplate|object $objTemplate */
+                        $objTemplate = new FrontendTemplate($this->mateDropdownTpl);
                         $objTemplate->id = $this->id;
                         $objTemplate->itemId = $item['id'];
                         $objTemplate->items = $item['subitems'];
@@ -153,8 +160,8 @@ class NavBarModule extends \Module
 
                         foreach ($item['subitems'] as $subitem) {
                             if (isset($subitem['subitems']) && \is_array($subitem['subitems']) && \count($subitem['subitems']) > 0) {
-                                /** @var \FrontendTemplate|object $objTemplate */
-                                $objTemplate = new \FrontendTemplate($this->mateDropdownTplLvl3);
+                                /** @var FrontendTemplate|object $objTemplate */
+                                $objTemplate = new FrontendTemplate($this->mateDropdownTplLvl3);
                                 $objTemplate->id = $this->id;
                                 $objTemplate->itemId = $subitem['id'];
                                 $objTemplate->items = $subitem['subitems'];
@@ -162,8 +169,8 @@ class NavBarModule extends \Module
 
                                 foreach ($subitem['subitems'] as $subitemLvl4) {
                                     if (isset($subitemLvl4['subitems']) && \is_array($subitemLvl4['subitems']) && \count($subitemLvl4['subitems']) > 0) {
-                                        /** @var \FrontendTemplate|object $objTemplate */
-                                        $objTemplate = new \FrontendTemplate($this->mateDropdownTplLvl4);
+                                        /** @var FrontendTemplate|object $objTemplate */
+                                        $objTemplate = new FrontendTemplate($this->mateDropdownTplLvl4);
                                         $objTemplate->id = $this->id;
                                         $objTemplate->itemId = $subitemLvl4['id'];
                                         $objTemplate->items = $subitemLvl4['subitems'];
@@ -210,7 +217,7 @@ class NavBarModule extends \Module
     protected function getNavigationMenu($pid, $level = 1, $host = null, $language = null)
     {
         // Get all active subpages
-        $objSubpages = \PageModel::findPublishedSubpagesWithoutGuestsByPid($pid, $this->showHidden, $this instanceof \ModuleSitemap);
+        $objSubpages = PageModel::findPublishedSubpagesWithoutGuestsByPid($pid, $this->showHidden, $this instanceof ModuleSitemap);
 
         if (null === $objSubpages) {
             return '';
@@ -227,12 +234,12 @@ class NavBarModule extends \Module
             $this->navigationTpl = 'nav_default';
         }
 
-        /** @var \PageModel $objPage */
+        /** @var PageModel $objPage */
         global $objPage;
         // Browse subpages
         foreach ($objSubpages as $objSubpage) {
             // Skip hidden sitemap pages
-            if ($this instanceof \ModuleSitemap && 'map_never' === $objSubpage->sitemap) {
+            if ($this instanceof ModuleSitemap && 'map_never' === $objSubpage->sitemap) {
                 continue;
             }
             $subitems = '';
@@ -242,7 +249,7 @@ class NavBarModule extends \Module
                 $objSubpage->domain = $host;
             }
             // Do not show protected pages unless a back end or front end user is logged in
-            if (!$objSubpage->protected || BE_USER_LOGGED_IN || (\is_array($_groups) && \is_array($groups) && \count(array_intersect($_groups, $groups))) || $this->showProtected || ($this instanceof \ModuleSitemap && 'map_always' === $objSubpage->sitemap)) {
+            if (!$objSubpage->protected || BE_USER_LOGGED_IN || (\is_array($_groups) && \is_array($groups) && \count(array_intersect($_groups, $groups))) || $this->showProtected || ($this instanceof ModuleSitemap && 'map_always' === $objSubpage->sitemap)) {
                 // Check whether there will be subpages
                 if ($objSubpage->subpages > 0 && (!$this->showLevel || $this->showLevel >= $level || (!$this->hardLimit && ($objPage->id === $objSubpage->id || \in_array($objPage->id, $this->Database->getChildRecords($objSubpage->id, 'tl_page'), true))))) {
                     $subitems = $this->getNavigationMenu($objSubpage->id, $level, $host, $language);
@@ -254,16 +261,16 @@ class NavBarModule extends \Module
                         $href = $objSubpage->url;
 
                         if (0 === strncasecmp($href, 'mailto:', 7)) {
-                            $href = \StringUtil::encodeEmail($href);
+                            $href = StringUtil::encodeEmail($href);
                         }
                         break;
 
                     case 'forward':
                         if ($objSubpage->jumpTo) {
-                            /** @var \PageModel $objNext */
+                            /** @var PageModel $objNext */
                             $objNext = $objSubpage->getRelated('jumpTo');
                         } else {
-                            $objNext = \PageModel::findFirstPublishedRegularByPid($objSubpage->id);
+                            $objNext = PageModel::findFirstPublishedRegularByPid($objSubpage->id);
                         }
                         // Hide the link if the target page is invisible
                         if (null === $objNext || !$objNext->published || ('' !== $objNext->start && $objNext->start > time()) || ('' !== $objNext->stop && $objNext->stop < time())) {
@@ -279,7 +286,7 @@ class NavBarModule extends \Module
                 $row = $objSubpage->row();
                 $trail = \in_array($objSubpage->id, $objPage->trail, true);
                 // Active page
-                if (($objPage->id === $objSubpage->id || 'forward' === $objSubpage->type && $objPage->id === $objSubpage->jumpTo) && !$this instanceof \ModuleSitemap && $href === \Environment::get('request')) {
+                if (($objPage->id === $objSubpage->id || 'forward' === $objSubpage->type && $objPage->id === $objSubpage->jumpTo) && !$this instanceof ModuleSitemap && $href === Environment::get('request')) {
                     // Mark active forward pages (see #4822)
                     $strClass = ('forward' === $objSubpage->type && $objPage->id === $objSubpage->jumpTo ? 'forward'.($trail ? ' trail' : '') : 'active').('' !== $subitems ? ' submenu' : '').($objSubpage->protected ? ' protected' : '').('' !== $objSubpage->cssClass ? ' '.$objSubpage->cssClass : '');
                     $row['isActive'] = true;

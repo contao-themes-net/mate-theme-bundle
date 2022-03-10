@@ -19,12 +19,15 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\MateThemeBundle\Mate;
 
+use Contao\BackendTemplate;
+use Contao\Module;
+
 /**
  * Class ModalModule.
  *
  * @author Philipp Seibt <develop@pdir.de>
  */
-class ModalModule extends \Module
+class ModalModule extends Module
 {
     /**
      * Display a wildcard in the back end.
@@ -34,8 +37,8 @@ class ModalModule extends \Module
     public function generate()
     {
         if (TL_MODE === 'BE') {
-            /** @var \BackendTemplate|object $objTemplate */
-            $objTemplate = new \BackendTemplate('be_wildcard');
+            /** @var BackendTemplate|object $objTemplate */
+            $objTemplate = new BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### MATE MODAL ###';
             $objTemplate->title = $this->name;

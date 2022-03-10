@@ -21,9 +21,13 @@ namespace ContaoThemesNet\MateThemeBundle\Migration;
 
 use Contao\ContentModel;
 use Contao\CoreBundle\Migration\AbstractMigration;
+use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\StringUtil;
 use Doctrine\DBAL\Connection;
 
+/**
+ * @internal
+ */
 class Version300Update extends AbstractMigration
 {
     /**
@@ -36,9 +40,9 @@ class Version300Update extends AbstractMigration
         $this->connection = $connection;
     }
 
-    public function shouldRun()
+    public function shouldRun(): bool
     {
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = $this->connection->createSchemaManager();
 
         // If the database table itself does not exist we should do nothing
         if (!$schemaManager->tablesExist(['tl_content'])) {
@@ -50,7 +54,7 @@ class Version300Update extends AbstractMigration
         return $oldGrids->rowCount() > 0;
     }
 
-    public function run()
+    public function run(): MigrationResult
     {
         // update start element
         $this->connection->executeQuery("
