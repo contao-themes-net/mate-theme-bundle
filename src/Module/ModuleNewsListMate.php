@@ -49,7 +49,7 @@ class ModuleNewsListMate extends ModuleNewsList
 
             $indicators = '';
 
-            if (1 === $this->mateSliderIndicators) {
+            if ('1' === $this->mateSliderIndicators) {
                 $mateSliderIndicators = 'true';
 
                 $indicators = '
