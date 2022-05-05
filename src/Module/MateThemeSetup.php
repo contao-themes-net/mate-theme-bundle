@@ -68,10 +68,10 @@ class MateThemeSetup extends \BackendModule
     {
         foreach (scan($path) as $dir) {
             if (!is_dir($path.'/'.$dir)) {
-                $pos = strpos($path, 'matetheme');
+                $pos = strpos($path, 'contaothemesnetmatetheme');
                 $filesFolder = 'files/mate'.str_replace('contaothemesnetmatetheme', '', substr($path, $pos)).'/'.$dir;
 
-                if ('_mate_variables.scss' !== $dir && '_mate_colors.scss' !== $dir && 'backend.css' !== $dir && 'mate.scss' !== $dir && 'materialize.scss' !== $dir && 'maklermodul.scss' !== $dir && 'style.scss' !== $dir && 'mate_win.scss' !== $dir && 'materialize_win.scss' !== $dir) {
+                if ('_mate_variables.scss' !== $dir && '_mate_colors.scss' !== $dir && 'backend.css' !== $dir && 'mate.scss' !== $dir && 'materialize.scss' !== $dir && 'maklermodul.scss' !== $dir && 'style.scss' !== $dir && 'mate_win.scss' !== $dir && 'materialize_win.scss' !== $dir && 'hofff_consent.scss' !== $dir && 'mobilede.scss' !== $dir && 'spacing-helpers.scss' !== $dir) {
                     if (!file_exists(ThemeUtils::getRootDir().'/'.$filesFolder)) {
                         $objFile = new \File(ThemeUtils::getWebDir().'/bundles/'.substr($path, $pos).'/'.$dir, true);
                         $objFile->copyTo($filesFolder);
