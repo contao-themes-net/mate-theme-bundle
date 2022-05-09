@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.17.7](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.7) – 2022-05-09
+
+- [fix] fix sql files
+
 ## [2.17.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.6) – 2021-12-22
 
 - [fix] add styling for lists in footer
