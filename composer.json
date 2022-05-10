@@ -28,11 +28,11 @@
     "donate": "https://contao-themes.net/sponsoring.html"
   },
   "require": {
-    "php": ">=7.1",
-    "contao/core-bundle": "^4.4",
+    "php": "^7.2 || ^8.0",
+    "contao/core-bundle": "^4.9",
     "pdir/contao-theme-helper-bundle": "^1.2",
     "contao-dd/advanced-classes-bundle": "^1.0",
-    "contao-bootstrap/grid": "^2.1",
+    "contao-bootstrap/grid": "^2.4",
     "terminal42/contao-folderpage": "^2.0.5",
     "contao-themes-net/material-icons-inserttag": "^1.0"
   },
