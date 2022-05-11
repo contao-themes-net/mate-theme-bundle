@@ -35,7 +35,9 @@
     "contao-bootstrap/grid": "^2.4",
     "terminal42/contao-folderpage": "^2.0.5",
     "contao-themes-net/material-icons-inserttag": "^1.0",
-    "doctrine/cache": "^1.11"
+    "symfony/config": "^4.4 || ^5.4",
+    "symfony/dependency-injection": "^4.4 || ^5.4",
+    "symfony/http-kernel": "^4.4 || ^5.4"
   },
   "conflict": {
     "contao/core": "*"
@@ -71,5 +73,10 @@
     "pdir/maklermodul-bundle": "MATE Theme includes all styles for maklermodul bundle. / MATE Theme enthält Stylesheets für das Maklermodul Bundle.",
     "pdir/social-feed-bundle": "MATE Theme includes all styles for social feed bundle. / MATE Theme enthält Stylesheets für das Social Feed Bundle",
     "pdir/animated-timeline-bundle": "Render content in a dynamic timeline. / Zeige Inhalte in einem dynamischen Zeitstrahl an."
+  },
+  "config": {
+    "allow-plugins": {
+      "contao-components/installer": true
+    }
   }
 }
