@@ -34,13 +34,11 @@
     "contao-dd/advanced-classes-bundle": "^1.0",
     "contao-bootstrap/grid": "^2.4",
     "terminal42/contao-folderpage": "^2.0.5",
-    "contao-themes-net/material-icons-inserttag": "^1.0",
-    "symfony/config": "^4.4 || ^5.4",
-    "symfony/dependency-injection": "^4.4 || ^5.4",
-    "symfony/http-kernel": "^4.4 || ^5.4"
+    "contao-themes-net/material-icons-inserttag": "^1.0"
   },
   "conflict": {
-    "contao/core": "*"
+    "contao/core": "*",
+    "doctrine/cache": ">=2.0"
   },
   "autoload": {
     "psr-4": {
