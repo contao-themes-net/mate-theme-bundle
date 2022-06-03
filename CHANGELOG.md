@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-11
+## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
 
 - [info] remove support for Contao 4.4 and php <=7.1
 - [feature] add support for PHP 8
