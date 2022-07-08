@@ -4,6 +4,13 @@ $GLOBALS['TL_LANG']['tl_module']['modal_headline_legend'] = 'Überschrift des Mo
 $GLOBALS['TL_LANG']['tl_module']['modal_text_legend'] = 'Inhalt des Modalen Dialog';
 $GLOBALS['TL_LANG']['tl_module']['mate_slider_legend'] = 'MATE Slider Einstellungen';
 
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type1'] = 'Navigation ohne Dropdown, rechtsbündig';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type2'] = 'Navigation ohne Dropdown, linksbündig';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type3'] = 'Logo und Navigation untereinander/zentriert';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type4'] = 'NavBar mit Tabs';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type5'] = 'Navigation mit Dropdown, rechtsbündig';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type6'] = 'NavBar mit Buttons';
+$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type7'] = 'Mobile NavBar';
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type1'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type1'];
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type2'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type2'];
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type3'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type3'];
@@ -11,6 +18,7 @@ $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type4'] = $GLOBALS['TL_LANG']['
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type5'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type5'];
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type6'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type6'];
 $GLOBALS['TL_LANG']['tl_module']['mate_navbar']['type7'] = $GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type7'];
+
 $GLOBALS['TL_LANG']['tl_module']['mateShowLogo'] = ['Logo anzeigen','Logo im Header anzeigen'];
 $GLOBALS['TL_LANG']['tl_module']['mateShowSearch'] = ['Suche anzeigen','Suchicon im Header anzeigen'];
 $GLOBALS['TL_LANG']['tl_module']['mateShowMobileMenu'] = ['Mobile Navigation anzeigen','Stelle mobile Navigation mit einem Menü-Icon dar'];
