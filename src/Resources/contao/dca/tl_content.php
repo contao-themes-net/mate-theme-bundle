@@ -28,10 +28,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_page'] = array
 (
     'label' => & $GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_page'],
     'exclude' => true,
-    'inputType' => 'pageTree',
+    'inputType' => 'text',
+    'wizard' => [['tl_content', 'pagePicker']],
     'eval' => array (
-        'fieldType' => 'radio',
-        'tl_class'=>'w50 autoheight'
+        'mandatory' => true,
+        'rgxp' => 'url',
+        'decodeEntities' => true,
+        'tl_class'=>'w50 wizard'
     ),
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_page'],
     'sql' => "text NULL"
@@ -51,10 +54,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateContentBox_page'] = array
 (
     'label' => & $GLOBALS['TL_LANG']['tl_content']['mateContentBox_page'],
     'exclude' => true,
-    'inputType' => 'pageTree',
+    'inputType' => 'text',
+    'wizard' => [['tl_content', 'pagePicker']],
     'eval' => array (
-        'fieldType' => 'radio',
-        'tl_class'=>'w50'
+        'mandatory' => true,
+        'rgxp' => 'url',
+        'decodeEntities' => true,
+        'tl_class'=>'w50 wizard'
     ),
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['mateContentBox_page'],
     'sql' => "text NULL"

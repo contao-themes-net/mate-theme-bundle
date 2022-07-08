@@ -9,7 +9,7 @@
 
         <?php if ($this->headline): ?>
           <<?= $this->hl ?>>
-            <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}"><?php endif; ?>
+            <?php if($this->page != ""): ?><a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>"><?php endif; ?>
               <?= $this->headline ?>
             <?php if($this->page != ""): ?></a><?php endif; ?>
           </<?= $this->hl ?>>
@@ -19,7 +19,7 @@
 
         <?php if($this->pageText != ""): ?>
           <div class="pageLink">
-            <a href="{{link_url::<?= $this->page ?>}}"><?= $this->pageText ?></a>
+            <a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>"><?= $this->pageText ?></a>
           </div>
         <?php endif; ?>
 

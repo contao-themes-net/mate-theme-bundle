@@ -1,5 +1,5 @@
 <div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-	<a href="{{link_url::<?= $this->page ?>}}" <?= $this->target ?><?= $this->rel ?> class="inside">
+	<a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>" <?= $this->target ?><?= $this->rel ?> class="inside">
     <?php $this->block('content'); ?>
 
       <?php if ($this->addImage): ?>

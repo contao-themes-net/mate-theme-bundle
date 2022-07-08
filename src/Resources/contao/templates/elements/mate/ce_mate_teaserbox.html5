@@ -3,7 +3,7 @@
     <?php $this->block('content'); ?>
 
       <?php if ($this->addImage): ?>
-        <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}" title="<?= $this->pageText ?>" <?= $this->target ?><?= $this->rel ?>><?php endif; ?>
+        <?php if($this->page != ""): ?><a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>" title="<?= $this->pageText ?>" <?= $this->target ?><?= $this->rel ?>><?php endif; ?>
           <?php $this->insert('image', $this->arrData); ?>
         <?php if($this->page != ""): ?></a><?php endif; ?>
       <?php endif; ?>
@@ -12,7 +12,7 @@
 
       <?php if ($this->headline): ?>
         <<?= $this->hl ?>>
-          <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}"><?php endif; ?>
+          <?php if($this->page != ""): ?><a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>"><?php endif; ?>
             <?= $this->headline ?>
           <?php if($this->page != ""): ?></a><?php endif; ?>
         </<?= $this->hl ?>>
@@ -22,7 +22,7 @@
 
       <?php if($this->pageText != ""): ?>
         <div class="pageLink">
-          <a href="{{link_url::<?= $this->page ?>}}"><?= $this->pageText ?></a>
+          <a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>"><?= $this->pageText ?></a>
         </div>
       <?php endif; ?>
 
