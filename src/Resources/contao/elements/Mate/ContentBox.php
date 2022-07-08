@@ -58,7 +58,7 @@ class ContentBox extends \ContentElement
         }
 
         $this->Template->page = $this->mateContentBox_page;
-        $this->Template->href = \FilesModel::findByUuid($this->singleSRC)->path;
+        if(!is_null($this->singleSRC)) $this->Template->href = \FilesModel::findByUuid($this->singleSRC)->path;
         $this->Template->pageText = $this->mateContentBox_pageText;
 
         // add an image

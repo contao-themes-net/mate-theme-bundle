@@ -9,7 +9,8 @@
 - [fix] update language files
 - [fix] fix button styles
 - [fix] add protected legend in dca
-- [fix] fix warning
+- [fix] fix 'Warning: Undefined array key "mate_navbar"'
+- [fix] fix 'Warning: Attempt to read property "path" on null'
 
 ## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
 
