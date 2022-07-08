@@ -2,11 +2,12 @@
 
 ## [2.19.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.0) – 2022-07-08
 
+- [feature] add variables to style input and select fields
 - [fix] fix og:image bug in fe_page
 - [fix] fix button hover background
 - [fix] fix navigation for many menu items
 - [fix] update language files
-- [feature] add variables to style input and select fields
+- [fix] fix button styles
 
 ## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
 

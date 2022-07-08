@@ -217,8 +217,24 @@ img {
  * ========================== */
 a {
   color: $primary-link-font-color;
+
   &:hover {
     color: $primary-link-hover-font-color;
+  }
+}
+
+a {
+  transition: all .3s;
+}
+
+#wrapper .ce_hyperlink {
+  &.btn, &.btn-large {
+    padding: 0;
+
+    a {
+      padding: 12px 20px;
+      display: block;
+    }
   }
 }
 
