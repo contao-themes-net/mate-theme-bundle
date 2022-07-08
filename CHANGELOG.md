@@ -7,7 +7,7 @@
 - [fix] fix button hover background
 - [fix] fix navigation for many menu items
 - [fix] update language files
-- [fix] fix button styles
+- [fix] fix button styles ([#94](https://github.com//contao-themes-net/mate-theme-bundle/issues/94))
 - [fix] add protected legend in dca
 - [fix] fix 'Warning: Undefined array key "mate_navbar"'
 - [fix] fix 'Warning: Attempt to read property "path" on null'
