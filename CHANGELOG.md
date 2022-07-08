@@ -4,6 +4,7 @@
 
 - [fix] fix og:image bug in fe_page
 - [fix] fix button hover background
+- [fix] fix navigation for many menu items
 
 ## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
 
