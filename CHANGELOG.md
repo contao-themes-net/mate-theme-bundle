@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.19.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.0) – 2022-07-08
+
+- [fix] fix og:image bug in fe_page
+
 ## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
 
 - [info] remove support for Contao 4.4 and php <=7.1
