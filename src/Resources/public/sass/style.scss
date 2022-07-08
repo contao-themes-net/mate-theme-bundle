@@ -497,6 +497,10 @@ table {
   background-color: $button-floating-background;
   color: $button-flat-color;
 
+  &:hover {
+    background: $button-floating-background-hover;
+  }
+
   a {
     color: $button-flat-color;
   }

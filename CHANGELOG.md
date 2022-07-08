@@ -3,6 +3,7 @@
 ## [2.19.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.0) – 2022-07-08
 
 - [fix] fix og:image bug in fe_page
+- [fix] fix button hover background
 
 ## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
 
