@@ -64,3 +64,6 @@ $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/07'] = 'Footer / 07';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/08'] = 'Footer / 08';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/09'] = 'Footer / 09';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/10'] = 'Footer / 10';
+
+$GLOBALS['TL_LANG']['mateTheme']['readMore'] = 'Read more';
+$GLOBALS['TL_LANG']['mateTheme']['continueReading'] = 'Read more';
