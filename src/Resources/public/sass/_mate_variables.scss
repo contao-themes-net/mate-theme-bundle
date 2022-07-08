@@ -164,3 +164,19 @@ $table-border-color: $mateColorGreyDark;
 /* Dropdown */
 $dropdown-bg-color: $mateColorWhite;
 $dropdown-color: $primary-text-color;
+
+/* Formulare */
+$input-background-color: $boxes-background;
+$input-color: $primary-text-color;
+$input-border: 2px solid $mateColor1;
+$input-label-color: $mateColor4;
+$input-legend-color: $mateColor4;
+$input-focus-border: 2px solid $mateColor2;
+
+$radio-checkbox-color: $mateColor2;
+
+$select-label-color: #9e9e9e;
+$select-background-color: $dropdown-bg-color;
+$select-color: $dropdown-color;
+$select-border: 2px solid $mateColor1;
+$select-caret-color: $mateColor2;

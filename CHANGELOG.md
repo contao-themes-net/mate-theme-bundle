@@ -6,6 +6,7 @@
 - [fix] fix button hover background
 - [fix] fix navigation for many menu items
 - [fix] update language files
+- [feature] add variables to style input and select fields
 
 ## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
 
