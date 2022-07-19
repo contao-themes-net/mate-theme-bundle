@@ -15,11 +15,16 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('mate_theme');
+        $rootNode = $treeBuilder->getRootNode('mate_theme');
 
         $rootNode
             ->children()
                 ->arrayNode('assets')
+                    ->children()
+                        ->scalarNode('scss_sources')
+                        ->info('points to the specific scss folder')
+                        ->defaultValue('files/mate/sass/')
+                        ->end()
                     ->children()
                         ->scalarNode('custom_scss')
                             ->info('Load custom scss from given location')

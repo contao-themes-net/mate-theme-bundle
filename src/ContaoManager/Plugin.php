@@ -15,12 +15,12 @@
  */
 namespace ContaoThemesNet\MateThemeBundle\ContaoManager;
 
-use ContaoThemesNet\MateThemeBundle\MateThemeBundle;
 use Pdir\ThemeHelperBundle\ThemeHelperBundle;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use ContaoBootstrap\Grid\ContaoBootstrapGridBundle;
+use ContaoThemesNet\MateThemeBundle\MateThemeBundle;
 
 /**
  * Plugin for the Contao Manager.
@@ -32,7 +32,7 @@ class Plugin implements BundlePluginInterface
     /**
      * {@inheritdoc}
      */
-    public function getBundles(ParserInterface $parser)
+    public function getBundles(ParserInterface $parser): array
     {
         return [
             BundleConfig::create(MateThemeBundle::class)

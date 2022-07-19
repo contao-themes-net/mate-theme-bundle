@@ -16,6 +16,8 @@
 
 namespace ContaoThemesNet\MateThemeBundle\EventListener;
 
+use Contao\System;
+
 class HookListener
 {
     /**

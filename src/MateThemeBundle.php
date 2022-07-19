@@ -14,11 +14,12 @@
  * file that was distributed with this source code.
  */
 
-#declare(strict_types = 1);
+declare(strict_types = 1);
 
 namespace ContaoThemesNet\MateThemeBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+
 /**
  * Configures the theme bundle.
  *
@@ -26,4 +27,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class MateThemeBundle extends Bundle
 {
+    #public function getContainerExtension()
+    #{
+    #    return new MateThemeExtension();
+    #}
 }
