@@ -40,9 +40,9 @@ class ThemeUtils
         $combiner = new Combiner();
 
         if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
-            $combiner->add('bundles/matetheme/scss/mate_win.scss');
+            $combiner->add('bundles/matetheme/sass/mate_win.scss');
         } else {
-            $combiner->add('bundles/matetheme/scss/mate.scss');
+            $combiner->add('bundles/matetheme/sass/mate.scss');
         }
 
         return $combiner->getCombinedFile();
