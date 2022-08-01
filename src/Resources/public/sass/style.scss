@@ -217,8 +217,24 @@ img {
  * ========================== */
 a {
   color: $primary-link-font-color;
+
   &:hover {
     color: $primary-link-hover-font-color;
+  }
+}
+
+a {
+  transition: all .3s;
+}
+
+#wrapper .ce_hyperlink {
+  &.btn, &.btn-large {
+    padding: 0;
+
+    a {
+      padding: 12px 20px;
+      display: block;
+    }
   }
 }
 
@@ -496,6 +512,10 @@ table {
 .btn, .btn-large {
   background-color: $button-floating-background;
   color: $button-flat-color;
+
+  &:hover {
+    background: $button-floating-background-hover;
+  }
 
   a {
     color: $button-flat-color;
@@ -892,6 +912,8 @@ nav {
 
   .nav-wrapper {
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
   }
 
   i.material-icons {
@@ -1032,7 +1054,11 @@ nav {
   }
 
   #header .desktop-menu {
-    margin: 40px 40px 0 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin: 0 40px 0 10px;
   }
 
   #header .nav-wrapper {
@@ -2800,17 +2826,17 @@ footer .container {
 .checkbox_container, .radio_container {
   margin: 0;
   padding: 0 15px 15px;
-  border: 2px solid $mateColor1;
+  border: $input-border;
 
   legend {
     margin-bottom: 10px;
-    color: $mateColor4;
+    color: $input-legend-color;
   }
 }
 
 .checkbox_container label {
   padding: 0;
-  color: $mateColor4;
+  color: $input-label-color;
 }
 
 .file-field .btn {
@@ -2819,8 +2845,8 @@ footer .container {
 }
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea, textarea {
-  background: $boxes-background;
-  border: 2px solid $mateColor1;
+  background: $input-background-color;
+  border: $input-border;
   margin: 0;
   height: 40px;
   padding: 10px;
@@ -2829,13 +2855,12 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
   display: block;
   border-radius: 0;
   box-shadow: none;
-  color: $primary-text-color;
+  color: $input-color;
 }
 
 #wrapper {
   input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: none;
-    border: 2px solid $mateColor2;
+    border: $input-focus-border;
     box-shadow: none;
   }
 
@@ -2845,7 +2870,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 .input-field label {
-  color: $mateColor4;
+  color: $input-label-color;
 }
 
 input[type="file"] {
@@ -2913,9 +2938,13 @@ input[type="file"] {
   display: block;
 }
 
+.select label {
+  color: $select-label-color;
+}
+
 .select-wrapper {
   input.select-dropdown {
-    background: $dropdown-bg-color;
+    background: $select-background-color;
     padding: 5px 15px;
     margin: 0;
     height: 40px;
@@ -2925,13 +2954,13 @@ input[type="file"] {
     -o-user-select:none; // latest Opera versions support -webkit-
     user-select:none;
     line-height: inherit;
-    color: $dropdown-color;
-    border: 2px solid $mateColor1;
+    color: $select-color;
+    border: $select-border;
   }
 
   .caret {
     z-index: 1;
-    fill: $mateColor2;
+    fill: $select-caret-color;
     pointer-events: none;
   }
 
@@ -2973,7 +3002,7 @@ textarea {
 .widget {
   &.widget-text, &.widget-textarea, &.widget-password {
     > label {
-      color: $mateColor4;
+      color: $input-label-color;
       position: absolute;
       padding: 0 10px;
       top: -3px;
@@ -2995,7 +3024,7 @@ textarea {
 
 .radio_container label {
   padding: 0 20px 0 0;
-  color: $mateColor4;
+  color: $input-label-color;
   margin-bottom: 5px;
   display: inline-block;
 }
@@ -3009,21 +3038,21 @@ textarea {
 }
 
 [type="checkbox"] + span:not(.lever):before, [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
-  border: 2px solid $mateColor1;
+  border: 2px solid $radio-checkbox-color;
 }
 
 [type="checkbox"]:checked + span:not(.lever):before {
-  border-right: 2px solid $mateColor2;
-  border-bottom: 2px solid $mateColor2;
+  border-right: 2px solid $radio-checkbox-color;
+  border-bottom: 2px solid $radio-checkbox-color;
 }
 
 [type="radio"]:not(:checked) + span:before, [type="radio"]:not(:checked) + span:after {
-  border: 2px solid $mateColor2;
+  border: 2px solid $radio-checkbox-color;
 }
 
 [type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
-  background-color: $mateColor2;
-  border: 2px solid $mateColor2;
+  background-color: $radio-checkbox-color;
+  border: 2px solid $radio-checkbox-color;
 }
 
 .widget-upload label {
@@ -3031,7 +3060,7 @@ textarea {
 }
 
 .file-path::placeholder {
-  color: $mateColor4;
+  color: $input-label-color;
 }
 
 .radio_container legend + label {

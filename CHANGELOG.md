@@ -1,5 +1,29 @@
 # Changelog
 
+[//]: <> (
+Types of changes
+    Added for new Addeds.
+    Changed for changes in existing functionality.
+    Deprecated for soon-to-be removed Addeds.
+    Removed for now removed Addeds.
+    Fixed for any bug fixes.
+    Security in case of vulnerabilities.
+)
+
+## [2.19.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.0) – 2022-08-01
+
+- [Added] add variables to style input and select fields
+- [Added] change teaserbox and contentbox link fields
+- [Added] add support for Symfony 5 public entry point
+- [Fixed] fix og:image bug in fe_page
+- [Fixed] fix button hover background
+- [Fixed] fix navigation for many menu items
+- [Fixed] update language files
+- [Fixed] fix button styles ([#94](https://github.com//contao-themes-net/mate-theme-bundle/issues/94))
+- [Fixed] add protected legend in dca
+- [Fixed] fix 'Warning: Undefined array key "mate_navbar"'
+- [Fixed] fix 'Warning: Attempt to read property "path" on null'
+
 ## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
 
 - [info] remove support for Contao 4.4 and php <=7.1

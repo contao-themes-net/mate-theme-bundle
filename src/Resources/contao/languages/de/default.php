@@ -20,13 +20,7 @@ $GLOBALS['TL_LANG']['tl_content']['mateNavbar'] = 'Navbar (mate)1';
 $GLOBALS['TL_LANG']['tl_module']['mateTheme']['mateNavbar'][0] = 'Navbar (mate)3';
 $GLOBALS['TL_LANG']['tl_module']['mateTheme']['mateNavbar'][1] = 'Navbar (mate)4';
 
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type1'] = 'Navigation ohne Dropdown, rechtsbündig';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type2'] = 'Navigation ohne Dropdown, linksbündig';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type3'] = 'Logo und Navigation untereinander/zentriert';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type4'] = 'NavBar mit Tabs';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type5'] = 'Navigation mit Dropdown, rechtsbündig';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type6'] = 'NavBar mit Buttons';
-$GLOBALS['TL_LANG']['tl_content']['mate_navbar']['type7'] = 'Mobile NavBar';
+
 
 // theme helper tags
 $GLOBALS['TL_LANG']['tl_article']['pdir_th_tag'] = array('Theme Helper Tag', 'Bitte wählen Sie einen Theme Helper Tag um den Inhalt dieses Artikels als Insert Tag zu nutzen.');
@@ -63,3 +57,6 @@ $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/07'] = 'Footer / 07';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/08'] = 'Footer / 08';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/09'] = 'Footer / 09';
 $GLOBALS['TL_LANG']['tl_article']['th_tags']['MATE05/10'] = 'Footer / 10';
+
+$GLOBALS['TL_LANG']['mateTheme']['readMore'] = 'Mehr dazu';
+$GLOBALS['TL_LANG']['mateTheme']['continueReading'] = 'Weiterlesen';

@@ -12,17 +12,7 @@
 
   <?= $this->viewport ?>
 
-  <link rel="stylesheet" type="text/css" media="all" href="<?php
-  // add stylesheets
-  $combiner = new Combiner();
-
-  if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-    $combiner->add('bundles/matetheme/sass/mate_win.scss');
-  } else {
-    $combiner->add('bundles/matetheme/sass/mate.scss');
-  }
-
-  echo $combiner->getCombinedFile(); ?>">
+  <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedStylesheet(); ?>">
 
   <?= $this->stylesheets ?>
 
@@ -31,7 +21,7 @@
   <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
   <meta property="og:description" content="<?php echo $this->description; ?>" />
   <meta property="og:url" content="{{env::url}}/{{env::request}}" />
-  <?php if($GLOBALS['og:image']) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
+  <?php if(isset($GLOBALS['og:image'])) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
 
   <link rel="shortcut icon" href="files/mate/img/favicon.ico" type="image/x-icon" />
 <?php $this->endblock(); ?>

@@ -18,7 +18,7 @@
       </div>
 
       <?php if ($this->hasText || $this->hasTeaser): ?>
-        <a class="more" href="<?= $this->link ?>">Weiterlesen</a>
+        <a class="more" href="<?= $this->link ?>"><?= $GLOBALS['TL_LANG']['mateTheme']['continueReading'] ?></a>
       <?php endif; ?>
     </div>
 
