@@ -58,7 +58,7 @@ class MateThemeSetup extends BackendModule
 
                 if($dir != "_mate_variables.scss" && $dir != "_mate_colors.scss" && $dir != "backend.css" && $dir != "mate.scss" && $dir != "materialize.scss" && $dir != "maklermodul.scss" && $dir != "style.scss" && $dir != "mate_win.scss" && $dir != "materialize_win.scss") {
                     if(!file_exists(ThemeUtils::getRootDir()."/".$filesFolder)) {
-                        $objFile = new File(ThemeUtils::getWebDir().'web/bundles/'.substr($path,$pos).'/'.$dir, true);
+                        $objFile = new File(ThemeUtils::getWebDir().'/bundles/'.substr($path,$pos).'/'.$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
                 }
