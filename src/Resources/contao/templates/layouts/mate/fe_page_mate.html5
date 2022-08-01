@@ -12,17 +12,7 @@
 
   <?= $this->viewport ?>
 
-  <link rel="stylesheet" type="text/css" media="all" href="<?php
-  // add stylesheets
-  $combiner = new Combiner();
-
-  if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-    $combiner->add('bundles/matetheme/sass/mate_win.scss');
-  } else {
-    $combiner->add('bundles/matetheme/sass/mate.scss');
-  }
-
-  echo $combiner->getCombinedFile(); ?>">
+  <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedStylesheet(); ?>">
 
   <?= $this->stylesheets ?>
 
