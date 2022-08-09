@@ -2,6 +2,7 @@
 
 namespace ContaoThemesNet\MateThemeBundle\DependencyInjection;
 
+use Contao\CoreBundle\DependencyInjection\Configuration;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -17,14 +18,22 @@ class MateThemeExtension extends Extension
      */
     public function load(array $mergedConfig, ContainerBuilder $container)
     {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $projectDir = __DIR__.'/../Resources/config';
+
+        $loader = new YamlFileLoader($container, new FileLocator($projectDir));
 
         $loader->load('services.yml');
         $loader->load('commands.yml');
-        $loader->load('config.yml');
+        #$loader->load('mate_theme.yml');
 
-        $container->setParameter( 'mate_theme.assets.scss_sources', $mergedConfig[ 'assets.scss_sources' ]);
-        $container->setParameter( 'mate_theme.assets.custom_scss', $mergedConfig[ 'assets.custom_scss' ]);
-        $container->setParameter( 'mate_theme.assets.custom_variables_scss', $mergedConfig[ 'assets.custom_variables_scss' ]);
+#dump($mergedConfig);
+        #$projectDir = (string) $container->getParameter('kernel.project_dir');
+#dump($projectDir);
+        $configuration = new Configuration($projectDir);
+        $config = $this->processConfiguration($configuration, $mergedConfig);
+#dump($config);
+        #$container->setParameter( 'mate_theme.assets.scss_sources', $mergedConfig[ 'assets.scss_sources' ]);
+        #$container->setParameter( 'mate_theme.assets.custom_scss', $mergedConfig[ 'assets.custom_scss' ]);
+        #$container->setParameter( 'mate_theme.assets.custom_variables_scss', $mergedConfig[ 'assets.custom_variables_scss' ]);
     }
 }

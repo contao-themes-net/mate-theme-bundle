@@ -14,10 +14,10 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->getRootNode('mate_theme');
+        $treeBuilder = new TreeBuilder('mate_theme');
 
-        $rootNode
+        $treeBuilder
+            ->getRootNode()
             ->children()
                 ->arrayNode('assets')
                     ->children()

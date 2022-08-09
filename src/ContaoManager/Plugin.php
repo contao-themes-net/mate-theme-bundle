@@ -36,7 +36,12 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(MateThemeBundle::class)
-                ->setLoadAfter([ThemeHelperBundle::class, ContaoBootstrapGridBundle::class])
+                ->setLoadAfter(
+                    [
+                        ThemeHelperBundle::class,
+                        ContaoBootstrapGridBundle::class
+                    ]
+                )
         ];
     }
 }
