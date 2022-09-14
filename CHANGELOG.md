@@ -10,6 +10,12 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.19.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.1) – 2022-09-14
+
+- [Changed] update sql files for Contao 4.9 and 4.13
+- [Fixed] css bugfix for content box and teaser box
+- [Changed] content box and teaser box no longer require a link ([#109](https://github.com/contao-themes-net/mate-theme-bundle/issues/109))
+
 ## [2.19.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.0) – 2022-08-01
 
 - [Added] add variables to style input and select fields
