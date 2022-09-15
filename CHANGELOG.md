@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.19.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.1) – 2022-09-14
+## [2.19.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.1) – 2022-09-15
 
 - [Changed] update sql files for Contao 4.9 and 4.13
 - [Fixed] css bugfix for content box and teaser box
