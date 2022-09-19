@@ -10,7 +10,7 @@ use ContaoThemesNet\MateThemeBundle\ThemeUtils;
 
 class MateThemeSetup extends BackendModule
 {
-    const VERSION = '2.19.0';
+    const VERSION = '2.19.2';
 
     protected $strTemplate = 'be_mateTheme_setup';
 
