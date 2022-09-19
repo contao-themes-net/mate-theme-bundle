@@ -3698,6 +3698,20 @@ mark {
 }
 
 /* ========================== *
+ *   Klaro Bundle             *
+ * ========================== */
+
+div.klaro {
+  .cookie-notice:not(.cookie-modal-notice) {
+    z-index: 2000;
+  }
+
+  .slider {
+    height: auto;
+  }
+}
+
+/* ========================== *
  *    IE Fixes                *
  * ========================== */
 .ie .subnav {
