@@ -14,6 +14,7 @@ Types of changes
 - [Changed] update maklermodul templates
 - [Fixed] css fix for [Klaro Consent Manager](https://extensions.contao.org/?q=klaro&pages=1&p=pdir%2Fklaro-consent-manager)
 - [Changed] update vehicle manager templates and styling
+- [Fixed] add width definition for the logo [#97](https://github.com/contao-themes-net/mate-theme-bundle/issues/97)
 
 ## [2.19.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.1) – 2022-09-15
 

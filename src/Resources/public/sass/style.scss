@@ -1017,7 +1017,7 @@ nav {
   .ce_image:not(.fixed-nav) {
     img {
       max-height: 110px;
-      width: auto;
+      width: 100%;
       padding: 15px;
     }
   }
@@ -1044,6 +1044,7 @@ nav {
       width: auto;
       margin-top: 3px;
       padding: 0;
+      object-fit: contain;
     }
   }
 }
