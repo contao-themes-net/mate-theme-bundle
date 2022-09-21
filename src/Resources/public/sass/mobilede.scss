@@ -140,6 +140,14 @@
     background: none;
     padding: 0;
 
+    a {
+      color: $primary-link-font-color;
+
+      &:hover {
+        color: $primary-link-hover-font-color;
+      }
+    }
+
     .checkbox-group {
       overflow: hidden;
     }
@@ -175,6 +183,10 @@
 
     .range-slider .ui-widget-header {
       background: $mateColor1;
+    }
+
+    .select-wrapper .caret {
+      top: 15px;
     }
   }
 
