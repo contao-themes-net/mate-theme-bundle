@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.19.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.2) – 2022-09-19
+## [2.19.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.2) – 2022-09-21
 - [Changed] update maklermodul templates
 - [Fixed] css fix for [Klaro Consent Manager](https://extensions.contao.org/?q=klaro&pages=1&p=pdir%2Fklaro-consent-manager)
 - [Changed] update vehicle manager templates and styling
