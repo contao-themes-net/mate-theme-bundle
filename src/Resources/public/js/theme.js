@@ -240,6 +240,8 @@ jQuery(document).ready(function ($) {
             closeOnClick: false
         });
 
+        console.log($("nav:not(.subnav) .desktop-menu ul.dropdown-content a.dropdown-button"));
+
         $("nav:not(.subnav) .desktop-menu ul.dropdown-content a.dropdown-button").dropdown({
             inDuration: 300,
             outDuration: 225,

@@ -61,9 +61,6 @@
     </div>
 
   </div>
-<?php /* if($this->featured): ?>
-  <div class="corner-ribbon <?= $this->featureCss ?>"><?php if($this->promotion): ?>Empfehlung<?php else: ?>Neu<?php endif ?></div>
-<?php endif; */ ?>
 
   <?php endif; ?>
 </a>

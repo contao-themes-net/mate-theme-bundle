@@ -1017,8 +1017,9 @@ nav {
   .ce_image:not(.fixed-nav) {
     img {
       max-height: 110px;
-      width: auto;
+      width: 100%;
       padding: 15px;
+      object-fit: contain;
     }
   }
 
@@ -1044,6 +1045,7 @@ nav {
       width: auto;
       margin-top: 3px;
       padding: 0;
+      object-fit: contain;
     }
   }
 }
@@ -3694,6 +3696,20 @@ mark {
 
   .image_container {
     position: relative;
+  }
+}
+
+/* ========================== *
+ *   Klaro Bundle             *
+ * ========================== */
+
+div.klaro {
+  .cookie-notice:not(.cookie-modal-notice) {
+    z-index: 2000;
+  }
+
+  .slider {
+    height: auto;
   }
 }
 
