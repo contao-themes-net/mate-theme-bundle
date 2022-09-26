@@ -10,6 +10,7 @@
 
 namespace ContaoThemesNet\MateThemeBundle\Mate;
 
+use Contao\CoreBundle\Security\ContaoCorePermissions;
 use Contao\Environment;
 use Contao\FrontendTemplate;
 use Contao\PageModel;
