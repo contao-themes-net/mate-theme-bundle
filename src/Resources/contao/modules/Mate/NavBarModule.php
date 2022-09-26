@@ -16,6 +16,8 @@ use Contao\FrontendTemplate;
 use Contao\PageModel;
 use Contao\StringUtil;
 use Contao\System;
+use Contao\CoreBundle\Security\ContaoCorePermissions;
+
 
 /**
  * Class NavbarModule
