@@ -227,6 +227,7 @@ class NavBarModule extends \Module
 
         $items = array();
         $security = System::getContainer()->get('security.helper');
+        $isMember = $security->isGranted('ROLE_MEMBER');
         $blnShowUnpublished = System::getContainer()->get('contao.security.token_checker')->isPreviewMode();
 
         $level++;
@@ -249,6 +250,18 @@ class NavBarModule extends \Module
             if ($host !== null)
             {
                 $objSubpage->domain = $host;
+            }
+
+            if ($objSubpage->tabindex > 0)
+            {
+                trigger_deprecation('contao/core-bundle', '4.12', 'Using a tabindex value greater than 0 has been deprecated and will no longer work in Contao 5.0.');
+            }
+
+            // Hide the page if it is not protected and only visible to guests (backwards compatibility)
+            if ($objSubpage->guests && !$objSubpage->protected && $isMember)
+            {
+                trigger_deprecation('contao/core-bundle', '4.12', 'Using the "show to guests only" feature has been deprecated an will no longer work in Contao 5.0. Use the "protect page" function instead.');
+                continue;
             }
 
             $subitems = '';
@@ -316,6 +329,15 @@ class NavBarModule extends \Module
             }
         }
 
+        // Add classes first and last
+        if (!empty($items))
+        {
+            $last = \count($items) - 1;
+
+            $items[0]['class'] = trim($items[0]['class'] . ' first');
+            $items[$last]['class'] = trim($items[$last]['class'] . ' last');
+        }
+
         return $items;
     }
 
@@ -335,7 +357,7 @@ class NavBarModule extends \Module
         $trail = \in_array($objSubpage->id, $objPage->trail);
 
         // Use the path without query string to check for active pages (see #480)
-        list($path) = explode('?', Environment::get('requestUri'), 2);
+        list($path) = explode('?', Environment::get('request'), 2);
 
         // Active page
         if (($objPage->id == $objSubpage->id || ($objSubpage->type == 'forward' && $objPage->id == $objSubpage->jumpTo)) && !($this instanceof ModuleSitemap) && $href == $path)
@@ -369,6 +391,7 @@ class NavBarModule extends \Module
         $row['link'] = $objSubpage->title;
         $row['href'] = $href;
         $row['rel'] = '';
+        $row['nofollow'] = false; // backwards compatibility
         $row['target'] = '';
         $row['description'] = str_replace(array("\n", "\r"), array(' ', ''), (string) $objSubpage->description);
 
