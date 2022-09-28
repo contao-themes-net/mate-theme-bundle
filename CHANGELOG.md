@@ -10,10 +10,16 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.19.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.4) – 2022-09-28
+
+- [Fixed] fix navbar module [#114](https://github.com/contao-themes-net/mate-theme-bundle/issues/114)
+
 ## [2.19.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.3) – 2022-09-26
+
 - [Fixed] critical error in NavBarModule
 
 ## [2.19.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.2) – 2022-09-21
+
 - [Changed] update maklermodul templates
 - [Fixed] css fix for [Klaro Consent Manager](https://extensions.contao.org/?q=klaro&pages=1&p=pdir%2Fklaro-consent-manager)
 - [Changed] update vehicle manager templates and styling
