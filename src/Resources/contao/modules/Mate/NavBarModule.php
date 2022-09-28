@@ -218,7 +218,11 @@ class NavBarModule extends \Module
     protected function getNavigationMenu($pid, $level=1, $host=null, $language=null)
     {
         // Get all active subpages
-        $arrSubpages = static::getPublishedSubpagesByPid($pid, $this->showHidden, $this instanceof ModuleSitemap);
+        if (version_compare(VERSION, '4.12', '<')) {
+            $arrSubpages = static::getPublishedSubpagesWithoutGuestsByPid($pid, $this->showHidden, $this instanceof ModuleSitemap);
+        } else {
+            $arrSubpages = static::getPublishedSubpagesByPid($pid, $this->showHidden, $this instanceof ModuleSitemap);
+        }
 
         if ($arrSubpages === null)
         {
