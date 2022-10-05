@@ -24,6 +24,8 @@ use Contao\System;
 
 class ThemeUtils
 {
+    public $sassFolder = 'bundles/matetheme/sass/';
+
     public static function getRootDir()
     {
         return System::getContainer()->getParameter('kernel.project_dir');
@@ -34,15 +36,20 @@ class ThemeUtils
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    public static function getCombinedStylesheet()
+    public static function getCombinedStylesheet($theme = null): string
     {
+        // for multi domain setup
+        if (null !== $theme) {
+            self::$sassFolder .= $theme.'/';
+        }
+
         // add stylesheets
         $combiner = new Combiner();
 
         if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
-            $combiner->add('bundles/matetheme/sass/mate_win.scss');
+            $combiner->add(self::$sassFolder.'mate_win.scss');
         } else {
-            $combiner->add('bundles/matetheme/sass/mate.scss');
+            $combiner->add(self::$sassFolder.'mate.scss');
         }
 
         return $combiner->getCombinedFile();
