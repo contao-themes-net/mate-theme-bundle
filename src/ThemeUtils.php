@@ -24,7 +24,7 @@ use Contao\System;
 
 class ThemeUtils
 {
-    public $sassFolder = 'bundles/matetheme/sass/';
+    static $sassFolder = 'bundles/matetheme/sass/';
 
     public static function getRootDir()
     {
