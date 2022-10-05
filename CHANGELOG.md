@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.19.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.6) – 2022-10-05
+
+- [Fixed] fix paths for multi domain setup [#112](https://github.com/contao-themes-net/mate-theme-bundle/issues/112)
+
 ## [2.19.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.5) – 2022-09-28
 
 - [Fixed] fix exception in NavBarModule [#116](https://github.com/contao-themes-net/mate-theme-bundle/issues/116)
