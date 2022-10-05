@@ -40,7 +40,7 @@ class ThemeUtils
     {
         // for multi domain setup
         if (null !== $theme) {
-            self::$sassFolder .= $theme.'/';
+            self::$sassFolder = 'files/mate/sass/'.$theme.'/';
         }
 
         // add stylesheets
