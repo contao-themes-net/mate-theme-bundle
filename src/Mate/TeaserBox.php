@@ -70,7 +70,7 @@ class TeaserBox extends ContentElement
         }
 
         $this->Template->page = $this->mateTeaserBox_page;
-        $this->Template->picture = FilesModel::findByUuid($this->singleSRC)->path;
+        $this->Template->picture = FilesModel::findByUuid($this->singleSRC)? FilesModel::findByUuid($this->singleSRC)->path : null;
         $this->Template->metaImg = unserialize(FilesModel::findByUuid($this->singleSRC)->meta);
         $this->Template->pageText = $this->mateTeaserBox_pageText;
         $this->Template->subheadline = $this->mateTeaserbox_subHeadline;
