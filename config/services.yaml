@@ -1,0 +1,17 @@
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+
+    ContaoThemesNet\MateThemeBundle\:
+        resource: ../src/
+
+    # Migration
+    ContaoThemesNet\MateThemeBundle\Migration\:
+        resource: "../src/Migration/*"
+        tags:
+            - { name: contao.migration, priority: 99 }
+
+    ctn.mate_theme.listener.hooks:
+        class: ContaoThemesNet\MateThemeBundle\EventListener\HookListener
+        public: true

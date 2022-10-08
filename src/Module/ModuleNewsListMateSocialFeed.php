@@ -28,7 +28,7 @@ class ModuleNewsListMateSocialFeed extends ModuleCustomNewslist
      */
     protected function compile()
     {
-        if (false !== strpos($this->customTpl, 'mod_newslist_mate_slider')) {
+        if (str_contains($this->customTpl, 'mod_newslist_mate_slider')) {
             if ('' === $this->mateSliderHeight) {
                 $mateSliderHeight = '460';
             } else {
@@ -57,7 +57,7 @@ class ModuleNewsListMateSocialFeed extends ModuleCustomNewslist
                   var headline = $(this).find("h2").text();
                   var subheadline = $(this).find(".subheadline").text();
                   var i = index;
-            
+
                   $( ".slider.mod_newslist .indicator-item" ).each(function( index ) {
                     if(i == index) {
                         $(this).append("<span class=\'inner\'></span>");
@@ -80,15 +80,15 @@ class ModuleNewsListMateSocialFeed extends ModuleCustomNewslist
                     interval: '.$mateSliderInterval.',
                     duration: '.$mateSliderDuration.'
                 });
-                
+
                 $( ".slider.mod_newslist .next" ).click(function() {
                   $(".slider").slider("next");
                 });
-            
+
                 $( ".slider.mod_newslist .prev" ).click(function() {
                   $(".slider").slider("prev");
                 });
-            
+
                 '.$indicators.'
             });
             </script>

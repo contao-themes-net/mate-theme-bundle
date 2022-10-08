@@ -25,6 +25,9 @@ use Contao\System;
 
 class ThemeUtils
 {
+    static string $themeFolder = 'bundles/contaothemesnetmatetheme/';
+    static string $scssFolder = 'sass/';
+
     public static function getRootDir()
     {
         return System::getContainer()->getParameter('kernel.project_dir');
@@ -35,16 +38,18 @@ class ThemeUtils
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    public static function getCombinedStylesheet(): string
+    public static function getCombinedStylesheet($theme = null): string
     {
+        self::$scssFolder = self::$themeFolder . self::$scssFolder;
+
+        // for multi domain setup
+        if (null !== $theme) {
+            self::$sassFolder = 'files/mate/sass/'.$theme.'/';
+        }
+
         // add stylesheets
         $combiner = new Combiner();
-
-        if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
-            $combiner->add('bundles/contaothemesnetmatetheme/sass/mate_win.scss');
-        } else {
-            $combiner->add('bundles/contaothemesnetmatetheme/sass/mate.scss');
-        }
+        $combiner->add(self::$scssFolder.'mate.scss');
 
         return $combiner->getCombinedFile();
     }
@@ -54,9 +59,9 @@ class ThemeUtils
         // add javascripts
         $combiner = new Combiner();
 
-        $combiner->add('bundles/contaothemesnetmatetheme/js/materialize/materialize.min.js');
-        $combiner->add('bundles/contaothemesnetmatetheme/js/headroom/headroom.min.js');
-        $combiner->add('bundles/contaothemesnetmatetheme/js/theme.min.js');
+        $combiner->add(self::$themeFolder.'js/materialize/materialize.min.js');
+        $combiner->add(self::$themeFolder.'js/headroom/headroom.min.js');
+        $combiner->add(self::$themeFolder.'js/theme.min.js');
 
         return $combiner->getCombinedFile();
 

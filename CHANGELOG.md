@@ -1,5 +1,15 @@
 # Changelog
 
+[//]: <> (
+Types of changes
+    Added for new Addeds.
+    Changed for changes in existing functionality.
+    Deprecated for soon-to-be removed Addeds.
+    Removed for now removed Addeds.
+    Fixed for any bug fixes.
+    Security in case of vulnerabilities.
+)
+
 ## [3.0.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.0) – 2021-10-15
 
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)

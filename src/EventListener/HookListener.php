@@ -19,6 +19,9 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\MateThemeBundle\EventListener;
 
+use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
+
+#[AsHook('replaceInsertTags')]
 class HookListener
 {
     /**
@@ -28,10 +31,19 @@ class HookListener
      *
      * @return bool|string
      */
-    public function onReplaceInsertTags($tag)
+    public function  __invoke(
+        string $insertTag,
+        bool $useCache,
+        string $cachedValue,
+        array $flags,
+        array $tags,
+        array $cache,
+        int $_rit,
+        int $_cnt
+    )
     {
-        if (preg_match('/^countTo([bsrl]?)\:\:/', $tag)) {
-            return $this->replaceCountToInsertTag($tag);
+        if (preg_match('/^countTo([bsrl]?)\:\:/', $insertTag)) {
+            return $this->replaceCountToInsertTag($insertTag);
         }
 
         return false;
@@ -44,9 +56,9 @@ class HookListener
      *
      * @return string
      */
-    private function replaceCountToInsertTag($tag)
+    private function replaceCountToInsertTag($insertTag): string
     {
-        $parts = explode('::', $tag);
+        $parts = explode('::', $insertTag);
 
         $class = '';
         $spanClass = '';
@@ -62,7 +74,7 @@ class HookListener
                 $class = '.'.$parts[2];
             }
             $class = str_replace('noscript', '', $class);
-            $GLOBALS['TL_BODY'][] = '<script src="bundles/contaothemesnetmatetheme/js/jquery.countTo.js"></script>';
+            $GLOBALS['TL_BODY']['jquery.countTo'] = '<script src="bundles/contaothemesnetmatetheme/js/jquery.countTo.js"></script>';
             $GLOBALS['TL_BODY'][] = '<script>
             jQuery( document ).ready(function($) {
                 var countTo = 0;

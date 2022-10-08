@@ -17,25 +17,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace ContaoThemesNet\MateThemeBundle\Element;
+namespace ContaoThemesNet\MateThemeBundle\Mate;
 
 use Contao\BackendTemplate;
-use Contao\ContentElement;
+use Contao\Module;
 
 /**
- * Class ModalElement.
+ * Class ModalModule.
  *
  * @author Philipp Seibt <develop@pdir.de>
  */
-class ModalElement extends ContentElement
+class ModalModule extends Module
 {
-    /**
-     * Template.
-     *
-     * @var string
-     */
-    protected $strTemplate = 'ce_mate_modal';
-
     /**
      * Display a wildcard in the back end.
      *
@@ -44,8 +37,8 @@ class ModalElement extends ContentElement
     public function generate()
     {
         if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
-
-            $objTemplate = new BackendTemplate('be_wildcard_text');
+            /** @var BackendTemplate|object $objTemplate */
+            $objTemplate = new BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### MATE MODAL ###';
             $objTemplate->title = $this->name;
@@ -59,14 +52,14 @@ class ModalElement extends ContentElement
     }
 
     /**
-     * Generate the element.
+     * Generate the module.
      */
     protected function compile(): void
     {
         if ('' !== $this->mateModal_customTpl) {
             $this->Template->setName($this->mateModal_customTpl);
         } else {
-            $this->Template->setName('ce_mate_modal');
+            $this->Template->setName('mod_mate_modal');
         }
         $this->Template->linkText = $this->mateModal_linkText;
 

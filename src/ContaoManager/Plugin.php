@@ -22,8 +22,8 @@ namespace ContaoThemesNet\MateThemeBundle\ContaoManager;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use ContaoBootstrap\Grid\ContaoBootstrapGridBundle;
 use ContaoThemesNet\MateThemeBundle\ContaoThemesNetMateThemeBundle;
+use ContaoThemesNet\ThemeComponentsBundle\ThemeComponentsBundle;
 use Pdir\ThemeHelperBundle\ThemeHelperBundle;
 
 /**
@@ -40,7 +40,10 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(ContaoThemesNetMateThemeBundle::class)
-                ->setLoadAfter([ThemeHelperBundle::class, ContaoBootstrapGridBundle::class]),
+                ->setLoadAfter([
+                    ThemeHelperBundle::class,
+                    ThemeComponentsBundle::class
+                ]),
         ];
     }
 }

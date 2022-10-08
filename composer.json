@@ -28,17 +28,14 @@
     "donate": "https://contao-themes.net/sponsoring.html"
   },
   "require": {
-    "php": ">=7.1 || ^8.0",
-    "contao/core-bundle": "^4.4",
-    "pdir/contao-theme-helper-bundle": "^1.2",
-    "contao-dd/advanced-classes-bundle": "^1.0",
-    "terminal42/contao-folderpage": "^2.0.5",
-    "contao-themes-net/material-icons-inserttag": "^1.0",
-    "contao-themes-net/theme-components-bundle": "^1.3"
-  },
-  "conflict": {
-    "contao/core": "*",
-    "contao/manager-plugin": "<2.0 || >=3.0"
+    "php": "^8.1",
+    "contao/core-bundle": "^5.0",
+    "contao-dd/advanced-classes-bundle": "^1.3",
+    "contao-themes-net/material-icons-inserttag": "^1.2",
+    "contao-themes-net/theme-components-bundle": "^1.4",
+    "pdir/contao-theme-helper-bundle": "^1.4",
+    "pdir/contao-webtools": "^1.5",
+    "terminal42/contao-folderpage": "^3.0"
   },
   "require-dev": {
     "contao/manager-plugin": "^2.0",
@@ -49,16 +46,7 @@
   "autoload": {
     "psr-4": {
       "ContaoThemesNet\\MateThemeBundle\\": "src/"
-    },
-    "classmap": [
-      "src/Resources/contao/"
-    ],
-    "exclude-from-classmap": [
-      "src/Resources/contao/config/",
-      "src/Resources/contao/dca/",
-      "src/Resources/contao/languages/",
-      "src/Resources/contao/templates/"
-    ]
+    }
   },
   "extra": {
     "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
@@ -77,5 +65,12 @@
     "pdir/maklermodul-bundle": "MATE Theme includes all styles for maklermodul bundle. / MATE Theme enthält Stylesheets für das Maklermodul Bundle.",
     "pdir/social-feed-bundle": "MATE Theme includes all styles for social feed bundle. / MATE Theme enthält Stylesheets für das Social Feed Bundle",
     "pdir/animated-timeline-bundle": "Render content in a dynamic timeline. / Zeige Inhalte in einem dynamischen Zeitstrahl an."
+  },
+  "config": {
+    "allow-plugins": {
+      "contao-components/installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "contao/manager-plugin": true
+    }
   }
 }

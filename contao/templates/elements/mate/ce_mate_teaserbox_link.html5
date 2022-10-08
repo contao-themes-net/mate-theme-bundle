@@ -1,0 +1,21 @@
+<div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+	<a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>" <?= $this->target ?><?= $this->rel ?> class="inside">
+    <?php $this->block('content'); ?>
+
+      <?php if ($this->addImage): ?>
+        <?php $this->insert('image', $this->arrData); ?>
+      <?php endif; ?>
+
+      <?php if($this->subheadline): ?><div class="subheadline"><?= $this->subheadline ?></div><?php endif; ?>
+
+      <?php if ($this->headline): ?>
+        <<?= $this->hl ?>>
+          <?= $this->headline ?>
+        </<?= $this->hl ?>>
+      <?php endif; ?>
+
+      <?= $this->text ?>
+
+    <?php $this->endblock(); ?>
+	</a>
+</div>
