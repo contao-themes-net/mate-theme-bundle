@@ -1,9 +1,61 @@
 # Changelog
 
-## [3.0.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.3) – 2021-03-09
+## [3.0.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.0) – 2021-10-15
 
+- [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
+- [Changed] Increase Contao version to 5 and increase PHP version to 8.1
+- [Changed] Remove bootstrap/grid and use migrations to be compatible with the new version (see https://pdir.de/docs/de/contao/themes/mate/update/)
+- [Removed] Cleanup older Contao SQL files
+
+## [2.19.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.6) – 2022-10-05
+
+- [Fixed] fix paths for multi domain setup [#112](https://github.com/contao-themes-net/mate-theme-bundle/issues/112)
+
+## [2.19.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.5) – 2022-09-28
+
+- [Fixed] fix exception in NavBarModule [#116](https://github.com/contao-themes-net/mate-theme-bundle/issues/116)
+
+## [2.19.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.4) – 2022-09-28
+
+- [Fixed] fix navbar module [#114](https://github.com/contao-themes-net/mate-theme-bundle/issues/114)
+
+## [2.19.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.3) – 2022-09-26
+
+- [Fixed] critical error in NavBarModule
+
+## [2.19.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.2) – 2022-09-21
+
+- [Changed] update maklermodul templates
+- [Fixed] css fix for [Klaro Consent Manager](https://extensions.contao.org/?q=klaro&pages=1&p=pdir%2Fklaro-consent-manager)
+- [Changed] update vehicle manager templates and styling
+- [Fixed] add width definition for the logo [#97](https://github.com/contao-themes-net/mate-theme-bundle/issues/97)
+- [Fixed] update navbar module and fix start/stop-level
+
+## [2.19.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.1) – 2022-09-15
+
+- [Changed] update sql files for Contao 4.9 and 4.13
+- [Fixed] css bugfix for content box and teaser box
+- [Changed] content box and teaser box no longer require a link ([#109](https://github.com/contao-themes-net/mate-theme-bundle/issues/109))
+
+## [2.19.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.0) – 2022-08-01
+
+- [Added] add variables to style input and select fields
+- [Added] change teaserbox and contentbox link fields
+- [Added] add support for Symfony 5 public entry point
+- [Fixed] fix og:image bug in fe_page
+- [Fixed] fix button hover background
+- [Fixed] fix navigation for many menu items
+- [Fixed] update language files
+- [Fixed] fix button styles ([#94](https://github.com//contao-themes-net/mate-theme-bundle/issues/94))
+- [Fixed] add protected legend in dca
+- [Fixed] fix 'Warning: Undefined array key "mate_navbar"'
+- [Fixed] fix 'Warning: Attempt to read property "path" on null'
+
+## [2.18.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.18.0) – 2022-05-12
+
+- [info] remove support for Contao 4.4 and php <=7.1
 - [feature] add support for PHP 8
-- [feature] remove bootstrap/grid and use migrations to be compatible with the new version (see https://pdir.de/docs/de/contao/themes/mate/update/)
+- [fix] fix sql files for Contao 4.9 and Contao 4.13
 
 ## [2.17.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.17.6) – 2021-12-22
 
