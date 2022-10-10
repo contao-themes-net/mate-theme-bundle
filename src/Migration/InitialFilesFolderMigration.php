@@ -39,7 +39,7 @@ class InitialFilesFolderMigration extends AbstractMigration
 
     public function getName(): string
     {
-        return 'Initial files folder migration - ODD Theme';
+        return 'Initial files folder migration - MATE Theme';
     }
 
     /**
