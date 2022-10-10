@@ -227,7 +227,7 @@ class NavBarModule extends Module
 
         $items = [];
         $security = System::getContainer()->get('security.helper');
-        $isMember = $security->isGranted('ROLE_MEMBER');
+        // $isMember = $security->isGranted('ROLE_MEMBER');
         $blnShowUnpublished = System::getContainer()->get('contao.security.token_checker')->isPreviewMode();
 
         ++$level;
