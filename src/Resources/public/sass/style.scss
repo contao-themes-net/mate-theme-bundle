@@ -357,11 +357,18 @@ code, pre {
   ul:not(.browser-default) {
     padding-left: 0;
 
-    li:before {
-      content: "»";
-      color: $mateColor2;
-      font-weight: 700;
-      padding-right: 15px;
+    li {
+      padding-left: 20px;
+      position: relative;
+
+      &:before {
+        content: "»";
+        color: $mateColor2;
+        font-weight: 700;
+        padding-right: 15px;
+        position: absolute;
+        left: 0;
+      }
     }
   }
 }
