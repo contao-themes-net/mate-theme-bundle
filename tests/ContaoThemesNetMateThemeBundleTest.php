@@ -17,21 +17,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace ContaoThemesNet\MateThemeBundle\Module;
+namespace ContaoThemesNet\MateThemeBundle\Tests;
 
-use Contao\BackendModule;
+use PHPUnit\Framework\TestCase;
 
-class MateThemeSetup extends BackendModule
+class ContaoThemesNetMateThemeBundleTest extends TestCase
 {
-    public const VERSION = '3.0.0';
-
-    protected $strTemplate = 'be_mateTheme_setup';
-
-    /**
-     * Generate the module.
-     */
-    protected function compile(): void
+    public function testCanBeInstantiated(): void
     {
-        $this->Template->version = self::VERSION;
+        $bundle = new ContaoThemesNetOddThemeExtension();
+
+        $this->assertInstanceOf('ContaoThemesNet\MateThemeBundle\ContaoThemesNetMateThemeExtension', $bundle);
     }
 }

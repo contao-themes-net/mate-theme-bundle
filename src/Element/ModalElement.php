@@ -21,6 +21,7 @@ namespace ContaoThemesNet\MateThemeBundle\Element;
 
 use Contao\BackendTemplate;
 use Contao\ContentElement;
+use Contao\System;
 
 /**
  * Class ModalElement.
@@ -44,7 +45,6 @@ class ModalElement extends ContentElement
     public function generate()
     {
         if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
-
             $objTemplate = new BackendTemplate('be_wildcard_text');
 
             $objTemplate->wildcard = '### MATE MODAL ###';

@@ -40,19 +40,17 @@ class TeaserBox extends ContentElement
 
     /**
      * Display a wildcard in the back end.
-     *
-     * @return string
      */
     public function generate(): string
     {
         if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
             $objTemplate = new BackendTemplate('be_wildcard_text');
 
-            $objTemplate->wildcard = '### '.$GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][0]?? null.' ###';
+            $objTemplate->wildcard = '### '.$GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][0] ?? null.' ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
-            $objTemplate->text = $this->text?? '';
+            $objTemplate->text = $this->text ?? '';
 
             return $objTemplate->parse();
         }
@@ -70,7 +68,7 @@ class TeaserBox extends ContentElement
         }
 
         $this->Template->page = $this->mateTeaserBox_page;
-        $this->Template->picture = FilesModel::findByUuid($this->singleSRC)? FilesModel::findByUuid($this->singleSRC)->path : null;
+        $this->Template->picture = FilesModel::findByUuid($this->singleSRC) ? FilesModel::findByUuid($this->singleSRC)->path : null;
         $this->Template->metaImg = unserialize(FilesModel::findByUuid($this->singleSRC)->meta);
         $this->Template->pageText = $this->mateTeaserBox_pageText;
         $this->Template->subheadline = $this->mateTeaserbox_subHeadline;
@@ -89,8 +87,10 @@ class TeaserBox extends ContentElement
                     ->setSize($this->size)
                     ->setMetadata($this->objModel->getOverwriteMetadata())
                     ->enableLightbox($this->fullsize)
-                    ->buildIfResourceExists();
+                    ->buildIfResourceExists()
+                ;
                 $figure?->applyLegacyTemplateData($this->Template, null, $this->floating);
+
                 if (null === $figure) {
                     $this->Template->addImage = false;
                 }

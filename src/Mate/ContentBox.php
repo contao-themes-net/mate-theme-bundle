@@ -1,11 +1,20 @@
 <?php
 
-/**
- * Contao Open Source CMS
+declare(strict_types=1);
+
+/*
+ * mate theme for Contao Open Source CMS
  *
- * Copyright (c) 2005-2016 Leo Feyer
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
  *
- * @license LGPL-3.0+
+ * @package    contao-themes-net/mate-theme-bundle
+ * @link       https://github.com/contao-themes-net/mate-theme-bundle
+ * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
+ * @author     Philipp Seibt <develop@pdir.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace ContaoThemesNet\MateThemeBundle\Mate;
@@ -13,34 +22,31 @@ namespace ContaoThemesNet\MateThemeBundle\Mate;
 use Contao\BackendTemplate;
 use Contao\ContentElement;
 use Contao\FilesModel;
-use Contao\StringUtil;
 use Contao\System;
 
 /**
- * Class ContentBox
+ * Class ContentBox.
  *
  * @author Mathias Arzberger <develop@pdir.de>
  */
 class ContentBox extends ContentElement
 {
     /**
-     * Template
+     * Template.
+     *
      * @var string
      */
     protected $strTemplate = 'ce_mate_contentbox';
 
     /**
-     * Display a wildcard in the back end
-     *
-     * @return string
+     * Display a wildcard in the back end.
      */
     public function generate(): string
     {
-        if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')))
-        {
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
             $objTemplate = new BackendTemplate('be_wildcard_text');
 
-            $objTemplate->wildcard = '### ' . $GLOBALS['TL_LANG']['CTE']['mateContentBox'][0] ?? null . ' ###';
+            $objTemplate->wildcard = '### '.$GLOBALS['TL_LANG']['CTE']['mateContentBox'][0] ?? null.' ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
@@ -52,26 +58,27 @@ class ContentBox extends ContentElement
         return parent::generate();
     }
 
-
     /**
-     * Generate the module
+     * Generate the module.
      */
-    protected function compile()
+    protected function compile(): void
     {
-        if($this->mateContentBox_customTpl != "") {
+        if ('' !== $this->mateContentBox_customTpl) {
             $this->Template->setName($this->mateContentBox_customTpl);
         }
 
         $this->Template->page = $this->mateContentBox_page;
-        if(!is_null($this->singleSRC)) $this->Template->href = FilesModel::findByUuid($this->singleSRC)? FilesModel::findByUuid($this->singleSRC)->path : null;
+
+        if (null !== $this->singleSRC) {
+            $this->Template->href = FilesModel::findByUuid($this->singleSRC) ? FilesModel::findByUuid($this->singleSRC)->path : null;
+        }
         $this->Template->pageText = $this->mateContentBox_pageText;
 
         // add an image
-        if ($this->addImage && $this->singleSRC != '')
-        {
+        if ($this->addImage && '' !== $this->singleSRC) {
             $objModel = FilesModel::findByUuid($this->singleSRC);
-            if ($objModel !== null && is_file(System::getContainer()->getParameter('kernel.project_dir') . '/' . $objModel->path))
-            {
+
+            if (null !== $objModel && is_file(System::getContainer()->getParameter('kernel.project_dir').'/'.$objModel->path)) {
                 $this->singleSRC = $objModel->path;
 
                 $figure = System::getContainer()
@@ -81,12 +88,13 @@ class ContentBox extends ContentElement
                     ->setSize($this->size)
                     ->setMetadata($this->objModel->getOverwriteMetadata())
                     ->enableLightbox($this->fullsize)
-                    ->buildIfResourceExists();
+                    ->buildIfResourceExists()
+                ;
                 $figure?->applyLegacyTemplateData($this->Template, null, $this->floating);
+
                 if (null === $figure) {
                     $this->Template->addImage = false;
                 }
-
             }
         }
     }

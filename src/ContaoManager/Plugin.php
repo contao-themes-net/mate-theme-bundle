@@ -42,7 +42,7 @@ class Plugin implements BundlePluginInterface
             BundleConfig::create(ContaoThemesNetMateThemeBundle::class)
                 ->setLoadAfter([
                     ThemeHelperBundle::class,
-                    ThemeComponentsBundle::class
+                    ThemeComponentsBundle::class,
                 ]),
         ];
     }

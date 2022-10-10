@@ -27,20 +27,11 @@ class HookListener
     /**
      * Replace the insert tag.
      *
-     * @param string $tag the insert tag
+     * @param string $insertTag the insert tag
      *
      * @return bool|string
      */
-    public function  __invoke(
-        string $insertTag,
-        bool $useCache,
-        string $cachedValue,
-        array $flags,
-        array $tags,
-        array $cache,
-        int $_rit,
-        int $_cnt
-    )
+    public function __invoke(string $insertTag, bool $useCache, string $cachedValue, array $flags, array $tags, array $cache, int $_rit, int $_cnt)
     {
         if (preg_match('/^countTo([bsrl]?)\:\:/', $insertTag)) {
             return $this->replaceCountToInsertTag($insertTag);
@@ -52,9 +43,7 @@ class HookListener
     /**
      * Replace the countTo insert tag.
      *
-     * @param string $tag the given tag
-     *
-     * @return string
+     * @param string $insertTag the given tag
      */
     private function replaceCountToInsertTag($insertTag): string
     {

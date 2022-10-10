@@ -25,8 +25,8 @@ use Contao\System;
 
 class ThemeUtils
 {
-    static string $themeFolder = 'bundles/contaothemesnetmatetheme/';
-    static string $scssFolder = 'sass/';
+    public static string $themeFolder = 'bundles/contaothemesnetmatetheme/';
+    public static string $scssFolder = 'sass/';
 
     public static function getRootDir()
     {
@@ -40,7 +40,7 @@ class ThemeUtils
 
     public static function getCombinedStylesheet($theme = null): string
     {
-        self::$scssFolder = self::$themeFolder . self::$scssFolder;
+        self::$scssFolder = self::$themeFolder.self::$scssFolder;
 
         // for multi domain setup
         if (null !== $theme) {
@@ -64,6 +64,5 @@ class ThemeUtils
         $combiner->add(self::$themeFolder.'js/theme.min.js');
 
         return $combiner->getCombinedFile();
-
     }
 }

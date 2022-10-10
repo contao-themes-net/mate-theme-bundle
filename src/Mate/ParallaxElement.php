@@ -22,7 +22,6 @@ namespace ContaoThemesNet\MateThemeBundle\Mate;
 use Contao\BackendTemplate;
 use Contao\ContentElement;
 use Contao\FilesModel;
-use Contao\StringUtil;
 use Contao\System;
 
 /**
@@ -71,7 +70,7 @@ class ParallaxElement extends ContentElement
         }
 
         $this->Template->page = $this->mateTeaserBox_page;
-        $this->Template->picture = FilesModel::findByUuid($this->singleSRC)? FilesModel::findByUuid($this->singleSRC)->path : null;
+        $this->Template->picture = FilesModel::findByUuid($this->singleSRC) ? FilesModel::findByUuid($this->singleSRC)->path : null;
         $this->Template->metaImg = unserialize(FilesModel::findByUuid($this->singleSRC)->meta);
         $this->Template->pageText = $this->mateTeaserBox_pageText;
         $this->Template->text = $this->mateParallaxElement_text;
@@ -89,8 +88,10 @@ class ParallaxElement extends ContentElement
                     ->setSize($this->size)
                     ->setMetadata($this->objModel->getOverwriteMetadata())
                     ->enableLightbox($this->fullsize)
-                    ->buildIfResourceExists();
+                    ->buildIfResourceExists()
+                ;
                 $figure?->applyLegacyTemplateData($this->Template, null, $this->floating);
+
                 if (null === $figure) {
                     $this->Template->addImage = false;
                 }

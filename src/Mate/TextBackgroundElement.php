@@ -46,14 +46,13 @@ class TextBackgroundElement extends ContentElement
     public function generate()
     {
         if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
-
             $objTemplate = new BackendTemplate('be_wildcard_text');
 
             $objTemplate->wildcard = '### TEXT ELEMENT WITH BACKGROUND IMAGE ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
-            $objTemplate->text = $this->text??'';
+            $objTemplate->text = $this->text ?? '';
 
             return $objTemplate->parse();
         }
@@ -84,8 +83,10 @@ class TextBackgroundElement extends ContentElement
                     ->setSize($this->size)
                     ->setMetadata($this->objModel->getOverwriteMetadata())
                     ->enableLightbox($this->fullsize)
-                    ->buildIfResourceExists();
+                    ->buildIfResourceExists()
+                ;
                 $figure?->applyLegacyTemplateData($this->Template, null, $this->floating);
+
                 if (null === $figure) {
                     $this->Template->addImage = false;
                 }
