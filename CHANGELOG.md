@@ -12,7 +12,7 @@ Types of changes
 
 ## [2.19.7](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.7) – 2022-10-10
 
-- [Changed] now require terminal42/contao-folderpage version 3.* [#119](https://github.com/contao-themes-net/mate-theme-bundle/issues/119)
+- [Changed] now require terminal42/contao-folderpage version 2.* or 3.* [#119](https://github.com/contao-themes-net/mate-theme-bundle/issues/119)
 - [Fixed] fix unordered list [#120](https://github.com/contao-themes-net/mate-theme-bundle/issues/120)
 
 ## [2.19.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.6) – 2022-10-05
