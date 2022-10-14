@@ -21,6 +21,8 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['mateTextBackgroundElement'] = '{ty
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateModal'] = '{type_legend},type;{modal_link_legend},mateModal_linkText,mateModal_linkClass;{modal_headline_legend},headline;{modal_text_legend},mateModal_text,mateModal_class;{template_legend:hide},mateModal_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{advanced_classes_legend},advancedCss;{invisible_legend:hide},invisible,start,stop';
 
+$GLOBALS['TL_DCA']['tl_content']['metapalettes']['bs_gridStart']['advanced_classes'] = ['advancedCss'];
+
 /**
  * Add fields to tl_content
  */
