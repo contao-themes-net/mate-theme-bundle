@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.19.8](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.8) – 2022-10-14
+
+- [Changed] add advanced classes legend to grid start element
+
 ## [2.19.7](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.7) – 2022-10-10
 
 - [Changed] now require terminal42/contao-folderpage version 2.* or 3.* [#119](https://github.com/contao-themes-net/mate-theme-bundle/issues/119)
