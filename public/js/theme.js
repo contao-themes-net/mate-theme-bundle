@@ -127,7 +127,7 @@ jQuery(document).ready(function ($) {
     /* ===================== *
      *   Content Slider		 *
      * ===================== */
-    $(".slides .ce_text, .slides .ce_image, .slides .ce_mateTextBackgroundElement, .slides .ce_youtube, .slides .ce_player").each(function (index) {
+    $(".slides .content-text, .slides .ce_image, .slides .ce_mateTextBackgroundElement, .slides .content-youtube, .slides .content-player").each(function (index) {
         var classList = $(this).attr('class');
         var id = '';
 
