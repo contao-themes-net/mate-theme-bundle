@@ -12,9 +12,9 @@
 
   <?= $this->viewport ?>
 
-  <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedStylesheet(); // mate theme css optimization ?>">
-
   <?= $this->stylesheets ?>
+
+  <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedStylesheet(); // mate theme css optimization ?>">
 
   <?= $this->head ?>
 

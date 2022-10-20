@@ -1,46 +1,54 @@
 
 <div class="layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?> col s12 m6">
-	<div class="inner">
+  <div class="inner">
 
-	  <?php if ($this->addImage): ?>
-	    <figure class="image_container<?= $this->floatClass ?>"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
+    <?php if ($this->addImage): ?>
+      <figure class="image_container<?= $this->floatClass ?>"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
 
-	      <?php if ($this->href): ?>
-	        <a href="<?= $this->href ?>"<?= $this->attributes ?> title="<?= $this->alt ?>">
-	      <?php endif; ?>
+        <?php if ($this->href): ?>
+          <a href="<?= $this->href ?>"<?= $this->attributes ?> title="<?= $this->alt ?>">
+        <?php endif; ?>
 
-	      <?php $this->insert('picture_default', $this->picture); ?>
+        <?php $this->insert('picture_default', $this->picture); ?>
 
-	      <?php if ($this->href): ?>
-	        </a>
-	      <?php endif; ?>
+        <?php if ($this->href): ?>
+          </a>
+        <?php endif; ?>
 
-	      <?php if ($this->caption): ?>
-	        <figcaption class="caption"><?= $this->caption ?></figcaption>
-	      <?php endif; ?>
+        <?php if ($this->caption): ?>
+          <figcaption class="caption"><?= $this->caption ?></figcaption>
+        <?php endif; ?>
 
-	      <?php if($this->subheadline != ""): ?>
+        <?php if($this->subheadline != ""): ?>
           <div class="subheadline"><?= $this->subheadline ?></div>
         <?php endif; ?>
 
-	    </figure>
-	  <?php endif; ?>
+      </figure>
+    <?php endif; ?>
 
-	  <div class="text">
+    <div class="text">
       <?php if ($this->hasMetaFields): ?>
         <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
       <?php endif; ?>
 
-		  <h2><?= $this->linkHeadline ?></h2>
+      <h2><?= $this->linkHeadline ?></h2>
 
-		  <div class="teaser">
-		    <?= $this->teaser ?>
-		  </div>
+      <div class="teaser">
+        <?= $this->teaser ?>
+      </div>
 
-		  <?php if ($this->hasText || $this->hasTeaser): ?>
-		  	<a class="more" href="<?= $this->link ?>">+</a>
-		  <?php endif; ?>
+      <?php if ($this->hasText || $this->hasTeaser): ?>
+        <a class="more" href="<?= $this->link ?>">+</a>
+      <?php endif; ?>
     </div>
 
   </div>
 </div>
+
+<?php
+
+// This template is used as a news list template by default, so we only add
+// JSON-LD data in case this is a news article without a reader
+if (!$this->hasReader) {
+	$this->addSchemaOrg($this->getSchemaOrgData());
+}

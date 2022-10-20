@@ -1,6 +1,0 @@
-<?php
-if(strpos($this->rowClasses,"content-wrapper")) {
-  $this->rowClasses = str_replace("row","",$this->rowClasses);
-}
-?>
-<div<?= $this->cssID; ?> class="<?= $this->class ?> <?= $this->rowClasses ?>">
