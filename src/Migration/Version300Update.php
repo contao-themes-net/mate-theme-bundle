@@ -49,13 +49,81 @@ class Version300Update extends AbstractMigration
             return false;
         }
 
-        $oldGrids = $this->connection->query("SELECT type FROM tl_content WHERE type = 'bs_gridStart';");
+        $test = $this->connection->fetchOne("
+            SELECT 
+                id 
+            FROM 
+                tl_content 
+            WHERE 
+                type = 'bs_gridStart' 
+                OR customTpl = 'ce_image_mate_headerimage'
+                OR customTpl = 'ce_youtube_mate' 
+        ");
 
-        return $oldGrids->rowCount() > 0;
+        return false !== $test;
     }
 
     public function run(): MigrationResult
     {
+        // change templates
+        $this->connection->executeStatement("
+            UPDATE 
+                tl_content 
+            SET 
+                customTpl = 'content_element/image/header_image_mate' 
+            WHERE 
+                customTpl = 'ce_image_mate_headerimage'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE 
+                tl_content 
+            SET 
+                customTpl = '' 
+            WHERE 
+                customTpl = 'ce_youtube_mate'
+        ");
+
+        // set image size for header images
+        $headerImageId = $this->connection->fetchOne("
+            SELECT 
+                id 
+            FROM 
+                tl_image_size 
+            WHERE 
+                name = 'Headerbild &#40;normal&#41;'
+        ");
+
+        $smallHeaderImageId = $this->connection->fetchOne("
+            SELECT 
+                id 
+            FROM 
+                tl_image_size 
+            WHERE 
+                name = 'Headerbild &#40;kleiner&#41;'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE 
+                tl_content 
+            SET 
+                size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:2:\"".$headerImageId."\";}' 
+            WHERE 
+                (size = '' OR size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}') 
+                AND customTpl = 'content_element/image/header_image_mate';
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE 
+                tl_content 
+            SET 
+                size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:2:\"".$smallHeaderImageId."\";}' 
+            WHERE 
+                (size = '' OR size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}') 
+                AND customTpl = 'content_element/image/header_image_mate' 
+                AND cssID LIKE '%smaller%';
+        ");
+
         // update start element
         $this->connection->executeQuery("
             UPDATE
@@ -77,24 +145,28 @@ class Version300Update extends AbstractMigration
         ");
 
         // add css class row
-        $contentModel = ContentModel::findBy('bs_grid', 1);
-
+        $schemaManager = $this->connection->getSchemaManager();
+        $columns = $schemaManager->listTableColumns('tl_content');
         $rowCount = 0;
 
-        if ($contentModel) {
-            foreach ($contentModel as $content) {
-                $cssID = StringUtil::deserialize($content->cssID, true);
-                // check for existing classes
-                if ('' === $cssID[1]) {
-                    $cssID[1] = 'row';
-                } else {
-                    $cssID[1] .= ' row';
+        if(isset($columns['bs_grid'])) {
+            $contentModel = ContentModel::findBy('bs_grid', 1);
+
+            if ($contentModel) {
+                foreach ($contentModel as $content) {
+                    $cssID = StringUtil::deserialize($content->cssID, true);
+                    // check for existing classes
+                    if ('' === $cssID[1]) {
+                        $cssID[1] = 'row';
+                    } else {
+                        $cssID[1] .= ' row';
+                    }
+
+                    $content->cssID = serialize($cssID);
+                    $content->save();
+
+                    ++$rowCount;
                 }
-
-                $content->cssID = serialize($cssID);
-                $content->save();
-
-                ++$rowCount;
             }
         }
 

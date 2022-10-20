@@ -76,7 +76,7 @@ class ParallaxElement extends ContentElement
         $this->Template->text = $this->mateParallaxElement_text;
 
         if ($this->addImage && '' !== $this->singleSRC) {
-            $objModel = \FilesModel::findByUuid($this->singleSRC);
+            $objModel = FilesModel::findByUuid($this->singleSRC);
 
             if (null !== $objModel && is_file(System::getContainer()->getParameter('kernel.project_dir').'/'.$objModel->path)) {
                 $this->singleSRC = $objModel->path;

@@ -221,13 +221,13 @@ class NavBarModule extends Module
         // Get all active subpages
         $arrSubpages = static::getPublishedSubpagesByPid($pid, $this->showHidden, $this instanceof ModuleSitemap);
 
-        if (null === $arrSubpages) {
+        if (null === $arrSubpages)
+        {
             return '';
         }
 
         $items = [];
         $security = System::getContainer()->get('security.helper');
-        // $isMember = $security->isGranted('ROLE_MEMBER');
         $blnShowUnpublished = System::getContainer()->get('contao.security.token_checker')->isPreviewMode();
 
         ++$level;
@@ -238,59 +238,75 @@ class NavBarModule extends Module
         // Browse subpages
         foreach ($arrSubpages as ['page' => $objSubpage, 'hasSubpages' => $blnHasSubpages]) {
             // Skip hidden sitemap pages
-            if ($this instanceof ModuleSitemap && 'map_never' === $objSubpage->sitemap) {
+            if ($this instanceof ModuleSitemap && $objSubpage->sitemap == 'map_never')
+            {
                 continue;
             }
 
             $objSubpage->loadDetails();
 
             // Override the domain (see #3765)
-            if (null !== $host) {
+            if ($host !== null)
+            {
                 $objSubpage->domain = $host;
             }
 
             $subitems = '';
 
             // PageModel->groups is an array after calling loadDetails()
-            if (!$objSubpage->protected || $this->showProtected || ($this instanceof ModuleSitemap && 'map_always' === $objSubpage->sitemap) || $security->isGranted(ContaoCorePermissions::MEMBER_IN_GROUPS, $objSubpage->groups)) {
+            if (!$objSubpage->protected || $this->showProtected || ($this instanceof ModuleSitemap && 'map_always' === $objSubpage->sitemap) || $security->isGranted(ContaoCorePermissions::MEMBER_IN_GROUPS, $objSubpage->groups))
+            {
                 // Check whether there will be subpages
-                if ($blnHasSubpages && (!$this->showLevel || $this->showLevel >= $level || (!$this->hardLimit && ($objPage->id === $objSubpage->id || \in_array($objPage->id, $this->Database->getChildRecords($objSubpage->id, 'tl_page'), true))))) {
+                if ($blnHasSubpages && (!$this->showLevel || $this->showLevel >= $level || (!$this->hardLimit && ($objPage->id === $objSubpage->id || \in_array($objPage->id, $this->Database->getChildRecords($objSubpage->id, 'tl_page'), true)))))
+                {
                     $subitems = $this->getNavigationMenu($objSubpage->id, $level, $host, $language);
                 }
 
                 // Get href
-                switch ($objSubpage->type) {
+                switch ($objSubpage->type)
+                {
                     case 'redirect':
                         $href = $objSubpage->url;
 
-                        if (0 === strncasecmp($href, 'mailto:', 7)) {
+                        if (0 === strncasecmp($href, 'mailto:', 7))
+                        {
                             $href = StringUtil::encodeEmail($href);
                         }
                         break;
 
                     case 'forward':
-                        if ($objSubpage->jumpTo) {
+                        if ($objSubpage->jumpTo)
+                        {
                             $objNext = PageModel::findPublishedById($objSubpage->jumpTo);
-                        } else {
+                        }
+                        else
+                        {
                             $objNext = PageModel::findFirstPublishedRegularByPid($objSubpage->id);
                         }
 
                         // Hide the link if the target page is invisible
-                        if (!$objNext instanceof PageModel || (!$objNext->loadDetails()->isPublic && !$blnShowUnpublished)) {
+                        if (!$objNext instanceof PageModel || (!$objNext->loadDetails()->isPublic && !$blnShowUnpublished))
+                        {
                             continue 2;
                         }
 
-                        try {
+                        try
+                        {
                             $href = $objNext->getFrontendUrl();
-                        } catch (ExceptionInterface $exception) {
+                        }
+                        catch (ExceptionInterface $exception)
+                        {
                             continue 2;
                         }
                         break;
 
                     default:
-                        try {
+                        try
+                        {
                             $href = $objSubpage->getFrontendUrl();
-                        } catch (ExceptionInterface $exception) {
+                        }
+                        catch (ExceptionInterface $exception)
+                        {
                             continue 2;
                         }
                         break;
@@ -320,26 +336,29 @@ class NavBarModule extends Module
     protected function compileNavigationRow(PageModel $objPage, PageModel $objSubpage, $subitems, $href): array
     {
         $row = $objSubpage->row();
-        $trail = \in_array($objSubpage->id, $objPage->trail, true);
+        $trail = \in_array($objSubpage->id, $objPage->trail);
 
         // Use the path without query string to check for active pages (see #480)
-        [$path] = explode('?', Environment::get('request'), 2);
+        list($path) = explode('?', Environment::get('requestUri'), 2);
 
         // Active page
-        if (($objPage->id === $objSubpage->id || ('forward' === $objSubpage->type && $objPage->id === $objSubpage->jumpTo)) && !($this instanceof ModuleSitemap) && $href === $path) {
+        if (($objPage->id == $objSubpage->id || ($objSubpage->type == 'forward' && $objPage->id == $objSubpage->jumpTo)) && !($this instanceof ModuleSitemap) && $href == $path)
+        {
             // Mark active forward pages (see #4822)
-            $strClass = ('forward' === $objSubpage->type && $objPage->id === $objSubpage->jumpTo ? 'forward'.($trail ? ' trail' : '') : 'active').($subitems ? ' submenu' : '').($objSubpage->protected ? ' protected' : '').($objSubpage->cssClass ? ' '.$objSubpage->cssClass : '');
+            $strClass = (($objSubpage->type == 'forward' && $objPage->id == $objSubpage->jumpTo) ? 'forward' . ($trail ? ' trail' : '') : 'active') . ($subitems ? ' submenu' : '') . ($objSubpage->protected ? ' protected' : '') . ($objSubpage->cssClass ? ' ' . $objSubpage->cssClass : '');
 
             $row['isActive'] = true;
             $row['isTrail'] = false;
         }
 
         // Regular page
-        else {
-            $strClass = ($subitems ? 'submenu' : '').($objSubpage->protected ? ' protected' : '').($trail ? ' trail' : '').($objSubpage->cssClass ? ' '.$objSubpage->cssClass : '');
+        else
+        {
+            $strClass = ($subitems ? 'submenu' : '') . ($objSubpage->protected ? ' protected' : '') . ($trail ? ' trail' : '') . ($objSubpage->cssClass ? ' ' . $objSubpage->cssClass : '');
 
             // Mark pages on the same level (see #2419)
-            if ($objSubpage->pid === $objPage->pid) {
+            if ($objSubpage->pid == $objPage->pid)
+            {
                 $strClass .= ' sibling';
             }
 
@@ -354,14 +373,14 @@ class NavBarModule extends Module
         $row['link'] = $objSubpage->title;
         $row['href'] = $href;
         $row['rel'] = '';
-        $row['nofollow'] = false; // backwards compatibility
         $row['target'] = '';
-        $row['description'] = str_replace(["\n", "\r"], [' ', ''], (string) $objSubpage->description);
+        $row['description'] = str_replace(array("\n", "\r"), array(' ', ''), (string) $objSubpage->description);
 
-        $arrRel = [];
+        $arrRel = array();
 
         // Override the link target
-        if ('redirect' === $objSubpage->type && $objSubpage->target) {
+        if ($objSubpage->type == 'redirect' && $objSubpage->target)
+        {
             $arrRel[] = 'noreferrer';
             $arrRel[] = 'noopener';
 
@@ -369,14 +388,16 @@ class NavBarModule extends Module
         }
 
         // Set the rel attribute
-        if (!empty($arrRel)) {
-            $row['rel'] = ' rel="'.implode(' ', $arrRel).'"';
+        if (!empty($arrRel))
+        {
+            $row['rel'] = ' rel="' . implode(' ', $arrRel) . '"';
         }
 
         // Tag the page
-        if (System::getContainer()->has('fos_http_cache.http.symfony_response_tagger')) {
+        if (System::getContainer()->has('fos_http_cache.http.symfony_response_tagger'))
+        {
             $responseTagger = System::getContainer()->get('fos_http_cache.http.symfony_response_tagger');
-            $responseTagger->addTags(['contao.db.tl_page.'.$objSubpage->id]);
+            $responseTagger->addTags(array('contao.db.tl_page.' . $objSubpage->id));
         }
 
         return $row;
