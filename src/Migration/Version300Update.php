@@ -50,14 +50,15 @@ class Version300Update extends AbstractMigration
         }
 
         $test = $this->connection->fetchOne("
-            SELECT 
-                id 
-            FROM 
-                tl_content 
-            WHERE 
-                type = 'bs_gridStart' 
+            SELECT
+                id
+            FROM
+                tl_content
+            WHERE
+                type = 'bs_gridStart'
                 OR customTpl = 'ce_image_mate_headerimage'
-                OR customTpl = 'ce_youtube_mate' 
+                OR customTpl = 'ce_youtube_mate'
+                OR customTpl = 'ce_hyperlink_teaser_mate'
         ");
 
         return false !== $test;
@@ -67,60 +68,69 @@ class Version300Update extends AbstractMigration
     {
         // change templates
         $this->connection->executeStatement("
-            UPDATE 
-                tl_content 
-            SET 
-                customTpl = 'content_element/image/header_image_mate' 
-            WHERE 
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/image/header_image_mate'
+            WHERE
                 customTpl = 'ce_image_mate_headerimage'
         ");
 
         $this->connection->executeStatement("
-            UPDATE 
-                tl_content 
-            SET 
-                customTpl = '' 
-            WHERE 
+            UPDATE
+                tl_content
+            SET
+                customTpl = ''
+            WHERE
                 customTpl = 'ce_youtube_mate'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/hyperlink/teaser_mate'
+            WHERE
+                customTpl = 'ce_hyperlink_teaser_mate'
         ");
 
         // set image size for header images
         $headerImageId = $this->connection->fetchOne("
-            SELECT 
-                id 
-            FROM 
-                tl_image_size 
-            WHERE 
+            SELECT
+                id
+            FROM
+                tl_image_size
+            WHERE
                 name = 'Headerbild &#40;normal&#41;'
         ");
 
         $smallHeaderImageId = $this->connection->fetchOne("
-            SELECT 
-                id 
-            FROM 
-                tl_image_size 
-            WHERE 
+            SELECT
+                id
+            FROM
+                tl_image_size
+            WHERE
                 name = 'Headerbild &#40;kleiner&#41;'
         ");
 
         $this->connection->executeStatement("
-            UPDATE 
-                tl_content 
-            SET 
-                size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:2:\"".$headerImageId."\";}' 
-            WHERE 
-                (size = '' OR size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}') 
+            UPDATE
+                tl_content
+            SET
+                size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:2:\"".$headerImageId."\";}'
+            WHERE
+                (size = '' OR size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}')
                 AND customTpl = 'content_element/image/header_image_mate';
         ");
 
         $this->connection->executeStatement("
-            UPDATE 
-                tl_content 
-            SET 
-                size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:2:\"".$smallHeaderImageId."\";}' 
-            WHERE 
-                (size = '' OR size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}') 
-                AND customTpl = 'content_element/image/header_image_mate' 
+            UPDATE
+                tl_content
+            SET
+                size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:2:\"".$smallHeaderImageId."\";}'
+            WHERE
+                (size = '' OR size = 'a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}')
+                AND customTpl = 'content_element/image/header_image_mate'
                 AND cssID LIKE '%smaller%';
         ");
 
