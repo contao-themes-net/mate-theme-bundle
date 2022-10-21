@@ -555,28 +555,6 @@ figure {
   }
 }
 
-.content-text {
-  h1, h2, h3, h4, h5, h6 {
-    + .image_container {
-      &.float_left {
-        margin: 0 0 15px 0;
-
-        @media (min-width: 768px) {
-          margin: 10px 15px 0 0;
-        }
-      }
-
-      &.float_right {
-        margin: 0 0 15px 0;
-
-        @media (min-width: 768px) {
-          margin: 10px 0 0 15px;
-        }
-      }
-    }
-  }
-}
-
 /* ========================== *
  *    Überschriften           *
  * ========================== */
@@ -917,7 +895,7 @@ nav {
   }
 
   figure {
-    margin: 10px 0;
+    margin: 0;
 
     a {
       margin-top: 15px;
@@ -1021,10 +999,15 @@ nav {
   .content-image.fixed-nav {
     display: none;
   }
+
+  .mod_article {
+    height: 100%;
+  }
 }
 
 #header .brand-logo .content-image:not(.fixed-nav) img {
   padding: 15px 0;
+  display: block;
 }
 
 .stuck .brand-logo {
@@ -3588,7 +3571,7 @@ mark {
  *   Teaser Link              *
  * ========================== */
 
-.ce_hyperlink.teaser {
+.content-hyperlink.teaser {
   &.m6 .caption {
     font-size: 1.5em;
     left: 20px;
@@ -3629,7 +3612,7 @@ mark {
     }
   }
 
-  .caption {
+  figcaption {
     position: absolute;
     left: 40px;
     bottom: 40px;
@@ -3647,7 +3630,7 @@ mark {
     pointer-events: none;
   }
 
-  .image_container {
+  figure {
     position: relative;
   }
 }
@@ -4057,9 +4040,12 @@ div.klaro {
       align-items: center;
 
       .brand-logo {
-        top: 10px;
+        top: 0;
         left: 0;
         transform: initial;
+        height: 100%;
+        display: flex;
+        align-items: center;
 
         .ce_image:not(.fixed-nav) {
           img {
@@ -4112,7 +4098,7 @@ div.klaro {
   }
 
   #header .mod_mateNavbar.stuck {
-    .image_container img {
+    figure img {
       margin-top: 0;
     }
   }
@@ -4143,10 +4129,6 @@ div.klaro {
         width: 100%;
       }
     }
-  }
-
-  nav .image_container {
-    margin: 0 0 10px;
   }
 
   /* Slider */
@@ -4213,7 +4195,7 @@ div.klaro {
           width: 100%;
         }
 
-        .image_container {
+        figure {
           width: 100%;
           position: relative;
           height: auto;
@@ -4237,7 +4219,7 @@ div.klaro {
 
       &.smaller {
         .slides li.slidebox1 {
-          .image_container img {
+          figure img {
             height: 150px;
           }
         }
