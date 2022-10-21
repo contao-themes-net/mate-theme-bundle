@@ -545,21 +545,13 @@ figure {
   margin: 0;
 }
 
-.image_container {
-  &.float_left {
-    margin: 0 0 15px 0;
-
-    @media (min-width: 768px) {
-      margin: 20px 15px 0 0;
-    }
+.media.content-text {
+  &.media--left figure {
+    margin: 5px 15px 15px 0;
   }
 
-  &.float_right {
-    margin: 0 0 15px 0;
-
-    @media (min-width: 768px) {
-      margin: 20px 0 0 15px;
-    }
+  &.media--right figure {
+    margin: 5px 0 15px 15px;
   }
 }
 
@@ -1285,6 +1277,10 @@ nav {
 
   i.material-icons {
     display: none;
+  }
+
+  .right {
+    float: none !important;
   }
 }
 
