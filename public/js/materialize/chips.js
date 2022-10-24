@@ -6,6 +6,7 @@
     placeholder: '',
     secondaryPlaceholder: '',
     autocompleteOptions: {},
+    autocompleteOnly: false,
     limit: Infinity,
     onChipAdd: null,
     onChipSelect: null,
@@ -191,6 +192,8 @@
 
         if (currChips.chipsData.length) {
           currChips.selectChip(selectIndex);
+        } else {
+          currChips.$input[0].focus();
         }
 
         // left arrow key
@@ -230,7 +233,7 @@
      * @param {Event} e
      */
     static _handleChipsBlur(e) {
-      if (!Chips._keydown) {
+      if (!Chips._keydown && document.hidden) {
         let $chips = $(e.target).closest('.chips');
         let currChips = $chips[0].M_Chips;
 
@@ -267,9 +270,11 @@
         }
 
         e.preventDefault();
-        this.addChip({
-          tag: this.$input[0].value
-        });
+        if (!this.hasAutocomplete || (this.hasAutocomplete && !this.options.autocompleteOnly)) {
+          this.addChip({
+            tag: this.$input[0].value
+          });
+        }
         this.$input[0].value = '';
 
         // delete or left
@@ -361,7 +366,7 @@
     _setupLabel() {
       this.$label = this.$el.find('label');
       if (this.$label.length) {
-        this.$label.setAttribute('for', this.$input.attr('id'));
+        this.$label[0].setAttribute('for', this.$input.attr('id'));
       }
     }
 

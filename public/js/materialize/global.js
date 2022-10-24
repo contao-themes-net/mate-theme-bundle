@@ -167,19 +167,6 @@ M.escapeHash = function(hash) {
   return hash.replace(/(:|\.|\[|\]|,|=|\/)/g, '\\$1');
 };
 
-M.elementOrParentIsFixed = function(element) {
-  let $element = $(element);
-  let $checkElements = $element.add($element.parents());
-  let isFixed = false;
-  $checkElements.each(function() {
-    if ($(this).css('position') === 'fixed') {
-      isFixed = true;
-      return false;
-    }
-  });
-  return isFixed;
-};
-
 /**
  * @typedef {Object} Edges
  * @property {Boolean} top  If the top edge was exceeded
@@ -425,3 +412,13 @@ M.throttle = function(func, wait, options) {
     return result;
   };
 };
+
+/* Feature detection */
+var passiveIfSupported = false;
+try {
+    window.addEventListener("test", null, 
+        Object.defineProperty({}, "passive", {
+            get: function() { passiveIfSupported = { passive: false }; }
+        }
+    ));
+} catch(err) {}

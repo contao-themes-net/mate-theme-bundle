@@ -109,7 +109,7 @@ $card-link-color-light: lighten($card-link-color, 20%) !default;
 // ==========================================================================
 
 $carousel-height: 400px !default;
-$carousel-item-height: $carousel-height / 2 !default;
+$carousel-item-height: $carousel-height * 0.5 !default;
 $carousel-item-width: $carousel-item-height !default;
 
 
@@ -218,9 +218,9 @@ $switch-radius: 15px !default;
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;
 $large-screen-up: 1201px !default;
-$small-screen: 600px !default;
-$medium-screen: 992px !default;
-$large-screen: 1200px !default;
+$small-screen: 600.99px !default;
+$medium-screen: 992.99px !default;
+$large-screen: 1200.99px !default;
 
 $medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
 $large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
@@ -341,6 +341,7 @@ $collection-active-color: lighten($secondary-color, 55%) !default;
 $collection-hover-bg-color: #ddd !default;
 $collection-link-color: $secondary-color !default;
 $collection-line-height: 1.5rem !default;
+$collection-border-radius: 2px !default;
 
 
 // 24. Progress Bar

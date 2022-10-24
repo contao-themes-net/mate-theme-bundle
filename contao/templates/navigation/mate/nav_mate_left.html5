@@ -5,7 +5,6 @@
       href="<?= $item['href'] ?: './' ?>"
       title="<?= $item['pageTitle'] ?: $item['title'] ?>"
       <?php if ($item['accesskey']) echo ' accesskey="' . $item['accesskey'] . '"'; ?>
-      <?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?= $item['target'] ?>
       <?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"' ; ?>>
       <?= $item['link'] ?>
     </a>

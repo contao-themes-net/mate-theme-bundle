@@ -244,6 +244,9 @@
       this.cancelBtn.innerHTML = this.options.i18n.cancel;
 
       if (this.options.container) {
+        const optEl = this.options.container;
+        this.options.container =
+          optEl instanceof HTMLElement ? optEl : document.querySelector(optEl);
         this.$modalEl.appendTo(this.options.container);
       } else {
         this.$modalEl.insertBefore(this.el);
@@ -261,6 +264,10 @@
 
     toString(format) {
       format = format || this.options.format;
+      if (typeof format === 'function') {
+        return format(this.date);
+      }
+
       if (!Datepicker._isDate(this.date)) {
         return '';
       }
@@ -513,9 +520,7 @@
       }
       return (
         `<td data-day="${opts.day}" class="${arr.join(' ')}" aria-selected="${ariaSelected}">` +
-        `<button class="datepicker-day-button" type="button" data-year="${opts.year}" data-month="${
-          opts.month
-        }" data-day="${opts.day}">${opts.day}</button>` +
+        `<button class="datepicker-day-button" type="button" data-year="${opts.year}" data-month="${opts.month}" data-day="${opts.day}">${opts.day}</button>` +
         '</td>'
       );
     }
@@ -608,6 +613,9 @@
         if (i >= opts.minYear) {
           arr.push(`<option value="${i}" ${i === year ? 'selected="selected"' : ''}>${i}</option>`);
         }
+      }
+      if (opts.yearRangeReverse) {
+        arr.reverse();
       }
 
       yearHtml = `<select class="datepicker-select orig-select-year" tabindex="-1">${arr.join(

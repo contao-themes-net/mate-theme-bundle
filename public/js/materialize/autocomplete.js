@@ -5,11 +5,18 @@
     data: {}, // Autocomplete data set
     limit: Infinity, // Limit of results the autocomplete shows
     onAutocomplete: null, // Callback for when autocompleted
+    dropdownOptions: {
+      // Default dropdown options
+      autoFocus: false,
+      closeOnClick: false,
+      coverTrigger: false
+    },
     minLength: 1, // Min characters before autocomplete starts
     sortFunction: function(a, b, inputString) {
       // Sort function for sorting autocomplete results
       return a.indexOf(inputString) - b.indexOf(inputString);
-    }
+    },
+    allowUnsafeHTML: false
   };
 
   /**
@@ -152,14 +159,25 @@
       this.$inputField.append(this.container);
       this.el.setAttribute('data-target', this.container.id);
 
-      this.dropdown = M.Dropdown.init(this.el, {
-        autoFocus: false,
-        closeOnClick: false,
-        coverTrigger: false,
-        onItemClick: (itemEl) => {
-          this.selectOption($(itemEl));
+      // Initialize dropdown
+      let dropdownOptions = $.extend(
+        {},
+        Autocomplete.defaults.dropdownOptions,
+        this.options.dropdownOptions
+      );
+      let userOnItemClick = dropdownOptions.onItemClick;
+
+      // Ensuring the selectOption call when user passes custom onItemClick function to dropdown
+      dropdownOptions.onItemClick = (el) => {
+        this.selectOption($(el));
+
+        // Handle user declared onItemClick if needed
+        if (userOnItemClick && typeof userOnItemClick === 'function') {
+          userOnItemClick.call(this.dropdown, this.el);
         }
-      });
+      };
+
+      this.dropdown = M.Dropdown.init(this.el, dropdownOptions);
 
       // Sketchy removal of dropdown click handler
       this.el.removeEventListener('click', this.dropdown._handleClickBound);
@@ -251,6 +269,13 @@
             .children('li')
             .eq(this.activeIndex);
           this.$active.addClass('active');
+
+          // Focus selected
+          this.container.children[this.activeIndex].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'nearest'
+          });
         }
       }
     }
@@ -282,22 +307,14 @@
     /**
      * Highlight partial match
      */
-    _highlight(string, $el) {
-      let img = $el.find('img');
-      let matchStart = $el
-          .text()
-          .toLowerCase()
-          .indexOf('' + string.toLowerCase() + ''),
-        matchEnd = matchStart + string.length - 1,
-        beforeMatch = $el.text().slice(0, matchStart),
-        matchText = $el.text().slice(matchStart, matchEnd + 1),
-        afterMatch = $el.text().slice(matchEnd + 1);
-      $el.html(
-        `<span>${beforeMatch}<span class='highlight'>${matchText}</span>${afterMatch}</span>`
-      );
-      if (img.length) {
-        $el.prepend(img);
+    _highlight(input, label) {
+      const start = label.toLowerCase().indexOf('' + input.toLowerCase() + '');
+      const end = start + input.length - 1;
+      //custom filters may return results where the string does not match any part
+      if (start == -1 || end == -1) {
+        return [label, '', ''];
       }
+      return [label.slice(0, start), label.slice(start, end + 1), label.slice(end + 1)];
     }
 
     /**
@@ -349,11 +366,6 @@
       // Gather all matching data
       for (let key in data) {
         if (data.hasOwnProperty(key) && key.toLowerCase().indexOf(val) !== -1) {
-          // Break if past limit
-          if (this.count >= this.options.limit) {
-            break;
-          }
-
           let entry = {
             data: data[key],
             key: key
@@ -376,20 +388,37 @@
         matchingData.sort(sortFunctionBound);
       }
 
+      // Limit
+      matchingData = matchingData.slice(0, this.options.limit);
+
       // Render
       for (let i = 0; i < matchingData.length; i++) {
-        let entry = matchingData[i];
-        let $autocompleteOption = $('<li></li>');
+        const entry = matchingData[i];
+        const item = document.createElement('li');
         if (!!entry.data) {
-          $autocompleteOption.append(
-            `<img src="${entry.data}" class="right circle"><span>${entry.key}</span>`
-          );
-        } else {
-          $autocompleteOption.append('<span>' + entry.key + '</span>');
+          const img = document.createElement('img');
+          img.classList.add('right', 'circle');
+          img.src = entry.data;
+          item.appendChild(img);
         }
 
-        $(this.container).append($autocompleteOption);
-        this._highlight(val, $autocompleteOption);
+        const parts = this._highlight(val, entry.key);
+        const s = document.createElement('span');
+        if (this.options.allowUnsafeHTML) {
+          s.innerHTML = parts[0] + '<span class="highlight">' + parts[1] + '</span>' + parts[2];
+        } else {
+          s.appendChild(document.createTextNode(parts[0]));
+          if (!!parts[1]) {
+            const highlight = document.createElement('span');
+            highlight.textContent = parts[1];
+            highlight.classList.add('highlight');
+            s.appendChild(highlight);
+            s.appendChild(document.createTextNode(parts[2]));
+          }
+        }
+        item.appendChild(s);
+
+        $(this.container).append(item);
       }
     }
 
