@@ -184,6 +184,7 @@ img {
 
   .indicators .indicator-item {
     background-color: $mateColor2;
+    float: none;
 
     &.active {
       background-color: $mateColor3;

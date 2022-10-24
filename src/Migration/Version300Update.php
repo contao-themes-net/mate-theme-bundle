@@ -59,6 +59,10 @@ class Version300Update extends AbstractMigration
                 OR customTpl = 'ce_image_mate_headerimage'
                 OR customTpl = 'ce_youtube_mate'
                 OR customTpl = 'ce_hyperlink_teaser_mate'
+                OR galleryTpl = 'gallery_carousel'
+                OR galleryTpl = 'gallery_carousel_large'
+                OR galleryTpl = 'gallery_carousel_large_with_indicators'
+                OR galleryTpl = 'gallery_carousel_with_indicators'
         ");
 
         return false !== $test;
@@ -92,6 +96,46 @@ class Version300Update extends AbstractMigration
                 customTpl = 'content_element/hyperlink/teaser_mate'
             WHERE
                 customTpl = 'ce_hyperlink_teaser_mate'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/gallery/carousel',
+                galleryTpl = ''
+            WHERE
+                galleryTpl = 'gallery_carousel'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/gallery/carousel_large',
+                galleryTpl = ''
+            WHERE
+                galleryTpl = 'gallery_carousel_large'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/gallery/carousel_large_with_indicators',
+                galleryTpl = ''
+            WHERE
+                galleryTpl = 'gallery_carousel_large_with_indicators'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/gallery/carousel_with_indicators',
+                galleryTpl = ''
+            WHERE
+                galleryTpl = 'gallery_carousel_with_indicators'
         ");
 
         // set image size for header images

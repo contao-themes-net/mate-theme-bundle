@@ -1,0 +1,40 @@
+{% extends "@Contao/content_element/gallery.html.twig" %}
+
+{% block wrapper %}
+    {% set attributes = attrs(attributes|default).addClass(['carousel', 'carousel' ~ data.id]) %}
+    {{ parent() }}
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel{{ data.id }}');
+        var options = {
+            duration: 200,
+            dist: -100,
+            shift: 0,
+            padding: 0,
+            numVisible: {{ data.perRow }},
+            indicators: false
+        };
+        setTimeout( function() {
+            var instances = M.Carousel.init(elems, options);
+        },500);
+    });
+    </script>
+{% endblock %}
+
+{% block list %}
+    {% set list_attributes = attrs(list.list_attributes|default)
+        .set('data-list-random', '', randomize_order)
+        .set('data-list-paginate', items_per_page ~ ',' ~ limit, add_pagination or limit_elements)
+    %}
+    {% for item in list.items %}
+        {%- block list_item %}
+            {% with {figure: item} %}{{ block('figure_component') }}{% endwith %}
+        {% endblock -%}
+    {% endfor %}
+{% endblock %}
+
+{% block figure_component %}
+    {% set figure_attributes = attrs(figure_attributes|default).addClass(['carousel-item']) %}
+    {{ parent() }}
+{% endblock %}
