@@ -15,6 +15,8 @@ Types of changes
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
 - [Changed] Increase Contao version to 5 and increase PHP version to 8.1
 - [Changed] Remove bootstrap/grid and use migrations to be compatible with the new version (see https://pdir.de/docs/de/contao/themes/mate/update/)
+- [Changed] Update [Materialize](https://github.com/materializecss/materialize) version to 1.1.0
+- [Changed] Update [Headroom.js](https://wicky.nillia.ms/headroom.js/) version to 0.12.0
 - [Removed] Cleanup older Contao SQL files
 
 ## [2.19.7](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.7) – 2022-10-10

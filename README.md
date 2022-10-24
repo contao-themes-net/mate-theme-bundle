@@ -11,7 +11,7 @@ for demo please visit https://mate.pdir.de
 
 ## documentation
 
-for documentation please visit https://docs.contao-themes.net/
+for documentation please visit [https://pdir.de/docs/de/contao/themes/mate/](https://pdir.de/docs/de/contao/themes/mate/)
 
 ## compatible
 compatible with Contao >=4.4
@@ -39,7 +39,7 @@ compatible with Contao >=4.4
 
 ## dependencies & licenses
 
-- [Materialize CSS Framework](http://materializecss.com/) | [Github](https://github.com/Dogfalo/materialize) | Code copyright 2017 Materialize. Code released under the MIT license.
+- [Materialize CSS Framework](https://materializecss.github.io/materialize/) | [Github](https://github.com/materializecss/materialize) | Code copyright 2022 Materialize. Code released under the MIT license.
 - [Contao Theme Helper Bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden") | Code copyright by pdir / digital agentur. Code released under LGPL v3.
 - [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [Github](https://github.com/WickyNilliams/headroom.js) | Code copyright 2013 by Nick Williams. Code released under the MIT license.
 - [Material Icons Inserttag](https://github.com/contao-themes-net/material-icons-inserttag) by [pdir](https://pdir.de/ "Webdesign für Dresden") | Code copyright by pdir / digital agentur. Code released under GNU Lesser General Public License v3.0.
