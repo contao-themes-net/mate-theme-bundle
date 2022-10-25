@@ -40,9 +40,12 @@ class Version300Update extends AbstractMigration
         $this->connection = $connection;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function shouldRun(): bool
     {
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = $this->connection->createSchemaManager();
 
         // If the database table itself does not exist we should do nothing
         if (!$schemaManager->tablesExist(['tl_content'])) {
@@ -68,6 +71,9 @@ class Version300Update extends AbstractMigration
         return false !== $test;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function run(): MigrationResult
     {
         // change templates
@@ -199,11 +205,11 @@ class Version300Update extends AbstractMigration
         ");
 
         // add css class row
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = $this->connection->createSchemaManager();
         $columns = $schemaManager->listTableColumns('tl_content');
         $rowCount = 0;
 
-        if(isset($columns['bs_grid'])) {
+        if (isset($columns['bs_grid'])) {
             $contentModel = ContentModel::findBy('bs_grid', 1);
 
             if ($contentModel) {

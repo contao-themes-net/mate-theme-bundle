@@ -24,7 +24,6 @@ use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\System;
 use Doctrine\DBAL\Connection;
-use Doctrine\DBAL\Exception;
 
 class InitialDemoDataMigration extends AbstractMigration
 {
@@ -42,7 +41,7 @@ class InitialDemoDataMigration extends AbstractMigration
     }
 
     /**
-     * @throws Exception|\Doctrine\DBAL\Driver\Exception
+     * @throws \Exception
      */
     public function shouldRun(): bool
     {
@@ -83,7 +82,7 @@ class InitialDemoDataMigration extends AbstractMigration
     }
 
     /**
-     * @throws Exception|\Doctrine\DBAL\Driver\Exception
+     * @throws \Exception
      */
     public function run(): MigrationResult
     {
