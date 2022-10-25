@@ -1,7 +1,7 @@
 {
   "name": "contao-themes-net/mate-theme-bundle",
   "type":"contao-bundle",
-  "description": "mate theme bundle for Contao 4",
+  "description": "mate theme bundle for Contao 5",
   "keywords":["contao","theme","template"],
   "homepage": "https://contao-themes.net",
   "license": "proprietary",
