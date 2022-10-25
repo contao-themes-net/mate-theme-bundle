@@ -27,7 +27,7 @@ jobs:
                     composer bin ecs install --no-interaction --no-progress
 
             -   name: Run ECS
-                run: tools/ecs/vendor/bin/ecs check src tests --config ecs.php --no-progress-bar --ansi
+                run: vendor/bin/ecs check src tests --config ecs.php --no-progress-bar --ansi
 
     phpstan:
         name: PHPStan
@@ -51,7 +51,7 @@ jobs:
                     composer bin phpstan install --no-interaction --no-progress
 
             -   name: Run PHPStan
-                run: tools/phpstan/vendor/bin/phpstan analyse --no-progress
+                run: vendor/bin/phpstan analyse --no-progress
 
     tests:
         name: PHP ${{ matrix.php }}
