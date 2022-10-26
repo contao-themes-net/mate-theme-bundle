@@ -1,0 +1,37 @@
+<div class="layout_full block<?= $this->class ?>">
+
+  <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
+
+  <?php if ($this->hasSubHeadline): ?>
+    <div class="subheadline"><?= $this->subHeadline ?></div>
+  <?php endif; ?>
+
+  <h1><?= $this->newsHeadline ?></h1>
+
+  <?php if ($this->hasText): ?>
+    <?= $this->text ?>
+  <?php else: ?>
+    <div class="ce_text block">
+      <?= $this->teaser ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($this->enclosure): ?>
+    <div class="enclosure">
+      <?php foreach ($this->enclosure as $enclosure): ?>
+        <p><?= Image::getHtml($enclosure['icon'], '', 'class="mime_icon"') ?> <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a></p>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
+
+</div>
+
+<?php
+
+$schemaOrg = $this->getSchemaOrgData();
+
+if ($this->hasText) {
+  $schemaOrg['text'] = $this->rawHtmlToPlainText($this->text);
+}
+
+$this->addSchemaOrg($schemaOrg);

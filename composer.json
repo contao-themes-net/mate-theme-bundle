@@ -1,7 +1,7 @@
 {
   "name": "contao-themes-net/mate-theme-bundle",
   "type":"contao-bundle",
-  "description": "mate theme bundle for Contao 4",
+  "description": "mate theme bundle for Contao 5",
   "keywords":["contao","theme","template"],
   "homepage": "https://contao-themes.net",
   "license": "proprietary",
@@ -28,30 +28,29 @@
     "donate": "https://contao-themes.net/sponsoring.html"
   },
   "require": {
-    "php": "^7.2 || ^8.0",
-    "contao/core-bundle": "^4.9",
-    "pdir/contao-theme-helper-bundle": "^1.2",
-    "contao-dd/advanced-classes-bundle": "^1.0",
-    "contao-bootstrap/grid": "^2.4",
-    "terminal42/contao-folderpage": "^2.0.5",
-    "contao-themes-net/material-icons-inserttag": "^1.0"
+    "php": "^8.1",
+    "contao/core-bundle": "^5.0",
+    "contao-dd/advanced-classes-bundle": "^1.3",
+    "contao-themes-net/material-icons-inserttag": "^1.2",
+    "contao-themes-net/theme-components-bundle": "^1.4",
+    "pdir/contao-theme-helper-bundle": "^1.4",
+    "pdir/contao-webtools": "^1.5",
+    "terminal42/contao-folderpage": "^3.0"
   },
-  "conflict": {
-    "contao/core": "*"
+  "require-dev": {
+    "bamarni/composer-bin-plugin": "^1.5",
+    "contao/manager-plugin": "^2.0",
+    "contao/easy-coding-standard": "^3.0",
+    "phpunit/phpunit": "^7.1 || ^8.4 || ^9.5",
+    "symfony/phpunit-bridge": "^4.4 || ^5.1",
+    "phpstan/phpstan": "^1.8",
+    "phpstan/phpstan-phpunit": "^1.1",
+    "phpstan/phpstan-symfony": "^1.2"
   },
   "autoload": {
     "psr-4": {
       "ContaoThemesNet\\MateThemeBundle\\": "src/"
-    },
-    "classmap": [
-      "src/Resources/contao/"
-    ],
-    "exclude-from-classmap": [
-      "src/Resources/contao/config/",
-      "src/Resources/contao/dca/",
-      "src/Resources/contao/languages/",
-      "src/Resources/contao/templates/"
-    ]
+    }
   },
   "extra": {
     "contao-manager-plugin": "ContaoThemesNet\\MateThemeBundle\\ContaoManager\\Plugin"
@@ -73,7 +72,10 @@
   },
   "config": {
     "allow-plugins": {
-      "contao-components/installer": true
+      "contao-components/installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "contao/manager-plugin": true,
+      "bamarni/composer-bin-plugin": true
     }
   }
 }

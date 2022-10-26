@@ -10,6 +10,20 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.0.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.0) – 2021-10-15
+
+- [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
+- [Changed] Increase Contao version to 5 and increase PHP version to 8.1
+- [Changed] Remove bootstrap/grid and use migrations to be compatible with the new version (see https://pdir.de/docs/de/contao/themes/mate/update/)
+- [Changed] Update [Materialize](https://github.com/materializecss/materialize) version to 1.1.0
+- [Changed] Update [Headroom.js](https://wicky.nillia.ms/headroom.js/) version to 0.12.0
+- [Removed] Cleanup older Contao SQL files
+
+## [2.19.7](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.7) – 2022-10-10
+
+- [Changed] now require terminal42/contao-folderpage version 3.* [#119](https://github.com/contao-themes-net/mate-theme-bundle/issues/119)
+- [Fixed] fix unordered list [#120](https://github.com/contao-themes-net/mate-theme-bundle/issues/120)
+
 ## [2.19.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.6) – 2022-10-05
 
 - [Fixed] fix paths for multi domain setup [#112](https://github.com/contao-themes-net/mate-theme-bundle/issues/112)

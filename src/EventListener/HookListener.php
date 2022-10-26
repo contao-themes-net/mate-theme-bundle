@@ -1,13 +1,16 @@
 <?php
 
-/**
+declare(strict_types=1);
+
+/*
  * mate theme for Contao Open Source CMS
  *
- * Copyright (C) 2017 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
  *
  * @package    contao-themes-net/mate-theme-bundle
  * @link       https://github.com/contao-themes-net/mate-theme-bundle
  * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
  * @author     Philipp Seibt <develop@pdir.de>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -16,19 +19,24 @@
 
 namespace ContaoThemesNet\MateThemeBundle\EventListener;
 
+use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
+
+#[AsHook('replaceInsertTags')]
 class HookListener
 {
     /**
      * Replace the insert tag.
      *
-     * @param string $tag the insert tag
+     * @param array<mixed> $flags
+     * @param array<mixed> $tags
+     * @param array<mixed> $cache
      *
      * @return bool|string
      */
-    public function onReplaceInsertTags($tag)
+    public function __invoke(string $insertTag, bool $useCache, string $cachedValue, array $flags, array $tags, array $cache, int $_rit, int $_cnt): bool|string
     {
-        if (preg_match('/^countTo([bsrl]?)\:\:/', $tag)) {
-            return $this->replaceCountToInsertTag($tag);
+        if (preg_match('/^countTo([bsrl]?)\:\:/', $insertTag)) {
+            return $this->replaceCountToInsertTag($insertTag);
         }
 
         return false;
@@ -37,23 +45,27 @@ class HookListener
     /**
      * Replace the countTo insert tag.
      *
-     * @param string $tag the given tag
-     *
-     * @return string
+     * @param string $insertTag the given tag
      */
-    private function replaceCountToInsertTag($tag)
+    private function replaceCountToInsertTag($insertTag): string
     {
-        $parts = explode('::', $tag);
+        $parts = explode('::', $insertTag);
 
-        $class = ""; $spanClass = "";
-        if($parts[2] != "") $spanClass = " ".$parts[2];
+        $class = '';
+        $spanClass = '';
+
+        if ('' !== $parts[2]) {
+            $spanClass = ' '.$parts[2];
+        }
 
         $tag = '<span class="countTo'.$spanClass.'">'.$parts[1].'</span>';
 
-        if(strpos($class,"noscript") === false) {
-            if($parts[2] != "") $class = ".".$parts[2];
-            $class = str_replace("noscript","", $class);
-            $GLOBALS['TL_BODY'][] = '<script src="bundles/matetheme/js/jquery.countTo.js"></script>';
+        if (!str_contains($class, 'noscript')) {
+            if ('' !== $parts[2]) {
+                $class = '.'.$parts[2];
+            }
+            $class = str_replace('noscript', '', $class);
+            $GLOBALS['TL_BODY']['jquery.countTo'] = '<script src="bundles/contaothemesnetmatetheme/js/jquery.countTo.js"></script>';
             $GLOBALS['TL_BODY'][] = '<script>
             jQuery( document ).ready(function($) {
                 var countTo = 0;
