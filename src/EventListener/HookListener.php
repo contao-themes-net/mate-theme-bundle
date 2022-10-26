@@ -27,14 +27,10 @@ class HookListener
     /**
      * Replace the insert tag.
      *
-     * @param string $insertTag
-     * @param bool $useCache
-     * @param string $cachedValue
-     * @param mixed[] $flags
-     * @param mixed[] $tags
-     * @param mixed[] $cache
-     * @param int $_rit
-     * @param int $_cnt
+     * @param array<mixed> $flags
+     * @param array<mixed> $tags
+     * @param array<mixed> $cache
+     *
      * @return bool|string
      */
     public function __invoke(string $insertTag, bool $useCache, string $cachedValue, array $flags, array $tags, array $cache, int $_rit, int $_cnt): bool|string

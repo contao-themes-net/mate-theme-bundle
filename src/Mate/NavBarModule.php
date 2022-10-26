@@ -152,7 +152,6 @@ class NavBarModule extends Module
             $strDropdownNavLvl3 = '';
             $strDropdownNavLvl4 = '';
 
-
             foreach ($arrItems as $item) {
                 if (isset($item['subitems']) && \is_array($item['subitems']) && \count($item['subitems']) > 0) {
                     /** @var FrontendTemplate|object $objTemplate */
