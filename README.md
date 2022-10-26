@@ -85,6 +85,6 @@ Alle Demo-Inhalte dieses Themes, insbesondere Texte, Fotografien und Grafiken, s
 # run before commit
 
     vendor/bin/ecs check src tests
-    vendor/bin/phpstan analyse src tests
+    vendor/bin/phpstan analyse
     vendor/bin/phpunit --colors=always
 

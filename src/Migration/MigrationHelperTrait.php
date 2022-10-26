@@ -34,12 +34,12 @@ trait MigrationHelperTrait
     private string $themeFolder = 'mate';
     private string $sqlFile = 'sql/contao50/minimal.sql';
 
-    private array $minTables = [
+    private array $minTables = [ // @phpstan-ignore-line
         'tl_article', 'tl_content', 'tl_files', 'tl_form', 'tl_form_field', 'tl_image_size',
         'tl_image_size_item', 'tl_layout', 'tl_member', 'tl_module', 'tl_page', 'tl_theme',
     ];
 
-    private array $fullTables = [
+    private array $fullTables = [ // @phpstan-ignore-line
         'tl_calendar', 'tl_calendar_events', 'tl_faq', 'tl_faq_category', 'tl_news', 'tl_newsletter_channel', 'tl_news_archive',
     ];
 }

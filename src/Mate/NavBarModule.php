@@ -48,7 +48,7 @@ class NavBarModule extends Module
             /** @var BackendTemplate|object $objTemplate */
             $objTemplate = new BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### '.$GLOBALS['TL_LANG']['CTE']['mateTheme']['navbar'][0] ?? null.' ###';
+            $objTemplate->wildcard = '### '.$GLOBALS['TL_LANG']['CTE']['mateTheme']['navbar'][0] ??= null.' ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
@@ -152,40 +152,40 @@ class NavBarModule extends Module
             $strDropdownNavLvl3 = '';
             $strDropdownNavLvl4 = '';
 
-            if (\is_array($arrItems)) {
-                foreach ($arrItems as $item) {
-                    if (isset($item['subitems']) && \is_array($item['subitems']) && \count($item['subitems']) > 0) {
-                        /** @var FrontendTemplate|object $objTemplate */
-                        $objTemplate = new FrontendTemplate($this->mateDropdownTpl);
-                        $objTemplate->id = $this->id;
-                        $objTemplate->itemId = $item['id'];
-                        $objTemplate->items = $item['subitems'];
-                        $strDropdownNav .= $objTemplate->parse();
 
-                        foreach ($item['subitems'] as $subitem) {
-                            if (isset($subitem['subitems']) && \is_array($subitem['subitems']) && \count($subitem['subitems']) > 0) {
-                                /** @var FrontendTemplate|object $objTemplate */
-                                $objTemplate = new FrontendTemplate($this->mateDropdownTplLvl3);
-                                $objTemplate->id = $this->id;
-                                $objTemplate->itemId = $subitem['id'];
-                                $objTemplate->items = $subitem['subitems'];
-                                $strDropdownNavLvl3 .= $objTemplate->parse();
+            foreach ($arrItems as $item) {
+                if (isset($item['subitems']) && \is_array($item['subitems']) && \count($item['subitems']) > 0) {
+                    /** @var FrontendTemplate|object $objTemplate */
+                    $objTemplate = new FrontendTemplate($this->mateDropdownTpl);
+                    $objTemplate->id = $this->id;
+                    $objTemplate->itemId = $item['id'];
+                    $objTemplate->items = $item['subitems'];
+                    $strDropdownNav .= $objTemplate->parse();
 
-                                foreach ($subitem['subitems'] as $subitemLvl4) {
-                                    if (isset($subitemLvl4['subitems']) && \is_array($subitemLvl4['subitems']) && \count($subitemLvl4['subitems']) > 0) {
-                                        /** @var FrontendTemplate|object $objTemplate */
-                                        $objTemplate = new FrontendTemplate($this->mateDropdownTplLvl4);
-                                        $objTemplate->id = $this->id;
-                                        $objTemplate->itemId = $subitemLvl4['id'];
-                                        $objTemplate->items = $subitemLvl4['subitems'];
-                                        $strDropdownNavLvl4 .= $objTemplate->parse();
-                                    }
+                    foreach ($item['subitems'] as $subitem) {
+                        if (isset($subitem['subitems']) && \is_array($subitem['subitems']) && \count($subitem['subitems']) > 0) {
+                            /** @var FrontendTemplate|object $objTemplate */
+                            $objTemplate = new FrontendTemplate($this->mateDropdownTplLvl3);
+                            $objTemplate->id = $this->id;
+                            $objTemplate->itemId = $subitem['id'];
+                            $objTemplate->items = $subitem['subitems'];
+                            $strDropdownNavLvl3 .= $objTemplate->parse();
+
+                            foreach ($subitem['subitems'] as $subitemLvl4) {
+                                if (isset($subitemLvl4['subitems']) && \is_array($subitemLvl4['subitems']) && \count($subitemLvl4['subitems']) > 0) {
+                                    /** @var FrontendTemplate|object $objTemplate */
+                                    $objTemplate = new FrontendTemplate($this->mateDropdownTplLvl4);
+                                    $objTemplate->id = $this->id;
+                                    $objTemplate->itemId = $subitemLvl4['id'];
+                                    $objTemplate->items = $subitemLvl4['subitems'];
+                                    $strDropdownNavLvl4 .= $objTemplate->parse();
                                 }
                             }
                         }
                     }
                 }
             }
+
             $this->Template->dropdownNav = $strDropdownNav;
             $this->Template->dropdownNavLvl3 = $strDropdownNavLvl3;
             $this->Template->dropdownNavLvl4 = $strDropdownNavLvl4;
@@ -216,11 +216,14 @@ class NavBarModule extends Module
      * @param string $host
      * @param string $language
      *
-     * @return string
+     * @return string|array
+     *
+     * @phpstan-ignore-next-line
      */
-    protected function getNavigationMenu($pid, $level = 1, $host = null, $language = null)
+    protected function getNavigationMenu($pid, $level = 1, $host = null, $language = null): string|array
     {
         // Get all active subpages
+        // @phpstan-ignore-next-line
         $arrSubpages = static::getPublishedSubpagesByPid($pid, $this->showHidden, $this instanceof ModuleSitemap);
 
         if (null === $arrSubpages) {
@@ -239,6 +242,7 @@ class NavBarModule extends Module
         // Browse subpages
         foreach ($arrSubpages as ['page' => $objSubpage, 'hasSubpages' => $blnHasSubpages]) {
             // Skip hidden sitemap pages
+            // @phpstan-ignore-next-line
             if ($this instanceof ModuleSitemap && 'map_never' === $objSubpage->sitemap) {
                 continue;
             }
@@ -253,6 +257,7 @@ class NavBarModule extends Module
             $subitems = '';
 
             // PageModel->groups is an array after calling loadDetails()
+            // @phpstan-ignore-next-line
             if (!$objSubpage->protected || $this->showProtected || ($this instanceof ModuleSitemap && 'map_always' === $objSubpage->sitemap) || $security->isGranted(ContaoCorePermissions::MEMBER_IN_GROUPS, $objSubpage->groups)) {
                 // Check whether there will be subpages
                 if ($blnHasSubpages && (!$this->showLevel || $this->showLevel >= $level || (!$this->hardLimit && ($objPage->id === $objSubpage->id || \in_array($objPage->id, $this->Database->getChildRecords($objSubpage->id, 'tl_page'), true))))) {
@@ -317,6 +322,8 @@ class NavBarModule extends Module
      *
      * @param string $subitems
      * @param string $href
+     *
+     * @phpstan-ignore-next-line
      */
     protected function compileNavigationRow(PageModel $objPage, PageModel $objSubpage, $subitems, $href): array
     {
@@ -327,6 +334,7 @@ class NavBarModule extends Module
         [$path] = explode('?', Environment::get('requestUri'), 2);
 
         // Active page
+        // @phpstan-ignore-next-line
         if (($objPage->id === $objSubpage->id || ('forward' === $objSubpage->type && $objPage->id === $objSubpage->jumpTo)) && !($this instanceof ModuleSitemap) && $href === $path) {
             // Mark active forward pages (see #4822)
             $strClass = ('forward' === $objSubpage->type && $objPage->id === $objSubpage->jumpTo ? 'forward'.($trail ? ' trail' : '') : 'active').($subitems ? ' submenu' : '').($objSubpage->protected ? ' protected' : '').($objSubpage->cssClass ? ' '.$objSubpage->cssClass : '');

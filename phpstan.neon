@@ -17,3 +17,6 @@ parameters:
         - Contao\Model
         - Contao\Module
         - Contao\Template
+
+    excludePaths:
+        - src/Module/ModuleNews*.php

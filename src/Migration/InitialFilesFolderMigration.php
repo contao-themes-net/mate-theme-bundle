@@ -26,6 +26,7 @@ use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\Folder;
 use Contao\System;
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\Exception;
 
 class InitialFilesFolderMigration extends AbstractMigration
 {
@@ -43,7 +44,7 @@ class InitialFilesFolderMigration extends AbstractMigration
     }
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
     public function shouldRun(): bool
     {

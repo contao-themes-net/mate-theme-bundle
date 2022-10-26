@@ -47,7 +47,7 @@ class TeaserBox extends ContentElement
         if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
             $objTemplate = new BackendTemplate('be_wildcard_text');
 
-            $objTemplate->wildcard = '### '.$GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][0] ?? null.' ###';
+            $objTemplate->wildcard = '### '.$GLOBALS['TL_LANG']['CTE']['mateTeaserBox'][0] ??= null.' ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
