@@ -38,7 +38,7 @@ class ThemeUtils
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    public static function getCombinedStylesheet(bool|string $theme = null): string
+    public static function getCombinedStylesheet(null|bool|string $theme = null): string
     {
         self::$scssFolder = self::$themeFolder.self::$scssFolder;
 
