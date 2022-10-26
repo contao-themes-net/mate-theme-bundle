@@ -19,14 +19,15 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\MateThemeBundle\Tests;
 
+use ContaoThemesNet\MateThemeBundle\ContaoThemesNetMateThemeBundle;
 use PHPUnit\Framework\TestCase;
 
 class ContaoThemesNetMateThemeBundleTest extends TestCase
 {
     public function testCanBeInstantiated(): void
     {
-        $bundle = new ContaoThemesNetOddThemeExtension();
+        $bundle = new ContaoThemesNetMateThemeBundle();
 
-        $this->assertInstanceOf('ContaoThemesNet\MateThemeBundle\ContaoThemesNetMateThemeExtension', $bundle);
+        $this->assertInstanceOf('ContaoThemesNet\MateThemeBundle\ContaoThemesNetMateThemeBundle', $bundle);
     }
 }

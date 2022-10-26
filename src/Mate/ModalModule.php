@@ -21,6 +21,7 @@ namespace ContaoThemesNet\MateThemeBundle\Mate;
 
 use Contao\BackendTemplate;
 use Contao\Module;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class ModalModule.

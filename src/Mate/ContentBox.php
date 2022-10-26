@@ -23,6 +23,7 @@ use Contao\BackendTemplate;
 use Contao\ContentElement;
 use Contao\FilesModel;
 use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class ContentBox.

@@ -29,6 +29,7 @@ use Contao\ModuleSitemap;
 use Contao\PageModel;
 use Contao\StringUtil;
 use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class NavbarModule.
