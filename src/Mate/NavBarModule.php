@@ -24,6 +24,7 @@ use Contao\Config;
 use Contao\CoreBundle\Security\ContaoCorePermissions;
 use Contao\Environment;
 use Contao\FrontendTemplate;
+use Contao\Image\Exception\ExceptionInterface;
 use Contao\Module;
 use Contao\ModuleSitemap;
 use Contao\PageModel;

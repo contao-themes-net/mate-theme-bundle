@@ -26,12 +26,8 @@ class HookListener
 {
     /**
      * Replace the insert tag.
-     *
-     * @param string $insertTag the insert tag
-     *
-     * @return bool|string
      */
-    public function __invoke(string $insertTag, bool $useCache, string $cachedValue, array $flags, array $tags, array $cache, int $_rit, int $_cnt)
+    public function __invoke(string $insertTag, bool $useCache, string $cachedValue, array $flags, array $tags, array $cache, int $_rit, int $_cnt): bool|string
     {
         if (preg_match('/^countTo([bsrl]?)\:\:/', $insertTag)) {
             return $this->replaceCountToInsertTag($insertTag);
@@ -58,7 +54,7 @@ class HookListener
 
         $tag = '<span class="countTo'.$spanClass.'">'.$parts[1].'</span>';
 
-        if (false === strpos($class, 'noscript')) {
+        if (!str_contains($class, 'noscript')) {
             if ('' !== $parts[2]) {
                 $class = '.'.$parts[2];
             }

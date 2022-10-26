@@ -28,7 +28,7 @@ class ThemeUtils
     public static string $themeFolder = 'bundles/contaothemesnetmatetheme/';
     public static string $scssFolder = 'sass/';
 
-    public static function getRootDir()
+    public static function getRootDir(): string
     {
         return System::getContainer()->getParameter('kernel.project_dir');
     }
@@ -38,13 +38,13 @@ class ThemeUtils
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    public static function getCombinedStylesheet($theme = null): string
+    public static function getCombinedStylesheet(bool|string $theme = null): string
     {
         self::$scssFolder = self::$themeFolder.self::$scssFolder;
 
         // for multi domain setup
         if (null !== $theme) {
-            self::$sassFolder = 'files/mate/sass/'.$theme.'/';
+            self::$scssFolder = 'files/mate/sass/'.$theme.'/';
         }
 
         // add stylesheets

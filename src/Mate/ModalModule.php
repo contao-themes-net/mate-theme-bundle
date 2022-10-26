@@ -21,6 +21,7 @@ namespace ContaoThemesNet\MateThemeBundle\Mate;
 
 use Contao\BackendTemplate;
 use Contao\Module;
+use Contao\System;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
