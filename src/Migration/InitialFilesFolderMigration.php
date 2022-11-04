@@ -55,6 +55,11 @@ class InitialFilesFolderMigration extends AbstractMigration
             return false;
         }
 
+        // Check if full version is used
+        if (!$schemaManager->tablesExist($this->fullTables)) {
+            return false;
+        }
+
         $this->contaoFramework->initialize();
 
         $this->uploadPath = System::getContainer()->getParameter('contao.upload_path');
