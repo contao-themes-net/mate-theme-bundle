@@ -70,6 +70,15 @@ class InitialFilesFolderMigration extends AbstractMigration
             return false;
         }
 
+        // check some tables for content
+        $count = $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
+        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
+        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_module`');
+
+        if ($count == 0) {
+            return false;
+        }
+
         return true;
     }
 
