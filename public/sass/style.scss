@@ -2207,7 +2207,17 @@ nav .brand-logo {
   }
 }
 
-.pagination {
+nav[data-pagination] {
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    list-style: none;
+    margin: 0;
+  }
+}
+
+.pagination, nav[data-pagination] {
   clear: left;
   margin: 0;
   background: none;
@@ -2230,7 +2240,7 @@ nav .brand-logo {
       color: $pagination-color;
     }
 
-    span, strong {
+    span, strong, .active {
       background: $mateColor6;
       color: #fff;
     }
@@ -2250,8 +2260,7 @@ nav .brand-logo {
   }
 }
 
-// contao 4.5 fix
-nav.pagination li {
+nav.pagination li, nav[data-pagination] li {
   padding-right: 5px;
   margin-bottom: 5px;
 }
@@ -2708,7 +2717,7 @@ footer .container {
  * ========================== */
 .content-gallery {
   @for $i from 1 through 12 {
-    &[class*="cols-#{$i}"] li {
+    &[class*="cols-#{$i}"] ul li {
       width: calc(100% / #{$i});
     }
   }
@@ -3977,7 +3986,7 @@ div.klaro {
   /* Galerien */
   .content-gallery {
     @for $i from 4 through 12 {
-      &[class*="cols-#{$i}"] li {
+      &[class*="cols-#{$i}"] ul li {
         width: calc(100% / 3);
       }
     }
@@ -4322,7 +4331,7 @@ div.klaro {
   /* Galerien */
   .content-gallery {
     @for $i from 3 through 12 {
-      &[class*="cols-#{$i}"] li {
+      &[class*="cols-#{$i}"] ul li {
         width: 50%;
       }
     }
@@ -4557,7 +4566,7 @@ div.klaro {
   /* Galerien */
   .content-gallery {
     @for $i from 2 through 12 {
-      &[class*="cols-#{$i}"] li {
+      &[class*="cols-#{$i}"] ul li {
         width: 100%;
       }
     }
