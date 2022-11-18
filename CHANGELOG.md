@@ -10,11 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.1) – 2021-11-18
+## [3.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.1) – 2022-11-18
 
 - [Fixed] Fix dropdown navigation for touch devices
 
-## [3.0.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.0) – 2021-10-15
+## [3.0.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.0) – 2022-10-15
 
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
 - [Changed] Increase Contao version to 5 and increase PHP version to 8.1
