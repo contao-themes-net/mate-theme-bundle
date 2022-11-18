@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.19.9](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.9) – 2022-11-18
+
+- [Fixed] Fix dropdown navigation for touch devices
+
 ## [2.19.8](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.8) – 2022-10-14
 
 - [Changed] add advanced classes legend to grid start element
