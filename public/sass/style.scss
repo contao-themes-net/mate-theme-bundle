@@ -1034,6 +1034,14 @@ nav {
     margin: 0 10px;
   }
 
+  .dropdown-button.active + .dropdown-content {
+    display: block !important;
+    width: auto !important;
+    top: inherit !important;
+    left: inherit !important;
+    opacity: 1;
+  }
+
   #header .desktop-menu {
     width: 100%;
     display: flex;
