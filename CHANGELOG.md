@@ -25,6 +25,14 @@ Types of changes
 - [Changed] Update [Headroom.js](https://wicky.nillia.ms/headroom.js/) version to 0.12.0
 - [Removed] Cleanup older Contao SQL files
 
+## [2.19.9](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.9) – 2022-11-21
+
+- [Fixed] Fix dropdown navigation for touch devices
+
+## [2.19.8](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.8) – 2022-10-14
+
+- [Changed] add advanced classes legend to grid start element
+
 ## [2.19.7](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.7) – 2022-10-10
 
 - [Changed] now require terminal42/contao-folderpage version 3.* [#119](https://github.com/contao-themes-net/mate-theme-bundle/issues/119)
