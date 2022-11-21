@@ -10,9 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.1) – 2022-11-18
+## [3.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.1) – 2022-11-21
 
 - [Fixed] Fix dropdown navigation for touch devices
+- [Changed] Change migration order
+- [Fixed] Fix gallery pagination
 
 ## [3.0.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.0) – 2022-10-15
 

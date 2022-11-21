@@ -55,6 +55,11 @@ class InitialFilesFolderMigration extends AbstractMigration
             return false;
         }
 
+        // Check if full version is used
+        if (!$schemaManager->tablesExist($this->fullTables)) {
+            return false;
+        }
+
         $this->contaoFramework->initialize();
 
         $this->uploadPath = System::getContainer()->getParameter('contao.upload_path');
@@ -62,6 +67,15 @@ class InitialFilesFolderMigration extends AbstractMigration
 
         // If the folder exists we should do nothing
         if (file_exists($this->projectDir.'/'.$this->uploadPath.'/'.$this->themeFolder)) {
+            return false;
+        }
+
+        // check some tables for content
+        $count = $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
+        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
+        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_module`');
+
+        if (0 === $count) {
             return false;
         }
 
