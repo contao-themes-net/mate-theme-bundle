@@ -1063,7 +1063,7 @@ nav {
     position: relative;
   }
 
-  .dropdown-button.active + .dropdown-content {
+  .dropdown-button.touch-active + .dropdown-content {
     display: block !important;
     top: 50px !important;
     left: inherit !important;
