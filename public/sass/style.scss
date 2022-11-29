@@ -1034,10 +1034,9 @@ nav {
     margin: 0 10px;
   }
 
-  .dropdown-button.active + .dropdown-content {
+  .dropdown-button.touch-active + .dropdown-content {
     display: block !important;
-    width: auto !important;
-    top: inherit !important;
+    top: 50px !important;
     left: inherit !important;
     opacity: 1;
   }
