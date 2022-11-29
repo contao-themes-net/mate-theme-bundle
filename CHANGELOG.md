@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.0.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.2) – 2022-11-29
+
+- [Fixed] Fix dropdown navigation ([#135](https://github.com/contao-themes-net/mate-theme-bundle/issues/135))
+
 ## [3.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.1) – 2022-11-21
 
 - [Fixed] Fix dropdown navigation for touch devices
@@ -24,6 +28,10 @@ Types of changes
 - [Changed] Update [Materialize](https://github.com/materializecss/materialize) version to 1.1.0
 - [Changed] Update [Headroom.js](https://wicky.nillia.ms/headroom.js/) version to 0.12.0
 - [Removed] Cleanup older Contao SQL files
+
+## [2.19.10](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.10) – 2022-11-29
+
+- [Fixed] Fix dropdown navigation ([#135](https://github.com/contao-themes-net/mate-theme-bundle/issues/135))
 
 ## [2.19.9](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.9) – 2022-11-21
 

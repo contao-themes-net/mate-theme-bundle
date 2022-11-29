@@ -255,7 +255,7 @@ jQuery(document).ready(function ($) {
     });
 
     $(document).on('touchstart','body', function(e) {
-        $('a.dropdown-button').removeClass('active');
+        $('a.dropdown-button').removeClass('touch-active');
     });
 
     $('nav:not(.subnav)').on('touchstart','.dropdown-content a', function(e) {
@@ -263,7 +263,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('nav:not(.subnav)').on('touchstart','a.dropdown-button', function(e) {
-        $('a.dropdown-button').removeClass('active');
+        $('a.dropdown-button').removeClass('touch-active');
 
         if( $(this).hasClass('open') ) {
             window.location.href = $(this).attr('href');
@@ -273,8 +273,8 @@ jQuery(document).ready(function ($) {
             $('a.dropdown-button').removeClass('open');
         }
 
-        $(this).addClass('active');
-        $(this).closest('.dropdown-content').prev().addClass('active');
+        $(this).addClass('touch-active');
+        $(this).closest('.dropdown-content').prev().addClass('touch-active');
         $(this).toggleClass('open');
         e.preventDefault();
         e.stopPropagation();
