@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.0.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.2) – 2022-01-12
+
+- [Fixed] Fix teaser box and parallax element (remove unneeded code lines)
+- [Fixed] Fix fourth navigation level
+
 ## [3.0.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.2) – 2022-11-29
 
 - [Fixed] Fix dropdown navigation ([#135](https://github.com/contao-themes-net/mate-theme-bundle/issues/135))
