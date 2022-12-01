@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.19.11](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.11) – 2022-12-01
+
+- [Fixed] Fix fourth navigation level
+
 ## [2.19.10](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.10) – 2022-11-29
 
 - [Fixed] Fix dropdown navigation ([#135](https://github.com/contao-themes-net/mate-theme-bundle/issues/135))
