@@ -12,7 +12,7 @@ Types of changes
 
 ## [2.19.11](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.11) – 2022-12-01
 
-- [Fixed] Fix fourth navigation level
+- [Fixed] Fix fourth navigation level [#138](https://github.com/contao-themes-net/mate-theme-bundle/issues/138)
 
 ## [2.19.10](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.10) – 2022-11-29
 
