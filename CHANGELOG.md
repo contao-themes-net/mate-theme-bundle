@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.0.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.2) – 2022-12-01
+
+- [Fixed] Fix teaser box and parallax element (remove unneeded code lines)
+- [Fixed] Fix fourth navigation level ([#138](https://github.com/contao-themes-net/mate-theme-bundle/issues/138))
+
 ## [3.0.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.2) – 2022-11-29
 
 - [Fixed] Fix dropdown navigation ([#135](https://github.com/contao-themes-net/mate-theme-bundle/issues/135))
@@ -28,6 +33,10 @@ Types of changes
 - [Changed] Update [Materialize](https://github.com/materializecss/materialize) version to 1.1.0
 - [Changed] Update [Headroom.js](https://wicky.nillia.ms/headroom.js/) version to 0.12.0
 - [Removed] Cleanup older Contao SQL files
+
+## [2.19.11](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.11) – 2022-12-01
+
+- [Fixed] Fix fourth navigation level [#138](https://github.com/contao-themes-net/mate-theme-bundle/issues/138)
 
 ## [2.19.10](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.10) – 2022-11-29
 
