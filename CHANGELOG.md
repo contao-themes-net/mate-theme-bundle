@@ -10,7 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.0.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.2) – 2022-12-01
+## [3.0.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.4) – 2022-12-22
+
+- [Fixed] Fix advances classes settings for content elements
+
+## [3.0.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.3) – 2022-12-01
 
 - [Fixed] Fix teaser box and parallax element (remove unneeded code lines)
 - [Fixed] Fix fourth navigation level ([#138](https://github.com/contao-themes-net/mate-theme-bundle/issues/138))
