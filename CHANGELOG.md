@@ -10,8 +10,9 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.0.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.5) – 2023-01-02
+## [3.1.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.0) – 2023-01-02
 
+- [Added] Add style for html sitemap module
 - [Fixed] Fix two content slider on one page ([#144](https://github.com/contao-themes-net/mate-theme-bundle/issues/144))
 
 ## [3.0.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.4) – 2023-01-02

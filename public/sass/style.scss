@@ -374,6 +374,10 @@ code, pre {
   }
 }
 
+.mod_sitemap {
+  @extend .content-list;
+}
+
 .content-list, .content-text {
   ol {
     padding-left: 15px;
