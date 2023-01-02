@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.19.12](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.12) – 2022-12-13
+
+- [Fixed] Fix scss path in ThemeUtils.php
+- [Removed] Remove no longer used files (mate_win.scss and materialize_win.scss)
+
 ## [2.19.11](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.11) – 2022-12-01
 
 - [Fixed] Fix fourth navigation level ([#138](https://github.com/contao-themes-net/mate-theme-bundle/issues/138))
