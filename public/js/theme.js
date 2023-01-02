@@ -144,7 +144,7 @@ jQuery(document).ready(function ($) {
         $(".slider-text-below-image li").each(function () {
             var headline = $(this).find("> h2, > h3, > h4, > h5, > h6").html();
             var index = $(this).index() + 1;
-            var slider = $($(this).closest('.slider-text-below-image'));
+            var slider = $(this).closest('.slider-text-below-image');
             setTimeout(function () {
                 slider.find(".indicators li:nth-of-type(" + index + ")").html(headline);
             }, 100);
