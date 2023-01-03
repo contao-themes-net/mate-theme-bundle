@@ -10,9 +10,9 @@
 
 namespace ContaoThemesNet\MateThemeBundle\Mate;
 
-use Contao\CoreBundle\Security\ContaoCorePermissions;
 use Contao\Environment;
 use Contao\FrontendTemplate;
+use Contao\ModuleSitemap;
 use Contao\PageModel;
 use Contao\StringUtil;
 use Contao\System;
@@ -271,7 +271,7 @@ class NavBarModule extends \Module
             $subitems = '';
 
             // PageModel->groups is an array after calling loadDetails()
-            if (!$objSubpage->protected || $this->showProtected || ($this instanceof ModuleSitemap && $objSubpage->sitemap == 'map_always') || $security->isGranted(ContaoCorePermissions::MEMBER_IN_GROUPS, $objSubpage->groups))
+            if ($this->checkPermission($objSubpage, $security))
             {
                 // Check whether there will be subpages
                 if ($blnHasSubpages && (!$this->showLevel || $this->showLevel >= $level || (!$this->hardLimit && ($objPage->id == $objSubpage->id || \in_array($objPage->id, $this->Database->getChildRecords($objSubpage->id, 'tl_page'))))))
@@ -424,5 +424,28 @@ class NavBarModule extends \Module
         }
 
         return $row;
+    }
+
+    protected function checkPermission($objSubpage, $security)
+    {
+        if (version_compare(VERSION, '4.12', '<'))
+        {
+            $groups = array();
+            $_groups = StringUtil::deserialize($objSubpage->groups);
+
+            if (!$objSubpage->protected || BE_USER_LOGGED_IN || (is_array($_groups) && is_array($groups) && count(array_intersect($_groups, $groups))) || $this->showProtected || ($this instanceof ModuleSitemap && $objSubpage->sitemap == 'map_always'))
+            {
+                return true;
+            }
+        }
+        else
+        {
+            if(!$objSubpage->protected || $this->showProtected || ($this instanceof ModuleSitemap && $objSubpage->sitemap == 'map_always') || $security->isGranted(Contao\CoreBundle\Security\ContaoCorePermissions::MEMBER_IN_GROUPS, $objSubpage->groups))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
