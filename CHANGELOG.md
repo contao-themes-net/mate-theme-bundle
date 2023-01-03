@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.1.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.0) – 2023-01-02
+## [3.0.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.5) – 2023-01-03
 
 - [Added] Add style for html sitemap module
 - [Fixed] Fix two content slider on one page ([#144](https://github.com/contao-themes-net/mate-theme-bundle/issues/144))
@@ -42,6 +42,12 @@ Types of changes
 - [Changed] Update [Materialize](https://github.com/materializecss/materialize) version to 1.1.0
 - [Changed] Update [Headroom.js](https://wicky.nillia.ms/headroom.js/) version to 0.12.0
 - [Removed] Cleanup older Contao SQL files
+
+## [2.20.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.0) – 2023-01-03
+
+- [Added] Add style for html sitemap module
+- [Fixed] Fix two content slider on one page ([#144](https://github.com/contao-themes-net/mate-theme-bundle/issues/144))
+- [Fixed] Fix navbar incompatibility with Contao 4.9 ([#142](https://github.com/contao-themes-net/mate-theme-bundle/issues/142))
 
 ## [2.19.12](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.19.12) – 2023-01-02
 
