@@ -46,11 +46,7 @@ class ThemeUtils
         // add stylesheets
         $combiner = new Combiner();
 
-        if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
-            $combiner->add(self::$sassFolder.'mate_win.scss');
-        } else {
-            $combiner->add(self::$sassFolder.'mate.scss');
-        }
+        $combiner->add(self::$sassFolder.'mate.scss');
 
         return $combiner->getCombinedFile();
     }
