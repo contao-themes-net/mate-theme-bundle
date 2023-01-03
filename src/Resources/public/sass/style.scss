@@ -373,6 +373,10 @@ code, pre {
   }
 }
 
+.mod_sitemap {
+  @extend .ce_list;
+}
+
 .ce_list, .ce_text {
   ol {
     padding-left: 15px;
