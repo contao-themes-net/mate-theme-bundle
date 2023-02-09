@@ -58,7 +58,7 @@ class InitialDemoDataMigration extends AbstractMigration
         }
 
         // Contao 5.1
-        if (!isset($schemaManager->listTableColumns('tl_member')['loginAttempts'])) {
+        if (isset($schemaManager->listTableColumns('tl_form')['ajax'])) {
             $this->sqlFile = str_replace('50', '51', $this->sqlFile);
         }
 
