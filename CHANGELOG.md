@@ -14,6 +14,7 @@ Types of changes
 
 - [Changed] Change sql files for Contao 4.13
 - [Fixed] Remove empty image in news_mate_slider template
+- [Fixed] Fix check permission in navbar module
 
 ## [2.20.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.0) – 2023-01-03
 

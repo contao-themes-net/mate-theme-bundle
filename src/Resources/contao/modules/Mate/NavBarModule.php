@@ -440,7 +440,7 @@ class NavBarModule extends \Module
         }
         else
         {
-            if(!$objSubpage->protected || $this->showProtected || ($this instanceof ModuleSitemap && $objSubpage->sitemap == 'map_always') || $security->isGranted(Contao\CoreBundle\Security\ContaoCorePermissions::MEMBER_IN_GROUPS, $objSubpage->groups))
+            if(!$objSubpage->protected || $this->showProtected || ($this instanceof ModuleSitemap && $objSubpage->sitemap == 'map_always') || $security->isGranted(\Contao\CoreBundle\Security\ContaoCorePermissions::MEMBER_IN_GROUPS, $objSubpage->groups))
             {
                 return true;
             }
