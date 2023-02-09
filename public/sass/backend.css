@@ -50,3 +50,8 @@
 .be_matetheme_setup .button a:hover {
     background: #476a30;
 }
+
+html[data-color-scheme=dark] .be_matetheme_setup img.logo {
+    background: #fff;
+    padding: 5px;
+}
