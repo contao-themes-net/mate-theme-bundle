@@ -10,6 +10,13 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.1.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.0) – 2023-02-09
+
+- [Added] Add sql files for Contao 5.1
+- [Changed] Change sql files for Contao 5.0
+- [Fixed] Replace InsertTag `{{request_token}}` with `<?= $this->requestToken ?>`
+- [Fixed] Fix backend css for dark mode
+
 ## [3.0.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.0.5) – 2023-01-03
 
 - [Added] Add style for html sitemap module

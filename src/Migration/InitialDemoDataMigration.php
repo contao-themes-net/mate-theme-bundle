@@ -57,6 +57,11 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->sqlFile = str_replace('minimal', 'full', $this->sqlFile);
         }
 
+        // Contao 5.1
+        if (isset($schemaManager->listTableColumns('tl_form')['ajax'])) {
+            $this->sqlFile = str_replace('50', '51', $this->sqlFile);
+        }
+
         // check some tables for content
         $count = $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
         $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');

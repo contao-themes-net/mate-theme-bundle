@@ -1454,6 +1454,11 @@ nav .brand-logo {
     margin: 0 0 80px;
     overflow: visible;
 
+    li.active .caption {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
     h2, h5 {
       width: 100%;
     }
