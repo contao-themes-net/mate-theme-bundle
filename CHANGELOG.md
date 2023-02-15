@@ -10,6 +10,12 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.20.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.1) – 2023-02-09
+
+- [Changed] Change sql files for Contao 4.13
+- [Fixed] Remove empty image in news_mate_slider template
+- [Fixed] Fix check permission in navbar module
+
 ## [2.20.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.0) – 2023-01-03
 
 - [Added] Add style for html sitemap module
