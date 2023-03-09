@@ -54,8 +54,8 @@ class TextBackgroundElement extends \ContentElement
     protected function compile()
     {
         // background image
-        $uuid = \FilesModel::findByUuid($this->mate_background_image);
-        $this->Template->backgroundImage = $uuid->path;
+        $file = \FilesModel::findByUuid($this->mate_background_image);
+        $this->Template->backgroundImage = null !== $file ? $file->path: null;
 
         // image
         if ($this->addImage && $this->singleSRC != '')
