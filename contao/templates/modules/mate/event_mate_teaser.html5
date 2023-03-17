@@ -6,7 +6,7 @@
 <?php endif; */ ?>
 
 <div class="event layout_teaser<?= $this->classUpcoming ?> col s12 m6">
-  <div class="inner">
+  <div class="inner hc-bg-grey-dark">
 
 	  <?php if ($this->addImage): ?>
 	    <figure class="image_container<?= $this->floatClass ?>"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
@@ -35,7 +35,7 @@
 		    <h2><?= $this->title ?></h2>
 		  <?php endif; ?>
 
-		  <p class="time"><time datetime="<?= $this->datetime ?>"><?= str_replace("–"," – ",$this->date) ?><?php if ($this->time): ?>, <?= $this->time ?><?php endif; ?></time></p>
+		  <p class="time"><time datetime="<?= $this->datetime ?>" class="hc-bg-black-ter"><?= str_replace("–"," – ",$this->date) ?><?php if ($this->time): ?>, <?= $this->time ?><?php endif; ?></time></p>
 
 		  <div class="teaser">
 		    <?= $this->teaser ?>

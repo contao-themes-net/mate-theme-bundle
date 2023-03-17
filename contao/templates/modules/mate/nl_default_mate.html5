@@ -15,7 +15,7 @@
 
     <div class="widget widget-text mandatory">
       <label for="ctrl_email_<?= $this->id ?>" class="invisible"><?= $this->emailLabel ?></label>
-      <input type="text" name="email" id="ctrl_email_<?= $this->id ?>" class="text mandatory" value="<?= $this->email ?>" placeholder="<?= $this->emailLabel ?>" required>
+      <input type="text" name="email" id="ctrl_email_<?= $this->id ?>" class="text mandatory hc-bg-white" value="<?= $this->email ?>" placeholder="<?= $this->emailLabel ?>" required>
     </div>
 
     <?php if ($this->showChannels): ?>
@@ -32,7 +32,7 @@
     <?= $this->captcha ?>
 
     <div class="widget widget-submit">
-      <button type="submit" class="submit"><?= $this->submit ?></button>
+      <button type="submit" class="submit hc-bg-black"><?= $this->submit ?></button>
     </div>
 
     <?php if ($this->message): ?>

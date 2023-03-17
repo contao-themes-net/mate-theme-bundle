@@ -1,6 +1,6 @@
 
 <div class="layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?> col s12 m6">
-  <div class="inner">
+  <div class="inner hc-bg-grey-dark">
 
     <?php if ($this->addImage): ?>
       <figure class="image_container<?= $this->floatClass ?>"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
@@ -38,7 +38,7 @@
       </div>
 
       <?php if ($this->hasText || $this->hasTeaser): ?>
-        <a class="more" href="<?= $this->link ?>">+</a>
+        <a class="more text-decoration-none hc-bg-white" href="<?= $this->link ?>">+</a>
       <?php endif; ?>
     </div>
 

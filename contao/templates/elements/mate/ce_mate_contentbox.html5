@@ -1,4 +1,4 @@
-<div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<div class="hc-bg-grey-darker <?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
   <div class="inside">
     <div>
       <?php $this->block('content'); ?>
@@ -19,7 +19,7 @@
 
         <?php if($this->pageText != ""): ?>
           <div class="pageLink">
-            <a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>"><?= $this->pageText ?></a>
+            <a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>" class="hc-bg-white"><?= $this->pageText ?></a>
           </div>
         <?php endif; ?>
 
