@@ -13,6 +13,7 @@ Types of changes
 ## [3.1.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.1) – 2023-03-17
 
 - [Fixed] Fix smooth scroll script
+- [Fixed] Add missing title to navbar links
 
 ## [3.1.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.0) – 2023-02-09
 
