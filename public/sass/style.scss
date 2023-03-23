@@ -213,47 +213,6 @@ img {
   }
 }
 
-.high-contrast {
-  .subnav li>a, .subnav li>span {
-    background: var(--hc-white) !important;
-    color: var(--hc-black) !important;
-
-    &.active {
-      background: var(--hc-grey-dark) !important;
-      color: var(--hc-white) !important;
-    }
-  }
-
-  .pagination li a:hover, nav[data-pagination] li a:hover {
-    background: var(--hc-grey-dark) !important;
-    color: var(--hc-white) !important;
-    border-color: var(--hc-grey-dark) !important;
-  }
-
-  .pagination li strong, nav[data-pagination] li strong {
-    background: var(--hc-white) !important;
-    color: var(--hc-black) !important;
-  }
-
-  #wrapper .slider.mod_newslist .indicators .indicator-item {
-    &.active {
-      background: var(--hc-white) !important;
-
-      &, * {
-        color: var(--hc-black) !important;
-      }
-
-      &:before, &:after {
-        border-color: var(--hc-white);
-      }
-    }
-
-    &:hover:before, &:hover:after {
-      border-color: var(--hc-grey);
-    }
-  }
-}
-
 /* ========================== *
  *    Textelemente            *
  * ========================== */

@@ -20,7 +20,7 @@
         <h3><?= $this->twoFactorAuthentication ?></h3>
         <div class="widget widget-text">
           <label for="verify"><?= $this->authCode ?></label>
-          <input type="text" name="verify" id="verify" class="text hc-text-black" value="" autocapitalize="off" autocomplete="one-time-code" required>
+          <input type="text" name="verify" id="verify" class="text" value="" autocapitalize="off" autocomplete="one-time-code" required>
         </div>
         <div class="widget widget-checkbox">
           <input type="checkbox" name="trusted" id="trusted" class="tl_checkbox" value="1">
@@ -28,12 +28,12 @@
         </div>
       <?php else: ?>
         <div class="widget widget-text">
-          <label for="username" class="hc-text-black"><?= $this->username ?></label>
-          <input type="text" name="username" id="username" class="text hc-text-black" value="<?= $this->value ?>">
+          <label for="username"><?= $this->username ?></label>
+          <input type="text" name="username" id="username" class="text" value="<?= $this->value ?>">
         </div>
         <div class="widget widget-password">
-          <label for="password" class="hc-text-black"><?= $this->password ?></label>
-          <input type="password" name="password" id="password" class="text password hc-text-black" value="">
+          <label for="password"><?= $this->password ?></label>
+          <input type="password" name="password" id="password" class="text password" value="">
         </div>
         <?php if ($this->autologin): ?>
           <div class="widget widget-checkbox">
@@ -47,7 +47,7 @@
         <?php endif; ?>
       <?php endif; ?>
       <div class="widget widget-submit">
-        <button type="submit" class="submit hc-bg-black"><?= $this->slabel ?></button>
+        <button type="submit" class="submit"><?= $this->slabel ?></button>
         <?php if ($this->twoFactorEnabled): ?>
           <a href="<?= $this->route('contao_frontend_logout') ?>"><?= $this->cancel ?> ›</a>
         <?php endif; ?>

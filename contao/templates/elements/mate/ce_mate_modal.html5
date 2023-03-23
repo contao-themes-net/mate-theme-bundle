@@ -1,9 +1,9 @@
 <div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
 
-  <a class="modal-trigger<?= $this->linkClass ?>" href="#mateModal<?= $this->id ?>"><?= $this->linkText ?></a>
+  <a class="modal-trigger text-decoration-none hc-bg-white<?= $this->linkClass ?>" href="#mateModal<?= $this->id ?>"><?= $this->linkText ?></a>
 
   <div id="mateModal<?= $this->id ?>" class="modal<?= $this->modalClass ?>">
-    <div class="modal-content">
+    <div class="modal-content hc-bg-white">
       <!-- indexer::stop -->
       <div class="close-modal"><i class="material-icons">clear</i></div>
       <!-- indexer::continue -->
