@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.20.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.2) – 2023-03-23
+
+- [Fixed] Remove warning in teaser box and parallax element
+
 ## [2.20.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.1) – 2023-02-09
 
 - [Changed] Change sql files for Contao 4.13
