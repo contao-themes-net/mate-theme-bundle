@@ -8,7 +8,16 @@
 {% block headline_component %}
   <div class="caption">
     <div class="container">
-      {{ parent() }}
+      {% set headline = headline|default(_context) %}
+      {% set tag_name = headline.tag_name|default('h1') %}
+
+      <{{ tag_name }}{% block headline_attributes %}{{ attrs(headline.attributes|default).addClass(['hc-bg-white']) }}{% endblock %}>
+        {%- block headline_inner %}
+          {%- apply spaceless %}
+            {{ headline.text|insert_tag_raw }}
+          {% endapply -%}
+        {% endblock -%}
+      </{{ tag_name }}>
     </div>
   </div>
 {% endblock %}

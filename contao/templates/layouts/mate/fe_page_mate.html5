@@ -101,11 +101,11 @@
 
   <?php $this->sections('bottom'); ?>
   <?php $this->endblock(); ?>
-
+<script charset="utf-8" src="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedJavascript(); // mate theme js optimization?>"></script>
   <?= $this->mooScripts ?>
   <?= $this->framework ?>
   <?= $this->mootools ?>
   <?= $this->jsonLdScripts ?>
-  <script charset="utf-8" src="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedJavascript(); // mate theme js optimization?>"></script>
+
 </body>
 </html>
