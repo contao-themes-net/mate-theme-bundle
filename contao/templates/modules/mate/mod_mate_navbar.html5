@@ -18,7 +18,7 @@
     </ul>
 
     <?php if($this->showMobileMenu == 1): ?>
-      <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu sidenav <?= $this->level ?>">
+      <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu sidenav hc-bg-black-ter <?= $this->level ?>">
         <?= $this->mobileNav ?>
       </ul>
     <?php endif; ?>
@@ -26,6 +26,9 @@
     <?php if($this->showSearch == 1): ?>
       {{theme::content::MATE01/05}}
     <?php endif; ?>
+
+    <!-- contrast and size switcher -->
+    {{theme::content::MATE01/06}}
 
     <?= $this->dropdownNav ?>
     <?= $this->dropdownNavLvl3 ?>

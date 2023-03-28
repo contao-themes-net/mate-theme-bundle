@@ -126,13 +126,13 @@ img {
   overflow-y: hidden;
 }
 
-@media only screen and (min-width: 601px) {
+@media #{$medium-and-up} {
   .container {
     width: 95%;
   }
 }
 
-@media only screen and (min-width: 993px) {
+@media #{$large-and-up} {
   .container {
     width: 993px;
   }
@@ -1038,7 +1038,7 @@ nav {
   }
 }
 
-@media (min-width:993px) {
+@media #{$large-and-up} {
   .desktop-menu {
     margin: 0 10px;
     position: relative;
@@ -3581,7 +3581,7 @@ mark {
  *   Responsive Tables        *
  * ========================== */
 
-@media (max-width: 600px) {
+@media #{$small-and-down} {
   .resp-table {
     &, td, tr, tbody {
       display: block;
@@ -3733,7 +3733,7 @@ div.klaro {
   }
 }
 
-@media (max-width:992px) {
+@media #{$medium-and-down} {
   .pagination li.prev, .pagination li.next {
     width: initial;
   }
@@ -4366,7 +4366,7 @@ div.klaro {
   }
 }
 
-@media (max-width: 600px) {
+@media #{$small-and-down} {
   /* Textelemente */
   .headerImage h1 {
     font-size: 1.2em;

@@ -14,10 +14,10 @@
     </li>
     <?php if (!empty($item['subitems'])): ?>
       <li class="subitems" style="display:none;background:rgba(0, 0, 0, .05);">
-        <ul>
+        <ul class="hc-bg-grey-dark">
           <?php foreach ($item['subitems'] as $sItem): ?>
             <li>
-              <a href="<?= $sItem['href'] ?: './' ?>" class="<?php if($sItem['isActive']): ?> active<?php endif; ?>"
+              <a href="<?= $sItem['href'] ?: './' ?>" class="<?php if($sItem['isActive']): ?> active<?php endif; ?> hc-text-white"
                  title="<?= $sItem['pageTitle'] ?: $sItem['title'] ?>">
                 <?= $sItem['link'] ?>
               </a>
@@ -31,7 +31,7 @@
                 <ul>
                   <?php foreach ($sItem['subitems'] as $itemLvl3): ?>
                     <li>
-                      <a href="<?= $itemLvl3['href'] ?: './' ?>" class="<?php if($itemLvl3['isActive']): ?> active<?php endif; ?>"
+                      <a href="<?= $itemLvl3['href'] ?: './' ?>" class="<?php if($itemLvl3['isActive']): ?> active<?php endif; ?> hc-text-white"
                          title="<?= $itemLvl3['pageTitle'] ?: $itemLvl3['title'] ?>">
                         <?= $itemLvl3['link'] ?>
                       </a>
@@ -44,7 +44,7 @@
                         <ul>
                           <li>
                             <?php foreach ($itemLvl3['subitems'] as $itemLvl4): ?>
-                              <a href="<?= $itemLvl4['href'] ?: './' ?>" class="<?php if($itemLvl4['isActive']): ?> active<?php endif; ?>"
+                              <a href="<?= $itemLvl4['href'] ?: './' ?>" class="<?php if($itemLvl4['isActive']): ?> active<?php endif; ?> hc-text-white"
                                  title="<?= $itemLvl4['pageTitle'] ?: $itemLvl4['title'] ?>">
                                 <?= $itemLvl4['link'] ?>
                               </a>
