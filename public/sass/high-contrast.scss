@@ -302,6 +302,19 @@
   }
 }
 
+.wcag {
+  a {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-right: -10px;
+  }
+
+  &.content-text {
+    padding: 0;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .contrast-size-switcher {
     display: block;
@@ -344,11 +357,33 @@
       fill: var(--hc-white);
     }
   }
+
+  .stuck .contrast-size-switcher {
+    background: none;
+    padding: 10px;
+
+    .wcag-square {
+      transform: scale(.8);
+      filter: brightness(0) invert(1);
+    }
+
+    p {
+      height: 80px;
+      margin: 0;
+
+      a {
+        display: none;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .contrast-size-switcher {
-    right: -5%;
+    right: -6%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 
     ~ .mod_article .search {
       right: 35px;
