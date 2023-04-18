@@ -1965,8 +1965,23 @@ nav .brand-logo {
     margin-top: 0;
   }
 }
+
 #container .row .col.simplebox {
   padding: 0;
+}
+
+.ce_text_simplebox_mate ul:not(.browser-default) li:before {
+  content:"»";
+  color: $mateColor2;
+  font-weight: 700;
+  padding-right: 15px;
+  margin-left: 15px;
+  position:	absolute;
+  left:	0;
+}
+
+.ce_text_simplebox_mate ul:not(.browser-default) li {
+  margin-left:	20px;
 }
 
 /* ========================== *
