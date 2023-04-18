@@ -10,8 +10,9 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.1.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.1) – 2023-03-17
+## [3.2.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.0) – 2023-04-18
 
+- [Added] Add high contrast feature
 - [Fixed] Fix smooth scroll script
 - [Fixed] Add missing title to navbar links
 
