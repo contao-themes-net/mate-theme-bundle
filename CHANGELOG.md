@@ -15,6 +15,7 @@ Types of changes
 - [Added] Add high contrast feature
 - [Fixed] Fix smooth scroll script
 - [Fixed] Add missing title to navbar links
+- [Fixed] Fix links without href
 
 ## [3.1.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.0) – 2023-02-09
 
