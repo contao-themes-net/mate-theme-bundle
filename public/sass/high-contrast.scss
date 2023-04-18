@@ -1,4 +1,4 @@
-.contrast-size-switcher {
+.mod_mateNavbar .contrast-size-switcher {
   display: none;
 }
 
@@ -316,7 +316,11 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .contrast-size-switcher {
+  .mod_mateNavbar .nav-wrapper > .mod_article.contrast-size-switcher {
+    width: 50px;
+  }
+
+  .mod_mateNavbar .contrast-size-switcher {
     display: block;
     position: absolute;
     right: -2.5%;
@@ -360,7 +364,6 @@
 
   .stuck .contrast-size-switcher {
     background: none;
-    padding: 10px;
 
     .wcag-square {
       transform: scale(.8);
@@ -376,11 +379,15 @@
       }
     }
   }
+
+  .wcag a {
+    margin-right: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  .contrast-size-switcher {
-    right: -6%;
+  .mod_mateNavbar .contrast-size-switcher {
+    right: -5%;
     height: 100%;
     display: flex;
     align-items: center;

@@ -1063,7 +1063,9 @@ nav {
   }
 
   .content-image.fixed-nav {
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
 
     img {
       height: 60px;
@@ -4117,7 +4119,7 @@ div.klaro {
 
   #header .mod_mateNavbar {
     height: 100px;
-    top: 0;
+    display: block;
 
     .nav-wrapper {
       display: flex;

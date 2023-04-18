@@ -10,9 +10,7 @@
     <?php endif; ?>
 
     <!-- contrast and size switcher -->
-    <div class="contrast-size-switcher">
-      {{theme::content::MATE01/06}}
-    </div>
+    {{theme::content::MATE01/06}}
 
     <?php if($this->showMobileMenu == 1): ?>
       <a href="#" data-target="mobile-menu<?= $this->id ?>" class="sidenav-trigger"><i class="material-icons">menu</i></a>
