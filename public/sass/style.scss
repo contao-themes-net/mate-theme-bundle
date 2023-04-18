@@ -213,6 +213,17 @@ img {
   }
 }
 
+.cto-toolbar {
+  input[type=text]:not(.browser-default) {
+    color: #000;
+    height: inherit;
+  }
+
+  .tl_select {
+    opacity: 1;
+  }
+}
+
 /* ========================== *
  *    Textelemente            *
  * ========================== */
