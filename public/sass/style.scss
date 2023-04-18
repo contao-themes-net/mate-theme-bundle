@@ -580,7 +580,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $mateColor3;
 }
 
-h1 {
+h1, .h1 {
   font-size: 2.2rem;
   margin-top: 0;
   font-family: $font2;
@@ -593,25 +593,32 @@ h2, h3, h4, h5, h6 {
   font-family: $font3;
 }
 
-h2 {
+h2, .h2 {
   font-size: 2rem;
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.7rem;
 }
 
-h4 {
+h4, .h4 {
   font-size: 1.4rem;
 }
 
-h5 {
+h5, .h5 {
   font-size: 1.1rem;
 }
 
-h6 {
+h6, .h6 {
   font-size: 1rem;
 }
+
+.h1 { margin: ($h1-fontsize / 1.5) 0 ($h1-fontsize / 2.5) 0;}
+.h2 { margin: ($h2-fontsize / 1.5) 0 ($h2-fontsize / 2.5) 0;}
+.h3 { margin: ($h3-fontsize / 1.5) 0 ($h3-fontsize / 2.5) 0;}
+.h4 { margin: ($h4-fontsize / 1.5) 0 ($h4-fontsize / 2.5) 0;}
+.h5 { margin: ($h5-fontsize / 1.5) 0 ($h5-fontsize / 2.5) 0;}
+.h6 { margin: ($h6-fontsize / 1.5) 0 ($h6-fontsize / 2.5) 0;}
 
 .bordered-left, .bordered-right {
   h1, h2, h3, h4, h5, h6 {
@@ -1973,6 +1980,7 @@ nav .brand-logo {
   h2, h3, h4, h5, h6 {
     margin: 0 0 40px;
     font-family: $font2;
+    font-size: 1.4rem;
   }
 
   .pageLink {
@@ -2050,6 +2058,7 @@ nav .brand-logo {
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 10px 0;
+    font-size: 1.4rem;
   }
 
   .image_container {
@@ -2537,7 +2546,7 @@ footer.page-footer {
     padding-top: 20px;
   }
 
-  h5 {
+  h5, .h5 {
     margin-bottom: 30px;
     position: relative;
     padding-bottom: 20px;
@@ -3389,6 +3398,10 @@ mark {
   padding: 20px 0;
   display: flex;
   align-items: center;
+
+  h2 {
+    font-size: 1em;
+  }
 
   p, h2, h3, h4, h5, h6 {
     margin: 0;
