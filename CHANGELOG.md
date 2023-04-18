@@ -17,8 +17,9 @@ Types of changes
 - [Fixed] Add missing title to navbar links
 - [Fixed] Fix links without href
 - [Fixed] Fix frontend preview toolbar
-- [Fixed] Optimize headlines order
-- [Fixed] Optimize fonts loading
+- [Changed] Optimize headlines order
+- [Changed] Optimize fonts loading
+- [Changed] Optimize news slider images
 - [Removed] Remove unused fonts
 
 ## [3.1.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.0) – 2023-02-09
