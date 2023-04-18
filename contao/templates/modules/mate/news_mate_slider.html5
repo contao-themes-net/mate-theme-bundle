@@ -28,7 +28,7 @@
 		</div>
 
 		<!-- indexer::stop -->
-		<div class="list-nav hc-bg-black hc-text-white">
+		<div class="list-nav hc-bg-black-ter hc-text-white">
 			<a class="prev"><i class="material-icons">keyboard_arrow_down
 </i></a>
 			<a class="next"><i class="material-icons">keyboard_arrow_up</i></a>
