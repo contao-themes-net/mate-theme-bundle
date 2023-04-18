@@ -1,19 +1,38 @@
 @font-face {
-  font-family: "Lato Light";
-  src: url("/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Light.ttf");
   font-display: swap;
+  font-family: 'Lato Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Light.eot');
+  src: url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Light.woff2') format('woff2'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Light.woff') format('woff'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Light.ttf') format('truetype'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Light.svg#Lato') format('svg');
 }
 
 @font-face {
-  font-family: "Lato Regular";
-  src: url("/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Regular.ttf");
   font-display: swap;
+  font-family: 'Lato Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Regular.eot');
+  src: url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Regular.woff2') format('woff2'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Regular.woff') format('woff'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Regular.ttf') format('truetype'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Lato/Lato-Regular.svg#Lato') format('svg');
 }
 
 @font-face {
-  font-family: "Old Standard";
-  src: url("/bundles/contaothemesnetmatetheme/fonts/Old_Standard_TT/OldStandard-Regular.ttf");
   font-display: swap;
+  font-family: 'Old Standard';
+  src: url('/bundles/contaothemesnetmatetheme/fonts/Old_Standard_TT/OldStandard-Regular.eot');
+  src: url('/bundles/contaothemesnetmatetheme/fonts/Old_Standard_TT/OldStandard-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Old_Standard_TT/OldStandard-Regular.woff2') format('woff2'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Old_Standard_TT/OldStandard-Regular.woff') format('woff'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Old_Standard_TT/OldStandard-Regular.ttf') format('truetype'),
+  url('/bundles/contaothemesnetmatetheme/fonts/Old_Standard_TT/OldStandard-Regular.svg#OldStandardTT') format('svg');
 }
 
 @font-face {
