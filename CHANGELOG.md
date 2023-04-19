@@ -23,6 +23,7 @@ Types of changes
 - [Changed] Optimize fonts loading
 - [Changed] Optimize news slider images
 - [Removed] Remove unused fonts
+- [Removed] Remove favicon from fe_page_mate template (You can add a favicon in your root page.)
 
 ## [3.1.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.0) – 2023-02-09
 

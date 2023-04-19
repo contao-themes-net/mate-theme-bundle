@@ -26,8 +26,6 @@
     <meta property="og:description" content="<?php echo $this->description; ?>" />
     <meta property="og:url" content="{{env::url}}/{{env::request}}" />
     <?php if(isset($GLOBALS['og:image'])) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
-
-    <link rel="shortcut icon" href="files/mate/img/favicon.ico" type="image/x-icon" />
   <?php $this->endblock(); ?>
 
 </head>
