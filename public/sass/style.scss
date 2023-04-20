@@ -287,13 +287,15 @@ a.btn:hover {
   body .picker__frame .btn-flat, .submit,
   .slider.mod_newslist .more a,
   .layout_short .inner a.more, .layout_list .inner a.more {
-    font-size: 12px;
+    font-size: 0.75em;
     letter-spacing: 1px;
     box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     text-transform: uppercase;
     padding: 12px 20px;
-    line-height: 12px;
+    line-height: 1.2;
+    height: auto;
+    max-width: calc(100% - 50px);
   }
 }
 
@@ -381,7 +383,7 @@ code[class*="language-"], pre[class*="language-"] {
 
 code, pre {
   position: relative;
-  font-size: 1.1rem;
+  font-size: 1em;
 }
 
 .content-list, .content-text {
@@ -569,7 +571,7 @@ code {
   color: $boxes-text-color;
   display: block;
   padding: 15px;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .material-icons {
@@ -600,7 +602,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .h1 {
-  font-size: 2.2rem;
+  font-size: 2.2em;
   margin-top: 0;
   font-family: $font2;
   font-weight: 400;
@@ -613,23 +615,23 @@ h2, h3, h4, h5, h6 {
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h3, .h3 {
-  font-size: 1.7rem;
+  font-size: 1.7em;
 }
 
 h4, .h4 {
-  font-size: 1.4rem;
+  font-size: 1.4em;
 }
 
 h5, .h5 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .h1 { margin: ($h1-fontsize / 1.5) 0 ($h1-fontsize / 2.5) 0;}
@@ -773,7 +775,7 @@ header {
       color: $header-top-color;
       padding: 0;
       height: 100%;
-      font-size: 12px;
+      font-size: .75em;
       display: flex;
       align-items: center;
       float: right;
@@ -996,6 +998,10 @@ nav {
   ul li.active {
     background-color: transparent;
   }
+
+  ul a {
+    font-size: 1em;
+  }
 }
 
 .overlay.active {
@@ -1141,7 +1147,7 @@ nav {
 
           a {
             color: $navbar-color;
-            font-size: 16px;
+            font-size: 1em;
 
             &:focus {
               outline: 0;
@@ -1538,7 +1544,7 @@ nav .brand-logo {
     h2 {
       text-align: left;
       margin: 0;
-      font-size: 32px;
+      font-size: 2em;
       text-transform: initial;
       padding: 0;
       font-family: $font2;
@@ -1567,7 +1573,7 @@ nav .brand-logo {
         color: $slider-button-color;
         padding: 12px 20px;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: .75em;
         font-weight: 700;
         display: inline-block;
         letter-spacing: 1px;
@@ -1656,7 +1662,7 @@ nav .brand-logo {
 
     .subheadline {
       text-align: left;
-      font-size: 10px;
+      font-size: .625em;
       text-transform: uppercase;
       margin-bottom: 10px;
       letter-spacing: 1px;
@@ -1679,7 +1685,6 @@ nav .brand-logo {
         display: table-cell;
         margin: 0;
         height: 100%;
-        font-size: 12px;
         padding: 30px 15px;
         background: $slider-navigation-background;
 
@@ -1758,12 +1763,12 @@ nav .brand-logo {
           margin: 0;
           color: $slider-navigation-subheadline-color;
           font-weight: 700;
-          font-size: 12px;
+          font-size: .75em;
         }
 
         .headline {
           text-transform: uppercase;
-          font-size: 14px;
+          font-size: .875em;
           letter-spacing: 1px;
           color: $slider-navigation-headline-color;
         }
@@ -1773,7 +1778,7 @@ nav .brand-logo {
     .slides li p.info {
       margin: 0 0 5px;
       text-align: left;
-      font-size: 11px;
+      font-size: .688em;
       color: $mateColor3;
     }
   }
@@ -1922,7 +1927,7 @@ nav .brand-logo {
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: 1px;
-      font-size: 0.8rem;
+      font-size: .8em;
       transition: none;
 
       a {
@@ -2041,7 +2046,7 @@ nav .brand-logo {
   h2, h3, h4, h5, h6 {
     margin: 0 0 40px;
     font-family: $font2;
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 
   .pageLink {
@@ -2067,7 +2072,7 @@ nav .brand-logo {
   box-shadow: none;
   border-radius: 0;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: .688em;
   font-weight: 700;
   display: inline-block;
 
@@ -2119,7 +2124,7 @@ nav .brand-logo {
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 10px 0;
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 
   .image_container {
@@ -2130,7 +2135,7 @@ nav .brand-logo {
     color: $mateColor2;
     margin: 10px 25px 0;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: .8em;
     display: inline-block;
   }
 }
@@ -2168,7 +2173,7 @@ nav .brand-logo {
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 1.75em;
       font-family: $font2;
       font-weight: 400;
       text-transform: inherit;
@@ -2202,7 +2207,7 @@ nav .brand-logo {
 
     .info {
       margin: 0;
-      font-size: 13px;
+      font-size: .813em;
       color: $news-date-color;
     }
   }
@@ -2212,7 +2217,7 @@ nav .brand-logo {
   .subheadline {
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: .75em;
     position: absolute;
     bottom: 25px;
     color: $news-category-color;
@@ -2225,7 +2230,7 @@ nav .brand-logo {
       position: absolute;
       top: -32px;
       right: 30px;
-      font-size: 36px;
+      font-size: 2.25em;
       line-height: 36px;
       background: $mateColor2;
       color: #fff;
@@ -2266,7 +2271,7 @@ nav .brand-logo {
   .subheadline {
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: .625em;
     margin: 10px 0 0;
   }
 }
@@ -2279,7 +2284,7 @@ nav .brand-logo {
 .layout_full {
   .info {
     margin: 20px 0 0;
-    font-size: 13px;
+    font-size: .813em;
     color: $news-date-color;
   }
 
@@ -2303,7 +2308,7 @@ nav .brand-logo {
   }
 
   .subheadline {
-    font-size: 10px;
+    font-size: .625em;
     text-transform: uppercase;
     margin: 15px 0 0;
     letter-spacing: 1px;
@@ -2332,7 +2337,7 @@ nav[data-pagination] {
       display: block;
       border: 1px solid $mateColor6;
       padding: 0 10px;
-      font-size: 12px;
+      font-size: .75em;
       line-height: 30px;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -2356,7 +2361,7 @@ nav[data-pagination] {
 
   &.block p {
     float: right;
-    font-size: 14px;
+    font-size: .875em;
     color: $mateColor3;
     padding-top: 10px;
     margin: 0;
@@ -2384,7 +2389,7 @@ nav.pagination li, nav[data-pagination] li {
 }
 
 .recurring {
-  font-size: 14px;
+  font-size: .875em;
   color: #9c9c9c;
 }
 
@@ -2392,7 +2397,7 @@ nav.pagination li, nav[data-pagination] li {
   background: none;
   padding: 0;
   color: #9c9c9c;
-  font-size: 14px;
+  font-size: .875em;
   font-weight: 300;
 }
 
@@ -2479,7 +2484,7 @@ nav.pagination li, nav[data-pagination] li {
     background: $calendar-background;
     color: $calendar-text-color;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1em;
     padding: 5px;
     border: 1px solid $calendar-border-color;
 
@@ -2531,7 +2536,7 @@ nav.pagination li, nav[data-pagination] li {
 
   th, td {
     padding: 5px;
-    font-size: 16px;
+    font-size: 1em;
   }
 
   td {
@@ -2585,7 +2590,7 @@ table.calendar, table.minicalendar {
 }
 
 .mod_calendar .event {
-  font-size: 12px;
+  font-size: .75em;
 }
 
 .event, .mod_newsreader {
@@ -2628,7 +2633,7 @@ footer.page-footer {
   }
 
   p {
-    font-size: 0.9em;
+    font-size: .9em;
   }
 
   .footer-copyright {
@@ -2710,7 +2715,7 @@ footer.page-footer {
       color: $footer-news-events-time-color;
       padding: 0;
       display: inline-block;
-      font-size: 12px;
+      font-size: .75em;
       font-family: $font2;
     }
   }
@@ -3065,7 +3070,7 @@ textarea {
       padding: 0 10px;
       top: -3px;
       left: 0;
-      font-size: 1rem;
+      font-size: 1em;
       cursor: text;
       transition: transform 0.2s ease-out, color 0.2s ease-out;
       transform-origin: 0% 100%;
@@ -3093,6 +3098,10 @@ textarea {
 
 [type="checkbox"]+span:not(.lever) {
   padding-right: 20px;
+}
+
+[type="checkbox"]+span:not(.lever), [type="radio"]:not(:checked)+span, [type="radio"]:checked+span, label {
+  font-size: 1em;
 }
 
 [type="checkbox"] + span:not(.lever):before, [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
@@ -3145,7 +3154,7 @@ input::placeholder {
     }
 
     label {
-      font-size: 1rem;
+      font-size: 1em;
     }
 
     tr:nth-child(even), tr:nth-child(odd) {
@@ -3206,7 +3215,7 @@ input::placeholder {
   }
 
   a {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 700;
   }
 }
@@ -3230,7 +3239,7 @@ input::placeholder {
     padding: 15px;
     color: $mateColor2;
     font-weight: 700;
-    font-size: 14px;
+    font-size: .875em;
     margin: 0;
   }
 }
@@ -3256,7 +3265,7 @@ input::placeholder {
 
     a {
       color: $secondary-text-color;
-      font-size: 16px;
+      font-size: 1em;
       text-transform: uppercase;
       vertical-align: top;
 
@@ -3266,7 +3275,7 @@ input::placeholder {
     }
 
     .relevance {
-      font-size: 14px;
+      font-size: .875em;
       float: right;
     }
   }
@@ -3415,7 +3424,7 @@ mark {
 
     p {
       margin: 0 0 10px;
-      font-size: 1.1rem;
+      font-size: 1.1em;
     }
 
     &:before {
@@ -3423,7 +3432,7 @@ mark {
       font-family: 'Material Icons';
       left: 0;
       top: -5px;
-      font-size: 1.5rem;
+      font-size: 1.5em;
       color: $mateColor2;
     }
   }
@@ -3475,11 +3484,11 @@ mark {
   }
 
   h6 {
-    font-size: 12px;
+    font-size: .75em;
   }
 
   .countTo {
-    font-size: 34px;
+    font-size: 2.125em;
     font-weight: 700;
     padding: 10px 0 0;
     color: $mateColor2;
@@ -3582,7 +3591,7 @@ mark {
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: underline;
-      font-size: 14px;
+      font-size: .875em;
     }
   }
 
@@ -3590,7 +3599,7 @@ mark {
     color: #fff;
     margin: 10px 0 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 700;
   }
 
@@ -3681,7 +3690,7 @@ mark {
       display: block;
       padding: 7px 0;
       color: #a9a9a9;
-      font-size: 14px;
+      font-size: .875em;
     }
 
     tr {
@@ -3957,6 +3966,7 @@ div.klaro {
       align-items: center;
       padding: 0 0 0 20px;
       width: 75%;
+      font-size: .875em;
     }
 
     li {
@@ -4145,7 +4155,7 @@ div.klaro {
   /* Layouts */
   .subnav li {
     a, span {
-      font-size: 16px;
+      font-size: 1em;
     }
   }
 
@@ -4278,15 +4288,15 @@ div.klaro {
       }
 
       h2 {
-        font-size: 22px;
+        font-size: 1.375em;
       }
 
       .teaser {
-        font-size: 16px;
+        font-size: 1em;
       }
 
       .more a {
-        font-size: 14px;
+        font-size: .875em;
       }
     }
 
@@ -4458,16 +4468,16 @@ div.klaro {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
   }
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
   h4 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 
   .ce_hyperlink.teaser {
@@ -4580,12 +4590,12 @@ div.klaro {
     padding: 15px;
 
     .date-text {
-      font-size: 1.8rem;
+      font-size: 1.8em;
       line-height: 35px;
     }
 
     .year-text {
-      font-size: 1.2rem;
+      font-size: 1.2em;
       line-height: 25px;
     }
   }
@@ -4645,7 +4655,7 @@ div.klaro {
   /* CountTo */
   .count-to-container {
     .countTo {
-      font-size: 20px;
+      font-size: 1.25em;
       line-height: 26px;
     }
   }

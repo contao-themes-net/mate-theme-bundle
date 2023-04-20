@@ -12,7 +12,7 @@ Types of changes
 
 ## [3.2.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.0) – 2023-04-18
 
-- [Added] Add high contrast feature
+- [Added] Add high contrast mode and font size switcher
 - [Fixed] Fix smooth scroll script
 - [Fixed] Add missing title to navbar links
 - [Fixed] Fix links without href

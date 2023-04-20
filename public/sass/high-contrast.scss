@@ -1,7 +1,3 @@
-.mod_mateNavbar .contrast-size-switcher {
-  display: none;
-}
-
 .high-contrast {
   [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after,
   [type="radio"]:not(:checked) + span:before, [type="radio"]:not(:checked) + span:after {
@@ -302,6 +298,17 @@
   }
 }
 
+#wrapper .font-size-switcher {
+  margin-left: 15px;
+
+  .btn {
+    background: none;
+    box-shadow: none;
+    padding: 5px;
+    font-size: 16px;
+  }
+}
+
 .wcag {
   a {
     height: 40px;
@@ -316,88 +323,35 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .mod_mateNavbar .nav-wrapper > .mod_article.contrast-size-switcher {
-    width: 50px;
-  }
-
-  .mod_mateNavbar .contrast-size-switcher {
-    display: block;
-    position: absolute;
-    right: -2.5%;
-    background: #f2f2f2;
-
-    ~ .mod_article .search {
-      right: 50px;
-    }
+  .contrast-size-switcher {
+    padding: 0 20px;
 
     p {
       display: flex;
-      flex-flow: column;
       align-items: center;
-      justify-content: center;
-
-      svg, a {
-        width: 100%;
-      }
-
-      svg path {
-        fill: $primary-color;
-      }
-    }
-
-    ~ .sidenav-trigger {
-      right: 100px;
-    }
-
-    .wcag-square, .wcag-size {
-      transform: scale(.5);
     }
   }
 
   .high-contrast .contrast-size-switcher {
-    background: var(--hc-grey-darker);
-
     svg path {
       fill: var(--hc-white);
-    }
-  }
-
-  .stuck .contrast-size-switcher {
-    background: none;
-
-    .wcag-square {
-      transform: scale(.8);
-      filter: brightness(0) invert(1);
-    }
-
-    p {
-      height: 80px;
-      margin: 0;
-
-      a {
-        display: none;
-      }
     }
   }
 
   .wcag a {
     margin-right: 0;
   }
-}
 
-@media only screen and (max-width: 600px) {
-  .mod_mateNavbar .contrast-size-switcher {
-    right: -5%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  .wcag-square, .wcag-size {
+    transform: scale(1);
+  }
 
-    ~ .mod_article .search {
-      right: 35px;
-    }
+  #wrapper .font-size-switcher {
+    margin-left: 0;
 
-    ~ .sidenav-trigger {
-      right: 85px;
+    .btn {
+      font-size: 26px;
+      padding: 10px;
     }
   }
 }

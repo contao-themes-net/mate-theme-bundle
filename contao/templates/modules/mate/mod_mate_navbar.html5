@@ -9,9 +9,6 @@
       <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo" title="{{link_title::<?php echo $GLOBALS['objPage']->rootId ?>}}">{{theme::content::MATE01/04}}</a>
     <?php endif; ?>
 
-    <!-- contrast and size switcher -->
-    {{theme::content::MATE01/06}}
-
     <?php if($this->showMobileMenu == 1): ?>
       <a href="#" data-target="mobile-menu<?= $this->id ?>" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <?php endif; ?>
@@ -23,6 +20,10 @@
     <?php if($this->showMobileMenu == 1): ?>
       <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu sidenav hc-bg-black-ter <?= $this->level ?>">
         <?= $this->mobileNav ?>
+        <li>
+          <!-- contrast and size switcher -->
+          {{theme::content::MATE01/06}}
+        </li>
       </ul>
     <?php endif; ?>
 
