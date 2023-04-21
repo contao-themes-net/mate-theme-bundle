@@ -12,6 +12,7 @@ namespace ContaoThemesNet\MateThemeBundle\Mate;
 
 use Contao\Environment;
 use Contao\FrontendTemplate;
+use Contao\FrontendUser;
 use Contao\ModuleSitemap;
 use Contao\PageModel;
 use Contao\StringUtil;
