@@ -431,6 +431,12 @@ class NavBarModule extends \Module
         if (version_compare(VERSION, '4.12', '<'))
         {
             $groups = array();
+            $user = $security->getUser();
+
+            if ($user instanceof FrontendUser) {
+                $groups = StringUtil::deserialize($user->groups, true);
+            }
+
             $_groups = StringUtil::deserialize($objSubpage->groups);
 
             if (!$objSubpage->protected || BE_USER_LOGGED_IN || (is_array($_groups) && is_array($groups) && count(array_intersect($_groups, $groups))) || $this->showProtected || ($this instanceof ModuleSitemap && $objSubpage->sitemap == 'map_always'))
