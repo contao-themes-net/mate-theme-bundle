@@ -15,11 +15,13 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['mateNavbar'] = '{title_legend},name
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['mateModal'] = '{title_legend},name,type;{modal_link_legend},mateModal_linkText,mateModal_linkClass;{modal_headline_legend},headline;{modal_text_legend},mateModal_text,mateModal_class;{template_legend:hide},mateModal_customTpl;{expert_legend:hide},cssID,space';
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['newslist'] = str_replace(
-    'imgSize;',
-    'imgSize;{mate_slider_legend},mateSliderHeight,mateSliderInterval,mateSliderDuration,mateSliderIndicators;',
-    $GLOBALS['TL_DCA']['tl_module']['palettes']['newslist']
-);
+if (!empty($GLOBALS['TL_DCA']['tl_module']['palettes']['newslist'])) {
+    $GLOBALS['TL_DCA']['tl_module']['palettes']['newslist'] = str_replace(
+        'imgSize;',
+        'imgSize;{mate_slider_legend},mateSliderHeight,mateSliderInterval,mateSliderDuration,mateSliderIndicators;',
+        $GLOBALS['TL_DCA']['tl_module']['palettes']['newslist']
+    );
+}
 
 /**
  * Add fields to tl_module
