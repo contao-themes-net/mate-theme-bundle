@@ -13,6 +13,8 @@ Types of changes
 ## [2.20.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.2) – 2023-03-23
 
 - [Fixed] Remove warning in teaser box and parallax element
+- [Fixed] Fix undefined array key access - thx [fritzmg](https://github.com/fritzmg) for PR ([#156](https://github.com/contao-themes-net/mate-theme-bundle/pull/156))
+- [Fixed] Fix navigation permission check - thx [fritzmg](https://github.com/fritzmg) for PR ([#155](https://github.com/contao-themes-net/mate-theme-bundle/pull/155))
 
 ## [2.20.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.1) – 2023-02-09
 
