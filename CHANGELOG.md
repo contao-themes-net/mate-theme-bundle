@@ -17,6 +17,7 @@ Types of changes
 - [Fixed] Fix navigation permission check - thx [fritzmg](https://github.com/fritzmg) for PR ([#155](https://github.com/contao-themes-net/mate-theme-bundle/pull/155))
 - [Fixed] Add missing title to navbar links
 - [Fixed] Fix smooth scroll script
+- [Fixed] Fix links without href
 - [Changed] Optimize fonts loading
 - [Removed] Remove unused fonts
 
