@@ -19,6 +19,7 @@ Types of changes
 - [Fixed] Fix smooth scroll script
 - [Fixed] Fix links without href
 - [Fixed] Fix frontend preview toolbar
+- [Changed] Optimize headlines order
 - [Changed] Optimize fonts loading
 - [Changed] Optimize news slider images
 - [Removed] Remove unused fonts
