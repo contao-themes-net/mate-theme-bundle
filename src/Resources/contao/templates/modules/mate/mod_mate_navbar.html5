@@ -6,7 +6,7 @@
   <div class="nav-wrapper" <?php if($this->showMobileMenu == 0): ?>style="display:block;"<?php endif; ?>>
 
     <?php if($this->showLogo == 1): ?>
-      <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo">{{theme::content::MATE01/04}}</a>
+      <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo" title="{{link_title::<?php echo $GLOBALS['objPage']->rootId ?>}}">{{theme::content::MATE01/04}}</a>
     <?php endif; ?>
 
     <?php if($this->showMobileMenu == 1): ?>
