@@ -1,5 +1,9 @@
 <li class="sliderImage <?= $this->alias ?><?php if($this->cssClass): ?> <?= $this->cssClass ?><?php endif; ?>">
-	<div class="img" <?php if ($this->addImage): ?>style="background-image:url('<?= $this->picture['img']['src'] ?>');"<?php endif; ?>></div>
+  <div class="img">
+    <?php if ($this->addImage): ?>
+      <?php $this->insert('picture_default', $this->picture); ?>
+    <?php endif; ?>
+  </div>
 
 	<div class="caption center-align">
 

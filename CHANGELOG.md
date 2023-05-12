@@ -20,6 +20,7 @@ Types of changes
 - [Fixed] Fix links without href
 - [Fixed] Fix frontend preview toolbar
 - [Changed] Optimize fonts loading
+- [Changed] Optimize news slider images
 - [Removed] Remove unused fonts
 
 ## [2.20.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.1) – 2023-02-09

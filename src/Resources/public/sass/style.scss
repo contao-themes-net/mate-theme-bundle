@@ -1575,6 +1575,9 @@ nav .brand-logo {
 
     .slides li img {
       background-position: center left;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     li:before {
