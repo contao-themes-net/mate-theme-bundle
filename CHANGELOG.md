@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.2.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.0) – 2023-04-18
+## [3.2.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.0) – 2023-05-12
 
 - [Added] Add high contrast mode and font size switcher
 - [Fixed] Fix smooth scroll script
