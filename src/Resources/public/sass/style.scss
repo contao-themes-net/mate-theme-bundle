@@ -919,7 +919,28 @@ header {
   right: 0;
 }
 
-#header .mod_breadcrumb nav {
+nav.mod_breadcrumb {
+  background: $breadcrumb-background;
+  color: $primary-text-color;
+
+  &.block {
+    overflow: hidden;
+  }
+
+  a {
+    color: $breadcrumb-link;
+
+    &:hover {
+      color: $breadcrumb-link-hover;
+    }
+  }
+
+  li.active {
+    padding: 0 15px;
+  }
+}
+
+.mod_breadcrumb nav {
   background: $breadcrumb-background;
   height: inherit;
   line-height: 1.2;
@@ -928,6 +949,10 @@ header {
 
   a {
     color: $breadcrumb-link;
+
+    &:last-child {
+      color: $breadcrumb-link;
+    }
 
     &:hover {
       color: $breadcrumb-link-hover;
@@ -943,6 +968,7 @@ header {
   .col {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
   }
 }
 

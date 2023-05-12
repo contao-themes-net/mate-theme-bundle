@@ -19,6 +19,7 @@ Types of changes
 - [Fixed] Fix smooth scroll script
 - [Fixed] Fix links without href
 - [Fixed] Fix frontend preview toolbar
+- [Fixed] Fix breadcrumb navigation ([#153](https://github.com/contao-themes-net/mate-theme-bundle/issues/153))
 - [Changed] Optimize headlines order
 - [Changed] Optimize fonts loading
 - [Changed] Optimize news slider images
