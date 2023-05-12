@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.20.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.2) – 2023-03-23
+## [2.20.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.2) – 2023-05-12
 
 - [Fixed] Remove warning in teaser box and parallax element
 - [Fixed] Fix undefined array key access - thx [fritzmg](https://github.com/fritzmg) for PR ([#156](https://github.com/contao-themes-net/mate-theme-bundle/pull/156))
@@ -23,6 +23,7 @@ Types of changes
 - [Changed] Optimize headlines order
 - [Changed] Optimize fonts loading
 - [Changed] Optimize news slider images
+- [Changed] Change sql files for contao 4.13
 - [Removed] Remove unused fonts
 
 ## [2.20.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.1) – 2023-02-09
