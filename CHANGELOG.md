@@ -18,6 +18,7 @@ Types of changes
 - [Fixed] Add missing title to navbar links
 - [Fixed] Fix smooth scroll script
 - [Fixed] Fix links without href
+- [Fixed] Fix frontend preview toolbar
 - [Changed] Optimize fonts loading
 - [Removed] Remove unused fonts
 
