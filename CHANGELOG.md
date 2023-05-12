@@ -16,6 +16,7 @@ Types of changes
 - [Fixed] Fix undefined array key access - thx [fritzmg](https://github.com/fritzmg) for PR ([#156](https://github.com/contao-themes-net/mate-theme-bundle/pull/156))
 - [Fixed] Fix navigation permission check - thx [fritzmg](https://github.com/fritzmg) for PR ([#155](https://github.com/contao-themes-net/mate-theme-bundle/pull/155))
 - [Fixed] Add missing title to navbar links
+- [Fixed] Fix smooth scroll script
 - [Changed] Optimize fonts loading
 - [Removed] Remove unused fonts
 
