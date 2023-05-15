@@ -68,7 +68,7 @@ class TextBackgroundElement extends ContentElement
     {
         // background image
         $file = FilesModel::findByUuid($this->mate_background_image);
-        $this->Template->backgroundImage = null !== $file ? $file->path: null;
+        $this->Template->backgroundImage = null !== $file ? $file->path : null;
 
         // image
         if ($this->addImage && '' !== $this->singleSRC) {

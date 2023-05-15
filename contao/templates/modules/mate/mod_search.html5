@@ -3,13 +3,13 @@
 <?php $this->block('content'); ?>
 
 <form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> method="get">
-  <div class="formbody">
+  <div class="formbody hc-bg-grey-dark">
     <div class="widget widget-text">
       <label for="ctrl_keywords_<?= $this->uniqueId ?>" class="invisible"><?= $this->keywordLabel ?></label>
       <input type="search" name="keywords" id="ctrl_keywords_<?= $this->uniqueId ?>" class="text" value="<?= $this->keyword ?>">
     </div>
     <div class="widget widget-submit">
-      <button type="submit" id="ctrl_submit_<?= $this->uniqueId ?>" class="submit"><?= $this->search ?></button>
+      <button type="submit" id="ctrl_submit_<?= $this->uniqueId ?>" class="submit hc-bg-black"><?= $this->search ?></button>
     </div>
     <?php if ($this->advanced): ?>
     <div class="widget widget-radio">

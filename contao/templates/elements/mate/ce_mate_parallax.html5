@@ -12,7 +12,7 @@
         <?php $this->block('content'); ?>
 
           <?php if ($this->headline): ?>
-            <<?= $this->hl ?>>
+            <<?= $this->hl ?> class="hc-bg-white">
               <?php if($this->page != ""): ?><a href="{{link_url::<?= $this->page ?>}}"><?php endif; ?>
                 <?= $this->headline ?>
               <?php if($this->page != ""): ?></a><?php endif; ?>

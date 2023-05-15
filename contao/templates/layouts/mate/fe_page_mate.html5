@@ -1,52 +1,109 @@
-<?php $this->extend('fe_page'); ?>
+<!DOCTYPE html>
+<html lang="<?= $this->language ?>"<?php if ($this->isRTL): ?> dir="rtl"<?php endif; ?>>
+<head>
 
-<?php $this->block('head'); ?>
-  <meta charset="<?= $this->charset ?>">
-  <title><?= $this->title ?></title>
-  <base href="<?= $this->base ?>">
+  <?php $this->block('head'); ?>
+    <meta charset="<?= $this->charset ?>">
+    <title><?= $this->title ?></title>
+    <base href="<?= $this->base ?>">
 
-  <meta name="robots" content="<?= $this->robots ?>">
-  <meta name="description" content="<?= $this->description ?>">
-  <meta name="keywords" content="<?= $this->keywords ?>">
-  <meta name="generator" content="Contao Open Source CMS">
+    <?php $this->block('meta'); ?>
+      <meta name="robots" content="<?= $this->robots ?>">
+      <meta name="description" content="<?= Contao\StringUtil::substr($this->description, 320) ?>">
+      <meta name="generator" content="Contao Open Source CMS">
+    <?php $this->endblock(); ?>
 
-  <?= $this->viewport ?>
+    <?php if ($this->canonical): ?>
+      <link rel="canonical" href="<?= $this->canonical ?>">
+    <?php endif; ?>
 
-  <?= $this->stylesheets ?>
+    <?= $this->viewport ?>
+    <?= $this->stylesheets ?>
+    <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedStylesheet(); // mate theme css optimization ?>">
+    <?= $this->head ?>
 
-  <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedStylesheet(); // mate theme css optimization ?>">
+    <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
+    <meta property="og:description" content="<?php echo $this->description; ?>" />
+    <meta property="og:url" content="{{env::url}}/{{env::request}}" />
+    <?php if(isset($GLOBALS['og:image'])) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
+  <?php $this->endblock(); ?>
 
-  <?= $this->head ?>
+</head>
+<body id="top"<?php if ($this->class): ?> class="<?= $this->class ?>"<?php endif; ?><?php if ($this->onload): ?> onload="<?= $this->onload ?>"<?php endif; ?>>
 
-  <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
-  <meta property="og:description" content="<?php echo $this->description; ?>" />
-  <meta property="og:url" content="{{env::url}}/{{env::request}}" />
-  <?php if(isset($GLOBALS['og:image'])) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
+  <?php $this->block('body'); ?>
+  <?php $this->sections('top'); ?>
 
-  <link rel="shortcut icon" href="files/mate/img/favicon.ico" type="image/x-icon" />
-<?php $this->endblock(); ?>
+  <div id="wrapper" class="hc-bg-black">
 
-<?php $this->block('body'); ?>
-  <?php $this->parent(); ?>
+    <?php $this->block('header'); ?>
+      <?php if ($this->header): ?>
+        <header id="header">
+          <div class="inside">
+            <?= $this->header ?>
+          </div>
+        </header>
+      <?php endif; ?>
+    <?php $this->endblock(); ?>
 
+    <?php $this->sections('before'); ?>
+
+    <?php $this->block('container'); ?>
+      <div class="container">
+        <div id="container">
+
+          <?php $this->block('main'); ?>
+            <main id="main">
+              <div class="inside">
+                <?= $this->main ?>
+              </div>
+              <?php $this->sections('main'); ?>
+            </main>
+          <?php $this->endblock(); ?>
+
+          <?php $this->block('left'); ?>
+            <?php if ($this->left): ?>
+              <aside id="left">
+                <div class="inside">
+                  <?= $this->left ?>
+                </div>
+              </aside>
+            <?php endif; ?>
+          <?php $this->endblock(); ?>
+
+          <?php $this->block('right'); ?>
+            <?php if ($this->right): ?>
+              <aside id="right">
+                <div class="inside">
+                  <?= $this->right ?>
+                </div>
+              </aside>
+            <?php endif; ?>
+          <?php $this->endblock(); ?>
+
+        </div>
+      </div>
+    <?php $this->endblock(); ?>
+
+    <?php $this->sections('after'); ?>
+
+    <?php $this->block('footer'); ?>
+      <?php if ($this->footer): ?>
+        <footer id="footer" class="page-footer hc-bg-black-ter">
+          <?= $this->footer ?>
+        </footer>
+      <?php endif; ?>
+    <?php $this->endblock(); ?>
+
+  </div>
+
+  <?php $this->sections('bottom'); ?>
+  <?php $this->endblock(); ?>
+<script charset="utf-8" src="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedJavascript(); // mate theme js optimization?>"></script>
   <?= $this->mooScripts ?>
   <?= $this->framework ?>
+  <?= $this->mootools ?>
+  <?= $this->jsonLdScripts ?>
 
-  <script charset="utf-8" src="<?= ContaoThemesNet\MateThemeBundle\ThemeUtils::getCombinedJavascript(); // mate theme js optimization?>"></script>
-<?php $this->endblock(); ?>
-
-<?php $this->block('container'); ?>
-  <div class="container">
-    <?php $this->parent(); ?>
-  </div>
-<?php $this->endblock(); ?>
-
-<?php $this->block('footer'); ?>
-  <?php if ($this->footer): ?>
-    <!-- indexer::stop -->
-    <footer id="footer" class="page-footer">
-      <?= $this->footer ?>
-    </footer>
-    <!-- indexer::continue -->
-  <?php endif; ?>
-<?php $this->endblock(); ?>
+</body>
+</html>

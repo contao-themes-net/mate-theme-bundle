@@ -18,11 +18,11 @@
   <?php endif; ?>
 
   <div class="file-field input-field">
-	  <div class="btn">
+	  <div class="btn hc-bg-white">
 	    <span>Datei</span>
 	    <input type="file" name="<?= $this->name ?>" id="ctrl_<?= $this->id ?>" class="upload<?php if ($this->class) echo ' ' . $this->class; ?>"<?= $this->getAttributes() ?>>
 	  </div>
-	
+
 	  <div class="file-path-wrapper">
 		  <input class="file-path validate" type="text" placeholder="Laden Sie eine Datei hoch">
 	  </div>

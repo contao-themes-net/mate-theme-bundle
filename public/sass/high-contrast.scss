@@ -1,0 +1,357 @@
+.high-contrast {
+  [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after,
+  [type="radio"]:not(:checked) + span:before, [type="radio"]:not(:checked) + span:after {
+    border-color: var(--hc-white) !important;
+  }
+
+  [type="checkbox"]:checked + span:not(.lever):before {
+    border-right-color: var(--hc-white) !important;
+    border-bottom-color: var(--hc-white) !important;
+    border-top-color: transparent !important;
+    border-left-color: transparent !important;
+  }
+
+  [type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after{
+    background: var(--hc-white) !important;
+    border: 2px solid var(--hc-white) !important;
+  }
+
+  .address.content-text:before, .telephone.content-text:before, .email.content-text:before {
+    color: var(--hc-white) !important;
+  }
+
+  .btn a {
+    background: var(--hc-white) !important;
+    color: var(--hc-black) !important;
+  }
+
+  .carousel .indicators .indicator-item {
+    background-color: var(--hc-white) !important;
+
+    &.active {
+      background-color: var(--hc-grey-dark) !important;
+    }
+  }
+
+  .ce_accordion {
+    border-color: var(--hc-black) !important;
+
+    .ui-accordion-header {
+      background: var(--hc-white) !important;
+      color: var(--hc-black) !important;
+
+      .ui-accordion-header-icon:after {
+        color: var(--hc-black) !important;
+      }
+    }
+
+    .ui-accordion-content {
+      background: var(--hc-grey-dark) !important;
+      color: var(--hc-white) !important;
+    }
+  }
+
+  .ce_mateContentBox:nth-child(2n), .ce_ct_contentBox:nth-child(2n) {
+    border-color: var(--hc-grey) !important;
+  }
+
+  .checkbox_container, .radio_container {
+    border-color: var(--hc-white) !important;
+  }
+
+  &.contact .contact-info:after {
+    border-bottom: 3px solid var(--hc-white) !important;
+  }
+
+  .content-downloads li:nth-child(odd), .mod_faqlist li:nth-child(odd),
+  .content-downloads li:nth-child(even), .mod_faqlist li:nth-child(even),
+  .content-download {
+    background: var(--hc-grey-dark) !important;
+
+    a {
+      color: var(--hc-white) !important;
+    }
+  }
+
+  .datepicker-calendar-container {
+    background: var(--hc-black) !important;
+  }
+
+  .datepicker-date-display {
+    background: var(--hc-white) !important;
+
+    span {
+      color: var(--hc-black) !important;
+    }
+  }
+
+  .datepicker-container {
+    .btn-flat {
+      background: var(--hc-white) !important;
+      color: var(--hc-black) !important;
+    }
+
+    thead {
+      background: var(--hc-grey-dark) !important;
+      color: var(--hc-black) !important;
+    }
+  }
+
+  .datepicker-table td.is-selected {
+    background: var(--hc-grey-dark) !important;
+    color: var(--hc-black) !important;
+  }
+
+  .dropdown-content.select-dropdown li > a, .dropdown-content.select-dropdown li > span {
+    color: var(--hc-black) !important;
+  }
+
+  #footer #newsletter .text {
+    border: 2px solid var(--hc-white) !important;
+  }
+
+  footer.page-footer .toplink {
+    background: var(--hc-white) !important;
+
+    i {
+      color: var(--hc-black) !important;
+    }
+  }
+
+  .nav-wrapper ul > li > a.active:before, .nav-wrapper ul > li > a:hover:before, .nav-wrapper ul > li.trail > a:before, .mod_newslist .text h2:after, .mod_eventlist .text h2:after, .bordered-left h1:after, .bordered-left h2:after, .bordered-left h3:after, .bordered-left h4:after, .bordered-left h5:after, .bordered-left h6:after, h1.bordered-left:after, h2.bordered-left:after, h3.bordered-left:after, h4.bordered-left:after, h5.bordered-left:after, h6.bordered-left:after, .bordered-right h1:after, .bordered-right h2:after, .bordered-right h3:after, .bordered-right h4:after, .bordered-right h5:after, .bordered-right h6:after, h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bordered-right:after, h5.bordered-rightleft:after, h6.bordered-right:after, .ce_mateContentBox, .ce_ct_contentBox, blockquote {
+    border-color: var(--hc-white) !important;
+  }
+
+  .hljs, .hljs-regexp {
+    background: var(--hc-grey-dark) !important;
+  }
+
+  input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea, textarea {
+    color: var(--hc-white) !important;
+    border-color: var(--hc-white) !important;
+    background: none !important;
+  }
+
+  input::placeholder {
+    color: var(--hc-white) !important;
+  }
+
+  mark.highlight {
+    background: var(--hc-white) !important;
+    color: var(--hc-black) !important;
+  }
+
+  .modal {
+    input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea, textarea {
+      color: var(--hc-black) !important;
+      border-color: var(--hc-black) !important;
+      background: var(--hc-white) !important;
+    }
+
+    .submit {
+      background: var(--hc-black) !important;
+      color: var(--hc-white) !important;
+    }
+
+    .widget.widget-text>label, .widget.widget-textarea>label, .widget.widget-password>label {
+      color: var(--hc-black) !important;
+    }
+  }
+
+  .mod_faqpage {
+    h3 {
+      background: var(--hc-white) !important;
+      color: var(--hc-black) !important;
+    }
+
+    section {
+      background: var(--hc-grey-dark) !important;
+      color: var(--hc-white) !important;
+    }
+  }
+
+  .mod_registration {
+    background: var(--hc-grey-dark) !important;
+  }
+
+  .pagination li a:hover, nav[data-pagination] li a:hover {
+    background: var(--hc-grey-dark) !important;
+    color: var(--hc-white) !important;
+    border-color: var(--hc-grey-dark) !important;
+  }
+
+  .pagination li strong, nav[data-pagination] li strong {
+    background: var(--hc-white) !important;
+    color: var(--hc-black) !important;
+  }
+
+  .slider:not(.mod_newslist) .indicators .indicator-item.active {
+    background: var(--hc-grey-dark) !important;
+  }
+
+  .slider-text-below-image .indicators .indicator-item {
+    background: var(--hc-white) !important;
+    color: var(--hc-black) !important;
+
+    &:before {
+      background: var(--hc-white) !important;
+    }
+
+    &.active {
+      background: var(--hc-grey-dark) !important;
+      color: var(--hc-white) !important;
+
+      &:before {
+        background: var(--hc-grey-dark) !important;
+      }
+    }
+  }
+
+  .submit {
+    background: var(--hc-white) !important;
+    color: var(--hc-black) !important;
+  }
+
+  .subnav li>a, .subnav li>span {
+    background: var(--hc-white) !important;
+    color: var(--hc-black) !important;
+
+    &.active {
+      background: var(--hc-grey-dark) !important;
+      color: var(--hc-white) !important;
+    }
+  }
+
+  table {
+    th, tfoot td {
+      background: var(--hc-black-ter) !important;
+    }
+
+    tr:nth-child(odd) {
+      background: var(--hc-grey-darker) !important;
+    }
+
+    tr:nth-child(even) {
+      background: var(--hc-grey-dark) !important;
+    }
+  }
+
+  .timepicker-analog-display {
+    background: var(--hc-black) !important;
+
+    .btn-flat {
+      background: var(--hc-white) !important;
+      color: var(--hc-black) !important;
+    }
+  }
+
+  .timepicker-canvas line {
+    stroke: var(--hc-black) !important;
+  }
+
+  .timepicker-canvas-bg, .timepicker-canvas-bearing {
+    fill: var(--hc-black) !important;
+  }
+
+  .timepicker-digital-display {
+    background: var(--hc-white) !important;
+
+    span, .timepicker-display-column {
+      color: var(--hc-black) !important;
+    }
+  }
+
+  .timepicker-plate {
+    background: var(--hc-grey-dark) !important;
+  }
+
+  #wrapper .slider.mod_newslist {
+    .list-nav span {
+      border-color: #fff !important;
+    }
+
+    .indicators .indicator-item {
+      &.active {
+        background: var(--hc-white) !important;
+
+        &, * {
+          color: var(--hc-black) !important;
+        }
+
+        &:before, &:after {
+          border-color: var(--hc-white) !important;
+        }
+      }
+
+      &:hover:before, &:hover:after {
+        border-color: var(--hc-grey) !important;
+      }
+
+      &:after {
+        border-color: var(--hc-white) !important;
+      }
+    }
+  }
+
+  #wrapper .slider .slides {
+    background: var(--hc-grey-dark) !important;
+  }
+}
+
+#wrapper .font-size-switcher {
+  margin-left: 15px;
+
+  .btn {
+    background: none;
+    box-shadow: none;
+    padding: 5px;
+    font-size: 16px;
+  }
+}
+
+.wcag {
+  a {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-right: -10px;
+  }
+
+  &.content-text {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contrast-size-switcher {
+    padding: 0 20px;
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .high-contrast .contrast-size-switcher {
+    svg path {
+      fill: var(--hc-white);
+    }
+  }
+
+  .wcag a {
+    margin-right: 0;
+  }
+
+  .wcag-square, .wcag-size {
+    transform: scale(1);
+  }
+
+  #wrapper .font-size-switcher {
+    margin-left: 0;
+
+    .btn {
+      font-size: 26px;
+      padding: 10px;
+    }
+  }
+}

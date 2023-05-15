@@ -2,11 +2,11 @@
 <?php if($this->headline): ?>
   <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
 <?php endif; ?>
-<nav id="mateNavbar<?= $this->id ?>" class="navbar-dropdown <?= $this->class ?> block<?= $this->includeHeadroom ?><?= $this->stuckNavbar ?> <?= $this->navbarType ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<nav id="mateNavbar<?= $this->id ?>" class="navbar-dropdown hc-bg-black-ter <?= $this->class ?> text-decoration-none block<?= $this->includeHeadroom ?><?= $this->stuckNavbar ?> <?= $this->navbarType ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
   <div class="nav-wrapper" <?php if($this->showMobileMenu == 0): ?>style="display:block;"<?php endif; ?>>
 
     <?php if($this->showLogo == 1): ?>
-      <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo">{{theme::content::MATE01/04}}</a>
+      <a href="{{link_url::<?php echo $GLOBALS['objPage']->rootId ?>}}" class="brand-logo" title="{{link_title::<?php echo $GLOBALS['objPage']->rootId ?>}}">{{theme::content::MATE01/04}}</a>
     <?php endif; ?>
 
     <?php if($this->showMobileMenu == 1): ?>
@@ -18,8 +18,12 @@
     </ul>
 
     <?php if($this->showMobileMenu == 1): ?>
-      <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu sidenav <?= $this->level ?>">
+      <ul id="mobile-menu<?= $this->id ?>" class="mobile-menu sidenav hc-bg-black-ter <?= $this->level ?>">
         <?= $this->mobileNav ?>
+        <li>
+          <!-- contrast and size switcher -->
+          {{theme::content::MATE01/06}}
+        </li>
       </ul>
     <?php endif; ?>
 

@@ -1,6 +1,7 @@
 {% extends "@Contao/content_element/hyperlink.html.twig" %}
 
 {% block wrapper %}
-    {% set attributes = attrs(attributes|default).addClass(['teaser']) %}
-    {{ parent() }}
+  {% set attributes = attrs(attributes|default).addClass(['teaser']) %}
+  {% set caption_attributes = attrs(caption_attributes|default).addClass(['hc-bg-white']) %}
+  {{ parent() }}
 {% endblock %}

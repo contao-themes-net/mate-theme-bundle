@@ -60,6 +60,7 @@ class ModuleNewsListMate extends ModuleNewsList
 
                   $( ".slider.mod_newslist .indicator-item" ).each(function( index ) {
                     if(i == index) {
+                        $(this).addClass("hc-bg-grey-darker hc-hover-bg-grey");
                         $(this).append("<span class=\'inner\'></span>");
                         $(this).find(".inner").append("<span class=\'subheadline\'>" + subheadline + "</span>");
                         $(this).find(".inner").append("<span class=\'headline\'>" + headline + "</span>");

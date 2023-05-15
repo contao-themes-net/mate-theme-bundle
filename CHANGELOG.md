@@ -10,6 +10,21 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.2.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.0) – 2023-05-12
+
+- [Added] Add high contrast mode and font size switcher
+- [Fixed] Fix smooth scroll script
+- [Fixed] Add missing title to navbar links
+- [Fixed] Fix links without href
+- [Fixed] Fix frontend preview toolbar
+- [Fixed] list-style-type not correct in ce_text_simplebox_mate text boxes ([#150](https://github.com/contao-themes-net/mate-theme-bundle/issues/150))
+- [Fixed] Fix breadcrumb navigation ([#153](https://github.com/contao-themes-net/mate-theme-bundle/issues/153))
+- [Changed] Optimize headlines order
+- [Changed] Optimize fonts loading
+- [Changed] Optimize news slider images
+- [Removed] Remove unused fonts
+- [Removed] Remove favicon from fe_page_mate template (You can add a favicon in your root page.)
+
 ## [3.1.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.1.0) – 2023-02-09
 
 - [Added] Add sql files for Contao 5.1

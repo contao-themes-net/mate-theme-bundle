@@ -1,6 +1,6 @@
 
 <div class="layout_short arc_<?= $this->archive->id ?> block<?= $this->class ?> col s12 m6">
-  <div class="inner">
+  <div class="inner hc-bg-grey-dark">
 
     <div class="text">
       <?php if ($this->hasMetaFields): ?>
@@ -18,7 +18,7 @@
       </div>
 
       <?php if ($this->hasText || $this->hasTeaser): ?>
-        <a class="more" href="<?= $this->link ?>"><?= $GLOBALS['TL_LANG']['mateTheme']['continueReading'] ?></a>
+        <a class="more text-decoration-none hc-bg-white" href="<?= $this->link ?>"><?= $GLOBALS['TL_LANG']['mateTheme']['continueReading'] ?></a>
       <?php endif; ?>
     </div>
 

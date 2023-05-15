@@ -1,5 +1,5 @@
 <div class="<?= $this->class ?> block simplebox"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-  <div class="inside">
+  <div class="inside hc-bg-grey-dark">
     <?php $this->block('content'); ?>
 
       <?php if ($this->headline): ?>
