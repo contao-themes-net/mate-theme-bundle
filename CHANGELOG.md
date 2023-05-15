@@ -10,6 +10,22 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.20.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.2) – 2023-05-12
+
+- [Fixed] Remove warning in teaser box and parallax element
+- [Fixed] Fix undefined array key access - thx [fritzmg](https://github.com/fritzmg) for PR ([#156](https://github.com/contao-themes-net/mate-theme-bundle/pull/156))
+- [Fixed] Fix navigation permission check - thx [fritzmg](https://github.com/fritzmg) for PR ([#155](https://github.com/contao-themes-net/mate-theme-bundle/pull/155))
+- [Fixed] Add missing title to navbar links
+- [Fixed] Fix smooth scroll script
+- [Fixed] Fix links without href
+- [Fixed] Fix frontend preview toolbar
+- [Fixed] Fix breadcrumb navigation ([#153](https://github.com/contao-themes-net/mate-theme-bundle/issues/153))
+- [Changed] Optimize headlines order
+- [Changed] Optimize fonts loading
+- [Changed] Optimize news slider images
+- [Changed] Change sql files for contao 4.13
+- [Removed] Remove unused fonts
+
 ## [2.20.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.1) – 2023-02-09
 
 - [Changed] Change sql files for Contao 4.13

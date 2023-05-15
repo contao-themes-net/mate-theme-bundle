@@ -1,19 +1,38 @@
 @font-face {
-  font-family: "Lato Light";
-  src: url("/bundles/matetheme/fonts/Lato/Lato-Light.ttf");
   font-display: swap;
+  font-family: 'Lato Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/bundles/matetheme/fonts/Lato/Lato-Light.eot');
+  src: url('/bundles/matetheme/fonts/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'),
+  url('/bundles/matetheme/fonts/Lato/Lato-Light.woff2') format('woff2'),
+  url('/bundles/matetheme/fonts/Lato/Lato-Light.woff') format('woff'),
+  url('/bundles/matetheme/fonts/Lato/Lato-Light.ttf') format('truetype'),
+  url('/bundles/matetheme/fonts/Lato/Lato-Light.svg#Lato') format('svg');
 }
 
 @font-face {
-  font-family: "Lato Regular";
-  src: url("/bundles/matetheme/fonts/Lato/Lato-Regular.ttf");
   font-display: swap;
+  font-family: 'Lato Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/bundles/matetheme/fonts/Lato/Lato-Regular.eot');
+  src: url('/bundles/matetheme/fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/bundles/matetheme/fonts/Lato/Lato-Regular.woff2') format('woff2'),
+  url('/bundles/matetheme/fonts/Lato/Lato-Regular.woff') format('woff'),
+  url('/bundles/matetheme/fonts/Lato/Lato-Regular.ttf') format('truetype'),
+  url('/bundles/matetheme/fonts/Lato/Lato-Regular.svg#Lato') format('svg');
 }
 
 @font-face {
-  font-family: "Old Standard";
-  src: url("/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.ttf");
   font-display: swap;
+  font-family: 'Old Standard';
+  src: url('/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.eot');
+  src: url('/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.woff2') format('woff2'),
+  url('/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.woff') format('woff'),
+  url('/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.ttf') format('truetype'),
+  url('/bundles/matetheme/fonts/Old_Standard_TT/OldStandard-Regular.svg#OldStandardTT') format('svg');
 }
 
 @font-face {
@@ -209,6 +228,17 @@ img {
     background: $mateColorWhite;
     content: "";
     z-index: -1;
+  }
+}
+
+.cto-toolbar {
+  input[type=text]:not(.browser-default) {
+    color: #000;
+    height: inherit;
+  }
+
+  .tl_select {
+    opacity: 1;
   }
 }
 
@@ -602,7 +632,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $mateColor3;
 }
 
-h1 {
+h1, .h1 {
   font-size: 2.2rem;
   margin-top: 0;
   font-family: $font2;
@@ -615,25 +645,32 @@ h2, h3, h4, h5, h6 {
   font-family: $font3;
 }
 
-h2 {
+h2, .h2 {
   font-size: 2rem;
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.7rem;
 }
 
-h4 {
+h4, .h4 {
   font-size: 1.4rem;
 }
 
-h5 {
+h5, .h5 {
   font-size: 1.1rem;
 }
 
-h6 {
+h6, .h6 {
   font-size: 1rem;
 }
+
+.h1 { margin: ($h1-fontsize / 1.5) 0 ($h1-fontsize / 2.5) 0;}
+.h2 { margin: ($h2-fontsize / 1.5) 0 ($h2-fontsize / 2.5) 0;}
+.h3 { margin: ($h3-fontsize / 1.5) 0 ($h3-fontsize / 2.5) 0;}
+.h4 { margin: ($h4-fontsize / 1.5) 0 ($h4-fontsize / 2.5) 0;}
+.h5 { margin: ($h5-fontsize / 1.5) 0 ($h5-fontsize / 2.5) 0;}
+.h6 { margin: ($h6-fontsize / 1.5) 0 ($h6-fontsize / 2.5) 0;}
 
 .bordered-left, .bordered-right {
   h1, h2, h3, h4, h5, h6 {
@@ -882,7 +919,28 @@ header {
   right: 0;
 }
 
-#header .mod_breadcrumb nav {
+nav.mod_breadcrumb {
+  background: $breadcrumb-background;
+  color: $primary-text-color;
+
+  &.block {
+    overflow: hidden;
+  }
+
+  a {
+    color: $breadcrumb-link;
+
+    &:hover {
+      color: $breadcrumb-link-hover;
+    }
+  }
+
+  li.active {
+    padding: 0 15px;
+  }
+}
+
+.mod_breadcrumb nav {
   background: $breadcrumb-background;
   height: inherit;
   line-height: 1.2;
@@ -891,6 +949,10 @@ header {
 
   a {
     color: $breadcrumb-link;
+
+    &:last-child {
+      color: $breadcrumb-link;
+    }
 
     &:hover {
       color: $breadcrumb-link-hover;
@@ -906,6 +968,7 @@ header {
   .col {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
   }
 }
 
@@ -1545,6 +1608,9 @@ nav .brand-logo {
 
     .slides li img {
       background-position: center left;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     li:before {
@@ -1582,7 +1648,7 @@ nav .brand-logo {
       width: 100%;
       height: 80px;
 
-      a {
+      a, span {
         display: inline-block;
         float: left;
         width: 100px;
@@ -2058,6 +2124,7 @@ nav .brand-logo {
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 10px 0;
+    font-size: 1.4rem;
   }
 
   .image_container {
@@ -2529,8 +2596,8 @@ footer.page-footer {
     padding-top: 20px;
   }
 
-  h5 {
-    margin-bottom: 30px;
+  h5, .h5 {
+    margin-bottom: 15px;
     position: relative;
     padding-bottom: 20px;
     color: $footer-primary-color;
@@ -3428,6 +3495,10 @@ mark {
   padding: 20px 0;
   display: flex;
   align-items: center;
+
+  h2 {
+    font-size: 1em;
+  }
 
   p, h2, h3, h4, h5, h6 {
     margin: 0;

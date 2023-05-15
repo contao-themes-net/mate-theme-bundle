@@ -58,14 +58,13 @@ class TeaserBox extends \ContentElement
         }
 
         $this->Template->page = $this->mateTeaserBox_page;
-        $this->Template->picture = \FilesModel::findByUuid($this->singleSRC)->path;
-        $this->Template->metaImg = unserialize(\FilesModel::findByUuid($this->singleSRC)->meta);
         $this->Template->pageText = $this->mateTeaserBox_pageText;
         $this->Template->subheadline = $this->mateTeaserbox_subHeadline;
 
         // add an image
         if ($this->addImage && $this->singleSRC != '')
         {
+            $this->Template->picture = \FilesModel::findByUuid($this->singleSRC)->path;
             $objModel = \FilesModel::findByUuid($this->singleSRC);
             if ($objModel !== null && is_file(\System::getContainer()->getParameter('kernel.project_dir') . '/' . $objModel->path))
             {
