@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.20.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.3) – 2023-06-22
+
+- [Fixed] Fix social feed bug
+
 ## [2.20.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.2) – 2023-05-12
 
 - [Fixed] Remove warning in teaser box and parallax element

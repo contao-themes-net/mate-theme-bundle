@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ContaoThemesNet\MateThemeBundle\Module;
 
 class ModuleNewsListMateSocialFeed extends \Pdir\SocialFeedBundle\Module\ModuleCustomNewslist {
@@ -7,7 +9,7 @@ class ModuleNewsListMateSocialFeed extends \Pdir\SocialFeedBundle\Module\ModuleC
     /**
      * Generate the module
      */
-    protected function compile()
+    protected function compile(): void
     {
         if( strpos($this->customTpl,"mod_newslist_mate_slider") !== false ) {
             if($this->mateSliderHeight == "") $mateSliderHeight = "460";
@@ -66,7 +68,7 @@ class ModuleNewsListMateSocialFeed extends \Pdir\SocialFeedBundle\Module\ModuleC
             ';
         }
 
-        return parent::compile();
+        parent::compile();
     }
 
 }
