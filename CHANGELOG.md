@@ -12,7 +12,7 @@ Types of changes
 
 ## [2.20.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.3) – 2023-06-22
 
-- [Fixed] Fix social feed bug
+- [Fixed] Fix class ModuleNewsListMateSocialFeed
 
 ## [2.20.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.2) – 2023-05-12
 
