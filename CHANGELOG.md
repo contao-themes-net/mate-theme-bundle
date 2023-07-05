@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.20.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.4) – 2023-07-05
+
+- [Fixed] Fix fourth navigation level for touch devices
+
 ## [2.20.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.3) – 2023-06-27
 
 - [Fixed] Fix class ModuleNewsListMateSocialFeed
