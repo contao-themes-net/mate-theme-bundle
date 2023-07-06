@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.2.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.2) – 2023-07-06
+
+- [Fixed] Fix fourth navigation level for touch devices
+- [Fixed] css fix for iphone 6
+
 ## [3.2.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.1) – 2023-06-12
 
 - [Fixed] Fix sql import for Contao 5.1  
@@ -68,6 +73,36 @@ Types of changes
 - [Changed] Update [Materialize](https://github.com/materializecss/materialize) version to 1.1.0
 - [Changed] Update [Headroom.js](https://wicky.nillia.ms/headroom.js/) version to 0.12.0
 - [Removed] Cleanup older Contao SQL files
+
+## [2.20.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.4) – 2023-07-05
+
+- [Fixed] Fix fourth navigation level for touch devices
+
+## [2.20.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.3) – 2023-06-27
+
+- [Fixed] Fix class ModuleNewsListMateSocialFeed
+
+## [2.20.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.2) – 2023-05-12
+
+- [Fixed] Remove warning in teaser box and parallax element
+- [Fixed] Fix undefined array key access - thx [fritzmg](https://github.com/fritzmg) for PR ([#156](https://github.com/contao-themes-net/mate-theme-bundle/pull/156))
+- [Fixed] Fix navigation permission check - thx [fritzmg](https://github.com/fritzmg) for PR ([#155](https://github.com/contao-themes-net/mate-theme-bundle/pull/155))
+- [Fixed] Add missing title to navbar links
+- [Fixed] Fix smooth scroll script
+- [Fixed] Fix links without href
+- [Fixed] Fix frontend preview toolbar
+- [Fixed] Fix breadcrumb navigation ([#153](https://github.com/contao-themes-net/mate-theme-bundle/issues/153))
+- [Changed] Optimize headlines order
+- [Changed] Optimize fonts loading
+- [Changed] Optimize news slider images
+- [Changed] Change sql files for contao 4.13
+- [Removed] Remove unused fonts
+
+## [2.20.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.1) – 2023-02-09
+
+- [Changed] Change sql files for Contao 4.13
+- [Fixed] Remove empty image in news_mate_slider template
+- [Fixed] Fix check permission in navbar module
 
 ## [2.20.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.0) – 2023-01-03
 
