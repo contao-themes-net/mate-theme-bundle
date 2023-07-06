@@ -286,6 +286,7 @@ jQuery(document).ready(function ($) {
 
         $(this).addClass('touch-active');
         $(this).closest('.dropdown-content').prev().addClass('touch-active');
+        $(this).closest('ul').parents().parents().prev().addClass('touch-active');
         $(this).toggleClass('open');
         e.preventDefault();
         e.stopPropagation();
