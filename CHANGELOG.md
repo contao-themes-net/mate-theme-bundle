@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.2.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.3) – 2023-08-02
+
+- [Fixed] Fix sql files
+
 ## [3.2.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.2) – 2023-07-06
 
 - [Fixed] Fix fourth navigation level for touch devices
