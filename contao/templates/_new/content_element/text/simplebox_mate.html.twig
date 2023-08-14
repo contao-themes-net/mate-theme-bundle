@@ -1,0 +1,30 @@
+{% extends "@Contao/content_element/text.html.twig" %}
+
+{% block wrapper %}
+  {% set attributes = attrs(attributes|default).addClass(['simplebox']) %}
+  {{ parent() }}
+{% endblock %}
+
+{%- block inner %}
+  {% block content %}
+    <div class="inside hc-bg-grey-dark">
+    {% if headline.text %}
+      {% block headline_component %}
+        {% set headline = headline|default(_context) %}
+        {% set tag_name = headline.tag_name|default('h1') %}
+        {% set headline_attributes = attrs(headline_attributes|default).addClass(['title']) %}
+
+        <{{ tag_name }}{% block headline_attributes %}{{ headline_attributes|default }}{% endblock %}>
+        {%- block headline_inner %}
+          {%- apply spaceless %}
+            {{ headline.text|insert_tag_raw }}
+          {% endapply -%}
+        {% endblock -%}
+        </{{ tag_name }}>
+      {% endblock %}
+    {% endif %}
+
+      {{ parent() }}
+    </div>
+  {% endblock %}
+{% endblock %}
