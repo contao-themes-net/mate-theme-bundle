@@ -10,6 +10,13 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.2.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.4) – 2023-08-14
+
+- [Added] Add simplebox twig template
+- [Fixed] Fix button width
+- [Fixed] Update migrations
+- [Removed] Remove unused templates
+
 ## [3.2.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.3) – 2023-08-02
 
 - [Fixed] Fix sql files
