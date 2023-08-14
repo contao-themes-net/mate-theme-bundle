@@ -62,6 +62,8 @@ class Version300Update extends AbstractMigration
                 OR customTpl = 'ce_image_mate_headerimage'
                 OR customTpl = 'ce_youtube_mate'
                 OR customTpl = 'ce_hyperlink_teaser_mate'
+                OR customTpl = 'ce_text_simplebox_mate'
+                OR customTpl = 'ce_table_mate'
                 OR galleryTpl = 'gallery_carousel'
                 OR galleryTpl = 'gallery_carousel_large'
                 OR galleryTpl = 'gallery_carousel_large_with_indicators'
@@ -102,6 +104,24 @@ class Version300Update extends AbstractMigration
                 customTpl = 'content_element/hyperlink/teaser_mate'
             WHERE
                 customTpl = 'ce_hyperlink_teaser_mate'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/text/simplebox_mate'
+            WHERE
+                customTpl = 'ce_text_simplebox_mate'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = ''
+            WHERE
+                customTpl = 'ce_table_mate'
         ");
 
         $this->connection->executeStatement("
