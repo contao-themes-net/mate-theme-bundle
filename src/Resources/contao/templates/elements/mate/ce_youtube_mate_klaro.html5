@@ -1,0 +1,7 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+  <div class="responsive-video">
+    <iframe<?= $this->size ?> data-src="<?= $this->src ?>" data-name="youtube-video" allowfullscreen></iframe>
+  </div>
+<?php $this->endblock(); ?>
