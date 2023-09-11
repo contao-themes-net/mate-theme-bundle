@@ -13,6 +13,7 @@ Types of changes
 ## [2.21.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.21.0) – 2023-09-11
 
 - [Added] Add teaserbox card element
+- [Changed] Change sql files
 
 ## [2.20.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.5) – 2023-08-23
 
