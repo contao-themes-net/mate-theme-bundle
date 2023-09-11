@@ -3809,6 +3809,89 @@ div.klaro {
 }
 
 /* ========================== *
+ *   MATE Cards               *
+ * ========================== */
+
+.mate-card {
+  &.ce_mateTeaserBox {
+    margin: 0;
+  }
+
+  .card-panel {
+    margin: 0;
+    height: 100%;
+    padding: 30px;
+    box-shadow: none;
+
+    &[class*="-text"] {
+      h1, h2, h3, h4, h5, h6, a {
+        color: inherit;
+      }
+    }
+
+    &.has-button {
+      padding-bottom: 70px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+  }
+
+  .image a:hover {
+    opacity: .8;
+  }
+
+  .pageLink a {
+    margin-bottom: 30px;
+    left: 30px;
+  }
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    .image_container.float_left,.image_container.float_right {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 601px) {
+    .image-right {
+      order: 2;
+    }
+
+    .image a {
+      height: 100%;
+    }
+
+    .image_container {
+      height: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &.ce_mateTeaserBox .pageLink a {
+      margin-bottom: 30px;
+      left: 30px;
+      position: absolute;
+    }
+  }
+}
+
+/* ========================== *
  *    IE Fixes                *
  * ========================== */
 .ie .subnav {
