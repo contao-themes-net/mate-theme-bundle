@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.2.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.5) – 2023-09-13
+
+- [Fixed] Fix countTo element for Contao 5.2
+
 ## [3.2.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.4) – 2023-08-14
 
 - [Added] Add simplebox twig template
@@ -84,6 +88,16 @@ Types of changes
 - [Changed] Update [Materialize](https://github.com/materializecss/materialize) version to 1.1.0
 - [Changed] Update [Headroom.js](https://wicky.nillia.ms/headroom.js/) version to 0.12.0
 - [Removed] Cleanup older Contao SQL files
+
+## [2.21.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.21.0) – 2023-09-11
+
+- [Added] Add teaserbox card element
+- [Changed] Change sql files
+
+## [2.20.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.5) – 2023-08-23
+
+- [Added] Add youtube template for klaro consent manager
+- [Added] Add root page field in mate navbar module
 
 ## [2.20.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.20.4) – 2023-07-05
 
