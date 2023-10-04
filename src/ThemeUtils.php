@@ -40,16 +40,16 @@ class ThemeUtils
 
     public static function getCombinedStylesheet(null|bool|string $theme = null): string
     {
-        self::$scssFolder = self::$themeFolder.self::$scssFolder;
+        $scssFolder = self::$themeFolder.self::$scssFolder;
 
         // for multi domain setup
         if (null !== $theme) {
-            self::$scssFolder = 'files/mate/sass/'.$theme.'/';
+            $scssFolder = 'files/mate/sass/'.$theme.'/';
         }
 
         // add stylesheets
         $combiner = new Combiner();
-        $combiner->add(self::$scssFolder.'mate.scss');
+        $combiner->add($scssFolder.'mate.scss');
 
         return $combiner->getCombinedFile();
     }
