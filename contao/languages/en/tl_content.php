@@ -11,6 +11,7 @@ $GLOBALS['TL_LANG']['tl_content']['mateContentBox_customTpl'] = ['custom templat
 $GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_customTpl'] = ['custom template','Here you can choose a custom template.'];
 $GLOBALS['TL_LANG']['tl_content']['mateParallaxElement_customTpl'] = ['custom template','Here you can choose a custom template.'];
 $GLOBALS['TL_LANG']['tl_content']['mateTeaserbox_subHeadline'] = ['subheadline','Here you can enter a subheadline.'];
+$GLOBALS['TL_LANG']['tl_content']['mateTeaserBox_class'] = ['Card CSS class','Here you can add CSS classes for the card element, e.g. to change the background colour or text colour (e.g. "red lighten-1").'];
 $GLOBALS['TL_LANG']['tl_content']['mateParallaxElement_text'] = ['Text','Here you can enter a text for the parallax element.'];
 $GLOBALS['TL_LANG']['tl_content']['mateParallaxElement_height'] = ['Height in px','Here you can enter a height in px for the parallax element.'];
 $GLOBALS['TL_LANG']['tl_content']['mate_background_image'] = ['Background image','Here you can choose a background image.'];

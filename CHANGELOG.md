@@ -10,8 +10,9 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.2.6](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.6) – 2023-10-04
+## [3.3.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.3.0) – 2023-12-04
 
+- [Added] Add teaserbox card element
 - [Fixed] Fix styling for 404 page
 
 ## [3.2.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.5) – 2023-09-13
