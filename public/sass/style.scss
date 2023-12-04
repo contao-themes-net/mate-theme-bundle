@@ -1896,9 +1896,13 @@ nav .brand-logo {
     display: none;
   }
 
-  .slides li img {
-    height: 350px;
-    vertical-align: bottom;
+  .slides li {
+    height: 100%;
+
+    img {
+      height: 350px;
+      vertical-align: bottom;
+    }
   }
 
   p {
