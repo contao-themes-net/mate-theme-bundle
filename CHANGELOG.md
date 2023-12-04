@@ -14,6 +14,7 @@ Types of changes
 
 - [Added] Add teaserbox card element
 - [Fixed] Fix styling for 404 page
+- [Fixed] Fix slider height
 
 ## [3.2.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.5) – 2023-09-13
 
