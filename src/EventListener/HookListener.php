@@ -36,6 +36,7 @@ class HookListener
     public function __invoke(string $insertTag, bool $useCache, string $cachedValue, array $flags, array $tags, array $cache, int $_rit, int $_cnt): bool|string
     {
         $insertTag = strtolower($insertTag);
+
         if (preg_match('/^countto([bsrl]?)\:\:/', $insertTag)) {
             return $this->replaceCountToInsertTag($insertTag);
         }

@@ -8,7 +8,7 @@ use Contao\DataContainer;
  * Add palette to tl_content
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},type,headline;{text_legend},text,mateTeaserbox_subHeadline;{image_legend},addImage;{mateTeaserBoxSettings},mateTeaserBox_page,mateTeaserBox_pageText;{template_legend:hide},mateTeaserBox_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},type,headline;{text_legend},text,mateTeaserbox_subHeadline;{image_legend},addImage;{mateTeaserBoxSettings},mateTeaserBox_page,mateTeaserBox_pageText,mateTeaserBox_class;{template_legend:hide},mateTeaserBox_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateContentBoxSettings},mateContentBox_page,mateContentBox_pageText;{template_legend:hide},mateContentBox_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
@@ -183,6 +183,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateModal_class'] = array
     'eval' => array('tl_class'=>'w50'),
     'sql' => "text NULL"
 );
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_class'] = [
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['tl_class'=>'w50'],
+    'sql' => "text NULL"
+];
 
 class tl_content_mate extends Backend {
     /**
