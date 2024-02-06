@@ -3057,10 +3057,6 @@ input[type="file"] {
     fill: $select-caret-color;
     pointer-events: none;
   }
-
-  select {
-    visibility: hidden;
-  }
 }
 
 .submit {
