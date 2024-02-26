@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * mate theme for Contao Open Source CMS
  *
- * Copyright (C) 2023 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2024 pdir / digital agentur <develop@pdir.de>
  *
  * @package    contao-themes-net/mate-theme-bundle
  * @link       https://github.com/contao-themes-net/mate-theme-bundle

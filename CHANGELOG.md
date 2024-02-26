@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.3.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.3.1) – 2024-02-26
+
+- [Fixed] Fix select field validation
+
 ## [3.3.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.3.0) – 2023-12-04
 
 - [Added] Add teaserbox card element
