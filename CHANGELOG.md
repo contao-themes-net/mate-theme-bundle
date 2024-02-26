@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.3.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.3.1) – 2024-02-06
+## [3.3.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.3.1) – 2024-02-26
 
 - [Fixed] Fix select field validation
 
