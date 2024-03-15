@@ -176,7 +176,7 @@ jQuery(document).ready(function ($) {
     /* ===================== *
     *   Suche				 *
     * ====================== */
-    $(".search a").click(function () {
+    $(".search a").click(function (e) {
         if ($('.search-box').hasClass("active")) {
             $('.search-box').removeClass('active');
             $('div').remove('.overlay');
@@ -184,6 +184,7 @@ jQuery(document).ready(function ($) {
             $('.search-box').addClass('active');
             $('body').append('<div class="overlay active"></div>');
         }
+        e.preventDefault();
     });
 
     $(document).click(function (event) {
