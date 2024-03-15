@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.21.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.21.3) – 2024-03-15
+
+- [Fixed] Click on header search icon starts reload of start page ([#183](https://github.com/contao-themes-net/mate-theme-bundle/issues/183))
+- [Changed] Change search box styling
+
 ## [2.21.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.21.2) – 2024-02-26
 
 - [Fixed] Fix select field validation
