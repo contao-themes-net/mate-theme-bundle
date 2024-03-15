@@ -385,7 +385,7 @@ code, pre {
   font-size: 1em;
 }
 
-.content-list, .content-text {
+.content-list, .content-text, .accordion {
   ul:not(.browser-default) {
     padding-left: 0;
 
@@ -409,7 +409,7 @@ code, pre {
   @extend .content-list;
 }
 
-.content-list, .content-text {
+.content-list, .content-text, .accordion {
   ol {
     padding-left: 15px;
   }
@@ -846,7 +846,8 @@ header {
     background: $navbar-bg-color;
     border: none;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
+    border-top: 1px solid $mateColor6;
   }
 
   .submit {
@@ -863,7 +864,7 @@ header {
   }
 
   .widget-text {
-    width: 50%;
+    max-width: 400px;
     display: inline-block;
     float: none;
     vertical-align: top;
@@ -4302,6 +4303,7 @@ div.klaro {
       width: 70%;
       margin-right: 0;
       float: left;
+      max-width: inherit;
     }
 
     .widget-submit {
