@@ -104,5 +104,26 @@ class TeaserBox extends ContentElement
             $this->Template->target = ' target="_blank"';
             $this->Template->rel = ' rel="noreferrer noopener"';
         }
+
+        // teaserbox plus
+        if ($this->mateTeaserBoxPlus) {
+            $this->Template->mateTeaserBoxPlus = $this->mateTeaserBoxPlus;
+            $this->Template->backgroundText = $this->mateTeaserBoxPlus_text;
+            $this->Template->fontSize = $this->mateTeaserBoxPlus_size;
+
+            $styles = [];
+
+            if ($this->mateTeaserBoxPlus_bg) {
+                $styles[] = 'background:'.$this->mateTeaserBoxPlus_bg.'';
+            }
+
+            if ($this->mateTeaserBoxPlus_color) {
+                $styles[] = 'color:'.$this->mateTeaserBoxPlus_color.'';
+            }
+
+            if (0 < count($styles)) {
+                $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text { '.html_entity_decode(implode(';', $styles)).' }</style>';
+            }
+        }
     }
 }

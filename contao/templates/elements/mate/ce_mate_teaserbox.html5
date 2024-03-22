@@ -1,11 +1,17 @@
-<div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<div class="<?= $this->class ?> mateTeaserBox<?= $this->id ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
 	<div class="inside hc-bg-grey-dark">
     <?php $this->block('content'); ?>
 
-      <?php if ($this->addImage): ?>
+      <?php if ($this->addImage && !$this->backgroundText): ?>
         <?php if($this->page != ""): ?><a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>" title="<?= $this->pageText ?>" <?= $this->target ?><?= $this->rel ?>><?php endif; ?>
           <?php $this->insert('image', $this->arrData); ?>
         <?php if($this->page != ""): ?></a><?php endif; ?>
+      <?php endif; ?>
+
+      <?php if ($this->mateTeaserBoxPlus): ?>
+        <div class="background-text <?= $this->fontSize ?>">
+          <span><?= $this->backgroundText ?></span>
+        </div>
       <?php endif; ?>
 
       <?php if($this->subheadline): ?><div class="subheadline"><?= $this->subheadline ?></div><?php endif; ?>

@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.4.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.0) – 2024-xx-xx
+
+- [Added] Add teaserbox plus feature (use text with background instead of image)
+
 ## [3.3.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.3.2) – 2024-03-15
 
 - [Fixed] Click on header search icon starts reload of start page ([#183](https://github.com/contao-themes-net/mate-theme-bundle/issues/183))

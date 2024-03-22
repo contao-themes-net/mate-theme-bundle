@@ -23,7 +23,7 @@ use Contao\BackendModule;
 
 class MateThemeSetup extends BackendModule
 {
-    public const VERSION = '3.3.2';
+    public const VERSION = '3.4.0';
 
     protected $strTemplate = 'be_mateTheme_setup';
 
