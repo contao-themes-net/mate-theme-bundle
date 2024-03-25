@@ -2105,16 +2105,23 @@ nav .brand-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px;
     font-size: 3rem;
     text-align: center;
     line-height: 1.2;
     font-weight: 700;
     cursor: default;
-    background: $button-floating-background;
-    color: $button-flat-color;
     position: relative;
     overflow: hidden;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      &:hover span {
+        background: $button-floating-background-hover;
+      }
+    }
 
     span {
       position: absolute;
@@ -2126,6 +2133,10 @@ nav .brand-logo {
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 25px;
+      background: $button-floating-background;
+      color: $button-flat-color;
+      transition: all .3s;
     }
 
     &.small {
@@ -2142,6 +2153,18 @@ nav .brand-logo {
 
     &.veryLarge {
       font-size: 4rem;
+    }
+  }
+
+  .image {
+    position: relative;
+
+    .background-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
     }
   }
 

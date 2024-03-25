@@ -19,7 +19,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['mateTextBackgroundElement'] = '{ty
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateModal'] = '{type_legend},type;{modal_link_legend},mateModal_linkText,mateModal_linkClass;{modal_headline_legend},headline;{modal_text_legend},mateModal_text,mateModal_class;{template_legend:hide},mateModal_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'mateTeaserBoxPlus';
-$GLOBALS['TL_DCA']['tl_content']['subpalettes']['mateTeaserBoxPlus'] = 'mateTeaserBoxPlus_text,mateTeaserBoxPlus_color,mateTeaserBoxPlus_bg,mateTeaserBoxPlus_size';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['mateTeaserBoxPlus'] = 'mateTeaserBoxPlus_text,mateTeaserBoxPlus_color,mateTeaserBoxPlus_bg,mateTeaserBoxPlus_colorHover,mateTeaserBoxPlus_bgHover,mateTeaserBoxPlus_size';
 
 /**
  * Add fields to tl_content
@@ -204,21 +204,35 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus'] = [
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_bg'] = [
     'exclude' => true,
     'inputType' => 'text',
-    'eval' => ['tl_class'=>'w25'],
+    'eval' => ['tl_class'=>'w33'],
+    'sql' => "text NULL"
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_bgHover'] = [
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['tl_class'=>'w33'],
     'sql' => "text NULL"
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_text'] = [
     'exclude' => true,
     'inputType' => 'text',
-    'eval' => ['tl_class'=>'w25'],
+    'eval' => ['tl_class'=>'w33'],
     'sql' => "text NULL"
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_color'] = [
     'exclude' => true,
     'inputType' => 'text',
-    'eval' => ['tl_class'=>'w25'],
+    'eval' => ['tl_class'=>'w33'],
+    'sql' => "text NULL"
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_colorHover'] = [
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['tl_class'=>'w33'],
     'sql' => "text NULL"
 ];
 
@@ -226,7 +240,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_size'] = [
     'exclude' => true,
     'inputType' => 'select',
     'options' => &$GLOBALS['TL_LANG']['tl_content']['mateTeaserBoxPlus_size']['options'],
-    'eval' => ['chosen'=>true, 'tl_class'=>'w25'],
+    'eval' => ['chosen'=>true, 'tl_class'=>'w33'],
     'sql' => "varchar(64) NOT NULL default 'normal'"
 ];
 
