@@ -119,11 +119,11 @@ class TeaserBox extends ContentElement
             $styles = [];
 
             if ($this->mateTeaserBoxPlus_bg) {
-                $styles[] = 'background:'.$this->mateTeaserBoxPlus_bg;
+                $styles[] = 'background:'.$this->mateTeaserBoxPlus_bg.' !important';
             }
 
             if ($this->mateTeaserBoxPlus_color) {
-                $styles[] = 'color:'.$this->mateTeaserBoxPlus_color;
+                $styles[] = 'color:'.$this->mateTeaserBoxPlus_color.' !important';
             }
 
             if (0 < count($styles)) {
@@ -131,11 +131,11 @@ class TeaserBox extends ContentElement
             }
 
             if ($this->mateTeaserBoxPlus_bgHover) {
-                $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text a:hover span { background:'.html_entity_decode($this->mateTeaserBoxPlus_bgHover).'; }</style>';
+                $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text a:hover span { background:'.html_entity_decode($this->mateTeaserBoxPlus_bgHover).' !important; }</style>';
             }
 
             if ($this->mateTeaserBoxPlus_colorHover) {
-                $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text a:hover span { color:'.html_entity_decode($this->mateTeaserBoxPlus_colorHover).'; }</style>';
+                $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text a:hover span { color:'.html_entity_decode($this->mateTeaserBoxPlus_colorHover).' !important; }</style>';
             }
         }
     }

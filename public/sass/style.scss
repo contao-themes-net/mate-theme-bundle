@@ -2165,6 +2165,14 @@ nav .brand-logo {
       height: 100%;
       top: 0;
       left: 0;
+
+      span {
+        background: rgba($button-floating-background, .5);
+
+        &:hover {
+          background: rgba($button-floating-background, .8);
+        }
+      }
     }
   }
 
