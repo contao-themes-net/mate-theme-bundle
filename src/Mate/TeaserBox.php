@@ -126,7 +126,7 @@ class TeaserBox extends ContentElement
                 $styles[] = 'color:'.$this->mateTeaserBoxPlus_color.' !important';
             }
 
-            if (0 < count($styles)) {
+            if (0 < \count($styles)) {
                 $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text span { '.html_entity_decode(implode(';', $styles)).' }</style>';
             }
 
