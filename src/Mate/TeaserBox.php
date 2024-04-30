@@ -104,5 +104,39 @@ class TeaserBox extends ContentElement
             $this->Template->target = ' target="_blank"';
             $this->Template->rel = ' rel="noreferrer noopener"';
         }
+
+        // teaserbox plus
+        if ($this->mateTeaserBoxPlus) {
+            $this->Template->mateTeaserBoxPlus = $this->mateTeaserBoxPlus;
+            $this->Template->backgroundText = $this->mateTeaserBoxPlus_text;
+            $this->Template->fontSize = $this->mateTeaserBoxPlus_size;
+
+            $cssClasses = [];
+            $cssClasses[] = $this->mateTeaserBoxPlus_size;
+
+            $this->Template->backgroundTextClasses = implode(' ', $cssClasses);
+
+            $styles = [];
+
+            if ($this->mateTeaserBoxPlus_bg) {
+                $styles[] = 'background:'.$this->mateTeaserBoxPlus_bg.' !important';
+            }
+
+            if ($this->mateTeaserBoxPlus_color) {
+                $styles[] = 'color:'.$this->mateTeaserBoxPlus_color.' !important';
+            }
+
+            if (0 < \count($styles)) {
+                $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text span { '.html_entity_decode(implode(';', $styles)).' }</style>';
+            }
+
+            if ($this->mateTeaserBoxPlus_bgHover) {
+                $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text a:hover span { background:'.html_entity_decode($this->mateTeaserBoxPlus_bgHover).' !important; }</style>';
+            }
+
+            if ($this->mateTeaserBoxPlus_colorHover) {
+                $GLOBALS['TL_BODY'][] = '<style>.mateTeaserBox'.$this->id.' .background-text a:hover span { color:'.html_entity_decode($this->mateTeaserBoxPlus_colorHover).' !important; }</style>';
+            }
+        }
     }
 }

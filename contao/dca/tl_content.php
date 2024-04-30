@@ -8,7 +8,7 @@ use Contao\DataContainer;
  * Add palette to tl_content
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},type,headline;{text_legend},text,mateTeaserbox_subHeadline;{image_legend},addImage;{mateTeaserBoxSettings},mateTeaserBox_page,mateTeaserBox_pageText,mateTeaserBox_class;{template_legend:hide},mateTeaserBox_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mateTeaserBox'] = '{type_legend},type,headline;{text_legend},text,mateTeaserbox_subHeadline;{image_legend},addImage;{mateTeaserBoxSettings},mateTeaserBox_page,mateTeaserBox_pageText,mateTeaserBox_class;{mateTeaserBoxPlus_legend},mateTeaserBoxPlus;{template_legend:hide},mateTeaserBox_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateContentBox'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateContentBoxSettings},mateContentBox_page,mateContentBox_pageText;{template_legend:hide},mateContentBox_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
@@ -17,6 +17,9 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['mateParallaxElement'] = '{type_leg
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateTextBackgroundElement'] = '{type_legend},type,headline;{text_legend},text;{image_legend},addImage;{mateTextBackground_settings},mate_background_image;{template_legend:hide},mateTextBackgroundElement_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['mateModal'] = '{type_legend},type;{modal_link_legend},mateModal_linkText,mateModal_linkClass;{modal_headline_legend},headline;{modal_text_legend},mateModal_text,mateModal_class;{template_legend:hide},mateModal_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
+
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'mateTeaserBoxPlus';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['mateTeaserBoxPlus'] = 'mateTeaserBoxPlus_text,mateTeaserBoxPlus_color,mateTeaserBoxPlus_bg,mateTeaserBoxPlus_colorHover,mateTeaserBoxPlus_bgHover,mateTeaserBoxPlus_size';
 
 /**
  * Add fields to tl_content
@@ -189,6 +192,56 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBox_class'] = [
     'inputType' => 'text',
     'eval' => ['tl_class'=>'w50'],
     'sql' => "text NULL"
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus'] = [
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => ['tl_class'=>'w50 clr', 'submitOnChange'=>true],
+    'sql' => ['type' => 'boolean', 'default' => false]
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_bg'] = [
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['tl_class'=>'w33'],
+    'sql' => "text NULL"
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_bgHover'] = [
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['tl_class'=>'w33'],
+    'sql' => "text NULL"
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_text'] = [
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['tl_class'=>'w33'],
+    'sql' => "text NULL"
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_color'] = [
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['tl_class'=>'w33'],
+    'sql' => "text NULL"
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_colorHover'] = [
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['tl_class'=>'w33'],
+    'sql' => "text NULL"
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mateTeaserBoxPlus_size'] = [
+    'exclude' => true,
+    'inputType' => 'select',
+    'options' => &$GLOBALS['TL_LANG']['tl_content']['mateTeaserBoxPlus_size']['options'],
+    'eval' => ['chosen'=>true, 'tl_class'=>'w33'],
+    'sql' => "varchar(64) NOT NULL default 'normal'"
 ];
 
 class tl_content_mate extends Backend {
