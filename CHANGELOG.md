@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.21.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.12.4) – 2024-06-17
+
+- [Changed] Update sql files (remove TMG from imprint)
+
 ## [2.21.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.21.3) – 2024-03-15
 
 - [Fixed] Click on header search icon starts reload of start page ([#183](https://github.com/contao-themes-net/mate-theme-bundle/issues/183))
