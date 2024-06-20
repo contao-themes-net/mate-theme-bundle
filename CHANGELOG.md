@@ -10,7 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.4.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.0) – 2024-xx-xx
+## [3.4.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.1) – 2024-06-17
+
+- [Changed] Update sql files (remove TMG from imprint)
+
+## [3.4.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.0) – 2024-04-30
 
 - [Added] Add teaserbox plus feature (use text with background instead of image)
 
