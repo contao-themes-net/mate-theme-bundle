@@ -2093,11 +2093,87 @@ nav .brand-logo {
 }
 
 .ce_mateTeaserBox, .ce_ct_teaserBox {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 
   &.block {
     overflow: visible;
+  }
+
+  .background-text {
+    aspect-ratio: 450 / 270;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 700;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      &:hover span {
+        background: $button-floating-background-hover;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      background: $button-floating-background;
+      color: $button-flat-color;
+      transition: all .3s;
+    }
+
+    &.small {
+      font-size: 2rem;
+    }
+
+    &.verySmall {
+      font-size: 1.5rem;
+    }
+
+    &.large {
+      font-size: 3.5rem;
+    }
+
+    &.veryLarge {
+      font-size: 4rem;
+    }
+  }
+
+  .image {
+    position: relative;
+
+    .background-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      span {
+        background: rgba($button-floating-background, .5);
+
+        &:hover {
+          background: rgba($button-floating-background, .8);
+        }
+      }
+    }
   }
 
   .pageLink {
@@ -4226,6 +4302,21 @@ div.klaro {
   .ce_gallery.block>ul li.col_first {
     clear: none;
   }
+
+  /* Teaserbox */
+  .ce_mateTeaserBox, .ce_ct_teaserBox {
+    .background-text {
+      font-size: 2.5rem;
+
+      &.small {
+        font-size: 1.5rem;
+      }
+
+      &.large, &.veryLarge {
+        font-size: 2.5rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -4570,6 +4661,21 @@ div.klaro {
       width: 50%;
     }
   }
+
+  /* Teaserbox */
+  .ce_mateTeaserBox, .ce_ct_teaserBox {
+    .background-text {
+      font-size: 1.5rem;
+
+      &.small, &.verySmall {
+        font-size: 1rem;
+      }
+
+      &.large, &.veryLarge {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -4801,6 +4907,21 @@ div.klaro {
   @for $i from 2 through 12 {
     .ce_gallery .cols_#{$i} > li {
       width: 100%;
+    }
+  }
+
+  /* Teaserbox */
+  .ce_mateTeaserBox, .ce_ct_teaserBox {
+    .background-text {
+      font-size: 2.5rem;
+
+      &.small, &.verySmall {
+        font-size: 2rem;
+      }
+
+      &.large, &.veryLarge {
+        font-size: 2.5rem;
+      }
     }
   }
 }
