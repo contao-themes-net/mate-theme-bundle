@@ -142,7 +142,7 @@ img {
 
 #wrapper {
   background: $pageBackground;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 601px) {
@@ -383,7 +383,7 @@ code, pre {
   font-size: 1.1rem;
 }
 
-.ce_list, .ce_text, .accordion {
+.ce_list, .ce_text, .accordion, .ce_mateTeaserBox, ce_mateContentBox {
   ul:not(.browser-default) {
     padding-left: 0;
 
@@ -3737,6 +3737,11 @@ mark {
     filter: blur(2px);
     background-size: cover;
     background-repeat: no-repeat;
+    transform: scale(1.05);
+  }
+
+  .image_container.float_right {
+    margin-top: 0;
   }
 
   .inside {
@@ -4909,19 +4914,6 @@ div.klaro {
       width: 100%;
     }
   }
-
-  /* Teaserbox */
-  .ce_mateTeaserBox, .ce_ct_teaserBox {
-    .background-text {
-      font-size: 2.5rem;
-
-      &.small, &.verySmall {
-        font-size: 2rem;
-      }
-
-      &.large, &.veryLarge {
-        font-size: 2.5rem;
-      }
-    }
-  }
 }
+
+@import 'article-bg';

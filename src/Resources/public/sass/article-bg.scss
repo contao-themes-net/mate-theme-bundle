@@ -1,0 +1,40 @@
+div.mod_article.bg {
+  position: relative;
+  padding: 50px 0;
+  margin: 50px 0;
+  z-index: 1;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    left: calc(0px - ((100vw - calc(100%)) / 2));
+    z-index: -1;
+  }
+
+  > {
+    .ce_text {
+      h1, h2, h3, h4, h5, h6 {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    .mod_article.bg.#{$color_name}.#{$color_type}:before {
+      background: $color_value !important;
+    }
+  }
+}
