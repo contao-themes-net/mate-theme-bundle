@@ -12,7 +12,7 @@ Types of changes
 
 ## [3.4.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.2) – 2024-09-13
 
-- [Fixed] Fix news enclosures
+- [Fixed] Fix news enclosures ([#190](https://github.com/contao-themes-net/mate-theme-bundle/issues/190))
 
 ## [3.4.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.1) – 2024-06-17
 
