@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.4.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.2) – 2024-09-13
+
+- [Fixed] Fix news enclosures
+
 ## [3.4.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.1) – 2024-06-17
 
 - [Changed] Update sql files (remove TMG from imprint)

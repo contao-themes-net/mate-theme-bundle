@@ -17,10 +17,14 @@
   <?php endif; ?>
 
   <?php if ($this->enclosure): ?>
-    <div class="enclosure">
-      <?php foreach ($this->enclosure as $enclosure): ?>
-        <p><?= Image::getHtml($enclosure['icon'], '', 'class="mime_icon"') ?> <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a></p>
-      <?php endforeach; ?>
+    <div class="content-downloads">
+      <ul class="enclosure">
+        <?php foreach ($this->enclosure as $enclosure): ?>
+        <li class="download-element ext-<?= $enclosure['extension'] ?>">
+          <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+        </li>
+        <?php endforeach; ?>
+      </ul>
     </div>
   <?php endif; ?>
 
@@ -35,3 +39,12 @@ if ($this->hasText) {
 }
 
 $this->addSchemaOrg($schemaOrg);
+
+if ($this->figure) {
+  $primaryImage = [
+    '@type' => 'WebPage',
+    'primaryImageOfPage' => $this->figure->getSchemaOrgData(),
+  ];
+
+  $this->addSchemaOrg($primaryImage);
+}

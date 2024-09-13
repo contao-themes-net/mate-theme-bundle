@@ -31,13 +31,15 @@
   <?php endif; ?>
 
   <?php if ($this->enclosure): ?>
-    <ul class="enclosure">
-      <?php foreach ($this->enclosure as $enclosure): ?>
-        <li class="download-element ext-<?= $enclosure['extension'] ?>">
-          <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
-        </li>
-      <?php endforeach; ?>
-    </ul>
+    <div class="content-downloads">
+      <ul class="enclosure">
+        <?php foreach ($this->enclosure as $enclosure): ?>
+          <li class="download-element ext-<?= $enclosure['extension'] ?>">
+            <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
   <?php endif; ?>
 
 </div>
@@ -46,7 +48,16 @@
 $schemaOrg = $this->getSchemaOrgData();
 
 if ($this->hasDetails) {
-$schemaOrg['description'] = $this->rawHtmlToPlainText($this->details);
+  $schemaOrg['description'] = $this->rawHtmlToPlainText($this->details);
 }
 
 $this->addSchemaOrg($schemaOrg);
+
+if ($this->figure) {
+  $primaryImage = [
+    '@type' => 'WebPage',
+    'primaryImageOfPage' => $this->figure->getSchemaOrgData(),
+  ];
+
+  $this->addSchemaOrg($primaryImage);
+}
