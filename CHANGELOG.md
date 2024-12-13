@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.4.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.3) – 2024-12-13
+
+- [Fixed] Use css pseudo class instead of html to prevent google from inserting material icons in site links 
+
 ## [3.4.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.2) – 2024-09-13
 
 - [Fixed] Fix news enclosures ([#190](https://github.com/contao-themes-net/mate-theme-bundle/issues/190))

@@ -1479,6 +1479,14 @@ nav .brand-logo {
   }
 }
 
+.desktop-menu a.submenu:after {
+  font-family: 'Material Icons';
+  content: "\e5cf";
+  -webkit-font-feature-settings: 'liga';
+  color: $mateColor2;
+  padding-left: 5px;
+}
+
 /* ========================== *
  *   Slider und Headerbild    *
  * ========================== */
