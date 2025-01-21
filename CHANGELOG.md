@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.5.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.0) – 2025-01-21
+
+- [Added] Add toplink variables (use `$toplink-background`, `$toplink-color`, `$toplink-background-hover` and `$toplink-color-hover` in _custom_variables.scss)
+
 ## [3.4.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.3) – 2024-12-13
 
 - [Fixed] Use css pseudo class instead of html to prevent google from inserting material icons in site links 

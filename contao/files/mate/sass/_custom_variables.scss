@@ -15,6 +15,10 @@
 /*     MATE Theme Variables      */
 /* ============================= */
 
+//$small-screen: 600px;
+//$medium-screen: 992px;
+//$large-screen: 1200px;
+
 /* Colors */
 //$primary-color: $mateColor2;
 //$secondary-color: $mateColor3;
@@ -39,6 +43,12 @@
 //$button-flat-color: $secondary-text-color;
 //$button-floating-background: $mateColor2;
 //$button-floating-background-hover: $mateColor3;
+
+/* Toplink */
+//$toplink-background: $mateColor6;
+//$toplink-color: $mateColorBlack;
+//$toplink-background-hover: $button-floating-background-hover;
+//$toplink-color-hover: $mateColorBlack;
 
 /* Breadcrumb */
 //$breadcrumb-background: rgba($mateColor2,.08);
@@ -161,6 +171,10 @@
 //$table-odd-background: $mateColorWhite;
 //$table-even-background: $mateColorGreyLight;
 //$table-border-color: $mateColorGreyDark;
+
+/* Dropdown */
+//$dropdown-bg-color: $mateColorWhite;
+//$dropdown-color: $primary-text-color;
 
 /* Formulare */
 //$input-background-color: $boxes-background;

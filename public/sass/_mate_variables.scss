@@ -42,6 +42,12 @@ $button-flat-color: $secondary-text-color;
 $button-floating-background: $mateColor2;
 $button-floating-background-hover: $mateColor3;
 
+/* Toplink */
+$toplink-background: $mateColor6;
+$toplink-color: $mateColorBlack;
+$toplink-background-hover: $button-floating-background-hover;
+$toplink-color-hover: $mateColorBlack;
+
 /* Breadcrumb */
 $breadcrumb-background: rgba($mateColor2,.08);
 $breadcrumb-link: $primary-link-font-color;
