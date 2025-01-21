@@ -1,0 +1,23 @@
+/* Buttons */
+$button-flat-color: $mateColorWhite;
+
+/* Header and Navigation */
+$navbar-stuck-active-color: $mateColorWhite;
+$navbar-stuck-dropdown-hover-color: $mateColorWhite;
+
+/* News Slider */
+$slider-arrows-color: $mateColorWhite;
+$slider-button-color: $mateColorWhite;
+
+/* Footer */
+$footer-newsletter-color: $mateColorWhite;
+$footer-news-events-time-color: $mateColorGreyDark;
+
+/* Toplink */
+$toplink-color: $mateColorWhite;
+$toplink-color-hover: $mateColorWhite;
+
+/* Custom styles for more contrast */
+.layout_latest .subheadline, .layout_teaser .subheadline {
+  padding: 5px;
+}

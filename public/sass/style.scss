@@ -2848,8 +2848,14 @@ footer.page-footer {
   }
 }
 
-footer .container {
-  padding: 0 0.75rem;
+footer {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .mod_subscribe label.invisible {
+    display: none;
+  }
 }
 
 #footer {
