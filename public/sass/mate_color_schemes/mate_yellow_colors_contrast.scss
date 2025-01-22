@@ -11,27 +11,31 @@
 /* ============================= */
 
 $dark-color-scheme: null;
+$yellow-color-scheme: 'yellow';
+$other-color-scheme: null;
 
 /* Colors */
-$mateColor1: #807500;
-$mateColor2: #706700;
-$mateColor3: #615900;
-$mateColor4: #4D4400;
-$mateColor6: #8A6E0A;
+$mateColor1: #FFEAAE;
+$mateColor2: #FFD753;
+$mateColor3: #CCA500;
+$mateColor4: #5F5C4D;
+$mateColor6: #48433C;
 
-$mateColorWhite: #fff;
+$primary-text-color: #000;
+$secondary-text-color: #000;
+$mateColor2-text-color: #706700;
+$mateColor3-text-color: #615900;
+$mateColor4-text-color: #4D4400;
+
+$boxes-background: #F9F9F7;
+$boxes-text-color: $primary-text-color;
+
+$mateColorWhite: $boxes-background;
 $mateColorBlack: #000;
 $mateColorGreyLight: #f5f5f5;
-$mateColorGreyDark: #E3E3E3;
-$pageBackground: #f4f8f0;
+$mateColorGreyDark: #e6e6e6;
+$pageBackground: #fff;
 
-/* Text Colors */
-$primary-text-color: #000;
-$secondary-text-color: #fff;
-$mateColor2-text-color: $mateColor2;
-$mateColor3-text-color: $mateColor3;
-$mateColor4-text-color: $mateColor4;
-
-/* Boxes */
-$boxes-background: $mateColorWhite;
-$boxes-text-color: $primary-text-color;
+/* Content Box */
+$contentbox-first-background: $boxes-background;
+$contentbox-second-background: #f2f2f2;

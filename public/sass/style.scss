@@ -2303,6 +2303,10 @@ nav .brand-logo {
 }
 
 .layout_latest, .layout_teaser {
+  figure {
+    background: #333;
+  }
+
   .subheadline {
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2321,8 +2325,8 @@ nav .brand-logo {
       right: 30px;
       font-size: 2.25em;
       line-height: 36px;
-      background: $mateColor2;
-      color: #fff;
+      background: $button-floating-background;
+      color: $button-flat-color;
       padding: 11px 5px 10px 3px;
       border-radius: 100%;
       width: 60px;
@@ -2333,7 +2337,7 @@ nav .brand-logo {
       -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
       &:hover {
-        background: $mateColor3;
+        background: $button-floating-background-hover;
       }
     }
   }
@@ -2424,7 +2428,7 @@ nav[data-pagination] {
   li {
     a, span, strong {
       display: block;
-      border: 1px solid $mateColor6;
+      border: 1px solid $pagination-border-color;
       padding: 0 10px;
       font-size: .75em;
       line-height: 30px;
@@ -2438,20 +2442,20 @@ nav[data-pagination] {
     }
 
     span, strong, .active {
-      background: $mateColor6;
-      color: #fff;
+      background: $pagination-active-background-color;
+      color: $pagination-active-color;
     }
 
     a:hover {
-      background: $mateColor1;
-      border: 1px solid $mateColor1;
+      background: $pagination-hover-background-color;
+      border: 1px solid $pagination-border-hover-color;
     }
   }
 
   &.block p {
     float: right;
     font-size: .875em;
-    color: $mateColor3-text-color;
+    color: $pagination-text-color;
     padding-top: 10px;
     margin: 0;
   }
@@ -2602,7 +2606,7 @@ nav.pagination li, nav[data-pagination] li {
   }
 
   .label {
-    color: #cbcbcb;
+    color: $mateColor6;
     background: $calendar-background;
   }
 
@@ -3236,7 +3240,7 @@ textarea {
 }
 
 input::placeholder {
-  color: rgba($footer-input-color, 0.7);
+  color: rgba($input-label-color, 0.7);
 }
 
 /* ========================== *
@@ -3318,8 +3322,8 @@ input::placeholder {
 
 .mod_faqpage {
   h3 {
-    background: $mateColor2;
-    color: #fff;
+    background: $faq-page-background-color;
+    color: $faq-page-color;
     padding: 7px 15px;
   }
 
@@ -3633,6 +3637,7 @@ mark {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #333;
 
   &:after{
     content:'';
@@ -3646,9 +3651,9 @@ mark {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    background: rgba($mateColor2, .9);
+    background: $parallax-headline-background-color;
     text-transform: inherit;
-    color: $mateColorWhite;
+    color: $parallax-headline-color;
     display: inline-block;
     width: auto;
     padding: 12px 30px 5px;
@@ -3656,7 +3661,7 @@ mark {
     font-family: $font2;
 
     a {
-      color: $mateColorWhite;
+      color: $parallax-link-color;
     }
   }
 
@@ -3687,16 +3692,20 @@ mark {
       left: 0;
       background: none;
       height: inherit;
-      color: #fff;
+      color: $parallax-link-color;
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: underline;
       font-size: .875em;
+
+      &:hover {
+        color: $parallax-link-hover-color;
+      }
     }
   }
 
   p {
-    color: #fff;
+    color: $parallax-text-color;
     margin: 10px 0 0;
     padding: 0;
     font-size: 1.125em;
@@ -3721,6 +3730,8 @@ mark {
  *   Text with Backgrounds    *
  * ========================== */
 .ce_mateTextBackgroundElement {
+  background: #333;
+
   .bg-image {
     position: absolute;
     top: 0;
@@ -3731,6 +3742,7 @@ mark {
     background-position: center;
     -webkit-filter: blur(2px);
     filter: blur(2px);
+    transform: scale(1.1);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -3849,8 +3861,8 @@ mark {
     left: 40px;
     bottom: 40px;
     width: calc(100% - 80px);
-    background: $mateColor2;
-    color: $mateColorWhite;
+    background: $hyperlink-teaser-background-color;
+    color: $hyperlink-teaser-color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3895,6 +3907,7 @@ div.klaro {
     height: 100%;
     padding: 30px;
     box-shadow: none;
+    color: #000;
 
     &[class*="-text"] {
       h1, h2, h3, h4, h5, h6, a {
@@ -4008,14 +4021,6 @@ div.klaro {
 @media (max-width:1024px) {
   #wrapper .slider.mod_newslist {
     margin: 0 0 100px;
-  }
-}
-
-.sidenav {
-  background: $navbar-mobile-background;
-
-  li>a {
-    color: $navbar-mobile-color;
   }
 }
 
@@ -4148,6 +4153,7 @@ div.klaro {
   .sidenav {
     width: 70%;
     padding: 30px 0;
+    background: $navbar-mobile-background;
 
     li > a {
       font-weight: 700;
@@ -4157,6 +4163,7 @@ div.klaro {
       padding: 0 0 0 20px;
       width: 75%;
       font-size: .875em;
+      color: $navbar-mobile-color;
     }
 
     li {

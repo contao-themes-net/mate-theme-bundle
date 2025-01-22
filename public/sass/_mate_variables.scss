@@ -68,6 +68,9 @@ $download-faqlist-background-even: $mateColorWhite;
 $download-faqlist-color-even: $mateColor2-text-color;
 $download-faqlist-color-even-hover: $mateColor3-text-color;
 
+$faq-page-background-color: $mateColor2;
+$faq-page-color: $mateColorWhite;
+
 /* Events and News */
 $calendar-background: $mateColorWhite;
 $calendar-border-color: $mateColorWhite;
@@ -75,7 +78,14 @@ $calendar-text-color: $mateColor2-text-color;
 
 $news-date-color: $mateColor6;
 $news-category-color: #fff;
+
 $pagination-color: $mateColor4-text-color;
+$pagination-active-color: $mateColorWhite;
+$pagination-active-background-color: $mateColor6;
+$pagination-border-color: $mateColor6;
+$pagination-hover-background-color: $mateColor1;
+$pagination-border-hover-color: $mateColor1;
+$pagination-text-color: $mateColor3-text-color;
 
 /* Footer */
 $footer-text-color: $secondary-text-color;
@@ -190,3 +200,14 @@ $select-background-color: $dropdown-bg-color;
 $select-color: $dropdown-color;
 $select-border: 2px solid $mateColor1;
 $select-caret-color: $mateColor2-text-color;
+
+/* Hyperlink teaser */
+$hyperlink-teaser-background-color: $mateColor2;
+$hyperlink-teaser-color: $mateColorWhite;
+
+/* Parallax element */
+$parallax-headline-background-color: rgba($mateColor2, .9);
+$parallax-headline-color: $mateColorWhite;
+$parallax-text-color: $mateColorWhite;
+$parallax-link-color: $mateColorWhite;
+$parallax-link-hover-color: $primary-link-hover-font-color;

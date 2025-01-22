@@ -1,52 +1,76 @@
-@if $dark-color-scheme == null {
-  /* Buttons */
+@if $other-color-scheme != null {
   $button-flat-color: $mateColorWhite;
-
-  /* Header and Navigation */
   $navbar-stuck-active-color: $mateColorWhite;
   $navbar-stuck-dropdown-hover-color: $mateColorWhite;
-
-  /* News Slider */
   $slider-arrows-color: $mateColorWhite;
   $slider-button-color: $mateColorWhite;
-
-  /* Footer */
   $footer-newsletter-color: $mateColorWhite;
   $footer-news-events-time-color: $mateColorGreyDark;
-
-  /* Toplink */
   $toplink-color: $mateColorWhite;
   $toplink-color-hover: $mateColorWhite;
+  $pagination-hover-background-color: $mateColorGreyLight;
+  $select-label-color: $primary-text-color;
+  $subnav-dropdown-color: $mateColorWhite;
+
+  .slider-text-below-image .indicators li.indicator-item {
+    color: #fff;
+  }
 }
 
 // only dark color scheme
 @if $dark-color-scheme != null {
-  /* Buttons */
   $button-flat-color: #fff;
-
-  /* Header and Navigation */
   $navbar-stuck-active-color: #fff;
   $navbar-stuck-dropdown-hover-color: #fff;
   $navbar-search-color: #fff;
   $navbar-mobile-color: #fff;
   $navbar-mobile-dropdown-color: #fff;
-
-  /* News Slider */
   $slider-arrows-color: #fff;
   $slider-button-color: #fff;
   $slider-navigation-subheadline-color: #fff;
-
-  /* Footer */
   $footer-newsletter-color: #fff;
   $footer-news-events-time-color: #fff;
-
-  /* Toplink */
   $toplink-color: #000;
   $toplink-color-hover: #fff;
+  $hyperlink-teaser-color: #fff;
+  $table-even-background: lighten($boxes-background, 10%);
+  $parallax-headline-color: #fff;
+  $parallax-text-color: #fff;
+  $parallax-link-color: #fff;
+  $faq-page-color: #fff;
+
+  .ce_mateTeaserBox.mate-card .inside.card-panel {
+    background: #fff;
+  }
+
+  .sidenav.mobile-menu {
+    background: $navbar-mobile-background;
+  }
+
+  .slider-text-below-image .indicators li.indicator-item {
+    color: #fff;
+  }
 }
 
-/* Custom styles for more contrast */
-.layout_latest .subheadline, .layout_teaser .subheadline {
-  padding: 5px;
-  background: rgba($mateColor2, .5);
+// only yellow color scheme
+@if $yellow-color-scheme != null {
+  $button-flat-color: $mateColorBlack;
+  $footer-newsletter-color: $mateColorBlack;
+  $footer-news-events-time-color: $mateColorBlack;
+  $slider-arrows-border-color: $mateColor2;
+  $slider-arrows-color: $mateColor2;
+  $toplink-color: $mateColorWhite;
+  $subnav-hover-color: $mateColorBlack;
+  $subnav-active-color: $mateColorBlack;
+  $select-label-color: $primary-text-color;
+  $input-border: 2px solid $mateColor2-text-color;
+  $input-focus-border: 2px solid $mateColor3;
+  $select-border: 2px solid $mateColor2-text-color;
+  $faq-page-color: $mateColorBlack;
+  $hyperlink-teaser-color: $mateColorBlack;
+
+  .slider-text-below-image .indicators li.indicator-item,
+  .slider-text-below-image .indicators li.indicator-item.active {
+    color: #000;
+  }
 }
