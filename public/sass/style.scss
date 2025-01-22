@@ -395,7 +395,7 @@ code, pre {
 
       &:before {
         content: "»";
-        color: $mateColor2;
+        color: $mateColor2-text-color;
         font-weight: 700;
         padding-right: 15px;
         position: absolute;
@@ -574,7 +574,7 @@ code {
 }
 
 .material-icons {
-  color: $mateColor2;
+  color: $mateColor2-text-color;
 }
 
 figure {
@@ -597,7 +597,7 @@ figure {
 
 h1, h2, h3, h4, h5, h6 {
   position: relative;
-  color: $mateColor3;
+  color: $mateColor3-text-color;
 }
 
 h1, .h1 {
@@ -605,7 +605,7 @@ h1, .h1 {
   margin-top: 0;
   font-family: $font2;
   font-weight: 400;
-  color: $mateColor2;
+  color: $mateColor2-text-color;
   padding: 10px 0;
 }
 
@@ -643,7 +643,7 @@ h6, .h6 {
 .bordered-left, .bordered-right {
   h1, h2, h3, h4, h5, h6 {
     padding-bottom: 25px;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
   }
 
   h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
@@ -664,11 +664,11 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6 {
   &.bordered-left, &.bordered-right {
     padding-bottom: 25px;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
   }
   &.bordered-right {
     padding-bottom: 25px;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
     text-align: right;
   }
 }
@@ -823,7 +823,7 @@ header {
   align-items: center;
 
   a {
-    color: $mateColor2;
+    color: $mateColor2-text-color;
     cursor: pointer;
   }
 }
@@ -1376,7 +1376,7 @@ nav {
 
     strong {
       background: $mateColor1;
-      color: $mateColor3;
+      color: $mateColor3-text-color;
     }
   }
 
@@ -1483,7 +1483,7 @@ nav .brand-logo {
   font-family: 'Material Icons';
   content: "\e5cf";
   -webkit-font-feature-settings: 'liga';
-  color: $mateColor2;
+  color: $mateColor2-text-color;
   padding-left: 5px;
 }
 
@@ -1653,7 +1653,7 @@ nav .brand-logo {
         cursor: pointer;
 
         &:hover {
-          color: $mateColor2;
+          color: $mateColor2-text-color;
         }
 
         i {
@@ -1788,7 +1788,7 @@ nav .brand-logo {
       margin: 0 0 5px;
       text-align: left;
       font-size: .688em;
-      color: $mateColor3;
+      color: $mateColor3-text-color;
     }
   }
 
@@ -2012,7 +2012,7 @@ nav .brand-logo {
 
 .ce_text_simplebox_mate ul:not(.browser-default) li:before {
   content:"»";
-  color: $mateColor2;
+  color: $mateColor2-text-color;
   font-weight: 700;
   padding-right: 15px;
   margin-left: 15px;
@@ -2221,7 +2221,7 @@ nav .brand-logo {
   }
 
   .subheadline {
-    color: $mateColor2;
+    color: $mateColor2-text-color;
     margin: 10px 25px 0;
     text-transform: uppercase;
     font-size: .8em;
@@ -2383,12 +2383,12 @@ nav .brand-logo {
     text-transform: inherit;
     margin: 0;
     padding: 10px 0;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
     position: relative;
     @extend .bordered-left;
 
     a {
-      color: $mateColor2;
+      color: $mateColor2-text-color;
     }
   }
 
@@ -2451,7 +2451,7 @@ nav[data-pagination] {
   &.block p {
     float: right;
     font-size: .875em;
-    color: $mateColor3;
+    color: $mateColor3-text-color;
     padding-top: 10px;
     margin: 0;
   }
@@ -2499,7 +2499,7 @@ nav.pagination li, nav[data-pagination] li {
       right: 0;
       border-radius: 0;
       background: none;
-      color: $mateColor2;
+      color: $mateColor2-text-color;
       box-shadow: none;
       font-weight: 400;
       text-transform: inherit;
@@ -2507,7 +2507,7 @@ nav.pagination li, nav[data-pagination] li {
 
       &:hover {
         background: none;
-        color: $mateColor3;
+        color: $mateColor3-text-color;
       }
     }
 
@@ -2578,7 +2578,7 @@ nav.pagination li, nav[data-pagination] li {
     border: 1px solid $calendar-border-color;
 
     a {
-      color: $mateColor2;
+      color: $mateColor2-text-color;
       margin-top: 5px;
       display: block;
     }
@@ -2673,7 +2673,7 @@ table.calendar, table.minicalendar {
 
   time {
     background: none;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
     padding: 0;
   }
 }
@@ -3333,7 +3333,7 @@ input::placeholder {
 
   .info {
     padding: 15px;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
     font-weight: 700;
     font-size: .875em;
     margin: 0;
@@ -3387,7 +3387,7 @@ input::placeholder {
   .url {
     margin: 0;
     padding-top: 0;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
     word-wrap: break-word;
   }
 }
@@ -3414,6 +3414,10 @@ mark {
 }
 
 /* Modal */
+
+.modal {
+  background: $boxes-background;
+}
 
 .mod_mateModal, .ce_mateModal {
   margin-bottom: 20px;
@@ -3451,7 +3455,7 @@ mark {
   .title {
     font-family: $font2;
     font-weight: 400;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
   }
 
   .inner {
@@ -3460,7 +3464,7 @@ mark {
   }
 
   .fa {
-    color: $mateColor2;
+    color: $mateColor2-text-color;
   }
 
   .social_feed_element .content-text {
@@ -3529,7 +3533,7 @@ mark {
       left: 0;
       top: -5px;
       font-size: 1.5em;
-      color: $mateColor2;
+      color: $mateColor2-text-color;
     }
   }
 }
@@ -3587,14 +3591,14 @@ mark {
     font-size: 2.125em;
     font-weight: 700;
     padding: 10px 0 0;
-    color: $mateColor2;
+    color: $mateColor2-text-color;
     display: block;
     line-height: 40px;
     font-family: $font2;
   }
 
   p {
-    color: $mateColor2;
+    color: $mateColor2-text-color;
   }
 
   .material-icons {
@@ -4007,6 +4011,14 @@ div.klaro {
   }
 }
 
+.sidenav {
+  background: $navbar-mobile-background;
+
+  li>a {
+    color: $navbar-mobile-color;
+  }
+}
+
 @media #{$medium-and-down} {
   .pagination li.prev, .pagination li.next {
     width: initial;
@@ -4135,11 +4147,9 @@ div.klaro {
 
   .sidenav {
     width: 70%;
-    background: $navbar-mobile-background;
     padding: 30px 0;
 
     li > a {
-      color: $navbar-mobile-color;
       font-weight: 700;
       line-height: 18px;
       display: flex;

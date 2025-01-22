@@ -13,25 +13,26 @@
 $dark-color-scheme: null;
 
 /* Colors */
-$mateColor1: #1E8549;
-$mateColor2: #186D3B;
-$mateColor3: #12542E;
-$mateColor4: #0D3F21;
-$mateColor6: #43564A;
+$mateColor1: #276882;
+$mateColor2: #1C4F69;
+$mateColor3: #0B2F47;
+$mateColor4: #153142;
+$mateColor6: #4F5463;
 
-$mateColorWhite: #fff;
-$mateColorBlack: #000;
-$mateColorGreyLight: #f5f5f5;
-$mateColorGreyDark: #E3E3E3;
-$pageBackground: #f4f8f0;
-
-/* Text Colors */
 $primary-text-color: #000;
 $secondary-text-color: #fff;
 $mateColor2-text-color: $mateColor2;
 $mateColor3-text-color: $mateColor3;
 $mateColor4-text-color: $mateColor4;
 
-/* Boxes */
-$boxes-background: $mateColorWhite;
+$boxes-background: #F2F3F7;
 $boxes-text-color: $primary-text-color;
+
+$mateColorWhite: $boxes-background;
+$mateColorBlack: #000;
+$mateColorGreyLight: #ececec;
+$pageBackground: #fff;
+
+/* Content Box */
+$contentbox-first-background: $boxes-background;
+$contentbox-second-background: $mateColorGreyLight;
