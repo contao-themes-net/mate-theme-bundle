@@ -4,7 +4,7 @@
       <a class="
         <?php if($item['isActive']): ?> active <?php endif; ?><?php if ($item['class']) echo $item['class']; ?> valign"
         href="<?= $item['href'] ?: './' ?>"
-        title="<?= $item['pageTitle'] ?: $item['title'] ?>"
+        <?php if ($item['pageTitle'] !== ''): ?> title="<?= $item['pageTitle'] ?>"<?php endif; ?>
         <?php if ($item['accesskey']) echo ' accesskey="' . $item['accesskey'] . '"'; ?>
         <?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"' ; ?>>
         <?= $item['link'] ?>

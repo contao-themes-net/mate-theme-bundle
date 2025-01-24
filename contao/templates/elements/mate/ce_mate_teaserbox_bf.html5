@@ -1,0 +1,41 @@
+<div class="<?= $this->class ?> mateTeaserBox<?= $this->id ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+	<div class="inside hc-bg-grey-dark">
+    <?php $this->block('content'); ?>
+
+    <?php if ($this->addImage && $this->mateTeaserBoxPlus): ?>
+      <div class="image">
+    <?php endif; ?>
+
+    <?php if ($this->addImage): ?>
+      <?php $this->insert('image', $this->arrData); ?>
+    <?php endif; ?>
+
+    <?php if ($this->mateTeaserBoxPlus): ?>
+      <div class="background-text <?= $this->backgroundTextClasses ?>">
+        <span><?= $this->backgroundText ?></span>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($this->addImage && $this->mateTeaserBoxPlus): ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if($this->subheadline): ?><div class="subheadline"><?= $this->subheadline ?></div><?php endif; ?>
+
+    <?php if ($this->headline): ?>
+      <<?= $this->hl ?>>
+        <?= $this->headline ?>
+      </<?= $this->hl ?>>
+    <?php endif; ?>
+
+    <?= $this->text ?>
+
+    <?php if($this->pageText != ""): ?>
+      <div class="pageLink">
+        <a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>" class="hc-bg-white"><?= $this->pageText ?></a>
+      </div>
+    <?php endif; ?>
+
+    <?php $this->endblock(); ?>
+	</div>
+</div>

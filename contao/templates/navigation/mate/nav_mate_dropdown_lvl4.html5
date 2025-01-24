@@ -2,7 +2,7 @@
 <?php if(is_array($this->items)): ?>
   <ul id="nav<?= $this->id ?>dropdown<?= $this->itemId ?>" class="<?= $this->level ?> dropdown-content hc-bg-black-ter">
     <?php foreach ($this->items as $item): ?>
-    <li id="page<?= $item['id'] ?>" class="hc-bg-black-ter hc-hover-bg-white hc-hover-text-black<?php if (strpos($item['class'], 'active') !== false): ?> hc-bg-white<?php endif; ?><?php if ($item['class']): ?> <?= $item['class'] ?><?php endif; ?>"><a href="<?= $item['href'] ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']): ?> class="<?= $item['class'] ?>"<?php endif; ?><?php if ('' !== $item['accesskey']): ?> accesskey="<?= $item['accesskey'] ?>"<?php endif; ?><?= $item['target'] ?><?= $item['rel'] ?? '' ?><?php if (!empty($item['subitems'])): ?> aria-haspopup="true"<?php endif; ?>><?= $item['link'] ?></a></li>
+    <li id="page<?= $item['id'] ?>" class="hc-bg-black-ter hc-hover-bg-white hc-hover-text-black<?php if (strpos($item['class'], 'active') !== false): ?> hc-bg-white<?php endif; ?><?php if ($item['class']): ?> <?= $item['class'] ?><?php endif; ?>"><a href="<?= $item['href'] ?>"<?php if ($item['pageTitle'] !== ''): ?> title="<?= $item['pageTitle'] ?>"<?php endif; ?><?php if ($item['class']): ?> class="<?= $item['class'] ?>"<?php endif; ?><?php if ('' !== $item['accesskey']): ?> accesskey="<?= $item['accesskey'] ?>"<?php endif; ?><?= $item['target'] ?><?= $item['rel'] ?? '' ?><?php if (!empty($item['subitems'])): ?> aria-haspopup="true"<?php endif; ?>><?= $item['link'] ?></a></li>
     <?php endforeach; ?>
   </ul>
 <?php endif; ?>
