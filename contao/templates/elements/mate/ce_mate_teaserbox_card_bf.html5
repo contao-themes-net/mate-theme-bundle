@@ -1,0 +1,29 @@
+<div class="<?= $this->class ?> block mate-card"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+  <div class="row">
+
+    <?php if ($this->addImage): ?>
+      <div class="col s12 m6 image<?php if('right' === $this->floating): ?> image-right<?php endif; ?>">
+          <?php $this->insert('image', $this->arrData); ?>
+      </div>
+    <?php endif; ?>
+
+    <div class="col s12<?php if ($this->addImage): ?> m6<?php endif; ?>">
+      <div class="inside card-panel<?php if($this->mateTeaserBox_class): ?> <?= $this->mateTeaserBox_class ?><?php endif; ?><?php if('' != $this->pageText): ?> has-button<?php endif; ?>">
+        <?php if ($this->headline): ?>
+          <<?= $this->hl ?>>
+            <?= $this->headline ?>
+          </<?= $this->hl ?>>
+        <?php endif; ?>
+
+        <?= $this->text ?>
+
+        <?php if('' != $this->pageText): ?>
+          <div class="pageLink">
+            <a href="<?php if(is_numeric($this->page)): ?>{{link_url::<?= $this->page ?>}}<?php else: ?><?= $this->page ?><?php endif; ?>"><?= $this->pageText ?></a>
+          </div>
+        <?php endif; ?>
+      </div>
+    </div>
+
+  </div>
+</div>

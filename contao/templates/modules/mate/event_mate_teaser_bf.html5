@@ -1,0 +1,46 @@
+
+<?php /*if ($this->header): ?>
+  <div class="header<?= $this->classHeader ?>">
+    <?php if ($this->firstDay): ?><span class="day"><?= $this->firstDay ?>, </span><?php endif; ?><span class="date"><?= $this->firstDate ?></span>
+  </div>
+<?php endif; */ ?>
+
+<div class="event layout_teaser<?= $this->classUpcoming ?> col s12 m6">
+  <div class="inner hc-bg-grey-dark">
+
+	  <?php if ($this->addImage): ?>
+	    <figure class="image_container<?= $this->floatClass ?>"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
+
+	      <?php $this->insert('picture_default', $this->picture); ?>
+
+	      <?php if ($this->caption): ?>
+	        <figcaption class="caption"><?= $this->caption ?></figcaption>
+	      <?php endif; ?>
+
+	    </figure>
+	  <?php endif; ?>
+
+	  <div class="text">
+      <h2><?= $this->title ?></h2>
+
+		  <p class="time"><time datetime="<?= $this->datetime ?>" class="hc-bg-black-ter"><?= str_replace("–"," – ",$this->date) ?><?php if ($this->time): ?>, <?= $this->time ?><?php endif; ?></time></p>
+
+		  <div class="teaser">
+		    <?= $this->teaser ?>
+		  </div>
+
+		  <?php if ($this->hasDetails): ?>
+		  	<a class="more" href="<?= $this->href ?>"><?= $this->more ?></a>
+		  <?php endif; ?>
+	  </div>
+
+  </div>
+</div>
+
+<?php
+
+// This template is used as a news list template by default, so we only add
+// JSON-LD data in case this is a news article without a reader
+if (!$this->hasReader) {
+	$this->addSchemaOrg($this->getSchemaOrgData());
+}
