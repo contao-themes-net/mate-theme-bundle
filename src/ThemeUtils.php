@@ -50,11 +50,11 @@ class ThemeUtils
         // add stylesheets
         $combiner = new Combiner();
 
-        // Check for v1 and use old stylesheets
-        if (\file_exists(self::getRootDir().'/files/mate/.v1')) {
-            $combiner->add($scssFolder.'mate.scss');
-        } else {
+        // Check for v2 or use old stylesheets
+        if (\file_exists(self::getRootDir().'/files/mate/.v2')) {
             $combiner->add($scssFolder.'v2/mate.scss');
+        } else {
+            $combiner->add($scssFolder.'mate.scss');
         }
 
         return $combiner->getCombinedFile();
