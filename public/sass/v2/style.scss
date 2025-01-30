@@ -73,16 +73,16 @@
   font-feature-settings: 'liga';
 }
 
-::-moz-selection { background: $mateColor2; color: #fff; }
-::selection { background: $mateColor2; color: #fff; }
+::-moz-selection { background: var(--mateColor2); color: #fff; }
+::selection { background: var(--mateColor2); color: #fff; }
 
 html {
   font-size: 16px;
-  color: $primary-text-color;
+  color: var(--primary-text-color);
 }
 
 body {
-  font-family: $font1;
+  font-family: var(--font1);
   position: relative;
 
   &#top {
@@ -91,7 +91,7 @@ body {
 }
 
 button, input, optgroup, select, textarea {
-  font-family: $font1;
+  font-family: var(--font1);
 }
 
 .container .row {
@@ -202,11 +202,11 @@ img {
   }
 
   .indicators .indicator-item {
-    background-color: $mateColor2;
+    background-color: var(--mateColor2);
     float: none;
 
     &.active {
-      background-color: $mateColor3;
+      background-color: var(--mateColor3);
     }
   }
 
@@ -226,7 +226,7 @@ img {
     top: 0;
     width: calc(100vw - 10px);
     height: 100%;
-    background: $mateColorWhite;
+    background: var(--mateColorWhite);
     content: "";
     z-index: -1;
   }
@@ -250,7 +250,7 @@ a {
   color: var(--primary-link-font-color);
 
   &:hover {
-    color: $primary-link-hover-font-color;
+    color: var(--primary-link-hover-font-color);
   }
 }
 
@@ -271,12 +271,12 @@ a {
 
 .btn {
   a {
-    color: $secondary-text-color;
+    color: var(--secondary-text-color);
   }
 }
 
 a.btn:hover {
-  color: $button-flat-color;
+  color: var(--button-flat-color);
 }
 
 #wrapper {
@@ -303,7 +303,7 @@ a.btn:hover {
     color: #fff;
 
     &:hover {
-      color: $primary-link-hover-font-color;
+      color: var(--primary-link-hover-font-color);
     }
   }
 }
@@ -334,13 +334,13 @@ a.btn:hover {
     text-align: right;
     a {
       @extend .btn;
-      color: $mateColorWhite;
-      background: $primary-color;
+      color: var(--mateColorWhite);
+      background: var(--primary-color);
       &:hover {
-        background: $secondary-color;
+        background: var(--secondary-color);
       }
       &.active {
-        background: $secondary-color;
+        background: var(--secondary-color);
       }
     }
   }
@@ -395,7 +395,7 @@ code, pre {
 
       &:before {
         content: "»";
-        color: $mateColor2-text-color;
+        color: var(--mateColor2)-text-color;
         font-weight: 700;
         padding-right: 15px;
         position: absolute;
@@ -419,20 +419,20 @@ code, pre {
   @extend .collapsible;
   margin: 0;
   box-shadow: none;
-  border-color: $accordion-border-color;
+  border-color: var(--accordion-border-color);
 
   .ui-accordion-header {
     @extend .collapsible-header;
-    background: $accordion-headline-background;
+    background: var(--accordion-headline-background);
     position: relative;
-    color: $accordion-headline-color;
+    color: var(--accordion-headline-color);
     overflow: hidden;
     border-bottom: 0;
     transition: all .3s;
     padding: 1rem 2.5rem 1rem 1rem;
 
     &:hover {
-      background: lighten($accordion-headline-background, 10%);
+      background: lighten(var(--accordion-headline-background), 10%);
     }
 
     i {
@@ -466,8 +466,8 @@ code, pre {
     @extend .collapsible-body;
     padding: 5px 1rem;
     border-bottom: 0;
-    background: $accordion-content-background;
-    color: $accordion-content-color;
+    background: var(--accordion-content-background);
+    color: var(--accordion-content-color);
   }
 
   ul {
@@ -483,20 +483,20 @@ table {
   th, td {
     padding: 7px 15px;
     border-radius: 0;
-    border: 1px solid $table-border-color;
+    border: 1px solid var(--table-border-color);
   }
 
   th, tfoot td {
-    background: $mateColor2;
-    color: $secondary-text-color;
+    background: var(--mateColor2);
+    color: var(--secondary-text-color);
   }
 
   tr:nth-child(odd) {
-    background: $table-odd-background;
+    background: var(--table-odd-background);
   }
 
   tr:nth-child(even) {
-    background: $table-even-background;
+    background: var(--table-even-background);
   }
 }
 
@@ -505,25 +505,25 @@ table {
   padding: 5px;
 
   &:nth-child(even) {
-    background: $download-faqlist-background-even;
+    background: var(--download-faqlist-background-even);
 
     a {
-      color: $download-faqlist-color-even;
+      color: var(--download-faqlist-color-even);
 
       &:hover {
-        color: $download-faqlist-color-even-hover;
+        color: var(--download-faqlist-color-even-hover);
       }
     }
   }
 
   &:nth-child(odd) {
-    background: $download-faqlist-background-odd;
+    background: var(--download-faqlist-background-odd);
 
     a {
-      color: $download-faqlist-color-odd;
+      color: var(--download-faqlist-color-odd);
 
       &:hover {
-        color: $download-faqlist-color-odd-hover;
+        color: var(--download-faqlist-color-odd-hover);
       }
     }
   }
@@ -536,10 +536,10 @@ table {
 
 .content-download {
   padding: 5px;
-  background: $download-faqlist-background-even;
+  background: var(--download-faqlist-background-even);
 
   a {
-    color: $download-faqlist-color-even;
+    color: var(--download-faqlist-color-even);
   }
 
   img {
@@ -549,15 +549,15 @@ table {
 }
 
 .btn, .btn-large {
-  background-color: $button-floating-background;
-  color: $button-flat-color;
+  background-color: var(--button-floating-background);
+  color: var(--button-flat-color);
 
   &:hover {
-    background: $button-floating-background-hover;
+    background: var(--button-floating-background-hover);
   }
 
   a {
-    color: $button-flat-color;
+    color: var(--button-flat-color);
   }
 }
 
@@ -566,15 +566,15 @@ table {
 }
 
 code {
-  background: $boxes-background;
-  color: $boxes-text-color;
+  background: var(--boxes-background);
+  color: var(--boxes-text-color);
   display: block;
   padding: 15px;
   font-size: 1em;
 }
 
 .material-icons {
-  color: $mateColor2-text-color;
+  color: var(--mateColor2)-text-color;
 }
 
 figure {
@@ -597,20 +597,20 @@ figure {
 
 h1, h2, h3, h4, h5, h6 {
   position: relative;
-  color: $mateColor3-text-color;
+  color: var(--mateColor3)-text-color;
 }
 
 h1, .h1 {
   font-size: 2.2em;
   margin-top: 0;
-  font-family: $font2;
+  font-family: var(--font2);
   font-weight: 400;
-  color: $mateColor2-text-color;
+  color: var(--mateColor2)-text-color;
   padding: 10px 0;
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: $font3;
+  font-family: var(--font3);
 }
 
 h2, .h2 {
@@ -643,14 +643,14 @@ h6, .h6 {
 .bordered-left, .bordered-right {
   h1, h2, h3, h4, h5, h6 {
     padding-bottom: 25px;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
   }
 
   h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
     position: absolute;
     content: "";
     bottom: 0;
-    border-bottom: 5px solid $primary-color;
+    border-bottom: 5px solid var(--primary-color);
     width: 100px;
   }
 }
@@ -664,11 +664,11 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6 {
   &.bordered-left, &.bordered-right {
     padding-bottom: 25px;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
   }
   &.bordered-right {
     padding-bottom: 25px;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
     text-align: right;
   }
 }
@@ -678,7 +678,7 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
   position: absolute;
   content: "";
   bottom: 0;
-  border-bottom: 5px solid $primary-color;
+  border-bottom: 5px solid var(--primary-color);
   width: 100px;
 }
 
@@ -752,16 +752,16 @@ header {
   }
 
   .search em {
-    color: $navbar-search-color;
+    color: var(--navbar-search-color);
   }
 
   .sidenav-trigger i {
-    color: $navbar-mobile-menu-icon-color;
+    color: var(--navbar-mobile-menu-icon-color);
   }
 }
 
 .sectionTop {
-  background: $primary-color;
+  background: var(--primary-color);
   height: inherit;
   z-index: 11;
   width: 100%;
@@ -771,7 +771,7 @@ header {
     @extend .container;
 
     > div {
-      color: $header-top-color;
+      color: var(--header-top-color);
       padding: 0;
       height: 100%;
       font-size: .75em;
@@ -781,14 +781,14 @@ header {
     }
 
     a {
-      color: $header-top-color;
+      color: var(--header-top-color);
     }
   }
 
   i {
     width: 30px !important;
     direction: rtl;
-    color: $header-top-color;
+    color: var(--header-top-color);
     padding-right: 5px;
   }
 
@@ -823,7 +823,7 @@ header {
   align-items: center;
 
   a {
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
     cursor: pointer;
   }
 }
@@ -843,11 +843,11 @@ header {
 
   .formbody {
     margin: 0;
-    background: $navbar-bg-color;
+    background: var(--navbar-bg-color);
     border: none;
     text-align: center;
     padding: 20px;
-    border-top: 1px solid $mateColor6;
+    border-top: 1px solid var(--mateColor6);
   }
 
   .submit {
@@ -880,7 +880,7 @@ header {
 }
 
 #wrapper input[type='search']:focus {
-  border: 1px solid $mateColor2;
+  border: 1px solid var(--mateColor2);
 }
 
 .sidenav-overlay {
@@ -890,14 +890,14 @@ header {
 }
 
 nav.mod_breadcrumb {
-  background: $breadcrumb-background;
-  color: $primary-text-color;
+  background: var(--breadcrumb-background);
+  color: var(--primary-text-color);
 
   a {
-    color: $breadcrumb-link;
+    color: var(--breadcrumb-link);
 
     &:hover {
-      color: $breadcrumb-link-hover;
+      color: var(--breadcrumb-link-hover);
     }
   }
 
@@ -907,28 +907,28 @@ nav.mod_breadcrumb {
 }
 
 .mod_breadcrumb nav {
-  background: $breadcrumb-background;
+  background: var(--breadcrumb-background);
   height: inherit;
   line-height: 1.2;
   padding: 20px 0;
   box-shadow: none;
 
   a {
-    color: $breadcrumb-link;
+    color: var(--breadcrumb-link);
 
     &:last-child {
-      color: $breadcrumb-link;
+      color: var(--breadcrumb-link);
     }
 
     &:hover {
-      color: $breadcrumb-link-hover;
+      color: var(--breadcrumb-link-hover);
     }
   }
 
   .breadcrumb:before {
     line-height: 1;
     margin-top: -2px;
-    color: $breadcrumb-link;
+    color: var(--breadcrumb-link);
   }
 
   .col {
@@ -952,7 +952,7 @@ nav {
 }
 
 nav {
-  background-color: rgba($navbar-bg-color, 1);
+  background-color: rgba(var(--navbar-bg-color), 1);
 
   .nav-wrapper {
     margin-bottom: 0;
@@ -988,7 +988,7 @@ nav {
   }
 
   a.sidenav-trigger {
-    color: $primary-color;
+    color: var(--primary-color);
   }
 
   &.block {
@@ -1147,7 +1147,7 @@ nav {
           text-transform: uppercase;
 
           a {
-            color: $navbar-color;
+            color: var(--navbar-color);
             font-size: 1em;
 
             &:focus {
@@ -1162,7 +1162,7 @@ nav {
             }
 
             &.active {
-              color: $navbar-active-color;
+              color: var(--navbar-active-color);
             }
           }
 
@@ -1172,7 +1172,7 @@ nav {
 
           & a:hover, &.active {
             background-color: transparent;
-            color: $navbar-active-color;
+            color: var(--navbar-active-color);
             font-weight: normal;
           }
         }
@@ -1189,15 +1189,15 @@ nav {
 
         > li > a.active:before,
         > li.trail > a:before {
-          border: 2px solid $navbar-active-color;
+          border: 2px solid var(--navbar-active-color);
         }
 
         > li > a:hover:before {
-          border: 2px solid $navbar-active-color;
+          border: 2px solid var(--navbar-active-color);
         }
 
         &.dropdown-content {
-          background: $navbar-dropdown-bg;
+          background: var(--navbar-dropdown-bg);
           padding: 0;
           box-shadow: none;
           overflow: visible;
@@ -1223,23 +1223,23 @@ nav {
             padding: 0 25px 0 15px;
 
             &:hover, &.active, &.selected {
-              background-color: $navbar-dropdown-hover-bg-color;
+              background-color: var(--navbar-dropdown-hover-bg-color);
 
               > a {
-                color: $navbar-dropdown-hover-color;
+                color: var(--navbar-dropdown-hover-color);
               }
             }
 
             a {
               padding: 10px 10px 10px 0;
-              color: $navbar-dropdown-color;
+              color: var(--navbar-dropdown-color);
 
               &:before {
                 display: none;
               }
 
               &:hover {
-                color: $navbar-dropdown-hover-color;
+                color: var(--navbar-dropdown-hover-color);
               }
 
               &:hover:before {
@@ -1300,8 +1300,8 @@ nav {
       }
 
       > a, > span {
-        background: $subnav-dropdown-background;
-        color: $subnav-dropdown-color;
+        background: var(--subnav-dropdown-background);
+        color: var(--subnav-dropdown-color);
         padding: 10px 15px;
         line-height: 1;
       }
@@ -1318,25 +1318,25 @@ nav {
     display: block;
 
     > a, > span {
-      background: $subnav-background;
+      background: var(--subnav-background);
       padding: 10px 15px;
-      color: $subnav-color;
+      color: var(--subnav-color);
       margin: 2px 0;
       display: block;
 
       &:hover {
-        background: $subnav-hover-background;
-        color: $subnav-hover-color;
+        background: var(--subnav-hover-background);
+        color: var(--subnav-hover-color);
       }
 
       &.active {
-        background: $subnav-active-background;
-        color: $subnav-active-color;
+        background: var(--subnav-active-background);
+        color: var(--subnav-active-color);
       }
     }
 
     > a.active.forward {
-      background: $subnav-background;
+      background: var(--subnav-background);
     }
 
     a:first-child {
@@ -1359,7 +1359,7 @@ nav {
     color: #fff;
     margin: 2px 0;
     display: block;
-    background: $mateColor3;
+    background: var(--mateColor3);
     font-weight: 400;
   }
 
@@ -1367,16 +1367,16 @@ nav {
     margin-left: 10px;
 
     a {
-      background: $mateColor1;
+      background: var(--mateColor1);
 
       &:hover {
-        background: $mateColor3;
+        background: var(--mateColor3);
       }
     }
 
     strong {
-      background: $mateColor1;
-      color: $mateColor3-text-color;
+      background: var(--mateColor1);
+      color: var(--mateColor3)-text-color;
     }
   }
 
@@ -1391,39 +1391,39 @@ nav {
   z-index: 14;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
-  background: $navbar-stuck-bg-color;
+  background: var(--navbar-stuck-bg-color);
   height: 80px;
 
   .nav-wrapper ul {
     li a {
-      color: $navbar-stuck-color;
+      color: var(--navbar-stuck-color);
 
       &.active, &:hover {
-        color: $navbar-stuck-active-color;
+        color: var(--navbar-stuck-active-color);
       }
     }
 
     > li > a.active:before,
     > li.trail > a:before {
-      border: 2px solid $navbar-stuck-active-color;
+      border: 2px solid var(--navbar-stuck-active-color);
     }
 
     > li > a:hover:before {
-      border: 2px solid $navbar-stuck-active-color;
+      border: 2px solid var(--navbar-stuck-active-color);
     }
 
     &.dropdown-content {
-      background: $navbar-stuck-dropdown-bg;
+      background: var(--navbar-stuck-dropdown-bg);
 
       li:hover {
-        background: $navbar-stuck-dropdown-hover-bg-color;
+        background: var(--navbar-stuck-dropdown-hover-bg-color);
       }
 
       li a {
-        color: $navbar-stuck-dropdown-color;
+        color: var(--navbar-stuck-dropdown-color);
 
         &:hover {
-          color: $navbar-stuck-dropdown-hover-color;
+          color: var(--navbar-stuck-dropdown-hover-color);
         }
       }
     }
@@ -1441,12 +1441,12 @@ nav {
     }
 
     em {
-      color: $navbar-stuck-search-color;
+      color: var(--navbar-stuck-search-color);
     }
   }
 
   .material-icons {
-    color: $navbar-stuck-mobile-menu-icon-color;
+    color: var(--navbar-stuck-mobile-menu-icon-color);
   }
 }
 
@@ -1483,7 +1483,7 @@ nav .brand-logo {
   font-family: 'Material Icons';
   content: "\e5cf";
   -webkit-font-feature-settings: 'liga';
-  color: $mateColor2-text-color;
+  color: var(--mateColor2)-text-color;
   padding-left: 5px;
 }
 
@@ -1494,7 +1494,7 @@ nav .brand-logo {
 #wrapper {
   .slider {
     .slides {
-      background-color: $boxes-background;
+      background-color: var(--boxes-background);
     }
   }
 
@@ -1526,7 +1526,7 @@ nav .brand-logo {
 
     .indicators .indicator-item {
       &.active {
-        background: $slider-navigation-active-background;
+        background: var(--slider-navigation-active-background);
       }
     }
   }
@@ -1556,15 +1556,15 @@ nav .brand-logo {
       font-size: 2em;
       text-transform: initial;
       padding: 0;
-      font-family: $font2;
+      font-family: var(--font2);
       font-weight: 400;
-      color: $slider-headline-color;
+      color: var(--slider-headline-color);
 
       a {
-        color: $slider-headline-color;
+        color: var(--slider-headline-color);
 
         &:hover {
-          color: $primary-link-hover-font-color;
+          color: var(--primary-link-hover-font-color);
         }
       }
     }
@@ -1579,8 +1579,8 @@ nav .brand-logo {
       margin: 0;
 
       a {
-        background: $slider-button-background;
-        color: $slider-button-color;
+        background: var(--slider-button-background);
+        color: var(--slider-button-color);
         padding: 12px 20px;
         text-transform: uppercase;
         font-size: .75em;
@@ -1591,14 +1591,14 @@ nav .brand-logo {
         -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
         &:hover {
-          color: $slider-button-color-hover;
-          background: $slider-button-background-hover;
+          color: var(--slider-button-color-hover);
+          background: var(--slider-button-background-hover);
         }
       }
     }
 
     .slides li .caption p {
-      color: $slider-teaser-color;
+      color: var(--slider-teaser-color);
     }
 
     .slides li img {
@@ -1632,11 +1632,11 @@ nav .brand-logo {
       left: inherit;
       width: auto;
       height: 100%;
-      background: $slider-background;
+      background: var(--slider-background);
     }
 
     .list-nav {
-      background: $slider-arrows-background;
+      background: var(--slider-arrows-background);
       position: absolute;
       bottom: 0;
       left: 0;
@@ -1647,14 +1647,14 @@ nav .brand-logo {
         display: inline-block;
         float: left;
         width: 100px;
-        border-right: 1px solid $slider-arrows-border-color;
+        border-right: 1px solid var(--slider-arrows-border-color);
         height: 100%;
-        color: $mateColor1;
+        color: var(--mateColor1);
         position: relative;
         cursor: pointer;
 
         &:hover {
-          color: $mateColor2-text-color;
+          color: var(--mateColor2)-text-color;
         }
 
         i {
@@ -1665,7 +1665,7 @@ nav .brand-logo {
           left: 0;
           top: 50%;
           margin-top: -22.5px;
-          color: $slider-arrows-color;
+          color: var(--slider-arrows-color);
         }
       }
     }
@@ -1679,7 +1679,7 @@ nav .brand-logo {
       position: relative;
       left: 0;
       bottom: 0;
-      color: $slider-subheadline-color;
+      color: var(--slider-subheadline-color);
     }
 
     .indicators {
@@ -1696,18 +1696,18 @@ nav .brand-logo {
         margin: 0;
         height: 100%;
         padding: 30px 15px;
-        background: $slider-navigation-background;
+        background: var(--slider-navigation-background);
 
         &:hover {
-          background: $slider-navigation-hover-background;
+          background: var(--slider-navigation-hover-background);
           color: #fff;
 
           .subheadline {
-            color: $slider-navigation-hover-subheadline-color;
+            color: var(--slider-navigation-hover-subheadline-color);
           }
 
           .headline {
-            color: $slider-navigation-hover-headline-color;
+            color: var(--slider-navigation-hover-headline-color);
           }
 
           &:before {
@@ -1715,14 +1715,14 @@ nav .brand-logo {
             content: "";
             left: -1px;
             top: 0;
-            border-left: 1px solid $slider-navigation-hover-background;
+            border-left: 1px solid var(--slider-navigation-hover-background);
             height: 100%;
             display: block;
           }
         }
 
         &.active {
-          background: $slider-navigation-active-background;
+          background: var(--slider-navigation-active-background);
           overflow: visible;
 
           &:before {
@@ -1730,7 +1730,7 @@ nav .brand-logo {
             content: "";
             left: -1px;
             top: 0;
-            border-left: 1px solid $slider-navigation-active-background;
+            border-left: 1px solid var(--slider-navigation-active-background);
             height: 100%;
             display: block;
           }
@@ -1740,11 +1740,11 @@ nav .brand-logo {
           }
 
           .subheadline {
-            color: $slider-navigation-active-subheadline-color;
+            color: var(--slider-navigation-active-subheadline-color);
           }
 
           .headline {
-            color: $slider-navigation-active-headline-color;
+            color: var(--slider-navigation-active-headline-color);
           }
         }
 
@@ -1753,7 +1753,7 @@ nav .brand-logo {
           content: "";
           right: 0;
           top: 25px;
-          border-right: 1px solid $slider-navigation-border-color;
+          border-right: 1px solid var(--slider-navigation-border-color);
           height: 60px;
         }
 
@@ -1771,7 +1771,7 @@ nav .brand-logo {
         .subheadline {
           display: block;
           margin: 0;
-          color: $slider-navigation-subheadline-color;
+          color: var(--slider-navigation-subheadline-color);
           font-weight: 700;
           font-size: .75em;
         }
@@ -1780,7 +1780,7 @@ nav .brand-logo {
           text-transform: uppercase;
           font-size: .875em;
           letter-spacing: 1px;
-          color: $slider-navigation-headline-color;
+          color: var(--slider-navigation-headline-color);
         }
       }
     }
@@ -1789,7 +1789,7 @@ nav .brand-logo {
       margin: 0 0 5px;
       text-align: left;
       font-size: .688em;
-      color: $mateColor3-text-color;
+      color: var(--mateColor3)-text-color;
     }
   }
 
@@ -1798,7 +1798,7 @@ nav .brand-logo {
   }
 
   .sliderImage {
-    background: $mateColor1;
+    background: var(--mateColor1);
     list-style-type: none;
   }
 
@@ -1830,20 +1830,20 @@ nav .brand-logo {
   pointer-events: none;
 
   h1, h2, h3, h4, h5, h6 {
-    background: $headerHeadlineBackground;
+    background: var(--headerHeadlineBackground);
     text-transform: inherit;
-    color: $headerHeadlineColor;
+    color: var(--headerHeadlineColor);
     display: inline-block;
     width: auto;
     padding: 12px 30px 5px;
     margin: 0 auto;
     max-width: 80%;
-    font-family: $font2;
+    font-family: var(--font2);
   }
 
   .description {
     background: rgba( white, 0.84);
-    color: $headerHeadlineColor;
+    color: var(--headerHeadlineColor);
     font-size: 1.4em;
     clear: left;
     text-transform: initial;
@@ -1934,7 +1934,7 @@ nav .brand-logo {
       color: black;
       opacity: 1;
       height: 50px;
-      background-color: $mateColor1;
+      background-color: var(--mateColor1);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1954,7 +1954,7 @@ nav .brand-logo {
       }
 
       &:not(.active):hover {
-        background: $mateColor2;
+        background: var(--mateColor2);
         color: #fff;
 
         a {
@@ -1974,7 +1974,7 @@ nav .brand-logo {
           content: '';
           top: -6px;
           position: absolute;
-          background-color: $mateColor2;
+          background-color: var(--mateColor2);
           width: 15px;
           height: 15px;
           transform: rotate(45deg);
@@ -1997,8 +1997,8 @@ nav .brand-logo {
   .inside {
     margin: 0 10px;
     padding: 15px;
-    background: $boxes-background;
-    color: $boxes-text-color;
+    background: var(--boxes-background);
+    color: var(--boxes-text-color);
     height: 100%;
   }
 
@@ -2013,7 +2013,7 @@ nav .brand-logo {
 
 .ce_text_simplebox_mate ul:not(.browser-default) li:before {
   content:"»";
-  color: $mateColor2-text-color;
+  color: var(--mateColor2)-text-color;
   font-weight: 700;
   padding-right: 15px;
   margin-left: 15px;
@@ -2030,14 +2030,14 @@ nav .brand-logo {
  * ========================== */
 .ce_mateContentBox, .ce_ct_contentBox {
   text-align: center;
-  border-top: 10px solid $primary-color;
-  background-color: $contentbox-first-background;
-  color: $contentbox-first-color;
+  border-top: 10px solid var(--primary-color);
+  background-color: var(--contentbox-first-background);
+  color: var(--contentbox-first-color);
 
   &:nth-child(2n) {
-    border-top: 10px solid $secondary-color;
-    background-color: $contentbox-second-background;
-    color: $contentbox-second-color;
+    border-top: 10px solid var(--secondary-color);
+    background-color: var(--contentbox-second-background);
+    color: var(--contentbox-second-color);
   }
 
   .inside {
@@ -2059,7 +2059,7 @@ nav .brand-logo {
 
   h2, h3, h4, h5, h6 {
     margin: 0 0 40px;
-    font-family: $font2;
+    font-family: var(--font2);
     font-size: 1.4em;
   }
 
@@ -2128,7 +2128,7 @@ nav .brand-logo {
       height: 100%;
 
       &:hover span {
-        background: $button-floating-background-hover;
+        background: var(--button-floating-background-hover);
       }
     }
 
@@ -2143,8 +2143,8 @@ nav .brand-logo {
       align-items: center;
       justify-content: center;
       padding: 25px;
-      background: $button-floating-background;
-      color: $button-flat-color;
+      background: var(--button-floating-background);
+      color: var(--button-flat-color);
       transition: all .3s;
     }
 
@@ -2176,10 +2176,10 @@ nav .brand-logo {
       left: 0;
 
       span {
-        background: rgba($button-floating-background, .5);
+        background: rgba(var(--button-floating-background), .5);
 
         &:hover {
-          background: rgba($button-floating-background, .8);
+          background: rgba(var(--button-floating-background), .8);
         }
       }
     }
@@ -2198,12 +2198,12 @@ nav .brand-logo {
   }
 
   .inside {
-    background-color: $boxes-background;
+    background-color: var(--boxes-background);
     height: 100%;
     border: none;
     box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
-    color: $boxes-text-color;
+    color: var(--boxes-text-color);
     padding-bottom: 70px;
   }
 
@@ -2222,7 +2222,7 @@ nav .brand-logo {
   }
 
   .subheadline {
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
     margin: 10px 25px 0;
     text-transform: uppercase;
     font-size: .8em;
@@ -2252,7 +2252,7 @@ nav .brand-logo {
 .layout_latest, .layout_short,
 .layout_teaser, .layout_list {
   .inner {
-    background: $boxes-background;
+    background: var(--boxes-background);
     box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     height: 100%;
@@ -2264,17 +2264,17 @@ nav .brand-logo {
 
     h2 {
       font-size: 1.75em;
-      font-family: $font2;
+      font-family: var(--font2);
       font-weight: 400;
       text-transform: inherit;
       margin: 0;
       padding: 15px 0;
 
       a {
-        color: $primary-link-font-color;
+        color: var(--primary-link-font-color);
 
         &:hover {
-          color: $primary-link-hover-font-color;
+          color: var(--primary-link-hover-font-color);
         }
       }
     }
@@ -2283,7 +2283,7 @@ nav .brand-logo {
       position: absolute;
       bottom: 0;
       left: 0;
-      border-bottom: 3px solid $mateColor2;
+      border-bottom: 3px solid var(--mateColor2);
       width: 40px;
       content: "";
     }
@@ -2292,13 +2292,13 @@ nav .brand-logo {
       overflow: visible;
       position: relative;
       padding: 20px 30px 20px 30px;
-      color: $boxes-text-color;
+      color: var(--boxes-text-color);
     }
 
     .info {
       margin: 0;
       font-size: .813em;
-      color: $news-date-color;
+      color: var(--news-date-color);
     }
   }
 }
@@ -2314,7 +2314,7 @@ nav .brand-logo {
     font-size: .75em;
     position: absolute;
     bottom: 25px;
-    color: $news-category-color;
+    color: var(--news-category-color);
     left: 30px;
     font-weight: 700;
   }
@@ -2326,8 +2326,8 @@ nav .brand-logo {
       right: 30px;
       font-size: 2.25em;
       line-height: 36px;
-      background: $button-floating-background;
-      color: $button-flat-color;
+      background: var(--button-floating-background);
+      color: var(--button-flat-color);
       padding: 11px 5px 10px 3px;
       border-radius: 100%;
       width: 60px;
@@ -2338,7 +2338,7 @@ nav .brand-logo {
       -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
       &:hover {
-        background: $button-floating-background-hover;
+        background: var(--button-floating-background-hover);
       }
     }
   }
@@ -2351,13 +2351,13 @@ nav .brand-logo {
     }
 
     a.more {
-      background: $button-floating-background;
-      color: $button-flat-color;
+      background: var(--button-floating-background);
+      color: var(--button-flat-color);
       display: inline-block;
       padding: 3px 10px;
 
       &:hover {
-        background: $button-floating-background-hover;
+        background: var(--button-floating-background-hover);
       }
     }
   }
@@ -2379,21 +2379,21 @@ nav .brand-logo {
   .info {
     margin: 20px 0 0;
     font-size: .813em;
-    color: $news-date-color;
+    color: var(--news-date-color);
   }
 
   h1 {
-    font-family: $font2;
+    font-family: var(--font2);
     font-weight: 400;
     text-transform: inherit;
     margin: 0;
     padding: 10px 0;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
     position: relative;
     @extend .bordered-left;
 
     a {
-      color: $mateColor2-text-color;
+      color: var(--mateColor2)-text-color;
     }
   }
 
@@ -2429,7 +2429,7 @@ nav[data-pagination] {
   li {
     a, span, strong {
       display: block;
-      border: 1px solid $pagination-border-color;
+      border: 1px solid var(--pagination-border-color);
       padding: 0 10px;
       font-size: .75em;
       line-height: 30px;
@@ -2439,24 +2439,24 @@ nav[data-pagination] {
 
     a {
       background: transparent;
-      color: $pagination-color;
+      color: var(--pagination-color);
     }
 
     span, strong, .active {
-      background: $pagination-active-background-color;
-      color: $pagination-active-color;
+      background: var(--pagination-active-background-color);
+      color: var(--pagination-active-color);
     }
 
     a:hover {
-      background: $pagination-hover-background-color;
-      border: 1px solid $pagination-border-hover-color;
+      background: var(--pagination-hover-background-color);
+      border: 1px solid var(--pagination-border-hover-color);
     }
   }
 
   &.block p {
     float: right;
     font-size: .875em;
-    color: $pagination-text-color;
+    color: var(--pagination-text-color);
     padding-top: 10px;
     margin: 0;
   }
@@ -2504,7 +2504,7 @@ nav.pagination li, nav[data-pagination] li {
       right: 0;
       border-radius: 0;
       background: none;
-      color: $mateColor2-text-color;
+      color: var(--mateColor2)-text-color;
       box-shadow: none;
       font-weight: 400;
       text-transform: inherit;
@@ -2512,19 +2512,19 @@ nav.pagination li, nav[data-pagination] li {
 
       &:hover {
         background: none;
-        color: $mateColor3-text-color;
+        color: var(--mateColor3)-text-color;
       }
     }
 
     time {
-      background: $mateColor2;
-      color: $secondary-text-color;
+      background: var(--mateColor2);
+      color: var(--secondary-text-color);
       padding: 5px 10px 3px;
       position: absolute;
       top: -20px;
       margin: 0;
       font-weight: 400;
-      font-family: $font2;
+      font-family: var(--font2);
       box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
       -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     }
@@ -2575,49 +2575,49 @@ nav.pagination li, nav[data-pagination] li {
   }
 
   td {
-    background: $calendar-background;
-    color: $calendar-text-color;
+    background: var(--calendar-background);
+    color: var(--calendar-text-color);
     font-weight: 400;
     font-size: 1em;
     padding: 5px;
-    border: 1px solid $calendar-border-color;
+    border: 1px solid var(--calendar-border-color);
 
     a {
-      color: $mateColor2-text-color;
+      color: var(--mateColor2)-text-color;
       margin-top: 5px;
       display: block;
     }
 
     &.active {
-      background: $mateColor1;
-      color: $secondary-text-color;
+      background: var(--mateColor1);
+      color: var(--secondary-text-color);
 
       a {
-        color: $secondary-text-color;
+        color: var(--secondary-text-color);
       }
 
       &:hover {
-        background: $mateColor2;
+        background: var(--mateColor2);
       }
     }
   }
 
   td.today {
-    color: $calendar-text-color;
+    color: var(--calendar-text-color);
   }
 
   .label {
-    color: $mateColor6;
-    background: $calendar-background;
+    color: var(--mateColor6);
+    background: var(--calendar-background);
   }
 
   th.head {
-    background: $mateColor2;
-    color: $secondary-text-color;
+    background: var(--mateColor2);
+    color: var(--secondary-text-color);
   }
 
   .previous a, .next a {
-    color: $secondary-text-color;
+    color: var(--secondary-text-color);
   }
 
   thead {
@@ -2647,7 +2647,7 @@ table.calendar, table.minicalendar {
 }
 
 .event time {
-  background: $mateColor2;
+  background: var(--mateColor2);
   font-weight: 700;
   color: #fff;
   padding: 5px;
@@ -2678,7 +2678,7 @@ table.calendar, table.minicalendar {
 
   time {
     background: none;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
     padding: 0;
   }
 }
@@ -2697,10 +2697,10 @@ table.calendar, table.minicalendar {
  *    Footer                  *
  * ========================== */
 footer.page-footer {
-  color: $footer-primary-color;
+  color: var(--footer-primary-color);
   position: relative;
   padding: 0;
-  background: $footer-primary-bg-color;
+  background: var(--footer-primary-bg-color);
 
   > .container {
     padding-top: 20px;
@@ -2710,12 +2710,12 @@ footer.page-footer {
     margin-bottom: 30px;
     position: relative;
     padding-bottom: 20px;
-    color: $footer-primary-color;
+    color: var(--footer-primary-color);
 
     &:after {
       position: absolute;
       content: "";
-      border-bottom: 4px solid $footer-headline-border-color;
+      border-bottom: 4px solid var(--footer-headline-border-color);
       bottom: 0;
       width: 150px;
       display: block;
@@ -2723,7 +2723,7 @@ footer.page-footer {
   }
 
   .material-icons {
-    color: $footer-primary-color;
+    color: var(--footer-primary-color);
   }
 
   p {
@@ -2732,11 +2732,11 @@ footer.page-footer {
 
   .footer-copyright {
     text-align: center;
-    background: $footer-secondary-bg-color;
-    color: $footer-secondary-color;
+    background: var(--footer-secondary-bg-color);
+    color: var(--footer-secondary-color);
 
     .material-icons {
-      color: $footer-secondary-color;
+      color: var(--footer-secondary-color);
     }
 
     p {
@@ -2757,10 +2757,10 @@ footer.page-footer {
     }
 
     a {
-      color: $footer-secondary-link-color;
+      color: var(--footer-secondary-link-color);
 
       &:hover {
-        color: $footer-secondary-link-color-hover;
+        color: var(--footer-secondary-link-color-hover);
       }
     }
   }
@@ -2769,8 +2769,8 @@ footer.page-footer {
     position: fixed;
     right: 50px;
     bottom: 50px;
-    background: $toplink-background;
-    color: $toplink-color;
+    background: var(--toplink-background);
+    color: var(--toplink-color);
     padding: 9px 10px;
     line-height: 1em;
     opacity: 0;
@@ -2780,7 +2780,7 @@ footer.page-footer {
     -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
     i {
-      color: $toplink-color;
+      color: var(--toplink-color);
     }
 
     &.active {
@@ -2788,11 +2788,11 @@ footer.page-footer {
     }
 
     &:hover {
-      background: $toplink-background-hover;
-      color: $toplink-color-hover;
+      background: var(--toplink-background-hover);
+      color: var(--toplink-color-hover);
 
       i {
-        color: $toplink-color-hover;
+        color: var(--toplink-color-hover);
       }
     }
   }
@@ -2805,25 +2805,25 @@ footer.page-footer {
       line-height: 1em;
 
       &:hover {
-        color: $primary-link-hover-font-color;
+        color: var(--primary-link-hover-font-color);
       }
     }
 
     time {
       background: none;
-      color: $footer-news-events-time-color;
+      color: var(--footer-news-events-time-color);
       padding: 0;
       display: inline-block;
       font-size: .75em;
-      font-family: $font2;
+      font-family: var(--font2);
     }
   }
 
   > .container a {
-    color: $footer-primary-link-color;
+    color: var(--footer-primary-link-color);
 
     &:hover {
-      color: $footer-primary-link-color-hover;
+      color: var(--footer-primary-link-color-hover);
     }
   }
 
@@ -2848,7 +2848,7 @@ footer.page-footer {
 
   .content-text, .content-list {
     ul:not(.browser-default) li:before {
-      color: $footer-primary-color;
+      color: var(--footer-primary-color);
     }
   }
 }
@@ -2859,23 +2859,23 @@ footer {
   }
 
   .mod_subscribe label.invisible {
-    color: $footer-newsletter-color;
+    color: var(--footer-newsletter-color);
   }
 }
 
 #footer {
   #newsletter {
-    background: $footer-newsletter-bg-color;
-    color: $footer-newsletter-color;
+    background: var(--footer-newsletter-bg-color);
+    color: var(--footer-newsletter-color);
     text-align: center;
 
     .mod_subscribe {
-      background: $footer-newsletter-bg-color;
+      background: var(--footer-newsletter-bg-color);
     }
 
     h2, h3, h4, h5, h6 {
       margin: 0 0 30px;
-      color: $footer-newsletter-color;
+      color: var(--footer-newsletter-color);
     }
 
     .mod_subscribe {
@@ -2903,20 +2903,20 @@ footer {
     }
 
     .text {
-      background: $footer-input-bg-color;
+      background: var(--footer-input-bg-color);
       border: none;
-      color: $footer-input-color;
+      color: var(--footer-input-color);
 
       &::placeholder {
-        color: rgba($footer-input-color, 0.87);
+        color: rgba(var(--footer-input-color), 0.87);
       }
     }
 
     .submit {
-      background: $footer-newsletter-button-background;
+      background: var(--footer-newsletter-button-background);
 
       &:hover {
-        background: $footer-newsletter-button-background-hover;
+        background: var(--footer-newsletter-button-background-hover);
       }
     }
   }
@@ -2994,17 +2994,17 @@ footer {
 .checkbox_container, .radio_container {
   margin: 0;
   padding: 0 15px 15px;
-  border: $input-border;
+  border: var(--input-border);
 
   legend {
     margin-bottom: 10px;
-    color: $input-legend-color;
+    color: var(--input-legend-color);
   }
 }
 
 .checkbox_container label {
   padding: 0;
-  color: $input-label-color;
+  color: var(--input-label-color);
 }
 
 .file-field .btn {
@@ -3013,8 +3013,8 @@ footer {
 }
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea, textarea {
-  background: $input-background-color;
-  border: $input-border;
+  background: var(--input-background-color);
+  border: var(--input-border);
   margin: 0;
   height: 40px;
   padding: 10px;
@@ -3023,12 +3023,12 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
   display: block;
   border-radius: 0;
   box-shadow: none;
-  color: $input-color;
+  color: var(--input-color);
 }
 
 #wrapper {
   input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border: $input-focus-border;
+    border: var(--input-focus-border);
     box-shadow: none;
   }
 
@@ -3038,7 +3038,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 .input-field label {
-  color: $input-label-color;
+  color: var(--input-label-color);
 }
 
 input[type="file"] {
@@ -3056,7 +3056,7 @@ input[type="file"] {
 
   .picker__weekday {
     color: #fff;
-    background: $mateColor2;
+    background: var(--mateColor2);
   }
 
   table th, table tfoot td {
@@ -3070,7 +3070,7 @@ input[type="file"] {
 
   .is-selected {
     border-radius: 0;
-    background: $mateColor2;
+    background: var(--mateColor2);
   }
 
   .datepicker-footer {
@@ -3078,11 +3078,11 @@ input[type="file"] {
   }
 
   .clockpicker-canvas line {
-    stroke: $mateColor2;
+    stroke: var(--mateColor2);
   }
 
   .clockpicker-canvas-bg, .clockpicker-canvas-bearing {
-    fill: $mateColor2;
+    fill: var(--mateColor2);
   }
 
   .select-wrapper input.select-dropdown {
@@ -3092,7 +3092,7 @@ input[type="file"] {
   }
 
   thead {
-    background: $mateColor2;
+    background: var(--mateColor2);
 
     abbr {
       color: #fff;
@@ -3107,12 +3107,12 @@ input[type="file"] {
 }
 
 .select label {
-  color: $select-label-color;
+  color: var(--select-label-color);
 }
 
 .select-wrapper {
   input.select-dropdown {
-    background: $select-background-color;
+    background: var(--select-background-color);
     padding: 5px 15px;
     margin: 0;
     height: 40px;
@@ -3122,13 +3122,13 @@ input[type="file"] {
     -o-user-select:none; // latest Opera versions support -webkit-
     user-select:none;
     line-height: inherit;
-    color: $select-color;
-    border: $select-border;
+    color: var(--select-color);
+    border: var(--select-border);
   }
 
   .caret {
     z-index: 1;
-    fill: $select-caret-color;
+    fill: var(--select-caret-color);
     pointer-events: none;
   }
 }
@@ -3166,7 +3166,7 @@ textarea {
 .widget {
   &.widget-text, &.widget-textarea, &.widget-password {
     > label {
-      color: $input-label-color;
+      color: var(--input-label-color);
       position: absolute;
       padding: 0 10px;
       top: -3px;
@@ -3188,7 +3188,7 @@ textarea {
 
 .radio_container label {
   padding: 0 20px 0 0;
-  color: $input-label-color;
+  color: var(--input-label-color);
   margin-bottom: 5px;
   display: inline-block;
 }
@@ -3206,21 +3206,21 @@ textarea {
 }
 
 [type="checkbox"] + span:not(.lever):before, [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
-  border: 2px solid $radio-checkbox-color;
+  border: 2px solid var(--radio-checkbox-color);
 }
 
 [type="checkbox"]:checked + span:not(.lever):before {
-  border-right: 2px solid $radio-checkbox-color;
-  border-bottom: 2px solid $radio-checkbox-color;
+  border-right: 2px solid var(--radio-checkbox-color);
+  border-bottom: 2px solid var(--radio-checkbox-color);
 }
 
 [type="radio"]:not(:checked) + span:before, [type="radio"]:not(:checked) + span:after {
-  border: 2px solid $radio-checkbox-color;
+  border: 2px solid var(--radio-checkbox-color);
 }
 
 [type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
-  background-color: $radio-checkbox-color;
-  border: 2px solid $radio-checkbox-color;
+  background-color: var(--radio-checkbox-color);
+  border: 2px solid var(--radio-checkbox-color);
 }
 
 .widget-upload label {
@@ -3228,7 +3228,7 @@ textarea {
 }
 
 .file-path::placeholder {
-  color: $input-label-color;
+  color: var(--input-label-color);
 }
 
 .radio_container legend + label {
@@ -3241,7 +3241,7 @@ textarea {
 }
 
 input::placeholder {
-  color: rgba($input-label-color, 0.7);
+  color: rgba(var(--input-label-color), 0.7);
 }
 
 /* ========================== *
@@ -3265,7 +3265,7 @@ input::placeholder {
 }
 
 .mod_login, .mod_lostPassword, .mod_registration, .mod_personalData, .mod_changePassword, .mod_subscribe, .mod_unsubscribe {
-  background: $boxes-background;
+  background: var(--boxes-background);
   margin: 0 0 30px;
   padding: 30px;
 
@@ -3298,7 +3298,7 @@ input::placeholder {
   }
 
   .error, .confirm {
-    background: $mateColor2;
+    background: var(--mateColor2);
     color: #fff;
     padding: 10px 15px;
     display: inline-block;
@@ -3323,13 +3323,13 @@ input::placeholder {
 
 .mod_faqpage {
   h3 {
-    background: $faq-page-background-color;
-    color: $faq-page-color;
+    background: var(--faq-page-background-color);
+    color: var(--faq-page-color);
     padding: 7px 15px;
   }
 
   section {
-    background: $boxes-background;
+    background: var(--boxes-background);
   }
 
   .ce_text {
@@ -3338,7 +3338,7 @@ input::placeholder {
 
   .info {
     padding: 15px;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
     font-weight: 700;
     font-size: .875em;
     margin: 0;
@@ -3347,7 +3347,7 @@ input::placeholder {
 
 .mod_search {
   .formbody {
-    background: $boxes-background;
+    background: var(--boxes-background);
     margin: 0 0 30px;
     padding: 20px;
     border: 1px solid #e6e6e6;
@@ -3360,18 +3360,18 @@ input::placeholder {
   }
 
   h3 {
-    background: $mateColor2;
-    color: $secondary-text-color;
+    background: var(--mateColor2);
+    color: var(--secondary-text-color);
     padding: 5px 15px;
 
     a {
-      color: $secondary-text-color;
+      color: var(--secondary-text-color);
       font-size: 1em;
       text-transform: uppercase;
       vertical-align: top;
 
       &:hover {
-        color: $primary-text-color;
+        color: var(--primary-text-color);
       }
     }
 
@@ -3382,7 +3382,7 @@ input::placeholder {
   }
 
   > div {
-    background: $boxes-background;
+    background: var(--boxes-background);
   }
 
   .context, .url {
@@ -3392,14 +3392,14 @@ input::placeholder {
   .url {
     margin: 0;
     padding-top: 0;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
     word-wrap: break-word;
   }
 }
 
 mark {
-  background: $mateColor2;
-  color: $secondary-text-color;
+  background: var(--mateColor2);
+  color: var(--secondary-text-color);
 }
 
 .responsive-video {
@@ -3421,7 +3421,7 @@ mark {
 /* Modal */
 
 .modal {
-  background: $boxes-background;
+  background: var(--boxes-background);
 }
 
 .mod_mateModal, .ce_mateModal {
@@ -3454,30 +3454,30 @@ mark {
 .mod_newslist .social_feed_container {
   width: 100%;
   margin-left: 0;
-  font-family: $font1;
-  color: $primary-text-color;
+  font-family: var(--font1);
+  color: var(--primary-text-color);
 
   .title {
-    font-family: $font2;
+    font-family: var(--font2);
     font-weight: 400;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
   }
 
   .inner {
-    background: $boxes-background;
-    border-top: 5px solid $mateColor2;
+    background: var(--boxes-background);
+    border-top: 5px solid var(--mateColor2);
   }
 
   .fa {
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
   }
 
   .social_feed_element .content-text {
-    color: $primary-text-color;
+    color: var(--primary-text-color);
   }
 
   .social_feed_element .info {
-    color: $primary-text-color;
+    color: var(--primary-text-color);
   }
 }
 
@@ -3512,7 +3512,7 @@ mark {
       content: "";
       left: 0.75rem;
       bottom: 0;
-      border-bottom: 3px solid $mateColor2;
+      border-bottom: 3px solid var(--mateColor2);
       width: calc(100% - (0.75rem * 2));
     }
 
@@ -3538,7 +3538,7 @@ mark {
       left: 0;
       top: -5px;
       font-size: 1.5em;
-      color: $mateColor2-text-color;
+      color: var(--mateColor2)-text-color;
     }
   }
 }
@@ -3583,7 +3583,7 @@ mark {
   }
 
   h2, h3, h4, h5, h6 {
-    color: $mateColor6;
+    color: var(--mateColor6);
     font-weight: 700;
     word-break: break-word;
   }
@@ -3596,14 +3596,14 @@ mark {
     font-size: 2.125em;
     font-weight: 700;
     padding: 10px 0 0;
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
     display: block;
     line-height: 40px;
-    font-family: $font2;
+    font-family: var(--font2);
   }
 
   p {
-    color: $mateColor2-text-color;
+    color: var(--mateColor2)-text-color;
   }
 
   .material-icons {
@@ -3615,7 +3615,7 @@ mark {
     position: relative;
 
     &:not(:last-child):after {
-      border-right: 1px solid $mateColor6;
+      border-right: 1px solid var(--mateColor6);
       position: absolute;
       right: 0;
       height: 115px;
@@ -3652,17 +3652,17 @@ mark {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    background: $parallax-headline-background-color;
+    background: var(--parallax-headline-background-color);
     text-transform: inherit;
-    color: $parallax-headline-color;
+    color: var(--parallax-headline-color);
     display: inline-block;
     width: auto;
     padding: 12px 30px 5px;
     margin: 0;
-    font-family: $font2;
+    font-family: var(--font2);
 
     a {
-      color: $parallax-link-color;
+      color: var(--parallax-link-color);
     }
   }
 
@@ -3693,20 +3693,20 @@ mark {
       left: 0;
       background: none;
       height: inherit;
-      color: $parallax-link-color;
+      color: var(--parallax-link-color);
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: underline;
       font-size: .875em;
 
       &:hover {
-        color: $parallax-link-hover-color;
+        color: var(--parallax-link-hover-color);
       }
     }
   }
 
   p {
-    color: $parallax-text-color;
+    color: var(--parallax-text-color);
     margin: 10px 0 0;
     padding: 0;
     font-size: 1.125em;
@@ -3853,7 +3853,7 @@ mark {
     }
 
     &:hover:before {
-      background: rgba($mateColorWhite,.2);
+      background: rgba(var(--mateColorWhite),.2);
     }
   }
 
@@ -3862,8 +3862,8 @@ mark {
     left: 40px;
     bottom: 40px;
     width: calc(100% - 80px);
-    background: $hyperlink-teaser-background-color;
-    color: $hyperlink-teaser-color;
+    background: var(--hyperlink-teaser-background-color);
+    color: var(--hyperlink-teaser-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4114,12 +4114,12 @@ div.klaro {
     top: 0;
 
     i.material-icons {
-      color: $navbar-mobile-menu-icon-color;
+      color: var(--navbar-mobile-menu-icon-color);
     }
   }
 
   nav.stuck a.sidenav-trigger i.material-icons {
-    color: $navbar-stuck-mobile-menu-icon-color;
+    color: var(--navbar-stuck-mobile-menu-icon-color);
   }
 
   .search {
@@ -4154,7 +4154,7 @@ div.klaro {
   .sidenav {
     width: 70%;
     padding: 30px 0;
-    background: $navbar-mobile-background;
+    background: var(--navbar-mobile-background);
 
     li > a {
       font-weight: 700;
@@ -4164,19 +4164,19 @@ div.klaro {
       padding: 0 0 0 20px;
       width: 75%;
       font-size: .875em;
-      color: $navbar-mobile-color;
+      color: var(--navbar-mobile-color);
     }
 
     li {
       position: relative;
 
       ul {
-        background: $navbar-mobile-dropdown-background;
+        background: var(--navbar-mobile-dropdown-background);
 
         a {
           width: 100%;
           padding: 0 20px;
-          color: $navbar-mobile-dropdown-color;
+          color: var(--navbar-mobile-dropdown-color);
         }
 
         ul {
@@ -4196,7 +4196,7 @@ div.klaro {
 
   nav .sidenav {
     i.material-icons {
-      color: $navbar-mobile-color;
+      color: var(--navbar-mobile-color);
       position: absolute !important;
       right: 10px !important;
       top: 0 !important;
@@ -4204,7 +4204,7 @@ div.klaro {
     }
 
     ul i.material-icons {
-      color: $navbar-mobile-dropdown-color;
+      color: var(--navbar-mobile-dropdown-color);
     }
   }
 
@@ -4224,11 +4224,11 @@ div.klaro {
 
     .nav-wrapper {
       .sidenav i {
-        color: $navbar-mobile-color;
+        color: var(--navbar-mobile-color);
       }
 
       .sidenav ul i {
-        color: $navbar-mobile-dropdown-color;
+        color: var(--navbar-mobile-dropdown-color);
       }
 
       ul li a {
@@ -4283,11 +4283,11 @@ div.klaro {
   }
 
   #header .mod_mateNavbar.stuck .nav-wrapper ul.sidenav li a {
-    color: $navbar-mobile-color;
+    color: var(--navbar-mobile-color);
   }
 
   #header .mod_mateNavbar.stuck .nav-wrapper ul.sidenav ul li a {
-    color: $navbar-mobile-dropdown-color;
+    color: var(--navbar-mobile-dropdown-color);
   }
 
   /* Footer */
@@ -4649,7 +4649,7 @@ div.klaro {
     }
 
     .days.today {
-      color: $secondary-text-color;
+      color: var(--secondary-text-color);
     }
 
     td:not(.active) {

@@ -14,11 +14,11 @@
 /*     MATE Theme Variables      */
 /* ============================= */
 
-:root {
-  --small-screen: 600px;
-  --medium-screen: 992px;
-  --large-screen: 1200px;
+$small-screen: 600px;
+$medium-screen: 992px;
+$large-screen: 1200px;
 
+:root {
   --primary-color: var(--mateColor2);
   --secondary-color: var(--mateColor3);
 
