@@ -11,31 +11,58 @@
 /* ============================= */
 
 $dark-color-scheme: null;
-$yellow-color-scheme: 'yellow';
+$yellow-color-scheme: '1';
 $other-color-scheme: null;
 
-/* Colors */
-$mateColor1: #FFEAAE;
-$mateColor2: #FFD753;
-$mateColor3: #CCA500;
-$mateColor4: #5F5C4D;
-$mateColor6: #48433C;
+:root {
+  /* Colors */
+  --mateColor1: #FFEAAE;
+  --mateColor2: #FFD753;
+  --mateColor3: #CCA500;
+  --mateColor4: #5F5C4D;
+  --mateColor6: #48433C;
 
-$primary-text-color: #000;
-$secondary-text-color: #000;
-$mateColor2-text-color: #706700;
-$mateColor3-text-color: #615900;
-$mateColor4-text-color: #4D4400;
+  --primary-text-color: #000;
+  --secondary-text-color: #000;
+  --mateColor2-text-color: #706700;
+  --mateColor3-text-color: #615900;
+  --mateColor4-text-color: #4D4400;
 
-$boxes-background: #F9F9F7;
-$boxes-text-color: $primary-text-color;
+  --boxes-background: #F9F9F7;
+  --boxes-text-color: var(--primary-text-color);
 
-$mateColorWhite: $boxes-background;
-$mateColorBlack: #000;
-$mateColorGreyLight: #f5f5f5;
-$mateColorGreyDark: #e6e6e6;
-$pageBackground: #fff;
+  --mateColorWhite: var(--boxes-background);
+  --mateColorBlack: #000;
+  --mateColorGreyLight: #f5f5f5;
+  --mateColorGreyDark: #e6e6e6;
+  --pageBackground: #fff;
 
-/* Content Box */
-$contentbox-first-background: $boxes-background;
-$contentbox-second-background: #f2f2f2;
+  /* Content Box */
+  --contentbox-first-background: var(--boxes-background);
+  --contentbox-second-background: #f2f2f2;
+
+  /* Rgb colors */
+  --rgba-mateColor2: 255, 215, 83;
+  --rgba-boxes-background: 249, 249, 247;
+
+  /* Custom variables */
+  --button-flat-color: var(--mateColorBlack);
+  --footer-newsletter-color: var(--mateColorBlack);
+  --footer-news-events-time-color: var(--mateColorBlack);
+  --slider-arrows-border-color: var(--mateColor2);
+  --slider-arrows-color: var(--mateColor2);
+  --toplink-color: var(--mateColorWhite);
+  --subnav-hover-color: var(--mateColorBlack);
+  --subnav-active-color: var(--mateColorBlack);
+  --select-label-color: var(--primary-text-color);
+  --input-border: 2px solid var(--mateColor2-text-color);
+  --input-focus-border: 2px solid var(--mateColor3);
+  --select-border: 2px solid var(--mateColor2-text-color);
+  --faq-page-color: var(--mateColorBlack);
+  --hyperlink-teaser-color: var(--mateColorBlack);
+}
+
+.slider-text-below-image .indicators li.indicator-item,
+.slider-text-below-image .indicators li.indicator-item.active {
+  color: #000;
+}

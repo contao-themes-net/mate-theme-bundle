@@ -14,27 +14,51 @@ $dark-color-scheme: null;
 $yellow-color-scheme: null;
 $other-color-scheme: '1';
 
-/* Colors */
-$mateColor1: #B30000;
-$mateColor2: #8F0000;
-$mateColor3: #570000;
-$mateColor4: #330000;
-$mateColor6: #AF1818;
+:root {
+  /* Colors */
+  --mateColor1: #B30000;
+  --mateColor2: #8F0000;
+  --mateColor3: #570000;
+  --mateColor4: #330000;
+  --mateColor6: #AF1818;
 
-$primary-text-color: #000;
-$secondary-text-color: #fff;
-$mateColor2-text-color: $mateColor2;
-$mateColor3-text-color: $mateColor3;
-$mateColor4-text-color: $mateColor4;
+  --primary-text-color: #000;
+  --secondary-text-color: #fff;
+  --mateColor2-text-color: var(--mateColor2);
+  --mateColor3-text-color: var(--mateColor3);
+  --mateColor4-text-color: var(--mateColor4);
 
-$boxes-background: #F2F3F7;
-$boxes-text-color: $primary-text-color;
+  --boxes-background: #F2F3F7;
+  --boxes-text-color: var(--primary-text-color);
 
-$mateColorWhite: $boxes-background;
-$mateColorBlack: #000;
-$mateColorGreyLight: #ececec;
-$pageBackground: #fff;
+  --mateColorWhite: var(--boxes-background);
+  --mateColorBlack: #000;
+  --mateColorGreyLight: #ececec;
+  --pageBackground: #fff;
 
-/* Content Box */
-$contentbox-first-background: $boxes-background;
-$contentbox-second-background: $mateColorGreyLight;
+  /* Content Box */
+  --contentbox-first-background: var(--boxes-background);
+  --contentbox-second-background: var(--mateColorGreyLight);
+
+  /* Rgb colors */
+  --rgba-mateColor2: 143, 0, 0;
+  --rgba-boxes-background: 242, 243, 247;
+
+  /* Custom variables */
+  --button-flat-color: var(--mateColorWhite);
+  --navbar-stuck-active-color: var(--mateColorWhite);
+  --navbar-stuck-dropdown-hover-color: var(--mateColorWhite);
+  --slider-arrows-color: var(--mateColorWhite);
+  --slider-button-color: var(--mateColorWhite);
+  --footer-newsletter-color: var(--mateColorWhite);
+  --footer-news-events-time-color: var(--mateColorGreyDark);
+  --toplink-color: var(--mateColorWhite);
+  --toplink-color-hover: var(--mateColorWhite);
+  --pagination-hover-background-color: var(--mateColorGreyLight);
+  --select-label-color: var(--primary-text-color);
+  --subnav-dropdown-color: var(--mateColorWhite);
+}
+
+.slider-text-below-image .indicators li.indicator-item {
+  color: #fff;
+}

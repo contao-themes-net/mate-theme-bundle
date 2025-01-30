@@ -10,25 +10,30 @@
 /*     MATE Theme Variables      */
 /* ============================= */
 
-/* Colors */
-$mateColor1: #FFEAAE;
-$mateColor2: #FFD753;
-$mateColor3: #CCA500;
-$mateColor4: #5F5C4D;
-$mateColor6: #908C77;
+:root {
+  --mateColor1: #FFEAAE;
+  --mateColor2: #FFD753;
+  --mateColor3: #CCA500;
+  --mateColor4: #5F5C4D;
+  --mateColor6: #908C77;
 
-$primary-text-color: #000;
-$secondary-text-color: #000;
+  --primary-text-color: #000;
+  --secondary-text-color: #000;
 
-$boxes-background: #F9F9F7;
-$boxes-text-color: $primary-text-color;
+  --boxes-background: #F9F9F7;
+  --boxes-text-color: var(--primary-text-color);
 
-$mateColorWhite: $boxes-background;
-$mateColorBlack: #000;
-$mateColorGreyLight: #f5f5f5;
-$mateColorGreyDark: #e6e6e6;
-$pageBackground: #fff;
+  --mateColorWhite: var(--boxes-background);
+  --mateColorBlack: #000;
+  --mateColorGreyLight: #f5f5f5;
+  --mateColorGreyDark: #e6e6e6;
+  --pageBackground: #fff;
 
-/* Content Box */
-$contentbox-first-background: $boxes-background;
-$contentbox-second-background: #f2f2f2;
+  /* Content Box */
+  --contentbox-first-background: var(--boxes-background);
+  --contentbox-second-background: #f2f2f2;
+
+  /* Rgb colors */
+  --rgba-mateColor2: 255, 215, 83;
+  --rgba-boxes-background: 249, 249, 247;
+}

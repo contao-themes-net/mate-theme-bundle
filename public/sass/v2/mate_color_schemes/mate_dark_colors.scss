@@ -10,21 +10,27 @@
 /*     MATE Theme Variables      */
 /* ============================= */
 
-/* Colors */
-$mateColor1: #CCBAA6;
-$mateColor2: #AB9C89;
-$mateColor3: #7f684f;
-$mateColor4: #8E7E6C;
-$mateColor6: #A8A29D;
+:root {
+  /* Colors */
+  --mateColor1: #CCBAA6;
+  --mateColor2: #AB9C89;
+  --mateColor3: #7f684f;
+  --mateColor4: #8E7E6C;
+  --mateColor6: #A8A29D;
 
-$primary-text-color: #fff;
-$secondary-text-color: #fff;
+  --primary-text-color: #fff;
+  --secondary-text-color: #fff;
 
-$boxes-background: #1b1b1b;
-$boxes-text-color: $primary-text-color;
+  --boxes-background: #1b1b1b;
+  --boxes-text-color: var(--primary-text-color);
 
-$mateColorWhite: $boxes-background;
-$mateColorBlack: #292828;
-$mateColorGreyLight: #f2f2f2;
-$mateColorGreyDark: #e6e6e6;
-$pageBackground: $mateColorBlack;
+  --mateColorWhite: var(--boxes-background);
+  --mateColorBlack: #292828;
+  --mateColorGreyLight: #f2f2f2;
+  --mateColorGreyDark: #e6e6e6;
+  --pageBackground: var(--mateColorBlack);
+
+  /* Rgb colors */
+  --rgba-mateColor2: 171, 156, 137;
+  --rgba-boxes-background: 27, 27, 27;
+}

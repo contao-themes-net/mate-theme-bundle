@@ -14,26 +14,50 @@ $dark-color-scheme: null;
 $yellow-color-scheme: null;
 $other-color-scheme: '1';
 
-/* Colors */
-$mateColor1: #1E8549;
-$mateColor2: #186D3B;
-$mateColor3: #12542E;
-$mateColor4: #0D3F21;
-$mateColor6: #43564A;
+:root {
+  /* Colors */
+  --mateColor1: #1E8549;
+  --mateColor2: #186D3B;
+  --mateColor3: #12542E;
+  --mateColor4: #0D3F21;
+  --mateColor6: #43564A;
 
-$mateColorWhite: #fff;
-$mateColorBlack: #000;
-$mateColorGreyLight: #f5f5f5;
-$mateColorGreyDark: #E3E3E3;
-$pageBackground: #f4f8f0;
+  --mateColorWhite: #fff;
+  --mateColorBlack: #000;
+  --mateColorGreyLight: #f5f5f5;
+  --mateColorGreyDark: #E3E3E3;
+  --pageBackground: #f4f8f0;
 
-/* Text Colors */
-$primary-text-color: #000;
-$secondary-text-color: #fff;
-$mateColor2-text-color: $mateColor2;
-$mateColor3-text-color: $mateColor3;
-$mateColor4-text-color: $mateColor4;
+  /* Text Colors */
+  --primary-text-color: #000;
+  --secondary-text-color: #fff;
+  --mateColor2-text-color: var(--mateColor2);
+  --mateColor3-text-color: var(--mateColor3);
+  --mateColor4-text-color: var(--mateColor4);
 
-/* Boxes */
-$boxes-background: $mateColorWhite;
-$boxes-text-color: $primary-text-color;
+  /* Boxes */
+  --boxes-background: var(--mateColorWhite);
+  --boxes-text-color: var(--primary-text-color);
+
+  /* Rgb colors */
+  --rgba-mateColor2: 24, 109, 59;
+  --rgba-boxes-background: 255, 255, 255;
+
+  /* Custom variables */
+  --button-flat-color: var(--mateColorWhite);
+  --navbar-stuck-active-color: var(--mateColorWhite);
+  --navbar-stuck-dropdown-hover-color: var(--mateColorWhite);
+  --slider-arrows-color: var(--mateColorWhite);
+  --slider-button-color: var(--mateColorWhite);
+  --footer-newsletter-color: var(--mateColorWhite);
+  --footer-news-events-time-color: var(--mateColorGreyDark);
+  --toplink-color: var(--mateColorWhite);
+  --toplink-color-hover: var(--mateColorWhite);
+  --pagination-hover-background-color: var(--mateColorGreyLight);
+  --select-label-color: var(--primary-text-color);
+  --subnav-dropdown-color: var(--mateColorWhite);
+}
+
+.slider-text-below-image .indicators li.indicator-item {
+  color: #fff;
+}

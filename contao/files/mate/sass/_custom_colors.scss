@@ -22,23 +22,32 @@
 /*     MATE Theme Variables      */
 /* ============================= */
 
-/* Colors */
-//$mateColor1: #b6cf92;
-//$mateColor2: #86af49;
-//$mateColor3: #476a30;
-//$mateColor4: #58774e;
-//$mateColor6: #abbdb1;
+:root {
+  /* Colors */
+  //--mateColor1: #b6cf92;
+  //--mateColor2: #86af49;
+  //--mateColor3: #476a30;
+  //--mateColor4: #58774e;
+  //--mateColor6: #abbdb1;
 
-//$mateColorWhite: #fff;
-//$mateColorBlack: #000;
-//$mateColorGreyLight: #f5f5f5;
-//$mateColorGreyDark: #e6e6e6;
-//$pageBackground: #f4f8f0;
+  //--mateColorWhite: #fff;
+  //--mateColorBlack: #000;
+  //--mateColorGreyLight: #f5f5f5;
+  //--mateColorGreyDark: #e6e6e6;
+  //--pageBackground: #f4f8f0;
 
-/* Text Colors */
-//$primary-text-color: #000;
-//$secondary-text-color: #fff;
+  /* Text Colors */
+  //--primary-text-color: #000;
+  //--secondary-text-color: #fff;
+  //--mateColor2-text-color: var(--mateColor2);
+  //--mateColor3-text-color: var(--mateColor3);
+  //--mateColor4-text-color: var(--mateColor4);
 
-/* Boxes */
-//$boxes-background: $mateColorWhite;
-//$boxes-text-color: $primary-text-color;
+  /* Boxes */
+  //--boxes-background: var(--mateColorWhite);
+  //--boxes-text-color: var(--primary-text-color);
+
+  /* Rgb colors */
+  //--rgba-mateColor2: 134, 175, 73;
+  //--rgba-boxes-background: 255, 255, 255;
+}
