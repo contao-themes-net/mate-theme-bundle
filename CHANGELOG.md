@@ -13,6 +13,7 @@ Types of changes
 ## [3.5.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.0) – 2025-01-31
 
 - [Added] 
+- [Fixed] Fix file folders migration with minimal installation ([#23](https://github.com/contao-themes-net/convert-theme-bundle/issues/23))
 
 ## [3.4.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.3) – 2024-12-13
 
