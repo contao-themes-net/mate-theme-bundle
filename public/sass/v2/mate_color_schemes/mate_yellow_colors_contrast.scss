@@ -50,12 +50,26 @@
   --toplink-color: var(--mateColorWhite);
   --subnav-hover-color: var(--mateColorBlack);
   --subnav-active-color: var(--mateColorBlack);
-  --select-label-color: var(--primary-text-color);
+  --select-label-color: #9e9e9e;
   --input-border: 2px solid var(--mateColor2-text-color);
   --input-focus-border: 2px solid var(--mateColor3);
   --select-border: 2px solid var(--mateColor2-text-color);
   --faq-page-color: var(--mateColorBlack);
   --hyperlink-teaser-color: var(--mateColorBlack);
+  --navbar-stuck-active-color: var(--mateColor3-text-color);
+  --navbar-stuck-dropdown-hover-color: var(--primary-text-color);
+  --slider-button-color: var(--mateColor3-text-color);
+  --slider-navigation-subheadline-color: var(--mateColor2-text-color);
+  --toplink-color-hover: var(--mateColorBlack);
+  --table-even-background: var(--mateColorGreyLight);
+  --parallax-headline-color: var(--mateColorWhite);
+  --parallax-text-color: var(--mateColorWhite);
+  --parallax-link-color: var(--mateColorWhite);
+  --subnav-dropdown-color: var(--mateColor1);
+  --pagination-hover-background-color: var(--mateColor1);
+  --navbar-search-color: var(--mateColor2-text-color);
+  --navbar-mobile-color: var(--mateColor2);
+  --navbar-mobile-dropdown-color: var(--mateColor1);
 }
 
 .slider-text-below-image .indicators li.indicator-item,

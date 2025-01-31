@@ -51,8 +51,21 @@
   --toplink-color: var(--mateColorWhite);
   --toplink-color-hover: var(--mateColorWhite);
   --pagination-hover-background-color: var(--mateColorGreyLight);
-  --select-label-color: var(--primary-text-color);
+  --select-label-color: #9e9e9e;
   --subnav-dropdown-color: var(--mateColorWhite);
+  --navbar-search-color: var(--mateColor2-text-color);
+  --navbar-mobile-color: var(--mateColor2);
+  --navbar-mobile-dropdown-color: var(--mateColor1);
+  --slider-navigation-subheadline-color: var(--mateColor2-text-color);
+  --hyperlink-teaser-color: var(--mateColorWhite);
+  --table-even-background: var(--mateColorGreyLight);
+  --parallax-headline-color: var(--mateColorWhite);
+  --parallax-text-color: var(--mateColorWhite);
+  --parallax-link-color: var(--mateColorWhite);
+  --faq-page-color: var(--mateColorWhite);
+  --input-border: 2px solid var(--mateColor1);
+  --input-focus-border: 2px solid var(--mateColor2);
+  --select-border: 2px solid var(--mateColor1);
 }
 
 .slider-text-below-image .indicators li.indicator-item {

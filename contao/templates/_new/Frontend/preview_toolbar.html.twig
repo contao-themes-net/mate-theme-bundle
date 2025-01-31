@@ -1,103 +1,198 @@
 <div id="matePreviewToolbar">
   <ul id="slide-out" class="sidenav">
-    <div class="close-icon">+</div>
+    <div class="close-icon">✕</div>
     <li class="image">
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green.png?size=20&class=custom active}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green_contrast.jpg?size=24&class=custom active}}'|insert_tag }}
       {# New contrast colors #}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green.png?size=20&class=green_colors_contrast}}'|insert_tag }}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_blue.png?size=20&class=blue_colors_contrast}}'|insert_tag }}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_dark.png?size=20&class=dark-colors_contrast}}'|insert_tag }}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_yellow.png?size=20&class=yellow_colors_contrast}}'|insert_tag }}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_red.png?size=20&class=red_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green_contrast.jpg?size=24&class=green_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_blue_contrast.jpg?size=24&class=blue_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_dark_contrast.jpg?size=24&class=dark_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_yellow_contrast.jpg?size=24&class=yellow_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_red_contrast.jpg?size=24&class=red_colors_contrast}}'|insert_tag }}
       {# Old colors #}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green.png?size=20&class=green_colors}}'|insert_tag }}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_blue.png?size=20&class=blue_colors}}'|insert_tag }}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_dark.png?size=20&class=dark_colors}}'|insert_tag }}
-      {{ '{{picture::files/mate/preview_toolbar/mate_theme_yellow.png?size=20&class=yellow_color}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green.jpg?size=24&class=green_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_blue.jpg?size=24&class=blue_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_dark.jpg?size=24&class=dark_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_yellow.jpg?size=24&class=yellow_colors}}'|insert_tag }}
 
     </li>
     <?php endif; ?>
 
-    <li class="subheader"><a class="subheader">MATE color schemes</a></li>
+    <li class="subheader">MATE color schemes</li>
 
     <li{% if 'green_colors_contrast' == mateColor %} class="active"{% endif %}>
       <a
         href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors_contrast"
-        class="color-scheme green_colors"
-        data-id="green_colors"
+        class="color-scheme green-colors-contrast"
+        data-id="green_colors_contrast"
       >
-        <span class="color primary-color"></span>
-        <span class="color secondary-color"></span>
-        <span class="color bg-color"></span>
-        <span class="title">MATE GREEN</span>
+        <span class="title">GREEN <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#1E8549"></span>
+          <span style="background:#186D3B"></span>
+          <span style="background:#12542E"></span>
+          <span style="background:#0D3F21"></span>
+          <span style="background:#43564A"></span>
+          <span style="background:#f4f8f0"></span>
+        </span>
       </a>
     </li>
 
     <li{% if 'blue_colors_contrast' == mateColor %} class="active"{% endif %}>
       <a
         href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors_contrast"
-        class="color-scheme blue_colors"
-        data-id="blue_colors"
+        class="color-scheme blue-colors-contrast"
+        data-id="blue_colors_contrast"
       >
-        <span class="color primary-color"></span>
-        <span class="color secondary-color"></span>
-        <span class="color bg-color"></span>
-        <span class="title">MATE BLUE</span>
+        <span class="title">BLUE <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#276882"></span>
+          <span style="background:#1C4F69"></span>
+          <span style="background:#0B2F47"></span>
+          <span style="background:#153142"></span>
+          <span style="background:#4F5463"></span>
+          <span style="background:#fff"></span>
+        </span>
       </a>
     </li>
 
     <li{% if 'dark_colors_contrast' == mateColor %} class="active"{% endif %}>
       <a
         href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_colors_contrast"
-        class="color-scheme dark-colors"
-        data-id="dark-colors">
-        <span class="color primary-color"></span>
-        <span class="color secondary-color"></span>
-        <span class="color bg-color"></span>
-        <span class="title">MATE DARK</span>
+        class="color-scheme dark-colors-contrast"
+        data-id="dark_colors_contrast">
+        <span class="title">DARK <span>CONTRAST / DARK MODE</span></span>
+        <span class="colors">
+          <span style="background:#4F4F4F"></span>
+          <span style="background:#383838"></span>
+          <span style="background:#212121"></span>
+          <span style="background:#0D0D0D"></span>
+          <span style="background:#B6B3AF"></span>
+          <span style="background:#292828"></span>
+        </span>
       </a></li>
 
     <li{% if 'yellow_colors_contrast' == mateColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors_contrast"
-        class="color-scheme yellow_color"
-        data-id="yellow_color"
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=yellow_colors_contrast"
+        class="color-scheme yellow-colors-contrast"
+        data-id="yellow_colors_contrast"
       >
-        <span class="color primary-color"></span>
-        <span class="color secondary-color"></span>
-        <span class="color bg-color"></span>
-        <span class="title">MATE YELLOW</span>
+        <span class="title">YELLOW <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#FFEAAE"></span>
+          <span style="background:#FFD753"></span>
+          <span style="background:#CCA500"></span>
+          <span style="background:#5F5C4D"></span>
+          <span style="background:#48433C"></span>
+          <span style="background:#fff"></span>
+        </span>
       </a>
     </li>
 
     <li{% if 'red_colors_contrast' == mateColor %} class="active"{% endif %}>
       <a
         href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=red_colors_contrast"
-        class="color-scheme red-color-scheme"
-        data-id="red-color-scheme"
+        class="color-scheme red-colors-contrast"
+        data-id="red_colors_contrast"
       >
-        <span class="color primary-color"></span>
-        <span class="color secondary-color"></span>
-        <span class="color bg-color"></span>
-        <span class="title">MATE RED</span>
+        <span class="title">RED <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#B30000"></span>
+          <span style="background:#8F0000"></span>
+          <span style="background:#570000"></span>
+          <span style="background:#330000"></span>
+          <span style="background:#AF1818"></span>
+          <span style="background:#fff"></span>
+        </span>
       </a>
     </li>
 
-    <li class="subheader"><a class="subheader">Links</a></li>
+    <li{% if 'green_colors' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors"
+        class="color-scheme green-colors"
+        data-id="green_colors"
+      >
+        <span class="title">GREEN</span>
+        <span class="colors">
+          <span style="background:#b6cf92"></span>
+          <span style="background:#86af49"></span>
+          <span style="background:#476a30"></span>
+          <span style="background:#58774e"></span>
+          <span style="background:#abbdb1"></span>
+          <span style="background:#f4f8f0"></span>
+        </span>
+      </a>
+    </li>
 
-    <li>
+    <li{% if 'blue_colors' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors"
+        class="color-scheme blue-colors"
+        data-id="blue_colors"
+      >
+        <span class="title">BLUE</span>
+        <span class="colors">
+          <span style="background:#7CBED8"></span>
+          <span style="background:#318CB8"></span>
+          <span style="background:#0B2F47"></span>
+          <span style="background:#224E6B"></span>
+          <span style="background:#AFB2BF"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'dark_colors' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_colors"
+        class="color-scheme dark-colors"
+        data-id="dark_colors">
+        <span class="title">DARK</span>
+        <span class="colors">
+          <span style="background:#CCBAA6"></span>
+          <span style="background:#AB9C89"></span>
+          <span style="background:#7f684f"></span>
+          <span style="background:#8E7E6C"></span>
+          <span style="background:#A8A29D"></span>
+          <span style="background:#292828"></span>
+        </span>
+      </a></li>
+
+    <li{% if 'yellow_colors' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=yellow_colors"
+        class="color-scheme yellow-colors"
+        data-id="yellow_colors"
+      >
+        <span class="title">YELLOW</span>
+        <span class="colors">
+          <span style="background:#FFEAAE"></span>
+          <span style="background:#FFD753"></span>
+          <span style="background:#CCA500"></span>
+          <span style="background:#5F5C4D"></span>
+          <span style="background:#908C77"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li class="subheader">Links</li>
+
+    <li class="link">
       <a href="https://contao-themes.net/theme-detail/mate.html"><i class="material-icons">file_download</i> Kostenlos
         installieren oder Lizenz bestellen</a>
     </li>
-    <li>
+    <li class="link">
       <a href="https://pdir.de/docs/de/contao/themes/mate/"><i class="material-icons">description</i>
         Dokumentation</a>
     </li>
-    <li>
+    <li class="link">
       <a href="https://github.com/contao-themes-net/mate-theme-bundle/issues"><i class="material-icons">bug_report</i>
         Fehler melden</a>
     </li>
-    <li>
+    <li class="link">
       <a href="https://mate.isotope.contao-themes.net"><i class="material-icons">shopping_bag</i> MATE Isotope Demo</a>
     </li>
 
@@ -118,8 +213,6 @@
   var activeColor = '{{ mateColor }}';
 
   jQuery(document).ready(function ($) {
-    console.log(activeColor);
-
     if(activeColor) {
       $('#matePreviewToolbar li img').removeClass('active');
       $('#matePreviewToolbar li img.' + activeColor).addClass('active');
@@ -148,7 +241,6 @@
   });
 </script>
 <style>
-
   .open-settings {
     position: fixed;
     top: 150px;
@@ -166,71 +258,13 @@
   }
 
   #slide-out {
-    background: #333
+    background: #333;
+    max-width: 350px;
+    width: 100%;
   }
 
   #slide-out.sidenav li {
     position: static
-  }
-
-  #slide-out span.color {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    margin-right: 5px;
-    box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.55)
-  }
-
-  #slide-out span.color.bg-color {
-    margin-right: 10px
-  }
-
-  #slide-out .green_colors .primary-color {
-    background: #86AF49
-  }
-
-  #slide-out .green_colors .secondary-color {
-    background: #58774E
-  }
-
-  #slide-out .green_colors .bg-color {
-    background: #F4F8F0
-  }
-
-  #slide-out .blue_colors .primary-color {
-    background: #318CB8
-  }
-
-  #slide-out .blue_colors .secondary-color {
-    background: #224E6B
-  }
-
-  #slide-out .blue_colors .bg-color {
-    background: #fff
-  }
-
-  #slide-out .dark-colors .primary-color {
-    background: #AB9C89
-  }
-
-  #slide-out .dark-colors .secondary-color {
-    background: #8E7E6C
-  }
-
-  #slide-out .dark-colors .bg-color {
-    background: #292828
-  }
-
-  #slide-out .yellow_color .primary-color {
-    background: #FFD753
-  }
-
-  #slide-out .yellow_color .secondary-color {
-    background: #5F5C4D
-  }
-
-  #slide-out .yellow_color .bg-color {
-    background: #FFF
   }
 
   #slide-out li > a {
@@ -238,7 +272,15 @@
     align-items: center;
     color: #fff;
     font-size: 16px;
-    line-height: 1.2
+    line-height: 1.2;
+    height: inherit;
+    padding: 5px 32px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  #slide-out li:not(.link) > a {
+    flex-wrap: wrap;
   }
 
   #slide-out li > a > i {
@@ -246,16 +288,16 @@
     color: #fff;
     font-size: 1.5rem;
     margin: 0 10px 0 0;
-    min-width: 25px
+    min-width: 25px;
+    line-height: 1;
   }
 
   #slide-out li.image {
-    padding: 65px 32px 0
+    padding: 65px 32px 0;
   }
 
   #slide-out li.image img {
     display: none;
-    max-height: 210px
   }
 
   #slide-out li.image img.active {
@@ -281,201 +323,48 @@
   #slide-out .close-icon {
     text-align: right;
     color: #fff;
-    font-size: 3rem;
-    transform: rotate(45deg);
+    font-size: 1.8rem;
     display: inline-block;
     float: right;
-    padding: 0 15px;
-    cursor: pointer
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
   #slide-out .title {
     font-size: 16px;
     font-weight: 700;
-    font-family: Lato Regular
+    font-family: Lato Regular;
+    margin-bottom: 2px;
   }
 
-  #slide-out a.subheader {
+  #slide-out .title span {
+    font-weight: 400;
+  }
+
+  #slide-out .subheader {
     font-size: 18px;
-    margin-top: 20px;
     padding: 0;
     margin: 20px 32px 15px;
-    border-bottom: 1px solid #565656
+    border-bottom: 1px solid #565656;
+    color: #fff;
   }
 
   #sidenav-overlay {
     z-index: 200
   }
 
-  @media (max-width: 992px) {
-    #slide-out.sidenav {
-      padding: 0 0 100px
-    }
-  }
-
-  @media (max-width: 600px) {
-    #slide-out {
-      width: 100%
-    }
-  }
-
-  .open-settings {
-    position: fixed;
-    top: 150px;
-    background: #333;
-    width: 50px;
-    height: 50px;
+  span.colors {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100
+    height: 5px;
+    width: 100%;
   }
 
-  .open-settings i {
-    color: #fff
-  }
-
-  #slide-out {
-    margin-top: 40px;
-    background: #333
-  }
-
-  #slide-out.sidenav li {
-    position: static
-  }
-
-  #slide-out span.color {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    margin-right: 5px;
-    box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.55)
-  }
-
-  #slide-out span.color.bg-color {
-    margin-right: 10px
-  }
-
-  #slide-out .green_colors .primary-color {
-    background: #86AF49
-  }
-
-  #slide-out .green_colors .secondary-color {
-    background: #58774E
-  }
-
-  #slide-out .green_colors .bg-color {
-    background: #F4F8F0
-  }
-
-  #slide-out .blue_colors .primary-color {
-    background: #318CB8
-  }
-
-  #slide-out .blue_colors .secondary-color {
-    background: #224E6B
-  }
-
-  #slide-out .blue_colors .bg-color {
-    background: #fff
-  }
-
-  #slide-out .dark-colors .primary-color {
-    background: #AB9C89
-  }
-
-  #slide-out .dark-colors .secondary-color {
-    background: #8E7E6C
-  }
-
-  #slide-out .dark-colors .bg-color {
-    background: #292828
-  }
-
-  #slide-out .yellow_color .primary-color {
-    background: #FFD753
-  }
-
-  #slide-out .yellow_color .secondary-color {
-    background: #5F5C4D
-  }
-
-  #slide-out .yellow_color .bg-color {
-    background: #FFF
-  }
-
-  #slide-out li > a {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.2
-  }
-
-  #slide-out li > a > i {
-    height: inherit;
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 10px 0 0;
-    min-width: 25px
-  }
-
-  #slide-out li.image {
-    padding: 65px 32px 0
-  }
-
-  #slide-out li.image img {
-    display: none;
-    max-height: 210px
-  }
-
-  #slide-out li.image img.active {
-    display: block
-  }
-
-  #slide-out li.image.hover img.active {
-    display: none
-  }
-
-  #slide-out li.image.hover img.hover {
-    display: block
-  }
-
-  #slide-out li.active, #slide-out li:hover {
-    background: rgba(255, 255, 255, 0.05)
-  }
-
-  #slide-out li.active.subheader, #slide-out li.active.image, #slide-out li:hover.subheader, #slide-out li:hover.image {
-    background: none
-  }
-
-  #slide-out .close-icon {
-    text-align: right;
-    color: #fff;
-    font-size: 3rem;
-    transform: rotate(45deg);
-    display: inline-block;
-    float: right;
-    padding: 0 15px;
-    cursor: pointer
-  }
-
-  #slide-out .title {
-    font-size: 16px;
-    font-weight: 700;
-    font-family: Lato Regular
-  }
-
-  #slide-out a.subheader {
-    font-size: 18px;
-    margin-top: 20px;
-    padding: 0;
-    margin: 20px 32px 15px;
-    border-bottom: 1px solid #565656
-  }
-
-  #sidenav-overlay {
-    z-index: 200
+  span.colors span {
+    width: 20%;
+    height: 100%;
   }
 
   @media (max-width: 992px) {
