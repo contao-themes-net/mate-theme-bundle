@@ -1,0 +1,492 @@
+<div id="matePreviewToolbar">
+  <ul id="slide-out" class="sidenav">
+    <div class="close-icon">+</div>
+    <li class="image">
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green.png?size=20&class=custom active}}'|insert_tag }}
+      {# New contrast colors #}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green.png?size=20&class=green_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_blue.png?size=20&class=blue_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_dark.png?size=20&class=dark-colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_yellow.png?size=20&class=yellow_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_red.png?size=20&class=red_colors_contrast}}'|insert_tag }}
+      {# Old colors #}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green.png?size=20&class=green_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_blue.png?size=20&class=blue_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_dark.png?size=20&class=dark_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_yellow.png?size=20&class=yellow_color}}'|insert_tag }}
+
+    </li>
+    <?php endif; ?>
+
+    <li class="subheader"><a class="subheader">MATE color schemes</a></li>
+
+    <li{% if 'green_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors_contrast"
+        class="color-scheme green_colors"
+        data-id="green_colors"
+      >
+        <span class="color primary-color"></span>
+        <span class="color secondary-color"></span>
+        <span class="color bg-color"></span>
+        <span class="title">MATE GREEN</span>
+      </a>
+    </li>
+
+    <li{% if 'blue_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors_contrast"
+        class="color-scheme blue_colors"
+        data-id="blue_colors"
+      >
+        <span class="color primary-color"></span>
+        <span class="color secondary-color"></span>
+        <span class="color bg-color"></span>
+        <span class="title">MATE BLUE</span>
+      </a>
+    </li>
+
+    <li{% if 'dark_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_colors_contrast"
+        class="color-scheme dark-colors"
+        data-id="dark-colors">
+        <span class="color primary-color"></span>
+        <span class="color secondary-color"></span>
+        <span class="color bg-color"></span>
+        <span class="title">MATE DARK</span>
+      </a></li>
+
+    <li{% if 'yellow_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors_contrast"
+        class="color-scheme yellow_color"
+        data-id="yellow_color"
+      >
+        <span class="color primary-color"></span>
+        <span class="color secondary-color"></span>
+        <span class="color bg-color"></span>
+        <span class="title">MATE YELLOW</span>
+      </a>
+    </li>
+
+    <li{% if 'red_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=red_colors_contrast"
+        class="color-scheme red-color-scheme"
+        data-id="red-color-scheme"
+      >
+        <span class="color primary-color"></span>
+        <span class="color secondary-color"></span>
+        <span class="color bg-color"></span>
+        <span class="title">MATE RED</span>
+      </a>
+    </li>
+
+    <li class="subheader"><a class="subheader">Links</a></li>
+
+    <li>
+      <a href="https://contao-themes.net/theme-detail/mate.html"><i class="material-icons">file_download</i> Kostenlos
+        installieren oder Lizenz bestellen</a>
+    </li>
+    <li>
+      <a href="https://pdir.de/docs/de/contao/themes/mate/"><i class="material-icons">description</i>
+        Dokumentation</a>
+    </li>
+    <li>
+      <a href="https://github.com/contao-themes-net/mate-theme-bundle/issues"><i class="material-icons">bug_report</i>
+        Fehler melden</a>
+    </li>
+    <li>
+      <a href="https://mate.isotope.contao-themes.net"><i class="material-icons">shopping_bag</i> MATE Isotope Demo</a>
+    </li>
+
+    {#
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Device Size</a></li>
+    <li><i class="material-icons">desktop_windows</i> Desktop</li>
+    <li><i class="material-icons">tablet</i> Tablet</li>
+    <li><i class="material-icons">tablet_android</i> Tablet (Portrait) </li>
+    <li><i class="material-icons">smartphone</i> Mobile</li>
+    #}
+  </ul>
+  <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}#"
+     data-target="slide-out" class="open-settings sidenav-trigger" title="Show settings menu"><i class="material-icons">settings</i></a>
+</div>
+<script>
+  // Set active color image
+  var activeColor = '{{ mateColor }}';
+
+  jQuery(document).ready(function ($) {
+    console.log(activeColor);
+
+    if(activeColor) {
+      $('#matePreviewToolbar li img').removeClass('active');
+      $('#matePreviewToolbar li img.' + activeColor).addClass('active');
+    }
+
+    $('.open-settings').sidenav({
+      menuWidth: 350,
+      edge: 'left',
+      closeOnClick: false,
+    });
+
+    $('.open-settings').click(function () {
+      var documentWidth = $(document).width();
+      $(".sidenav-overlay").width(documentWidth);
+    });
+
+    $("a.color-scheme").hover(function () {
+      var colorScheme = $(this).data("id");
+      $("li img." + colorScheme).toggleClass("hover");
+      $("li.image").toggleClass("hover");
+    });
+
+    $("#slide-out .close-icon").click(function () {
+      $('.sidenav').sidenav('close');
+    });
+  });
+</script>
+<style>
+
+  .open-settings {
+    position: fixed;
+    top: 150px;
+    background: #333;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100
+  }
+
+  .open-settings i {
+    color: #fff
+  }
+
+  #slide-out {
+    background: #333
+  }
+
+  #slide-out.sidenav li {
+    position: static
+  }
+
+  #slide-out span.color {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 5px;
+    box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.55)
+  }
+
+  #slide-out span.color.bg-color {
+    margin-right: 10px
+  }
+
+  #slide-out .green_colors .primary-color {
+    background: #86AF49
+  }
+
+  #slide-out .green_colors .secondary-color {
+    background: #58774E
+  }
+
+  #slide-out .green_colors .bg-color {
+    background: #F4F8F0
+  }
+
+  #slide-out .blue_colors .primary-color {
+    background: #318CB8
+  }
+
+  #slide-out .blue_colors .secondary-color {
+    background: #224E6B
+  }
+
+  #slide-out .blue_colors .bg-color {
+    background: #fff
+  }
+
+  #slide-out .dark-colors .primary-color {
+    background: #AB9C89
+  }
+
+  #slide-out .dark-colors .secondary-color {
+    background: #8E7E6C
+  }
+
+  #slide-out .dark-colors .bg-color {
+    background: #292828
+  }
+
+  #slide-out .yellow_color .primary-color {
+    background: #FFD753
+  }
+
+  #slide-out .yellow_color .secondary-color {
+    background: #5F5C4D
+  }
+
+  #slide-out .yellow_color .bg-color {
+    background: #FFF
+  }
+
+  #slide-out li > a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2
+  }
+
+  #slide-out li > a > i {
+    height: inherit;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px 0 0;
+    min-width: 25px
+  }
+
+  #slide-out li.image {
+    padding: 65px 32px 0
+  }
+
+  #slide-out li.image img {
+    display: none;
+    max-height: 210px
+  }
+
+  #slide-out li.image img.active {
+    display: block
+  }
+
+  #slide-out li.image.hover img.active {
+    display: none
+  }
+
+  #slide-out li.image.hover img.hover {
+    display: block
+  }
+
+  #slide-out li.active, #slide-out li:hover {
+    background: rgba(255, 255, 255, 0.05)
+  }
+
+  #slide-out li.active.subheader, #slide-out li.active.image, #slide-out li:hover.subheader, #slide-out li:hover.image {
+    background: none
+  }
+
+  #slide-out .close-icon {
+    text-align: right;
+    color: #fff;
+    font-size: 3rem;
+    transform: rotate(45deg);
+    display: inline-block;
+    float: right;
+    padding: 0 15px;
+    cursor: pointer
+  }
+
+  #slide-out .title {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Lato Regular
+  }
+
+  #slide-out a.subheader {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0;
+    margin: 20px 32px 15px;
+    border-bottom: 1px solid #565656
+  }
+
+  #sidenav-overlay {
+    z-index: 200
+  }
+
+  @media (max-width: 992px) {
+    #slide-out.sidenav {
+      padding: 0 0 100px
+    }
+  }
+
+  @media (max-width: 600px) {
+    #slide-out {
+      width: 100%
+    }
+  }
+
+  .open-settings {
+    position: fixed;
+    top: 150px;
+    background: #333;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100
+  }
+
+  .open-settings i {
+    color: #fff
+  }
+
+  #slide-out {
+    margin-top: 40px;
+    background: #333
+  }
+
+  #slide-out.sidenav li {
+    position: static
+  }
+
+  #slide-out span.color {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 5px;
+    box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.55)
+  }
+
+  #slide-out span.color.bg-color {
+    margin-right: 10px
+  }
+
+  #slide-out .green_colors .primary-color {
+    background: #86AF49
+  }
+
+  #slide-out .green_colors .secondary-color {
+    background: #58774E
+  }
+
+  #slide-out .green_colors .bg-color {
+    background: #F4F8F0
+  }
+
+  #slide-out .blue_colors .primary-color {
+    background: #318CB8
+  }
+
+  #slide-out .blue_colors .secondary-color {
+    background: #224E6B
+  }
+
+  #slide-out .blue_colors .bg-color {
+    background: #fff
+  }
+
+  #slide-out .dark-colors .primary-color {
+    background: #AB9C89
+  }
+
+  #slide-out .dark-colors .secondary-color {
+    background: #8E7E6C
+  }
+
+  #slide-out .dark-colors .bg-color {
+    background: #292828
+  }
+
+  #slide-out .yellow_color .primary-color {
+    background: #FFD753
+  }
+
+  #slide-out .yellow_color .secondary-color {
+    background: #5F5C4D
+  }
+
+  #slide-out .yellow_color .bg-color {
+    background: #FFF
+  }
+
+  #slide-out li > a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2
+  }
+
+  #slide-out li > a > i {
+    height: inherit;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px 0 0;
+    min-width: 25px
+  }
+
+  #slide-out li.image {
+    padding: 65px 32px 0
+  }
+
+  #slide-out li.image img {
+    display: none;
+    max-height: 210px
+  }
+
+  #slide-out li.image img.active {
+    display: block
+  }
+
+  #slide-out li.image.hover img.active {
+    display: none
+  }
+
+  #slide-out li.image.hover img.hover {
+    display: block
+  }
+
+  #slide-out li.active, #slide-out li:hover {
+    background: rgba(255, 255, 255, 0.05)
+  }
+
+  #slide-out li.active.subheader, #slide-out li.active.image, #slide-out li:hover.subheader, #slide-out li:hover.image {
+    background: none
+  }
+
+  #slide-out .close-icon {
+    text-align: right;
+    color: #fff;
+    font-size: 3rem;
+    transform: rotate(45deg);
+    display: inline-block;
+    float: right;
+    padding: 0 15px;
+    cursor: pointer
+  }
+
+  #slide-out .title {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Lato Regular
+  }
+
+  #slide-out a.subheader {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0;
+    margin: 20px 32px 15px;
+    border-bottom: 1px solid #565656
+  }
+
+  #sidenav-overlay {
+    z-index: 200
+  }
+
+  @media (max-width: 992px) {
+    #slide-out.sidenav {
+      padding: 0 0 100px
+    }
+  }
+
+  @media (max-width: 600px) {
+    #slide-out {
+      width: 100%
+    }
+  }
+</style>

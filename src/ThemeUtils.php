@@ -20,6 +20,7 @@ declare(strict_types=1);
 namespace ContaoThemesNet\MateThemeBundle;
 
 use Contao\Combiner;
+use Contao\Input;
 use Contao\StringUtil;
 use Contao\System;
 
@@ -27,6 +28,18 @@ class ThemeUtils
 {
     public static string $themeFolder = 'bundles/contaothemesnetmatetheme/';
     public static string $scssFolder = 'sass/';
+
+    public static array $colors = [
+        'blue_colors',
+        'blue_colors_contrast',
+        'dark_colors',
+        'dark_colors_contrast',
+        'green_colors',
+        'green_colors_contrast',
+        'yellow_colors',
+        'yellow_colors_contrast',
+        'red_colors_contrast'
+    ];
 
     public static function getRootDir(): string
     {
@@ -47,14 +60,34 @@ class ThemeUtils
             $scssFolder = 'files/mate/sass/'.$theme.'/';
         }
 
+        // Get session for theme switcher
+        $session = System::getContainer()->get('request_stack')->getSession();
+
         // add stylesheets
         $combiner = new Combiner();
 
         // Check for v2 or use old stylesheets
-        if (\file_exists(self::getRootDir().'/files/mate/.v2')) {
+        if ($isV2 = \file_exists(self::getRootDir().'/files/mate/.v2')) {
             $combiner->add($scssFolder.'v2/mate.scss');
         } else {
             $combiner->add($scssFolder.'mate.scss');
+        }
+
+        $request = System::getContainer()->get('request_stack')->getCurrentRequest();
+
+        // Execute code only in preview mode
+        if ($request->attributes->get('_preview')) {
+            if ('reset' === Input::get('theme-color')) {
+                $session->set('mate_color', null);
+            }
+
+            if (Input::get('theme-color') && \in_array(Input::get('theme-color'), self::$colors)) {
+                $session->set('mate_color', Input::get('theme-color'));
+            }
+
+            if ($isV2 && $session->get('mate_color') && null !== $session->get('mate_color'))  {
+                $combiner->add($scssFolder.'v2/mate_color_schemes/mate_'.$session->get('mate_color').'.scss');
+            }
         }
 
         return $combiner->getCombinedFile();
