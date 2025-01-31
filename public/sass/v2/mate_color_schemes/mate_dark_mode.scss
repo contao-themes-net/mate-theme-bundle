@@ -11,7 +11,7 @@
 /* ============================= */
 
 // Standardwerte für den Dark-Mode
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark), (prefers-contrast: more) {
   :root {
     /* Colors */
     --mateColor1: #4F4F4F;
