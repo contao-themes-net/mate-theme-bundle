@@ -395,7 +395,7 @@ code, pre {
 
       &:before {
         content: "»";
-        color: $mateColor2-text-color;
+        color: $mateColor2;
         font-weight: 700;
         padding-right: 15px;
         position: absolute;
@@ -574,7 +574,7 @@ code {
 }
 
 .material-icons {
-  color: $mateColor2-text-color;
+  color: $mateColor2;
 }
 
 figure {
@@ -597,7 +597,7 @@ figure {
 
 h1, h2, h3, h4, h5, h6 {
   position: relative;
-  color: $mateColor3-text-color;
+  color: $mateColor3;
 }
 
 h1, .h1 {
@@ -605,7 +605,7 @@ h1, .h1 {
   margin-top: 0;
   font-family: $font2;
   font-weight: 400;
-  color: $mateColor2-text-color;
+  color: $mateColor2;
   padding: 10px 0;
 }
 
@@ -643,7 +643,7 @@ h6, .h6 {
 .bordered-left, .bordered-right {
   h1, h2, h3, h4, h5, h6 {
     padding-bottom: 25px;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
   }
 
   h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
@@ -664,11 +664,11 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6 {
   &.bordered-left, &.bordered-right {
     padding-bottom: 25px;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
   }
   &.bordered-right {
     padding-bottom: 25px;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
     text-align: right;
   }
 }
@@ -823,7 +823,7 @@ header {
   align-items: center;
 
   a {
-    color: $mateColor2-text-color;
+    color: $mateColor2;
     cursor: pointer;
   }
 }
@@ -1376,7 +1376,7 @@ nav {
 
     strong {
       background: $mateColor1;
-      color: $mateColor3-text-color;
+      color: $mateColor3;
     }
   }
 
@@ -1483,7 +1483,7 @@ nav .brand-logo {
   font-family: 'Material Icons';
   content: "\e5cf";
   -webkit-font-feature-settings: 'liga';
-  color: $mateColor2-text-color;
+  color: $mateColor2;
   padding-left: 5px;
 }
 
@@ -1558,7 +1558,6 @@ nav .brand-logo {
       padding: 0;
       font-family: $font2;
       font-weight: 400;
-      color: $slider-headline-color;
 
       a {
         color: $slider-headline-color;
@@ -1654,7 +1653,7 @@ nav .brand-logo {
         cursor: pointer;
 
         &:hover {
-          color: $mateColor2-text-color;
+          color: $mateColor2;
         }
 
         i {
@@ -1672,7 +1671,7 @@ nav .brand-logo {
 
     .subheadline {
       text-align: left;
-      font-size: .8em;
+      font-size: .625em;
       text-transform: uppercase;
       margin-bottom: 10px;
       letter-spacing: 1px;
@@ -1789,7 +1788,7 @@ nav .brand-logo {
       margin: 0 0 5px;
       text-align: left;
       font-size: .688em;
-      color: $mateColor3-text-color;
+      color: $mateColor3;
     }
   }
 
@@ -2013,7 +2012,7 @@ nav .brand-logo {
 
 .ce_text_simplebox_mate ul:not(.browser-default) li:before {
   content:"»";
-  color: $mateColor2-text-color;
+  color: $mateColor2;
   font-weight: 700;
   padding-right: 15px;
   margin-left: 15px;
@@ -2222,7 +2221,7 @@ nav .brand-logo {
   }
 
   .subheadline {
-    color: $mateColor2-text-color;
+    color: $mateColor2;
     margin: 10px 25px 0;
     text-transform: uppercase;
     font-size: .8em;
@@ -2304,10 +2303,6 @@ nav .brand-logo {
 }
 
 .layout_latest, .layout_teaser {
-  figure {
-    background: #333;
-  }
-
   .subheadline {
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2326,8 +2321,8 @@ nav .brand-logo {
       right: 30px;
       font-size: 2.25em;
       line-height: 36px;
-      background: $button-floating-background;
-      color: $button-flat-color;
+      background: $mateColor2;
+      color: #fff;
       padding: 11px 5px 10px 3px;
       border-radius: 100%;
       width: 60px;
@@ -2338,7 +2333,7 @@ nav .brand-logo {
       -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
       &:hover {
-        background: $button-floating-background-hover;
+        background: $mateColor3;
       }
     }
   }
@@ -2365,7 +2360,7 @@ nav .brand-logo {
   .subheadline {
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: .8em;
+    font-size: .625em;
     margin: 10px 0 0;
   }
 }
@@ -2388,12 +2383,12 @@ nav .brand-logo {
     text-transform: inherit;
     margin: 0;
     padding: 10px 0;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
     position: relative;
     @extend .bordered-left;
 
     a {
-      color: $mateColor2-text-color;
+      color: $mateColor2;
     }
   }
 
@@ -2429,7 +2424,7 @@ nav[data-pagination] {
   li {
     a, span, strong {
       display: block;
-      border: 1px solid $pagination-border-color;
+      border: 1px solid $mateColor6;
       padding: 0 10px;
       font-size: .75em;
       line-height: 30px;
@@ -2443,20 +2438,20 @@ nav[data-pagination] {
     }
 
     span, strong, .active {
-      background: $pagination-active-background-color;
-      color: $pagination-active-color;
+      background: $mateColor6;
+      color: #fff;
     }
 
     a:hover {
-      background: $pagination-hover-background-color;
-      border: 1px solid $pagination-border-hover-color;
+      background: $mateColor1;
+      border: 1px solid $mateColor1;
     }
   }
 
   &.block p {
     float: right;
     font-size: .875em;
-    color: $pagination-text-color;
+    color: $mateColor3;
     padding-top: 10px;
     margin: 0;
   }
@@ -2504,7 +2499,7 @@ nav.pagination li, nav[data-pagination] li {
       right: 0;
       border-radius: 0;
       background: none;
-      color: $mateColor2-text-color;
+      color: $mateColor2;
       box-shadow: none;
       font-weight: 400;
       text-transform: inherit;
@@ -2512,7 +2507,7 @@ nav.pagination li, nav[data-pagination] li {
 
       &:hover {
         background: none;
-        color: $mateColor3-text-color;
+        color: $mateColor3;
       }
     }
 
@@ -2583,7 +2578,7 @@ nav.pagination li, nav[data-pagination] li {
     border: 1px solid $calendar-border-color;
 
     a {
-      color: $mateColor2-text-color;
+      color: $mateColor2;
       margin-top: 5px;
       display: block;
     }
@@ -2607,7 +2602,7 @@ nav.pagination li, nav[data-pagination] li {
   }
 
   .label {
-    color: $mateColor6;
+    color: #cbcbcb;
     background: $calendar-background;
   }
 
@@ -2678,7 +2673,7 @@ table.calendar, table.minicalendar {
 
   time {
     background: none;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
     padding: 0;
   }
 }
@@ -2769,18 +2764,18 @@ footer.page-footer {
     position: fixed;
     right: 50px;
     bottom: 50px;
-    background: $toplink-background;
-    color: $toplink-color;
+    background: $mateColor6;
+    color: #fff;
     padding: 9px 10px;
     line-height: 1em;
     opacity: 0;
-    transition: all .25s;
+    transition: opacity .25s ease-in-out;
     z-index: 1000;
     box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
     -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
     i {
-      color: $toplink-color;
+      color: #fff;
     }
 
     &.active {
@@ -2788,12 +2783,7 @@ footer.page-footer {
     }
 
     &:hover {
-      background: $toplink-background-hover;
-      color: $toplink-color-hover;
-
-      i {
-        color: $toplink-color-hover;
-      }
+      background: $button-floating-background-hover;
     }
   }
 
@@ -2853,14 +2843,8 @@ footer.page-footer {
   }
 }
 
-footer {
-  .container {
-    padding: 0 0.75rem;
-  }
-
-  .mod_subscribe label.invisible {
-    color: $footer-newsletter-color;
-  }
+footer .container {
+  padding: 0 0.75rem;
 }
 
 #footer {
@@ -3241,7 +3225,7 @@ textarea {
 }
 
 input::placeholder {
-  color: rgba($input-label-color, 0.7);
+  color: rgba($footer-input-color, 0.7);
 }
 
 /* ========================== *
@@ -3323,8 +3307,8 @@ input::placeholder {
 
 .mod_faqpage {
   h3 {
-    background: $faq-page-background-color;
-    color: $faq-page-color;
+    background: $mateColor2;
+    color: #fff;
     padding: 7px 15px;
   }
 
@@ -3338,7 +3322,7 @@ input::placeholder {
 
   .info {
     padding: 15px;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
     font-weight: 700;
     font-size: .875em;
     margin: 0;
@@ -3392,7 +3376,7 @@ input::placeholder {
   .url {
     margin: 0;
     padding-top: 0;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
     word-wrap: break-word;
   }
 }
@@ -3419,10 +3403,6 @@ mark {
 }
 
 /* Modal */
-
-.modal {
-  background: $boxes-background;
-}
 
 .mod_mateModal, .ce_mateModal {
   margin-bottom: 20px;
@@ -3460,7 +3440,7 @@ mark {
   .title {
     font-family: $font2;
     font-weight: 400;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
   }
 
   .inner {
@@ -3469,7 +3449,7 @@ mark {
   }
 
   .fa {
-    color: $mateColor2-text-color;
+    color: $mateColor2;
   }
 
   .social_feed_element .content-text {
@@ -3516,7 +3496,7 @@ mark {
       width: calc(100% - (0.75rem * 2));
     }
 
-    h2, h3 {
+    h3 {
       margin-top: 0;
     }
   }
@@ -3538,7 +3518,7 @@ mark {
       left: 0;
       top: -5px;
       font-size: 1.5em;
-      color: $mateColor2-text-color;
+      color: $mateColor2;
     }
   }
 }
@@ -3596,14 +3576,14 @@ mark {
     font-size: 2.125em;
     font-weight: 700;
     padding: 10px 0 0;
-    color: $mateColor2-text-color;
+    color: $mateColor2;
     display: block;
     line-height: 40px;
     font-family: $font2;
   }
 
   p {
-    color: $mateColor2-text-color;
+    color: $mateColor2;
   }
 
   .material-icons {
@@ -3638,7 +3618,6 @@ mark {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #333;
 
   &:after{
     content:'';
@@ -3652,9 +3631,9 @@ mark {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    background: $parallax-headline-background-color;
+    background: rgba($mateColor2, .9);
     text-transform: inherit;
-    color: $parallax-headline-color;
+    color: $mateColorWhite;
     display: inline-block;
     width: auto;
     padding: 12px 30px 5px;
@@ -3662,7 +3641,7 @@ mark {
     font-family: $font2;
 
     a {
-      color: $parallax-link-color;
+      color: $mateColorWhite;
     }
   }
 
@@ -3693,20 +3672,16 @@ mark {
       left: 0;
       background: none;
       height: inherit;
-      color: $parallax-link-color;
+      color: #fff;
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: underline;
       font-size: .875em;
-
-      &:hover {
-        color: $parallax-link-hover-color;
-      }
     }
   }
 
   p {
-    color: $parallax-text-color;
+    color: #fff;
     margin: 10px 0 0;
     padding: 0;
     font-size: 1.125em;
@@ -3731,8 +3706,6 @@ mark {
  *   Text with Backgrounds    *
  * ========================== */
 .ce_mateTextBackgroundElement {
-  background: #333;
-
   .bg-image {
     position: absolute;
     top: 0;
@@ -3743,7 +3716,6 @@ mark {
     background-position: center;
     -webkit-filter: blur(2px);
     filter: blur(2px);
-    transform: scale(1.1);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -3862,8 +3834,8 @@ mark {
     left: 40px;
     bottom: 40px;
     width: calc(100% - 80px);
-    background: $hyperlink-teaser-background-color;
-    color: $hyperlink-teaser-color;
+    background: $mateColor2;
+    color: $mateColorWhite;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3908,7 +3880,6 @@ div.klaro {
     height: 100%;
     padding: 30px;
     box-shadow: none;
-    color: #000;
 
     &[class*="-text"] {
       h1, h2, h3, h4, h5, h6, a {
@@ -4153,10 +4124,11 @@ div.klaro {
 
   .sidenav {
     width: 70%;
-    padding: 30px 0;
     background: $navbar-mobile-background;
+    padding: 30px 0;
 
     li > a {
+      color: $navbar-mobile-color;
       font-weight: 700;
       line-height: 18px;
       display: flex;
@@ -4164,7 +4136,6 @@ div.klaro {
       padding: 0 0 0 20px;
       width: 75%;
       font-size: .875em;
-      color: $navbar-mobile-color;
     }
 
     li {
