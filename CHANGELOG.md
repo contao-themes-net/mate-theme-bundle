@@ -14,7 +14,7 @@ Types of changes
 
 - [Added] Add contrast color schemes (only in v2)
 - [Added] Add dark mode (only in v2)
-- [Added] Add styles for pricebox element (use price table element and template `ce_cthemes_pricebox_mate`)
+- [Added] Add styles for price table element (use price table element and template `ce_cthemes_pricebox_mate`)
 - [Fixed] Fix file folders migration with minimal installation ([#23](https://github.com/contao-themes-net/convert-theme-bundle/issues/23))
 
 ## [3.4.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.3) – 2024-12-13
