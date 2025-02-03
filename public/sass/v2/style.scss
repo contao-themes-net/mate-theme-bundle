@@ -385,7 +385,7 @@ code, pre {
   font-size: 1em;
 }
 
-.content-list, .content-text, .accordion {
+.content-list, .content-text, .accordion, .ce_ct_priceBox {
   ul:not(.browser-default) {
     padding-left: 0;
 
@@ -781,7 +781,7 @@ header {
       float: right;
     }
 
-    a {
+    a, button {
       color: var(--header-top-color);
     }
   }
@@ -953,7 +953,7 @@ nav {
 }
 
 nav {
-  background-color: rgba(var(--navbar-bg-color), 1);
+  background-color: var(--navbar-bg-color);
 
   .nav-wrapper {
     margin-bottom: 0;
@@ -2090,6 +2090,18 @@ nav .brand-logo {
   font-size: .688em;
   font-weight: 700;
   display: inline-block;
+
+  &.outline {
+    background: none;
+    border: 1px solid var(--button-outline-color);
+    color: var(--button-outline-color);
+
+    &:hover {
+      background: var(--button-floating-background-hover);
+      color: var(--button-flat-color);
+      border-color: var(--button-floating-background-hover);
+    }
+  }
 
   &:hover {
     box-shadow: none;
@@ -3979,6 +3991,90 @@ div.klaro {
   }
 }
 
+/* ========================== *
+ *    Preistabelle            *
+ * ========================== */
+
+.ce_ct_priceBox {
+  &.block {
+    overflow: visible;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+    font-size: 1.4rem;
+    color: var(--boxes-text-color);
+  }
+
+  .inside {
+    background: var(--boxes-background);
+    color: var(--boxes-text-color);
+    padding: 40px;
+    height: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    margin: 0 -10px 15px;
+
+    .amount {
+      font-size: 2.2rem;
+      font-weight: 700;
+      padding: 0 10px;
+      font-family: var(--font3);
+    }
+
+    .label {
+      padding: 0 10px;
+    }
+  }
+
+  .price-box-top {
+    min-height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .popular-label {
+    background: var(--mateColor1);
+    display: inline-block;
+    margin: 0 0 10px;
+    color: var(--secondary-text-color);
+    padding: 2px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  ul:not(.browser-default) li {
+    padding-left: 40px;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "✓";
+      background: var(--mateColor1);
+      color: var(--secondary-text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+    }
+  }
+}
 
 /* ========================== *
  *    IE Fixes                *
@@ -4937,6 +5033,21 @@ div.klaro {
       &.large, &.veryLarge {
         font-size: 2.5rem;
       }
+    }
+  }
+
+  /* Preistabelle */
+  .ce_ct_priceBox {
+    &.popular-box .inside {
+      padding-top: 40px;
+    }
+
+    .inside {
+      padding: 25px;
+    }
+
+    .price-box-top {
+      min-height: inherit;
     }
   }
 }

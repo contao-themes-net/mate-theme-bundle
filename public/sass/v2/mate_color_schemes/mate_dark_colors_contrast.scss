@@ -67,6 +67,8 @@
   --input-border: 2px solid var(--mateColor1);
   --input-focus-border: 2px solid var(--mateColor2);
   --select-border: 2px solid var(--mateColor1);
+  --breadcrumb-background: rgba(var(--rgba-mateColor2),.8);
+  --button-outline-color: #fff;
 }
 
 .ce_mateTeaserBox.mate-card .inside.card-panel {
@@ -79,4 +81,22 @@
 
 .slider-text-below-image .indicators li.indicator-item {
   color: #fff;
+}
+
+.hc-invert:not(.hc-greyscale),
+.hc-invert-pictures:not(.hc-greyscale-pictures) img,
+.hc-invert-pictures:not(.hc-greyscale-pictures) svg {
+  filter: invert(1);
+}
+
+.hc-greyscale:not(.hc-invert),
+.hc-greyscale-pictures:not(.hc-invert-pictures) img,
+.hc-greyscale-pictures:not(.hc-invert-pictures) svg {
+  filter: grayscale(1);
+}
+
+.hc-invert.hc-greyscale,
+.hc-invert-pictures.hc-greyscale-pictures img,
+.hc-invert-pictures.hc-greyscale-pictures svg {
+  filter: invert(1) grayscale(1);
 }

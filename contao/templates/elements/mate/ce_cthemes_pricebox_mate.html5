@@ -1,0 +1,29 @@
+<div class="<?= $this->class ?> block <?php if($this->popularBox): ?>popular-box<?php endif; ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+  <div class="inside hc-bg-grey-dark">
+    <?php if($this->popularBox): ?>
+    <div class="popular-label"><?= $this->popularBox ?></div>
+    <?php endif; ?>
+
+    <div class="price-box-top">
+      <?php if ($this->headline): ?>
+        <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+      <?php endif; ?>
+
+      <div>
+        <div class="price">
+          <div class="amount"><?= $this->price ?></div>
+          <div class="label"><?= $this->priceLabel ?></div>
+        </div>
+
+        <div class="buttons">
+          <a href="<?= $this->link1 ?>" class="btn hc-bg-white"><?= $this->linkText1 ?></a>
+          <a href="<?= $this->link2 ?>" class="btn outline hc-bg-white"><?= $this->linkText2 ?></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text">
+      <?= $this->text ?>
+    </div>
+  </div>
+</div>

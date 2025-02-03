@@ -95,6 +95,7 @@ $large-screen: 1200px;
   --button-flat-color: var(--secondary-text-color);
   --button-floating-background: var(--mateColor2);
   --button-floating-background-hover: var(--mateColor3);
+  --button-outline-color: var(--button-floating-background);
 
   /* Toplink */
   --toplink-background: var(--mateColor6);

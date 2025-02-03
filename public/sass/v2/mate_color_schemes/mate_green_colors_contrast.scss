@@ -67,6 +67,8 @@
   --input-border: 2px solid var(--mateColor1);
   --input-focus-border: 2px solid var(--mateColor2);
   --select-border: 2px solid var(--mateColor1);
+  --breadcrumb-background: rgba(var(--rgba-boxes-background),.8);
+  --button-outline-color: var(--button-floating-background);
 }
 
 .slider-text-below-image .indicators li.indicator-item {
