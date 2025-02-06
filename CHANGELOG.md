@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.5.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.0) – 2025-01-31
+## [3.5.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.0) – 2025-02-06
 
 - [Added] Add contrast color schemes (only in v2)
 - [Added] Add dark mode (only in v2)
