@@ -38,7 +38,7 @@ class ThemeUtils
         'green_colors_contrast',
         'yellow_colors',
         'yellow_colors_contrast',
-        'red_colors_contrast'
+        'red_colors_contrast',
     ];
 
     public static function getRootDir(): string
@@ -81,11 +81,11 @@ class ThemeUtils
                 $session->set('mate_color', null);
             }
 
-            if (Input::get('theme-color') && \in_array(Input::get('theme-color'), self::$colors)) {
+            if (Input::get('theme-color') && \in_array(Input::get('theme-color'), self::$colors, true)) {
                 $session->set('mate_color', Input::get('theme-color'));
             }
 
-            if ($isV2 && $session->get('mate_color') && null !== $session->get('mate_color'))  {
+            if ($isV2 && $session->get('mate_color') && null !== $session->get('mate_color')) {
                 $combiner->add($scssFolder.'v2/mate_color_schemes/mate_'.$session->get('mate_color').'.scss');
             }
         }

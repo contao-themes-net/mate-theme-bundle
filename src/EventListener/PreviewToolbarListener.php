@@ -2,6 +2,21 @@
 
 declare(strict_types=1);
 
+/*
+ * mate theme for Contao Open Source CMS
+ *
+ * Copyright (C) 2025 pdir / digital agentur <develop@pdir.de>
+ *
+ * @package    contao-themes-net/mate-theme-bundle
+ * @link       https://github.com/contao-themes-net/mate-theme-bundle
+ * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
+ * @author     Philipp Seibt <develop@pdir.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace ContaoThemesNet\MateThemeBundle\EventListener;
 
 use Contao\CoreBundle\Routing\ScopeMatcher;
@@ -15,7 +30,7 @@ use Symfony\Component\Routing\RouterInterface;
 use Twig\Environment as TwigEnvironment;
 
 /**
- * Taken from core-bundle/src/EventListener/PreviewToolbarListener.php
+ * Taken from core-bundle/src/EventListener/PreviewToolbarListener.php.
  *
  * Injects the back end preview toolbar on any response within the /preview.php
  * entry point.
@@ -31,12 +46,8 @@ use Twig\Environment as TwigEnvironment;
 class PreviewToolbarListener
 {
     public function __construct(
-        private readonly ScopeMatcher $scopeMatcher,
-        private readonly TokenChecker $tokenChecker,
-        private readonly TwigEnvironment $twig,
-        private readonly RouterInterface $router,
-        private readonly string $previewScript = '',
-    ) {
+        private readonly ScopeMatcher $scopeMatcher, private readonly TokenChecker $tokenChecker, private readonly TwigEnvironment $twig, private readonly RouterInterface $router, private readonly string $previewScript = '',)
+    {
     }
 
     public function __invoke(ResponseEvent $event): void
