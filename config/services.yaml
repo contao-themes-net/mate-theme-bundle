@@ -1,17 +1,28 @@
 services:
-    _defaults:
-        autoconfigure: true
-        autowire: true
+  _defaults:
+    autoconfigure: true
+    autowire: true
 
-    ContaoThemesNet\MateThemeBundle\:
-        resource: ../src/
+  ContaoThemesNet\MateThemeBundle\:
+    resource: ../src/
 
-    # Migration
-    ContaoThemesNet\MateThemeBundle\Migration\:
-        resource: "../src/Migration/*"
-        tags:
-            - { name: contao.migration, priority: 99 }
+  # Migration
+  ContaoThemesNet\MateThemeBundle\Migration\:
+    resource: "../src/Migration/*"
+    tags:
+      - { name: contao.migration, priority: 99 }
 
-    ctn.mate_theme.listener.hooks:
-        class: ContaoThemesNet\MateThemeBundle\EventListener\HookListener
-        public: true
+  ctn.mate_theme.listener.hooks:
+    class: ContaoThemesNet\MateThemeBundle\EventListener\HookListener
+    public: true
+
+  ctn.mate_theme.listener.preview_toolbar:
+    class: ContaoThemesNet\MateThemeBundle\EventListener\PreviewToolbarListener
+    arguments:
+      - '@contao.routing.scope_matcher'
+      - '@contao.security.token_checker'
+      - '@twig'
+      - '@router'
+      - '%contao.preview_script%'
+    tags:
+      - { name: kernel.event_listener, event: kernel.response, method: __invoke }

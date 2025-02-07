@@ -1,0 +1,381 @@
+<div id="matePreviewToolbar">
+  <ul id="slide-out" class="sidenav">
+    <div class="close-icon">✕</div>
+    <li class="image">
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green_contrast.jpg?size=24&class=custom active}}'|insert_tag }}
+      {# New contrast colors #}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green_contrast.jpg?size=24&class=green_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_blue_contrast.jpg?size=24&class=blue_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_dark_contrast.jpg?size=24&class=dark_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_yellow_contrast.jpg?size=24&class=yellow_colors_contrast}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_red_contrast.jpg?size=24&class=red_colors_contrast}}'|insert_tag }}
+      {# Old colors #}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_green.jpg?size=24&class=green_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_blue.jpg?size=24&class=blue_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_dark.jpg?size=24&class=dark_colors}}'|insert_tag }}
+      {{ '{{picture::files/mate/preview_toolbar/mate_theme_yellow.jpg?size=24&class=yellow_colors}}'|insert_tag }}
+
+    </li>
+    <?php endif; ?>
+
+    <li class="subheader">MATE color schemes</li>
+
+    <li{% if 'green_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors_contrast"
+        class="color-scheme green-colors-contrast"
+        data-id="green_colors_contrast"
+      >
+        <span class="title">GREEN <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#1E8549"></span>
+          <span style="background:#186D3B"></span>
+          <span style="background:#12542E"></span>
+          <span style="background:#0D3F21"></span>
+          <span style="background:#43564A"></span>
+          <span style="background:#f4f8f0"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'blue_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors_contrast"
+        class="color-scheme blue-colors-contrast"
+        data-id="blue_colors_contrast"
+      >
+        <span class="title">BLUE <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#276882"></span>
+          <span style="background:#1C4F69"></span>
+          <span style="background:#0B2F47"></span>
+          <span style="background:#153142"></span>
+          <span style="background:#4F5463"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'dark_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_colors_contrast"
+        class="color-scheme dark-colors-contrast"
+        data-id="dark_colors_contrast">
+        <span class="title">DARK <span>CONTRAST / DARK MODE</span></span>
+        <span class="colors">
+          <span style="background:#4F4F4F"></span>
+          <span style="background:#383838"></span>
+          <span style="background:#212121"></span>
+          <span style="background:#0D0D0D"></span>
+          <span style="background:#B6B3AF"></span>
+          <span style="background:#292828"></span>
+        </span>
+      </a></li>
+
+    <li{% if 'yellow_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=yellow_colors_contrast"
+        class="color-scheme yellow-colors-contrast"
+        data-id="yellow_colors_contrast"
+      >
+        <span class="title">YELLOW <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#FFEAAE"></span>
+          <span style="background:#FFD753"></span>
+          <span style="background:#CCA500"></span>
+          <span style="background:#5F5C4D"></span>
+          <span style="background:#48433C"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'red_colors_contrast' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=red_colors_contrast"
+        class="color-scheme red-colors-contrast"
+        data-id="red_colors_contrast"
+      >
+        <span class="title">RED <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#B30000"></span>
+          <span style="background:#8F0000"></span>
+          <span style="background:#570000"></span>
+          <span style="background:#330000"></span>
+          <span style="background:#AF1818"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'green_colors' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors"
+        class="color-scheme green-colors"
+        data-id="green_colors"
+      >
+        <span class="title">GREEN</span>
+        <span class="colors">
+          <span style="background:#b6cf92"></span>
+          <span style="background:#86af49"></span>
+          <span style="background:#476a30"></span>
+          <span style="background:#58774e"></span>
+          <span style="background:#abbdb1"></span>
+          <span style="background:#f4f8f0"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'blue_colors' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors"
+        class="color-scheme blue-colors"
+        data-id="blue_colors"
+      >
+        <span class="title">BLUE</span>
+        <span class="colors">
+          <span style="background:#7CBED8"></span>
+          <span style="background:#318CB8"></span>
+          <span style="background:#0B2F47"></span>
+          <span style="background:#224E6B"></span>
+          <span style="background:#AFB2BF"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'dark_colors' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_colors"
+        class="color-scheme dark-colors"
+        data-id="dark_colors">
+        <span class="title">DARK</span>
+        <span class="colors">
+          <span style="background:#CCBAA6"></span>
+          <span style="background:#AB9C89"></span>
+          <span style="background:#7f684f"></span>
+          <span style="background:#8E7E6C"></span>
+          <span style="background:#A8A29D"></span>
+          <span style="background:#292828"></span>
+        </span>
+      </a></li>
+
+    <li{% if 'yellow_colors' == mateColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=yellow_colors"
+        class="color-scheme yellow-colors"
+        data-id="yellow_colors"
+      >
+        <span class="title">YELLOW</span>
+        <span class="colors">
+          <span style="background:#FFEAAE"></span>
+          <span style="background:#FFD753"></span>
+          <span style="background:#CCA500"></span>
+          <span style="background:#5F5C4D"></span>
+          <span style="background:#908C77"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li class="subheader">Links</li>
+
+    <li class="link">
+      <a href="https://contao-themes.net/theme-detail/mate.html"><i class="material-icons">file_download</i> Kostenlos
+        installieren oder Lizenz bestellen</a>
+    </li>
+    <li class="link">
+      <a href="https://pdir.de/docs/de/contao/themes/mate/"><i class="material-icons">description</i>
+        Dokumentation</a>
+    </li>
+    <li class="link">
+      <a href="https://github.com/contao-themes-net/mate-theme-bundle/issues"><i class="material-icons">bug_report</i>
+        Fehler melden</a>
+    </li>
+    <li class="link">
+      <a href="https://mate.isotope.contao-themes.net"><i class="material-icons">shopping_bag</i> MATE Isotope Demo</a>
+    </li>
+
+    {#
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Device Size</a></li>
+    <li><i class="material-icons">desktop_windows</i> Desktop</li>
+    <li><i class="material-icons">tablet</i> Tablet</li>
+    <li><i class="material-icons">tablet_android</i> Tablet (Portrait) </li>
+    <li><i class="material-icons">smartphone</i> Mobile</li>
+    #}
+  </ul>
+  <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}#"
+     data-target="slide-out" class="open-settings sidenav-trigger" title="Show settings menu"><i class="material-icons">settings</i></a>
+</div>
+<script>
+  // Set active color image
+  var activeColor = '{{ mateColor }}';
+
+  jQuery(document).ready(function ($) {
+    if(activeColor) {
+      $('#matePreviewToolbar li img').removeClass('active');
+      $('#matePreviewToolbar li img.' + activeColor).addClass('active');
+    }
+
+    $('.open-settings').sidenav({
+      menuWidth: 350,
+      edge: 'left',
+      closeOnClick: false,
+    });
+
+    $('.open-settings').click(function () {
+      var documentWidth = $(document).width();
+      $(".sidenav-overlay").width(documentWidth);
+    });
+
+    $("a.color-scheme").hover(function () {
+      var colorScheme = $(this).data("id");
+      $("li img." + colorScheme).toggleClass("hover");
+      $("li.image").toggleClass("hover");
+    });
+
+    $("#slide-out .close-icon").click(function () {
+      $('.sidenav').sidenav('close');
+    });
+  });
+</script>
+<style>
+  .open-settings {
+    position: fixed;
+    top: 150px;
+    background: #333;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100
+  }
+
+  .open-settings i {
+    color: #fff
+  }
+
+  #slide-out {
+    background: #333;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  #slide-out.sidenav li {
+    position: static
+  }
+
+  #slide-out li > a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2;
+    height: inherit;
+    padding: 5px 32px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  #slide-out li:not(.link) > a {
+    flex-wrap: wrap;
+  }
+
+  #slide-out li > a > i {
+    height: inherit;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px 0 0;
+    min-width: 25px;
+    line-height: 1;
+  }
+
+  #slide-out li.image {
+    padding: 65px 32px 0;
+  }
+
+  #slide-out li.image img {
+    display: none;
+  }
+
+  #slide-out li.image img.active {
+    display: block
+  }
+
+  #slide-out li.image.hover img.active {
+    display: none
+  }
+
+  #slide-out li.image.hover img.hover {
+    display: block
+  }
+
+  #slide-out li.active, #slide-out li:hover {
+    background: rgba(255, 255, 255, 0.05)
+  }
+
+  #slide-out li.active.subheader, #slide-out li.active.image, #slide-out li:hover.subheader, #slide-out li:hover.image {
+    background: none
+  }
+
+  #slide-out .close-icon {
+    text-align: right;
+    color: #fff;
+    font-size: 1.8rem;
+    display: inline-block;
+    float: right;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #slide-out .title {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Lato Regular;
+    margin-bottom: 2px;
+  }
+
+  #slide-out .title span {
+    font-weight: 400;
+  }
+
+  #slide-out .subheader {
+    font-size: 18px;
+    padding: 0;
+    margin: 20px 32px 15px;
+    border-bottom: 1px solid #565656;
+    color: #fff;
+  }
+
+  #sidenav-overlay {
+    z-index: 200
+  }
+
+  span.colors {
+    display: flex;
+    height: 5px;
+    width: 100%;
+  }
+
+  span.colors span {
+    width: 20%;
+    height: 100%;
+  }
+
+  @media (max-width: 992px) {
+    #slide-out.sidenav {
+      padding: 0 0 100px
+    }
+  }
+
+  @media (max-width: 600px) {
+    #slide-out {
+      width: 100%
+    }
+  }
+</style>

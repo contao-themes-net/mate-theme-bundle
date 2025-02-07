@@ -25,7 +25,7 @@
 
 		  <?php if ($this->hasText || $this->hasTeaser): ?>
 		    <p class="more">
-		    	<a href="<?= $this->link ?>" class="hc-bg-black hc-text-white"><?= $GLOBALS['TL_LANG']['mateTheme']['readMore'] ?></a>
+		    	<a href="<?= $this->link ?>" title="<?= $this->linkTitle ?>" class="hc-bg-black hc-text-white"><?= $GLOBALS['TL_LANG']['mateTheme']['readMore'] ?></a>
 		    </p>
 		  <?php endif; ?>
 

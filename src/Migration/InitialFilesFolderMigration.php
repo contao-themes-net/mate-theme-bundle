@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * mate theme for Contao Open Source CMS
  *
- * Copyright (C) 2024 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2025 pdir / digital agentur <develop@pdir.de>
  *
  * @package    contao-themes-net/mate-theme-bundle
  * @link       https://github.com/contao-themes-net/mate-theme-bundle
@@ -52,11 +52,6 @@ class InitialFilesFolderMigration extends AbstractMigration
 
         // If the database tables itself does not exist we should do nothing
         if (!$schemaManager->tablesExist($this->minTables)) {
-            return false;
-        }
-
-        // Check if full version is used
-        if (!$schemaManager->tablesExist($this->fullTables)) {
             return false;
         }
 

@@ -2,7 +2,7 @@
 
 <?php $this->block('content'); ?>
 
-<nav itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+<nav itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" class="hc-bg-grey-dark">
   <div class="nav-wrapper">
     <div class="col s12">
       <?php foreach ($this->items as $position => $item): ?>

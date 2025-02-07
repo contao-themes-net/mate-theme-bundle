@@ -2,7 +2,7 @@
   <?php foreach ($this->items as $item): ?>
     <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>>
       <a href="<?= $item['href'] ?: './' ?>"
-         title="<?= $item['pageTitle'] ?: $item['title'] ?>"
+        <?php if ($item['pageTitle'] !== ''): ?> title="<?= $item['pageTitle'] ?>"<?php endif; ?>
         <?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>
         <?php if ($item['accesskey']) echo ' accesskey="' . $item['accesskey'] . '"'; ?>
         <?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?>>
@@ -18,7 +18,7 @@
           <?php foreach ($item['subitems'] as $sItem): ?>
             <li>
               <a href="<?= $sItem['href'] ?: './' ?>" class="<?php if($sItem['isActive']): ?> active<?php endif; ?> hc-text-white"
-                 title="<?= $sItem['pageTitle'] ?: $sItem['title'] ?>">
+                <?php if ($sItem['pageTitle'] !== ''): ?> title="<?= $sItem['pageTitle'] ?>"<?php endif; ?>>
                 <?= $sItem['link'] ?>
               </a>
               <?php if(!empty($sItem['subitems'])): ?>
@@ -32,7 +32,7 @@
                   <?php foreach ($sItem['subitems'] as $itemLvl3): ?>
                     <li>
                       <a href="<?= $itemLvl3['href'] ?: './' ?>" class="<?php if($itemLvl3['isActive']): ?> active<?php endif; ?> hc-text-white"
-                         title="<?= $itemLvl3['pageTitle'] ?: $itemLvl3['title'] ?>">
+                        <?php if ($itemLvl3['pageTitle'] !== ''): ?> title="<?= $itemLvl3['pageTitle'] ?>"<?php endif; ?>>
                         <?= $itemLvl3['link'] ?>
                       </a>
                       <?php if(!empty($itemLvl3['subitems'])): ?>
@@ -45,7 +45,7 @@
                           <li>
                             <?php foreach ($itemLvl3['subitems'] as $itemLvl4): ?>
                               <a href="<?= $itemLvl4['href'] ?: './' ?>" class="<?php if($itemLvl4['isActive']): ?> active<?php endif; ?> hc-text-white"
-                                 title="<?= $itemLvl4['pageTitle'] ?: $itemLvl4['title'] ?>">
+                                <?php if ($itemLvl4['pageTitle'] !== ''): ?> title="<?= $itemLvl4['pageTitle'] ?>"<?php endif; ?>>
                                 <?= $itemLvl4['link'] ?>
                               </a>
                             <?php endforeach; ?>

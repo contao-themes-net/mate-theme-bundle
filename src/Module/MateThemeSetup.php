@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * mate theme for Contao Open Source CMS
  *
- * Copyright (C) 2024 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2025 pdir / digital agentur <develop@pdir.de>
  *
  * @package    contao-themes-net/mate-theme-bundle
  * @link       https://github.com/contao-themes-net/mate-theme-bundle
@@ -23,7 +23,7 @@ use Contao\BackendModule;
 
 class MateThemeSetup extends BackendModule
 {
-    public const VERSION = '3.4.3';
+    public const VERSION = '3.5.0';
 
     protected $strTemplate = 'be_mateTheme_setup';
 
