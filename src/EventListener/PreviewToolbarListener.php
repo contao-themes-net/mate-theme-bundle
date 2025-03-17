@@ -44,11 +44,7 @@ use Twig\Environment as TwigEnvironment;
 #[AsEventListener]
 class PreviewToolbarListener
 {
-    public function __construct(
-        private readonly ScopeMatcher $scopeMatcher,
-        private readonly TokenChecker $tokenChecker,
-        private readonly TwigEnvironment $twig
-    )
+    public function __construct(private readonly ScopeMatcher $scopeMatcher, private readonly TokenChecker $tokenChecker, private readonly TwigEnvironment $twig)
     {
     }
 
