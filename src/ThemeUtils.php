@@ -29,6 +29,9 @@ class ThemeUtils
     public static string $themeFolder = 'bundles/contaothemesnetmatetheme/';
     public static string $scssFolder = 'sass/';
 
+    /**
+     * @var array<string>
+     */
     public static array $colors = [
         'blue_colors',
         'blue_colors_contrast',
@@ -67,7 +70,7 @@ class ThemeUtils
         $combiner = new Combiner();
 
         // Check for v2 or use old stylesheets
-        if ($isV2 = \file_exists(self::getRootDir().'/files/mate/.v2')) {
+        if ($isV2 = file_exists(self::getRootDir().'/files/mate/.v2')) {
             $combiner->add($scssFolder.'v2/mate.scss');
         } else {
             $combiner->add($scssFolder.'mate.scss');
