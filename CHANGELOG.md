@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.5.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.1) – 2025-03-17
+
+- [Fixed] Updated scssphp dependency to 1.0 for Contao 5.5 compatibility
+
 ## [3.5.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.0) – 2025-02-06
 
 - [Added] Add contrast color schemes (only in v2)
