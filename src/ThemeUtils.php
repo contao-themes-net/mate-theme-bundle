@@ -68,7 +68,10 @@ class ThemeUtils
 
         // Check for v2 or use old stylesheets
         if ($isV2 = \file_exists(self::getRootDir().'/files/mate/.v2')) {
-            $combiner->add($scssFolder.'v2/mate.scss');
+            //$combiner->add($scssFolder.'v2/mate.scss');
+            $combiner->add($scssFolder.'v2/mate.css');
+            $combiner->add('files/mate/sass/_custom_variables.scss');
+            $combiner->add('files/mate/sass/custom.scss');
         } else {
             $combiner->add($scssFolder.'mate.scss');
         }

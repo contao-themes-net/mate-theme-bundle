@@ -759,6 +759,10 @@ header {
   .sidenav-trigger i {
     color: var(--navbar-mobile-menu-icon-color);
   }
+
+  .nav-wrapper {
+    @extend .container;
+  }
 }
 
 .sectionTop {
@@ -1126,10 +1130,6 @@ nav {
     flex-wrap: wrap;
     justify-content: right;
     margin: 0 40px 0 10px;
-  }
-
-  #header .nav-wrapper {
-    @extend .container;
   }
 
   #header, #main nav:not(.subnav), #left nav:not(.subnav), #right nav:not(.subnav) {
