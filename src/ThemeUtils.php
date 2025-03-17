@@ -29,6 +29,9 @@ class ThemeUtils
     public static string $themeFolder = 'bundles/contaothemesnetmatetheme/';
     public static string $scssFolder = 'sass/';
 
+    /**
+     * @param array<int, Item> $colors
+     */
     public static array $colors = [
         'blue_colors',
         'blue_colors_contrast',
