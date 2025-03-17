@@ -22,6 +22,5 @@ services:
       - '@contao.routing.scope_matcher'
       - '@contao.security.token_checker'
       - '@twig'
-      - '@router'
     tags:
       - { name: kernel.event_listener, event: kernel.response, method: __invoke }

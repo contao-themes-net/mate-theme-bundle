@@ -26,7 +26,6 @@ use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
-use Symfony\Component\Routing\RouterInterface;
 use Twig\Environment as TwigEnvironment;
 
 /**
@@ -48,8 +47,7 @@ class PreviewToolbarListener
     public function __construct(
         private readonly ScopeMatcher $scopeMatcher,
         private readonly TokenChecker $tokenChecker,
-        private readonly TwigEnvironment $twig,
-        private readonly RouterInterface $router,
+        private readonly TwigEnvironment $twig
     )
     {
     }
