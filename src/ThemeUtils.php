@@ -30,7 +30,7 @@ class ThemeUtils
     public static string $scssFolder = 'sass/';
 
     /**
-     * @param array<int, Item> $colors
+     * @var string[] $colors
      */
     public static array $colors = [
         'blue_colors',
