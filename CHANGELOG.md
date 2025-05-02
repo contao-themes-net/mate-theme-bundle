@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.5.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.2) – 2025-05-02
+
+- [Fixed] Fix mobile navigation and footer link hover color
+- [Added] Add reset button to preview toolbar
+
 ## [3.5.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.1) – 2025-03-17
 
 - [Fixed] Updated scssphp dependency to 1.0 for Contao 5.5 compatibility
