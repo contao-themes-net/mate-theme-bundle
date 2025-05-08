@@ -15,6 +15,7 @@ Types of changes
 - [Fixed] Fix mobile navigation and footer link hover color
 - [Added] Add reset button to preview toolbar
 - [Added] Add option to define root page in navbar
+- [Added] Add variable to change navbar breakpoint (e.g. `$desktop-navbar-breakpoint: 1200px;` in your `_custom_variables.scss`)
 
 ## [3.5.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.1) – 2025-03-17
 
