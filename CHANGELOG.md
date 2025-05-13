@@ -10,13 +10,14 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.5.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.2) – 2025-05-12
+## [3.5.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.2) – 2025-05-13
 
 - [Fixed] Fix mobile navigation and footer link hover color
 - [Fixed] Fix multi domain setup
 - [Added] Add reset button to preview toolbar
 - [Added] Add option to define root page in navbar
 - [Added] Add variable to change navbar breakpoint (e.g. `$desktop-navbar-breakpoint: 1200px;` in your `_custom_variables.scss`)
+- [Added] Add link to reset password in customized login template
 
 ## [3.5.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.1) – 2025-03-17
 
