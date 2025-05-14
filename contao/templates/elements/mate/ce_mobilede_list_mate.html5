@@ -34,7 +34,7 @@
       <?php endif; ?>
         <div class="md-filters-body"<?php if($this->onlyFilter): ?> style='display:block;'<?php endif; ?>>
         <div class="md-filter-select select-group">
-          <?php if($this->filters['make']): ?>
+          <?php if(isset($this->filters['make'])): ?>
           <div class="brands select-container">
             <label>Marke</label>
             <select class="md-select">
@@ -45,7 +45,7 @@
             </select>
           </div>
           <?php endif; ?>
-          <?php if($this->filters['categories']): ?>
+          <?php if(isset($this->filters['categories'])): ?>
           <div class="categories select-container">
             <label>Fahrzeugtyp</label>
             <select class="md-select">
@@ -57,7 +57,7 @@
           </div>
           <?php endif; ?>
         </div>
-        <?php if($this->filters['fuelType']): ?>
+        <?php if(isset($this->filters['fuelType'])): ?>
           <div class="fuel select-container">
             <label>Kraftstoffart</label>
             <select class="md-select">
@@ -68,7 +68,7 @@
             </select>
           </div>
         <?php endif; ?>
-        <?php if($this->filters['gearbox']): ?>
+        <?php if(isset($this->filters['gearbox'])): ?>
           <div class="gearbox select-container">
             <label>Getriebe</label>
             <select class="md-select">
@@ -90,7 +90,7 @@
             </select>
           </div>
         <?php endif; ?>
-        <?php if($this->filters['colors']): ?>
+        <?php if(isset($this->filters['colors'])): ?>
           <div class="md-filter-attr checkbox-group">
             <label>Farbe</label>
             <ul>
