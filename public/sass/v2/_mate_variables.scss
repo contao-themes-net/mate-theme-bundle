@@ -15,9 +15,7 @@
 /*     MATE Theme Variables      */
 /* ============================= */
 
-$dark-color-scheme: null;
-$yellow-color-scheme: null;
-$other-color-scheme: null;
+$desktop-navbar-breakpoint: 993px;
 
 :root {
   /* Colors */
@@ -155,7 +153,7 @@ $large-screen: 1200px;
   --footer-primary-bg-color: var(--mateColor2);
   --footer-primary-color: var(--footer-text-color);
   --footer-primary-link-color: var(--secondary-text-color);
-  --footer-primary-link-color-hover: var(--primary-link-hover-font-color);
+  --footer-primary-link-color-hover: var(--secondary-text-color);
   --footer-headline-border-color: var(--secondary-text-color);
   --footer-news-events-time-color: var(--mateColor3-text-color);
 
