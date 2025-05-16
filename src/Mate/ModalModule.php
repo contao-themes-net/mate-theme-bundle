@@ -45,7 +45,7 @@ class ModalModule extends Module
             $objTemplate->wildcard = '### MATE MODAL ###';
             $objTemplate->title = $this->name;
             $objTemplate->id = $this->id;
-            $objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id='.$this->id;
+            $objTemplate->href = System::getContainer()->get('router')->generate('contao_backend').'?do=themes&amp;table=tl_module&amp;act=edit&amp;id='.$this->id;
 
             return $objTemplate->parse();
         }
