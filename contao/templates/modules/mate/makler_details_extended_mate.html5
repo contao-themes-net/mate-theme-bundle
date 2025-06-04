@@ -1,30 +1,17 @@
-<?php $GLOBALS['TL_CSS'][''] = 'bundles/matetheme/css/slick.css'; ?>
-<?php $GLOBALS['TL_JAVASCRIPT'][''] = 'bundles/matetheme/js/slick.min.js'; ?>
+<?php $GLOBALS['TL_CSS'][''] = 'bundles/contaothemesnetmatetheme/css/slick.css'; ?>
+<?php $GLOBALS['TL_JAVASCRIPT'][''] = 'bundles/contaothemesnetmatetheme/js/slick.min.js'; ?>
 
-<?php
-if (!is_object($this->estate)) {
-  echo "<h1>Makler Modul M+ - Detailansicht</h1>";
-  return;
-}
+<?php if (!is_object($this->estate)): ?>
+  <h1>pdir Maklermodul - Detailansicht</h1>
+  <p><?= $GLOBALS['TL_LANG']['makler_modul_mplus']['field_keys']['noestate'] ?></p>
+<?php return; endif; ?>
 
-global $objPage;
-// Meta Angaben
-$objPage->title = $this->estate->renderer('freitexte.objekttitel')->asText()->value(true);
-$objPage->description = $this->estate->renderer('freitexte.objektbeschreibung')->asText()->crop(155)->value(true);
-$text = $objPage->title.' '.$objPage->description;
-preg_match_all("/[a-z0-9\-]{4,}/i", $text, $matches);
-$GLOBALS['TL_KEYWORDS']=join(',', $matches[0]);
-
-// DUMP LIST OF ALL AVAILABLE FIELDS
-if($this->debug) {
-  echo "<pre>"; var_dump($this->estate); echo "</pre>";
-}
-
-if($this->estate->renderer('freitexte.objekttitel')->asText()->value(true) == ''):
-// no objects
-echo $GLOBALS['TL_LANG']['makler_modul_mplus']['field_keys']['noestate'];
-else:
+<?php // Übersetzungen
+  $ja = $GLOBALS['TL_LANG']['MSC']['yes'];
+  $nein = $GLOBALS['TL_LANG']['MSC']['no'];
 ?>
+
+<?php if($this->estate->renderer('freitexte.objekttitel')->asText()->value(true) !== ''): ?>
 <div class="estate-detail extended">
 
   <div class="top-obj-details">
@@ -281,7 +268,7 @@ else:
         return false;
       });
 
-      var mapsCookie = "<?= \Input::cookie('dlh_googlemaps') ?>";
+      var mapsCookie = "<?= \Contao\Input::cookie('dlh_googlemaps') ?>";
       if(mapsCookie != "" || $(".dlh_googlemap > div").attr("id") != "confirm-googlemaps") {
         setMap();
       }
@@ -327,6 +314,10 @@ else:
     <?php $this->estate->backButton()->render() ?>
   </div>
 </div>
+<?php endif; ?>
+
+<?php if ($this->debug): // DUMP LIST OF ALL AVAILABLE FIELDS ?>
+  <pre><?php var_dump($this->estate) ?></pre>
 <?php endif; ?>
 
 <?php
