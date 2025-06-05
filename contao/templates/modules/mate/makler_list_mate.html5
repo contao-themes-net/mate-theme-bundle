@@ -60,15 +60,15 @@ $counter = 1;
     <div id="estate_list">
       <?php foreach ($pages[$page] as $obj): ?>
         <?php #if($this->makler_addListPagination && $counter < $this->makler_paginationCount+1): ?>
-        <a href="<?= $this->helper->getDetailViewPrefix() ?>/<?= $obj['uriident'] ?><?= $this->urlSuffix ?>" class="<?= $obj['css-filter-class-string'] ?>" title="Objekt '<?= $obj['freitexte-objekttitel'] ?>' ansehen">
+        <a href="<?= $obj['link'] ?>" class="<?= $obj['css-filter-class-string'] ?>" title="Objekt '<?= $obj['freitexte-objekttitel']?? '' ?>' ansehen">
           <div class="inner">
             <div class="mix item<?php if($counter&1): ?> odd<?php else: ?> even<?php endif; ?>">
 
               <?php // Ausgabe des Objektbildes als Hintergrundbild ?>
               <?php /* <div class="header objectImg" style="
-                                  background-image: url('<?= $obj['anhaenge-anhang-#1-daten-pfad'] ?>');
-              background-position:center;
-              background-size:cover;"> */ ?>
+                background-image: url('<?= $obj['anhaenge-anhang-#1-daten-pfad'] ?>');
+                background-position:center;
+                background-size:cover;"> */ ?>
 
               <?php // Ausgabe des Objektbildes ?>
               <?php if(!isset($obj['anhaenge-anhang-#1-daten-pfad']) OR $obj['anhaenge-anhang-#1-daten-pfad'] == ''): ?>
@@ -94,11 +94,11 @@ $counter = 1;
 
             <div class="row fields">
               <div class="col s12 l4">
-                <?php if($obj['flaechen-wohnflaeche']): ?><div class="field"><div class="label">Wohnfläche</div><div class="value flaechen-wohnflaeche"><?= $this->formatValue($obj['flaechen-wohnflaeche']) ?> m<sup>2</sup></div></div>
-                <?php elseif($obj['flaechen-ladenflaeche']): ?><div class="field"><div class="label">Ladenfläche</div><div class="value flaechen-ladenflaeche"><?= $this->formatValue($obj['flaechen-ladenflaeche']) ?> m<sup>2</sup></div></div>
-                <?php elseif($obj['flaechen-bueroflaeche']): ?><div class="field"><div class="label">Bürofläche</div><div class="value flaechen-bueroflaeche"><?= $this->formatValue($obj['flaechen-bueroflaeche']) ?> m<sup>2</sup></div></div>
-                <?php elseif($obj['flaechen-grundstuecksflaeche']): ?><div class="field"><div class="label">Grundstücksfläche</div><div class="value flaechen-grundstuecksflaeche"><?= $this->formatValue($obj['flaechen-grundstuecksflaeche']) ?> m<sup>2</sup></div></div>
-                <?php elseif($obj['flaechen-gesamtflaeche']): ?><div class="field"><div class="label">Gesamtfläche</div><div class="value flaechen-gesamtflaeche"><?= $this->formatValue($obj['flaechen-gesamtflaeche']) ?> m<sup>2</sup></div></div><?php endif; ?>
+                <?php if(isset($obj['flaechen-wohnflaeche'])): ?><div class="field"><div class="label">Wohnfläche</div><div class="value flaechen-wohnflaeche"><?= $this->formatValue($obj['flaechen-wohnflaeche']) ?> m<sup>2</sup></div></div><?php endif; ?>
+                <?php if(isset($obj['flaechen-ladenflaeche'])): ?><div class="field"><div class="label">Ladenfläche</div><div class="value flaechen-ladenflaeche"><?= $this->formatValue($obj['flaechen-ladenflaeche']) ?> m<sup>2</sup></div></div><?php endif; ?>
+                <?php if(isset($obj['flaechen-bueroflaeche'])): ?><div class="field"><div class="label">Bürofläche</div><div class="value flaechen-bueroflaeche"><?= $this->formatValue($obj['flaechen-bueroflaeche']) ?> m<sup>2</sup></div></div><?php endif; ?>
+                <?php if(isset($obj['flaechen-grundstuecksflaeche'])): ?><div class="field"><div class="label">Grundstücksfläche</div><div class="value flaechen-grundstuecksflaeche"><?= $this->formatValue($obj['flaechen-grundstuecksflaeche']) ?> m<sup>2</sup></div></div><?php endif; ?>
+                <?php if(isset($obj['flaechen-gesamtflaeche'])): ?><div class="field"><div class="label">Gesamtfläche</div><div class="value flaechen-gesamtflaeche"><?= $this->formatValue($obj['flaechen-gesamtflaeche']) ?> m<sup>2</sup></div></div><?php endif; ?>
               </div>
               <div class="col s12 l4">
                 <?php if($obj['flaechen-anzahl_zimmer']): ?><div class="field"><div class="label">Zimmer</div><div class="value flaechen-anzahl_zimmer"><?= $this->formatValue($obj['flaechen-anzahl_zimmer']) ?></div></div><?php endif; ?>
@@ -169,7 +169,6 @@ $counter = 1;
 var sorting = <?php echo $this->sorting; ?>;
 var maklerTemplate = 'v2';
 var sourceIndexUri = 'files/maklermodul/data/<?php echo $this->helper->getListSourceUri(); ?>';
-var detailViewPrefix = '<?php echo $this->helper->getDetailViewPrefix(); ?>';
 var filterType = <?= $this->filterType; ?>;
 <?php if ($this->staticFilter) : ?>var staticFilter = true;<?php endif; ?>
 var paginationUseIsotope = <?= $this->paginationUseIsotope ?>;

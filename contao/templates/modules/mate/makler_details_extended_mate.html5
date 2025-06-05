@@ -7,8 +7,8 @@
 <?php return; endif; ?>
 
 <?php // Übersetzungen
-  $ja = $GLOBALS['TL_LANG']['MSC']['yes'];
-  $nein = $GLOBALS['TL_LANG']['MSC']['no'];
+  $yes = $GLOBALS['TL_LANG']['MSC']['yes'];
+  $no = $GLOBALS['TL_LANG']['MSC']['no'];
 ?>
 
 <?php if($this->estate->renderer('freitexte.objekttitel')->asText()->value(true) !== ''): ?>
@@ -89,7 +89,7 @@
           <?php $this->estate->renderer('preise.stp_garage.@stellplatzmiete')->asNumber(2)->append(' EUR')->render(); ?>
           <?php $this->estate->renderer('preise.stp_tiefgarage.@stellplatzmiete')->asNumber(2)->append(' EUR')->render(); ?>
           <?php $this->estate->renderer('preise.aussen_courtage')->asText()->render(); ?>
-          <?php $this->estate->renderer('preise.provisionspflichtig', true)->asFlag('Ja', 'Nein')->render(); ?>
+          <?php $this->estate->renderer('preise.provisionspflichtig', true)->asFlag($yes, $no)->render(); ?>
           <?php $this->estate->renderer('verwaltung_objekt.verfuegbar_ab')->asText()->render(); ?>
         </div>
       </div>
@@ -129,38 +129,38 @@
       <div class="equipment">
         <div class="inside">
           <h2>Austattung</h2>
-          <?php $this->estate->renderer('ausstattung.kueche.@EBK')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.bad.@WANNE')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.bad.@DUSCHE')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.unterkellert.@keller')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.fahrstuhl.@PERSONEN')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.ausstattung.kantine_cafeteria')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.ausstattung.klimatisiert')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.dv_verkabelung', true)->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.kabel_sat_tv')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.gaestewc', true)->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.gastterrasse')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.barrierefrei')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.rollstuhlgerecht')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.gartennutzung')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('verwaltung_objekt.haustiere')->asFlag('Ja', 'Nein')->render(); ?>
+          <?php $this->estate->renderer('ausstattung.kueche.@EBK')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.bad.@WANNE')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.bad.@DUSCHE')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.unterkellert.@keller')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.fahrstuhl.@PERSONEN')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.ausstattung.kantine_cafeteria')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.ausstattung.klimatisiert')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.dv_verkabelung', true)->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.kabel_sat_tv')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.gaestewc', true)->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.gastterrasse')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.barrierefrei')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.rollstuhlgerecht')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.gartennutzung')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('verwaltung_objekt.haustiere')->asFlag($yes, $no)->render(); ?>
           <?php $this->estate->renderer('ausstattung.stellplatzart.@TIEFGARAGE')->asText()->render(); ?>
           <?php $this->estate->renderer('ausstattung.stellplatzart.@GARAGE')->asText()->render(); ?>
           <?php $this->estate->renderer('ausstattung.stellplatzart.@CARPORT')->asText()->render(); ?>
           <?php $this->estate->renderer('ausstattung.stellplatzart.@FREIPLATZ')->asText()->render(); ?>
           <?php $this->estate->renderer('ausstattung.stellplatzart.@PARKHAUS')->asText()->render(); ?>
           <?php $this->estate->renderer('ausstattung.stellplatzart.@DUPLEX')->asText()->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@TERRAKOTTA')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@MARMOR')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@LINOLEUM')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@DOPPELBODEN')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@ESTRICH')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@KUNSTSTOFF')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@FERTIGPARKETT')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@PARKETT')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@TEPPICH')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@STEIN')->asFlag('Ja', 'Nein')->render(); ?>
-          <?php $this->estate->renderer('ausstattung.boden.@FLIESEN')->asFlag('Ja', 'Nein')->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@TERRAKOTTA')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@MARMOR')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@LINOLEUM')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@DOPPELBODEN')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@ESTRICH')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@KUNSTSTOFF')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@FERTIGPARKETT')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@PARKETT')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@TEPPICH')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@STEIN')->asFlag($yes, $no)->render(); ?>
+          <?php $this->estate->renderer('ausstattung.boden.@FLIESEN')->asFlag($yes, $no)->render(); ?>
         </div>
       </div>
     </div>
