@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.5.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.3) – 2025-06-05
+
+- [Fixed] Update maklermodul template and styling for contao 5
+- [Fixed] Remove legacy hasMetaFields check from news templates to fix meta info display ([#199](https://github.com/contao-themes-net/convert-theme-bundle/issues/199))
+
 ## [3.5.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.2) – 2025-05-16
 
 - [Fixed] Fix mobile navigation and footer link hover color

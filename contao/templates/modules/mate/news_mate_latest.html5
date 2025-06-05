@@ -27,9 +27,9 @@
     <?php endif; ?>
 
     <div class="text">
-      <?php if ($this->hasMetaFields): ?>
-        <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
-      <?php endif; ?>
+      <?php $this->block('info'); ?>
+      <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
+      <?php $this->endblock(); ?>
 
       <h2><?= $this->linkHeadline ?></h2>
 

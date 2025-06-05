@@ -3,9 +3,9 @@
   <div class="inner hc-bg-grey-dark">
 
     <div class="text">
-      <?php if ($this->hasMetaFields): ?>
-        <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
-      <?php endif; ?>
+      <?php $this->block('info'); ?>
+      <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
+      <?php $this->endblock(); ?>
 
       <?php if($this->subheadline != ""): ?>
         <div class="subheadline"><?= $this->subheadline ?></div>
