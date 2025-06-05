@@ -4,11 +4,19 @@
   /*        Exposé          */
   /* ====================== */
   .estate-detail {
-    font-family: $font1;
+    font-family: var(--font1);
     font-size: inherit;
 
+    .back a {
+      color: var(--primary-link-font-color);
+
+      &:hover {
+        color: var(--primary-link-hover-font-color);
+      }
+    }
+
     .legende_eclass {
-      background: $boxes-background;
+      background: var(--boxes-background);
     }
 
     .big-img {
@@ -27,7 +35,7 @@
       width: 100vw;
       left: calc(100vw - 100vw - (100vw - 1080px + 30px) / 2);
       padding: 30px 0;
-      background: $boxes-background;
+      background: var(--boxes-background);
       margin-top: -60px;
 
       .slick-arrow {
@@ -64,8 +72,8 @@
     }
 
     .field.verwaltung_techn-objektnr_extern {
-      color: $mateColor2;
-      font-family: $font2;
+      color: var(--mateColor2-text-color);
+      font-family: var(--font2);
       text-align: center;
 
       .label, div:last-child {
@@ -88,13 +96,13 @@
 
         .obj-details {
           h2 {
-            background: $mateColor2;
+            background: var(--mateColor2);
             color: #fff;
             text-transform: none;
             font-weight: 400;
             box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
             -webkit-box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
-            font-family: $font2;
+            font-family: var(--font2);
             margin: -45px 0 20px;
             display: block;
             width: min-content;
@@ -106,7 +114,7 @@
           }
 
           .inside {
-            background: $boxes-background;
+            background: var(--boxes-background);
             padding: 30px;
             box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
             -webkit-box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
@@ -126,19 +134,19 @@
       .label {
         font-weight: 700;
         font-size: 1rem;
-        color: $mateColor3;
+        color: var(--mateColor3-text-color);
       }
 
       div:last-child {
         font-weight: 700;
         font-size: 1rem;
-        color: $primary-text-color;
+        color: var(--primary-text-color);
       }
     }
 
     h3 {
       width: auto;
-      background: $mateColor2;
+      background: var(--mateColor2);
       color: #f2f2f2;
       border: none;
       text-transform: none;
@@ -154,7 +162,7 @@
     }
 
     h4 {
-      color: $primary-text-color;
+      color: var(--primary-text-color);
     }
 
     .ce_form {
@@ -186,7 +194,7 @@
         }
 
         .custom-control-input:checked~.custom-control-label::before {
-          background: $mateColor2;
+          background: var(--mateColor2);
         }
       }
 
@@ -204,18 +212,18 @@
       }
 
       .inside {
-        background: $boxes-background;
+        background: var(--boxes-background);
         margin-bottom: 30px;
         padding: 30px;
-        color: $boxes-text-color;
+        color: var(--boxes-text-color);
         box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
         -webkit-box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
 
         h3 {
           margin-top: 0;
-          font-family: $font2;
+          font-family: var(--font2);
           background: none;
-          color: $mateColor2;
+          color: var(--mateColor2-text-color);
           font-size: 1.5rem;
           padding: 0 0 20px;
           margin-bottom: 20px;
@@ -226,7 +234,7 @@
             bottom: 0;
             left: 0;
             width: 50px;
-            border-bottom: 3px solid $mateColor2;
+            border-bottom: 3px solid var(--mateColor2);
           }
         }
       }
@@ -237,7 +245,7 @@
     }
 
     .description, .contact, .maps, .obj-header {
-      color: $primary-text-color;
+      color: var(--primary-text-color);
     }
 
     .legende_eclass span {
@@ -252,8 +260,7 @@
   .top-obj-details {
     position: absolute;
     width: 100vw;
-    background: rgba($boxes-background, 0.8);
-    color: #f2f2f2;
+    background: rgba(var(--rgba-boxes-background), 0.8);;
     display: flex;
     align-items: center;
     height: 180px;
@@ -278,13 +285,13 @@
         font-size: 2rem;
         font-weight: 700;
         text-align: left;
-        color: $mateColor2;
-        font-family: $font3;
+        color: var(--boxes-text-color);
+        font-family: var(--font3);
       }
 
       .label {
         width: inherit;
-        color: $boxes-text-color;
+        color: var(--boxes-text-color);
         text-align: left;
         font-weight: 700;
       }
@@ -306,31 +313,31 @@
   #estate_filter_list {
     button {
       background: none;
-      color: $mateColor2;
-      border: 1px solid $mateColor2;
+      color: var(--mateColor2-text-color);
+      border: 1px solid var(--mateColor2);
       box-shadow: none;
       font-weight: 400;
       padding: 10px;
       margin: 5px 5px 5px 0;
 
       &:hover {
-        background: $mateColor2;
-        color: $boxes-background;
+        background: var(--mateColor2);
+        color: var(--boxes-background);
       }
     }
 
     .button.active {
-      background: $button-floating-background !important;
-      color: $button-flat-color;
+      background: var(--button-floating-background) !important;
+      color: var(--button-flat-color);
     }
 
     &.button-filter > div {
-      background: $boxes-background;
-      border-color: $pageBackground;
+      background: var(--boxes-background);
+      border-color: var(--pageBackground);
     }
 
     .header {
-      color: $mateColor2;
+      color: var(--mateColor2-text-color);
       text-transform: uppercase;
       font-size: 14px;
       text-align: center;
@@ -342,7 +349,7 @@
       display: flex;
       align-items: center;
       height: 180px;
-      background: $boxes-background;
+      background: var(--boxes-background);
       padding: 0 30px;
       margin-top: -150px;
       box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
@@ -350,7 +357,7 @@
 
       > div {
         padding: 0 5px;
-        background: $boxes-background;
+        background: var(--boxes-background);
         border: none;
         height: auto;
         margin-bottom: 20px;
@@ -371,7 +378,7 @@
     .select-wrapper {
       .caret {
         z-index: 1;
-        background: #615b4d;
+        background: var(--mateColor2);
         margin: 0;
         height: 100%;
         fill: #fff;
@@ -381,8 +388,8 @@
 
       input.select-dropdown {
         margin-top: 5px;
-        color: #615b4d;
-        border: 1px solid #615b4d;
+        color: var(--primary-text-color);
+        border: 1px solid var(--primary-text-color);
       }
     }
   }
@@ -412,16 +419,25 @@
 
   .estate-header-image {
     height: calc(100vh - 165px);
-    font-family: $font1;
+    font-family: var(--font1);
+
+    .ce_image {
+      height: 100%;
+    }
 
     h1, h2, h3, h4, h5, h6 {
-      background: rgba($mateColor2, 0.9);
+      background: rgba(var(--rgba-mateColor2), 0.9);
       text-align: center;
       margin: 0 auto 200px;
-      color: $mateColorWhite;
+      color: var(--secondary-text-color);
       font-weight: 400;
       text-transform: none;
       padding: 30px 40px 25px;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -433,15 +449,15 @@
   }
 
   .mod_immoListView {
-    font-family: $font1;
+    font-family: var(--font1);
 
     &.block {
       overflow: visible;
     }
 
     .btn.btn-reset-filter {
-      background: $mateColor1;
-      color: $mateColor3;
+      background: var(--button-floating-background);
+      color: var(--button-flat-color);
       margin-bottom: 0;
       margin-top: -18px;
       left: 50%;
@@ -451,13 +467,17 @@
       width: 200px;
       margin-left: -100px;
       justify-content: center;
+
+      &:hover {
+        background: var(--button-floating-background-hover);
+      }
     }
 
     .estate {
       width: 50%;
 
       &:hover {
-        color: $mateColor2;
+        color: var(--mateColor2-text-color);
       }
 
       .content {
@@ -469,7 +489,7 @@
           position: absolute;
           left: 40px;
           bottom: 0;
-          border: 2px solid $mateColor2;
+          border: 2px solid var(--mateColor2);
           width: 50px;
         }
       }
@@ -481,8 +501,12 @@
         padding: 10px 30px;
         text-align: center;
 
+        .col {
+          margin: 0;
+        }
+
         .label {
-          color: $primary-text-color;
+          color: var(--primary-text-color);
         }
 
         .value {
@@ -492,20 +516,20 @@
       }
 
       h2 {
-        color: $mateColor2;
+        color: var(--mateColor2-text-color);
         border: none;
         height: inherit;
-        font-family: $font2;
+        font-family: var(--font2);
         font-weight: 400;
         font-size: 26px;
         line-height: 30px;
       }
 
       .inner{
-        background: $boxes-background;
+        background: var(--boxes-background);
         position: relative;
         height: 620px;
-        box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.25);
       }
 
       .item {
@@ -533,12 +557,12 @@
 
       ul li {
         .label {
-          color: rgba($primary-text-color, .4);
+          color: var(--primary-text-color);
           font-weight: 400;
         }
 
         .value {
-          color: $primary-text-color;
+          color: var(--primary-text-color);
         }
       }
 
@@ -547,7 +571,7 @@
         bottom: 0;
         padding: 10px 15px;
         width: 100%;
-        background: $mateColor2;
+        background: var(--mateColor2);
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
 
@@ -590,21 +614,21 @@
 
           a {
             background: transparent;
-            color: $mateColor4;
+            color: var(--mateColor4-text-color);
             padding: 0 10px;
             font-size: 12px;
             line-height: 30px;
             letter-spacing: 1px;
 
             &:hover {
-              background: $mateColor1;
-              color: $mateColor4;
+              background: var(--mateColor1);
+              color: var(--mateColor4-text-color);
             }
           }
 
           &.active a {
-            background: $mateColor6;
-            color: $mateColorWhite;
+            background: var(--mateColor6);
+            color: var(--mateColorWhite);
             font-weight: 700;
           }
         }
@@ -794,16 +818,6 @@
           padding: 10px 0;
         }
       }
-    }
-  }
-
-}
-
-@media (max-width:450px) {
-
-  #wrapper {
-    .top-obj-details {
-
     }
   }
 
