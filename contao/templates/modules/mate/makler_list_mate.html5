@@ -40,7 +40,7 @@ $counter = 1;
   <?php if($this->paginationUseIsotope != 0): // Ausgabe Filter ?>
 
     <div class="filter">
-      <div id="estate_filter_list" class="estate-filter <?= $this->filterClass ?><?php if($this->staticFilter): ?> mm-only-filter<?php endif; ?>">
+      <div id="estate_filter_list" class="estate-filter hc-bg-grey-dark <?= $this->filterClass ?><?php if($this->staticFilter): ?> mm-only-filter<?php endif; ?>">
         <?= $this->filter ?>
       </div>
 
@@ -61,7 +61,7 @@ $counter = 1;
       <?php foreach ($pages[$page] as $obj): ?>
         <?php #if($this->makler_addListPagination && $counter < $this->makler_paginationCount+1): ?>
         <a href="<?= $obj['link'] ?>" class="<?= $obj['css-filter-class-string'] ?>" title="Objekt '<?= $obj['freitexte-objekttitel']?? '' ?>' ansehen">
-          <div class="inner">
+          <div class="inner hc-bg-grey-dark">
             <div class="mix item<?php if($counter&1): ?> odd<?php else: ?> even<?php endif; ?>">
 
               <?php // Ausgabe des Objektbildes als Hintergrundbild ?>
@@ -86,7 +86,7 @@ $counter = 1;
               <?php endif; ?>
 
               <?php if($obj['geo-ort']): ?><div class="location"><?= $obj['geo-plz'] ?> <?= $obj['geo-ort'] ?></div><?php endif; ?>
-              <div class="btn read-more">+</div>
+              <div class="btn read-more hc-bg-white">+</div>
             </div>
             <div class="content objectDescr">
               <h2 class="freitexte-objekttitel"><?= $obj['freitexte-objekttitel'] ?></h2>

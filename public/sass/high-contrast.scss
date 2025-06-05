@@ -296,6 +296,51 @@
   #wrapper .slider .slides {
     background: var(--hc-grey-dark) !important;
   }
+
+  #wrapper {
+    #estate_filter_list {
+      button {
+        background: var(--hc-white) !important;
+        color: var(--hc-black) !important;
+
+        &:hover, &:focus {
+          background: none !important;
+          color: var(--hc-white) !important;
+          border-color: var(--hc-white) !important;
+        }
+      }
+
+      .select-wrapper .caret {
+        background: var(--hc-white) !important;
+        fill: var(--hc-black) !important;
+      }
+    }
+
+    .mod_immoListView {
+      .btn.btn-reset-filter {
+        background: var(--hc-white) !important;
+        color: var(--hc-black) !important;
+      }
+
+      .pagination ul li.active a {
+        background: var(--hc-white) !important;
+        color: var(--hc-black) !important;
+      }
+    }
+
+    .mod_immoListView .estate .content:after, .estate-detail .description .inside h3:after {
+      border-color: var(--hc-white);
+    }
+
+    .top-obj-details {
+      background: rgba(0,0,0,.6) !important;
+    }
+  }
+
+  #wrapper .estate-header-image h1, #wrapper .estate-header-image h2, #wrapper .estate-header-image h3, #wrapper .estate-header-image h4, #wrapper .estate-header-image h5, #wrapper .estate-header-image h6 {
+    background: var(--hc-white) !important;
+    color: var(--hc-black) !important;
+  }
 }
 
 #wrapper .font-size-switcher {

@@ -16,7 +16,7 @@
     }
 
     .legende_eclass {
-      background: var(--boxes-background);
+      background: none;
     }
 
     .big-img {
@@ -313,16 +313,17 @@
   #estate_filter_list {
     button {
       background: none;
-      color: var(--mateColor2-text-color);
-      border: 1px solid var(--mateColor2);
+      color: var(--primary-text-color);
+      border: 1px solid var(--primary-text-color);
       box-shadow: none;
       font-weight: 400;
       padding: 10px;
       margin: 5px 5px 5px 0;
+      transition: all .3s;
 
       &:hover {
-        background: var(--mateColor2);
-        color: var(--boxes-background);
+        background: var(--button-floating-background-hover);
+        color: var(--button-flat-color);
       }
     }
 
@@ -357,7 +358,7 @@
 
       > div {
         padding: 0 5px;
-        background: var(--boxes-background);
+        background: none;
         border: none;
         height: auto;
         margin-bottom: 20px;
@@ -378,7 +379,7 @@
     .select-wrapper {
       .caret {
         z-index: 1;
-        background: var(--mateColor2);
+        background: var(--mateColor1);
         margin: 0;
         height: 100%;
         fill: #fff;
@@ -390,6 +391,7 @@
         margin-top: 5px;
         color: var(--primary-text-color);
         border: 1px solid var(--primary-text-color);
+        background: none;
       }
     }
   }

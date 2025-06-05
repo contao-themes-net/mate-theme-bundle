@@ -60,7 +60,7 @@
     </div>
   </div>
 
-  <div class="small-pics small-pics-slider row">
+  <div class="small-pics small-pics-slider row hc-bg-grey-dark">
     <?php foreach ($this->estate->attachments()->startAt(0) as $attachment) : ?>
       <div><?php $attachment->group("BILD,GRUNDRISS,AUSSENANSICHTEN,INNENANSICHTEN,PANORAMA,KARTEN_LAGEPLAN")->size(612,350,$this->attachmentSize)->render() ?></div>
     <?php endforeach; ?>
@@ -73,8 +73,8 @@
   <div class="right">
     <div class="obj-details">
       <div class="prices">
-        <div class="inside">
-          <h2>Preise</h2>
+        <div class="inside hc-bg-grey-dark">
+          <h2 class="hc-bg-white">Preise</h2>
           <?php $this->estate->renderer('objektkategorie.objektart.wohnung.wohnungtyp')->asText()->render(); ?>
           <?php $this->estate->renderer('preise.kaufpreis')->asNumber(2)->append(' EUR')->render(); ?>
           <?php $this->estate->renderer('preise.kaltmiete')->asNumber(2)->append(' EUR')->render(); ?>
@@ -94,8 +94,8 @@
         </div>
       </div>
       <div class="area">
-        <div class="inside">
-          <h2>Flächen</h2>
+        <div class="inside hc-bg-grey-dark">
+          <h2 class="hc-bg-white">Flächen</h2>
           <?php $this->estate->renderer('geo.etage')->asNumber(0)->render(); ?>
           <?php $this->estate->renderer('flaechen.wohnflaeche')->asNumber(0)->append(' m²')->render(); ?>
           <?php $this->estate->renderer('flaechen.gesamtflaeche')->asNumber(2)->append(' m²')->render(); ?>
@@ -127,8 +127,8 @@
         </div>
       </div>
       <div class="equipment">
-        <div class="inside">
-          <h2>Austattung</h2>
+        <div class="inside hc-bg-grey-dark">
+          <h2 class="hc-bg-white">Austattung</h2>
           <?php $this->estate->renderer('ausstattung.kueche.@EBK')->asFlag($yes, $no)->render(); ?>
           <?php $this->estate->renderer('ausstattung.bad.@WANNE')->asFlag($yes, $no)->render(); ?>
           <?php $this->estate->renderer('ausstattung.bad.@DUSCHE')->asFlag($yes, $no)->render(); ?>
@@ -169,21 +169,21 @@
   <div class="description">
 
     <?php if($this->estate->renderer('freitexte.objektbeschreibung')->asText()->value(true) != ""): ?>
-      <div class="inside">
+      <div class="inside hc-bg-grey-dark">
         <div><h3>Objektbeschreibung</h3></div>
         <?php $this->estate->renderer('freitexte.objektbeschreibung')->asText()->value(); ?>
       </div>
     <?php endif; ?>
 
     <?php if($this->estate->renderer('freitexte.ausstatt_beschr')->asText()->value(true) != ""): ?>
-      <div class="inside">
+      <div class="inside hc-bg-grey-dark">
         <div><h3>Ausstattung</h3></div>
         <?php $this->estate->renderer('freitexte.ausstatt_beschr')->asText()->value(); ?>
       </div>
     <?php endif; ?>
 
     <?php if($this->estate->renderer('freitexte.lage')->asText()->value(true) != ""): ?>
-      <div class="inside">
+      <div class="inside hc-bg-grey-dark">
         <div><h3>Lage</h3></div>
         <?php $this->estate->renderer('freitexte.lage')->asText()->value(); ?>
       </div>
@@ -193,7 +193,7 @@
     $this->estate->renderer('fahrzeit_hauptbahnhof')->asText()->value(true) != "" ||
     $this->estate->renderer('fahrzeit_bab')->asText()->value(true) != "" ||
     $this->estate->renderer('fahrzeit_flughafen')->asText()->value(true) != ""): ?>
-      <div class="inside">
+      <div class="inside hc-bg-grey-dark">
         <div class="distances">
           <div><h3>Entfernungen</h3></div>
           <?php $this->estate->renderer('fussweg_oeffentlverkehr')->asNumber(2)->append(' km')->render(); ?>
@@ -204,11 +204,11 @@
       </div>
     <?php endif; ?>
 
-    <div class="inside">
+    <div class="inside hc-bg-grey-dark">
       <?php $this->estate->energyPass()->render() ?>
     </div>
 
-    <div class="contact inside">
+    <div class="contact inside hc-bg-grey-dark">
       <div><h3>Ansprechpartner</h3></div>
       <?php if($this->estate->renderer('kontaktperson.anrede')->asText()->withoutLabel()->value(true)): ?>
         <?php $this->estate->renderer('kontaktperson.anrede')->asText()->value(); ?><br>
@@ -228,13 +228,13 @@
     </div>
 
     <?php if($this->estate->renderer('freitexte.sonstige_angaben')->asText()->value(true) != ""): ?>
-      <div class="inside">
+      <div class="inside hc-bg-grey-dark">
         <div><h3>Sonstiges</h3></div>
         <?php $this->estate->renderer('freitexte.sonstige_angaben')->asText()->value(); ?>
       </div>
     <?php endif; ?>
 
-    <div class="documents inside">
+    <div class="documents inside hc-bg-grey-dark">
       <div><h3>Dokumente</h3></div>
       <?php $i = 1; foreach ($this->estate->attachments()->startAt(0) as $attachment): ?>
         <?php $attachment->group("DOKUMENTE,FILMLINK")->render() ?>
@@ -242,7 +242,7 @@
     </div>
 
     <?php if($this->estate->renderer('verwaltung_objekt.objektadresse_freigeben')->asText()->value(true) == true && $this->showMap == 1): ?>
-      <div class="inside">
+      <div class="inside hc-bg-grey-dark">
         <div><h3>Adresse</h3></div>
         <div class="address">
           <h4>Objektanschrift</h4>
@@ -252,63 +252,6 @@
       </div>
     <?php endif; ?>
   </div>
-
-  <?php if($this->estate->renderer('verwaltung_objekt.objektadresse_freigeben')->asText()->value(true) == true && $this->showMap == 1): ?>
-  <script>
-    $(document).ready( function() {
-      if(typeof google === 'undefined')
-        return;
-
-      $("#confirm-googlemaps").click( function() {
-        setMap();
-      });
-
-      $("#confirm-googlemaps .btn").click( function() {
-        $("#confirm-googlemaps").trigger("click");
-        return false;
-      });
-
-      var mapsCookie = "<?= \Contao\Input::cookie('dlh_googlemaps') ?>";
-      if(mapsCookie != "" || $(".dlh_googlemap > div").attr("id") != "confirm-googlemaps") {
-        setMap();
-      }
-
-      function setMap() {
-        setTimeout( function() {
-          var geocoder = new google.maps.Geocoder();
-          var lat; var lng;
-          geocodeAddress(geocoder);
-        },500);
-      }
-
-      function geocodeAddress(geocoder, resultsMap) {
-        var address = "<?php $this->estate->renderer('geo.strasse')->asText()->value() ?>";
-        address = address + " <?php $this->estate->renderer('geo.hausnummer')->asText()->value() ?>";
-        address = address + ", <?php $this->estate->renderer('geo.ort')->asText()->value() ?>";
-        geocoder.geocode({'address': address}, function(results, status) {
-          if (status === google.maps.GeocoderStatus.OK) {
-            lat = results[0].geometry.location.lat();
-            lng = results[0].geometry.location.lng();
-            setCenter(lat, lng);
-            setMarker(lat, lng);
-          }
-        });
-      }
-
-      function setCenter(lat, lng) {
-        gmap1.setCenter(new google.maps.LatLng(lat, lng));
-      }
-
-      function setMarker(lat, lng) {
-        var gmap1_marker = new google.maps.Marker({
-          position: new google.maps.LatLng(lat, lng),
-          map: gmap1,
-          zIndex: 1
-        });
-      }
-    });
-  </script>
-  <?php endif; ?>
 
   <div class="back footer">
     <?php $this->estate->backButton()->render() ?>
