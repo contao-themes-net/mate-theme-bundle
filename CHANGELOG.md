@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.5.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.4) – 2025-07-24
+
+- [Fixed] Fix top margin on first headlines to align multi-column layouts
+
 ## [3.5.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.3) – 2025-06-05
 
 - [Fixed] Update maklermodul template and styling for contao 5
