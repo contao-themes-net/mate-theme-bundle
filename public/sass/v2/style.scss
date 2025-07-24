@@ -727,10 +727,28 @@ h1.bordered-right:after, h2.bordered-right:after, h3.bordered-right:after, h4.bo
   }
 }
 
-#left, #right {
-  .inside {
-    > h2:first-child, .mod_article:first-child .content-text:first-child h2, .mod_article:first-child .ce_headline h2 {
-      margin-top: 0;
+#left, #right, #main {
+  .inside .mod_article:first-child .content-headline:first-child {
+    margin-top: 0;
+  }
+}
+
+#left, #right, #main {
+  .inside > {
+    h1, h2, h3, h4, h5, h6 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+#left, #right, #main {
+  .inside .mod_article:first-child .content-text:first-child {
+    h1, h2, h3, h4, h5, h6 {
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 }
