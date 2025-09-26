@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.5.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.5) – 2025-09-26
+
+- [Fixed] Demo data import for Contao 5.6
+
 ## [3.5.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.4) – 2025-07-24
 
 - [Fixed] Fix top margin on first headlines to align multi-column layouts
