@@ -79,7 +79,7 @@ class ThemeUtils
         $request = System::getContainer()->get('request_stack')->getCurrentRequest();
 
         // Execute code only in preview mode
-        if ($request->attributes->get('_preview')) {
+        if ($request->attributes->get('_preview') || 'mate.contao-themes.net' === $request->headers->get('host')) {
             if ('reset' === Input::get('theme-color')) {
                 $session->set('mate_color', null);
             }

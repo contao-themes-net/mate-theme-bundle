@@ -238,7 +238,7 @@ jQuery(document).ready(function ($) {
         coverTrigger: false,
         alignment: "left",
         constrainWidth: false,
-        closeOnClick: false
+        closeOnClick: false,
     });
 
     $("nav:not(.subnav) .desktop-menu ul.dropdown-content a.dropdown-button").dropdown({

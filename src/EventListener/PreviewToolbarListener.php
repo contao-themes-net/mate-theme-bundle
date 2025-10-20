@@ -55,23 +55,28 @@ class PreviewToolbarListener
 
         // Do not capture redirects, errors, or modify XML HTTP Requests
         if (
-            !$request->attributes->get('_preview', false)
+            (!$request->attributes->get('_preview', false)
             || $request->isXmlHttpRequest()
-            || !$response->isSuccessful() && !$response->isClientError()
+            || !$response->isSuccessful() && !$response->isClientError())
+            && 'mate.contao-themes.net' !== $request->headers->get('host')
         ) {
             return;
         }
 
         // Do not inject the toolbar in the back end
-        if ($this->scopeMatcher->isBackendMainRequest($event) || !$this->tokenChecker->hasBackendUser()) {
+        if (
+            ($this->scopeMatcher->isBackendMainRequest($event) || !$this->tokenChecker->hasBackendUser())
+            && 'mate.contao-themes.net' !== $request->headers->get('host')
+        ) {
             return;
         }
 
         // Only inject the toolbar into HTML responses
         if (
-            'html' !== $request->getRequestFormat()
+            ('html' !== $request->getRequestFormat()
             || !str_contains((string) $response->headers->get('Content-Type'), 'text/html')
-            || false !== stripos((string) $response->headers->get('Content-Disposition'), 'attachment;')
+            || false !== stripos((string) $response->headers->get('Content-Disposition'), 'attachment;'))
+            && 'mate.contao-themes.net' !== $request->headers->get('host')
         ) {
             return;
         }

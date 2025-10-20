@@ -16,8 +16,13 @@
         </div>
 
         <div class="buttons">
-          <a href="<?= $this->link1 ?>" class="btn hc-bg-white"><?= $this->linkText1 ?></a>
-          <a href="<?= $this->link2 ?>" class="btn outline hc-bg-white"><?= $this->linkText2 ?></a>
+          <?php if ($this->link1 && $this->linkText1): ?>
+            <a href="<?= $this->link1 ?>" class="btn hc-bg-white"<?php if ($this->linkTitle1): ?> title="<?= $this->linkTitle1 ?>"<?php endif; ?>><?= $this->linkText1 ?></a>
+          <?php endif; ?>
+
+          <?php if ($this->link2 && $this->linkText2): ?>
+            <a href="<?= $this->link2 ?>" class="btn outline hc-bg-white"<?php if ($this->linkTitle2): ?> title="<?= $this->linkTitle2 ?>"<?php endif; ?>><?= $this->linkText2 ?></a>
+          <?php endif; ?>
         </div>
       </div>
     </div>

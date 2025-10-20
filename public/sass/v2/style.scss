@@ -249,7 +249,7 @@ img {
 a {
   color: var(--primary-link-font-color);
 
-  &:hover {
+  &:hover, &:focus, &:focus {
     color: var(--primary-link-hover-font-color);
   }
 }
@@ -275,7 +275,7 @@ a {
   }
 }
 
-a.btn:hover {
+a.btn:hover, a.btn:focus {
   color: var(--button-flat-color);
 }
 
@@ -302,7 +302,7 @@ a.btn:hover {
   a {
     color: #fff;
 
-    &:hover {
+    &:hover, &:focus, &:focus {
       color: var(--primary-link-hover-font-color);
     }
   }
@@ -336,10 +336,7 @@ a.btn:hover {
       @extend .btn;
       color: var(--mateColorWhite);
       background: var(--primary-color);
-      &:hover {
-        background: var(--secondary-color);
-      }
-      &.active {
+      &:hover, &:focus, &.active, &:focus {
         background: var(--secondary-color);
       }
     }
@@ -431,7 +428,7 @@ code, pre {
     transition: all .3s;
     padding: 1rem 2.5rem 1rem 1rem;
 
-    &:hover {
+    &:hover, &:focus {
       background: var(--accordion-headline-hover-background);
       color: var(--accordion-headline-hover-color);
     }
@@ -459,10 +456,6 @@ code, pre {
     }
   }
 
-  .ui-accordion-header:focus {
-    outline: none;
-  }
-
   .ui-accordion-content {
     @extend .collapsible-body;
     padding: 5px 1rem;
@@ -473,6 +466,52 @@ code, pre {
 
   ul {
     margin-top: 0;
+  }
+}
+
+.content-accordion {
+  .handorgel__header__button {
+    background: var(--accordion-headline-background);
+    color: var(--accordion-headline-color);
+    padding: 1rem 2.5rem 1rem 1rem;
+    position: relative;
+
+    &:hover, &:focus {
+      background: var(--accordion-headline-hover-background);
+      color: var(--accordion-headline-hover-color);
+    }
+
+    &:after {
+      content: "\e5cf";
+      font-family: "Material Icons";
+      font-size: 1.5em;
+      line-height: 1;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .handorgel__header--open .handorgel__header__button:after {
+    content: "\e5ce";
+  }
+
+  .handorgel__header {
+    font-size: 1em;
+  }
+
+  .handorgel__content {
+    background: var(--accordion-content-background);
+    color: var(--accordion-content-color);
+    border: none;
+    padding: 5px 1rem;
+  }
+
+  .handorgel__content__inner {
+    padding: 0;
   }
 }
 
@@ -511,7 +550,7 @@ table {
     a {
       color: var(--download-faqlist-color-even);
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--download-faqlist-color-even-hover);
       }
     }
@@ -523,7 +562,7 @@ table {
     a {
       color: var(--download-faqlist-color-odd);
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--download-faqlist-color-odd-hover);
       }
     }
@@ -553,7 +592,7 @@ table {
   background-color: var(--button-floating-background);
   color: var(--button-flat-color);
 
-  &:hover {
+  &:hover, &:focus {
     background: var(--button-floating-background-hover);
   }
 
@@ -915,7 +954,7 @@ nav.mod_breadcrumb {
   a {
     color: var(--breadcrumb-link);
 
-    &:hover {
+    &:hover, &:focus {
       color: var(--breadcrumb-link-hover);
     }
   }
@@ -939,7 +978,7 @@ nav.mod_breadcrumb {
       color: var(--breadcrumb-link);
     }
 
-    &:hover {
+    &:hover, &:focus {
       color: var(--breadcrumb-link-hover);
     }
   }
@@ -1165,13 +1204,13 @@ nav {
           height: 50px;
           text-transform: uppercase;
 
+          &:focus-visible {
+            outline: 0;
+          }
+
           a {
             color: var(--navbar-color);
             font-size: 1em;
-
-            &:focus {
-              outline: 0;
-            }
 
             &, &.active {
               position: relative;
@@ -1185,11 +1224,11 @@ nav {
             }
           }
 
-          &:hover + ul.dropdown-content {
+          &:hover + ul.dropdown-content, &:focus-visible + ul.dropdown-content {
             display: block;
           }
 
-          & a:hover, &.active {
+          & a:hover, &.active, a:focus-visible {
             background-color: transparent;
             color: var(--navbar-active-color);
             font-weight: normal;
@@ -1198,7 +1237,8 @@ nav {
 
         > li > a.active:before,
         > li.trail > a:before,
-        > li > a:hover:before {
+        > li > a:hover:before,
+        > li > a:focus:before {
           position: absolute;
           content: "";
           width: 50%;
@@ -1211,7 +1251,8 @@ nav {
           border: 2px solid var(--navbar-active-color);
         }
 
-        > li > a:hover:before {
+        > li > a:hover:before,
+        > li > a:focus-visible:before {
           border: 2px solid var(--navbar-active-color);
         }
 
@@ -1221,7 +1262,8 @@ nav {
           box-shadow: none;
           overflow: visible;
 
-          li.submenu:hover > .dropdown-content {
+          li.submenu:hover > .dropdown-content,
+          li.submenu:focus-visible > .dropdown-content {
             display: block;
           }
 
@@ -1241,7 +1283,7 @@ nav {
             height: auto;
             padding: 0 25px 0 15px;
 
-            &:hover, &.active, &.selected {
+            &:hover, &:focus-visible, &.active, &.selected {
               background-color: var(--navbar-dropdown-hover-bg-color);
 
               > a {
@@ -1257,11 +1299,11 @@ nav {
                 display: none;
               }
 
-              &:hover {
+              &:hover, &:focus-visible {
                 color: var(--navbar-dropdown-hover-color);
               }
 
-              &:hover:before {
+              &:hover:before, &:focus-visible:before {
                 display: none;
               }
             }
@@ -1314,7 +1356,7 @@ nav {
     li {
       min-height: 1px;
 
-      &:hover {
+      &:hover, &:focus {
         background: none;
       }
 
@@ -1343,7 +1385,7 @@ nav {
       margin: 2px 0;
       display: block;
 
-      &:hover {
+      &:hover, &:focus {
         background: var(--subnav-hover-background);
         color: var(--subnav-hover-color);
       }
@@ -1388,7 +1430,7 @@ nav {
     a {
       background: var(--mateColor1);
 
-      &:hover {
+      &:hover, &:focus {
         background: var(--mateColor3);
       }
     }
@@ -1417,7 +1459,7 @@ nav {
     li a {
       color: var(--navbar-stuck-color);
 
-      &.active, &:hover {
+      &.active, &:hover, &:focus {
         color: var(--navbar-stuck-active-color);
       }
     }
@@ -1441,7 +1483,7 @@ nav {
       li a {
         color: var(--navbar-stuck-dropdown-color);
 
-        &:hover {
+        &:hover, &:focus {
           color: var(--navbar-stuck-dropdown-hover-color);
         }
       }
@@ -1582,7 +1624,7 @@ nav .brand-logo {
       a {
         color: var(--slider-headline-color);
 
-        &:hover {
+        &:hover, &:focus {
           color: var(--primary-link-hover-font-color);
         }
       }
@@ -1609,7 +1651,7 @@ nav .brand-logo {
         box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
         -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
-        &:hover {
+        &:hover, &:focus {
           color: var(--slider-button-color-hover);
           background: var(--slider-button-background-hover);
         }
@@ -1672,7 +1714,7 @@ nav .brand-logo {
         position: relative;
         cursor: pointer;
 
-        &:hover {
+        &:hover, &:focus {
           color: var(--mateColor2-text-color);
         }
 
@@ -1717,7 +1759,7 @@ nav .brand-logo {
         padding: 30px 15px;
         background: var(--slider-navigation-background);
 
-        &:hover {
+        &:hover, &:focus {
           background: var(--slider-navigation-hover-background);
           color: #fff;
 
@@ -2114,14 +2156,14 @@ nav .brand-logo {
     border: 1px solid var(--button-outline-color);
     color: var(--button-outline-color);
 
-    &:hover {
+    &:hover, &:focus {
       background: var(--button-floating-background-hover);
       color: var(--button-flat-color);
       border-color: var(--button-floating-background-hover);
     }
   }
 
-  &:hover {
+  &:hover, &:focus {
     box-shadow: none;
   }
 }
@@ -2158,7 +2200,7 @@ nav .brand-logo {
       width: 100%;
       height: 100%;
 
-      &:hover span {
+      &:hover, &:focus span {
         background: var(--button-floating-background-hover);
       }
     }
@@ -2209,7 +2251,7 @@ nav .brand-logo {
       span {
         background: rgba(var(--button-floating-background), .5);
 
-        &:hover {
+        &:hover, &:focus {
           background: rgba(var(--button-floating-background), .8);
         }
       }
@@ -2304,7 +2346,7 @@ nav .brand-logo {
       a {
         color: var(--primary-link-font-color);
 
-        &:hover {
+        &:hover, &:focus {
           color: var(--primary-link-hover-font-color);
         }
       }
@@ -2368,7 +2410,7 @@ nav .brand-logo {
       box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
       -webkit-box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.25);
 
-      &:hover {
+      &:hover, &:focus {
         background: var(--button-floating-background-hover);
       }
     }
@@ -2387,7 +2429,7 @@ nav .brand-logo {
       display: inline-block;
       padding: 3px 10px;
 
-      &:hover {
+      &:hover, &:focus {
         background: var(--button-floating-background-hover);
       }
     }
@@ -2541,7 +2583,7 @@ nav.pagination li, nav[data-pagination] li {
       text-transform: inherit;
       letter-spacing: 1px;
 
-      &:hover {
+      &:hover, &:focus {
         background: none;
         color: var(--mateColor3-text-color);
       }
@@ -2627,7 +2669,7 @@ nav.pagination li, nav[data-pagination] li {
         color: var(--secondary-text-color);
       }
 
-      &:hover {
+      &:hover, &:focus {
         background: var(--mateColor2);
       }
     }
@@ -2790,7 +2832,7 @@ footer.page-footer {
     a {
       color: var(--footer-secondary-link-color);
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--footer-secondary-link-color-hover);
       }
     }
@@ -2818,7 +2860,7 @@ footer.page-footer {
       opacity: 1;
     }
 
-    &:hover {
+    &:hover, &:focus {
       background: var(--toplink-background-hover);
       color: var(--toplink-color-hover);
 
@@ -2835,7 +2877,7 @@ footer.page-footer {
       margin-bottom: 10px;
       line-height: 1em;
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--primary-link-hover-font-color);
       }
     }
@@ -2853,7 +2895,7 @@ footer.page-footer {
   > .container a {
     color: var(--footer-primary-link-color);
 
-    &:hover {
+    &:hover, &:focus {
       color: var(--footer-primary-link-color-hover);
     }
   }
@@ -2946,7 +2988,7 @@ footer {
     .submit {
       background: var(--footer-newsletter-button-background);
 
-      &:hover {
+      &:hover, &:focus {
         background: var(--footer-newsletter-button-background-hover);
       }
     }
@@ -3413,7 +3455,7 @@ input::placeholder {
       text-transform: uppercase;
       vertical-align: top;
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--primary-text-color);
       }
     }
@@ -3742,7 +3784,7 @@ mark {
       text-decoration: underline;
       font-size: .875em;
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--parallax-link-hover-color);
       }
     }
@@ -3895,7 +3937,7 @@ mark {
       transition: all .3s;
     }
 
-    &:hover:before {
+    &:hover, &:focus:before {
       background: rgba(var(--mateColorWhite),.2);
     }
   }
@@ -4290,7 +4332,7 @@ div.klaro {
       }
 
       ul li a {
-        &.active, &:hover {
+        &.active, &:hover, &:focus {
           color: #fff;
         }
       }
