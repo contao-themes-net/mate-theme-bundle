@@ -54,16 +54,26 @@ class ModuleNewsListMate extends ModuleNewsList
 
                 $indicators = '
                 $( ".slider.mod_newslist .sliderImage" ).each(function( index ) {
-                  var headline = $(this).find("h2").text();
+                  var headline = $(this).find("h2, .h2").text();
                   var subheadline = $(this).find(".subheadline").text();
                   var i = index;
 
                   $( ".slider.mod_newslist .indicator-item" ).each(function( index ) {
                     if(i == index) {
+                        $(this).attr("tabindex", "0");
+                        $(this).attr("role", "listitem");
+                        $(this).attr("aria-label", "Navigation Slide " + (index + 1));
                         $(this).addClass("hc-bg-grey-darker hc-hover-bg-grey");
                         $(this).append("<span class=\'inner\'></span>");
                         $(this).find(".inner").append("<span class=\'subheadline\'>" + subheadline + "</span>");
                         $(this).find(".inner").append("<span class=\'headline\'>" + headline + "</span>");
+
+                        $(this).on("keydown click", function(e) {
+                          if (e.type === "click" || e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            $(this).trigger("click.indicator");
+                          }
+                        });
                     }
                   });
                 });

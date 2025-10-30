@@ -94,6 +94,23 @@ button, input, optgroup, select, textarea {
   font-family: var(--font1);
 }
 
+button:focus-visible {
+  outline-offset: 1px;
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.invisible:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  font-weight: bold;
+  outline: 2px solid #ffffff;
+  z-index: 1000;
+  margin: 0;
+  display: inline-block;
+}
+
 .container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
@@ -302,7 +319,7 @@ a.btn:hover, a.btn:focus {
   a {
     color: #fff;
 
-    &:hover, &:focus, &:focus {
+    &:hover, &:focus {
       color: var(--primary-link-hover-font-color);
     }
   }
@@ -336,7 +353,7 @@ a.btn:hover, a.btn:focus {
       @extend .btn;
       color: var(--mateColorWhite);
       background: var(--primary-color);
-      &:hover, &:focus, &.active, &:focus {
+      &:hover, &:focus, &.active {
         background: var(--secondary-color);
       }
     }
@@ -1228,7 +1245,7 @@ nav {
             display: block;
           }
 
-          & a:hover, &.active, a:focus-visible {
+          & a:hover, &.active, a:focus {
             background-color: transparent;
             color: var(--navbar-active-color);
             font-weight: normal;
@@ -1252,7 +1269,7 @@ nav {
         }
 
         > li > a:hover:before,
-        > li > a:focus-visible:before {
+        > li > a:focus:before {
           border: 2px solid var(--navbar-active-color);
         }
 
@@ -1283,7 +1300,7 @@ nav {
             height: auto;
             padding: 0 25px 0 15px;
 
-            &:hover, &:focus-visible, &.active, &.selected {
+            &:hover, &:focus-within, &:focus-visible, &.active, &.selected {
               background-color: var(--navbar-dropdown-hover-bg-color);
 
               > a {
@@ -1299,11 +1316,11 @@ nav {
                 display: none;
               }
 
-              &:hover, &:focus-visible {
+              &:hover, &:focus {
                 color: var(--navbar-dropdown-hover-color);
               }
 
-              &:hover:before, &:focus-visible:before {
+              &:hover:before, &:focus:before {
                 display: none;
               }
             }
@@ -1601,7 +1618,7 @@ nav .brand-logo {
       transform: translateY(0) !important;
     }
 
-    h2, h5 {
+    h2, h5, .h2 {
       width: 100%;
     }
 
@@ -1611,7 +1628,7 @@ nav .brand-logo {
       width: 70%;
     }
 
-    h2 {
+    h2, .h2 {
       text-align: left;
       margin: 0;
       font-size: 2em;
@@ -4675,7 +4692,7 @@ div.klaro {
         padding: 30px 30px 0;
       }
 
-      h2 {
+      h2, .h2 {
         font-size: 1.375em;
       }
 

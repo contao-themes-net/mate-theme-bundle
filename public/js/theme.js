@@ -389,4 +389,45 @@ jQuery(document).ready(function ($) {
      * Parallax        	   *
      * =================== */
     $('.parallax').parallax();
+
+
+    /* =================== *
+     * Accessbility        *
+     * =================== */
+
+  waitForIndicators();
 });
+
+function makeIndicatorsAccessible() {
+  const $items = $(".carousel.with-indicators .indicator-item");
+
+  if ($items.length === 0) {
+    return;
+  }
+
+  $items.each(function (index) {
+    const $el = $(this);
+
+    $el.attr({
+      tabindex: "0",
+      role: "listitem",
+      "aria-label": "Carousel Slide " + (index + 1),
+    });
+
+    // Tastaturbedienung
+    $el.off("keydown.accessibility").on("keydown.accessibility", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        $(this).trigger("click");
+      }
+    });
+  });
+}
+
+function waitForIndicators() {
+  if ($(".carousel.with-indicators .indicator-item").length > 0) {
+    makeIndicatorsAccessible();
+  } else {
+    setTimeout(waitForIndicators, 200);
+  }
+}

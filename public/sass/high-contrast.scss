@@ -40,6 +40,11 @@
       background: var(--hc-white) !important;
       color: var(--hc-black) !important;
 
+      &:hover, &:focus {
+        background: var(--hc-grey-dark) !important;
+        color: var(--hc-white) !important;
+      }
+
       .ui-accordion-header-icon:after {
         color: var(--hc-black) !important;
       }
@@ -174,7 +179,8 @@
     background: var(--hc-grey-dark) !important;
   }
 
-  .pagination li a:hover, nav[data-pagination] li a:hover {
+  .pagination li a:hover, nav[data-pagination] li a:hover,
+  .pagination li a:focus, nav[data-pagination] li a:focus {
     background: var(--hc-grey-dark) !important;
     color: var(--hc-white) !important;
     border-color: var(--hc-grey-dark) !important;
@@ -283,7 +289,8 @@
         }
       }
 
-      &:hover:before, &:hover:after {
+      &:hover:before, &:hover:after,
+      &:focus:before, &:focus:after {
         border-color: var(--hc-grey) !important;
       }
 
