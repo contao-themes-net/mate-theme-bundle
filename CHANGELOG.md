@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.6.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.5) – 2025-xx-xx
+
+- [Added] Improve accessibility
+- [Added] Use link text from news item in slider or fallback to default "Read more"
+
 ## [3.5.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.5) – 2025-09-26
 
 - [Fixed] Demo data import for Contao 5.6
@@ -45,7 +50,7 @@ Types of changes
 
 ## [3.4.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.3) – 2024-12-13
 
-- [Fixed] Use css pseudo class instead of html to prevent google from inserting material icons in site links 
+- [Fixed] Use css pseudo class instead of html to prevent google from inserting material icons in site links
 
 ## [3.4.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.4.2) – 2024-09-13
 
@@ -96,7 +101,7 @@ Types of changes
 
 ## [3.2.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.1) – 2023-06-12
 
-- [Fixed] Fix sql import for Contao 5.1  
+- [Fixed] Fix sql import for Contao 5.1
 
 ## [3.2.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.2.0) – 2023-05-15
 
