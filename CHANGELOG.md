@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.6.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.5) – 2025-xx-xx
+## [3.6.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.0) – 2025-xx-xx
 
 - [Added] Improve accessibility
 - [Added] Use link text from news item in slider or fallback to default "Read more"
