@@ -14,6 +14,7 @@ Types of changes
 
 - [Added] Improve accessibility
 - [Added] Use link text from news item in slider or fallback to default "Read more"
+- [Fixed] Fix preview_toolbar.html.twig to prevent route generation error on 404 pages in frontend preview
 
 ## [3.5.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.5) – 2025-09-26
 
