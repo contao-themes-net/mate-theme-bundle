@@ -429,6 +429,11 @@ code, pre {
   }
 }
 
+.keyboard-focused .ce_accordion .ui-accordion-header:focus {
+  background: var(--accordion-headline-hover-background);
+  color: var(--accordion-headline-hover-color);
+}
+
 .ce_accordion {
   @extend .collapsible;
   margin: 0;
@@ -445,7 +450,7 @@ code, pre {
     transition: all .3s;
     padding: 1rem 2.5rem 1rem 1rem;
 
-    &:hover, &:focus {
+    &:hover {
       background: var(--accordion-headline-hover-background);
       color: var(--accordion-headline-hover-color);
     }
@@ -841,6 +846,12 @@ header {
   z-index: 11;
   width: 100%;
 
+  .flex-end {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
   .inside {
     height: 40px;
     @extend .container;
@@ -914,6 +925,10 @@ header {
 
   &.active {
     height: 130px;
+  }
+
+  &:not(.active) form {
+    display: none;
   }
 
   .formbody {
@@ -1333,6 +1348,14 @@ nav {
       }
     }
   }
+
+  .sidenav.mobile-menu {
+    display: none;
+  }
+
+  .high-contrast #header .nav-wrapper ul>li>a:focus:before {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1561,8 +1584,34 @@ nav .brand-logo {
   font-family: 'Material Icons';
   content: "\e5cf";
   -webkit-font-feature-settings: 'liga';
-  color: var(--mateColor2-text-color);
+  color: var(--navbar-color);
   padding-left: 5px;
+}
+
+.desktop-menu a.submenu {
+  &:hover:after, &:focus:after {
+    color: var(--navbar-active-color);
+  }
+}
+
+.stuck .desktop-menu a.submenu {
+  &:after {
+    color: var(--navbar-stuck-color);
+  }
+
+  &:hover:after, &:focus:after {
+    color: var(--navbar-stuck-active-color);
+  }
+}
+
+.subnav .desktop-menu a.submenu {
+  &:after {
+    color: var(--subnav-color);
+  }
+
+  &:hover:after, &:focus:after {
+    color: var(--subnav-hover-color);
+  }
 }
 
 /* ========================== *
@@ -1867,7 +1916,7 @@ nav .brand-logo {
       margin: 0 0 5px;
       text-align: left;
       font-size: .688em;
-      color: var(--mateColor3-text-color);
+      color: var(--slider-subheadline-color);
     }
   }
 
@@ -1878,6 +1927,10 @@ nav .brand-logo {
   .sliderImage {
     background: var(--mateColor1);
     list-style-type: none;
+
+    &:not(.active) {
+      visibility: hidden;
+    }
   }
 
   .content-text .slider ul.slides:not(.browser-default) li {
@@ -2339,6 +2392,10 @@ nav .brand-logo {
   }
 }
 
+.mod_newslist, .layout_latest {
+  overflow: visible;
+}
+
 .layout_latest, .layout_short,
 .layout_teaser, .layout_list {
   .inner {
@@ -2410,6 +2467,11 @@ nav .brand-logo {
   }
 
   .inner {
+    > a {
+      height: 100%;
+      display: block;
+    }
+
     .more {
       position: absolute;
       top: -32px;

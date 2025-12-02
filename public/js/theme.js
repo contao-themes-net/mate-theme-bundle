@@ -381,8 +381,9 @@ jQuery(document).ready(function ($) {
      * =================== */
     $('.modal').modal();
 
-    $('.close-modal i').click(function () {
+    $('.close-modal').click(function (e) {
         $('.modal').modal("close");
+        e.preventDefault();
     });
 
     /* =================== *
@@ -399,7 +400,7 @@ jQuery(document).ready(function ($) {
 });
 
 function makeIndicatorsAccessible() {
-  const $items = $(".carousel.with-indicators .indicator-item");
+  const $items = $(".carousel.with-indicators .indicator-item, .ce_sliderStart.slider .indicator-item");
 
   if ($items.length === 0) {
     return;
@@ -418,14 +419,14 @@ function makeIndicatorsAccessible() {
     $el.off("keydown.accessibility").on("keydown.accessibility", function (e) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        $(this).trigger("click");
+        this.click();
       }
     });
   });
 }
 
 function waitForIndicators() {
-  if ($(".carousel.with-indicators .indicator-item").length > 0) {
+  if ($(".carousel.with-indicators .indicator-item, .ce_sliderStart.slider .indicator-item").length > 0) {
     makeIndicatorsAccessible();
   } else {
     setTimeout(waitForIndicators, 200);

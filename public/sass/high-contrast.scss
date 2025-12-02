@@ -1,4 +1,34 @@
 .high-contrast {
+  .desktop-menu a.submenu {
+    &:after {
+      color: var(--hc-white);
+    }
+
+    &:hover:after, &:focus:after {
+      color: var(--hc-white);
+    }
+  }
+
+  .stuck .desktop-menu a.submenu {
+    &:after {
+      color: var(--hc-white);
+    }
+
+    &:hover:after, &:focus:after {
+      color: var(--hc-white);
+    }
+  }
+
+  .subnav .desktop-menu a.submenu {
+    &:after {
+      color: var(--hc-white);
+    }
+
+    &:hover:after, &:focus:after {
+      color: var(--hc-white);
+    }
+  }
+
   [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after,
   [type="radio"]:not(:checked) + span:before, [type="radio"]:not(:checked) + span:after {
     border-color: var(--hc-white) !important;
@@ -54,6 +84,31 @@
       background: var(--hc-grey-dark) !important;
       color: var(--hc-white) !important;
     }
+  }
+
+  .content-accordion {
+    .handorgel__header button {
+      background: var(--hc-white) !important;
+      color: var(--hc-black) !important;
+
+      &:hover, &:focus {
+        background: var(--hc-grey-dark) !important;
+        color: var(--hc-white) !important;
+      }
+
+      &:after {
+        color: var(--hc-black) !important;
+      }
+    }
+
+    .handorgel__content {
+      background: var(--hc-grey-dark) !important;
+      color: var(--hc-white) !important;
+    }
+  }
+
+  .mate-card .card-panel {
+    background: var(--hc-grey-dark) !important;
   }
 
   .ce_mateContentBox:nth-child(2n), .ce_ct_contentBox:nth-child(2n) {
@@ -347,6 +402,22 @@
   #wrapper .estate-header-image h1, #wrapper .estate-header-image h2, #wrapper .estate-header-image h3, #wrapper .estate-header-image h4, #wrapper .estate-header-image h5, #wrapper .estate-header-image h6 {
     background: var(--hc-white) !important;
     color: var(--hc-black) !important;
+  }
+
+  @media (min-width: 993px) {
+    #header .nav-wrapper ul.dropdown-content li {
+      a {
+        color: var(--hc-white) !important;
+      }
+
+      &:hover > a, &:focus > a, a.active {
+        color: var(--hc-black) !important;
+
+        &.submenu:after {
+          color: var(--hc-black);
+        }
+      }
+    }
   }
 }
 

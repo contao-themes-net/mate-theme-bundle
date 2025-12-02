@@ -5,7 +5,7 @@
   <div id="mateModal<?= $this->id ?>" class="modal<?= $this->modalClass ?>">
     <div class="modal-content hc-bg-white">
       <!-- indexer::stop -->
-      <div class="close-modal"><i class="material-icons">clear</i></div>
+      <a href="#" class="close-modal"><i class="material-icons">clear</i></a>
       <!-- indexer::continue -->
       <?php if ($this->headline): ?>
         <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
