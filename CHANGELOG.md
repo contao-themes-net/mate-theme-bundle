@@ -10,11 +10,12 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.6.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.0) – 2025-xx-xx
+## [3.6.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.0) – 2025-12-03
 
 - [Added] Improved accessibility: Enhanced keyboard navigation support for menus and interactive elements; improved focus indicators, corrected contrast issues, and refined high-contrast mode.
 - [Added] Use link text from news item in slider or fallback to default "Read more"
 - [Fixed] Fix preview_toolbar.html.twig to prevent route generation error on 404 pages in frontend preview
+- [Fixed] Load ModuleNewsListMate only if ContaoNewsBundle is installed
 
 ## [3.5.5](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.5.5) – 2025-09-26
 

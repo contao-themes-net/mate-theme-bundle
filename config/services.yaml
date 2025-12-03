@@ -5,6 +5,8 @@ services:
 
   ContaoThemesNet\MateThemeBundle\:
     resource: ../src/
+    exclude:
+      - "../src/Module/ModuleNewsListMate.php"
 
   # Migration
   ContaoThemesNet\MateThemeBundle\Migration\:
