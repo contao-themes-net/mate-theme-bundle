@@ -2,6 +2,12 @@
   .md-ad-box {
     margin: 0 0 20px;
 
+    h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
     &.horizontal {
       width: 100%;
       display: flex;
@@ -29,7 +35,7 @@
             margin-bottom: 5px;
           }
 
-          h5 {
+          h2 {
             min-height: inherit;
           }
         }
@@ -73,7 +79,7 @@
         padding: 0;
         width: 30%;
         text-align: right;
-        color: $boxes-text-color;
+        color: var(--boxes-text-color);
 
         @media (max-width: 767px) {
           width: 100%;
@@ -103,8 +109,8 @@
     }
 
     .detail {
-      color: $boxes-text-color;
-      background: $boxes-background;
+      color: var(--boxes-text-color);
+      background: var(--boxes-background);
 
       @media (max-width: 767px) {
           padding-bottom: 40px;
@@ -121,16 +127,16 @@
           font-size: 12px;
         }
 
-        h5 {
-          color: $mateColor2;
+        h2 {
+          color: var(--mateColor2-text-color);
         }
       }
     }
 
     .price {
-      background: $mateColor1;
-      font-family: $font3;
-      color: $mateColorBlack;
+      background: var(--mateColor1);
+      font-family: var(--font3);
+      color: var(--mateColorBlack);
       font-weight: 700;
       font-style: normal;
     }
@@ -141,10 +147,10 @@
     padding: 0;
 
     a {
-      color: $primary-link-font-color;
+      color: var(--primary-link-font-color);
 
       &:hover {
-        color: $primary-link-hover-font-color;
+        color: var(--primary-link-hover-font-color);
       }
     }
 
@@ -154,7 +160,7 @@
 
     .md-filters-body {
       border: none;
-      background: $boxes-background;
+      background: var(--boxes-background);
       padding: 20px;
       margin-top: 30px;
     }
@@ -168,21 +174,21 @@
         display: flex;
 
         i {
-          color: $mateColor2;
+          color: var(--mateColor2-text-color);
         }
       }
     }
 
     .ui-widget-content {
-      background: $mateColorGreyLight;
+      background: var(--mateColorGreyLight);
     }
 
     .ui-slider-handle:nth-of-type(1):after, .ui-slider-handle:nth-of-type(2):after {
-      background: $mateColorGreyLight;
+      background: var(--mateColorGreyLight);
     }
 
     .range-slider .ui-widget-header {
-      background: $mateColor1;
+      background: var(--mateColor1);
     }
 
     .select-wrapper .caret {
@@ -193,8 +199,8 @@
   .md-ad-box:hover {
     box-shadow: none;
 
-    .detail header h5 {
-      color: $mateColor3;
+    .detail header h2 {
+      color: var(--mateColor3-text-color);
     }
 
     .md-ad-box-overlap-wrapper {
@@ -231,7 +237,7 @@
 
 .ce_mobileDeReader {
   [class^="icon-"]:before {
-    color: $mateColor2;
+    color: var(--mateColor2-text-color);
   }
 
   .back {
@@ -243,7 +249,7 @@
   }
 
   .md-detail {
-    color: $primary-text-color;
+    color: var(--primary-text-color);
 
     .content-slider img {
       margin: 0;
@@ -258,11 +264,11 @@
       padding: 10px;
 
       &:nth-child(odd) {
-        background: $boxes-background;
+        background: var(--boxes-background);
       }
 
       &:nth-child(even) {
-        background: darken($mateColorWhite, 5%);
+        background: var(--mateColorWhite);
       }
 
       .label {
@@ -271,8 +277,8 @@
     }
 
     input.text, form textarea {
-      background: $boxes-background;
-      color: $boxes-text-color;
+      background: var(--boxes-background);
+      color: var(--boxes-text-color);
     }
 
     .md-detail-box {
@@ -290,12 +296,12 @@
       }
 
       h1 {
-        font-family: $font3;
+        font-family: var(--font3);
       }
 
       .price {
-        color: $mateColorBlack;
-        background: $mateColor1;
+        color: var(--mateColorBlack);
+        background: var(--mateColor1);
         font-size: 1.2em;
         padding: 5px 10px;
 
@@ -310,13 +316,13 @@
 
     .md-detail-right {
       h2 {
-        color: $mateColorBlack;
+        color: var(--mateColorBlack);
         font-size: 1.2em;
         margin: 0 0 20px;
       }
 
       [class^="icon-"]:before {
-        color: $mateColorBlack;
+        color: var(--mateColorBlack);
       }
     }
 
@@ -329,7 +335,7 @@
 
       h2 {
         background: none;
-        color: $mateColorBlack;
+        color: var(--mateColorBlack);
         font-size: 1.2em;
         margin: 0 0 20px;
         padding: 0;
@@ -343,10 +349,10 @@
     box-shadow: none;
 
     .slider-menu b {
-      color: $mateColor2;
+      color: var(--mateColor2-text-color);
 
       &.active {
-        color: $mateColor3;
+        color: var(--mateColor3-text-color);
       }
     }
 
@@ -354,7 +360,7 @@
       text-indent: -999999px;
 
       &:hover:before {
-        color: $mateColor3;
+        color: var(--mateColor3-text-color);
       }
 
       &:before {
@@ -362,7 +368,7 @@
         text-indent: 0;
         position: absolute;
         font-size: 1.5rem;
-        color: $mateColor2;
+        color: var(--mateColor2-text-color);
         transition: all .3s;
       }
     }

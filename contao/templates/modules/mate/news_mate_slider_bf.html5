@@ -9,15 +9,11 @@
 
 		<div class="layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>">
 
-      <?php $this->block('info'); ?>
-      <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
-      <?php $this->endblock(); ?>
-
 		  <?php if($this->subheadline != ""): ?>
 		  	<div class="subheadline"><?= $this->subheadline ?></div>
 		  <?php endif; ?>
 
-		  <h2><?= $this->headline ?></h2>
+		  <div class="h2"><?= $this->headline ?></div>
 
 		  <div class="teaser">
 		    <?= $this->teaser ?>
@@ -25,7 +21,7 @@
 
 		  <?php if ($this->hasText || $this->hasTeaser): ?>
 		    <p class="more">
-		    	<a href="<?= $this->link ?>" title="<?= $this->linkTitle ?>" class="hc-bg-black hc-text-white"><?= $GLOBALS['TL_LANG']['mateTheme']['readMore'] ?></a>
+		    	<a href="<?= $this->link ?>" title="<?= $this->linkTitle ?>" class="hc-bg-black hc-text-white"><?= $this->linkText !== '' ? $this->linkText : $GLOBALS['TL_LANG']['mateTheme']['readMore'] ?></a>
 		    </p>
 		  <?php endif; ?>
 

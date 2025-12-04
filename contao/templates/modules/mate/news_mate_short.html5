@@ -18,7 +18,7 @@
       </div>
 
       <?php if ($this->hasText || $this->hasTeaser): ?>
-        <a class="more text-decoration-none hc-bg-white" href="<?= $this->link ?>"><?= $GLOBALS['TL_LANG']['mateTheme']['continueReading'] ?></a>
+        <a class="more text-decoration-none hc-bg-white" href="<?= $this->link ?>"><?= $this->linkText !== '' ? $this->linkText : $GLOBALS['TL_LANG']['mateTheme']['continueReading'] ?></a>
       <?php endif; ?>
     </div>
 

@@ -37,5 +37,12 @@ class ContaoThemesNetMateThemeExtension extends Extension
         );
 
         $loader->load('services.yaml');
+
+        if (
+            $container->hasParameter('kernel.bundles')
+            && \array_key_exists('ContaoNewsBundle', $container->getParameter('kernel.bundles'))
+        ) {
+            $loader->load('services_news.yaml');
+        }
     }
 }

@@ -2,17 +2,25 @@
 <a href="<?= $this->link ?>" class="item md-ad-box horizontal <?= $this->filterClasses ?><?php if($this->onlyFilter == 1): ?> hidden<?php endif; ?>" data-price="<?= $this->plainPrice ?>" data-power="<?= $this->plainPower ?>" data-mileage="<?= str_replace(",","",$this->mileage) ?>" data-acc="<?= $this->account ?>">
   <?php if($this->onlyFilter == 0): ?>
   <div class="image">
-    <picture>
-        <img src="<?= $this->imageSrc_M ?>" srcset="<?= $this->imageSrc_M ?> 1x, <?= $this->imageSrc_L ?> 1.5x, <?= $this->imageSrc_XL ?> 2x"  alt="<?= $this->desc ?>">
-    </picture>
+    <?php if($this->image): ?>
+      <?php $this->insert('image', $this->arrData); ?>
+    <?php elseif($this->imageSrc_L): ?>
+      <picture>
+        <img src="<?= $this->imageSrc_L ?>" srcset="<?= $this->imageSrc_L ?> 1x, <?= $this->imageSrc_XL ?> 1.5x, <?= $this->imageSrc_XXL ?> 2x"  alt="<?= $this->desc ?>">
+      </picture>
+    <?php else: ?>
+      <picture>
+        <img src="bundles/pdirmobilede/img/fahrzeugmanager_platzhalter.jpg" srcset="bundles/pdirmobilede/img/fahrzeugmanager_platzhalter.jpg 1x, bundles/pdirmobilede/img/fahrzeugmanager_platzhalter.jpg 1.5x, bundles/pdirmobilede/img/fahrzeugmanager_platzhalter.jpg 2x"  alt="Fahrzeug Platzhalter">
+      </picture>
+    <?php endif; ?>
   </div>
   <div class="detail">
     <!-- Header -->
     <header class="clearfix">
 
-      <h5 class="title">
+      <h2 class="title">
         <?= $this->desc ?>
-      </h5>
+      </h2>
       <ul class="custom-list">
         <?php if($this->power): ?>
         <li>
