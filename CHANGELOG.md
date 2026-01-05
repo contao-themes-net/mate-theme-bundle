@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.6.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.1) – 2026-01-05
+
+- [Fixed] Clean up demo SQL, fix audio styling and theme switcher markup
+
 ## [3.6.0](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.0) – 2025-12-03
 
 - [Added] Improved accessibility: Enhanced keyboard navigation support for menus and interactive elements; improved focus indicators, corrected contrast issues, and refined high-contrast mode.
