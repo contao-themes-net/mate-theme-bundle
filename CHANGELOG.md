@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.6.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.2) – 2026-01-19
+
+- [Fixed] Add missing modal template (mod_cthemes_modal.html5) ([#206](https://github.com/contao-themes-net/mate-theme-bundle/issues/206))
+
 ## [3.6.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.1) – 2026-01-05
 
 - [Fixed] Clean up demo SQL, fix audio styling and theme switcher markup
