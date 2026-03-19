@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [3.6.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.3) – 2026-03-19
+
+- [Fixed] Resolved conflict with other extensions when overriding the newslist module (replaced controller override with hook-based implementation)
+
 ## [3.6.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.2) – 2026-01-19
 
 - [Fixed] Add missing modal template (mod_cthemes_modal.html5) ([#206](https://github.com/contao-themes-net/mate-theme-bundle/issues/206))
