@@ -1,5 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * mate theme for Contao Open Source CMS
+ *
+ * Copyright (C) 2026 pdir / digital agentur <develop@pdir.de>
+ *
+ * @package    contao-themes-net/mate-theme-bundle
+ * @link       https://github.com/contao-themes-net/mate-theme-bundle
+ * @license    pdir contao theme licence
+ * @author     Mathias Arzberger <develop@pdir.de>
+ * @author     Philipp Seibt <develop@pdir.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace ContaoThemesNet\MateThemeBundle\EventListener;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
@@ -11,18 +28,18 @@ class ParseArticlesListener
 {
     public function __invoke(FrontendTemplate $template, array $newsEntry, ModuleNews $module): void
     {
-        if (false === strpos((string)$module->customTpl, 'mod_newslist_mate_slider')) {
+        if (false === strpos((string) $module->customTpl, 'mod_newslist_mate_slider')) {
             return;
         }
 
-        $mateSliderHeight = '' === (string)$module->mateSliderHeight ? '460' : (string)$module->mateSliderHeight;
-        $mateSliderInterval = '' === (string)$module->mateSliderInterval ? '12000' : (string)$module->mateSliderInterval;
-        $mateSliderDuration = '' === (string)$module->mateSliderDuration ? '150' : (string)$module->mateSliderDuration;
+        $mateSliderHeight = '' === (string) $module->mateSliderHeight ? '460' : (string) $module->mateSliderHeight;
+        $mateSliderInterval = '' === (string) $module->mateSliderInterval ? '12000' : (string) $module->mateSliderInterval;
+        $mateSliderDuration = '' === (string) $module->mateSliderDuration ? '150' : (string) $module->mateSliderDuration;
 
         $indicators = '';
         $mateSliderIndicators = 'false';
 
-        if ('1' === (string)$module->mateSliderIndicators) {
+        if ('1' === (string) $module->mateSliderIndicators) {
             $mateSliderIndicators = 'true';
 
             $indicators = '
@@ -57,10 +74,10 @@ class ParseArticlesListener
         <script>
         jQuery(document).ready(function($) {
             $(".slider.mod_newslist").slider({
-                height: ' . $mateSliderHeight . ',
-                indicators: ' . $mateSliderIndicators . ',
-                interval: ' . $mateSliderInterval . ',
-                duration: ' . $mateSliderDuration . '
+                height: '.$mateSliderHeight.',
+                indicators: '.$mateSliderIndicators.',
+                interval: '.$mateSliderInterval.',
+                duration: '.$mateSliderDuration.'
             });
 
             $(".slider.mod_newslist .next").click(function() {
@@ -71,7 +88,7 @@ class ParseArticlesListener
               $(this).closest(".slider").slider("prev");
             });
 
-            ' . $indicators . '
+            '.$indicators.'
         });
         </script>
         ';
