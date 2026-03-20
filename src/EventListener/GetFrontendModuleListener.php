@@ -21,7 +21,6 @@ namespace ContaoThemesNet\MateThemeBundle\EventListener;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\ModuleModel;
-use Contao\ModuleNews;
 
 #[AsHook('getFrontendModule')]
 class GetFrontendModuleListener
