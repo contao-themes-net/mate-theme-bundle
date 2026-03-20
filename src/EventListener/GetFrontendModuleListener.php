@@ -17,42 +17,31 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace ContaoThemesNet\MateThemeBundle\Module;
+namespace ContaoThemesNet\MateThemeBundle\EventListener;
 
-use Contao\ModuleNewsList;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
+use Contao\ModuleModel;
 
-class ModuleNewsListMate extends ModuleNewsList
+#[AsHook('getFrontendModule')]
+class GetFrontendModuleListener
 {
-    /**
-     * Generate the module.
-     */
-    protected function compile()
+    public function __invoke(ModuleModel $model, string $buffer, object $module): string
     {
-        if (false !== strpos($this->customTpl, 'mod_newslist_mate_slider')) {
-            if ('' === $this->mateSliderHeight) {
-                $mateSliderHeight = '460';
-            } else {
-                $mateSliderHeight = $this->mateSliderHeight;
-            }
+        if (false === strpos((string) $model->customTpl, 'mod_newslist_mate_slider')) {
+            return $buffer;
+        }
 
-            if ('' === $this->mateSliderInterval) {
-                $mateSliderInterval = '12000';
-            } else {
-                $mateSliderInterval = $this->mateSliderInterval;
-            }
+        $mateSliderHeight = '' === (string) $model->mateSliderHeight ? '460' : (string) $model->mateSliderHeight;
+        $mateSliderInterval = '' === (string) $model->mateSliderInterval ? '12000' : (string) $model->mateSliderInterval;
+        $mateSliderDuration = '' === (string) $model->mateSliderDuration ? '150' : (string) $model->mateSliderDuration;
 
-            if ('' === $this->mateSliderDuration) {
-                $mateSliderDuration = '150';
-            } else {
-                $mateSliderDuration = $this->mateSliderDuration;
-            }
+        $indicators = '';
+        $mateSliderIndicators = 'false';
 
-            $indicators = '';
+        if ('1' === (string) $model->mateSliderIndicators) {
+            $mateSliderIndicators = 'true';
 
-            if ('1' === $this->mateSliderIndicators) {
-                $mateSliderIndicators = 'true';
-
-                $indicators = '
+            $indicators = '
                 $( ".slider.mod_newslist .sliderImage" ).each(function( index ) {
                   var headline = $(this).find("h2, .h2").text();
                   var subheadline = $(this).find(".subheadline").text();
@@ -78,34 +67,31 @@ class ModuleNewsListMate extends ModuleNewsList
                   });
                 });
             ';
-            } else {
-                $mateSliderIndicators = 'false';
-            }
-
-            $GLOBALS['TL_BODY'][] = '
-            <script>
-            jQuery(document).ready(function($) {
-                $(".slider.mod_newslist").slider({
-                    height: '.$mateSliderHeight.',
-                    indicators: '.$mateSliderIndicators.',
-                    interval: '.$mateSliderInterval.',
-                    duration: '.$mateSliderDuration.'
-                });
-
-                $( ".slider.mod_newslist .next" ).click(function() {
-                  $(this).closest(".slider").slider("next");
-                });
-
-                $( ".slider.mod_newslist .prev" ).click(function() {
-                  $(this).closest(".slider").slider("prev");
-                });
-
-                '.$indicators.'
-            });
-            </script>
-            ';
         }
 
-        return parent::compile();
+        $GLOBALS['TL_BODY'][] = '
+        <script>
+        jQuery(document).ready(function($) {
+            $(".mod_newslist.slider").slider({
+                height: '.$mateSliderHeight.',
+                indicators: '.$mateSliderIndicators.',
+                interval: '.$mateSliderInterval.',
+                duration: '.$mateSliderDuration.'
+            });
+
+            $(".mod_newslist.slider .next").click(function() {
+              $(this).closest(".slider").slider("next");
+            });
+
+            $(".mod_newslist.slider .prev").click(function() {
+              $(this).closest(".slider").slider("prev");
+            });
+
+            '.$indicators.'
+        });
+        </script>
+        ';
+
+        return $buffer;
     }
 }

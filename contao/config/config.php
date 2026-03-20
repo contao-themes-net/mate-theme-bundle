@@ -30,10 +30,6 @@ ArrayUtil::arrayInsert($GLOBALS['BE_MOD'], 1, ['mateTheme' => []]);
 $GLOBALS['FE_MOD']['mateTheme']['mateNavbar'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\NavBarModule';
 $GLOBALS['FE_MOD']['mateTheme']['mateModal'] = 'ContaoThemesNet\\MateThemeBundle\\Mate\\ModalModule';
 
-if (isset($GLOBALS['FE_MOD']['news']['newslist'])) {
-    $GLOBALS['FE_MOD']['news']['newslist'] = 'ContaoThemesNet\\MateThemeBundle\\Module\\ModuleNewsListMate';
-}
-
 /*
  * Add content element
  */

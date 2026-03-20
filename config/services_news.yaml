@@ -1,5 +1,0 @@
-services:
-    ContaoThemesNet\MateThemeBundle\Module\ModuleNewsListMate:
-        public: true
-        autowire: false
-        autoconfigure: false
