@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.6.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.3) – 2026-03-19
+## [3.6.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.3) – 2026-03-20
 
 - [Fixed] Resolved conflict with other extensions when overriding the newslist module (replaced controller override with hook-based implementation)
 
