@@ -267,7 +267,16 @@
 $GLOBALS['TL_BODY'][] = "
 <script>
 jQuery(document).ready( function($) {
-  $('.small-pics-slider').slick({
+  var slider = $('.small-pics-slider');
+
+  slider.on('init', function(event, slick) {
+    // Entferne Lightbox-Attribute aus geklonten Slides
+    slider.find('.slick-cloned a[data-lightbox]')
+      .removeAttr('data-lightbox')
+      .removeClass('cboxElement');
+  });
+
+  slider.slick({
     centerMode: true,
     centerPadding: '0px',
     slidesToShow: 5,
