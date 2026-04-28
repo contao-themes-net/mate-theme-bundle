@@ -267,8 +267,10 @@
 $GLOBALS['TL_BODY'][] = "
 <script>
 jQuery(document).ready( function($) {
-  $('.small-pics-slider').slick({
-    centerMode: true,
+  var slider = $('.small-pics-slider');
+  slider.slick({
+    centerMode: false,
+    infinite: false,
     centerPadding: '0px',
     slidesToShow: 5,
     prevArrow: '<button type=\"button\" class=\"slick-prev\"><i class=\"material-icons\">chevron_left</i></button>',
@@ -277,7 +279,7 @@ jQuery(document).ready( function($) {
     {
       breakpoint: 992,
       settings: {
-        centerMode: true,
+        centerMode: false,
         centerPadding: '0px',
         slidesToShow: 3
       }
@@ -285,7 +287,7 @@ jQuery(document).ready( function($) {
     {
       breakpoint: 600,
       settings: {
-        centerMode: true,
+        centerMode: false,
         centerPadding: '0px',
         slidesToShow: 1
       }
