@@ -10,9 +10,9 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [3.6.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.4) – 2026-04-27
+## [3.6.4](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.4) – 2026-04-28
 
-- [Fixed] Corrected Lightbox image count in Slick slider by excluding cloned slides in `makler_details_extended_mate.html5`
+- [Fixed] Corrected Lightbox image count in Slick slider by disabling `infinite` and `centerMode` in `makler_details_extended_mate.html5`
 
 ## [3.6.3](https://github.com/contao-themes-net/mate-theme-bundle/tree/3.6.3) – 2026-03-20
 
