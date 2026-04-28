@@ -50,6 +50,13 @@
         margin-top: -20px;
         border: none;
         padding: 0;
+        opacity: 1;
+        transition: all .3s;
+
+        &.slick-disabled {
+          opacity: 0;
+          pointer-events: none;
+        }
 
         i {
           color: rgba(60, 60, 60, 0.8);
