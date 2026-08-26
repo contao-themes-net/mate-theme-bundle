@@ -223,32 +223,73 @@
   // Set active color image
   var activeColor = '{{ mateColor }}';
 
-  jQuery(document).ready(function ($) {
-    if(activeColor) {
-      $('#matePreviewToolbar li img').removeClass('active');
-      $('#matePreviewToolbar li img.' + activeColor).addClass('active');
+  document.addEventListener("DOMContentLoaded", function () {
+
+    if (typeof activeColor !== "undefined" && activeColor) {
+      document.querySelectorAll('#matePreviewToolbar li img')
+        .forEach(el => el.classList.remove('active'));
+
+      document.querySelectorAll('#matePreviewToolbar li img.' + activeColor)
+        .forEach(el => el.classList.add('active'));
     }
 
-    $('.open-settings').sidenav({
-      menuWidth: 350,
-      edge: 'left',
-      closeOnClick: false,
+    // sidenav init (abhängig von externer Lib, z.B. Materialize)
+    const sidenavs = document.querySelectorAll('.open-settings');
+    sidenavs.forEach(el => {
+      if (typeof M !== "undefined" && M.Sidenav) {
+        M.Sidenav.init(el, {
+          edge: 'left',
+          draggable: true
+        });
+      }
     });
 
-    $('.open-settings').click(function () {
-      var documentWidth = $(document).width();
-      $(".sidenav-overlay").width(documentWidth);
+    // click handler
+    document.querySelectorAll('.open-settings').forEach(el => {
+      el.addEventListener('click', function () {
+        const documentWidth = document.documentElement.scrollWidth;
+        const overlays = document.querySelectorAll('.sidenav-overlay');
+
+        overlays.forEach(overlay => {
+          overlay.style.width = documentWidth + 'px';
+        });
+      });
     });
 
-    $("a.color-scheme").hover(function () {
-      var colorScheme = $(this).data("id");
-      $("li img." + colorScheme).toggleClass("hover");
-      $("li.image").toggleClass("hover");
+    // hover handler
+    document.querySelectorAll('a.color-scheme').forEach(el => {
+      el.addEventListener('mouseenter', function () {
+        const colorScheme = this.dataset.id;
+
+        document.querySelectorAll('li img.' + colorScheme)
+          .forEach(img => img.classList.toggle('hover'));
+
+        document.querySelectorAll('li.image')
+          .forEach(li => li.classList.toggle('hover'));
+      });
+
+      el.addEventListener('mouseleave', function () {
+        const colorScheme = this.dataset.id;
+
+        document.querySelectorAll('li img.' + colorScheme)
+          .forEach(img => img.classList.toggle('hover'));
+
+        document.querySelectorAll('li.image')
+          .forEach(li => li.classList.toggle('hover'));
+      });
     });
 
-    $("#slide-out .close-icon").click(function () {
-      $('.sidenav').sidenav('close');
-    });
+    // close sidenav
+    const closeIcon = document.querySelector('#slide-out .close-icon');
+    if (closeIcon) {
+      closeIcon.addEventListener('click', function () {
+        const sidenavEl = document.querySelector('.sidenav');
+        if (typeof M !== "undefined" && M.Sidenav) {
+          const instance = M.Sidenav.getInstance(sidenavEl);
+          if (instance) instance.close();
+        }
+      });
+    }
   });
 </script>
 <style>

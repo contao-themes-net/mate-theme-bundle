@@ -6,3 +6,6 @@
 .idea
 /phpunit.xml.bak
 /.phpunit.result.cache
+
+# system
+.DS_Store

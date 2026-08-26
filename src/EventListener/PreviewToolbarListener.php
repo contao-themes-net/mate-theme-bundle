@@ -44,6 +44,8 @@ use Twig\Environment as TwigEnvironment;
 #[AsEventListener]
 class PreviewToolbarListener
 {
+    static public string $demoUrl = 'mate.contao-themes.net';
+
     public function __construct(private readonly ScopeMatcher $scopeMatcher, private readonly TokenChecker $tokenChecker, private readonly TwigEnvironment $twig)
     {
     }
@@ -57,8 +59,7 @@ class PreviewToolbarListener
         if (
             (!$request->attributes->get('_preview', false)
             || $request->isXmlHttpRequest()
-            || !$response->isSuccessful() && !$response->isClientError())
-            && 'mate.contao-themes.net' !== $request->headers->get('host')
+            || (!$response->isSuccessful() && !$response->isClientError()))
         ) {
             return;
         }
@@ -66,7 +67,6 @@ class PreviewToolbarListener
         // Do not inject the toolbar in the back end
         if (
             ($this->scopeMatcher->isBackendMainRequest($event) || !$this->tokenChecker->hasBackendUser())
-            && 'mate.contao-themes.net' !== $request->headers->get('host')
         ) {
             return;
         }
@@ -76,7 +76,7 @@ class PreviewToolbarListener
             ('html' !== $request->getRequestFormat()
             || !str_contains((string) $response->headers->get('Content-Type'), 'text/html')
             || false !== stripos((string) $response->headers->get('Content-Disposition'), 'attachment;'))
-            && 'mate.contao-themes.net' !== $request->headers->get('host')
+            && self::$demoUrl !== $request->headers->get('host')
         ) {
             return;
         }
@@ -102,7 +102,7 @@ class PreviewToolbarListener
             return;
         }
 
-        $session = System::getContainer()->get('request_stack')->getSession();
+        $session = System::getContainer()->get('request_stack')->getCurrentRequest()->getSession();
 
         $toolbar = $this->twig->render('@Contao_ContaoThemesNetMateThemeBundle/Frontend/preview_toolbar.html.twig', [
             'mateColor' => $session->get('mate_color'),
